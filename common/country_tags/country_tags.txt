@@ -1,0 +1,2 @@
+GOR = "countries/Greater Austria.txt"
+GRM = "countries/German Empire.txt"

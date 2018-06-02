@@ -1,0 +1,8 @@
+GOR = {
+	color = rgb { 255 250 250 }
+	color_ui = { 255 250 250 }
+}
+GOR = {
+	color = rgb { 105 105 105 }
+	color_ui = { 105 105 105 }
+}

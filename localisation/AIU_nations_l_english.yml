@@ -1,0 +1,13 @@
+﻿l_english:
+ GOR_fascism:0 "Austrian Empire"
+ GOR_fascism_DEF:0 "the Austrian Empire"
+ GOR_democratic:0 "United States of Greater Austria"
+ GOR_democratic_DEF:0 "the United States of Greater Austria"
+ GOR_neutrality:1 "United States of Greater Austria"
+ GOR_neutrality_DEF:1 "the United States of Greater Austria"
+ GRM_fascism:0 "German Reich"
+ GRM_fascism_DEF:0 "the German Reich"
+ GRM_democratic:0 "German Democratic Republic"
+ GRM_democratic_DEF:0 "the German Democratic Republic"
+ GRM_neutrality:1 "German Empire"
+ GRM_neutrality_DEF:1 "the German Empire"
