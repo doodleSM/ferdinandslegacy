@@ -1,10 +1,8 @@
-﻿oob = "GOR_1930"
+oob = "CRA_1930"
 
 set_stability = 0.75
 set_war_support = 0
-set_research_slots = 3	
-
-capital = 4
+set_research_slots = 3
 
 set_technology = {
 	infantry_weapons = 1
@@ -13,37 +11,28 @@ set_technology = {
 	tech_recon = 1
 	early_fighter = 1
 	early_bomber = 1
-	early_submarine = 1
-	basic_destroyer = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
-	basic_light_cruiser = 1
-	early_heavy_cruiser = 1
-	transport = 1
 }
-
-create_faction = triple
-add_to_faction = GRM
-add_to_faction = ITA
 
 set_politics = {
 	parties = {
 		democratic = { 
-			popularity = 32
+			popularity = 22
 		}
 
 		fascism = {
-			popularity = 6
+			popularity = 7
 		}
 		
 		communism = {
-			popularity = 12
+			popularity = 10
+		}
+		neutrality = {
+			popularity = 61
 		}
 	}
 
 	ruling_party = neutrality
 	last_election = "1917.6.0"
 	election_frequency = 48
-	elections_allowed = yes
-
+	elections_allowed = no
 }

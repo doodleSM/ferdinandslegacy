@@ -1,2 +1,6 @@
 GOR = "countries/Greater Austria.txt"
 GRM = "countries/German Empire.txt"
+CRN = "countries/Carniola.txt"
+CRA = "countries/Croatia.txt"
+TRA = "countries/Translyvania.txt"
+HUG = "countries/Hungary.txt"

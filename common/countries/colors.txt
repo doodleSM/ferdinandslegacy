@@ -6,3 +6,11 @@ GOR = {
 	color = rgb { 105 105 105 }
 	color_ui = { 105 105 105 }
 }
+CRN = {
+	color = rgb { 255 215 0 }
+	color_ui = { 255 215 0 }
+}
+CRO = {
+	color = rgb { 238 232 170 }
+	color_ui = { 238 232 170 }
+}

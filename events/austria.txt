@@ -1,0 +1,11 @@
+﻿add_namespace = austria
+
+################################
+## Austrian Events
+################################
+country_event = {
+	id = austria.1
+	title = austria.1.t
+	desc = austria.1.d
+	picture = GFX_austrian_army
+}
