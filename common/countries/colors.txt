@@ -22,3 +22,11 @@ VOJ = {
 	color = rgb { 176 224 230 }
 	color_ui = { 176 224 230 }
 }
+TRA = {
+	color = rgb { 0 191 255 }
+	color_ui = { 0 191 255 }
+}
+BOH = {
+	color = rgb { 201 56 93 }
+	color_ui = { 201 56 93 }
+}
