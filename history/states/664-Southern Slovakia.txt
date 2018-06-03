@@ -19,15 +19,6 @@ state={
 			6573 1 
 		}
 		add_core_of = HUG
-
-		1939.3.14 = {
-			owner = HUN
-			controller = HUN
-			remove_claim_by = HUN
-			add_core_of = HUN
-			add_core_of = SLO
-		}
-	}
 	
 	provinces={
 		3565 3716 6561 6573 9537 11679 
