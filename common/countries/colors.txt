@@ -26,3 +26,19 @@ BOH = {
 	color = rgb { 144 238 144 }
 	color_ui = { 144 238 144 } 
 }
+WGA = {
+	color = rgb { 222 184 135 }
+	color_ui = { 222 184 135 }
+}
+EGA = {
+	color = rgb { 255 69 0 }
+	color_ui = { 255 69 0 }
+}
+TRA = {
+	color = rgb { 0 191 255 }
+	color_ui = { 0 191 255 }
+}
+RUS = {
+	color = rgb { 60 179 113 }
+	color_ui = { 60 179 113 }
+}

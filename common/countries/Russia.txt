@@ -1,4 +1,4 @@
 graphical_culture = commonwealth_gfx
 graphical_culture_2d = commonwealth_2d
 
-color = { 222 184 135 }
+color = { 60 179 113 }

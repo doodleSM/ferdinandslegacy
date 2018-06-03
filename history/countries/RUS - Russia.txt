@@ -1,6 +1,4 @@
-oob = "WGA_1930"
-
-capital = 9
+oob = "RUS_1930"
 
 set_stability = 0.75
 set_war_support = 0
