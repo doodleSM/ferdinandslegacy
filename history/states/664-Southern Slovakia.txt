@@ -19,7 +19,7 @@ state={
 			6573 1 
 		}
 		add_core_of = HUG
-	
+	}
 	provinces={
 		3565 3716 6561 6573 9537 11679 
 	}

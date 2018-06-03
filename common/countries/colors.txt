@@ -22,3 +22,7 @@ VOJ = {
 	color = rgb { 176 224 230 }
 	color_ui = { 176 224 230 }
 }
+BOH = {
+	color = rgb { 144 238 144 }
+	color_ui = { 144 238 144 } 
+}
