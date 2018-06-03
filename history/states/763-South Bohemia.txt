@@ -1,0 +1,24 @@
+state={
+	id=763
+	name="STATE_763"
+	manpower = 2827648
+	resources={
+		steel=5 # was: 8
+	}
+	
+	state_category = rural
+	
+	history = {
+		owner = GOR
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+		}
+		add_core_of = GOR
+
+	}
+
+	provinces={
+		5283 543 11525 557
+	}
+}
