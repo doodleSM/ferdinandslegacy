@@ -1,0 +1,22 @@
+state={
+	id=764
+	name="STATE_764"
+
+	provinces={
+		11857 11868 
+	}
+
+	state_category = rural
+
+	history = {
+		owner = BUL
+		add_core_of = SEB
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 3
+		}
+	}
+
+	manpower=122064
+	buildings_max_level_factor=1.000
+}

@@ -43,3 +43,24 @@ set_politics = {
 	elections_allowed = yes
 
 }
+
+create_field_marshal = {
+	name = "Ferenc Feketehalmy-Czeydner"
+	gfx = GFX_Portrait_hungary_ferenc_feketehalmy_czeydner
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_country_leader = {
+	name = "Karl Seitz"
+	desc = "POLITICS_KARL_SEITZ_DESC"
+	picture = "Portrait_Hungary_Matyas_Rakoski.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
