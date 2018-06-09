@@ -1,0 +1,15 @@
+ideas = {
+	
+	GOR_hungarian_revenge = {
+		modifier = {
+			army_core_attack_factor = 0.03
+			consumer_goods_factor = -0.02
+			war_support_weekly = 0.05
+		}
+	}
+	GOR_reform_structure = {
+		modifier = {
+			stability_weekly = 0.02
+		}
+	}
+}

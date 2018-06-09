@@ -1,3 +1,10 @@
 leader_traits = {
-	
+
+	paramilitarist = {
+		send_volunteers_tension = -0.10
+	}
+
+	#radical_populist ={
+	#
+	#}
 }

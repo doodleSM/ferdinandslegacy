@@ -35,20 +35,53 @@ set_politics = {
 		communism = {
 			popularity = 12
 		}
+
+		neutrality = {
+			popularity = 50
+		}
 	}
 
-	ruling_party = neutrality
+	ruling_party = democractic
 	last_election = "1933.6.0"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
-
-create_field_marshal = {
-	name = "Ferenc Feketehalmy-Czeydner"
-	gfx = GFX_Portrait_hungary_ferenc_feketehalmy_czeydner
-	traits = { }
+create_corps_commander = {
+	name = "Anton Kiernbauer"
+	picture = "Anton_Kiernbauer.dds"
+	traits = { war_hero }
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
 	skill = 2
+}
+#create_corps_commander = {
+#	name = "Alexander Löhr"
+#	picture = "portrait_alexander_lohr.dds"
+#	traits = { war_hero }
+#	attack_skill = 4
+#	defense_skill = 2
+#	planning_skill = 2
+#	logistics_skill = 1
+#	skill = 3
+#}
+create_corps_commander = {
+	name = "Lothar Rendulic"
+	picture = "portrait_rendulic.dds"
+	traits = { infantry_officer }
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	skill = 3
+}
+create_field_marshal = {
+	name = "Erhard Raus"
+	picture = "portrait_raus.dds"
+	traits = { organisational_leader }
+	skill = 3
 	attack_skill = 2
 	defense_skill = 1
 	planning_skill = 2
@@ -57,10 +90,20 @@ create_field_marshal = {
 create_country_leader = {
 	name = "Karl Seitz"
 	desc = "POLITICS_KARL_SEITZ_DESC"
-	picture = "Portrait_Hungary_Matyas_Rakoski.dds"
+	picture = "Karl_Seitz.dds"
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {
 		#
+	}
+}
+create_country_leader = {
+	name = "Richard Steidle"
+	desc = "POLITICS_RICHARD_STEIDLE_DESC"
+	picture = "portrait_richard_steidle.dds"
+	expire = "1965.1.1"
+	ideology = austro_populism
+	traits = {
+		paramilitarist
 	}
 }
