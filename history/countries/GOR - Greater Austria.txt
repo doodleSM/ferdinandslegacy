@@ -37,11 +37,27 @@ set_politics = {
 		}
 
 		neutrality = {
-			popularity = 50
+			popularity = 6
+		}
+
+		radical_populism = {
+			popularity = 21
+		}
+
+		radical_socialism = {
+			popularity = 11
+		}
+
+		social_liberalism = {
+			populairty = 10
+		}
+
+		paternal_authoritarianism = {
+			popularity = 12
 		}
 	}
 
-	ruling_party = democractic
+	ruling_party = social_liberalism
 	last_election = "1933.6.0"
 	election_frequency = 48
 	elections_allowed = yes
@@ -57,16 +73,16 @@ create_corps_commander = {
 	logistics_skill = 2
 	skill = 2
 }
-#create_corps_commander = {
-#	name = "Alexander Löhr"
-#	picture = "portrait_alexander_lohr.dds"
-#	traits = { war_hero }
-#	attack_skill = 4
-#	defense_skill = 2
-#	planning_skill = 2
-#	logistics_skill = 1
-#	skill = 3
-#}
+create_corps_commander = {
+	name = "Ferdinand Pichler"
+	picture = "Ferdinand_Pichler.dds"
+	traits = { infantry_officer }
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+	skill = 2
+}
 create_corps_commander = {
 	name = "Lothar Rendulic"
 	picture = "portrait_rendulic.dds"
@@ -92,7 +108,7 @@ create_country_leader = {
 	desc = "POLITICS_KARL_SEITZ_DESC"
 	picture = "Karl_Seitz.dds"
 	expire = "1965.1.1"
-	ideology = liberalism
+	ideology = social_liberalist
 	traits = {
 		#
 	}
@@ -102,8 +118,17 @@ create_country_leader = {
 	desc = "POLITICS_RICHARD_STEIDLE_DESC"
 	picture = "portrait_richard_steidle.dds"
 	expire = "1965.1.1"
-	ideology = austro_populism
+	ideology = radical_populist
 	traits = {
 		paramilitarist
+	}
+}
+create_country_leader = {
+	name = "Kurt Schuschnigg"
+	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	picture = "Kurt_Schuschnigg.dds"
+	ideology = radical_populist
+	traits = {
+
 	}
 }
