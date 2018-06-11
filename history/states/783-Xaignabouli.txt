@@ -1,0 +1,21 @@
+state={
+	id=783
+	name="STATE_783"
+	provinces={
+		10330 10356 10456 
+	}
+	history={
+		owner = FRA
+		add_core_of = LAO
+		#add_claim_by = SIA
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	manpower=256754
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

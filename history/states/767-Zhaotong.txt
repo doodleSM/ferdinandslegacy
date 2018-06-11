@@ -1,0 +1,22 @@
+state={
+	id=767
+	name="STATE_767"
+	provinces={
+		1319 5072 10819 12841 
+	}
+	history={
+		owner = YUN
+		add_core_of = YUN
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	manpower=720857
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

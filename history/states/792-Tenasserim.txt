@@ -1,0 +1,20 @@
+state={
+	id=792
+	name="STATE_792"
+	provinces={
+		1296 1315 1385 4275 7295 10217 12292 
+	}
+	history={
+		owner = RAJ
+		#add_core_of = BUR
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	manpower=2194732
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

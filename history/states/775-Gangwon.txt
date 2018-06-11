@@ -1,0 +1,25 @@
+state={
+	id=775
+	name="STATE_775"
+	provinces={
+		1148 4004 7021 9936 9981 11958 12011 
+	}
+	resources={
+		steel=6.000
+	}
+	history={
+		owner = JAP
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			7021 1
+		}
+		add_core_of = KOR
+
+	}
+	manpower=1495756
+	buildings_max_level_factor=1.000
+	state_category=town
+}

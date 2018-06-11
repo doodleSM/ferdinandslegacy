@@ -1,0 +1,33 @@
+state={
+	id=799
+	name="STATE_799"
+	provinces={
+		4367 4424 7427 10313 
+	}
+	resources={
+		rubber=60
+		steel=4
+		aluminium=9
+	}
+
+	history={
+		owner = MAL
+		victory_points = {
+			4424 1
+		}
+		buildings = {
+			infrastructure = 4
+			4424 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = MAL
+
+	}
+
+	manpower=509743
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

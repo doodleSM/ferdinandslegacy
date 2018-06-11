@@ -1,0 +1,23 @@
+state={
+	id=795
+	name="STATE_795"
+	provinces={
+		1014 1142 3651 12090 
+	}
+	history={
+		owner = RAJ
+		#add_core_of = BUR
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			12090 1 #sittwe
+		}
+
+	}
+
+	manpower=3105464
+	buildings_max_level_factor=1.000
+	state_category=town
+}

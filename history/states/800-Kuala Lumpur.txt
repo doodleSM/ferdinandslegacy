@@ -1,0 +1,37 @@
+state={
+	id=800
+	name="STATE_800"
+	provinces={
+		1364 1376 1392 4310 4384 4412 7399 10297 12215 12255 12271 
+	}
+	resources={
+		rubber=230
+		steel=14
+		tungsten=135
+		aluminium=6
+	}
+
+	history={
+		owner = MAL
+		victory_points = {
+			10297 5
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 4
+			10297 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = MAL
+
+	}
+
+	manpower=1675643
+	buildings_max_level_factor=1.000
+	state_category=city
+}

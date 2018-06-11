@@ -1,0 +1,24 @@
+state={
+	id=794
+	name="STATE_794"
+	provinces={
+		1082 1197 1934 4318 4425 4996 8063 10920 
+	}
+	history={
+		owner = RAJ
+		#add_core_of = BUR
+		buildings = {
+			infrastructure = 2
+
+		}
+		
+		victory_points = {
+			4425 1 
+		}
+
+	}
+
+	manpower=754643
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

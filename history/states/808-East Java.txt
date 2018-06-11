@@ -1,0 +1,33 @@
+state={
+	id=808
+	name="STATE_808"
+	provinces={
+		1209 4306 4390 4608 7654 10479 10491 12472 
+	}
+	resources={
+		rubber=50.000
+		oil=4.000
+	}
+
+	history={
+		owner = INS
+		add_core_of = INS
+		victory_points = {
+			4608 5
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			4608 = {
+				naval_base = 3
+
+			}
+
+		}
+
+	}
+
+	manpower=18718200
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

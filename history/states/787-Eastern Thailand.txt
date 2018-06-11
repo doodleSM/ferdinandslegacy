@@ -1,0 +1,30 @@
+state={
+	id=787
+	name="STATE_787"
+	provinces={
+		1244 4433 7225 7292 10293 12224 
+	}
+	resources={
+		rubber=2.000
+	}
+
+	history={
+		owner = SIA
+		buildings = {
+			infrastructure = 4
+			7225 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			7225 1
+		}
+		add_core_of = SIA
+
+	}
+	state_category=town
+	manpower=2986747
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,24 @@
+state={
+	id=797
+	name="STATE_797"
+	provinces={
+		1291 7342 12144 
+	}
+	resources={
+		rubber=34
+	}
+
+	history={
+		owner = MAL
+		
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = MAL
+
+	}
+
+	manpower=546352
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,32 @@
+state={
+	id=806
+	name="STATE_806"
+	provinces={
+		1277 1332 7327 7463 10209 10225 12168 12181 12184 12212 12302 12343 
+	}
+	resources={
+		rubber=40
+		aluminium=28.000
+	}
+
+	history={
+		owner = INS
+		add_core_of = INS
+		victory_points = {
+			12181 1 
+		}
+		buildings = {
+			infrastructure = 3
+			7463 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	manpower=1654900
+	buildings_max_level_factor=1.000
+	state_category=town
+}

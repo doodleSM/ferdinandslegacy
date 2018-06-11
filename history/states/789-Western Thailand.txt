@@ -1,0 +1,21 @@
+state={
+	id=789
+	name="STATE_789"
+	provinces={
+		4319 4348 4388 4392 4566 7312 7559 7587 10193 12122 12220 
+	}
+	history={
+		owner = SIA
+		buildings = {
+			infrastructure = 3
+
+		}
+		
+		add_core_of = SIA
+
+	}
+
+	manpower=2436543
+	buildings_max_level_factor=1.000
+	state_category=town
+}

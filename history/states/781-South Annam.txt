@@ -1,0 +1,26 @@
+state={
+	id=781
+	name="STATE_781"
+	resources={
+		rubber=12.000
+	}
+	provinces={
+		1285 1300 1328 1400 1605 4334 4363 4405 7271 7380 10162 10232 12109 12150 12176 12204 
+	}
+	history={
+		add_core_of = VIN
+		owner = FRA
+		victory_points = {
+			1285 1 #nhatrang
+		}
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+
+	manpower=1205743
+	buildings_max_level_factor=1.000
+	state_category=town
+}

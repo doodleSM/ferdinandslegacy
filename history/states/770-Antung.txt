@@ -1,0 +1,22 @@
+state={
+	id=770
+	name="STATE_770"
+	provinces={
+		800 861 945 3888 3949 3970 6860 6868 6905 6910 6981 9759 9803 9841 9848 9866 11781 11823 11850 
+	}
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	manpower=674532
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

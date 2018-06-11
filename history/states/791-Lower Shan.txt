@@ -1,0 +1,20 @@
+state={
+	id=791
+	name="STATE_791"
+	provinces={
+		4175 7400 7647 7909 7974 12317 
+	}
+	history={
+		owner = RAJ
+		#add_core_of = BUR
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	manpower=764532
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
