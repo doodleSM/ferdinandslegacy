@@ -24,9 +24,6 @@ set_technology = {
 
 set_politics = {
 	parties = {
-		democratic = { 
-			popularity = 32
-		}
 
 		fascism = {
 			popularity = 6
@@ -37,10 +34,10 @@ set_politics = {
 		}
 
 		neutrality = {
-			popularity = 6
+			popularity = 18
 		}
 
-		radical_populism = {
+		fascism = {
 			popularity = 21
 		}
 
@@ -49,12 +46,9 @@ set_politics = {
 		}
 
 		social_liberalism = {
-			populairty = 10
+			populairty = 32
 		}
 
-		paternal_authoritarianism = {
-			popularity = 12
-		}
 	}
 
 	ruling_party = social_liberalism
