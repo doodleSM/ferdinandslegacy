@@ -1,0 +1,22 @@
+spriteTypes = {	
+
+
+
+	SpriteType = {
+		name = "GFX_idea_traits_strip"
+		texturefile = "gfx/interface/ideas/idea_traits_strip.dds"
+		noOfFrames = 14		
+	}
+
+	
+	spriteType = {
+		name = "GFX_idea_GRM_bavarian_nationalism"
+		texturefile = "gfx/interface/ideas/GRM_bavarian_nationalism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GRM_rebellious_east"
+		texturefile = "gfx/interface/ideas/GRM_rebellious_east.dds"
+	}
+
+	
+}

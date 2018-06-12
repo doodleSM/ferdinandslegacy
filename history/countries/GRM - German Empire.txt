@@ -19,19 +19,22 @@ set_technology = {
 	early_heavy_cruiser = 1
 	transport = 1
 }
-
+add_ideas = {
+	GRM_bavarian_nationalism
+	GRM_rebellious_east
+}
 set_politics = {
 	parties = {
-		democratic = { 
-			popularity = 22
+		neutrality = { 
+			popularity = 55
 		}
 
 		fascism = {
-			popularity = 7
+			popularity = 20
 		}
 		
-		communism = {
-			popularity = 10
+		auth_dem = {
+			popularity = 25
 		}
 	}
 
@@ -39,4 +42,14 @@ set_politics = {
 	last_election = "1917.6.0"
 	election_frequency = 48
 	elections_allowed = no
+}
+create_country_leader = {
+	name = "Wilhelm II"
+	desc = "POLITICS_WILHELM_DESC"
+	picture = "Wilhelm.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
 }
