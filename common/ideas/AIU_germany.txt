@@ -1,0 +1,29 @@
+ideas = {
+	
+	country = {
+	
+		GRM_bavarian_nationalism = {
+		picture = GRM_bavarian_nationalism
+			modifier = {
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_infrastructure_factor = -0.1
+				consumer_goods_factor = 0.05
+				stability_factor = -0.10
+				war_support_factor = -0.1
+				
+			}
+		}
+
+		GRM_rebellious_east = {
+		 picture = GRM_rebellious_east
+			modifier = {
+				war_support_factor = -0.1
+				research_time_factor = 0.05
+				conscription = -0.005
+				
+			}
+		}
+
+		}
+
+		}
