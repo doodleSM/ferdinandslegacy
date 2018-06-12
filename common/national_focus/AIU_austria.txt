@@ -94,8 +94,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-				remove_idea = volunteer_only 
-				add_idea = limited_conscription 
+			if = {
+					has_idea = limited_conscription
+					add_ideas = extensive_conscription
+				}
+			if = {
+					has_idea = extensive_conscription
+					add_ideas = limited_conscription
+				}
 			}
 		}
 
@@ -566,6 +572,170 @@ focus_tree = {
 
 		completion_reward = {
 
+		}
+	}
+
+	#economics below
+
+	focus = {
+		id = GOR_rebuild_austria
+		icon = GFX_goal_unknown
+		x = 34
+		y = 0
+
+		completion_reward = {
+			4 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			152 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GOR_efficient_farming_tools
+		icon = GFX_goal_unknown
+		x = 27
+		y = 1
+
+		prerequisite = { focus = GOR_rebuild_austria }
+		mutually_exclusive = { focus = GOR_radical_industrialisation focus = GOR_balanced_economics }
+
+		completion_reward = {
+			add_ideas = emphasized_agrarian
+		}
+	}
+
+	focus = {
+		id = GOR_better_conditions
+		icon = GFX_goal_unknown
+		x = 27
+		y = 2
+
+		prerequisite = { focus = GOR_efficent_farming_tools }
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = GOR_radical_industrialisation
+		icon = GFX_goal_unknown
+		x = 41
+		y = 1
+
+		mutually_exclusive = { focus = GOR_emphasize_agraian focus = GOR_balanced_economics }
+
+		prerequisite = { focus = GOR_rebuild_austria }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOR_radical_industry
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = GOR_nationalize_economy
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 41
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = GOR_radical_industrialisation }
+
+		completion_reward = {
+			add_ideas = nationalized_economics
+			152 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = GOR_steel_refinery
+		icon = GFX_goal_unknown
+		x = 39
+		y = 3
+		cost = 5
+
+		prerequisite = { focus = GOR_nationalize_economy }
+
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 4
+			}
+			add_resource = {
+				type = steel
+				amount = 5
+				state = 152
+			}
+		}
+	}
+
+	focus = {
+		id = GOR_create_jobs
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 43
+		y = 3
+		cost = 5
+
+		prerequisite = { focus = GOR_nationalize_economy }
+	}
+
+	focus = {
+		id = GOR_balanced_economics
+		icon = GFX_goal_unknown
+		x = 34
+		y = 1
+		cost = 5
+
+		mutually_exclusive = { focus = GOR_emphasize_agraian focus = GOR_radical_industrialisation }
+
+		prerequisite = { focus = GOR_rebuild_austria }
+
+		completion_reward = {
+			add_ideas = balanced_economics
+		}
+	}
+
+	focus = {
+		id = GOR_import_romanian_oil
+		icon = GFX_goal_unknown
+		x = 34
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = GOR_balanced_economics }
+
+		completion_reward = {
+			
 		}
 	}
 }

@@ -1,18 +1,105 @@
 ideas = {
 	
 	country = {
-	
-		GOR_hungarian_revenge = {
+		angered_populace = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+
 			modifier = {
-				army_core_attack_factor = 0.03
-				consumer_goods_factor = -0.02
-				war_support_weekly = 0.05
+				stability_weekly = -0.02
 			}
 		}
 
-		GOR_reform_structure = {
+		weak_military_admin = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = german_advisors
+
 			modifier = {
-				stability_weekly = 0.02
+				max_planning = -0.10
+				planning_speed = -0.15
+			}
+		}
+
+		emphasized_agrarian = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.10
+			}
+		}
+
+		balanced_economics = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		romanian_oil_imports = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		romanian_oil_exports = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
 			}
 		}
 	}

@@ -1,0 +1,80 @@
+﻿add_namespace = austria
+
+################################
+## Austrian Events
+################################
+country_event = {
+	id = austria.1 #Oil Imports from Romania
+	title = austria.1.t
+	desc = austria.1.d
+	picture = GFX_austrian_army
+
+	fire_only_once = yes
+
+	triggers = {
+		has_completed_focus = GOR_romanian_oil_imports
+
+		AND = {
+			country_exists = GOR
+			country_exists = ROM
+		}
+
+		NOT = {
+			has_war_with = ROM
+		}
+	}
+	option = {
+		name = austria.1.a
+		add_ideas = romanian_oil_imports
+		ROM = {
+			add_ideas = romanian_oil_exports
+		}
+	}
+	option = {
+		name austria.1.b
+		ROM = {
+			country_event = {
+				id = romania.1
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = austria.2 #Romanians refuse oil counteroffer
+	title = austria.1.t
+	dec = austria.1d
+	picture = GFX_report_event_generic_factory
+
+	fire_only_once = yes
+
+	triggers = {
+		has_country_flag = GOR_refused_deal
+	}
+
+	option = {
+		name = austria.2.a
+		add_ideas = romanian_oil_imports
+		set_political_power = -25
+		create_import = {
+			resource = oil
+			amount = 15
+			exporter = ROM
+		}
+	}
+
+	option = {
+		name = austria.2.b
+		set_political_power = -50
+	}
+
+	option = {
+		name = austria.2.c
+		set_political_power = -100
+		create_wargoal = {
+			type = annex_everything
+			target = ROM
+		}
+	}
+}
