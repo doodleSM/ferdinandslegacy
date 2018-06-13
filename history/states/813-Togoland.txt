@@ -1,0 +1,28 @@
+state={
+	id=813
+	name="STATE_813"
+	provinces={
+		12785 13136 1951 12843
+	}
+	
+
+	history={
+		owner = GRM
+		
+		buildings = {
+			infrastructure = 7
+			12785 = {
+				naval_base = 4
+
+			}
+
+		}
+		
+		
+
+	}
+
+	manpower=1938273
+	buildings_max_level_factor=1.000
+	state_category= rural
+}
