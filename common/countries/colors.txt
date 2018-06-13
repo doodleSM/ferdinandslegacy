@@ -462,8 +462,8 @@ DDR = {
     color_ui = rgb { 150 180 120 }
 }
 KOR = {
-	color = rgb { 255  240  195 }
-	color_ui = rgb { 255 248 229 }	
+	color = rgb { 200  212  235 }
+	color_ui = rgb { 200  212  235 }	
 }
 ISR = {
 	color = rgb { 152  130  191 }
@@ -577,4 +577,25 @@ SEB = {
 BON = {
 	color = rgb { 30 144 255 }
 	color_ui = { 30 144 255 }
+}
+#new colors asia
+ANH = {
+	color = rgb { 185 122 87 }
+	color_ui = { 185 122 87 }
+}
+BEI = {
+	color = rgb { 215  172  52 }
+	color_ui = { 215  172  52 }
+}
+CHF = {
+	color = rgb { 112 146 190 }
+	color_ui = { 112 146 190 }
+}
+SZE = {
+	color = rgb { 23 46 89 }
+	color_ui = { 23 46 89 }
+}
+TAI = {
+	color = rgb { 150 105 221 }
+	color_ui = { 150 105 221 }
 }
