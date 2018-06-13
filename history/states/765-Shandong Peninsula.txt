@@ -5,15 +5,17 @@ state={
 		1104 1184 1200 4157 4186 7089 7105 10018 
 	}
 	history={
-		owner = CHI
-		add_core_of = CHI
-		add_core_of = PRC
+		owner = ANH
+		add_core_of = ANH
+		add_core_of = BEI
+		add_core_of = CHF
 		victory_points = {
 			1104 1
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			arms_factory = 2
+			industrial_complex = 3
 			air_base = 3
 			1104 = {
 				naval_base = 2
@@ -23,7 +25,7 @@ state={
 		}
 
 	}
-	manpower=37773200
+	manpower=12135242
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=city
 }

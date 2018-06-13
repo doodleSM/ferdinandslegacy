@@ -5,10 +5,10 @@ state={
 		800 861 945 3888 3949 3970 6860 6868 6905 6910 6981 9759 9803 9841 9848 9866 11781 11823 11850 
 	}
 	history={
-		owner = MAN
-		add_core_of = CHI
-		add_core_of = MAN
-		add_core_of = PRC
+		owner = BEI
+		add_core_of = BEI
+		add_core_of = CHF
+		#add_core_of = MAN
 		buildings = {
 			infrastructure = 3
 

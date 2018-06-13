@@ -4,10 +4,10 @@ state={
 	name="STATE_591"
 
 	history={
-		owner = GXC
-		add_core_of = GXC
-		add_core_of = CHI
-		add_core_of = PRC
+		owner = CHF
+		add_core_of = BEI
+		add_core_of = CHF
+		#add_core_of = GXC
 		victory_points = {
 			1070 1 
 		}

@@ -7,12 +7,14 @@ state={
 	}
 
 	history={
-		owner = CHI
-		add_core_of = CHI
-		add_core_of = PRC
+		owner = ANH
+		add_core_of = ANH
+		add_core_of = BEI
+		add_core_of = CHF
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 1
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 1
 
 		}
 		victory_points = {

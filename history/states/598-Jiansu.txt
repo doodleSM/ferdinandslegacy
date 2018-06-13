@@ -4,12 +4,19 @@ state={
 	name="STATE_598"
 
 	history={
-		owner = CHI
-		add_core_of = CHI
-		add_core_of = PRC
+		owner = ANH
+		add_core_of = ANH
+		add_core_of = BEI
+		add_core_of = CHF
 		buildings = {
-			infrastructure = 3
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
 
+		}
+		
+		victory_points = {
+			11913 20 
 		}
 
 	}

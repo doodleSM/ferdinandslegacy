@@ -4,11 +4,12 @@ state={
 	name="STATE_525"
 
 	history={
-		owner = JAP
+		owner = KOR
 		buildings = {
 			infrastructure = 5
 			arms_factory = 1
-			industrial_complex = 1
+			industrial_complex = 2
+			dockyard = 1
 			7221 = {
 				naval_base = 3
 

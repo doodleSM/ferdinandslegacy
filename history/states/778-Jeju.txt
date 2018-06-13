@@ -5,7 +5,7 @@ state={
 		1177 
 	}
 	history={
-		owner = JAP
+		owner = KOR
 		buildings = {
 			infrastructure = 3
 			1177 = {

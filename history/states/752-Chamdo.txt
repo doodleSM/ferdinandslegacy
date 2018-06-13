@@ -1,0 +1,21 @@
+state={
+	id=752
+	name="STATE_752"
+	provinces={
+		1918 7988 8104 12724 12837 
+	}
+	manpower=300000
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+	history={
+		owner = SZE
+		add_core_of = BEI
+		add_core_of = CHF
+		add_core_of = SZE
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+}
