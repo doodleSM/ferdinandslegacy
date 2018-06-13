@@ -29,6 +29,12 @@ country_event = {
 		ROM = {
 			add_ideas = romanian_oil_exports
 		}
+
+		create_import = {
+			resource = oil
+			amount = 15
+			exporter = ROM
+		}
 	}
 	option = {
 		name austria.1.b

@@ -87,20 +87,16 @@ focus_tree = {
 		}
 
 		bypass = {
-			AND = {
+			OR = {
 				has_idea = extensive_conscription
 				has_idea = limited_conscription
 			}
 		}
 
 		completion_reward = {
-			if = {
-					has_idea = limited_conscription
-					add_ideas = extensive_conscription
-				}
-			if = {
-					has_idea = extensive_conscription
-					add_ideas = limited_conscription
+				swap_ideas = {
+					remove_idea = volunteer_only
+					add_idea = extensive_conscription
 				}
 			}
 		}
@@ -735,7 +731,9 @@ focus_tree = {
 		prerequisite = { focus = GOR_balanced_economics }
 
 		completion_reward = {
-			
+			GOR = {
+				country_event = austria.1
+			}
 		}
 	}
 }
