@@ -285,6 +285,20 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GOR_internal_solutions
+		icon = GFX_goal_unknown
+		x = 10
+		y = 5
+		cost = 5
+
+		prerequisite = { focus = GOR_1930_elections }
+
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
 		id = GOR_radical_populist_path
 		icon = GFX_goal_generic_demand_territory
 		x = 16
@@ -734,6 +748,34 @@ focus_tree = {
 			GOR = {
 				country_event = austria.1
 			}
+		}
+	}
+
+	focus = {
+		id = GOR_corporate_control
+		icon = GFX_goal_unknown
+		x = 32
+		y = 3
+		cost = 5
+
+		mutually_exclusive = { focus = GOR_corporate_freedoms }
+		prerequisite = { focus = GOR_import_romanian_oil }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GOR_corporate_freedoms
+		icon = GFX_goal_unknown
+		x = 36
+		y = 3
+		cost = 5
+
+		mutually_exclusive = { focus = GOR_corporate_control }
+		prerequisite = { focus = GOR_import_romanian_oil }
+		completion_reward = {
+
 		}
 	}
 }

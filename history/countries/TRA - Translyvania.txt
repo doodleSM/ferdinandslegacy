@@ -20,7 +20,7 @@ set_politics = {
 		}
 
 		fascism = {
-			popularity = 7
+			popularity = 17
 		}
 		
 		communism = {
@@ -28,11 +28,15 @@ set_politics = {
 		}
 
 		neutrality = {
-			popularity = 61
+			popularity = 10
+		}
+
+		auth_dem = {
+			popularity = 41
 		}
 	}
 
-	ruling_party = neutrality
+	ruling_party = auth_dem
 	last_election = "1917.6.0"
 	election_frequency = 48
 	elections_allowed = no

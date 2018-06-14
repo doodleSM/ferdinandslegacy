@@ -26,12 +26,17 @@ set_politics = {
 		communism = {
 			popularity = 10
 		}
+
 		neutrality = {
-			popularity = 61
+			popularity = 31
+		}
+		
+		auth_dem = {
+			popularity = 30
 		}
 	}
 
-	ruling_party = neutrality
+	ruling_party = auth_dem
 	last_election = "1917.6.0"
 	election_frequency = 48
 	elections_allowed = no

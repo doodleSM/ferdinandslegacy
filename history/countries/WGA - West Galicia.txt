@@ -16,7 +16,7 @@ set_technology = {
 }
 
 set_politics = {
-	parties = {
+	parties = { #placeholders
 		democratic = { 
 			popularity = 22
 		}
@@ -30,11 +30,14 @@ set_politics = {
 		}
 
 		neutrality = {
-			popularity = 61
+			popularity = 21
+		}
+		auth_dem = {
+			popularity = 40
 		}
 	}
 
-	ruling_party = neutrality
+	ruling_party = auth_dem
 	last_election = "1917.6.0"
 	election_frequency = 48
 	elections_allowed = no

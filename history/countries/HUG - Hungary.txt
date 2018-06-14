@@ -16,11 +16,11 @@ set_technology = {
 set_politics = {
 	parties = {
 		democratic = { 
-			popularity = 22
+			popularity = 12
 		}
 
 		fascism = {
-			popularity = 7
+			popularity = 18
 		}
 		
 		communism = {
@@ -28,7 +28,11 @@ set_politics = {
 		}
 
 		neutrality = {
-			popularity = 61
+			popularity = 5
+		}
+
+		auth_dem = {
+			popularity = 55
 		}
 	}
 

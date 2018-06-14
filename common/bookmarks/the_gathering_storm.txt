@@ -51,30 +51,19 @@ bookmarks = {
 		}
 		"GRM"={
 			history = "GER_GATHERING_STORM_DESC"
-			ideology = fascism
-			available = { has_dlc = "Waking the Tiger" }
-			ideas = {
-				sour_loser
-				general_staff
-				GER_mefo_bills_1
-			}
-			focuses = {
-				GER_anschluss
-				GER_danzig_or_war
-				GER_revive_the_kaiserreich
-			}
+			ideology = auth_dem
 		}
-		"ITA"={
+		"GOR"={
 			history = "ITA_GATHERING_STORM_DESC"
-			ideology = fascism
+			ideology = social_democracy
 			ideas = {
-				vittoria_mutilata
-				victor_emmanuel
+				angered_populace
+				weak_military_admin
 			}	
 			focuses = {
-				ITA_pact_of_steel
-				ITA_spanish_italian_faction
-				ITA_italy_first
+				GOR_tomorrow_belongs_to_me
+				GOR_establish_a_better_austria
+				GOR_internal_solutions
 			}		
 		}
 		"JAP"={
