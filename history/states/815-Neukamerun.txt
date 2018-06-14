@@ -1,8 +1,8 @@
 state={
-	id=814
-	name="STATE_814"
+	id=815
+	name="STATE_815"
 	provinces={
-		 2080 5054 5036 6039 7963 9137 11194
+		1993 6008 11012 13206 13207 13208 13209 13210 13211
 	}
 	
 
@@ -10,11 +10,7 @@ state={
 		owner = GRM
 		
 		buildings = {
-			infrastructure = 3
-			5139 = {
-				naval_base = 4
-
-			}
+			infrastructure = 2
 
 		}
 		
@@ -22,7 +18,7 @@ state={
 
 	}
 
-	manpower=3238273
+	manpower=543132
 	buildings_max_level_factor=1.000
 	state_category= rural
 }
