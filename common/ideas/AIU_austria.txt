@@ -38,6 +38,24 @@ ideas = {
 			}
 		}
 
+		nationalized_economics = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
 		emphasized_agrarian = {
 			allowed = {
 				always = no

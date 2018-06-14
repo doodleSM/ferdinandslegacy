@@ -633,7 +633,7 @@ focus_tree = {
 		x = 27
 		y = 2
 
-		prerequisite = { focus = GOR_efficent_farming_tools }
+		prerequisite = { focus = GOR_efficient_farming_tools }
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -717,6 +717,10 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = GOR_nationalize_economy }
+
+		completion_reward = {
+
+		}
 	}
 
 	focus = {
@@ -777,5 +781,9 @@ focus_tree = {
 		completion_reward = {
 
 		}
+	}
+
+	focus = {
+		id = 
 	}
 }
