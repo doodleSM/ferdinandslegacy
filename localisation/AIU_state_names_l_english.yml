@@ -765,7 +765,7 @@
  STATE_764:0 "North Macedonia"
  STATE_765:0 "Shandong Peninsula"
  STATE_766:0 "Tianjin"
- STATE_767:0 "Kunming"
+ STATE_767:0 "Zhaotong"
  STATE_768:0 "Lanzhou"
  STATE_769:0 "Alxa"
  STATE_770:0 "Antung"
@@ -813,4 +813,3 @@
  STATE_812:0 "Nord Schlesvig"
  STATE_813:0 "Togoland"
  STATE_814:0 "Kamerun"
- STATE_815:0 "Neukamerun"
