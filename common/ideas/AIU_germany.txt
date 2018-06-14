@@ -14,7 +14,7 @@ ideas = {
 			}
 		}
 
-		GRM_rebelious_east = {
+		GRM_rebellious_east = {
 		 picture = GRM_rebellious_east
 			modifier = {
 				war_support_factor = -0.1
