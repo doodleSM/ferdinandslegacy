@@ -1,0 +1,24 @@
+state={
+	id=815
+	name="STATE_815"
+	provinces={
+		1993 6008 11012 13206 13207 13208 13209 13210 13211
+	}
+	
+
+	history={
+		owner = GRM
+		
+		buildings = {
+			infrastructure = 2
+
+		}
+		
+		
+
+	}
+
+	manpower=543132
+	buildings_max_level_factor=1.000
+	state_category= rural
+}
