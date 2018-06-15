@@ -34,8 +34,10 @@ set_technology = {
 
 add_ideas = {
 	limited_conscription
-	partial_economic_mobilisation
+	low_economic_mobilisation
 }
+
+add_opinion_modifier = { target = JAP modifier = hostile_status }
 
 set_convoys = 5
 
