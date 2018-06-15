@@ -1,24 +1,45 @@
 ﻿oob = "GRM_1930"
 
 set_stability = 0.75
-set_war_support = 0
+set_war_support = 15
 set_research_slots = 3
 
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
 	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	bicycle_infantry = 1
+	gwtank = 1
+	tech_military_police = 1
+	basic_heavy_tank = 1
 	early_fighter = 1
+	fighter1 = 1
 	early_bomber = 1
+	tactical_bomber1 = 1
+	
+	CAS1 = 1
+	
 	early_submarine = 1
-	basic_destroyer = 1
+	basic_submarine = 1
 	early_destroyer = 1
+	basic_destroyer = 1
 	early_light_cruiser = 1
 	basic_light_cruiser = 1
 	early_heavy_cruiser = 1
+	basic_heavy_cruiser = 1
+	early_battleship = 1
+	basic_battleship = 1
+	early_battlecruiser = 1
+	
 	transport = 1
 }
+
+set_convoys = 50
 add_ideas = {
 	GRM_bavarian_nationalism
 	GRM_rebellious_east
@@ -53,3 +74,64 @@ create_country_leader = {
 		#
 	}
 }
+create_field_marshal = {
+	name = "Ludwig Beck"
+	picture = "beck.dds"
+	traits = { thorough_planner  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Gerd von Rundstedt"
+	picture = "rundstedt.dds"
+	traits = { expert_delegator old_guard politically_connected }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Wilhelm Adam"
+	picture = "wilhelmadam.dds"
+	traits = { infantry_officer trait_cautious old_guard urban_assault_specialist }
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	skill = 3
+}
+create_corps_commander = {
+	name = "Erwin Rommel"
+	picture = "rommel.dds"
+	traits = { cavalry_officer trait_reckless brilliant_strategist }
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+	skill = 5
+}
+create_corps_commander = {
+	name = "August von Mackensen"
+	picture = "augustmackensen.dds"
+	traits = { old_guard war_hero skilled_staffer }
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 4
+	skill = 4
+}
+create_corps_commander = {
+				name = "Paul von Lettow-Vorbeck"
+				gfx = GFX_portrait_ger_von_lettow_vorbeck
+				traits = { trickster war_hero media_personality jungle_rat}
+				skill = 4
+				id = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 5
+			}
