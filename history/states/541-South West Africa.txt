@@ -10,10 +10,15 @@ state={
 		owner = GRM
 		buildings = {
 			infrastructure = 3
+		10978 = {
+				naval_base = 4
+
+			}
 		}
 		victory_points = {
 			4879 1
 		}
+			
 		add_core_of = SAF
 	}
 

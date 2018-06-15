@@ -238,7 +238,7 @@ units = {
 				name_order = 1
 		}
 		location = 12785
-		division_template = "Kolonialbrigade"
+		division_template = "Schutztruppe"
 		start_experience_factor = 0.3
 	}
 	division= {	
@@ -247,7 +247,7 @@ units = {
 				name_order = 2
 		}
 		location = 5036
-		division_template = "Kolonialbrigade"
+		division_template = "Schutztruppe"
 		start_experience_factor = 0.3
 	}
 	division= {	
@@ -256,7 +256,7 @@ units = {
 				name_order = 3
 		}
 		location = 9137
-		division_template = "Kolonialbrigade"
+		division_template = "Schutztruppe"
 		start_experience_factor = 0.3
 	}
 	division= {	
@@ -265,7 +265,7 @@ units = {
 				name_order = 4
 		}
 		location = 9962
-		division_template = "Kolonialbrigade"
+		division_template = "Schutztruppe"
 		start_experience_factor = 0.3
 	}
 	division= {	
@@ -274,7 +274,7 @@ units = {
 				name_order = 5
 		}
 		location = 10988
-		division_template = "Kolonialbrigade"
+		division_template = "Schutztruppe"
 		start_experience_factor = 0.3
 	}
 	division= {	
@@ -283,7 +283,7 @@ units = {
 				name_order = 23
 		}
 		location = 10000
-		division_template = "Kolonialbrigade"
+		division_template = "Schutztruppe"
 		start_experience_factor = 0.3
 	}
 	division= {	
@@ -292,7 +292,7 @@ units = {
 				name_order = 17
 		}
 		location = 12237
-		division_template = "Kolonialbrigade"
+		division_template = "Schutztruppe"
 		start_experience_factor = 0.3
 	}
 	division= {	
@@ -301,7 +301,7 @@ units = {
 				name_order = 24
 		}
 		location = 7290
-		division_template = "Kolonialbrigade"
+		division_template = "Schutztruppe"
 		start_experience_factor = 0.3
 	}
 	division= {	

@@ -529,7 +529,7 @@ GRM_COL =
 
 	can_use = { always = yes }
 
-	division_types = { "Infantry"  }
+	division_types = { "infantry"  }
 
 	fallback_name = "%d. Kolonialbrigade"
 
@@ -575,7 +575,7 @@ GRM_COL_CAV =
 
 	can_use = { always = yes }
 
-	division_types = { "Cavalry"  }
+	division_types = { "cavalry"  }
 
 	fallback_name = "%d. Kolonialreiter"
 
