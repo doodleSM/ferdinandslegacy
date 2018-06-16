@@ -1,0 +1,9 @@
+JAP_political_decisions = {
+	icon = jap_pacific_guardian
+	allowed = {
+		tag = JAP
+	}
+
+	visible = {
+	}
+}

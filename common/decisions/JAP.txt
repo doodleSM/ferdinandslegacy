@@ -1,1 +1,50 @@
 #Category allowed for JAP
+
+JAP_political_decisions = {
+
+	JAP_send_colonists_korea = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = JAP
+		}
+		
+		available = {
+			tag = JAP
+			has_completed_focus = JAP_colonise_korea
+			any_owned_state = { is_core_of = KOR NOT = { is_core_of = JAP } }
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 180
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			tag = JAP
+			has_completed_focus = JAP_colonise_korea
+			has_full_control_of_state = 525
+			has_full_control_of_state = 527
+			has_full_control_of_state = 774
+			has_full_control_of_state = 775
+			has_full_control_of_state = 776
+			has_full_control_of_state = 777
+			has_full_control_of_state = 778
+			has_full_control_of_state = 779
+		}
+		
+		complete_effect = {
+			random_owned_state = {
+				limit = { is_core_of = KOR NOT = { is_core_of = JAP } }
+				add_core_of = JAP
+			}
+		}
+	}
+
+}
