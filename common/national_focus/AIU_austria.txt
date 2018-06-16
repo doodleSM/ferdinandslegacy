@@ -50,7 +50,7 @@ focus_tree = {
 	focus = {
 		id = GOR_recreate_common_army
 		icon = GFX_goal_axis_build_infantry
-		x = 1
+		x = 3
 		y = 0
 
 		cost = 10
@@ -105,12 +105,12 @@ focus_tree = {
 	focus = {
 		id = GOR_modernize_austrian_army
 		icon = GFX_goal_axis_build_infantry
-		x = 3
+		x = 5
 		y = 1
 
 		cost = 10
 
-		prerequisite = { focus = GOR_expand_recruitment }
+		prerequisite = { focus = GOR_recreate_common_army }
 
 		completion_reward = {
 
@@ -121,7 +121,7 @@ focus_tree = {
 		id = GOR_review_military_admin
 		icon = GFX_goal_austria_army
 		x = 1
-		y = 2
+		y = 3
 
 		cost = 10
 
@@ -137,11 +137,11 @@ focus_tree = {
 		id = GOR_mistakes_of_end_war
 		icon = GFX_focus_secret_rearmament
 		x = 3
-		y = 2
+		y = 5
 
 		cost = 10
 
-		prerequisite = { focus = GOR_modernize_austrian_army }
+		prerequisite = { focus = GOR_create_landwehr focus = GOR_review_military_admin }
 
 		completion_reward = {
 
@@ -149,14 +149,55 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GOR_reconstruct_military_academy
-		icon = GFX_focus_generic_military_academy
-		x = 3
-		y = 3
+		id = GOR_create_airforce
+		icon = GFX_goal_unknown
+		x = 50
+		y = 0
 
-		cost = 10
+		prerequisite = { }
 
-		prerequisite = { focus = GOR_mistakes_of_end_war}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GOR_research_air_doctrines
+		icon = GFX_goal_unknown
+		x = 50
+		y = 1
+
+		prerequisite = { focus = GOR_create_airforce }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GOR_support_focus
+		icon = GFX_goal_unknown
+		x = 48
+		y = 2
+
+		prerequisite = { focus = GOR_research_air_doctrines }
+
+		mutually_exclusive = { focus = GOR_fighters_focus }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GOR_fighters_focus
+		icon = GFX_goal_unknown
+		x = 52
+		y = 2
+
+		prerequisite = { focus = GOR_research_air_doctrines }
+
+		mutually_exclusive = { focus = GOR_support_focus }
 
 		completion_reward = {
 
@@ -170,7 +211,6 @@ focus_tree = {
 		x = 5
 		y = 3
 
-		prerequisite = { focus = GOR_review_military_admin }
 		prerequisite = { focus = GOR_modernize_austrian_army }
 
 		completion_reward = {
@@ -220,6 +260,8 @@ focus_tree = {
 		cost = 10
 
 		prerequisite = { focus = GOR_democratic_path }
+
+		mutually_exclusive = { focus = GOR_emphasize_radical_socialism }
 
 		completion_reward = {
 
@@ -602,14 +644,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			152 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 	}
 
@@ -650,7 +684,7 @@ focus_tree = {
 		x = 41
 		y = 1
 
-		mutually_exclusive = { focus = GOR_emphasize_agraian focus = GOR_balanced_economics }
+		mutually_exclusive = { focus = GOR_efficient_farming_tools focus = GOR_balanced_economics }
 
 		prerequisite = { focus = GOR_rebuild_austria }
 
@@ -661,6 +695,8 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
+			add_ideas = austrian_radical_industry
+
 		}
 	}
 
@@ -730,7 +766,7 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		mutually_exclusive = { focus = GOR_emphasize_agraian focus = GOR_radical_industrialisation }
+		mutually_exclusive = { focus = GOR_efficient_farming_tools focus = GOR_radical_industrialisation }
 
 		prerequisite = { focus = GOR_rebuild_austria }
 
@@ -784,6 +820,59 @@ focus_tree = {
 	}
 
 	focus = {
-		id = 
+		id = GOR_monopolize_equipment
+		icon = GFX_goal_unknown
+		x = 34
+		y = 5
+		cost = 5
+
+		prerequisite = { focus = GOR_corporate_control focus = GOR_corporate_freedoms }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GOR_corporate_haven
+		icon = GFX_goal_unknown
+		x = 36
+		y = 4
+		cost = 5
+
+		prerequisite = { focus = GOR_corporate_freedoms }
+
+		completion_reward = {
+			4 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = corporate_haven
+		}
+	}
+
+	focus = {
+		id = GOR_royal_corporations
+		icon = GFX_goal_unknown
+		x = 32
+		y = 4
+		cost = 5
+
+		prerequisite = { focus = GOR_corporate_control }
+		completion_reward = {
+			add_ideas = royal_corporations
+			4 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}			
+		}
 	}
 }

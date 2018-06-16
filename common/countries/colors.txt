@@ -301,7 +301,7 @@ RAJ = {
 	color_ui = rgb { 200  10  10 }
 }
 
-CRO = {
+CRA = {
 	color = rgb { 230  70  180 }
 	color_ui = rgb { 230 255 122 }
 }

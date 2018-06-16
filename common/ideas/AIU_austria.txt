@@ -56,6 +56,24 @@ ideas = {
 			}
 		}
 
+		austrian_radical_industry = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
 		emphasized_agrarian = {
 			allowed = {
 				always = no
@@ -66,6 +84,8 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			picture = generic_manpower_bonus
 
 			modifier = {
 				conscription_factor = 0.10
@@ -82,6 +102,8 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			picture = generic_goods_red_bonus
 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
@@ -118,6 +140,40 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.05
+			}
+		}
+
+		corporate_haven = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+		royal_corporations = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_arms_factory_factor = 0.05				
 			}
 		}
 	}
