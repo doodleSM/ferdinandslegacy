@@ -11,7 +11,7 @@ state={
 		owner = CHF
 		add_core_of = BEI
 		add_core_of = CHF
-		#add_core_of = YUN
+		add_core_of = YUN
 		victory_points = {
 			7965 3 
 		}
