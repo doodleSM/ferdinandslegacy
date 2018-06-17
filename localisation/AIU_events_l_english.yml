@@ -1,5 +1,23 @@
 ﻿l_english:
+  austria.0.t:0 "Greater Österreich"
+  austria.0.d:0 "Simply a bi-product of the War of the Federation this three year old entity is no more than an unstable entity with an angry populace. Austro-Marxists and Radical Populists both rival each other with both groups trying to gain support from the masses."
+  austria.0.a:0 "Nicht die idealste Situation"
   austria.1.t:0 "Oil Importation"
   austria.1.d:0 "National corporations have recently been given the reply from Romania. The Romanian government will export oil, but at the expense of 5% of Austrian civilian production."
   austria.1.a:0 "Accept Romania's offer."
   austria.1.b:0 "Bargain for Cheaper oil."
+
+  gerempire.0.t:0 "Deutsches Kaiserreich"
+  gerempire.0.d:0 ""
+  gerempire.0.a:0 "Wunderbar"
+
+  france.0.t:0 "République Française"
+  france.0.d:0 ""
+  france.0.a:0 "Charmant"
+
+  ######
+  aiu.0.t:0 "Welcome to Austria Imperium Universalis"
+  aiu.0.d:0 ""
+  aiu.0.a:0 "The Devs"
+  aiu.0.b:0 "General Lore"
+  aiu.0.c:0 "I want to play"
