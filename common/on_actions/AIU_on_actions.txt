@@ -1,0 +1,23 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				country_event = aiu.0 
+			}
+			GOR = {
+				limit = { is_ai = no }
+				country_event = austria.0
+			}
+
+			GRM = {
+				limit = { is_ai = no }
+				country_event = gerempire.0
+			}
+
+			FRA = {
+				limit = { is_ai = no }
+				country_event = france.0
+			}
+		}
+	}
+}
