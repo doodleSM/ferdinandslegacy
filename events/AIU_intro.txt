@@ -1,0 +1,29 @@
+﻿add_namespace = aiu
+
+################################
+## aiu Events
+################################
+
+
+### Introduction event
+country_event = {
+	id = aiu.0
+	title = aiu.0.t
+	desc = aiu.0.d
+	picture = GFX_event_report_AIU_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu.0.a
+	}
+
+	option = {
+		name = aiu.0.b
+	}
+
+	option = {
+		name = aiu.0.c
+	}
+}

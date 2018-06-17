@@ -3,6 +3,23 @@
 ################################
 ## Austrian Events
 ################################
+
+
+### Introduction event
+country_event = {
+	id = austria.0
+	title = austria.0.t
+	desc = austria.0.d
+	picture = GFX_report_event_AIU_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.0.a
+	}
+}
+
 country_event = {
 	id = austria.1 #Oil Imports from Romania
 	title = austria.1.t
@@ -82,5 +99,29 @@ country_event = {
 			type = annex_everything
 			target = ROM
 		}
+	}
+}
+
+country_event = {
+	id = austria.3 #The Reborn Austria
+	title = austria.3.t
+	desc = austria.3.d
+	picture = GFX_austrian_army
+
+	fire_only_once = yes
+
+	trigger = {
+		country_exists = GOR
+		AND = {
+			stability < 0.5
+		}
+	}
+	option = {
+		name = austria.3.a
+		add_idea = GOR_hungarian_revenge
+	}
+		option = {
+		name austria.3.b
+		add_idea = GOR_reform_structure
 	}
 }

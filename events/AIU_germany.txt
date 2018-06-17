@@ -1,0 +1,21 @@
+﻿add_namespace = gerempire
+
+################################
+## German Events
+################################
+
+
+### Introduction event
+country_event = {
+	id = gerempire.0
+	title = gerempire.0.t
+	desc = gerempire.0.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = gerempire.0.a
+	}
+}
