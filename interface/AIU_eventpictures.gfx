@@ -1,0 +1,21 @@
+spriteTypes = {
+		
+	spriteType = {
+		name = "GFX_report_event_AIU_intro"
+		texturefile = "gfx/event_pictures/GFX_report_event_AIU_intro.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_GRM_intro"
+		texturefile = "gfx/event_pictures/GFX_report_event_GRM_intro.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_FRA_intro"
+		texturefile = "gfx/event_pictures/GFX_report_event_FRA_intro.dds"
+	}
+	
+}
+	
+	
+	
