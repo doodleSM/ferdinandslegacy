@@ -28,6 +28,9 @@ state={
 			7097 5 
 		}
 		victory_points = {
+			7502 1 #hengyang
+		}
+		victory_points = {
 			9982 1 #chenzhou
 		}
 

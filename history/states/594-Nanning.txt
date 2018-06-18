@@ -21,6 +21,9 @@ state={
 		victory_points = {
 			7137 10 
 		}
+		victory_points = {
+			12023 5 # yulin 
+		}
 
 	}
 

@@ -12,11 +12,8 @@ state={
 			infrastructure = 2
 
 		}
-		1939.1.1 = {
-			buildings = {
-				infrastructure = 4
-				air_base = 1
-			}
+		victory_points = {
+			10763 1 # zunyi
 		}
 	}
 	manpower=1500321
