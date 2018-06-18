@@ -1,0 +1,23 @@
+state={
+	id=816
+	name="STATE_816"
+	provinces={
+		887 916 930 3913 4642 9831 
+	}
+	history={
+		owner = BEI
+		add_core_of = BEI
+		add_core_of = CHF
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+
+	}
+
+	manpower=1367564
+	buildings_max_level_factor=1.000
+	state_category=town
+}

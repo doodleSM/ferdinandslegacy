@@ -9,11 +9,14 @@ state={
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
+			10110 = {
+				naval_base = 3 #mokpo
 
+			}
 		}
 		add_core_of = KOR
 		victory_points = {
-			12085 1 #gwangju
+			12085 5 #gwangju
 		}
 
 	}

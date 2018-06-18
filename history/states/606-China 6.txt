@@ -18,7 +18,10 @@ state={
 
 		}
 		victory_points = {
-			7222 1 
+			7222 3 #hefei
+		}
+		victory_points = {
+			10040 1 #bengbu
 		}
 
 	}

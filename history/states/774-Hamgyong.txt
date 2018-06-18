@@ -12,11 +12,15 @@ state={
 	history={
 		owner = KOR
 		buildings = {
-			infrastructure = 5
+			infrastructure = 4
+			3981 = {
+				naval_base = 1
+
+			}
 
 		}
 		victory_points = {
-			3981 1 #hamhung
+			3981 2 #hamhung
 		}
 		add_core_of = KOR
 

@@ -148,6 +148,7 @@ units = {
 	
 	division = { # "Konoe Shidan"
 		location = 1182 #Tokyo
+		name = "Konoe Shidan"
 		division_template = "Jidousha Shidan"			# Elite Guard unit (highest experience, best equipment)
 		start_experience_factor = 0.4
 	}
@@ -286,6 +287,7 @@ units = {
 
 	#3 Homengun - 3rd Field Army
 	division = { # "3 'Ko' Hohei Shidan"
+		name = "3 'Ko' Hohei Shidan"
 		location = 7186 #Taipei
 		division_template = "Hohei Shidan"
 		start_experience_factor = 0.3

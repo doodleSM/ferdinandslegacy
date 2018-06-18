@@ -1,0 +1,30 @@
+state={
+	id=817
+	name="STATE_817"
+	provinces={
+		934 3814 3934 6837 6898 9835 9905 11886 
+	}
+	history={
+		owner = BEI
+		add_core_of = BEI
+		add_core_of = CHF
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			9835 = {
+				naval_base = 1
+
+			}
+
+		}
+		victory_points = {
+			9835 3
+		}
+
+	}
+
+	manpower=4102854
+	buildings_max_level_factor=1.000
+	state_category=town
+}

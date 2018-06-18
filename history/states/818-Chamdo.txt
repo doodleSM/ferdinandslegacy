@@ -1,0 +1,26 @@
+state={
+	id=818
+	name="STATE_818"
+	resources={
+		oil=4.000
+	}
+	provinces={
+		4407 5102 8041 8059 10856 
+	}
+	history={
+		owner = SZE
+		add_core_of = BEI
+		add_core_of = CHF
+		add_core_of = TIB
+		add_core_of = SZE
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	manpower=269000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

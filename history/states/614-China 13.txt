@@ -11,6 +11,12 @@ state={
 			infrastructure = 4
 
 		}
+		victory_points = {
+			12062 5 #Shijiazhuang
+		}
+		victory_points = {
+			7109 2 # baoding
+		}
 
 	}
 

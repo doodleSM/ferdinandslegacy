@@ -8,10 +8,11 @@ state={
 		owner = KOR
 		buildings = {
 			infrastructure = 4
+			industrial_complex = 1
 
 		}
 		victory_points = {
-			1003 1 #haeju
+			1003 3 #haeju
 		}
 		add_core_of = KOR
 

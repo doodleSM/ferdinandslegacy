@@ -12,6 +12,18 @@ set_politics = {
 
 	parties = {
 		democratic = { 
+			popularity = 2
+		}
+		
+		market_lib = {
+			popularity = 0
+		}
+		
+		social_liberalism = {
+			popularity = 0
+		}
+		
+		social_democracy = {
 			popularity = 0
 		}
 
@@ -21,11 +33,22 @@ set_politics = {
 		
 		communism = {
 			popularity = 0
-			#banned = no #default is no
 		}
 		
-		neutrality = { 
-			popularity = 100
+		radical_socialism = {
+			popularity = 25
+		}
+		
+		anarchism = {
+			popularity = 0
+		}
+
+		neutrality = {
+			popularity = 64
+		}
+		
+		auth_dem = {
+			popularity = 9
 		}
 	}
 	

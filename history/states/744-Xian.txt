@@ -11,7 +11,7 @@ state={
 		add_core_of = CHF
 		add_core_of = SHX
 		victory_points = {
-			7418 1 
+			7418 5
 		}
 		buildings = {
 			infrastructure = 3

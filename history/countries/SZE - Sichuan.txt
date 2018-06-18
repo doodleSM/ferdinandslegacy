@@ -7,10 +7,11 @@ set_technology = {
 	gw_artillery = 1
 	early_submarine = 1
 	early_destroyer = 1
+	early_fighter = 1
 	
 }
 
-set_convoys = 5
+set_convoys = 0
 
 set_politics = {
 
@@ -18,21 +19,41 @@ set_politics = {
 		democratic = { 
 			popularity = 10
 		}
+		
+		market_lib = {
+			popularity = 0
+		}
+		
+		social_liberalism = {
+			popularity = 0
+		}
+		
+		social_democracy = {
+			popularity = 0
+		}
 
 		fascism = {
-			popularity = 0
+			popularity = 3
 		}
 		
 		communism = {
-			popularity = 0
+			popularity = 2
+		}
+		
+		radical_socialism = {
+			popularity = 10
+		}
+		
+		anarchism = {
+			popularity = 4
 		}
 
 		neutrality = {
-			popularity = 55
+			popularity = 52
 		}
 		
 		auth_dem = {
-			popularity = 35
+			popularity = 19
 		}
 	}
 	
@@ -40,4 +61,15 @@ set_politics = {
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Liu Xiang"
+	desc = "POLITICS_LIU_XIANG_DESC"
+	picture = "Liu Xiang.dds"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = {
+		#
+	}
 }

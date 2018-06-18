@@ -2,6 +2,8 @@
 
 oob = "KOR_1936"
 
+set_stability = 0.6
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -11,10 +13,6 @@ set_technology = {
 	tech_engineers = 1
 	gw_artillery = 1
 	gwtank = 1
-	basic_light_tank = 1
-	cv_early_fighter = 1
-	cv_CAS1 = 1
-	cv_naval_bomber1 = 1
 	early_fighter = 1
 	naval_bomber1 = 1
 	early_bomber = 1
@@ -35,25 +33,30 @@ set_technology = {
 add_ideas = {
 	limited_conscription
 	low_economic_mobilisation
+	KOR_sluggish_bureaucracy_idea
+	KOR_disorganised_army_idea
+	KOR_anarchist_threat_idea
 }
+
+set_research_slots = 3
 
 add_opinion_modifier = { target = JAP modifier = hostile_status }
 
-set_convoys = 5
+set_convoys = 50
 
 set_politics = {
 
 	parties = {
 		anarchism = {
-			popularity = 3
+			popularity = 8
 		}
 		
 		communism = {
-			popularity = 4
+			popularity = 1
 		}
 		
 		radical_socialism = {
-			popularity = 3
+			popularity = 1
 		}
 		
 		social_democracy = {
@@ -88,4 +91,135 @@ set_politics = {
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Yi Kang"
+	desc = "POLITICS_YI_KANG_DESC"
+	picture = "Portrait_Yi_Kang.dds"
+	expire = "1989.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Yi Kang"
+	desc = "POLITICS_YI_KANG_DESC"
+	picture = "Portrait_Yi_Kang.dds"
+	expire = "1989.1.1"
+	ideology = auth_dem_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Yi Kang"
+	desc = "POLITICS_YI_KANG_DESC"
+	picture = "Portrait_Yi_Kang.dds"
+	expire = "1989.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Yi Kang"
+	desc = "POLITICS_YI_KANG_DESC"
+	picture = "Portrait_Yi_Kang.dds"
+	expire = "1989.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Yi Kang"
+	desc = "POLITICS_YI_KANG_DESC"
+	picture = "Portrait_Yi_Kang.dds"
+	expire = "1989.1.1"
+	ideology = market_lib_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Yi Kang"
+	desc = "POLITICS_YI_KANG_DESC"
+	picture = "Portrait_Yi_Kang.dds"
+	expire = "1989.1.1"
+	ideology = social_liberalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Yi Kang"
+	desc = "POLITICS_YI_KANG_DESC"
+	picture = "Portrait_Yi_Kang.dds"
+	expire = "1989.1.1"
+	ideology = social_democracy_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kim Won-bong"
+	desc = "POLITICS_KIM_WON-BONG_DESC"
+	picture = "Portrait_Kim_Won-bong.dds"
+	expire = "1989.1.1"
+	ideology = anarchism_ideology
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Ji Cheong-cheon"
+	portrait_path = "gfx/leaders/Asia/portrait_asia_generic_land_13.dds"
+	traits = { 
+		trickster
+		infantry_officer
+	}
+	skill = 4
+	attack_skill = 2
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Yun Chi-sung"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+	traits = { organizer hill_fighter }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hong Sa-ik"
+	portrait_path = "gfx/leaders/Asia/portrait_asia_generic_land_14.dds"
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	traits = { trait_cautious }
+}
+
+create_navy_leader = {
+	name = "Sohn Won-yil"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_navy_1.dds"
+	traits = { fly_swatter }
+	skill = 3
 }

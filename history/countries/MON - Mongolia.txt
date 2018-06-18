@@ -43,6 +43,17 @@ set_politics = {
 }
 
 create_country_leader = {
+	name = "Bogd Council"
+	desc = "POLITICS_BOGD_COUNCIL_DESC"
+	picture = "Bogd Council.dds"
+	expire = "1965.1.1"
+	ideology = auth_dem_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
 	name = "Anandyn Amar"
 	desc = "POLITICS_ANANDYN_AMAR_DESC"
 	picture = GFX_portrait_mon_anandyn_amar

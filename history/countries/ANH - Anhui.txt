@@ -9,10 +9,12 @@ set_technology = {
 	early_destroyer = 1
 	early_light_cruiser = 1
 	transport = 1
+	early_fighter = 1
+	early_bomber = 1
 	
 }
 
-set_convoys = 5
+set_convoys = 30
 
 set_politics = {
 
@@ -28,13 +30,25 @@ set_politics = {
 		social_liberalism = {
 			popularity = 6
 		}
+		
+		social_democracy = {
+			popularity = 6
+		}
 
 		fascism = {
 			popularity = 0
 		}
 		
 		communism = {
-			popularity = 5
+			popularity = 1
+		}
+		
+		anarchism = {
+			popularity = 2
+		}
+		
+		radical_socialism = {
+			popularity = 2
 		}
 
 		neutrality = {
@@ -42,7 +56,7 @@ set_politics = {
 		}
 		
 		auth_dem = {
-			popularity = 64
+			popularity = 58
 		}
 	}
 	

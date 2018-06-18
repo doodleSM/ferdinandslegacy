@@ -11,6 +11,7 @@ state={
 			arms_factory = 1
 			industrial_complex = 1
 			dockyard = 1
+			air_base = 2
 			4056 = {
 				naval_base = 4
 
@@ -18,10 +19,10 @@ state={
 
 		}
 		victory_points = {
-			4056 5
+			4056 10
 		}
 		victory_points = {
-			4086 1 #daegu
+			4086 3 #daegu
 		}
 		add_core_of = KOR
 
