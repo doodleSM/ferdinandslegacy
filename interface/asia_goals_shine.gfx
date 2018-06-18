@@ -1,7 +1,7 @@
 spriteTypes = {
 	
 	SpriteType = {
-		name = "GFX_goal_black_flag"
+		name = "GFX_goal_black_flag_shine"
 		texturefile = "gfx/interface/goals/goal_black_flag.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -33,7 +33,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_red_flag"
+		name = "GFX_goal_red_flag_shine"
 		texturefile = "gfx/interface/goals/goal_red_flag.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -65,7 +65,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_british_shield"
+		name = "GFX_goal_british_shield_shine"
 		texturefile = "gfx/interface/goals/goal_british_shield.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -97,7 +97,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_german_shield"
+		name = "GFX_goal_german_shield_shine"
 		texturefile = "gfx/interface/goals/goal_german_shield.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -128,7 +128,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_korean_shield"
+		name = "GFX_goal_korean_shield_shine"
 		texturefile = "gfx/interface/goals/goal_korean_shield.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -160,7 +160,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_russian_shield"
+		name = "GFX_goal_russian_shield_shine"
 		texturefile = "gfx/interface/goals/goal_russian_shield.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -192,7 +192,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_admiral_yi"
+		name = "GFX_goal_admiral_yi_shine"
 		texturefile = "gfx/interface/goals/goal_admiral_yi.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -224,7 +224,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_korean_peninsula"
+		name = "GFX_goal_korean_peninsula_shine"
 		texturefile = "gfx/interface/goals/goal_korean_peninsula.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -256,7 +256,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_goal_korean_question"
+		name = "GFX_goal_korean_question_shine"
 		texturefile = "gfx/interface/goals/goal_korean_question.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -274,6 +274,38 @@ spriteTypes = {
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/goal_korean_question.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_greater_korea_shine"
+		texturefile = "gfx/interface/goals/goal_greater_korea.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_greater_korea.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_greater_korea.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

@@ -45,4 +45,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_korean_question.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_goal_greater_korea"
+		texturefile = "gfx/interface/goals/goal_greater_korea.dds"
+	}
+	
 }
