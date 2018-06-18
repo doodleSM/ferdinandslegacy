@@ -1,0 +1,842 @@
+ideas = {
+	
+	country = {
+	
+	KOR_sluggish_bureaucracy_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				political_power_gain = -0.1
+				consumer_goods_factor = 0.05
+			}
+		}	
+
+	KOR_anarchist_threat_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			cancel = {
+				has_government = anarchism
+			}
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		
+	KOR_disorganised_army_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				army_org_factor = -0.1
+				max_command_power = -25
+			}
+		}
+		
+	KOR_disorganised_army_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption2
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				army_org_factor = -0.05
+				max_command_power = -10
+			}
+		}
+		
+	KOR_disorganised_army_idea_decisive = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption3
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				army_attack_factor = 0.1
+				org_loss_when_moving = -0.05
+			}
+		}
+		
+	KOR_disorganised_army_idea_resistance = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = chi_army_corruption3
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				attrition = -0.1
+				supply_consumption_factor = -0.1
+				dig_in_speed_factor = 0.25
+			}
+		}
+
+	
+	KOR_self_strengthening_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_political_support
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		
+	KOR_support_neoconfucians_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				political_power_gain = -0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+	KOR_meritocracy_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_supremacy_of_technology
+			
+			modifier = {
+				political_power_factor = 0.1
+				max_command_power = 40
+				military_leader_cost_factor = -0.5
+			}
+		}
+		
+	KOR_minjok_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+			
+			modifier = {
+				war_support_factor = 0.2
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+	KOR_boycott_goods_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			cancel = {
+				OR = {
+					is_in_faction = yes
+					is_subject = yes
+				}
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+	KOR_hermit_kingdom_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_fortify_the_borders
+			
+			modifier = {				
+				army_infantry_defence_factor = 0.1
+				encryption = 1
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
+			}
+		}
+		
+	KOR_rule_by_decree_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				NOT = {
+					OR = {
+					 has_government = neutrality
+					 has_government = fascism
+					}
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+			
+			modifier = {
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				high_command_cost_factor = -0.25
+				air_chief_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
+			}
+		}
+		
+		KOR_fanaticism_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_supremacy_of_will
+			
+			modifier = {
+				army_morale_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		
+		KOR_missionary_education_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		
+		KOR_modern_bureaucracy_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = SOV_scientist_defect
+			
+			modifier = {
+				political_power_gain = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		KOR_international_outlook_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			picture = generic_flexible_foreign_policy
+			
+			modifier = {
+				democratic_acceptance = 10
+				social_liberalism_acceptance = 10
+				social_democracy_acceptance = 10
+				market_lib_acceptance = 10
+				neutrality_acceptance = 10
+				auth_dem_acceptance = 10
+				fascism_acceptance = 10
+			}
+		}
+		
+		KOR_expanded_mines_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			picture = generic_exploit_mines
+			
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+		
+		KOR_export_drive_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		KOR_russian_advisors = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			cancel = {
+				has_war_with = SOV
+			}
+			
+			modifier = {
+				army_morale_factor = 0.05
+			}
+			
+			research_bonus = { 
+				land_doctrine = 0.05
+			}
+		}
+		
+		KOR_german_advisors = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = german_advisors
+			
+			cancel = {
+				has_war_with = GRM
+			}
+			
+			modifier = {
+				planning_speed = 0.2
+			}
+			
+			research_bonus = { 
+				land_doctrine = 0.05
+			}
+		}
+		
+		KOR_german_advisors_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = german_advisors
+			
+			cancel = {
+				has_war_with = GRM
+			}
+			
+			modifier = {
+				planning_speed = 0.2
+				max_planning = 0.1
+				army_leader_start_attack_level = 1
+			}
+			
+			research_bonus = { 
+				land_doctrine = 0.05
+			}
+		}
+		
+		KOR_british_shipwrights = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			cancel = {
+				has_war_with = ENG
+			}
+			
+			removal_cost = -1
+
+			picture = generic_coastal_navy
+			
+			modifier = {
+				production_speed_dockyard_factor = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		
+		KOR_british_student_exchange_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			research_bonus = { 
+				industry = 0.05
+				electronics = 0.05
+			}
+		}
+		
+		KOR_anarchist_threat_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			cancel = {
+				has_government = anarchism
+			}
+			
+			modifier = {
+				anarchism_drift = 0.15
+				stability_factor = -0.05
+			}
+		}
+		
+		KOR_civil_war_reconstruction = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				industry_repair_factor = 0.20
+				stability_weekly = 0.4
+			}
+		}
+		
+		KOR_heroic_corps_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		KOR_women_soldiers_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				conscription_factor = 0.25
+			}
+		}
+		
+		KOR_militias_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = prc_low_popular_support3
+			
+			modifier = {
+				conscription = 0.03
+			}
+		}
+		
+		KOR_rise_koreans_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		KOR_women_workforce_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		KOR_infantry_equipment_focus = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		
+		KOR_legacy_of_admiral_yi_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_sea_focused_navy
+			
+			modifier = {
+				navy_capital_ship_attack_factor = 0.1
+				navy_screen_attack_factor = 0.1
+				navy_submarine_attack_factor = 0.1
+				naval_speed_factor = 0.05
+			}
+			
+			equipment_bonus = {
+				
+			}
+		}
+		
+		KOR_battleships_production_focus_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+			
+			modifier = {
+				
+			}
+			
+			equipment_bonus = {
+				battleship = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				battle_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		KOR_screens_production_focus_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+			
+			modifier = {
+				
+			}
+			
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				light_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				heavy_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		KOR_submarines_production_focus_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+			
+			modifier = {
+				
+			}
+			
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+	}
+
+}

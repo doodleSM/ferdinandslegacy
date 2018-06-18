@@ -250,6 +250,10 @@ country_event = {
 		name = aiu_japan.6.a
 		ai_chance = {
 			base = 60
+			modifier = {
+				factor = 5
+				KOR = { OR = { has_country_flag = KOR_germany_is_patron has_country_flag = KOR_uk_is_patron } }
+			}
 		}
 		KOR = { country_event = { days = 2 id = aiu_japan.7 } }
 		effect_tooltip = {
@@ -276,6 +280,10 @@ country_event = {
 		name = aiu_japan.6.c
 		ai_chance = {
 			base = 5
+			modifier = {
+				factor = 2
+				KOR = { has_country_flag = KOR_russia_is_patron }
+			}
 		}
 		KOR = { country_event = { days = 2 id = aiu_japan. } }
 	}
@@ -890,14 +898,14 @@ country_event = {
 			}
 		} 
 		JAP = {
-			country_event = { days = 5 id = japan.30 }
+			country_event = { days = 5 id = aiu_japan.30 }
 		}
 	}
 	option = { # Refuse
 		name = aiu_japan.29.b
 		ai_chance = { factor = 25 }
 		JAP = {
-			country_event = { days = 5 id = japan.31 }
+			country_event = { days = 5 id = aiu_japan.31 }
 		}
 	}
 }
@@ -1126,7 +1134,7 @@ country_event = {
 			}
 		}
 		JAP = { add_to_faction = SIA }
-		JAP = { country_event = { days = 5 id = japan.33 } }
+		JAP = { country_event = { days = 5 id = aiu_japan.33 } }
 	}
 	
 	option = {
@@ -1134,7 +1142,7 @@ country_event = {
 		ai_chance = {
 			factor = 0
 			}
-		JAP = { country_event = { days = 5 id = japan.34 } }
+		JAP = { country_event = { days = 5 id = aiu_japan.34 } }
 		}
 }
 
