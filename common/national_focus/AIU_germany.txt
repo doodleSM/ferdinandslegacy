@@ -1,0 +1,1086 @@
+focus_tree = {
+	
+		country = {
+			factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GRM
+		}
+	}
+
+	continuous_focus_position = { x = 50 y = 3000 }
+
+	# Colonial Policy Branch, allows Player to either Prioritise African or Asian Colonies
+
+	focus = {
+		id = GRM_appoint_colonial_governors
+		icon = GFX_goal_anschluss
+		x = 4
+		y = 0
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_establish_colonial_policy
+		icon = GFX_goal_generic_colonial_unity
+		x = 4
+		y = 1
+
+		cost = 10
+		prerequisite = { focus = GRM_appoint_colonial_governors}
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	
+	focus = {
+		id = GRM_prioritise_africa
+		icon = GFX_focus_black_white_treaty
+		x = 1
+		y = 2
+		prerequisite = { focus = GRM_establish_colonial_policy }
+		mutually_exclusive = { focus = GRM_prioritise_asia }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_develop_tanganayika
+		icon = GFX_goal_generic_construct_civilian
+		x = 1
+		y = 3
+		prerequisite = { focus = GRM_prioritise_africa }
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_windhoek_industrial_district
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 4
+		prerequisite = { focus = GRM_develop_tanganayika }
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_pull_local_talent
+		icon = GFX_GER_colonial_Exchange
+		x = 1
+		y = 5
+		prerequisite = { focus = GRM_windhoek_industrial_district }
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_great_kamerun_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 6
+		prerequisite = { focus = GRM_pull_local_talent }
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_fortress_africa
+		icon = GFX_goal_generic_fortify_city
+		x = 2
+		y = 6
+		prerequisite = { focus = GRM_pull_local_talent }
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_prioritise_asia
+		icon = GFX_goal_generic_position_armies
+		x = 7
+		y = 2
+		prerequisite = { focus = GRM_establish_colonial_policy }
+		mutually_exclusive = { focus = GRM_prioritise_africa}
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_settle_saipan
+		icon = GFX_goal_generic_construction2
+		x = 7
+		y = 3
+		prerequisite = { focus = GRM_prioritise_asia }
+		mutually_exclusive = { }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_kaiserwilhemsland_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 7
+		y = 4
+		prerequisite = { focus = GRM_settle_saipan }
+		mutually_exclusive = { }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_the_papua_proposal
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 7
+		y = 5	
+		prerequisite = { focus = GRM_kaiserwilhemsland_dockyards }
+		mutually_exclusive = { }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_form_the_okl
+		icon = GFX_goal_generic_improve_relations
+		x = 9
+		y = 6	
+		prerequisite = { focus = GRM_the_papua_proposal }
+		mutually_exclusive = { }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_introduce_slave_labour
+		icon = GFX_focus_CZE_german_puppet
+		x = 10
+		y = 7	
+		prerequisite = { focus = GRM_form_the_okl }
+		mutually_exclusive = {focus = GRM_grant_german_citizenships }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_grant_german_citizenships
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 8
+		y = 7	
+		prerequisite = { focus = GRM_form_the_okl }
+		mutually_exclusive = { focus = GRM_introduce_slave_labour }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_create_excavation_works
+		icon = GFX_goal_generic_construct_civilian
+		x = 8
+		y = 8	
+		prerequisite = { focus = GRM_grant_german_citizenships }
+		mutually_exclusive = { }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_exploit_native_resources
+		icon = GFX_goal_generic_trade
+		x = 10
+		y = 8	
+		prerequisite = { focus = GRM_introduce_slave_labour }
+		mutually_exclusive = { }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_the_rabaul_conference
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 9
+		y = 9	
+		prerequisite = { focus = GRM_create_excavation_works focus = GRM_exploit_native_resources }
+		mutually_exclusive = { }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_hold_tsingtao
+		icon = GFX_focus_generic_coastal_fort
+		x = 6
+		y = 6	
+		prerequisite = { focus = GRM_the_papua_proposal }
+		mutually_exclusive = { }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_colonial_expansion
+		icon = GFX_goal_generic_territory_or_war
+		x = 4
+		y = 3
+		prerequisite = { focus = GRM_establish_colonial_policy }
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			has_army_manpower = { size > 499999 } 
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_proffesional_colonial_forces
+		icon = GFX_goal_generic_special_forces
+		x = 3
+		y = 4
+		prerequisite = { focus = GRM_colonial_expansion}
+		mutually_exclusive = {focus = GRM_a_gun_for_every_schutztruppe}
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_a_gun_for_every_schutztruppe
+		icon = GFX_goal_expand_recruitment
+		x = 5
+		y = 4
+		prerequisite = { focus = GRM_colonial_expansion}
+		mutually_exclusive = {focus = GRM_proffesional_colonial_forces}
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_promote_colonial_officers
+		icon = GFX_focus_generic_african_officers	
+		x = 5
+		y = 5
+		prerequisite = { focus = GRM_proffesional_colonial_forces focus = GRM_a_gun_for_every_schutztruppe}
+		mutually_exclusive = {focus = GRM_discriminate_native_officers}
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_discriminate_native_officers
+		icon = GFX_focus_african_discrimination
+		x = 3
+		y = 5
+		prerequisite = { focus = GRM_proffesional_colonial_forces focus = GRM_a_gun_for_every_schutztruppe}
+		mutually_exclusive = {focus = GRM_promote_colonial_officers}
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_dar_es_salaam_military_academy
+		icon = GFX_focus_german_colonial_academy
+		x = 4
+		y = 6
+		prerequisite = { focus = GRM_discriminate_native_officers focus = GRM_promote_colonial_officers}
+		mutually_exclusive = {}
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	add_political_power = 50
+    	}
+	}
+	focus = {
+		id = GRM_raise_schutztruppe
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 4
+		y = 7
+		prerequisite = { focus = GRM_dar_es_salaam_military_academy }
+		mutually_exclusive = {}
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_abteilung_iiib_african_branch
+		icon = GFX_focus_africa_abteilung_iiib
+		x = 1
+		y = 10
+		prerequisite = { focus = GRM_mass_askari_conscription }
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_fund_kenyan_nationalists
+		icon = GFX_focus_generic_license_production
+		x = 1
+		y = 11
+		prerequisite = { focus = GRM_abteilung_iiib_african_branch }
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_angolan_interference
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 12
+		prerequisite = { focus = GRM_fund_kenyan_nationalists }
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_great_african_revolt
+		icon = GFX_goal_generic_major_war
+		x = 1
+		y = 13
+		prerequisite = { focus = GRM_angolan_interference }
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_announce_german_protection 
+		icon = GFX_focus_ger_african_protection
+		x = 1
+		y = 14
+		prerequisite = { focus = GRM_great_african_revolt }
+		
+		cost = 2
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_mass_askari_conscription
+		icon = GFX_focus_generic_african_union
+		x = 2
+		y = 9
+		prerequisite = { focus = GRM_raise_schutztruppe }
+		prerequisite = { focus = GRM_fortress_africa }
+		mutually_exclusive = {focus = GRM_Pazifische_Armee}
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_establish_colonial_elections
+		icon = GFX_goal_generic_african_treaty
+		x = 0
+		y = 7
+		prerequisite = { focus = GRM_great_kamerun_railway}
+		
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_the_Kolonialautonomie_plan
+		icon = GFX_goal_black_white_relations
+		x = 0
+		y = 8
+		prerequisite = { focus = GRM_establish_colonial_elections}
+		
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_Pazifische_Armee
+		icon = GFX_focus_generic_asian_union
+		x = 6
+		y = 9
+		prerequisite = { focus = GRM_raise_schutztruppe }
+		prerequisite = { focus = GRM_hold_tsingtao }
+		mutually_exclusive = {focus = GRM_mass_askari_conscription}
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_canarias_purchase
+		icon = GFX_focus_canarias_trade
+		x = 4
+		y = 10
+		prerequisite = { focus = GRM_mass_askari_conscription focus = GRM_Pazifische_Armee  }
+		
+		
+		cost = 5
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_invest_in_haiti
+		icon = GFX_focus_influence_haiti
+		x = 3
+		y = 11
+		prerequisite = { focus = GRM_canarias_purchase }
+		
+		
+		cost = 12
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_the_portauprince_accords
+		icon = GFX_focus_portauprince_accords
+		x = 3
+		y = 12
+		prerequisite = { focus = GRM_invest_in_haiti }
+		
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_further_economic_dependecy
+		icon = GFX_further_economic_dependency
+		x = 4
+		y = 13
+		prerequisite = { focus = GRM_the_portauprince_accords  }
+		prerequisite = { focus = GRM_german_uruguay_friendship }
+		
+		
+		cost = 5
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_invest_in_uruguay
+		icon = GFX_focus_uruguay_relations
+		x = 5
+		y = 11
+		prerequisite = { focus = GRM_canarias_purchase }
+		
+		
+		cost = 12
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_german_uruguay_friendship
+		icon = GFX_focus_german_uruguay_friendship
+		x = 5
+		y = 12
+		prerequisite = { focus = GRM_invest_in_uruguay }
+		
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_seize_chinese_lands
+		icon = GFX_focus_seize_chinese_lands
+		x = 8
+		y = 10
+		prerequisite = { focus = GRM_Pazifische_Armee }
+		
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_strengthen_ties_with_beyinyang
+		icon = GFX_focus_strengthen_ties_with_beyinyang
+		x = 7
+		y = 11
+		prerequisite = { focus = GRM_seize_chinese_lands }
+		mutually_exlusive = {focus = GRM_threaten_anhui}
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_invest_in_tianjin
+		icon = GFX_focus_invest_in_tianjin
+		x = 7
+		y = 12
+		prerequisite = { focus = GRM_strengthen_ties_with_beyinyang }
+		
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_demand_tianjin_exclusivity_rights
+		icon = GFX_goal_generic_position_armies			
+		x = 7
+		y = 13
+		prerequisite = { focus = GRM_invest_in_tianjin }
+		
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_threaten_anhui
+		icon = GFX_threaten_anhui
+		x = 11
+		y = 11
+		prerequisite = { focus = GRM_seize_chinese_lands }
+		mutually_exlusive = {focus = GRM_strengthen_ties_with_beyinyang}
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_nanking_road_incident
+		icon = GFX_goal_generic_military_sphere
+		x = 12
+		y = 12
+		prerequisite = { focus = GRM_threaten_anhui}
+		mutually_exclusive = {focus = GRM_shanghai_blockade}
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {		
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_tsingtao_conference
+		icon = GFX_goal_generic_military_deal
+		x = 12
+		y = 13
+		prerequisite = { focus = GRM_nanking_road_incident}
+		
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {		
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_shanghai_blockade
+		icon = GFX_goal_generic_navy_battleship
+		x = 10
+		y = 12
+		prerequisite = { focus = GRM_threaten_anhui}
+		mutually_exclusive = {focus = GRM_nanking_road_incident}
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = GRM_seize_shanghai
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 10
+		y = 13
+		prerequisite = { focus = GRM_shanghai_blockade}
+		
+		
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	
+
+}

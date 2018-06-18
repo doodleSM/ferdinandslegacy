@@ -1,0 +1,108 @@
+SpriteTypes = {
+		
+	
+	spriteType = {
+		name = "GFX_focus_generic_african_officers"
+		texturefile = "/gfx/interface/goals/focus_generic_african_officers.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_ger_african_protection"
+		texturefile = "/gfx/interface/goals/focus_ger_african_protection.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_seize_chinese_lands"
+		texturefile = "/gfx/interface/goals/focus_seize_chinese_lands.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_strengthen_ties_with_beyinyang"
+		texturefile = "/gfx/interface/goals/focus_strengthen_ties_with_beyinyang.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_africa_abteilung_iiib"
+		texturefile = "/gfx/interface/goals/focus_africa_abteilung_iiib.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_invest_in_tianjin"
+		texturefile = "/gfx/interface/goals/focus_invest_in_tianjin.dds"
+	}
+	spriteType = {
+		name = "GFX_threaten_anhui"
+		texturefile = "/gfx/interface/goals/focus_threaten_anhui.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_influence_haiti"
+		texturefile = "/gfx/interface/goals/focus_influence_haiti.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_german_uruguay_friendship"
+		texturefile = "/gfx/interface/goals/german_uruguay_friendship.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_canarias_trade"
+		texturefile = "/gfx/interface/goals/focus_canarias_trade.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_portauprince_accords"
+		texturefile = "/gfx/interface/goals/focus_portauprince_accords.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_uruguay_relations"
+		texturefile = "/gfx/interface/goals/focus_urugay_relations.dds"
+	}
+	spriteType = {
+		name = "GFX_further_economic_dependency"
+		texturefile = "/gfx/interface/goals/further_economic_dependency.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_german_colonial_academy"
+		texturefile = "/gfx/interface/goals/focus_german_colonial_academy.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_african_concessions"
+		texturefile = "/gfx/interface/goals/focus_african_concessions.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_african_discrimination"
+		texturefile = "/gfx/interface/goals/focus_african_discrimination.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_generic_african_union"
+		texturefile = "/gfx/interface/goals/focus_generic_african_union.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_black_white_relations"
+		texturefile = "/gfx/interface/goals/goal_black_white_relations.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_black_black_relations"
+		texturefile = "/gfx/interface/goals/goal_black_black_relations.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_african_attack"
+		texturefile = "/gfx/interface/goals/focus_african_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_colonial_unity"
+		texturefile = "/gfx/interface/goals/goal_generic_colonial_unity.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_african_treaty"
+		texturefile = "/gfx/interface/goals/goal_generic_african_treaty.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_black_white_treaty"
+		texturefile = "/gfx/interface/goals/focus_black_white_treaty.dds"
+	}
+	spriteType = {
+		name = "GFX_GER_colonial_Exchange"
+		texturefile = "/gfx/interface/goals/GER_colonial_Exchange.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_introduce_apartheid"
+		texturefile = "/gfx/interface/goals/focus_introduce_apartheid.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_generic_asian_union"
+		texturefile = "/gfx/interface/goals/focus_generic_asian_union.dds"
+	}
+}
