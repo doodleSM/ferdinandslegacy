@@ -119,7 +119,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.1
 			add_war_support = 0.05
 		}
 	}
@@ -568,7 +568,7 @@ focus_tree = {
 	
 	focus = {
 		id = KOR_greater_korea
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_goal_greater_korea
 		x = -1
 		y = 5
 		relative_position_id = KOR_self_strengthening_focus
@@ -867,7 +867,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.2
 		}
 	}
 	

@@ -8,7 +8,9 @@ state={
 		add_core_of = BEI
 		add_core_of = CHF
 		buildings = {
-			infrastructure = 4
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
 
 		}
 		victory_points = {
