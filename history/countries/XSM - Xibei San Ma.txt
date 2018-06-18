@@ -70,6 +70,18 @@ create_country_leader = {
 	}
 }
 
+
+create_country_leader = {
+	name = "Ma Qi"
+	desc = ""
+	picture = "Ma Qi.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
 create_corps_commander = {
 	name = "Ma Hongbin"
 	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
