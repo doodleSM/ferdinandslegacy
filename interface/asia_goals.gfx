@@ -1,0 +1,48 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goal_black_flag"
+		texturefile = "gfx/interface/goals/goal_black_flag.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_british_shield"
+		texturefile = "gfx/interface/goals/goal_british_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_german_shield"
+		texturefile = "gfx/interface/goals/goal_german_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_korean_shield"
+		texturefile = "gfx/interface/goals/goal_korean_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_russian_shield"
+		texturefile = "gfx/interface/goals/goal_russian_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_red_flag"
+		texturefile = "gfx/interface/goals/goal_red_flag.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_admiral_yi"
+		texturefile = "gfx/interface/goals/goal_admiral_yi.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_korean_peninsula"
+		texturefile = "gfx/interface/goals/goal_korean_peninsula.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_korean_question"
+		texturefile = "gfx/interface/goals/goal_korean_question.dds"
+	}
+	
+}
