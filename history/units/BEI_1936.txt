@@ -199,9 +199,18 @@ units = {
 	division = {
 		division_name = {
 			is_name_ordered = yes
-			name_order = 1
+			name_order = 2
 		}
 		location = 1169
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.2
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11980
 		division_template = "Qibing Jun"
 		start_experience_factor = 0.2
 	}
