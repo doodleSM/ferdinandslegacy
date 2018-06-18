@@ -1,0 +1,3932 @@
+focus_tree = {
+	id = aiu_korea_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = KOR
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1200 }
+
+	focus = {
+		id = KOR_self_strengthening_focus
+		icon = GFX_focus_generic_home_defense
+		x = 4
+		y = 0
+		mutually_exclusive = { focus = KOR_seek_protection }
+		mutually_exclusive = { focus = KOR_prepare_revolution_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			#has_country_flag = KOR_patrons_all_refused
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_self_strengthening_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_support_neoconfucians
+		icon = GFX_goal_generic_improve_relations
+		x = 1
+		y = 1
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_self_strengthening_focus }
+		mutually_exclusive = { focus = KOR_christian_educators }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_sluggish_bureaucracy_idea			
+				add_idea = KOR_support_neoconfucians_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_korean_distinctiveness_focus
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 2
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_support_neoconfucians }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = KOR_principles_of_minjok
+		icon = GFX_goal_korean_shield #GFX_goal_generic_demand_territory
+		x = 1
+		y = 3
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_korean_distinctiveness_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_minjok_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_boycott_western_goods
+		icon = GFX_goal_generic_defence
+		x = 1
+		y = 4
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_principles_of_minjok }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_boycott_goods_idea
+			add_ideas = closed_economy
+			every_other_country = {
+				limit = { is_major = yes }
+				add_opinion_modifier = {
+				target = ROOT
+				modifier = small_decrease
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_hermit_kingdom_focus
+		icon = GFX_goal_generic_fortify_city
+		x = 1
+		y = 5
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_boycott_western_goods }
+		mutually_exclusive = { focus = KOR_greater_korea }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_hermit_kingdom_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_democratic_ideals
+		icon = GFX_goal_support_democracy
+		x = -3
+		y = 1
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_self_strengthening_focus }
+		mutually_exclusive = { focus = KOR_revoke_constitution }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_promote_meritocracy
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = -3
+		y = 2
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_democratic_ideals }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_meritocracy_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_fair_work_regulations
+		icon = GFX_focus_generic_self_management
+		x = -3
+		y = 4
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_promote_meritocracy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_idea = KOR_anarchist_threat_idea
+		}
+
+		bypass = {
+			NOT = { has_idea = KOR_anarchist_threat_idea }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = KOR_anarchist_threat_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_research_universities
+		icon = GFX_focus_research2
+		x = -3
+		y = 5
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_fair_work_regulations }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			num_of_factories > 25
+			amount_research_slots < 5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = KOR_revoke_constitution
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = -1
+		y = 1
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_self_strengthening_focus }
+		mutually_exclusive = { focus = KOR_democratic_ideals }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+			set_politics = { ruling_party = neutrality }
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_rule_by_decree
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 2
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_revoke_constitution }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_rule_by_decree_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_state_guided_research
+		icon = GFX_focus_research
+		x = -2
+		y = 3
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_promote_meritocracy focus = KOR_rule_by_decree }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			amount_research_slots < 5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = KOR_imperial_guard_focus
+		icon = GFX_focus_generic_little_entente
+		x = -1
+		y = 4
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_rule_by_decree }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = KOR_imperial_guard_focus_tt
+			hidden_effect = {
+				division_template = {
+					name = "Jegugchin-widae"
+					is_locked = no
+					priority = 2
+					division_names_group = KOR_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+			
+	    	   		 	infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+			
+	    	   		 	infantry = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 525 }
+					create_unit = {
+						division = "name = \"1. Imperial Guards\" division_template = \"Jegugchin-widae\" start_experience_factor = 0.6" 
+						owner = "KOR"
+					}
+					create_unit = {
+						division = "name = \"2. Imperial Guards\" division_template = \"Jegugchin-widae\" start_experience_factor = 0.6" 
+						owner = "KOR"
+					}
+				}			
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_greater_korea
+		icon = GFX_goal_generic_more_territorial_claims
+		x = -1
+		y = 5
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_imperial_guard_focus }
+		mutually_exclusive = { focus = KOR_hermit_kingdom_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_state_claim = 770
+			add_state_claim = 717
+			add_state_claim = 328
+			add_state_claim = 716
+			add_state_claim = 816
+		}
+	}
+	
+	focus = {
+		id = KOR_found_faction
+		icon = GFX_goal_generic_military_sphere
+		x = -2
+		y = 6
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_greater_korea }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = KOR_own_faction
+		}
+	}
+	
+	focus = {
+		id = KOR_demand_western_territories
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 6
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_greater_korea }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0 
+				has_war = yes
+			}
+		}
+
+		available = {
+			any_other_country = { has_full_control_of_state = 770 NOT = { has_war_with = KOR } NOT = { is_in_faction_with = KOR } }
+			is_subject = no
+			has_army_manpower = { size > 399999 }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_other_country = { limit = { has_full_control_of_state = 770 } country_event = { id = aiu_korea.4 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = KOR_assimilate_western_territories
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 7
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_demand_western_territories }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = KOR_assimilate_western_territories_tt
+		}
+	}
+	
+	focus = {
+		id = KOR_fanaticism_focus
+		icon = GFX_goal_generic_secret_weapon
+		x = 2
+		y = 6
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_greater_korea focus = KOR_hermit_kingdom_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_fanaticism_idea
+			hidden_effect = {
+				set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip
+		}
+	}
+	
+	focus = {
+		id = KOR_rise_koreans_focus
+		icon = GFX_goal_generic_major_war
+		x = 2
+		y = 7
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_fanaticism_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			has_war = yes
+			any_enemy_country = {
+						ic_ratio = { 
+							tag = ROOT 
+							ratio > 1
+						}
+					}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_rise_koreans_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_christian_educators
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 3
+		y = 1
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_self_strengthening_focus focus = KOR_seek_protection }
+		mutually_exclusive = { focus = KOR_support_neoconfucians }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_missionary_education_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_religious_harmonisation
+		icon = GFX_goal_tripartite_pact
+		x = 3
+		y = 2
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_christian_educators }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = KOR_modernise_bureaucracy
+		icon = GFX_focus_generic_treaty
+		x = 3
+		y = 3
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_religious_harmonisation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#add_ideas = KOR_modern_bureaucracy_idea
+			remove_ideas = KOR_sluggish_bureaucracy_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_the_korean_press
+		icon = GFX_goal_generic_propaganda
+		x = 3
+		y = 4
+		relative_position_id = KOR_self_strengthening_focus
+		prerequisite = { focus = KOR_modernise_bureaucracy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+	
+	focus = {
+		id = KOR_seek_protection
+		icon = GFX_goal_generic_major_alliance
+		x = 14
+		y = 0
+		mutually_exclusive = { focus = KOR_self_strengthening_focus }
+		mutually_exclusive = { focus = KOR_prepare_revolution_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_international_outlook_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_russian_patron
+		icon = GFX_goal_russian_shield
+		x = -4
+		y = 1
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_seek_protection }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			SOV = { exists = yes is_subject = no NOT = { has_war_with = KOR } NOT = { is_in_faction_with = KOR } }
+			NOT = { has_country_flag = KOR_germany_is_patron }
+			NOT = { has_country_flag = KOR_uk_is_patron }
+		}
+
+		bypass = {
+			OR = { is_in_faction_with = SOV is_subject_of = SOV }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			SOV = { country_event = { id = aiu_korea.1 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = KOR_russian_mines
+		icon = GFX_focus_generic_tungsten
+		x = -4
+		y = 2
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_russian_patron }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			SOV = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_russia_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			774 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_russian_agricultural_assistance
+		icon = GFX_goal_generic_construct_civilian
+		x = -3
+		y = 3
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_russian_mines }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			SOV = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_russia_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				prioritize = { 774 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_russian_military_advisors
+		icon = GFX_goal_generic_position_armies
+		x = -5
+		y = 3
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_russian_mines }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			SOV = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_russia_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_russian_advisors
+		}
+	}
+	
+	focus = {
+		id = KOR_mountain_wargames
+		icon = GFX_goal_generic_cavalry
+		x = -5
+		y = 4
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_russian_military_advisors }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			SOV = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_russia_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			SOV = {
+				army_experience = 10
+				add_tech_bonus = {
+					name = land_doc_bonus
+					bonus = 0.25
+					uses = 1
+					category = land_doctrine
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_russian_naval_basing
+		icon = GFX_goal_generic_navy_cruiser
+		x = -3
+		y = 4
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_russian_agricultural_assistance }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			779 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			SOV = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_russia_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			779 = {
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_join_russia
+		icon = GFX_goal_generic_alliance
+		x = -4
+		y = 5
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_mountain_wargames }
+		prerequisite = { focus = KOR_russian_naval_basing }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			SOV = { exists = yes is_subject = no NOT = { has_war_with = KOR } is_faction_leader = yes }
+			has_country_flag = KOR_russia_is_patron
+			is_in_faction = no
+			is_subject = no
+		}
+
+		bypass = {
+			is_in_faction_with = SOV
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			SOV = { country_event = { id = generic.2 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = KOR_german_patron
+		icon = GFX_goal_german_shield
+		x = 0
+		y = 1
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_seek_protection }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = KOR } NOT = { is_in_faction_with = KOR } }
+			NOT = { has_country_flag = KOR_russia_is_patron }
+			NOT = { has_country_flag = KOR_uk_is_patron }
+		}
+
+		bypass = {
+			OR = { is_in_faction_with = GRM is_subject_of = GRM }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			GRM = { country_event = { id = aiu_korea.1 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = KOR_railway_contracts
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 2
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_german_patron }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_germany_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_german_military_mission
+		icon = GFX_focus_generic_military_mission
+		x = -1
+		y = 3
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_railway_contracts }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_germany_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_german_advisors
+		}
+	}
+	
+	focus = {
+		id = KOR_german_technical_staff
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 3
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_railway_contracts }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_germany_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_german_technical_staff
+				bonus = 0.5
+				uses = 2
+				category = industry
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_kriegsakademie
+		icon = GFX_focus_generic_military_academy
+		x = -1
+		y = 4
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_german_military_mission }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_germany_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_army_leader = {
+				add_attack = 1
+			}
+			swap_ideas = {
+				remove_idea = KOR_german_advisors
+				add_idea = KOR_german_advisors_2
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_construction_techniques
+		icon = GFX_goal_generic_construction
+		x = 1
+		y = 4
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_german_technical_staff }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_germany_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_construction_techniques
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_join_germany
+		icon = GFX_goal_generic_alliance
+		x = -0
+		y = 5
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_kriegsakademie }
+		prerequisite = { focus = KOR_construction_techniques }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = KOR } is_faction_leader = yes }
+			has_country_flag = KOR_germany_is_patron
+			is_in_faction = no
+			is_subject = no
+		}
+
+		bypass = {
+			is_in_faction_with = GRM
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			GRM = { country_event = { id = generic.2 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = KOR_british_patron
+		icon = GFX_goal_british_shield #GFX_focus_chi_british_cooperation
+		x = 4
+		y = 1
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_seek_protection }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = KOR } NOT = { is_in_faction_with = KOR } }
+			NOT = { has_country_flag = KOR_germany_is_patron }
+			NOT = { has_country_flag = KOR_russia_is_patron }
+		}
+
+		bypass = {
+			OR = { is_in_faction_with = ENG is_subject_of = ENG }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			ENG = { country_event = { id = aiu_korea.1 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = KOR_hire_british_shipwrights
+		icon = GFX_goal_generic_build_navy
+		x = 3
+		y = 2
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_british_patron }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_uk_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_british_shipwrights
+		}
+	}
+	
+	focus = {
+		id = KOR_british_naval_modernisation
+		icon = GFX_goal_generic_navy_battleship
+		x = 3
+		y = 3
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_hire_british_shipwrights }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_uk_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_british_naval_modernisation
+				bonus = 0.5
+				uses = 2
+				category = ca_tech
+				category = cl_tech
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_british_student_exchange
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 5
+		y = 2
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_british_patron }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_uk_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_british_student_exchange_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_imperial_research_collaboration
+		icon = GFX_focus_research2
+		x = 5
+		y = 3
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_british_student_exchange }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			has_country_flag = KOR_uk_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_to_tech_sharing_group = commonwealth_research
+		}
+	}
+	
+	focus = {
+		id = KOR_british_fighter_purchase
+		icon = GFX_goal_generic_air_fighter2
+		x = 4
+		y = 4
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_british_naval_modernisation focus = KOR_imperial_research_collaboration }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = KOR } }
+			ENG = { has_tech = fighter1 }
+			has_country_flag = KOR_uk_is_patron
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 100 producer = ENG }
+		}
+	}
+	
+	focus = {
+		id = KOR_join_britain
+		icon = GFX_goal_generic_alliance
+		x = 4
+		y = 5
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_british_fighter_purchase }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = KOR } is_faction_leader = yes }
+			has_country_flag = KOR_uk_is_patron
+			is_in_faction = no
+			is_subject = no
+		}
+
+		bypass = {
+			is_in_faction_with = ENG
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			ENG = { country_event = { id = generic.2 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = KOR_joint_research
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 0
+		y = 6
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_join_russia focus = KOR_join_germany focus = KOR_join_britain }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			OR = { is_in_faction_with = SOV is_in_faction_with = GRM is_in_faction_with = ENG }
+			amount_research_slots < 5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = KOR_mine_expansion_focus
+		icon = GFX_goal_generic_construction2
+		x = 8
+		y = 1
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_seek_protection }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			NOT = { has_country_flag = KOR_patrons_all_refused }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_expanded_mines_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_export_drive_focus
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 8
+		y = 2
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_mine_expansion_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			NOT = { has_country_flag = KOR_patrons_all_refused }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_export_drive_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_corporate_incentives_focus
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 8
+		y = 3
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_export_drive_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			NOT = { has_country_flag = KOR_patrons_all_refused }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_rapid_growth_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 7
+		y = 4
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_corporate_incentives_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			NOT = { has_country_flag = KOR_patrons_all_refused }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_corporate_research
+		icon = GFX_focus_research
+		x = 9
+		y = 4
+		relative_position_id = KOR_seek_protection
+		prerequisite = { focus = KOR_corporate_incentives_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			NOT = { has_country_flag = KOR_patrons_all_refused }
+			amount_research_slots < 5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = KOR_prepare_revolution_focus
+		icon = GFX_goal_generic_major_war
+		x = 27
+		y = 0
+		mutually_exclusive = { focus = KOR_self_strengthening_focus }
+		mutually_exclusive = { focus = KOR_seek_protection }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			is_subject = no
+			has_war = no
+			is_in_faction = no
+		}
+
+		bypass = {
+			has_government = anarchism
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_anarchist_threat_idea
+				add_idea = KOR_anarchist_threat_idea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_anarchist_civil_war
+		icon = GFX_goal_black_flag #GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 0
+		y = 1
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_prepare_revolution_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			anarchism > 0.3
+		}
+
+		bypass = {
+			has_government = anarchism
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = KOR_anarchist_threat_idea_2 } remove_ideas = KOR_anarchist_threat_idea_2 }
+			#KOR_anarchist_civil_war_tt
+			set_capital = 527
+			start_civil_war = {
+				ruling_party = anarchism
+				ideology = ROOT
+				size = 0.5
+				only_own_territory = no
+				capital = 525
+				states = { 525 779 776 774 }
+			}
+			add_named_threat = { threat = 8 name = KOR_anarchist_civil_war }
+			hidden_effect = {
+				remove_ideas = KOR_anarchist_threat_idea_2
+				division_template = { name = "Korean People's Regiment" division_names_group = KOR_INF_01 is_locked = no regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } }
+				527 = {
+					create_unit = { 
+						division = "name = \"1. Korean People's Regiment\" division_template = \"Korean People's Regiment\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"2. Korean People's Regiment\" division_template = \"Korean People's Regiment\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+				}
+				777 = {
+					create_unit = { 
+						division = "name = \"3. Korean People's Regiment\" division_template = \"Korean People's Regiment\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"4. Korean People's Regiment\" division_template = \"Korean People's Regiment\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+				}
+				778 = {
+					create_unit = { 
+						division = "name = \"5. Korean People's Regiment\" division_template = \"Korean People's Regiment\" start_experience_factor = 0" 
+						owner = ROOT
+					}
+				}
+			}
+			hidden_effect = {
+				random_other_country = {
+					limit = {
+						original_tag = KOR
+						NOT = { has_government = anarchism }
+					}
+					hidden_effect = {
+						division_template = { name = "Loyalist Militia Regiment" division_names_group = KOR_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } }
+						525 = {
+							create_unit = { 
+								division = "name = \"1. Loyalist Militia Regiment\" division_template = \"Loyalist Militia Regiment\" start_experience_factor = 0" 
+								owner = PREV
+							}
+							create_unit = { 
+								division = "name = \"2. Loyalist Militia Regiment\" division_template = \"Loyalist Militia Regiment\" start_experience_factor = 0" 
+								owner = PREV
+							}
+						}
+						779 = {
+							create_unit = { 
+								division = "name = \"3. Loyalist Militia Regiment\" division_template = \"Loyalist Militia Regiment\" start_experience_factor = 0" 
+								owner = PREV
+							}
+							create_unit = { 
+								division = "name = \"4. Loyalist Militia Regiment\" division_template = \"Loyalist Militia Regiment\" start_experience_factor = 0" 
+								owner = PREV
+							}
+						}
+					}
+					load_focus_tree = aiu_korea_focus
+					complete_national_focus = KOR_self_strengthening_focus
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_anarchist_civil_war_victory
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 2
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_anarchist_civil_war }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			has_civil_war = no
+			has_government = anarchism
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_timed_idea = { days = 200 idea = KOR_civil_war_reconstruction }
+		}
+	}
+	
+	focus = {
+		id = KOR_overturn_yanbang
+		icon = GFX_goal_demand_sudetenland
+		x = -2
+		y = 3
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_anarchist_civil_war_victory }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = anarchism
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = KOR_sluggish_bureaucracy_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_land_restribution
+		icon = GFX_goal_generic_forceful_treaty
+		x = -2
+		y = 4
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_overturn_yanbang }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_road_building
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -2
+		y = 5
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_land_restribution }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_heroic_corps
+		icon = GFX_goal_generic_cavalry
+		x = 0
+		y = 3
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_anarchist_civil_war_victory }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_heroic_corps_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_women_soldiers
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 4
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_heroic_corps }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			has_government = anarchism
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_women_soldiers_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_regional_militias
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 5
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_women_soldiers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			has_government = anarchism
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_militias_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_dispersed_industry
+		icon = GFX_goal_generic_production2
+		x = 2
+		y = 3
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_anarchist_civil_war_victory }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dispersed_industry_bonus
+				bonus = 0.5
+				uses = 1
+				technology = dispersed_industry
+				technology = dispersed_industry2
+				technology = dispersed_industry3
+				technology = dispersed_industry4
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_peoples_mines
+		icon = GFX_goal_generic_construction
+		x = 2
+		y = 4
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_dispersed_industry }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_expanded_mines_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_women_in_workforce
+		icon = GFX_goal_generic_construct_civilian
+		x = 2
+		y = 5
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_peoples_mines }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_government = anarchism
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_women_workforce_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_branching_outwards
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 6
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_road_building }
+		prerequisite = { focus = KOR_regional_militias }
+		prerequisite = { focus = KOR_women_in_workforce }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_government = anarchism
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_named_threat = { threat = 5 name = KOR_branching_outwards }
+		}
+	}
+	
+	focus = {
+		id = KOR_manchurian_uprising
+		icon = GFX_focus_generic_support_the_left_right
+		x = -1
+		y = 7
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_branching_outwards }
+		will_lead_to_war_with = BEI
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			BEI = { is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } controls_state = 770 }
+			has_army_manpower = { size > 499999 }
+			has_government = anarchism
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			BEI = { country_event = { id = aiu_korea.7 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = KOR_attack_on_kanin
+		icon = GFX_focus_AST_war_japan
+		x = 1
+		y = 7
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_branching_outwards }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			always = no
+			has_government = anarchism
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#JAP = { country_event = { id = kor.x days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = KOR_scientific_societies
+		icon = GFX_focus_research
+		x = 3
+		y = 6
+		relative_position_id = KOR_prepare_revolution_focus
+		prerequisite = { focus = KOR_women_in_workforce }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			amount_research_slots < 5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = KOR_unify_liberation_army
+		icon = GFX_goal_generic_alliance
+		x = 33
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_disorganised_army_idea
+				add_idea = KOR_disorganised_army_idea_2			
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_righteous_armies
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_unify_liberation_army }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = KOR_righteous_armies_tt
+			hidden_effect = {
+				division_template = { name = "Loyalist Militia Regiment" division_names_group = KOR_INF_01 is_locked = no regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } infantry = { x = 0 y = 1 } } }
+						random_owned_controlled_state = {
+							create_unit = { 
+								division = "name = \"1. Loyalist Militia Regiment\" division_template = \"Loyalist Militia Regiment\" start_experience_factor = 0" 
+								owner = ROOT
+							}
+							create_unit = { 
+								division = "name = \"2. Loyalist Militia Regiment\" division_template = \"Loyalist Militia Regiment\" start_experience_factor = 0" 
+								owner = ROOT
+							}
+						}
+						random_owned_controlled_state = {
+							create_unit = { 
+								division = "name = \"3. Loyalist Militia Regiment\" division_template = \"Loyalist Militia Regiment\" start_experience_factor = 0" 
+								owner = ROOT
+							}
+							create_unit = { 
+								division = "name = \"4. Loyalist Militia Regiment\" division_template = \"Loyalist Militia Regiment\" start_experience_factor = 0" 
+								owner = ROOT
+							}
+						}
+					}
+		}
+	}
+	
+	focus = {
+		id = KOR_found_officers_college
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 2
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_righteous_armies }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_decisive_warfare
+		icon = GFX_goal_generic_army_artillery2
+		x = -1
+		y = 3
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_found_officers_college }
+		mutually_exclusive = { focus = KOR_resistance_warfare }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_disorganised_army_idea_2
+				add_idea = KOR_disorganised_army_idea_decisive
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_experimental_mechanised_units
+		icon = GFX_goal_generic_army_tanks
+		x = -2
+		y = 4
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_decisive_warfare }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				technology = motorised_infantry
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_recon_focus
+		icon = GFX_goal_generic_military_sphere
+		x = 2
+		y = 4
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_resistance_warfare }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_recon_focus
+				bonus = 0.75
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_resistance_warfare
+		icon = GFX_focus_prc_infiltration
+		x = 1
+		y = 3
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_found_officers_college }
+		mutually_exclusive = { focus = KOR_decisive_warfare }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_disorganised_army_idea_2
+				add_idea = KOR_disorganised_army_idea_resistance
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_gun_manufacturing
+		icon = GFX_goal_generic_army_artillery
+		x = 0
+		y = 4
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_decisive_warfare focus = KOR_resistance_warfare }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_infantry_equipment_focus
+		}
+	}
+	
+	focus = {
+		id = KOR_coastal_forts
+		icon = GFX_focus_generic_coastal_fort
+		x = -1
+		y = 5
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_gun_manufacturing }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = KOR_coastal_forts_tt
+			hidden_effect = {
+			every_owned_state = {
+				limit = { is_core_of = KOR }
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 4
+					instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_landward_forts
+		icon = GFX_goal_generic_construct_military
+		x = 1
+		y = 5
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_gun_manufacturing }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 527
+			has_full_control_of_state = 774
+			any_other_country = { has_full_control_of_state = 770 }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			527 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 3
+						}
+					}
+				}
+			774 = {
+					set_building_level = {
+						type = bunker
+						level = 3
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+							level < 3
+						}
+					}
+				}
+		}
+	}
+	
+	focus = {
+		id = KOR_protect_the_skies
+		icon = GFX_focus_generic_air_defense
+		x = 0
+		y = 6
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_coastal_forts focus = KOR_landward_forts }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 525
+			has_full_control_of_state = 527
+			has_full_control_of_state = 779
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {				
+				prioritize = { 525 }
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {				
+				prioritize = { 527 }
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {				
+				prioritize = { 779 }
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_fighter_designs
+		icon = GFX_goal_generic_air_fighter
+		x = -1
+		y = 7
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_protect_the_skies }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.6
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_fighter_agility
+		icon = GFX_goal_generic_air_doctrine
+		x = -1
+		y = 8
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_fighter_designs }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_bomber_designs
+		icon = GFX_goal_generic_air_bomber
+		x = 1
+		y = 7
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_protect_the_skies }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_bomber_designs
+				bonus = 0.5
+				uses = 2
+				category = cas_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_naval_bomber_designs
+		icon = GFX_goal_generic_air_production
+		x = 1
+		y = 8
+		relative_position_id = KOR_unify_liberation_army
+		prerequisite = { focus = KOR_bomber_designs }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_naval_bomber_designs
+				bonus = 0.75
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_naval_construction
+		icon = GFX_goal_generic_build_navy
+		x = 39
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = no
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+	
+	focus = {
+		id = KOR_legacy_of_admiral_yi
+		icon = GFX_goal_admiral_yi
+		x = 0
+		y = 1
+		relative_position_id = KOR_naval_construction
+		prerequisite = { focus = KOR_naval_construction }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_legacy_of_admiral_yi_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_battleships_focus
+		icon = GFX_focus_generic_navy_battleship2
+		x = -2
+		y = 2
+		relative_position_id = KOR_naval_construction
+		prerequisite = { focus = KOR_legacy_of_admiral_yi }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_battleships_production_focus
+		icon = GFX_goal_generic_navy_battleship
+		x = -2
+		y = 3
+		relative_position_id = KOR_naval_construction
+		prerequisite = { focus = KOR_battleships_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_battleships_production_focus_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_screens_focus
+		icon = GFX_focus_generic_destroyer
+		x = 0
+		y = 2
+		relative_position_id = KOR_naval_construction
+		prerequisite = { focus = KOR_legacy_of_admiral_yi }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_screens_production_focus
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 0
+		y = 3
+		relative_position_id = KOR_naval_construction
+		prerequisite = { focus = KOR_screens_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_screens_production_focus_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_submarines_focus
+		icon = GFX_goal_generic_navy_submarine
+		x = 2
+		y = 2
+		relative_position_id = KOR_naval_construction
+		prerequisite = { focus = KOR_legacy_of_admiral_yi }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = KOR_submarines_focus
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_submarines_production_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 3
+		relative_position_id = KOR_naval_construction
+		prerequisite = { focus = KOR_submarines_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = KOR_submarines_production_focus_idea
+		}
+	}
+	
+	focus = {
+		id = KOR_battlefleet_doctrines
+		icon = GFX_goal_generic_navy_cruiser
+		x = -1
+		y = 4
+		relative_position_id = KOR_naval_construction
+		prerequisite = { focus = KOR_battleships_production_focus }
+		prerequisite = { focus = KOR_screens_production_focus }
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_battlefleet_doctrines
+				bonus = 0.5
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	
+	focus = {
+		id = KOR_escort_doctrines
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 1
+		y = 4
+		relative_position_id = KOR_naval_construction
+		prerequisite = { focus = KOR_screens_production_focus }
+		prerequisite = { focus = KOR_submarines_production_focus }
+		
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_escort_doctrines
+				bonus = 0.5
+				uses = 2
+				category = convoy_defense_tree
+			}
+		}
+	}
+	
+}

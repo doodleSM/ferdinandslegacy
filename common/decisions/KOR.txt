@@ -1,0 +1,41 @@
+#Category allowed for KOR
+
+KOR_political_decisions = {
+
+	KOR_integrate_claimed_state = {
+
+		icon = generic_operation
+	
+		allowed = {
+			original_tag = KOR
+		}
+		
+		available = {
+			original_tag = KOR
+			has_completed_focus = KOR_assimilate_western_territories
+			any_owned_state = { is_claimed_by = ROOT NOT = { is_core_of = ROOT } }
+		}
+
+		cost = 50
+		
+		days_remove = 180
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			original_tag = KOR
+			has_completed_focus = KOR_assimilate_western_territories
+			any_owned_state = { is_claimed_by = ROOT NOT = { is_core_of = ROOT } }
+		}
+		
+		complete_effect = {
+			random_owned_state = {
+				limit = { is_claimed_by = ROOT NOT = { is_core_of = ROOT } }
+				add_core_of = ROOT
+			}
+		}
+	}
+
+}

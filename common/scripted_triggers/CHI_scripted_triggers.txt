@@ -23,44 +23,14 @@ is_independent_china_or_warlord = { #Does not include sinkiang
 		tag = SHX
 		tag = XSM
 		tag = SIK
+		tag = BEI
+		tag = ANH
+		tag = CHF
+		tag = SZE
 	}
 	is_puppet = no
 }
 
-has_hyper_inflation = {
-	if = {
-		limit = { has_idea = CHI_hyper_inflation_1 }
-		has_idea = CHI_hyper_inflation_1
-	}
-	if = {
-		limit = { has_idea = CHI_hyper_inflation_2 }
-		has_idea = CHI_hyper_inflation_2
-	}
-	if = {
-		limit = { has_idea = CHI_hyper_inflation_3 }
-		has_idea = CHI_hyper_inflation_3
-	}
-	if = {
-		limit = { has_idea = CHI_hyper_inflation_4 }
-		has_idea = CHI_hyper_inflation_4
-	}
-	if = {
-		limit = { has_idea = CHI_hyper_inflation_5 }
-		has_idea = CHI_hyper_inflation_5
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_idea = CHI_hyper_inflation_1
-				has_idea = CHI_hyper_inflation_2
-				has_idea = CHI_hyper_inflation_3
-				has_idea = CHI_hyper_inflation_4
-				has_idea = CHI_hyper_inflation_5
-			}
-		}
-		has_idea = CHI_hyper_inflation_1
-	}
-}
 
 is_literally_china = {
 	OR = {
@@ -71,6 +41,10 @@ is_literally_china = {
 		original_tag = SHX
 		original_tag = XSM
 		original_tag = SIK
+		original_tag = BEI
+		original_tag = ANH
+		original_tag = CHF
+		original_tag = SZE
 	}
 }
 
@@ -81,6 +55,8 @@ is_chinese_warlord = {
 		original_tag = SHX
 		original_tag = XSM
 		original_tag = SIK
+		original_tag = ANH
+		original_tag = SZE
 	}
 }
 
