@@ -12,6 +12,7 @@ state={
 		add_core_of = CHF
 		add_core_of = MON
 		add_core_of = MAN
+		add_core_of = MEN
 		buildings = {
 			infrastructure = 1
 		}

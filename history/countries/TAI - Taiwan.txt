@@ -2,6 +2,9 @@
 
 oob = "TAI_1936"
 
+set_stability = 0.6
+set_war_support = 0.5
+
 set_technology = {
 	infantry_weapons = 1
 	early_submarine = 1

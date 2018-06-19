@@ -69,7 +69,7 @@ ideas = {
 				political_power_cost = 0.2
 				war_support_factor = 0.2
 				command_power_gain_mult = 0.2
-				production_speed_industrial_complex_factor = -0.1
+				production_speed_industrial_complex_factor = -0.05
 			}
 		}
 		
@@ -170,7 +170,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.1
 				line_change_production_efficiency_factor = 0.1
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.075
 			}
 		}
 		
@@ -191,7 +191,7 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.2
 				production_speed_buildings_factor = 0.1
-				production_factory_max_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
 				line_change_production_efficiency_factor = 0.1
 				consumer_goods_factor = 0.1
 			}
@@ -423,7 +423,7 @@ ideas = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 		
@@ -2467,7 +2467,7 @@ ideas = {
 				
 			}
 
-			cost = 75
+			cost = 150
 						
 			research_bonus = {
 				naval_equipment = 0.10

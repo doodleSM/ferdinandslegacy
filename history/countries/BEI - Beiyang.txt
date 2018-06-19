@@ -14,6 +14,16 @@ set_technology = {
 	
 }
 
+add_ideas = {
+	CHI_military_deficiencies
+	CHI_peasant_illiteracy
+	CHI_warlord_era_idea
+	CHI_bloated_bureaucracy
+}
+
+set_stability = 0.4
+set_war_support = 0.5
+
 set_convoys = 20
 
 set_politics = {

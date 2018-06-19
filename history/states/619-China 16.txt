@@ -4,21 +4,31 @@ state={
 	name="STATE_619" # Yarkand
 	manpower = 1430700
 	
-	state_category = pastoral
+	state_category = town
 	
 	resources={
-		aluminium=2 # was: 2
-		chromium=2 # was: 3
+		steel = 3
+		aluminium=3 # was: 2
+		chromium=3 # was: 3
 	}
 
 	history={
-		owner = SIK
+		owner = ETR
 		add_core_of = SIK
 		add_core_of = BEI
 		add_core_of = CHF
+		add_core_of = ETR
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			1766 3 # kashgar
+		}
+		
+		victory_points = {
+			8112 1 # hotan
 		}
 	}
 

@@ -591,6 +591,42 @@ CHF = {
 	color = rgb { 112 146 190 }
 	color_ui = { 112 146 190 }
 }
+CTI = {
+	color = rgb { 15 20 29 }
+	color_ui = { 15 20 29 }
+}
+ETR = {
+	color = rgb { 32 236 249 }
+	color_ui = { 32 236 249 }
+}
+FJN = {
+	color = rgb { 180 67 97 }
+	color_ui = { 180 67 97 }
+}
+GNG = {
+	color = rgb { 120 187 95 }
+	color_ui = { 120 187 95 }
+}
+HEN = {
+	color = rgb { 112 66 145 }
+	color_ui = { 112 66 145 }
+}
+HBI = {
+	color = rgb { 117 59 9 }
+	color_ui = { 117 59 9 }
+}
+HNN = {
+	color = rgb { 60 57 150 }
+	color_ui = { 60 57 150 }
+}
+JGX = {
+	color = rgb { 84 12 121 }
+	color_ui = { 84 12 121 }
+}
+SHD = {
+	color = rgb { 64 244 226 }
+	color_ui = { 64 244 226 }
+}
 SZE = {
 	color = rgb { 23 46 89 }
 	color_ui = { 23 46 89 }
@@ -598,4 +634,16 @@ SZE = {
 TAI = {
 	color = rgb { 150 105 221 }
 	color_ui = { 150 105 221 }
+}
+XSG = {
+	color = rgb { 12  162  175 }
+	color_ui = { 12  162  175 }
+}
+ZHJ = {
+	color = rgb { 160 155 196 }
+	color_ui = { 160 155 196 }
+}
+ZHI = {
+	color = rgb { 229 134 32 }
+	color_ui = { 229 134 32 }
 }

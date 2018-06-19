@@ -8,6 +8,7 @@ state={
 		owner = CHF
 		add_core_of = BEI
 		add_core_of = CHF
+		add_core_of = SZE
 		buildings = {
 			infrastructure = 2
 

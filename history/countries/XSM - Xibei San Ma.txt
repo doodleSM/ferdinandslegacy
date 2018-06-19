@@ -8,7 +8,16 @@ set_technology = {
 	mass_assault = 1
 }
 
+add_ideas = {
+	CHI_military_deficiencies
+	CHI_peasant_illiteracy
+	CHI_warlord_era_idea
+}
 
+add_manpower = 40000
+
+give_guarantee = XSG
+give_guarantee = SIK
 
 set_politics = {
 
@@ -59,16 +68,6 @@ set_politics = {
 	elections_allowed = no
 }
 
-create_country_leader = {
-	name = "Ma Zhongying"
-	desc = ""
-	picture = "Ma Zhongying.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
 
 
 create_country_leader = {

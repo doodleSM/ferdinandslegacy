@@ -19,6 +19,9 @@ state={
 			arms_factory = 1
 
 		}
+		victory_points = {
+			10490 1 #xining
+		}
 		
 	}
 }

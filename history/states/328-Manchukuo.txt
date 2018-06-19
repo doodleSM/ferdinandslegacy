@@ -13,13 +13,14 @@ state={
 		add_core_of = MAN
 		buildings = {
 			infrastructure = 4
+			industrial_complex = 1
 
 		}
 		victory_points = {
-			4572 5 
+			4572 10 
 		}
 		victory_points = {
-			10433 5
+			10433 15
 		}
 
 	}

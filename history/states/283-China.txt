@@ -3,18 +3,26 @@ state={
 	id=283
 	name="STATE_283"
 	resources={
-		tungsten=1.000
+		tungsten=4.000
+		steel=4.000
 	}
 
 	history={
-		owner = XSM
-		add_core_of = XSM
+		owner = XSG
+		add_core_of = XSG
 		add_core_of = BEI
 		add_core_of = CHF
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
+			arms_factory = 1
 
+		}
+		victory_points = {
+			2022 3 
+		}
+		victory_points = {
+			531 5
 		}
 
 	}
@@ -24,5 +32,5 @@ state={
 	}
 	manpower=3705400
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=town
 }

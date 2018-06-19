@@ -6,6 +6,7 @@ state={
 		owner = CHF
 		add_core_of = BEI
 		add_core_of = CHF
+		add_core_of = JGX
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2

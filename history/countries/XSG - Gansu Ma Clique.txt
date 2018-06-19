@@ -1,0 +1,98 @@
+﻿capital = 283
+
+oob = "XSG_1936"
+
+set_stability = 0.6
+set_war_support = 0.6
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+}
+
+add_ideas = {
+	CHI_military_deficiencies
+	CHI_peasant_illiteracy
+	CHI_warlord_era_idea
+}
+
+give_guarantee = XSM
+give_guarantee = SIK
+
+add_to_war = {
+		targeted_alliance = SIK
+		enemy = ETR
+		hostility_reason = asked_to_join
+	}
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 3
+		}
+		
+		market_lib = {
+			popularity = 0
+		}
+		
+		social_liberalism = {
+			popularity = 0
+		}
+		
+		social_democracy = {
+			popularity = 1
+		}
+
+		fascism = {
+			popularity = 3
+		}
+		
+		communism = {
+			popularity = 0
+		}
+		
+		radical_socialism = {
+			popularity = 8
+		}
+		
+		anarchism = {
+			popularity = 1
+		}
+
+		neutrality = {
+			popularity = 53
+		}
+		
+		auth_dem = {
+			popularity = 31
+		}
+	}
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Ma Zhongying"
+	desc = ""
+	picture = "Ma Zhongying.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Ma Zhongying"
+	portrait_path = "gfx/leaders/XSG/Ma Zhongying.dds"
+	traits = { cavalry_officer hill_fighter }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}

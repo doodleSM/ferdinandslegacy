@@ -1,0 +1,27 @@
+state={
+	id=819
+	name="STATE_819"
+	provinces={
+		1703 4682 12526 12601 
+	}
+	history={
+		owner = ETR
+		add_core_of = SIK
+		add_core_of = BEI
+		add_core_of = CHF
+		add_core_of = ETR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			12526 5 #yining
+		}
+
+	}
+
+	manpower=270500
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

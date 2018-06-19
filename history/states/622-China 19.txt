@@ -12,7 +12,10 @@ state={
 		add_core_of = CHF
 		add_core_of = SHX
 		victory_points = {
-			8049 3 
+			8049 5
+		}
+		victory_points = {
+			7659 2
 		}
 		buildings = {
 			infrastructure = 2

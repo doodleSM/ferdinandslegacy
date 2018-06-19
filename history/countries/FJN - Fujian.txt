@@ -1,0 +1,73 @@
+﻿capital = 595
+
+oob = "FJN_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_fighter = 1
+	
+}
+
+add_ideas = {
+	CHI_military_deficiencies
+	CHI_peasant_illiteracy
+	CHI_warlord_era_idea
+}
+
+set_stability = 0.6
+set_war_support = 0.5
+
+set_convoys = 0
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 21
+		}
+		
+		market_lib = {
+			popularity = 3
+		}
+		
+		social_liberalism = {
+			popularity = 2
+		}
+		
+		social_democracy = {
+			popularity = 4
+		}
+
+		fascism = {
+			popularity = 3
+		}
+		
+		communism = {
+			popularity = 1
+		}
+		
+		radical_socialism = {
+			popularity = 3
+		}
+		
+		anarchism = {
+			popularity = 2
+		}
+
+		neutrality = {
+			popularity = 31
+		}
+		
+		auth_dem = {
+			popularity = 33
+		}
+	}
+	
+	ruling_party = auth_dem
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}

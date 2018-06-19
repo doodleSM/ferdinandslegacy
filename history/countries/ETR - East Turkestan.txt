@@ -1,0 +1,100 @@
+﻿capital = 619
+
+oob = "ETR_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	
+}
+
+add_ideas = {
+	limited_conscription
+}
+
+set_stability = 0.65
+set_war_support = 0.6
+
+set_convoys = 0
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 3
+		}
+		
+		market_lib = {
+			popularity = 0
+		}
+		
+		social_liberalism = {
+			popularity = 0
+		}
+		
+		social_democracy = {
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 10
+		}
+		
+		communism = {
+			popularity = 3
+		}
+		
+		radical_socialism = {
+			popularity = 12
+		}
+		
+		anarchism = {
+			popularity = 4
+		}
+
+		neutrality = {
+			popularity = 60
+		}
+		
+		auth_dem = {
+			popularity = 8
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Khoja Niyaz"
+	desc = ""
+	picture = "Khoja Niyaz.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Timur Beg"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+	traits = { trait_mountaineer cavalry_officer }
+}
+
+create_corps_commander = {
+	name = "Yulbars Khan"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+	traits = { desert_fox }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}

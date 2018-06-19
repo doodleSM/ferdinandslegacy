@@ -18,7 +18,10 @@ state={
 
 		}
 		victory_points = {
-			7222 3 #hefei
+			7222 10 #hefei
+		}
+		victory_points = {
+			4158 5 #lu'an
 		}
 		victory_points = {
 			10040 1 #bengbu
@@ -31,5 +34,5 @@ state={
 	}
 	manpower=18265400
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=city
 }

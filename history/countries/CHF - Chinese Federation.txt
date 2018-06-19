@@ -13,6 +13,16 @@ set_technology = {
 	early_bomber = 1
 }
 
+set_stability = 0.45
+set_war_support = 0.4
+
+add_ideas = {
+	CHI_military_deficiencies
+	CHI_peasant_illiteracy
+	CHI_warlord_era_idea
+	CHI_federal_disunity
+}
+
 set_convoys = 20
 
 set_politics = {

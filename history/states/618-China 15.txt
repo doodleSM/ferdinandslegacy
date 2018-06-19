@@ -7,13 +7,16 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = SIK
+		owner = ETR
 		add_core_of = SIK
 		add_core_of = BEI
 		add_core_of = CHF
+		add_core_of = ETR
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+		}
+		victory_points = {
+			4823 1 # altay
 		}
 
 	}

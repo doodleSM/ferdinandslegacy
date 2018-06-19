@@ -12,6 +12,12 @@ state={
 			infrastructure = 4
 
 		}
+		victory_points = {
+			11801 5 #chengde
+		}
+		victory_points = {
+			10426 1 #chifeng
+		}
 
 	}
 

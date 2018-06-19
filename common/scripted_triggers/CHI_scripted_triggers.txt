@@ -27,6 +27,18 @@ is_independent_china_or_warlord = { #Does not include sinkiang
 		tag = ANH
 		tag = CHF
 		tag = SZE
+		tag = CTI
+		tag = ETR
+		tag = FJN
+		tag = GNG
+		tag = HEN
+		tag = HBI
+		tag = HNN
+		tag = JGX
+		tag = SHD
+		tag = XSG
+		tag = ZHI
+		tag = ZHJ
 	}
 	is_puppet = no
 }
@@ -45,6 +57,18 @@ is_literally_china = {
 		original_tag = ANH
 		original_tag = CHF
 		original_tag = SZE
+		original_tag = CTI
+		original_tag = ETR
+		original_tag = FJN
+		original_tag = GNG
+		original_tag = HEN
+		original_tag = HBI
+		original_tag = HNN
+		original_tag = JGX
+		original_tag = SHD
+		original_tag = XSG
+		original_tag = ZHI
+		original_tag = ZHJ
 	}
 }
 
@@ -57,6 +81,17 @@ is_chinese_warlord = {
 		original_tag = SIK
 		original_tag = ANH
 		original_tag = SZE
+		original_tag = ETR
+		original_tag = FJN
+		original_tag = GNG
+		original_tag = HEN
+		original_tag = HBI
+		original_tag = HNN
+		original_tag = JGX
+		original_tag = SHD
+		original_tag = XSG
+		original_tag = ZHI
+		original_tag = ZHJ
 	}
 }
 

@@ -8,6 +8,7 @@ state={
 		add_core_of = CHF
 		add_core_of = SHX
 		add_core_of = MON
+		add_core_of = MEN
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

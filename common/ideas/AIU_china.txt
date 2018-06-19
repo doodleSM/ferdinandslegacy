@@ -1,0 +1,135 @@
+ideas = {
+
+	country = {
+	
+		CHI_military_deficiencies = {
+
+			picture = chi_army_corruption
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.25
+				army_defence_factor = -0.25
+				max_command_power = -50
+				conscription_factor = -0.25
+				mobilization_speed = -0.5
+			}
+		}
+		
+		CHI_peasant_illiteracy = {
+
+			picture = jap_duplicate_research
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.25
+				production_factory_max_efficiency_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+				research_time_factor = 0.1
+			}
+		}
+		
+		CHI_warlord_era_idea = {
+
+			picture = chi_warlord_integration
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = -0.10
+			}
+		}
+		
+		CHI_federal_disunity = {
+
+			picture = generic_disjointed_gov
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = 0.1
+				conscription_factor = -0.25
+			}
+		}
+		
+		CHI_bloated_bureaucracy = {
+
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.25
+				production_speed_buildings_factor = -0.4
+				training_time_factor = 0.25
+			}
+		}
+		
+		CHI_western_dependence = {
+
+			picture = generic_foreign_capital
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.2
+				army_morale_factor = -0.2
+				production_speed_arms_factory_factor = -0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+	}
+		
+}

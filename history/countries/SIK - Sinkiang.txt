@@ -2,20 +2,43 @@
 
 oob = "SIK_1936"
 
+set_stability = 0.6
+set_war_support = 0.6
+
 set_technology = {
 	infantry_weapons = 1
 	
 }
 
+add_ideas = {
+	CHI_military_deficiencies
+	CHI_peasant_illiteracy
+	CHI_warlord_era_idea
+}
+
+add_manpower = 40000
+
 set_politics = {
 
 	parties = {
 		anarchism = { 
-			popularity = 5
+			popularity = 7
 		}
 		
 		democratic = { 
+			popularity = 8
+		}
+		
+		social_democracy = { 
 			popularity = 4
+		}
+		
+		social_liberalism = { 
+			popularity = 4
+		}
+		
+		radical_socialism = { 
+			popularity = 8
 		}
 
 		fascism = {
@@ -31,7 +54,7 @@ set_politics = {
 		}
 		
 		neutrality = {
-			popularity = 74
+			popularity = 54
 		}
 	}
 	
@@ -40,6 +63,15 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+# DIPLOMACY / WAR
+	declare_war_on = {
+		target = ETR
+		type = annex_everything
+	}
+	
+give_guarantee = XSG
+give_guarantee = XSM
 
 create_country_leader = {
 	name = "Sheng Shicai"
@@ -58,6 +90,17 @@ create_country_leader = {
 	picture = "Yang Zengxin.dds"
 	expire = "1965.1.1"
 	ideology = oligarchism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ma Buqing"
+	desc = " "
+	picture = "Ma Buqing.dds"
+	expire = "1965.1.1"
+	ideology = despotism
 	traits = {
 		#
 	}

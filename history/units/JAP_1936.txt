@@ -328,13 +328,10 @@ units = {
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3		
 	}
-	division = { # "Karafuto Dokuritsu Konsei Ryodan"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 201
-		}
+	division = { # "Karafuto Tokubetsu Keibitai"
+		name = "Karafuto Tokubetsu Keibitai"
 		location = 12446 #Toyohara
-		division_template = "Dokuritsu Konsei Ryodan"
+		division_template = "Hohei Shidan"
 		start_experience_factor = 0.3
 	}
 

@@ -8,11 +8,15 @@ state={
 		add_core_of = ANH
 		add_core_of = BEI
 		add_core_of = CHF
+		add_core_of = SHD
 		victory_points = {
-			1069 5 #jinan
+			1069 10 #jinan
 		}
 		victory_points = {
 			1124 5 #linyi
+		}
+		victory_points = {
+			12074 5 #weifang
 		}
 		buildings = {
 			infrastructure = 3

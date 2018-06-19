@@ -12,9 +12,6 @@ state={
 		add_core_of = SZE
 		add_core_of = BEI
 		add_core_of = CHF
-		victory_points = {
-			2045 1 
-		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

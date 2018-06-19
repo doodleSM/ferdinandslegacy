@@ -4,13 +4,16 @@ state={
 	name="STATE_616"
 
 	history={
-		owner = XSM
-		add_core_of = XSM
+		owner = XSG
+		add_core_of = XSG
 		add_core_of = BEI
 		add_core_of = CHF
 		buildings = {
-			infrastructure = 2
-
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			10724 1 #yinchuan
 		}
 
 	}
@@ -20,5 +23,5 @@ state={
 	}
 	manpower=2077600
 	buildings_max_level_factor=1.000
-	state_category=pastoral
+	state_category=town
 }

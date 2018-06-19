@@ -6,12 +6,13 @@ state={
 	}
 	manpower=70000
 	buildings_max_level_factor=1.000
-	state_category = wasteland
+	state_category = pastoral
 	history={
 		owner = SIK
 		add_core_of = SIK
 		add_core_of = BEI
 		add_core_of = CHF
+		add_core_of = ETR
 		buildings = {
 			infrastructure = 1
 

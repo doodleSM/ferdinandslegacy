@@ -7,45 +7,59 @@ set_technology = {
 	
 }
 
+add_ideas = {
+	CHI_military_deficiencies
+	CHI_peasant_illiteracy
+	CHI_warlord_era_idea
+}
+
 
 set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 0
-			banned = yes
+			popularity = 12
+		}
+		
+		market_lib = {
+			popularity = 3
+		}
+		
+		social_liberalism = {
+			popularity = 2
+		}
+		
+		social_democracy = {
+			popularity = 4
 		}
 
 		fascism = {
-			popularity = 80
+			popularity = 3
 		}
 		
 		communism = {
-			popularity = 0
-			banned = yes
+			popularity = 1
+		}
+		
+		radical_socialism = {
+			popularity = 3
+		}
+		
+		anarchism = {
+			popularity = 2
 		}
 
 		neutrality = {
-			popularity = 20
+			popularity = 46
+		}
+		
+		auth_dem = {
+			popularity = 27
 		}
 	}
 	
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
-}
-
-create_country_leader = {
-	name = "Prince Demchugdongrub"
-	desc = "POLITICS_DEMCHUGDONGRUB_DESC"
-	picture = "GFX_portrait_men_demchugdongrub"
-	expire = "1965.1.1"
-	ideology = rexism
-	traits = {
-		spirit_of_genghis
-	}
-}
-
-1939.1.1 = {
 }

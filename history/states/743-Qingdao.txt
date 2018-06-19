@@ -11,6 +11,7 @@ state=
 		owner = GRM
 		add_core_of = BEI
 		add_core_of = CHF
+		add_core_of = SHD
 		victory_points = {
 			10000 5 
 		}

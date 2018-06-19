@@ -54,21 +54,30 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 33
+			popularity = 60
+		}
+		social_democracy = { 
+			popularity = 12
+		}
+		social_liberalism = { 
+			popularity = 8
 		}
 
 #		fascism = {
 #		}
 		
-		communism = {
-			popularity = 33
+		auth_dem = {
+			popularity = 7
 		}
 		neutrality = {
-			popularity = 34
+			popularity = 6
+		}
+		radical_socialism = {
+			popularity = 6
 		}
 	}
 	
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
