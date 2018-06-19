@@ -50,4 +50,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_greater_korea.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_goal_bavarian_shield"
+		texturefile = "gfx/interface/goals/goal_bavarian_shield.dds"
+	}
+	
 }
