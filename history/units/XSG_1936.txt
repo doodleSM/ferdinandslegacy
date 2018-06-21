@@ -60,6 +60,17 @@ units = {
 		start_equipment_factor = 0.6
 
 	}
+	division = { # "85 Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 85
+		}
+		location = 7971
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
 	division = { # "1 Ma Qibing Jun"
 		division_name = {
 			is_name_ordered = yes

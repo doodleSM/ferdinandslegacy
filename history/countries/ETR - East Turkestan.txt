@@ -9,6 +9,9 @@ set_technology = {
 
 add_ideas = {
 	limited_conscription
+	CHI_military_deficiencies
+	CHI_peasant_illiteracy
+	CHI_warlord_era_idea
 }
 
 set_stability = 0.65

@@ -132,6 +132,7 @@ ideas = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
+				NOT = { has_idea = CHI_peasant_illiteracy }
 			}
 
 			cost = 150
@@ -184,7 +185,8 @@ ideas = {
 						has_dlc = "Death or Dishonor"
 					}
 					NOT = { has_idea = HUN_treaty_of_triannon }
-				}		
+				}
+				NOT = { has_idea = CHI_peasant_illiteracy }
 			}
 		
 			cost = 150
@@ -230,6 +232,7 @@ ideas = {
 					}
 					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
+				NOT = { has_idea = CHI_peasant_illiteracy }
 			}
 
 			ai_will_do = {
@@ -301,6 +304,7 @@ ideas = {
 			available = {
 
 				NOT = { has_idea = KOR_boycott_goods_idea }
+				NOT = { has_idea = CHI_western_dependence }
 			}
 			
 			
@@ -364,6 +368,7 @@ ideas = {
 
 
 				NOT = { has_idea = KOR_boycott_goods_idea }
+				NOT = { has_idea = CHI_western_dependence }
 			}
 		
 			cost = 150
@@ -414,10 +419,7 @@ ideas = {
 					has_idea = war_economy
 					has_idea = tot_economic_mobilisation
 				}
-				OR = {
-					NOT = {	tag = SOV }
-					NOT = { has_opinion_modifier = MR_pact }
-				}
+				NOT = { has_idea = CHI_western_dependence }
 
 			}
 			

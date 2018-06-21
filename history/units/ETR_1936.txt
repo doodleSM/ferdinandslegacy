@@ -47,17 +47,18 @@ units = {
 
 	}
 	
-	division = { #
-		division_name = {
-			is_name_ordered = yes
-			name_order = 3
-		}
-		location = 4788
-		division_template = "Juntuán"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
+#	division = { #
+#		division_name = {
+#			is_name_ordered = yes
+#			name_order = 3
+#		}
+#		location = 4788
+#		division_template = "Juntuán"
+#		start_experience_factor = 0.1
+#		start_equipment_factor = 0.5
+#
+#	}
+	
 	division = { #
 		division_name = {
 			is_name_ordered = yes

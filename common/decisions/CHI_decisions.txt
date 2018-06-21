@@ -1,0 +1,2150 @@
+CHI_reform_decisions = {
+
+	CHI_collect_taxes = {
+
+		icon = ger_mefo_bills
+
+		available = {
+			has_completed_focus = CHI_new_taxes
+			has_country_flag = {
+					flag = CHI_money_level
+					value < 100
+				}
+		}
+
+		visible = {
+			has_completed_focus = CHI_new_taxes
+			
+		}
+		
+		days_re_enable = 80
+		
+		cost = 20
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = 5
+				}
+			custom_effect_tooltip = CHI_gain_5_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_country_flag = {
+					flag = CHI_money_level
+					value < 50
+				}
+			}
+		}
+	}
+	
+	CHI_collect_war_taxes = {
+
+		icon = ger_mefo_bills
+
+		available = {
+			has_completed_focus = CHI_new_taxes
+			has_country_flag = {
+					flag = CHI_money_level
+					value < 100
+				}
+			has_war_support > 0.5
+		}
+
+		visible = {
+			has_completed_focus = CHI_new_taxes
+			
+		}
+		
+		days_re_enable = 120
+		
+		cost = 20
+		
+		complete_effect = {
+			add_war_support = -0.05
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = 10
+				}
+			custom_effect_tooltip = CHI_gain_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	
+	CHI_collect_bribes = {
+
+		icon = ger_mefo_bills
+
+		available = {
+			has_completed_focus = CHI_new_taxes
+			has_country_flag = {
+					flag = CHI_money_level
+					value < 100
+				}
+			has_stability > 0.35
+			NOT = { has_completed_focus = CHI_stamp_out_corruption }
+		}
+
+		visible = {
+			has_completed_focus = CHI_new_taxes
+			NOT = { has_completed_focus = CHI_stamp_out_corruption }
+		}
+		
+		days_re_enable = 160
+		
+		cost = 50
+		
+		complete_effect = {
+			add_stability = -0.025
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = 20
+				}
+			custom_effect_tooltip = CHI_gain_20_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	CHI_administrative_spending = {
+
+		icon = ger_mefo_bills
+
+		available = {
+			has_completed_focus = CHI_new_taxes
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 5
+				}
+		}
+
+		visible = {
+			has_completed_focus = CHI_new_taxes
+		}
+		
+		days_re_enable = 120
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -5
+				}
+			add_political_power = 15
+			custom_effect_tooltip = CHI_spend_5_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_rebuild_infrastructure_decision = {
+
+		icon = generic_industry
+
+		available = {
+			has_completed_focus = CHI_new_taxes
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+		}
+
+		visible = {
+			has_completed_focus = CHI_new_taxes
+		}
+		
+		days_re_enable = 120
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_regional_investment_decision = {
+
+		icon = generic_industry
+
+		available = {
+			has_completed_focus = CHI_new_taxes
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			any_owned_state = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+            		free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = { has_state_flag = CHI_bought_building_slot_flag }
+				}
+		}
+
+		visible = {
+			has_completed_focus = CHI_new_taxes
+		}
+		
+		days_re_enable = 120
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+            		free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = { has_state_flag = CHI_bought_building_slot_flag }
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = CHI_bought_building_slot_flag
+				}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_japanese_guns_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_japanese_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			JAP = { exists = yes is_subject = no }
+			NOT = { has_war_with = JAP }
+		}
+
+		visible = {
+			has_completed_focus = CHI_japanese_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = JAP
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_japanese_support_equipment_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_japanese_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			JAP = { exists = yes is_subject = no }
+			NOT = { has_war_with = JAP }
+		}
+
+		visible = {
+			has_completed_focus = CHI_japanese_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 200
+				producer = JAP
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_russian_guns_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_russian_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			SOV = { exists = yes is_subject = no }
+			NOT = { has_war_with = SOV }
+		}
+
+		visible = {
+			has_completed_focus = CHI_russian_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = SOV
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_russian_bombers_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_russian_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			SOV = { exists = yes is_subject = no }
+			NOT = { has_war_with = SOV }
+		}
+
+		visible = {
+			has_completed_focus = CHI_russian_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0
+				amount = 50
+				producer = SOV
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_french_guns_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_french_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			FRA = { exists = yes is_subject = no }
+			NOT = { has_war_with = FRA }
+		}
+
+		visible = {
+			has_completed_focus = CHI_french_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = FRA
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_french_artillery_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_french_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			FRA = { exists = yes is_subject = no }
+			NOT = { has_war_with = FRA }
+		}
+
+		visible = {
+			has_completed_focus = CHI_french_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 100
+				producer = FRA
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_hire_french_advisor_decision = {
+
+		available = {
+			has_completed_focus = CHI_french_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+			GRM = { exists = yes is_subject = no }
+			NOT = { has_war_with = FRA }
+		}
+
+		visible = {
+			has_completed_focus = CHI_french_arms
+			NOT = {
+				any_other_country = {
+					any_army_leader = {
+						has_id = 672
+					}
+				} 
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			create_corps_commander = {
+			name = "Antoine Béthouart"
+			gfx = GFX_Portrait_France_Generic_land_1
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			id = 672
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_german_guns_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_german_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			GRM = { exists = yes is_subject = no }
+			NOT = { has_war_with = GRM }
+		}
+
+		visible = {
+			has_completed_focus = CHI_german_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = GRM
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_german_tanks_decision = {
+
+		icon = generic_tank
+
+		available = {
+			has_completed_focus = CHI_german_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			GRM = { exists = yes is_subject = no }
+			NOT = { has_war_with = GRM }
+		}
+
+		visible = {
+			has_completed_focus = CHI_german_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_2
+				amount = 80
+				producer = GRM
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_hire_german_advisor_decision = {
+
+		available = {
+			has_completed_focus = CHI_german_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+			GRM = { exists = yes is_subject = no }
+			NOT = { has_war_with = GRM }
+		}
+
+		visible = {
+			has_completed_focus = CHI_german_arms
+			NOT = {
+				any_other_country = {
+					any_army_leader = {
+						has_id = 670
+					}
+				} 
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			create_corps_commander = {
+			name = "Max Bauer"
+			gfx = GFX_portrait_europe_generic_land_13 
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			id = 670
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_british_guns_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_british_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			ENG = { exists = yes is_subject = no }
+			NOT = { has_war_with = ENG }
+		}
+
+		visible = {
+			has_completed_focus = CHI_british_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = ENG
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_buy_british_fighters_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_british_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			ENG = { exists = yes is_subject = no }
+			NOT = { has_war_with = ENG }
+		}
+
+		visible = {
+			has_completed_focus = CHI_british_arms
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 30
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 50
+				producer = ENG
+			}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_hire_british_advisor_decision = {
+
+		available = {
+			has_completed_focus = CHI_british_arms
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+			GRM = { exists = yes is_subject = no }
+			NOT = { has_war_with = ENG }
+		}
+
+		visible = {
+			has_completed_focus = CHI_british_arms
+			NOT = {
+				any_other_country = {
+					any_army_leader = {
+						has_id = 671
+					}
+				} 
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		complete_effect = {
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			create_corps_commander = {
+			name = "Francis Sutton"
+			gfx = GFX_portrait_europe_generic_land_8 
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			id = 671
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				has_country_flag = {
+					flag = CHI_taxes_level
+					value > 50
+				}
+			}
+		}
+	}
+	
+	CHI_literacy_program_decision = {
+
+		icon = generic_research
+
+		available = {
+			has_completed_focus = CHI_peasant_schools
+		}
+
+		visible = {
+			has_completed_focus = CHI_peasant_schools
+			OR = {
+				has_idea = CHI_peasant_illiteracy
+				has_idea = CHI_peasant_illiteracy_2
+				has_idea = CHI_peasant_illiteracy_3
+				has_idea = CHI_peasant_illiteracy_4
+			}
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 10
+		
+		cost = 50
+		
+		remove_effect = {
+			if = {
+				limit = { has_idea = CHI_peasant_illiteracy }
+				swap_ideas = {
+					remove_idea = CHI_peasant_illiteracy
+					add_idea = CHI_peasant_illiteracy_2
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHI_peasant_illiteracy_2 }
+				swap_ideas = {
+					remove_idea = CHI_peasant_illiteracy_2
+					add_idea = CHI_peasant_illiteracy_3
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHI_peasant_illiteracy_3 }
+				swap_ideas = {
+					remove_idea = CHI_peasant_illiteracy_3
+					add_idea = CHI_peasant_illiteracy_4
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHI_peasant_illiteracy_4 }
+				remove_ideas = CHI_peasant_illiteracy_4
+			}
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	
+	CHI_army_reform_decision = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_army_reform
+		}
+
+		visible = {
+			has_completed_focus = CHI_army_reform
+			OR = {
+				has_idea = CHI_military_deficiencies
+				has_idea = CHI_military_deficiencies_2
+				has_idea = CHI_military_deficiencies_3
+				has_idea = CHI_military_deficiencies_4
+				has_idea = CHI_military_deficiencies_5
+			}
+		}
+		
+		days_re_enable = 120
+		
+		days_remove = 10
+		
+		cost = 50
+		
+		remove_effect = {
+			if = {
+				limit = { has_idea = CHI_military_deficiencies }
+				swap_ideas = {
+					remove_idea = CHI_military_deficiencies
+					add_idea = CHI_military_deficiencies_2
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHI_military_deficiencies_2 }
+				swap_ideas = {
+					remove_idea = CHI_military_deficiencies_2
+					add_idea = CHI_military_deficiencies_3
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHI_military_deficiencies_3 }
+				swap_ideas = {
+					remove_idea = CHI_military_deficiencies_3
+					add_idea = CHI_military_deficiencies_4
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHI_military_deficiencies_4 }
+				swap_ideas = {
+					remove_idea = CHI_military_deficiencies_4
+					add_idea = CHI_military_deficiencies_5
+				}
+			}
+			else_if = {
+				limit = { has_idea = CHI_military_deficiencies_5 }
+				remove_ideas = CHI_military_deficiencies_5
+			}
+		}
+		
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+}
+
+CHI_raise_units_decisions = {
+	
+	CHI_russian_mercenaries = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_hire_mercenaries
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+			NOT = { has_war_with = SOV }
+			NOT = { has_completed_focus = CHI_overtures_to_japan }
+		}
+		
+		visible = {
+			has_completed_focus = CHI_hire_mercenaries
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_russian_mercenaries_tt
+			hidden_effect = {
+				division_template = {
+					name = "Russian Mercenaries"
+					is_locked = yes
+					priority = 2
+					division_names_group = SOV_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						artillery_brigade = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"Russian Mercenaries\" division_template = \"Russian Mercenaries\" start_experience_factor = 0.8" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+	}
+	
+	CHI_japanese_mercenaries = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_hire_mercenaries
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+			NOT = { has_war_with = JAP }
+			NOT = { has_completed_focus = CHI_overtures_to_russia }
+		}
+		
+		visible = {
+			has_completed_focus = CHI_hire_mercenaries
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_japanese_mercenaries_tt
+			hidden_effect = {
+				division_template = {
+					name = "Japanese Mercenaries"
+					is_locked = yes
+					priority = 2
+					division_names_group = JAP_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						artillery_brigade = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"Japanese Mercenaries\" division_template = \"Japanese Mercenaries\" start_experience_factor = 0.8" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+	}
+	
+	CHI_cossack_mercenaries = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_hire_mercenaries
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+		}
+		
+		visible = {
+			has_completed_focus = CHI_hire_mercenaries
+			OR = {
+				any_owned_state = {
+					is_core_of = SOV
+				}
+				any_owned_state = {
+					is_owned_by = SOV
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SOV
+					}
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_by = SOV
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_cossack_mercenaries_tt
+			hidden_effect = {
+				division_template = {
+					name = "Cossack Mercenaries"
+					is_locked = yes
+					priority = 2
+					division_names_group = SOV_INF_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"1. Cossack Mercenaries\" division_template = \"Cossack Mercenaries\" start_experience_factor = 0.8" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Cossack Mercenaries\" division_template = \"Cossack Mercenaries\" start_experience_factor = 0.8" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+	}
+	
+	CHI_mongol_mercenaries = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+			NOT = { has_war_with = MON }
+			OR = {
+				any_owned_state = {
+					is_core_of = MON
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = MON
+					}
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = CHI_chinese_mercenaries
+			OR = {
+				any_owned_state = {
+					is_core_of = MON
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = MON
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_mongol_mercenaries_tt
+			hidden_effect = {
+				division_template = {
+					name = "Mongolian Mercenaries"
+					is_locked = yes
+					priority = 1
+					division_names_group = MON_INF_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 0 y = 3 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+						cavalry = { x = 1 y = 3 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"1. Mongolian Mercenaries\" division_template = \"Mongolian Mercenaries\" start_experience_factor = 0.4" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Mongolian Mercenaries\" division_template = \"Mongolian Mercenaries\" start_experience_factor = 0.4" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+	}
+	
+	CHI_uighur_mercenaries = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+			ETR = { has_war = no }
+			OR = {
+				any_owned_state = {
+					is_core_of = ETR
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = ETR
+					}
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = CHI_chinese_mercenaries
+			OR = {
+				any_owned_state = {
+					is_core_of = ETR
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = ETR
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_uighur_mercenaries_tt
+			hidden_effect = {
+				division_template = {
+					name = "Uighur Mercenaries"
+					is_locked = yes
+					priority = 1
+					division_names_group = MON_INF_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 0 y = 3 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+						cavalry = { x = 1 y = 3 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"1. Uighur Mercenaries\" division_template = \"Uighur Mercenaries\" start_experience_factor = 0.4" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Uighur Mercenaries\" division_template = \"Uighur Mercenaries\" start_experience_factor = 0.4" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+	}
+	
+	CHI_hui_mercenaries = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+			OR = {
+				any_owned_state = {
+					is_core_of = XSM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = XSM
+					}
+				}
+				any_owned_state = {
+					is_core_of = XSG
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = XSG
+					}
+				}
+				any_owned_state = {
+					is_core_of = SIK
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SIK
+					}
+				}
+				any_owned_state = {
+					is_core_of = SHX
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SHX
+					}
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = CHI_chinese_mercenaries
+			OR = {
+				any_owned_state = {
+					is_core_of = XSM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = XSM
+					}
+				}
+				any_owned_state = {
+					is_core_of = XSG
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = XSG
+					}
+				}
+				any_owned_state = {
+					is_core_of = SIK
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SIK
+					}
+				}
+				any_owned_state = {
+					is_core_of = SHX
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SHX
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_hui_mercenaries_tt
+			hidden_effect = {
+				division_template = {
+					name = "Hui Mercenaries"
+					is_locked = yes
+					priority = 1
+					division_names_group = XSM_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+						cavalry = { x = 1 y = 3 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"1. Hui Mercenaries\" division_template = \"Hui Mercenaries\" start_experience_factor = 0.4" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Hui Mercenaries\" division_template = \"Hui Mercenaries\" start_experience_factor = 0.4" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+	}
+	
+	CHI_honghuzi_mercenaries = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 20
+				}
+			OR = {
+				any_owned_state = {
+					is_core_of = MAN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = MAN
+						}
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = CHI_chinese_mercenaries
+			OR = {
+				any_owned_state = {
+					is_core_of = MAN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = MAN
+						}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_honghuzi_mercenaries_tt
+			hidden_effect = {
+				division_template = {
+					name = "Honghuzi Mercenaries"
+					is_locked = yes
+					priority = 0
+					division_names_group = CHI_INF_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 0 y = 3 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"1. Honghuzi Mercenaries\" division_template = \"Honghuzi Mercenaries\" start_experience_factor = 0.3" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Honghuzi Mercenaries\" division_template = \"Honghuzi Mercenaries\" start_experience_factor = 0.3" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"3. Honghuzi Mercenaries\" division_template = \"Honghuzi Mercenaries\" start_experience_factor = 0.3" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"4. Honghuzi Mercenaries\" division_template = \"Honghuzi Mercenaries\" start_experience_factor = 0.3" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -20
+				}
+			custom_effect_tooltip = CHI_spend_20_money_tt
+		}
+	}
+	
+	CHI_elder_brothers_society = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_completed_focus = CHI_build_chinese_identity
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			OR = {
+				any_owned_state = {
+					is_core_of = SZE
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SZE
+					}
+				}
+				any_owned_state = {
+					is_core_of = XSG
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = XSG
+					}
+				}
+				any_owned_state = {
+					is_core_of = XSM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = XSM
+					}
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_completed_focus = CHI_build_chinese_identity
+			OR = {
+				any_owned_state = {
+					is_core_of = SZE
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SZE
+					}
+				}
+				any_owned_state = {
+					is_core_of = XSG
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = XSG
+					}
+				}
+				any_owned_state = {
+					is_core_of = XSM
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = XSM
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_elder_brothers_society_tt
+			hidden_effect = {
+				division_template = {
+					name = "Elder Brothers Fighters"
+					is_locked = yes
+					priority = 1
+					division_names_group = CHI_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"1. Elder Brothers Fighters\" division_template = \"Elder Brothers Fighters\" start_experience_factor = 0.6" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+	}
+	
+	CHI_red_spear_society = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_completed_focus = CHI_millenarianism
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			OR = {
+				any_owned_state = {
+					is_core_of = SHD
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SHD
+					}
+				}
+				any_owned_state = {
+					is_core_of = HEN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = HEN
+					}
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_completed_focus = CHI_millenarianism
+			OR = {
+				any_owned_state = {
+					is_core_of = SHD
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SHD
+						}
+				}
+				any_owned_state = {
+					is_core_of = HEN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = HEN
+						}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_red_spear_society_tt
+			hidden_effect = {
+				division_template = {
+					name = "Red Spear Militia"
+					is_locked = yes
+					priority = 0
+					division_names_group = CHI_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"1. Red Spear Militia\" division_template = \"Red Spear Militia\" start_experience_factor = 0.2" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Red Spear Militia\" division_template = \"Red Spear Militia\" start_experience_factor = 0.2" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+	}
+	
+	CHI_great_knife_society = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_completed_focus = CHI_millenarianism
+			has_country_flag = {
+					flag = CHI_money_level
+					value > 10
+				}
+			OR = {
+				any_owned_state = {
+					is_core_of = SHD
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SHD
+					}
+				}
+				any_owned_state = {
+					is_core_of = HEN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = HEN
+					}
+				}
+			}
+		}
+		
+		visible = {
+			has_completed_focus = CHI_chinese_mercenaries
+			has_completed_focus = CHI_millenarianism
+			OR = {
+				any_owned_state = {
+					is_core_of = SHD
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = SHD
+						}
+				}
+				any_owned_state = {
+					is_core_of = HEN
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_core_of = HEN
+						}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+
+		modifier = {
+
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_great_knife_society_tt
+			hidden_effect = {
+				division_template = {
+					name = "Great Knife Militia"
+					is_locked = yes
+					priority = 0
+					division_names_group = CHI_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { is_core_of = ROOT }
+					create_unit = {
+						division = "name = \"1. Great Knife Militia\" division_template = \"Great Knife Militia\" start_experience_factor = 0.2" 
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"2. Great Knife Militia\" division_template = \"Great Knife Militia\" start_experience_factor = 0.2" 
+						owner = ROOT
+					}
+				}			
+			}
+			modify_country_flag = {
+					flag = CHI_money_level
+					value = -10
+				}
+			custom_effect_tooltip = CHI_spend_10_money_tt
+		}
+	}
+	
+}
+
+political_actions = {
+
+	CHI_ETR_peace_with_XSG = {
+
+		available = {
+			SIK = { exists = no }
+			ETR = { has_war_with = XSG }
+			surrender_progress < 0.1
+		}
+
+		visible = {
+			tag = ETR
+			SIK = { exists = no }
+			ETR = { has_war_with = XSG }
+			date < 1938.1.1 #1932.1.1
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 400
+			modifier = {
+				factor = 0
+				XSG = { surrender_progress > 0.2 }
+			}
+		}
+
+		complete_effect = {
+			XSG = {
+				country_event = { id = aiu_china.1 days = 1 }
+			}
+		}
+		
+	CHI_XSM_intervene_for_XSG = {
+
+		available = {
+			tag = XSM
+			ETR = { has_war_with = XSG }
+			XSG = { surrender_progress > 0.2 }
+		}
+
+		visible = {
+			tag = XSM
+			ETR = { has_war_with = XSG }
+			date < 1938.1.1 #1932.1.1
+			date > 1936.2.1
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				add = 100
+				XSG = { surrender_progress > 0.4 }
+			}
+		}
+
+		complete_effect = {
+			XSG = {
+				country_event = { id = aiu_china.4 days = 1 }
+			}
+			ETR = {
+				country_event = { id = aiu_china.5 days = 1 }
+			}
+			declare_war_on = { target = ETR type = annex_everything }
+		}
+
+}

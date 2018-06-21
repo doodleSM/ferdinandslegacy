@@ -1,0 +1,1212 @@
+#	shared_focus = {
+#		id = CHI_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 8
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+shared_focus = {
+	id = CHI_foreign_advisors
+	icon = GFX_goal_tripartite_pact
+	x = 32
+	y = 0
+	offset = {
+		x = 0
+		y = 0
+		trigger = {
+			tag = PRC
+		}
+	}
+	offset = {
+		x = 0
+		y = 0
+		trigger = {
+			 tag = MAN 
+		}
+	}
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = CHI
+		}
+	}
+
+	available = {
+		num_of_factories > 10
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}	
+	}
+}
+
+shared_focus = {
+	id = CHI_overtures_to_japan
+	icon = GFX_focus_jap_pacific_guardian
+	x = -4
+	y = 1
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_foreign_advisors }
+	mutually_exclusive = { focus = CHI_overtures_to_russia }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		JAP = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		JAP = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}	
+	}
+}
+
+shared_focus = {
+	id = CHI_japanese_arms
+	icon = GFX_goal_generic_small_arms
+	x = -4
+	y = 2
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_overtures_to_japan }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		JAP = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = CHI_japanese_arms_tt	
+	}
+}
+
+shared_focus = {
+	id = CHI_invite_zaibatsus
+	icon = GFX_focus_jap_zaibatsu
+	x = -4
+	y = 3
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_japanese_arms }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		JAP = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = CHI_zaibatsus
+	}
+}
+
+shared_focus = {
+	id = CHI_overtures_to_russia
+	icon = GFX_goal_russian_shield
+	x = -2
+	y = 1
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_foreign_advisors }
+	mutually_exclusive = { focus = CHI_overtures_to_japan }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		SOV = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		SOV = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}	
+	}
+}
+
+shared_focus = {
+	id = CHI_russian_arms
+	icon = GFX_focus_secret_rearmament
+	x = -2
+	y = 2
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_overtures_to_russia }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		SOV = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = CHI_russian_arms_tt
+	}
+}
+
+shared_focus = {
+	id = CHI_russian_steel_mills
+	icon = GFX_focus_generic_steel
+	x = -2
+	y = 3
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_russian_arms }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		SOV = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		capital_scope = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}	
+	}
+}
+
+shared_focus = {
+	id = CHI_overtures_to_france
+	icon = GFX_goal_french_shield
+	x = 0
+	y = 1
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_foreign_advisors }
+	mutually_exclusive = { focus = CHI_overtures_to_germany }
+	mutually_exclusive = { focus = CHI_overtures_to_britain }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		FRA = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		FRA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}	
+	}
+}
+
+shared_focus = {
+	id = CHI_french_arms
+	icon = GFX_goal_generic_army_artillery
+	x = 0
+	y = 2
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_overtures_to_france }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		FRA = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = CHI_french_arms_tt	
+	}
+}
+
+shared_focus = {
+	id = CHI_participate_in_mte
+	icon = GFX_goal_generic_scientific_exchange
+	x = 0
+	y = 3
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_french_arms }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		FRA = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_ideas = CHI_mte_idea
+	}
+}
+
+shared_focus = {
+	id = CHI_overtures_to_germany
+	icon = GFX_goal_german_shield
+	x = 2
+	y = 1
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_foreign_advisors }
+	mutually_exclusive = { focus = CHI_overtures_to_france }
+	mutually_exclusive = { focus = CHI_overtures_to_britain }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		GRM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		GRM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}	
+	}
+}
+
+shared_focus = {
+	id = CHI_german_arms
+	icon = GFX_goal_generic_army_tanks
+	x = 2
+	y = 2
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_overtures_to_germany }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		GRM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = CHI_german_arms_tt	
+	}
+}
+
+shared_focus = {
+	id = CHI_local_manufacturing
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 2
+	y = 3
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_german_arms }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		GRM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_offsite_building = { type = arms_factory level = 2 }
+	}
+}
+
+shared_focus = {
+	id = CHI_overtures_to_britain
+	icon = GFX_goal_british_shield
+	x = 4
+	y = 1
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_foreign_advisors }
+	mutually_exclusive = { focus = CHI_overtures_to_france }
+	mutually_exclusive = { focus = CHI_overtures_to_germany }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		ENG = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		ENG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}	
+	}
+}
+
+shared_focus = {
+	id = CHI_british_arms
+	icon = GFX_goal_generic_build_airforce
+	x = 4
+	y = 2
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_overtures_to_britain }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		ENG = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = CHI_british_arms_tt	
+	}
+}
+
+shared_focus = {
+	id = CHI_new_machine_parts
+	icon = GFX_goal_generic_construct_civilian
+	x = 4
+	y = 3
+	relative_position_id = CHI_foreign_advisors
+	prerequisite = { focus = CHI_british_arms }
+	
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		ENG = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}	
+		
+	}
+}
+
+shared_focus = {
+	id = CHI_establish_general_staff
+	icon = GFX_focus_generic_military_mission
+	prerequisite = { focus = CHI_invite_zaibatsus focus = CHI_russian_steel_mills focus = CHI_participate_in_mte focus = CHI_local_manufacturing focus = CHI_new_machine_parts }
+	x = -1
+	y = 4
+	relative_position_id = CHI_foreign_advisors
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		every_army_leader = {
+			add_planning = 1
+		}
+		add_ideas = CHI_chinese_general_staff_idea
+	}
+}
+
+shared_focus = {
+	id = CHI_negotiate_equal_treaties
+	icon = GFX_focus_generic_treaty
+	prerequisite = { focus = CHI_invite_zaibatsus focus = CHI_russian_steel_mills focus = CHI_participate_in_mte focus = CHI_local_manufacturing focus = CHI_new_machine_parts }
+	x = 1
+	y = 4
+	relative_position_id = CHI_foreign_advisors
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_political_power = 100
+	}
+}
+
+shared_focus = {
+	id = CHI_expanded_research
+	icon = GFX_focus_research2
+	prerequisite = { focus = CHI_establish_general_staff }
+	prerequisite = { focus = CHI_negotiate_equal_treaties }
+	x = 0
+	y = 5
+	relative_position_id = CHI_foreign_advisors
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		num_of_factories > 30
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+
+shared_focus = {
+	id = CHI_focus_on_china
+	icon = GFX_goal_generic_position_armies
+	x = 22
+	y = 0
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+		
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_war_support = 0.1
+	}
+}
+
+shared_focus = {
+	id = CHI_secure_china
+	icon = GFX_goal_generic_political_pressure
+	x = 0
+	y = 2
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_focus_on_china }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+		
+	}
+
+	available = {
+		OR = {
+			ANH = { exists = no }
+			BEI = { exists = no }
+			CHF = { exists = no }
+		}
+		is_subject = no
+		custom_trigger_tooltip = {
+				tooltip = CHI_secure_china_tt
+				any_other_country = {
+					is_literally_china = yes
+					}
+			}
+	}
+
+	bypass = {
+		custom_trigger_tooltip = {
+				tooltip = CHI_unified_china_tt
+				NOT = { any_other_country = { is_literally_china = yes } }
+			}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				is_literally_china = yes
+				NOT = { has_war_with = ROOT }
+				NOT = { has_guaranteed = ROOT }
+				NOT = { is_guaranteed_by = ROOT }
+				NOT = { is_subject_of = ROOT }
+				NOT = { ROOT = { has_wargoal_against = PREV } }
+				NOT = { tag = ROOT }
+			}
+			add_political_power = 1 #event
+		}
+	}
+}
+
+shared_focus = {
+	id = CHI_unified_china
+	icon = GFX_focus_chi_one_china_policy
+	x = 0
+	y = 3
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_secure_china }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+		
+	}
+
+	available = {
+		is_subject = no
+		custom_trigger_tooltip = {
+				tooltip = CHI_unified_china_tt
+				NOT = { any_other_country = { is_literally_china = yes } }
+			}
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		remove_ideas = CHI_warlord_era_idea
+	}
+}
+
+shared_focus = {
+	id = CHI_anhui_pact
+	icon = GFX_goal_anhui_shield
+	x = -3
+	y = 1
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_focus_on_china }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+		
+	}
+
+	available = {
+		NOT = { OR = { tag = ANH tag = BEI tag = CHF } }
+		ANH = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		is_subject = no
+		is_in_faction = no
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		#event
+	}
+}
+
+shared_focus = {
+	id = CHI_beiyang_pact
+	icon = GFX_goal_beiyang_shield
+	x = -2
+	y = 2
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_focus_on_china }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+		
+	}
+
+	available = {
+		NOT = { OR = { tag = ANH tag = BEI tag = CHF } }	
+		BEI = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		is_subject = no
+		is_in_faction = no
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		#event
+	}
+}
+
+shared_focus = {
+	id = CHI_chf_pact
+	icon = GFX_goal_chf_shield
+	x = -1
+	y = 1
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_focus_on_china }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+		
+	}
+
+	available = {
+		NOT = { OR = { tag = ANH tag = BEI tag = CHF } }	
+		CHF = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		is_subject = no
+		is_in_faction = no
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		#event
+	}
+}
+
+shared_focus = {
+	id = CHI_attack_weak_neighbour
+	icon = GFX_goal_generic_occupy_states_ongoing_war
+	x = 1
+	y = 1
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_focus_on_china }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+		
+	}
+
+	available = {
+		is_subject = no
+		custom_trigger_tooltip = {
+				tooltip = CHI_attack_weak_neighbour_tt
+				any_neighbor_country = {
+				is_literally_china = yes
+				NOT = { has_war_with = ROOT }
+				NOT = { has_guaranteed = ROOT }
+				NOT = { is_guaranteed_by = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+				ic_ratio = { 
+							tag = ROOT 
+							ratio < 1
+					}
+				}
+			}
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		random_neighbor_country = {
+			limit = { 
+				is_literally_china = yes
+				NOT = { has_war_with = ROOT }
+				NOT = { has_guaranteed = ROOT }
+				NOT = { is_guaranteed_by = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+				ic_ratio = { 
+							tag = ROOT 
+							ratio < 1
+						}
+					}
+			add_political_power = 1 #event
+			}
+		}
+}
+
+shared_focus = {
+	id = CHI_central_research_academy
+	icon = GFX_focus_research
+	x = 3
+	y = 1
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_focus_on_china }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 1
+		
+	}
+
+	available = {
+		num_of_factories > 50
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+

@@ -21,7 +21,7 @@ units = {
 		location = 4709
 		division_template = "Juntuán"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.8
 
 	}
 	division = { # "2 Xin'jiang Juntuán"
@@ -32,7 +32,7 @@ units = {
 		location = 4709
 		division_template = "Juntuán"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.6
 
 	}
 	division = { # "3 Xin'jiang Juntuán"
@@ -43,7 +43,7 @@ units = {
 		location = 4709
 		division_template = "Juntuán"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.6
 
 	}
 	division = { # "4 Xin'jiang Juntuán"
@@ -54,7 +54,18 @@ units = {
 		location = 2074
 		division_template = "Juntuán"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.4
+
+	}
+	division = { # "5 Xin'jiang Juntuán"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 2074
+		division_template = "Juntuán"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
 
 	}
 }

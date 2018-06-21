@@ -1,0 +1,1202 @@
+focus_tree = {
+	id = aiu_china_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			OR = {
+			original_tag = FJN
+			original_tag = GNG
+			original_tag = GXC
+			original_tag = HBI
+			original_tag = HEN
+			original_tag = HNN
+			original_tag = JGX
+			original_tag = SHD
+			original_tag = SHX
+			original_tag = SIK
+			original_tag = SZE
+			original_tag = XSG
+			original_tag = XSM
+			original_tag = YUN
+			original_tag = ZHI
+			original_tag = ZHJ
+			original_tag = ANH #for now
+			original_tag = BEI #for now
+			original_tag = CHF #for now
+			original_tag = ETR #for now
+			}
+		}
+	}
+	
+	shared_focus = CHI_foreign_advisors
+	
+	shared_focus = CHI_focus_on_china
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1200 }
+
+	focus = {
+		id = CHI_economic_reform
+		icon = GFX_goal_generic_production2
+		x = 6
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_new_taxes
+		icon = GFX_focus_generic_home_defense
+		x = -4
+		y = 1
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_economic_reform }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_country_flag = {
+				flag = CHI_money_level
+				value = 1
+			}
+			custom_effect_tooltip = CHI_new_taxes_tt
+		}
+	}
+	
+	focus = {
+		id = CHI_rebuild_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -4
+		y = 2
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_new_taxes }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_construct_arsenals
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -4
+		y = 3
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_rebuild_railways }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_small_arms
+		icon = GFX_goal_generic_small_arms
+		x = -5
+		y = 4
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_construct_arsenals }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHI_small_arms
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_heavy_weapons_production
+		icon = GFX_goal_generic_production
+		x = -3
+		y = 4
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_construct_arsenals }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_field_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = -3
+		y = 5
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_heavy_weapons_production }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHI_field_artillery
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_peasant_schools
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 1
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_economic_reform }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CHI_peasant_schools_tt
+		}
+	}
+	
+	focus = {
+		id = CHI_social_westernisation
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -2
+		y = 2
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_peasant_schools }
+		mutually_exclusive = { focus = CHI_build_chinese_identity focus = CHI_millenarianism }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_social_westernisation_idea
+		}
+	}
+	
+	focus = {
+		id = CHI_build_chinese_identity
+		icon = GFX_goal_yin_yang
+		x = 0
+		y = 2
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_peasant_schools }
+		mutually_exclusive = { focus = CHI_social_westernisation focus = CHI_millenarianism }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_build_chinese_identity_idea
+		}
+	}
+	
+	focus = {
+		id = CHI_millenarianism
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 2
+		y = 2
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_peasant_schools }
+		mutually_exclusive = { focus = CHI_social_westernisation focus = CHI_build_chinese_identity }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_millenarianism_idea
+		}
+	}
+	
+	focus = {
+		id = CHI_christian_schools
+		icon = GFX_focus_generic_treaty
+		x = -1
+		y = 3
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_social_westernisation focus = CHI_build_chinese_identity }
+		mutually_exclusive = { focus = CHI_resist_christianity }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_christian_schools_idea
+		}
+	}
+	
+	focus = {
+		id = CHI_resist_christianity
+		icon = GFX_goal_stamp_cross_catholic
+		x = 1
+		y = 3
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_build_chinese_identity focus = CHI_millenarianism }
+		mutually_exclusive = { focus = CHI_christian_schools }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_anti_christian_idea
+		}
+	}
+	
+	focus = {
+		id = CHI_combat_opium_trade
+		icon = GFX_goal_ban_opium
+		x = -1
+		y = 4
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_christian_schools focus = CHI_resist_christianity }
+		mutually_exclusive = { focus = CHI_opium_monopoly }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_opium_banned
+		}
+	}
+	
+	focus = {
+		id = CHI_opium_monopoly
+		icon = GFX_focus_grow_opium
+		x = 1
+		y = 4
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_christian_schools focus = CHI_resist_christianity }
+		mutually_exclusive = { focus = CHI_combat_opium_trade }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_opium_monopoly
+		}
+	}
+	
+	focus = {
+		id = CHI_stamp_out_corruption
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 5
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_combat_opium_trade focus = CHI_opium_monopoly }
+		mutually_exclusive = { focus = CHI_indulge_bureaucrats }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			capital_scope = {
+					add_extra_state_shared_building_slots = 2
+				}
+			if = { limit = { has_idea = CHI_bloated_bureaucracy } remove_ideas = CHI_bloated_bureaucracy }
+			if = { limit = { has_idea = CHI_western_dependence } remove_ideas = CHI_western_dependence }
+			if = { limit = { has_idea = CHI_federal_disunity } remove_ideas = CHI_federal_disunity }
+		}
+	}
+	
+	focus = {
+		id = CHI_indulge_bureaucrats
+		icon = GFX_focus_generic_concessions
+		x = 1
+		y = 5
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_combat_opium_trade focus = CHI_opium_monopoly }
+		mutually_exclusive = { focus = CHI_stamp_out_corruption }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = -50
+		}
+	}
+	
+	focus = {
+		id = CHI_higher_education
+		icon = GFX_focus_research
+		x = 0
+		y = 6
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_stamp_out_corruption focus = CHI_indulge_bureaucrats }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = CHI_soldiers_workforce
+		icon = GFX_goal_generic_construction2
+		x = 4
+		y = 1
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_economic_reform }
+		prerequisite = { focus = CHI_militia_training }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_construction_corps
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 2
+		relative_position_id = CHI_economic_reform
+		prerequisite = { focus = CHI_soldiers_workforce }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_militia_training
+		icon = GFX_goal_generic_military_sphere
+		x = 13
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = CHI_officer_education
+		icon = GFX_focus_generic_military_academy
+		x = -1
+		y = 1
+		relative_position_id = CHI_militia_training
+		prerequisite = { focus = CHI_militia_training }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_officer_education
+		}
+	}
+	
+	focus = {
+		id = CHI_army_reform
+		icon = GFX_focus_chi_army_reform
+		x = -1
+		y = 2
+		relative_position_id = CHI_militia_training
+		prerequisite = { focus = CHI_officer_education }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CHI_army_reform_tt
+		}
+	}
+	
+	focus = {
+		id = CHI_employ_strategists
+		icon = GFX_goal_generic_army_doctrines
+		x = -1
+		y = 3
+		relative_position_id = CHI_militia_training
+		prerequisite = { focus = CHI_army_reform }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = CHI_chinese_martyrs
+		icon = GFX_goal_generic_secret_weapon
+		x = -2
+		y = 4
+		relative_position_id = CHI_militia_training
+		prerequisite = { focus = CHI_employ_strategists }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CHI_50_cheaper_force_attack
+		}
+	}
+	
+	focus = {
+		id = CHI_delaying_strategies
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 0
+		y = 4
+		relative_position_id = CHI_militia_training
+		prerequisite = { focus = CHI_employ_strategists }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_delaying_strategies_idea
+		}
+	}
+	
+	focus = {
+		id = CHI_hire_mercenaries
+		icon = GFX_focus_generic_little_entente
+		x = 1
+		y = 1
+		relative_position_id = CHI_militia_training
+		prerequisite = { focus = CHI_militia_training }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+				has_idea = CHI_social_westernisation_idea
+				has_idea = CHI_build_chinese_identity_idea
+				}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CHI_hire_mercenaries_tt
+		}
+	}
+	
+	focus = {
+		id = CHI_open_hospitals
+		icon = GFX_goal_generic_consumer_goods
+		x = 2
+		y = 2
+		relative_position_id = CHI_militia_training
+		prerequisite = { focus = CHI_militia_training }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CHI_hospitals_idea
+		}
+	}
+	
+	focus = {
+		id = CHI_chinese_mercenaries
+		icon = GFX_goal_generic_cavalry
+		x = 3
+		y = 1
+		relative_position_id = CHI_militia_training
+		prerequisite = { focus = CHI_militia_training }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CHI_chinese_mercenaries_tt
+		}
+	}
+	
+}

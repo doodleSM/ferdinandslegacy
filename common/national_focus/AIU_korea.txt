@@ -51,7 +51,7 @@ focus_tree = {
 	
 	focus = {
 		id = KOR_support_neoconfucians
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_yin_yang
 		x = 1
 		y = 1
 		relative_position_id = KOR_self_strengthening_focus

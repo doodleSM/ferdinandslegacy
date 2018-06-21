@@ -19,6 +19,7 @@ add_ideas = {
 	CHI_peasant_illiteracy
 	CHI_warlord_era_idea
 	CHI_western_dependence
+	free_trade
 }
 
 set_stability = 0.65

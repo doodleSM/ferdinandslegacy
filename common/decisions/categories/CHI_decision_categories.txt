@@ -1,0 +1,29 @@
+CHI_reform_decisions = {
+	icon = generic_political_actions
+	allowed = {
+		is_literally_china = yes
+	}
+
+	visible = {
+	}
+}
+
+CHI_raise_units_decisions = {
+	icon = generic_crisis
+	allowed = {
+		is_literally_china = yes
+	}
+
+	visible = {
+	}
+}
+
+CHI_diplomatic_decisions = {
+	icon = generic_political_actions
+	allowed = {
+		is_literally_china = yes
+	}
+
+	visible = {
+	}
+}

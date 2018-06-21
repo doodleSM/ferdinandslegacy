@@ -1,0 +1,103 @@
+﻿###########################
+# AIU China Events
+###########################
+
+add_namespace = aiu_china
+
+# XSG - ETR wants to make peace
+country_event = {
+	id = aiu_china.1
+	title = aiu_china.1.t
+	desc = aiu_china.1.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	# accept surrender
+	option = {
+		name = aiu_china.1.a
+		ai_chance = {
+			factor = 1
+		}
+		effect_tooltip = {
+				ETR = { white_peace = XSG }
+			}
+		army_experience = 10
+		add_manpower = 20000
+		ETR = {
+			country_event = { id = aiu_china.2 }
+		}
+	}
+
+	# no
+	option = {
+		name = wtt_japan.126.b
+		ai_chance = {
+			factor = 0
+		}
+		FROM = {
+			country_event = { id = aiu_china.3 }
+		}
+	}
+}
+
+# ETR - xsg accepted
+country_event = {
+	id = aiu_china.2
+	title = aiu_china.2.t
+	desc = aiu_china.2.d
+	picture = GFX_report_event_japanese_chinese_surrender
+
+	is_triggered_only = yes
+	
+	# They have accepted.
+	option = {
+		name = aiu_china.2.a
+		white_peace = XSG
+	}
+}
+
+# ETR - xsg rejected
+country_event = {
+	id = aiu_china.3
+	title = aiu_china.3.t
+	desc = aiu_china.3.d
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+	
+	# uh oh
+	option = {
+		name = aiu_china.3.a
+	}
+}
+
+# XSG - XSM intervenes on our side
+country_event = {
+	id = aiu_china.4
+	title = aiu_china.4.t
+	desc = aiu_china.4.d
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_china.4.a
+	}
+}
+
+# ETR - XSM intervenes against us
+country_event = {
+	id = aiu_china.5
+	title = aiu_china.5.t
+	desc = aiu_china.5.d
+	picture = GFX_report_event_japan_army_mountainside
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_china.5.a
+	}
+}

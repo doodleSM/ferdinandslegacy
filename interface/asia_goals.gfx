@@ -55,4 +55,49 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_bavarian_shield.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_goal_french_shield"
+		texturefile = "gfx/interface/goals/goal_french_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_yin_yang"
+		texturefile = "gfx/interface/goals/goal_yin_yang.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_anhui_shield"
+		texturefile = "gfx/interface/goals/goal_anhui_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_beiyang_shield"
+		texturefile = "gfx/interface/goals/goal_beiyang_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_chf_shield"
+		texturefile = "gfx/interface/goals/goal_chf_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ban_opium"
+		texturefile = "gfx/interface/goals/goal_ban_opium.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_grow_opium"
+		texturefile = "gfx/interface/goals/focus_grow_opium.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_stamp_cross_protestant"
+		texturefile = "gfx/interface/goals/goal_goal_stamp_cross_protestant.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_stamp_cross_catholic"
+		texturefile = "gfx/interface/goals/goal_goal_stamp_cross_catholic.dds"
+	}
+	
 }

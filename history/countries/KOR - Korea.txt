@@ -207,6 +207,17 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
+	name = "Kim Hong-il"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+	traits = { infantry_leader commando }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
 	name = "Hong Sa-ik"
 	portrait_path = "gfx/leaders/Asia/portrait_asia_generic_land_14.dds"
 	skill = 2
