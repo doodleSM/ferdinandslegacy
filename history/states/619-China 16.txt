@@ -24,7 +24,7 @@ state={
 			arms_factory = 1
 		}
 		victory_points = {
-			1766 3 # kashgar
+			1766 5 # kashgar
 		}
 		
 		victory_points = {

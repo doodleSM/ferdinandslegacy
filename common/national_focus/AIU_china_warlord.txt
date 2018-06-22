@@ -26,6 +26,8 @@ focus_tree = {
 			original_tag = BEI #for now
 			original_tag = CHF #for now
 			original_tag = ETR #for now
+			original_tag = MON #for now
+			original_tag = TIB #for now
 			}
 		}
 	}
@@ -74,7 +76,7 @@ focus_tree = {
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
-						include_locked = no
+						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -98,7 +100,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 
 		available = {
@@ -118,10 +120,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			set_country_flag = {
-				flag = CHI_money_level
-				value = 1
-			}
+			set_variable = { var = money_level value = 0 }
 			custom_effect_tooltip = CHI_new_taxes_tt
 		}
 	}
@@ -230,7 +229,7 @@ focus_tree = {
 					free_building_slots = {
 						building = arms_factory
 						size > 1
-						include_locked = no
+						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -321,7 +320,7 @@ focus_tree = {
 					free_building_slots = {
 						building = arms_factory
 						size > 1
-						include_locked = no
+						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -345,7 +344,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 
 		available = {
@@ -385,7 +384,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 
 		available = {
@@ -458,6 +457,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 0
+				tag = ANH
+			}
 		}
 
 		available = {
@@ -494,6 +497,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 0
+				tag = ANH
+			}
 		}
 
 		available = {
@@ -673,7 +680,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 
 		available = {
@@ -750,7 +757,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 
 		available = {
@@ -786,7 +793,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 
 		available = {
@@ -813,7 +820,7 @@ focus_tree = {
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
-						include_locked = no
+						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -837,7 +844,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 
 		available = {
@@ -864,7 +871,7 @@ focus_tree = {
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
-						include_locked = no
+						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -886,7 +893,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 20
+			factor = 25
 		}
 
 		available = {
@@ -921,7 +928,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 
 		available = {
@@ -956,7 +963,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 30
 		}
 
 		available = {
@@ -991,7 +998,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 
 		available = {

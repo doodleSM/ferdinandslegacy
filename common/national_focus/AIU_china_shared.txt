@@ -57,11 +57,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 4
-			tag = CHI
-		}
+		factor = 5
 	}
 
 	available = {
@@ -103,11 +99,18 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
+		modifier = {
+			factor = 0.1
+			any_neighbor_country = {
+				tag = SOV
+			}
+		}
 	}
 
 	available = {
 		JAP = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		NOT = { is_in_faction_with = SOV }
 	}
 
 	bypass = {
@@ -159,7 +162,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 3
 	}
 
 	available = {
@@ -195,7 +198,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 4
 	}
 
 	available = {
@@ -232,11 +235,18 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				tag = SOV
+			}
+		}
 	}
 
 	available = {
 		SOV = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		NOT = { is_in_faction_with = JAP }
 	}
 
 	bypass = {
@@ -288,7 +298,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -324,7 +334,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 4
 	}
 
 	available = {
@@ -367,7 +377,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -423,7 +433,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -459,7 +469,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -497,7 +507,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -553,7 +563,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -589,7 +599,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -627,7 +637,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -683,7 +693,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -719,7 +729,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 2
 	}
 
 	available = {
@@ -761,7 +771,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 	}
 
 	available = {
@@ -799,7 +809,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 	}
 
 	available = {
@@ -835,7 +845,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 20
 	}
 
 	available = {
@@ -868,7 +878,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 10
 		
 	}
 
@@ -904,7 +914,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 		
 	}
 
@@ -949,7 +959,7 @@ shared_focus = {
 				NOT = { ROOT = { has_wargoal_against = PREV } }
 				NOT = { tag = ROOT }
 			}
-			add_political_power = 1 #event
+			country_event = { id = aiu_china.6 days = 1 }
 		}
 	}
 }
@@ -965,7 +975,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 10
 		
 	}
 
@@ -990,7 +1000,53 @@ shared_focus = {
 	}
 
 	completion_reward = {
+		if = { limit = { NOT = { tag = CHF } } set_cosmetic_tag = CHI_formed_china }
+			every_state = {
+				limit = {
+					OR = { is_core_of = BEI is_core_of = CHF }
+					NOT = { is_core_of = ROOT }
+				}
+				add_core_of = ROOT
+			}
 		remove_ideas = CHI_warlord_era_idea
+	}
+}
+
+shared_focus = {
+	id = CHI_chinese_hegemony
+	icon = GFX_goal_generic_alliance
+	x = 0
+	y = 4
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_unified_china }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 20
+		
+	}
+
+	available = {
+		is_subject = no
+		is_in_faction = no
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		set_rule = { can_create_factions = yes }
+		create_faction = CHI_hegemony_faction
 	}
 }
 
@@ -1014,6 +1070,8 @@ shared_focus = {
 		ANH = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
 		is_subject = no
 		is_in_faction = no
+		NOT = { has_guaranteed = BEI }
+		NOT = { has_guaranteed = CHF }
 	}
 
 	bypass = {
@@ -1029,7 +1087,8 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		#event
+		ANH = { country_event = { id = aiu_china.7 days = 1 } }
+		set_country_flag = CHI_pact_with_anhui
 	}
 }
 
@@ -1053,6 +1112,8 @@ shared_focus = {
 		BEI = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
 		is_subject = no
 		is_in_faction = no
+		NOT = { has_guaranteed = ANH }
+		NOT = { has_guaranteed = CHF }
 	}
 
 	bypass = {
@@ -1068,7 +1129,8 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		#event
+		BEI = { country_event = { id = aiu_china.7 days = 1 } }
+		set_country_flag = CHI_pact_with_beiyang
 	}
 }
 
@@ -1092,6 +1154,8 @@ shared_focus = {
 		CHF = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
 		is_subject = no
 		is_in_faction = no
+		NOT = { has_guaranteed = ANH }
+		NOT = { has_guaranteed = BEI }
 	}
 
 	bypass = {
@@ -1107,7 +1171,8 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		#event
+		CHF = { country_event = { id = aiu_china.7 days = 1 } }
+		set_country_flag = CHI_pact_with_chf
 	}
 }
 
@@ -1122,7 +1187,7 @@ shared_focus = {
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 5
 		
 	}
 
@@ -1132,6 +1197,9 @@ shared_focus = {
 				tooltip = CHI_attack_weak_neighbour_tt
 				any_neighbor_country = {
 				is_literally_china = yes
+				NOT = { tag = MON }
+				NOT = { tag = TIB }
+				exists = yes
 				NOT = { has_war_with = ROOT }
 				NOT = { has_guaranteed = ROOT }
 				NOT = { is_guaranteed_by = ROOT }
@@ -1160,6 +1228,9 @@ shared_focus = {
 		random_neighbor_country = {
 			limit = { 
 				is_literally_china = yes
+				NOT = { tag = MON }
+				NOT = { tag = TIB }
+				exists = yes
 				NOT = { has_war_with = ROOT }
 				NOT = { has_guaranteed = ROOT }
 				NOT = { is_guaranteed_by = ROOT }
@@ -1169,7 +1240,505 @@ shared_focus = {
 							ratio < 1
 						}
 					}
-			add_political_power = 1 #event
+			country_event = { id = aiu_china.6 days = 1 }
+			}
+		}
+}
+
+shared_focus = {
+	id = CHI_subjugate_tibet
+	icon = GFX_goal_generic_major_war
+	x = 3
+	y = 1
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_focus_on_china }
+	will_lead_to_war_with = TIB
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 10
+		
+	}
+
+	available = {
+		any_neighbor_country = {
+			tag = TIB
+		}
+		TIB = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+		is_subject = no
+		NOT = { has_guaranteed = TIB }
+	}
+
+	bypass = {
+		has_full_control_of_state = 322
+		has_full_control_of_state = 757
+		has_full_control_of_state = 758
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = TIB
+			}
+		}
+}
+
+shared_focus = {
+	id = CHI_subjugate_mongolia
+	icon = GFX_goal_generic_demand_territory
+	x = 2
+	y = 2
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_focus_on_china }
+	will_lead_to_war_with = MON
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 5
+		
+	}
+
+	available = {
+		any_neighbor_country = {
+			tag = MON
+		}
+		MON = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+		is_subject = no
+		NOT = { has_guaranteed = MON }
+	}
+
+	bypass = {
+		OR ={
+			AND = {
+				has_full_control_of_state = 330
+				has_full_control_of_state = 801
+			}
+			tag = MON
+		}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = MON
+			}
+		}
+}
+
+shared_focus = {
+	id = CHI_indochina_campaign
+	icon = GFX_focus_generic_strike_at_democracy1
+	x = -4
+	y = 5
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_chinese_hegemony }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 2
+		
+	}
+
+	available = {
+		is_subject = no
+		OR ={
+		FRA = {
+			has_full_control_of_state = 671
+			has_full_control_of_state = 780
+			has_full_control_of_state = 781
+			has_full_control_of_state = 286
+			any_neighbor_country = {
+				tag = ROOT
+			}
+			is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT }
+		}
+		JAP = {
+			has_full_control_of_state = 671
+			has_full_control_of_state = 780
+			has_full_control_of_state = 781
+			has_full_control_of_state = 286
+			any_neighbor_country = {
+				tag = ROOT
+			}
+			is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT }
+		}
+		VIN = {
+			has_full_control_of_state = 671
+			has_full_control_of_state = 780
+			has_full_control_of_state = 781
+			has_full_control_of_state = 286
+			any_neighbor_country = {
+				tag = ROOT
+			}
+			is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT }
+		}
+		}
+	}
+
+	bypass = {
+		has_full_control_of_state = 671
+		has_full_control_of_state = 780
+		has_full_control_of_state = 781
+		has_full_control_of_state = 286
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		if = { limit = {
+			FRA = { has_full_control_of_state = 671
+				has_full_control_of_state = 780
+				has_full_control_of_state = 781
+				has_full_control_of_state = 286 }
+				is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT }
+				}
+		create_wargoal = {
+			type = take_state
+			target = FRA
+			generator = { 671 780 781 286 }
+				}
+			}
+	if = { limit = {
+			JAP = { has_full_control_of_state = 671
+				has_full_control_of_state = 780
+				has_full_control_of_state = 781
+				has_full_control_of_state = 286 }
+				is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT }
+				}
+		create_wargoal = {
+			type = take_state
+			target = JAP
+			generator = { 671 780 781 286 }
+				}
+			}
+	if = { limit = {
+			VIN = { has_full_control_of_state = 671
+				has_full_control_of_state = 780
+				has_full_control_of_state = 781
+				has_full_control_of_state = 286 }
+				is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT }
+				}
+		create_wargoal = {
+			type = take_state
+			target = VIN
+			generator = { 671 780 781 286 }
+				}
+			}
+	}
+}
+
+shared_focus = {
+	id = CHI_protect_siam
+	icon = GFX_goal_generic_major_alliance
+	x = -4
+	y = 6
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_indochina_campaign }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 10
+		
+	}
+
+	available = {
+		is_faction_leader = yes
+		SIA = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		SIA = { country_event = { id = generic.5 days = 1 } }
+	}
+}
+
+shared_focus = {
+	id = CHI_demand_treaty_ports
+	icon = GFX_goal_generic_territory_or_war
+	x = -2
+	y = 5
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_chinese_hegemony }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 5
+		
+	}
+
+	available = {
+		is_faction_leader = yes
+		any_state = {
+			is_core_of = ROOT
+			OR = {
+				is_owned_by = ENG
+				is_owned_by = FRA
+				is_owned_by = GRM
+				is_owned_by = HOL
+				is_owned_by = JAP
+				is_owned_by = POR
+				is_owned_by = SOV
+				is_owned_by = SPR
+			}
+		}
+		has_war = no
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		if = { limit = { any_state = { is_core_of = ROOT is_owned_by = ENG } } ENG = { country_event = { id = aiu_china.10 days = 3 } } }
+		if = { limit = { any_state = { is_core_of = ROOT is_owned_by = FRA } } FRA = { country_event = { id = aiu_china.10 days = 3 } } }
+		if = { limit = { any_state = { is_core_of = ROOT is_owned_by = GRM } } GRM = { country_event = { id = aiu_china.10 days = 3 } } }
+		if = { limit = { any_state = { is_core_of = ROOT is_owned_by = HOL } } HOL = { country_event = { id = aiu_china.10 days = 3 } } }
+		if = { limit = { any_state = { is_core_of = ROOT is_owned_by = JAP } } JAP = { country_event = { id = aiu_china.10 days = 3 } } }
+		if = { limit = { any_state = { is_core_of = ROOT is_owned_by = POR } } POR = { country_event = { id = aiu_china.10 days = 3 } } }
+		if = { limit = { any_state = { is_core_of = ROOT is_owned_by = SOV } } SOV = { country_event = { id = aiu_china.10 days = 3 } } }
+		if = { limit = { any_state = { is_core_of = ROOT is_owned_by = SPR } } SPR = { country_event = { id = aiu_china.10 days = 3 } } }
+	}
+}
+
+shared_focus = {
+	id = CHI_protect_korea
+	icon = GFX_goal_generic_defence
+	x = 0
+	y = 5
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_chinese_hegemony }
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 20
+		
+	}
+
+	available = {
+		is_faction_leader = yes
+		any_neighbor_country = {
+				tag = KOR
+			}
+		KOR = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+	}
+
+	bypass = {
+		is_in_faction_with = KOR
+		KOR = { is_subject_of = ROOT }
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		KOR = { country_event = { id = generic.5 days = 1 } }
+	}
+}
+
+shared_focus = {
+	id = CHI_rule_korea
+	icon = GFX_goal_generic_more_territorial_claims
+	x = 2
+	y = 5
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_chinese_hegemony }
+	will_lead_to_war_with = KOR
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 4
+		
+	}
+
+	available = {
+		is_faction_leader = yes
+		any_neighbor_country = {
+				tag = KOR
+			}
+		KOR = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+		NOT = { has_guaranteed = KOR }
+	}
+
+	bypass = {
+		KOR = { exists = no }
+		KOR = { is_subject_of = JAP }
+		KOR = { is_subject_of = SOV }
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = KOR
+			}
+	}
+}
+
+shared_focus = {
+	id = CHI_humble_japan
+	icon = GFX_focus_AST_war_japan
+	x = 1
+	y = 6
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_protect_korea focus = CHI_rule_korea }
+	will_lead_to_war_with = JAP
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 4
+		
+	}
+
+	available = {
+		is_faction_leader = yes
+		JAP = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+		OR = {
+			KOR = { exists = no }
+			KOR = { is_subject_of = JAP }
+			KOR = { is_subject_of = ROOT }
+			KOR = { is_in_faction_with = ROOT }
+			}
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = JAP
+			}
+	}
+}
+
+shared_focus = {
+	id = CHI_seize_outer_manchuria
+	icon = GFX_goal_generic_occupy_start_war
+	x = 4
+	y = 5
+	relative_position_id = CHI_focus_on_china
+	prerequisite = { focus = CHI_chinese_hegemony }
+	prerequisite = { focus = CHI_subjugate_mongolia }
+	will_lead_to_war_with = SOV
+
+	cost = 8
+
+	ai_will_do = {
+		factor = 4
+		
+	}
+
+	available = {
+		SOV = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+		is_subject = no
+		any_neighbor_country = {
+				tag = SOV
+			}
+		OR = {
+			NOT = { has_full_control_of_state = 408 }
+			NOT = { has_full_control_of_state = 409 }
+			NOT = { has_full_control_of_state = 560 }
+			NOT = { has_full_control_of_state = 561 }
+			NOT = { has_full_control_of_state = 657 }
+		}
+		SOV = {
+			OR = {
+			has_full_control_of_state = 408
+			has_full_control_of_state = 409
+			has_full_control_of_state = 560
+			has_full_control_of_state = 561
+			has_full_control_of_state = 657
+			}
+		}
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		create_wargoal = {
+			type = take_state
+			target = SOV
+			generator = { 408 409 560 561 657 }
 			}
 		}
 }
@@ -1177,15 +1746,15 @@ shared_focus = {
 shared_focus = {
 	id = CHI_central_research_academy
 	icon = GFX_focus_research
-	x = 3
-	y = 1
+	x = -2
+	y = 4
 	relative_position_id = CHI_focus_on_china
-	prerequisite = { focus = CHI_focus_on_china }
+	prerequisite = { focus = CHI_unified_china }
 
 	cost = 8
 
 	ai_will_do = {
-		factor = 1
+		factor = 20
 		
 	}
 

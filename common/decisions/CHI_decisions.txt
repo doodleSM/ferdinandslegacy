@@ -6,10 +6,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_new_taxes
-			has_country_flag = {
-					flag = CHI_money_level
-					value < 100
-				}
+			check_variable = { money_level < 100 }
 		}
 
 		visible = {
@@ -22,10 +19,7 @@ CHI_reform_decisions = {
 		cost = 20
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = 5
-				}
+			add_to_variable = { var = money_level value = 5 }
 			custom_effect_tooltip = CHI_gain_5_money_tt
 		}
 		
@@ -33,10 +27,7 @@ CHI_reform_decisions = {
 			factor = 10
 			modifier = {
 				factor = 0
-				has_country_flag = {
-					flag = CHI_money_level
-					value < 50
-				}
+				check_variable = { money_level < 50 }
 			}
 		}
 	}
@@ -47,10 +38,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_new_taxes
-			has_country_flag = {
-					flag = CHI_money_level
-					value < 100
-				}
+			check_variable = { money_level < 100 }
 			has_war_support > 0.5
 		}
 
@@ -65,10 +53,7 @@ CHI_reform_decisions = {
 		
 		complete_effect = {
 			add_war_support = -0.05
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = 10
-				}
+			add_to_variable = { var = money_level value = 10 }
 			custom_effect_tooltip = CHI_gain_10_money_tt
 		}
 		
@@ -86,10 +71,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_new_taxes
-			has_country_flag = {
-					flag = CHI_money_level
-					value < 100
-				}
+			check_variable = { money_level < 100 }
 			has_stability > 0.35
 			NOT = { has_completed_focus = CHI_stamp_out_corruption }
 		}
@@ -101,14 +83,11 @@ CHI_reform_decisions = {
 		
 		days_re_enable = 160
 		
-		cost = 50
+		cost = 40
 		
 		complete_effect = {
 			add_stability = -0.025
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = 20
-				}
+			add_to_variable = { var = money_level value = 20 }
 			custom_effect_tooltip = CHI_gain_20_money_tt
 		}
 		
@@ -123,10 +102,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_new_taxes
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 5
-				}
+			check_variable = { money_level > 4 }
 		}
 
 		visible = {
@@ -138,10 +114,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -5
-				}
+			add_to_variable = { var = money_level value = -5 }
 			add_political_power = 15
 			custom_effect_tooltip = CHI_spend_5_money_tt
 		}
@@ -149,11 +122,8 @@ CHI_reform_decisions = {
 		ai_will_do = {
 			factor = 0
 			modifier = {
-				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				add = 1
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -164,9 +134,17 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_new_taxes
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
+			check_variable = { money_level > 9 }
+			any_owned_state = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+					is_core_of = ROOT
+            		free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = { has_state_flag = CHI_rebuilt_infrastructure_flag }
 				}
 		}
 
@@ -179,10 +157,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			random_owned_state = {
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
@@ -198,6 +173,7 @@ CHI_reform_decisions = {
 					level = 1
 					instant_build = yes
 				}
+				set_state_flag = CHI_rebuilt_infrastructure_flag
 			}
 			custom_effect_tooltip = CHI_spend_10_money_tt
 		}
@@ -206,10 +182,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -220,13 +193,11 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_new_taxes
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			any_owned_state = {
 					is_fully_controlled_by = ROOT
 					is_owned_by = ROOT
+					is_core_of = ROOT
             		free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -245,15 +216,13 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			
 			random_owned_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					is_owned_by = ROOT
+					is_core_of = ROOT
             		free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -271,10 +240,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -285,10 +251,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_japanese_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			JAP = { exists = yes is_subject = no }
 			NOT = { has_war_with = JAP }
 		}
@@ -304,10 +267,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = 1000
@@ -320,10 +280,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -334,10 +291,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_japanese_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			JAP = { exists = yes is_subject = no }
 			NOT = { has_war_with = JAP }
 		}
@@ -353,10 +307,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = support_equipment_1
 				amount = 200
@@ -369,10 +320,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -383,10 +331,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_russian_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			SOV = { exists = yes is_subject = no }
 			NOT = { has_war_with = SOV }
 		}
@@ -402,10 +347,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = 1000
@@ -418,10 +360,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -432,10 +371,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_russian_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			SOV = { exists = yes is_subject = no }
 			NOT = { has_war_with = SOV }
 		}
@@ -451,10 +387,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = tac_bomber_equipment_0
 				amount = 50
@@ -467,10 +400,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -481,10 +411,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_french_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			FRA = { exists = yes is_subject = no }
 			NOT = { has_war_with = FRA }
 		}
@@ -500,10 +427,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = 1000
@@ -516,10 +440,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -530,10 +451,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_french_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			FRA = { exists = yes is_subject = no }
 			NOT = { has_war_with = FRA }
 		}
@@ -549,10 +467,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = artillery_equipment_1
 				amount = 100
@@ -565,10 +480,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -577,10 +489,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_french_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 			GRM = { exists = yes is_subject = no }
 			NOT = { has_war_with = FRA }
 		}
@@ -601,10 +510,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
-				}
+			add_to_variable = { var = money_level value = -20 }
 			create_corps_commander = {
 			name = "Antoine Béthouart"
 			gfx = GFX_Portrait_France_Generic_land_1
@@ -628,10 +534,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -642,10 +545,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_german_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			GRM = { exists = yes is_subject = no }
 			NOT = { has_war_with = GRM }
 		}
@@ -661,10 +561,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = 1000
@@ -677,10 +574,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -691,10 +585,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_german_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			GRM = { exists = yes is_subject = no }
 			NOT = { has_war_with = GRM }
 		}
@@ -710,10 +601,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = light_tank_equipment_2
 				amount = 80
@@ -726,10 +614,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -738,10 +623,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_german_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 			GRM = { exists = yes is_subject = no }
 			NOT = { has_war_with = GRM }
 		}
@@ -762,10 +644,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
-				}
+			add_to_variable = { var = money_level value = -20 }
 			create_corps_commander = {
 			name = "Max Bauer"
 			gfx = GFX_portrait_europe_generic_land_13 
@@ -789,10 +668,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -803,10 +679,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_british_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			ENG = { exists = yes is_subject = no }
 			NOT = { has_war_with = ENG }
 		}
@@ -822,10 +695,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = 1000
@@ -838,10 +708,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -852,10 +719,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_british_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			ENG = { exists = yes is_subject = no }
 			NOT = { has_war_with = ENG }
 		}
@@ -871,10 +735,7 @@ CHI_reform_decisions = {
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			add_equipment_to_stockpile = {
 				type = fighter_equipment_0
 				amount = 50
@@ -887,10 +748,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -899,10 +757,7 @@ CHI_reform_decisions = {
 
 		available = {
 			has_completed_focus = CHI_british_arms
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 			GRM = { exists = yes is_subject = no }
 			NOT = { has_war_with = ENG }
 		}
@@ -918,15 +773,12 @@ CHI_reform_decisions = {
 			}
 		}
 		
-		fire_only_once = yes
+		fire_only_once = yes 
 		
 		cost = 0
 		
 		complete_effect = {
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
-				}
+			add_to_variable = { var = money_level value = -20 }
 			create_corps_commander = {
 			name = "Francis Sutton"
 			gfx = GFX_portrait_europe_generic_land_8 
@@ -950,10 +802,7 @@ CHI_reform_decisions = {
 			factor = 0
 			modifier = {
 				add = 10
-				has_country_flag = {
-					flag = CHI_taxes_level
-					value > 50
-				}
+				check_variable = { money_level > 50 }
 			}
 		}
 	}
@@ -1090,10 +939,7 @@ CHI_raise_units_decisions = {
 
 		available = {
 			has_completed_focus = CHI_hire_mercenaries
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 			NOT = { has_war_with = SOV }
 			NOT = { has_completed_focus = CHI_overtures_to_japan }
 		}
@@ -1148,12 +994,19 @@ CHI_raise_units_decisions = {
 						division = "name = \"Russian Mercenaries\" division_template = \"Russian Mercenaries\" start_experience_factor = 0.8" 
 						owner = ROOT
 					}
-				}			
-			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
 				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 80
+					producer = SOV
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 50
+					producer = SOV
+				}
+			}
+			add_to_variable = { var = money_level value = -20 }
 			custom_effect_tooltip = CHI_spend_20_money_tt
 		}
 	}
@@ -1164,10 +1017,7 @@ CHI_raise_units_decisions = {
 
 		available = {
 			has_completed_focus = CHI_hire_mercenaries
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 			NOT = { has_war_with = JAP }
 			NOT = { has_completed_focus = CHI_overtures_to_russia }
 		}
@@ -1222,12 +1072,19 @@ CHI_raise_units_decisions = {
 						division = "name = \"Japanese Mercenaries\" division_template = \"Japanese Mercenaries\" start_experience_factor = 0.8" 
 						owner = ROOT
 					}
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment_1
+					amount = 80
+					producer = JAP
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 50
+					producer = JAP
 				}			
 			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
-				}
+			add_to_variable = { var = money_level value = -20 }
 			custom_effect_tooltip = CHI_spend_20_money_tt
 		}
 	}
@@ -1238,10 +1095,7 @@ CHI_raise_units_decisions = {
 
 		available = {
 			has_completed_focus = CHI_hire_mercenaries
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 		}
 		
 		visible = {
@@ -1312,12 +1166,14 @@ CHI_raise_units_decisions = {
 						division = "name = \"2. Cossack Mercenaries\" division_template = \"Cossack Mercenaries\" start_experience_factor = 0.8" 
 						owner = ROOT
 					}
-				}			
-			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
 				}
+			add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 30
+					producer = SOV
+				}				
+			}
+			add_to_variable = { var = money_level value = -20 }
 			custom_effect_tooltip = CHI_spend_20_money_tt
 		}
 	}
@@ -1328,10 +1184,7 @@ CHI_raise_units_decisions = {
 
 		available = {
 			has_completed_focus = CHI_chinese_mercenaries
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 			NOT = { has_war_with = MON }
 			OR = {
 				any_owned_state = {
@@ -1406,10 +1259,7 @@ CHI_raise_units_decisions = {
 					}
 				}			
 			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
-				}
+			add_to_variable = { var = money_level value = -20 }
 			custom_effect_tooltip = CHI_spend_20_money_tt
 		}
 	}
@@ -1420,10 +1270,7 @@ CHI_raise_units_decisions = {
 
 		available = {
 			has_completed_focus = CHI_chinese_mercenaries
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 			ETR = { has_war = no }
 			OR = {
 				any_owned_state = {
@@ -1498,10 +1345,7 @@ CHI_raise_units_decisions = {
 					}
 				}			
 			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
-				}
+			add_to_variable = { var = money_level value = -20 }
 			custom_effect_tooltip = CHI_spend_20_money_tt
 		}
 	}
@@ -1512,10 +1356,7 @@ CHI_raise_units_decisions = {
 
 		available = {
 			has_completed_focus = CHI_chinese_mercenaries
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 			OR = {
 				any_owned_state = {
 					is_core_of = XSM
@@ -1637,10 +1478,7 @@ CHI_raise_units_decisions = {
 					}
 				}			
 			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
-				}
+			add_to_variable = { var = money_level value = -20 }
 			custom_effect_tooltip = CHI_spend_20_money_tt
 		}
 	}
@@ -1651,10 +1489,7 @@ CHI_raise_units_decisions = {
 
 		available = {
 			has_completed_focus = CHI_chinese_mercenaries
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 20
-				}
+			check_variable = { money_level > 19 }
 			OR = {
 				any_owned_state = {
 					is_core_of = MAN
@@ -1732,10 +1567,7 @@ CHI_raise_units_decisions = {
 					}
 				}			
 			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -20
-				}
+			add_to_variable = { var = money_level value = -20 }
 			custom_effect_tooltip = CHI_spend_20_money_tt
 		}
 	}
@@ -1747,10 +1579,7 @@ CHI_raise_units_decisions = {
 		available = {
 			has_completed_focus = CHI_chinese_mercenaries
 			has_completed_focus = CHI_build_chinese_identity
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			OR = {
 				any_owned_state = {
 					is_core_of = SZE
@@ -1853,10 +1682,7 @@ CHI_raise_units_decisions = {
 					}
 				}			
 			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			custom_effect_tooltip = CHI_spend_10_money_tt
 		}
 	}
@@ -1868,10 +1694,7 @@ CHI_raise_units_decisions = {
 		available = {
 			has_completed_focus = CHI_chinese_mercenaries
 			has_completed_focus = CHI_millenarianism
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			OR = {
 				any_owned_state = {
 					is_core_of = SHD
@@ -1959,10 +1782,7 @@ CHI_raise_units_decisions = {
 					}
 				}			
 			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			custom_effect_tooltip = CHI_spend_10_money_tt
 		}
 	}
@@ -1974,10 +1794,7 @@ CHI_raise_units_decisions = {
 		available = {
 			has_completed_focus = CHI_chinese_mercenaries
 			has_completed_focus = CHI_millenarianism
-			has_country_flag = {
-					flag = CHI_money_level
-					value > 10
-				}
+			check_variable = { money_level > 9 }
 			OR = {
 				any_owned_state = {
 					is_core_of = SHD
@@ -2065,10 +1882,7 @@ CHI_raise_units_decisions = {
 					}
 				}			
 			}
-			modify_country_flag = {
-					flag = CHI_money_level
-					value = -10
-				}
+			add_to_variable = { var = money_level value = -10 }
 			custom_effect_tooltip = CHI_spend_10_money_tt
 		}
 	}
@@ -2110,6 +1924,8 @@ political_actions = {
 			}
 		}
 		
+	}
+		
 	CHI_XSM_intervene_for_XSG = {
 
 		available = {
@@ -2122,7 +1938,6 @@ political_actions = {
 			tag = XSM
 			ETR = { has_war_with = XSG }
 			date < 1938.1.1 #1932.1.1
-			date > 1936.2.1
 		}
 
 		cost = 10
@@ -2146,5 +1961,7 @@ political_actions = {
 			}
 			declare_war_on = { target = ETR type = annex_everything }
 		}
+		
+	}
 
 }

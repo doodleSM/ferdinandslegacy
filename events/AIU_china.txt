@@ -62,7 +62,7 @@ country_event = {
 	id = aiu_china.3
 	title = aiu_china.3.t
 	desc = aiu_china.3.d
-	picture = GFX_report_event_japan_army_mountainside
+	picture = GFX_report_event_chinese_soldiers
 
 	is_triggered_only = yes
 	
@@ -77,7 +77,7 @@ country_event = {
 	id = aiu_china.4
 	title = aiu_china.4.t
 	desc = aiu_china.4.d
-	picture = GFX_report_event_japan_army_mountainside
+	picture = GFX_report_event_chinese_soldiers
 
 	is_triggered_only = yes
 	
@@ -92,12 +92,236 @@ country_event = {
 	id = aiu_china.5
 	title = aiu_china.5.t
 	desc = aiu_china.5.d
-	picture = GFX_report_event_japan_army_mountainside
+	picture = GFX_report_event_chinese_soldiers
 
 	is_triggered_only = yes
 	
 	# 
 	option = {
 		name = aiu_china.5.a
+	}
+}
+
+# general someone is preparing to attack us
+country_event = {
+	id = aiu_china.6
+	title = aiu_china.6.t
+	desc = aiu_china.6.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	# do this later
+	option = { #oh no
+		name = aiu_china.6.a
+		FROM = {
+			create_wargoal = {
+			type = annex_everything
+			target = ROOT
+		}
+		}
+	}
+}
+
+# country proposes mutual defense pact
+country_event = {
+	id = aiu_china.7
+	title = aiu_china.7.t
+	desc = aiu_china.7.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	# 
+	option = { 
+		name = aiu_china.7.a
+		ai_chance = {
+			factor = 80
+		}
+		FROM = {
+			give_guarantee = ROOT
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+			country_event = { id = aiu_china.8 }
+		}
+		ROOT = {
+			give_guarantee = FROM
+			add_ai_strategy = {
+				type = alliance
+				id = "FROM"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "FROM"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "FROM"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "FROM"
+				value = 100
+			}
+		}
+	}
+	
+	option = { 
+		name = aiu_china.7.b
+		ai_chance = {
+			factor = 20
+		}
+		FROM = { add_opinion_modifier = { target = ROOT modifier = large_decrease } country_event = { id = aiu_china.9 } }
+	}
+}
+
+# agreed to pact
+country_event = {
+	id = aiu_china.8
+	title = aiu_china.8.t
+	desc = aiu_china.8.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_china.8.a
+	}
+}
+
+# rejected pact
+country_event = {
+	id = aiu_china.9
+	title = aiu_china.9.t
+	desc = aiu_china.9.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_china.9.a
+	}
+}
+
+# country demands treaty ports
+country_event = {
+	id = aiu_china.10
+	title = aiu_china.10.t
+	desc = aiu_china.10.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	# 
+	option = { 
+		name = aiu_china.10.a
+		ai_chance = {
+			factor = 70
+		}
+		effect_tooltip = {
+			every_state = {
+					limit = {
+						is_owned_by = ROOT
+						is_core_of = FROM
+					}
+					FROM = {
+						transfer_state = PREV
+					}
+				}
+		}
+		FROM = { country_event = { id = aiu_china.11 } }
+	}
+	
+	option = { 
+		name = aiu_china.10.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				is_in_faction_with = FROM
+			}
+			modifier = {
+				factor = 0.3
+				any_other_country = {
+					has_war_with = ROOT
+					is_major = yes
+				}
+			}
+		}
+		FROM = { country_event = { id = aiu_china.12 } }
+	}
+}
+
+# agreed to hand over ports
+country_event = {
+	id = aiu_china.11
+	title = aiu_china.11.t
+	desc = aiu_china.11.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_china.11.a
+		every_state = {
+			limit = {
+				is_owned_by = FROM
+				is_core_of = ROOT
+			}
+			ROOT = {
+				transfer_state = PREV
+			}
+		}
+	}
+}
+
+# refused to hand over ports
+country_event = {
+	id = aiu_china.12
+	title = aiu_china.12.t
+	desc = aiu_china.12.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+	
+	# war
+	option = {
+		name = aiu_china.12.a
+		ROOT = {
+			create_wargoal = {
+			type = annex_everything
+			target = FROM
+			}
+		}
+	}
+	
+	# no war
+	option = {
+		name = aiu_china.12.b
+		add_political_power = -20
 	}
 }
