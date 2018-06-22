@@ -704,6 +704,7 @@
  CHI_spend_10_money_tt:0 "Costs §R10§! Funds."
  CHI_spend_20_money_tt:0 "Costs §R20§! Funds."
  CHI_bought_building_slot_flag:0 "Has not already invested in this region."
+ CHI_rebuilt_infrastructure_flag:0 "Has not already rebuilt infrastructure in this region."
  CHI_buy_japanese_guns_decision:0 "Buy Japanese Guns"
  CHI_buy_japanese_guns_decision_desc:0 "Buy a consignment of infantry equipment from the Japanese."
  CHI_buy_russian_guns_decision:0 "Buy Russian Guns"
