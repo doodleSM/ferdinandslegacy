@@ -490,7 +490,7 @@ CHI_reform_decisions = {
 		available = {
 			has_completed_focus = CHI_french_arms
 			check_variable = { money_level > 19 }
-			GRM = { exists = yes is_subject = no }
+			FRA = { exists = yes is_subject = no }
 			NOT = { has_war_with = FRA }
 		}
 
@@ -758,7 +758,7 @@ CHI_reform_decisions = {
 		available = {
 			has_completed_focus = CHI_british_arms
 			check_variable = { money_level > 19 }
-			GRM = { exists = yes is_subject = no }
+			ENG = { exists = yes is_subject = no }
 			NOT = { has_war_with = ENG }
 		}
 
