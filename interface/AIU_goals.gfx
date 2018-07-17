@@ -15,8 +15,5 @@ SpriteTypes = {
 		texturefile = "/gfx/interface/goals/goal_landwehr.dds"
 	}
 
-	spriteType = {
-		name = "GFX_goal_steidlism"
-		texturefile = "/gfx/interface/goals/goal_steidlism.dds"
-	}
+	
 }

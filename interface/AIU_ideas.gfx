@@ -17,6 +17,10 @@ spriteTypes = {
 		name = "GFX_idea_GRM_rebellious_east"
 		texturefile = "gfx/interface/ideas/GRM_rebellious_east.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_GRM_local_governors"
+		texturefile = "gfx/interface/ideas/GRM_local_governors.dds"
+	}
 
 	
 }

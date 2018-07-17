@@ -10,7 +10,7 @@ state={
 	}
 
 	history={
-		owner = WGA
+		owner = EGA
 		victory_points = {
 			9692 10 
 		}
@@ -20,7 +20,7 @@ state={
 			arms_factory = 2
 			air_base = 3
 		}
-		add_core_of = WGA
+		add_core_of = EGA
 	}
 
 	provinces={

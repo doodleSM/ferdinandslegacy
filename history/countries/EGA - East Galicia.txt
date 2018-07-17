@@ -1,5 +1,7 @@
 oob = "EGA_1930"
 
+capital = 70
+
 set_stability = 0.75
 set_war_support = 0
 set_research_slots = 3
@@ -40,4 +42,14 @@ set_politics = {
 	last_election = "1917.6.0"
 	election_frequency = 48
 	elections_allowed = no
+}
+create_country_leader = {
+	name = "Josef Tiso"
+	desc = ""
+	picture = "EGA_Tiso.dds"
+	expire = "1965.1.1"
+	ideology = auth_dem_ideology
+	traits = {
+		#
+	}
 }

@@ -13,6 +13,10 @@ set_technology = {
 	early_bomber = 1
 }
 
+give_guarantee = TRA
+
+
+
 set_politics = {
 	parties = {
 		democratic = { 
@@ -41,3 +45,6 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+create_faction = Hungarian-Federation
+add_to_faction = CRO

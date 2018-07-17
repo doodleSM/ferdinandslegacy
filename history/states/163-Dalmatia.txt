@@ -7,7 +7,7 @@ state=
 	state_category = enclave
 	
 	history={
-		owner = CRA
+		owner = CRO
 		buildings = {
 			infrastructure = 5
 			3943 = {

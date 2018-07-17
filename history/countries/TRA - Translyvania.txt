@@ -1,8 +1,10 @@
 oob = "TRA_1930"
 
-set_stability = 0.75
-set_war_support = 0
+set_stability = 0.3
+set_war_support = 0.2
 set_research_slots = 3
+
+capital = 84
 
 set_technology = {
 	infantry_weapons = 1
@@ -12,15 +14,19 @@ set_technology = {
 	early_fighter = 1
 	early_bomber = 1
 }
+add_ideas = {
+		disarmed_nation
+ 		}
+
 
 set_politics = {
 	parties = {
 		democratic = { 
-			popularity = 22
+			popularity = 40
 		}
 
 		fascism = {
-			popularity = 17
+			popularity = 19
 		}
 		
 		communism = {
@@ -32,12 +38,22 @@ set_politics = {
 		}
 
 		auth_dem = {
-			popularity = 41
+			popularity = 21
 		}
 	}
 
-	ruling_party = auth_dem
-	last_election = "1917.6.0"
+	ruling_party = democratic
+	last_election = "1930.6.2"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
+}
+create_country_leader = {
+	name = "Transylvanian Parliament"
+	desc = ""
+	picture = "TRA_council.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
 }

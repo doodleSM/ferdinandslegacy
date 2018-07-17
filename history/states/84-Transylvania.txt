@@ -16,6 +16,7 @@ state={
 			arms_factory = 1
 			industrial_complex = 1
 		}
+		set_demilitarized_zone = yes
 		victory_points = {
 			690 1 
 		}
