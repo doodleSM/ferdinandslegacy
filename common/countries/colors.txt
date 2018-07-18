@@ -1,6 +1,6 @@
 SOV = {
-	color = rgb { 60 179 113 }
-	color_ui = { 60 179 113 }
+	color = rgb { 58 153 21 }
+	color_ui = rgb { 58 153 21 }
 }
 GER = {
 	color = HSV { 0.1 0.15 0.4 }
@@ -648,6 +648,6 @@ ZHI = {
 	color_ui = { 229 134 32 }
 }
 BLU = {
-	color = rgb { 60 179 113 }
-	color_ui = { 60 179 113 }
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
 }
