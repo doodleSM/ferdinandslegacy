@@ -7,7 +7,7 @@ state={
 	state_category = rural
 	
 	history={
-		owner = SOV
+		owner = BAL
 		buildings = {
 			infrastructure = 5
 			9262 = {
@@ -15,6 +15,7 @@ state={
 			}
 			dockyard = 1
 		}
+		add_core_of = BAL
 	}
 
 	provinces={
