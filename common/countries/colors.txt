@@ -647,3 +647,7 @@ ZHI = {
 	color = rgb { 229 134 32 }
 	color_ui = { 229 134 32 }
 }
+BLU = {
+	color = rgb { 60 179 113 }
+	color_ui = { 60 179 113 }
+}
