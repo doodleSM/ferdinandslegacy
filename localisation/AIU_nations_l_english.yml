@@ -73,4 +73,7 @@
  BON_neutrality_DEF:0 "Bosnia"
  BON_democratic:0 "Democratic Republic of Bosnia"
  BON_democratic_DEF:0 "Democratic States of Bosnia"
+ POL_auth_dem:0 "Congress Kingdom of Poland"
+ POL_auth_dem_DEF:0 "The Congress Kingdom of Poland"
+ POL_auth_dem_ADJ:0 "Polish"
 
