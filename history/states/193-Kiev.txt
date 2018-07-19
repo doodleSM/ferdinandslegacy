@@ -7,12 +7,12 @@ state={
 	state_category = city
 
 	history={
-		owner = BLU
+		owner = BAU
 		buildings = {
 			infrastructure = 5
 			air_base = 8
 		}
-		add_core_of = BLU
+		add_core_of = BAU
 		add_core_of = UKR
 	}
 
