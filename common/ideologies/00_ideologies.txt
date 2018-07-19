@@ -317,14 +317,54 @@ ideologies = {
 		ai_democratic = yes # uses the democratic AI behaviour
 	}
 
+	auth_dem = {
+	
+		types = {
+
+			auth_dem_ideology = {
+			}
+
+			oligarchism  = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_DEMOCRATIC_1"
+			"FACTION_NAME_DEMOCRATIC_2"
+			"FACTION_NAME_DEMOCRATIC_3"
+			"FACTION_NAME_DEMOCRATIC_4"
+			"FACTION_NAME_DEMOCRATIC_5"
+			"FACTION_NAME_DEMOCRATIC_6"
+		}
+		
+		color = { 128 128 128 }
+		
+		rules = {
+			can_declare_war_on_same_ideology = no
+			can_force_government = no
+			can_send_volunteers = no
+			can_puppet = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
+		}
+		
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.5
+		
+		modifiers = {
+		}
+		
+		faction_modifiers = {
+		}
+		
+	}
+	
 	neutrality = {#Paternal Autocracy
 	
 		types = {
 		
 			despotism  = {
-			}
-			
-			oligarchism  = {
 			}
 			
 			moderatism = {
@@ -371,49 +411,6 @@ ideologies = {
 		can_collaborate = yes
 
 		ai_neutral = yes # 
-	}
-
-	auth_dem = {
-	
-		types = {
-
-			auth_dem_ideology = {
-			}
-
-			oligarchism  = {
-			}
-		}
-		
-		dynamic_faction_names = {
-			"FACTION_NAME_DEMOCRATIC_1"
-			"FACTION_NAME_DEMOCRATIC_2"
-			"FACTION_NAME_DEMOCRATIC_3"
-			"FACTION_NAME_DEMOCRATIC_4"
-			"FACTION_NAME_DEMOCRATIC_5"
-			"FACTION_NAME_DEMOCRATIC_6"
-		}
-		
-		color = { 128 128 128 }
-		
-		rules = {
-			can_declare_war_on_same_ideology = no
-			can_force_government = no
-			can_send_volunteers = no
-			can_puppet = no
-			can_lower_tension = no
-			can_only_justify_war_on_threat_country = no
-			can_guarantee_other_ideologies = no
-		}
-		
-		war_impact_on_world_tension = 0.75
-		faction_impact_on_world_tension = 0.5
-		
-		modifiers = {
-		}
-		
-		faction_modifiers = {
-		}
-		
 	}
 
 

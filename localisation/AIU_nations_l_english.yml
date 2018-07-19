@@ -73,6 +73,7 @@
  BON_neutrality_DEF:0 "Bosnia"
  BON_democratic:0 "Democratic Republic of Bosnia"
  BON_democratic_DEF:0 "Democratic States of Bosnia"
+<<<<<<< HEAD
  BLU_communism:0 "Bolshevik Union"
  BAU_anarchism:0 "Black Army of Ukraine"
  UKR_neutrality:0 "Ukrainian State"
@@ -80,3 +81,9 @@
  RSP_democratic:0 "Russian Republic"
  BAL_auth_dem:0 "United Baltic Duchy"
  CAU_neutrality:0 "Transcaucasia"
+=======
+ POL_auth_dem:0 "Congress Kingdom of Poland"
+ POL_auth_dem_DEF:0 "The Congress Kingdom of Poland"
+ POL_auth_dem_ADJ:0 "Polish"
+
+>>>>>>> edc058017754f986494ba2a6c5144baf50bea102
