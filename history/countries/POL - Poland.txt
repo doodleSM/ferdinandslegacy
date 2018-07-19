@@ -61,7 +61,7 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Józef Piłsudzki"
+	name = "Polish Sejm"
 	desc = "POLITICS_JOZEF_PILSUDZKI_DESC"
 	picture = "Portrait_Poland_Ignacy_Moscicki.dds"
 	expire = "1965.1.1"
