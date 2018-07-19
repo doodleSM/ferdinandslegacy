@@ -7,7 +7,7 @@ state={
 	state_category = rural
 
 	history={
-		owner = BAU
+		owner = BLU
 		buildings = {
 			infrastructure = 5
 		}

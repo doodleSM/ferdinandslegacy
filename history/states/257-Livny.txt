@@ -11,11 +11,11 @@ state={
 	}
 
 	history={
-		owner = BLU
+		owner = RSP
 		buildings = {
 			infrastructure = 4
 		}
-		add_core_of = BLU
+		add_core_of = RSP
 	}
 
 	provinces={

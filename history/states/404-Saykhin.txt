@@ -6,11 +6,11 @@ state={
 	state_category = wasteland
 
 	history={
-		owner = RMU
+		owner = KAZ
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = RMU
+		add_core_of = KAZ
 		#add_core_of = KAZ
 	}
 

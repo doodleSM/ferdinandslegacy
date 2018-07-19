@@ -11,12 +11,12 @@ state={
 	}
 
 	history={
-		owner = RMU
+		owner = KAZ
 		buildings = {
 			infrastructure = 3
 
 		}
-		add_core_of = RMU
+		add_core_of = KAZ
 		
 	}
 
