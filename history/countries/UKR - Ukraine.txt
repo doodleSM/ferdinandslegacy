@@ -48,10 +48,14 @@ set_politics = {
 			popularity = 30
 		}
 		
-		communism = {
+		auth_dem = {
 			popularity = 50
 		}
 	}
+	ruling_party = neutrality
+	last_election = "1917.6.0"
+	election_frequency = 48
+	elections_allowed = no
 }
 
 create_country_leader = {
