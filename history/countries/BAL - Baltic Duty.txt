@@ -1,0 +1,42 @@
+﻿capital = 598
+
+oob = "BLU_1930"
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	transport = 1
+	early_fighter = 1
+	early_bomber = 1
+	
+}
+
+add_ideas = {
+	
+}
+
+set_stability = 0.65
+set_war_support = 0.4
+
+set_convoys = 30
+
+set_politics = {
+
+	parties = {
+		
+		
+		auth_dem = {popualrity = 72 }
+		neutrality = { populairty = 28 }
+
+		
+	}
+	
+	ruling_party = auth_dem
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
