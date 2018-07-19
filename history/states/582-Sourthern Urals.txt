@@ -12,12 +12,20 @@ state={
 	}
 
 	history={
+<<<<<<< HEAD
 		owner = RSP
+=======
+		owner = RMU
+>>>>>>> fdae117d07dcc663457d51d1c359a0997a47bbee
 		buildings = {
 			infrastructure = 5
 
 		}
+<<<<<<< HEAD
 		add_core_of = RSP
+=======
+		add_core_of = RMU
+>>>>>>> fdae117d07dcc663457d51d1c359a0997a47bbee
 	}
 
 	provinces={

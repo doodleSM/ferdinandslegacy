@@ -12,7 +12,10 @@ state={
 			infrastructure = 1
 		}
 		add_core_of = RSP
+<<<<<<< HEAD
 		add_core_of = SOV
+=======
+>>>>>>> fdae117d07dcc663457d51d1c359a0997a47bbee
 	}
 
 	provinces={

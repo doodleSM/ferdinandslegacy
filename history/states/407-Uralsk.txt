@@ -11,7 +11,10 @@ state={
 		buildings = {
 			infrastructure = 3
 		}
+<<<<<<< HEAD
 		add_core_of = SOV
+=======
+>>>>>>> fdae117d07dcc663457d51d1c359a0997a47bbee
 		add_core_of = RSP
 	}
 
