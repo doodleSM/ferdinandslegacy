@@ -671,3 +671,40 @@ RMU = {
 	color = rgb { 0 147 175 }
 	color_ui = rgb { 0 147 175 }
 }
+DON = {
+	color = rgb { 210 108 43  }
+	color_ui = rgb { 210 108 43   }
+}
+ASH = {
+	color = rgb { 210 187 11 }
+	color_ui = rgb { 210 187 11  }
+}
+CHE = {
+	color = rgb { 17 86 11 }
+	color_ui = rgb { 17 86 11  }
+}
+KHI  = {
+	color = rgb { 19 86 83  }
+	color_ui = rgb { 19 86 83  }
+}
+TRC  = {
+	color = rgb { 14 86 196  }
+	color_ui = rgb { 14 86 196  }
+}
+BKH  = {
+	color = rgb { 14 136 86  }
+	color_ui = rgb { 14 136 86  }
+}
+ZHT  = {
+	color = rgb { 154 26 12  }
+	color_ui = rgb { 154 26 12  }
+}
+KRZ  = {
+	color = rgb { 197 134 12  }
+	color_ui = rgb { 197 134 12  }
+}
+CRI  = {
+	color = rgb { 35 42 222  }
+	color_ui = rgb { 35 42 222 }
+}
+
