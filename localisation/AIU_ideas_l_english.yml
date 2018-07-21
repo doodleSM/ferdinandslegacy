@@ -19,3 +19,5 @@
  corporate_haven_desc:0 "This nation has become a corporate haven. As such, some of our civilian factories are given to the corporations to help the State."
  royal_corporations:0 "Royal Corporations"
  royal_corporations_desc:0 "We have given the corporates a monopoly in manufacturing military equipment. In exchange, we fund these royal corporations."
+ sov_economic_crisis:0 "Economic Downturn"
+ sov_economic_crisis_desc:0 "Alexander Trepov attempted to introduce agrarian reformations into the Russian society. The reform's plan was to move peasants from the countryside into urban cities to work in factories. However the program was too ambitious. Due to the stubborn nature of the landlords, who were fearing profit loss off peasants, fought back against the reform. The reformation was scrapped and the Russian investments were never returned."

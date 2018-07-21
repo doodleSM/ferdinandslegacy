@@ -1,0 +1,38 @@
+ideas = {
+	
+	country = {
+
+		sov_economic_crisis = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_chi_hyper_inflation_3
+
+			modifier = {
+				stability_factor = -0.1
+				conscription_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1				
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		sov_agrarian_society = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = 
+		}
+	}
+}
