@@ -67,5 +67,14 @@ set_politics = {
 }
 
 
-
+create_country_leader = {
+	name = "Anton Denkin"
+	desc = ""
+	picture = "DON_Denkin.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
 

@@ -1,6 +1,6 @@
-﻿capital = 594
+﻿capital = 572
 
-oob = "GXC_1936"
+oob = "RMU_1936"
 
 set_stability = 0.6
 set_war_support = 0.5
@@ -11,9 +11,7 @@ set_technology = {
 }
 
 add_ideas = {
-	CHI_military_deficiencies
-	CHI_peasant_illiteracy
-	CHI_warlord_era_idea
+	
 }
 
 
@@ -22,8 +20,8 @@ set_convoys = 5
 set_politics = {
 
 	parties = {
-		democratic = { 
-			popularity = 0
+		auth_dem = { 
+			popularity = 30
 		}
 
 		fascism = {
@@ -32,11 +30,11 @@ set_politics = {
 		
 		communism = {
 			popularity = 0
-			#banned = no #default is no
+			
 		}
 		
 		neutrality = { 
-			popularity = 100
+			popularity = 70
 		}
 	}
 	ruling_party = neutrality
@@ -46,23 +44,23 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Li Zongren"
-	desc = "POLITICS_LI_ZONGREN_DESC"
-	picture = "gfx/leaders/GXC/Portrait_Guanxi_Clique_Li_Zongren.dds"
+	name = "Lavr Kornilov"
+	desc = ""
+	picture = "RMU_Kornilov.dds"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
 		#
 	}
 }
-
-create_corps_commander = {
-	name = "Chen Jitang"
-	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
+create_country_leader = {
+	name = "Lav Kornilov"
+	desc = ""
+	picture = "RMU_Kornilov.dds"
+	expire = "1965.1.1"
+	ideology = auth_dem_ideology
+	traits = {
+		#
+	}
 }
+

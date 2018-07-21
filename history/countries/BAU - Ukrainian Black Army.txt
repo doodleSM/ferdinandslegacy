@@ -1,6 +1,6 @@
-﻿capital = 598
+﻿capital = 192
 
-oob = "BLU_1930"
+oob = "BAU_1930"
 
 set_technology = {
 	infantry_weapons = 1
@@ -57,34 +57,13 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Grigory Zinoviev"
+	name = "Viktor Belash"
 	desc = ""
-	picture = "BLU_Zinoviev.dds"
+	picture = "BAU_Belash.dds"
 	expire = "1965.1.1"
-	ideology = marxism
+	ideology = anarchism_ideology
 	traits = {
 		#
 	}
 }
 
-create_country_leader = {
-	name = "Alexander Bogdanov"
-	desc = ""
-	picture = "BLU_Bogdanov.dds"
-	expire = "1965.1.1"
-	ideology = radical_socialist
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Julius Martov"
-	desc = ""
-	picture = "BLU_Martov.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}

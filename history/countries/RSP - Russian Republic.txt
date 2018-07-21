@@ -1,6 +1,6 @@
 ﻿capital = 111
 
-oob = "FIN_1936"
+oob = "RPS_1930"
 
 set_research_slots = 3
 
@@ -19,22 +19,20 @@ set_technology = {
 	early_heavy_cruiser = 1
 }
 
-set_convoys = 5
+set_convoys = 20
 
-add_ideas = {
-	limited_conscription
-}
+
 
 
 
 set_politics = {
 
 	parties = {
-		democratic = { 
+		social_liberalism = { 
 			popularity = 70
 		}
 
-		fascism = {
+		social_democracy = {
 			popularity = 10
 		}
 		
@@ -42,12 +40,12 @@ set_politics = {
 			popularity = 1
 		}
 
-		neutrality = {
+		democratic = {
 			popularity = 19
 		}
 	}
 	
-	ruling_party = democratic
+	ruling_party = social_liberalism
 	last_election = "1933.7.1"
 	election_frequency = 36
 	elections_allowed = yes
@@ -55,73 +53,13 @@ set_politics = {
 
 
 create_country_leader = {
-	name = "Risto Heikki Ryti"
-	desc = "POLITICS_RISTO_HEIKKI_RYT_DESC"
-	picture = "Portrait_Finland_Risto_Heikki_Ryti.dds"
+	name = "Alexsander Kerensky"
+	desc = ""
+	picture = "RSP_Kerensky.dds"
 	expire = "1965.1.1"
-	ideology = liberalism
+	ideology = social_liberalist
 	traits = {
 		#
 	}
 }
 
-create_country_leader = {
-	name = "Aimo Aaltonen"
-	desc = "POLITICS_AIMO_AALTONEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Vilho Annala"
-	desc = "POLITICS_VILHO_ANNALA_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Kyösti Kallio"
-	desc = "POLITICS_KYÖSTI_KALLIO_DESC"
-	picture = "gfx/leaders/FIN/Portrait_Finland_Kyosti_Kallio.dds"
-	expire = "1965.1.1"
-	ideology = centrism
-	traits = {
-		#
-	}
-}
-
-
-
-add_ideas = {
-	sisu
-}
-
-create_corps_commander = {
-	name = "Erik Heinrichs"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	traits = { winter_specialist ranger }
-	skill = 4
-    attack_skill = 4
-    defense_skill = 4
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Vilho Petter Nenonen"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	traits = { winter_specialist commando }
-	skill = 3
-    attack_skill = 3
-    defense_skill = 1
-    planning_skill = 4
-    logistics_skill = 2
-}

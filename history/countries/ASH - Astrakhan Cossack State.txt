@@ -45,17 +45,15 @@ set_convoys = 200
 set_politics = {
 
 	parties = {
-		democratic = { 
-			popularity = 22
+		auth_dem = { 
+			popularity = 28
 		}
 
 		neutrality = {
-			popularity = 66
+			popularity = 72
 		}
 		
-		communism = {
-			popularity = 12
-		}
+		
 	}
 	
 	ruling_party = neutrality
@@ -63,7 +61,16 @@ set_politics = {
 	election_frequency = 60
 	elections_allowed = no
 }
-
+create_country_leader = {
+	name = "Cossack Authority"
+	desc = ""
+	picture = "ASH_Cossacks.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
 
 
 

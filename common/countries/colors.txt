@@ -707,4 +707,8 @@ CRI  = {
 	color = rgb { 35 42 222  }
 	color_ui = rgb { 35 42 222 }
 }
+RFI  = {
+	color = rgb { 190 5 28  }
+	color_ui = rgb { 190 5 28 }
+}
 

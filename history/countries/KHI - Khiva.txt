@@ -1,6 +1,6 @@
 ﻿capital = 598
 
-oob = "BLU_1930"
+oob = "KHI_1930"
 
 set_technology = {
 	infantry_weapons = 1
@@ -40,3 +40,13 @@ set_politics = {
 	elections_allowed = no
 }
 
+create_country_leader = {
+	name = "Sayid Abdullah"
+	desc = ""
+	picture = "KHI_Sayid.dds"
+	expire = "1965.1.1"
+	ideology = auth_dem_ideology
+	traits = {
+		#
+	}
+}

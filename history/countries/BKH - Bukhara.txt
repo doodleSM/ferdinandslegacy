@@ -64,6 +64,15 @@ set_politics = {
 	elections_allowed = no
 }
 
-
+create_country_leader = {
+	name = "Mohammed Alim Khan"
+	desc = ""
+	picture = "BKH_Khan.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
 
 
