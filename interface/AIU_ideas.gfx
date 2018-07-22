@@ -7,7 +7,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_traits_strip.dds"
 		noOfFrames = 14		
 	}
-
+	#################RUSSIA#############
 	
 	spriteType = {
 		name = "GFX_idea_GRM_bavarian_nationalism"
@@ -20,6 +20,54 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GRM_local_governors"
 		texturefile = "gfx/interface/ideas/GRM_local_governors.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_georgy_lvov"
+		texturefile = "gfx/interface/ideas/RUS_georgy_lvov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_anton_karatashev"
+		texturefile = "gfx/interface/ideas/RUS_anton_karatashev.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_alexey_kaledin"
+		texturefile = "gfx/interface/ideas/RUS_alexey_kaledin.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_mikhail_tereschenko"
+		texturefile = "gfx/interface/ideas/RUS_mikhail_tereschenko.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_nikolai_ii"
+		texturefile = "gfx/interface/ideas/RUS_nikolai_ii.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_nikolai_yudenich"
+		texturefile = "gfx/interface/ideas/RUS_nikolai_yudenich.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_patriarch_tikhon"
+		texturefile = "gfx/interface/ideas/RUS_patriarch_tikhon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_pyotr_wrangel"
+		texturefile = "gfx/interface/ideas/RUS_pyotr_wrangel.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_vladimir_katasanov"
+		texturefile = "gfx/interface/ideas/RUS_vladimir_katasanov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_vladimir_may_mayevsky"
+		texturefile = "gfx/interface/ideas/RUS_vladimir_may_mayevsky.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_vlas_chubar"
+		texturefile = "gfx/interface/ideas/RUS_vlas_chubar.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_alexander_ivanovich_konovalov"
+		texturefile = "gfx/interface/ideas/RUS_alexander_ivanovich_konovalov.dds"
 	}
 
 	

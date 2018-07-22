@@ -2,7 +2,7 @@ ideas = {
 	
 	country = {
 
-		sov_economic_crisis = {
+		RUS_economic_crisis = {
 
 			allowed = {
 				always = no
@@ -14,17 +14,16 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = idea_chi_hyper_inflation_3
+			picture = chi_hyper_inflation3
 
 			modifier = {
 				stability_factor = -0.1
-				conscription_factor = -0.1
 				production_factory_efficiency_gain_factor = -0.1				
 				consumer_goods_factor = 0.05
 			}
 		}
 
-		sov_agrarian_society = {
+		RUS_agrarian_society = {
 
 			allowed = {
 				always = no
@@ -32,10 +31,19 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = 
+			picture = great_depression
+
+		modifier = { monthly_population = 0.1
+			     
+			     conscription_factor = -0.1
+			    }
+			    
+				
 		}
 
-		sov_consitutional_monarchy = {
+		
+
+		RUS_cossack_elites = {
 
 			allowed = {
 				always = no
@@ -47,31 +55,175 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = 
-
-			modifier = {
-
-			}
-		}
-
-		sov_cossack_elites = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_wars = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture =
+			 picture = triumphant_will
 
 			modifier = {
 				cavalry_attack_factor = 0.1
 				army_speed_factor = 0.05
+				army_morale_factor = 0.1
+			}
+		}
+}
+political_advisor = {
+
+		RUS_georgy_lvov = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { finance_minister }
+		}
+		RUS_anton_karatashev = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { minister_of_religion }
+		}
+		RUS_mikhail_tereschenko = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { minister_of_foreign_affairs }
+		}
+		RUS_patriarch_tikhon = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { patriarch_of_orthodox_church }
+		}
+		RUS_vlas_chubar = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { minister_of_labor }
+		}
+		RUS_alexander_ivanovich_konovalov = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { minister_of_education}
+		}
+}
+army_chief = { RUS_pyotr_wrangel = {
+			
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { army_chief_offensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_nikolai_ii = {
+			
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { army_chief_morale_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_nikolai_yudenich = {
+			
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { army_chief_defensive_1 }
+			
+			ai_will_do = {
+				factor = 1
 			}
 		}
 	}
+high_command = { RUS_alexey_kaledin = {
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_nikolai_yudenich = {
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+
+			
+			traits = { army_infantry_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_vladimir_katasanov = {
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+
+			
+			traits = { navy_capital_ship_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_vladimir_may_mayevsky = {
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+
+			
+			traits = { army_regrouping_2 old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
 }

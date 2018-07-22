@@ -1,4 +1,4 @@
-SOV = {
+RUS = {
 	color = rgb { 58 153 21 }
 	color_ui = rgb { 58 153 21 }
 }
