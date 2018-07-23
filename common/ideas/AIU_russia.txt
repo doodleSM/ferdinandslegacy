@@ -17,9 +17,10 @@ ideas = {
 			picture = chi_hyper_inflation3
 
 			modifier = {
-				stability_factor = -0.1
-				production_factory_efficiency_gain_factor = -0.1				
-				consumer_goods_factor = 0.05
+				stability_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1		
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -37,12 +38,10 @@ ideas = {
 
 			picture = great_depression
 
-		modifier = { monthly_population = 0.1
-			     
-			     conscription_factor = -0.1
-			    }
-			    
-				
+		modifier = { 
+				monthly_population = 0.1
+				conscription_factor = -0.05
+			}
 		}
 
 		
@@ -59,7 +58,7 @@ ideas = {
 
 			removal_cost = -1
 
-			 picture = triumphant_will
+			picture = triumphant_will
 
 			modifier = {
 				cavalry_attack_factor = 0.1
