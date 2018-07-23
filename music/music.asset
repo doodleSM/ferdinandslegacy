@@ -8,6 +8,36 @@ music = {
 
 # General Peace:
 music = {
+	name = "allisnowagainstus"
+	file = "allisnowagainstus.ogg"
+	volume = 0.65
+}
+music = {
+	name = "civilwargenerals"
+	file = "civilwargenerals.ogg"
+	volume = 0.65
+}
+music = {
+	name = "nikolayevcav"
+	file = "nikolayevcav.ogg"
+	volume = 0.65
+}
+music = {
+	name = "siberianriflemen"
+	file = "siberianriflemen.ogg"
+	volume = 0.65
+}
+music = {
+	name = "slavianka"
+	file = "slavianka.ogg"
+	volume = 0.65
+}
+music = {
+	name = "whenwewereatwar"
+	file = "whenwewereatwar.ogg"
+	volume = 0.65
+}
+music = {
 	name = "general_peace_1"
 	file = "general_peace_heartsofmen.ogg"
 	volume = 0.65

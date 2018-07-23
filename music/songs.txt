@@ -7,6 +7,54 @@ music = {
 		}		
 	}
 }
+music = {
+	song = "allisnowagainstus"
+	chance = {
+		modifier = {
+			factor = 0.7
+		}		
+	}
+}
+music = {
+	song = "civilwargenerals"
+	chance = {
+		modifier = {
+			factor = 0.7
+		}		
+	}
+}
+music = {
+	song = "nikolayevcav"
+	chance = {
+		modifier = {
+			factor = 0.7
+		}		
+	}
+}
+music = {
+	song = "siberianriflemen"
+	chance = {
+		modifier = {
+			factor = 0.7
+		}		
+	}
+}
+music = {
+	song = "slavianka"
+	chance = {
+		modifier = {
+			factor = 0.7
+		}		
+	}
+}
+music = {
+	song = "whenwewereatwar"
+	chance = {
+		modifier = {
+			factor = 0.7
+		}		
+	}
+}
 
 # PEACE SONGS ##################
 music = {
