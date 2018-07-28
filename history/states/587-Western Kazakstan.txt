@@ -1,3 +1,4 @@
+
 state={
 	id=587
 	name="STATE_587"
@@ -5,17 +6,25 @@ state={
 	history={
 		owner = KHI
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
+			
 
 		}
+		victory_points = {
+			587 1 #fort-shevchenko
+		}
 		add_core_of = KHI
-		#add_core_of = KAZ
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
 	}
 
 	provinces={
-		475 642 1517 3593 4523 4620 7641 10262 10348 11701 12163 12383 12474 13008 
+		475 1517 3593 4523 4620 7641 10262 10348 11701 12163 12383 12474 
 	}
-	manpower=245133
+	manpower=255133
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=town
 }

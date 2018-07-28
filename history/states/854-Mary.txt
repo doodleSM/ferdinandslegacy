@@ -1,0 +1,24 @@
+state={
+	id=854
+	name="STATE_854"
+	provinces={
+		4482 4958 5003 7560 10357 10414 
+	}
+	history={
+		owner = TRC
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = TRC
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	manpower=86745
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,26 @@
+state={
+	id=865
+	name="STATE_865"
+	provinces={
+		1272 1276 1303 1331 4337 10295 12139 12266 
+	}
+	history={
+		owner = ALA
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = RSP
+		add_core_of = BLU
+		add_core_of = RUS
+		add_core_of = RMU
+		add_core_of = ZHT
+		add_core_of = ALA
+		add_core_of = IDE
+
+	}
+
+	manpower=156463
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,24 @@
+state={
+	id=859
+	name="STATE_859"
+	provinces={
+		1675 4391 4768 5062 12511 
+	}
+	history={
+		owner = KRZ
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = KRZ
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	manpower=134543
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

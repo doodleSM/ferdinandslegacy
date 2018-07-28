@@ -1,8 +1,9 @@
+
 state={
 	id=233
 	name="STATE_233"
 	resources={
-		chromium=35 # was: 46.000
+		chromium=15.000
 	}
 
 	history={
@@ -12,13 +13,17 @@ state={
 
 		}
 		add_core_of = DON
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
 
 	}
 
 	provinces={
-		666 670 685 1455 3667 3698 6674 6692 6721 9628 9632 9647 9649 9663 9674 11609 11614 11647 11664 
+		6692 9649 11664 
 	}
-	manpower=1463970
+	manpower=35647
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=pastoral
 }

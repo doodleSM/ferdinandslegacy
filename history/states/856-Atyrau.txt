@@ -1,0 +1,30 @@
+state={
+	id=856
+	name="STATE_856"
+	provinces={
+		554 642 3618 6615 7322 9453 11442 11455 11469 11591 13008 
+	}
+	history={
+		owner = IDE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			9453 3 #atyrau
+		}
+		add_core_of = IDE
+		add_core_of = KHI
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	
+	manpower=298675
+	buildings_max_level_factor=1.000
+	state_category=town
+}

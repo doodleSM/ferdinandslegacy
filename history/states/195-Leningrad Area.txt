@@ -4,17 +4,17 @@ state={
 	name="STATE_195"
 	manpower = 3750158
 	
-	state_category = metropolis
+	state_category = megalopolis
 
 	history={
 		owner = RUS
 		victory_points = {
-			3151 30.0
+			3151 50.0
 		}
 		buildings = {
 			infrastructure = 7
-			arms_factory = 6
-			industrial_complex = 1
+			arms_factory = 5
+			industrial_complex = 3
 			dockyard = 3
 			air_base = 10
 			3151 ={
@@ -22,12 +22,10 @@ state={
 				coastal_bunker = 5
 			}
 		}
+		add_core_of = RSP
 		add_core_of = RUS
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 7
-			}
-		}
+		add_core_of = RMU
+		add_core_of = BLU
 	}
 
 	provinces={

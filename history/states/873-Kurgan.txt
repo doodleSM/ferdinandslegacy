@@ -1,0 +1,23 @@
+state={
+	id=873
+	name="STATE_873"
+	provinces={
+		1292 1294 1775 10542 12106 
+	}
+	history={
+		owner = RMU
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = RSP
+		add_core_of = BLU
+		add_core_of = RUS
+		add_core_of = RMU
+
+	}
+
+	manpower=164545
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

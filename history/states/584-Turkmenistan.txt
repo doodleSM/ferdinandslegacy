@@ -1,3 +1,4 @@
+
 state={
 	id=584
 	name="STATE_584"
@@ -5,18 +6,26 @@ state={
 	history={
 		owner = TRC
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			industrial_complex = 1
+			arms_factory = 1
 
 		}
+		victory_points = {
+			12333 3 #ashgabat
+		}
 		add_core_of = TRC
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
 
 	}
 
 	provinces={
-		1493 1593 1649 4482 4549 4563 4599 4958 5003 7477 7491 7560 7563 7618 7635 7924 8099 10357 10359 10406 10414 10485 10510 10742 12333 12359 12491 
+		4599 7491 7618 8099 10510 12333 12491 
 	}
-	manpower=1064523
+	manpower=643543
 	buildings_max_level_factor=1.000
-	state_category=pastoral
+	state_category=rural
 }

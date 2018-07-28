@@ -1,0 +1,25 @@
+state={
+	id=857
+	name="STATE_857"
+	provinces={
+		756 1216 1384 1573 1632 7639 9605 10205 10671 12239 12722 
+	}
+	history={
+		owner = BKH
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = BKH
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	
+	manpower=256453
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

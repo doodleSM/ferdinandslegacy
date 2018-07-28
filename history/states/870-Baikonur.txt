@@ -1,0 +1,27 @@
+state={
+	id=870
+	name="STATE_870"
+	provinces={
+		4227 4300 4374 7243 7337 7354 
+	}
+
+	history={
+		owner = ALA
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = RSP
+		add_core_of = BLU
+		add_core_of = RUS
+		add_core_of = RMU
+		add_core_of = ZHT
+		add_core_of = ALA
+
+	}
+
+	
+	manpower=97564
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

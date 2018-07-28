@@ -1,4 +1,4 @@
-﻿capital = 232
+﻿capital = 845
 
 oob = "BLU_1930"
 

@@ -1,6 +1,6 @@
 ﻿oob = "WGA_1930"
 
-capital = 9
+capital = 75
 
 set_stability = 0.75
 set_war_support = 0

@@ -2,19 +2,28 @@
 state={
 	id=237
 	name="STATE_237"
-	manpower = 169620
-	
-	state_category = rural
 
 	history={
 		owner = ASC
 		buildings = {
 			infrastructure = 2
+
+		}
+		victory_points = {
+			9426 3 # elista
 		}
 		add_core_of = ASC
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
 	}
 
 	provinces={
-		481 742 745 759 3413 3439 3475 3597 3746 3774 6463 6791 6794 9426 9594 9720 9739 11566 11724 
+		481 745 759 3413 3439 3475 3597 3746 3774 6463 6791 6794 9426 9594 9739 11566 11724 
 	}
+	manpower=159620
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

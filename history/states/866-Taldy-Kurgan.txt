@@ -1,0 +1,24 @@
+state={
+	id=866
+	name="STATE_866"
+	provinces={
+		1668 4764 7784 10550 10619 10680 12529 12662 13149 13197 
+	}
+	history={
+		owner = ZHT
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = ZHT
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	manpower=247464
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

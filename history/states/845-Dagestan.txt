@@ -1,0 +1,33 @@
+state={
+	id=845
+	name="STATE_845"
+	
+	resources={
+		oil=19.000
+	}
+
+	history={
+		owner = CHE
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			4463 5 #Makhachkala
+		}
+		add_core_of = CHE
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	provinces={
+		700 712 728 1450 3668 3711 4463 6701 6730 6748 7554 7624 9645 
+	}
+	manpower=1003657
+	buildings_max_level_factor=1.000
+	state_category=town
+}

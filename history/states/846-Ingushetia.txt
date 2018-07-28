@@ -1,0 +1,27 @@
+state={
+	id=846
+	name="STATE_846"
+	provinces={
+		670 3667 
+	}
+
+	history={
+		owner = CHE
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = CHE
+		add_core_of = DON
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+
+	manpower=45634
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

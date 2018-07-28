@@ -1,0 +1,27 @@
+state={
+	id=850
+	name="STATE_850"
+	provinces={
+		742 3726 6758 6760 9720 
+	}
+	history={
+		owner = ASC
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			6758 1 # lagan
+		}
+		add_core_of = ASC
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	manpower=57463
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

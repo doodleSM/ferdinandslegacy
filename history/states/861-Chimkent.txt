@@ -1,0 +1,25 @@
+state={
+	id=861
+	name="STATE_861"
+	provinces={
+		4686 7706 10148 10660 12640 
+	}
+	history={
+		owner = KRZ
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = KRZ
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	
+	manpower=35645
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

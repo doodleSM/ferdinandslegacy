@@ -1,0 +1,28 @@
+state={
+	id=860
+	name="STATE_860"
+	provinces={
+		2058 12581 
+	}
+	history={
+		owner = KRZ
+		victory_points = {
+			2058 3 #fergana
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = KRZ
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	manpower=274543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

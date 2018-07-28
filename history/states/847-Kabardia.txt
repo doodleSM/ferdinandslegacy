@@ -1,0 +1,28 @@
+state={
+	id=847
+	name="STATE_847"
+	provinces={
+		685 6674 9628 9632 9647 11609 11614 
+	}
+	resources={
+		chromium=20.000
+	}
+
+	history={
+		owner = DON
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = DON
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	manpower=84636
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

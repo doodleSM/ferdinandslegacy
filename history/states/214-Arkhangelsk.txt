@@ -19,12 +19,10 @@ state={
 				naval_base = 3
 			}
 		}
+		add_core_of = RSP
 		add_core_of = RUS
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 2
-			}
-		}
+		add_core_of = RMU
+		add_core_of = BLU
 	}
 
 	provinces={

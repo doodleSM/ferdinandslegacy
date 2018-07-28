@@ -1,0 +1,29 @@
+state={
+	id=848
+	name="STATE_848"
+	provinces={
+		3698 6721 9663 9674 11647 
+	}
+	
+	history={
+		owner = DON
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			9663 5 #sochi
+		}
+		add_core_of = DON
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	manpower=205746
+	buildings_max_level_factor=1.000
+	state_category=town
+}

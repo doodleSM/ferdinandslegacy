@@ -1,0 +1,29 @@
+state={
+	id=864
+	name="STATE_864"
+	provinces={
+		1554 4629 7682 7775 
+	}
+	history={
+		owner = BKH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			7775 3 #samarkand
+		}
+		add_core_of = BKH
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	
+	manpower=456463
+	buildings_max_level_factor=1.000
+	state_category=town
+}

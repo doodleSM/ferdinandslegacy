@@ -1,0 +1,29 @@
+state={
+	id=867
+	name="STATE_867"
+	provinces={
+		1239 1402 7332 7335 7405 10290 
+	}
+	history={
+		owner = ZHT
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+
+		}
+		victory_points = {
+			1239 1 #balkash
+		}
+		add_core_of = ZHT
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	
+	manpower=17543
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

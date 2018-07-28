@@ -10,12 +10,21 @@ state={
 	}
 
 	history={
-		owner = RSP
+		owner = IDE
 		buildings = {
 			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
 
 		}
+		victory_points = {
+			652 5 #orenburg
+		}
 		add_core_of = RSP
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = IDE
+		add_core_of = RUS
 	}
 
 	provinces={

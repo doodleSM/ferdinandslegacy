@@ -1,0 +1,32 @@
+state={
+	id=871
+	name="STATE_871"
+	provinces={
+		1287 1879 4661 4670 4685 7317 7350 7708 10161 10202 10218 10235 10292 10630 12616 
+	}
+	resources={
+		chromium=8.000
+	}
+
+	history={
+		owner = RMU
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			7708 1 #pavlodar
+		}
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = ZHT
+		add_core_of = ALA
+
+	}
+
+	manpower=265743
+	buildings_max_level_factor=1.000
+	state_category=town
+}

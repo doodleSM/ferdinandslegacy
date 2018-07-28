@@ -1,0 +1,28 @@
+state={
+	id=863
+	name="STATE_863"
+	provinces={
+		4578 4636 7501 7507 7777 10353 10366 10420 
+	}
+	history={
+		owner = BKH
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			10353 1 #perovsk
+		}
+		add_core_of = BKH
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	
+	manpower=76554
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

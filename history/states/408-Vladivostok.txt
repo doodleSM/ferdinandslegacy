@@ -17,6 +17,8 @@ state={
 		buildings = {
 			infrastructure = 4
 			dockyard = 1
+			industrial_complex = 1
+			arms_factory = 1
 			air_base = 5
 			957 = {
 				naval_base = 8
@@ -24,6 +26,9 @@ state={
 			}
 		}
 		add_core_of = RSP
+		add_core_of = RMU
+		add_core_of = RUS
+		add_core_of = BLU
 	}
 
 	provinces={

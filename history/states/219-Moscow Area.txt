@@ -16,17 +16,11 @@ state={
 		}
 		buildings = {
 			infrastructure = 8
-			arms_factory = 9
-			industrial_complex = 2
+			arms_factory = 6
+			industrial_complex = 4
 			air_base = 10
 		}
 		add_core_of = RSP
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 4
-				arms_factory = 11
-			}
-		}
 	}
 
 	provinces={
