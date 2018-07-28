@@ -1,0 +1,22 @@
+state={
+	id=825
+	name="STATE_825"
+	provinces={
+		7530 9858 10497 11880 12318 
+	}
+	history={
+		owner = ARM
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = ARM
+		add_core_of = OTT
+		add_core_of = KUR
+
+	}
+
+	manpower=465643
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

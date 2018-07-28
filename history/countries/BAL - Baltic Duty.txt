@@ -1,4 +1,4 @@
-﻿capital = 598
+﻿capital = 12
 
 oob = "BLU_1930"
 
@@ -28,8 +28,8 @@ set_politics = {
 	parties = {
 		
 		
-		auth_dem = {popualrity = 72 }
-		neutrality = { populairty = 28 }
+		auth_dem = { popularity = 72 }
+		neutrality = { popularity = 28 }
 
 		
 	}

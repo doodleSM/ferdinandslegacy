@@ -1,0 +1,28 @@
+
+state={
+	id=554
+	name="STATE_554"
+
+	history={
+		owner = OTT
+		victory_points = {
+			4111 20
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			air_base = 1
+
+		}
+		add_core_of = OTT
+		add_core_of = SYR
+
+	}
+
+	provinces={
+		1074 4111 4486 4550 7001 7170 7184 
+	}
+	manpower=497797
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

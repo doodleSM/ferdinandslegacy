@@ -51,7 +51,7 @@ set_politics = {
 		}
 
 		social_liberalism = {
-			populairty = 32
+			popularity = 32
 		}
 
 	}

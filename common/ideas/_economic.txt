@@ -369,6 +369,7 @@ ideas = {
 
 				NOT = { has_idea = KOR_boycott_goods_idea }
 				NOT = { has_idea = CHI_western_dependence }
+				NOT = { has_idea = OTT_joint_oil_company }
 			}
 		
 			cost = 150
@@ -420,6 +421,7 @@ ideas = {
 					has_idea = tot_economic_mobilisation
 				}
 				NOT = { has_idea = CHI_western_dependence }
+				NOT = { has_idea = OTT_joint_oil_company }
 
 			}
 			

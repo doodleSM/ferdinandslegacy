@@ -1,0 +1,26 @@
+state={
+	id=836
+	name="STATE_836"
+	provinces={
+		1955 5024 7995 10791 10850 12702 
+	}
+	history={
+		owner = IKH
+		buildings = {
+			infrastructure = 1
+			12702 = {
+				naval_base = 6
+
+			}
+
+		}
+		victory_points = {
+			12702 2
+		}
+		add_core_of = IKH
+
+	}
+	manpower=687654
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

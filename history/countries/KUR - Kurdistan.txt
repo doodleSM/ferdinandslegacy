@@ -1,0 +1,59 @@
+﻿capital = 787
+OOB = "KUR_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+}
+set_convoys = 5
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 2
+		}
+		
+		market_lib = {
+			popularity = 1
+		}
+		
+		social_liberalism = {
+			popularity = 31
+		}
+		
+		social_democracy = {
+			popularity = 2
+		}
+
+		fascism = {
+			popularity = 1
+		}
+		
+		communism = {
+			popularity = 2
+		}
+		
+		radical_socialism = {
+			popularity = 2
+		}
+		
+		anarchism = {
+			popularity = 6
+		}
+
+		neutrality = {
+			popularity = 2
+		}
+		
+		auth_dem = {
+			popularity = 50
+		}
+	}
+	
+	ruling_party = auth_dem
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}

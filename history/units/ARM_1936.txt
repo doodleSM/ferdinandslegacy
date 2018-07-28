@@ -1,0 +1,163 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Haykakan Jokat"
+	division_names_group = ARM_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Lerrnayin Zork’ery"
+	division_names_group = ARM_MTN_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Hetselazor Jokat" 	# Cavalry Division
+	division_names_group = ARM_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+##### OOB #####
+units = {
+							
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12320
+		division_template = "Haykakan Jokat"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}	
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9932
+		division_template = "Haykakan Jokat"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6935
+		division_template = "Haykakan Jokat"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11853
+		division_template = "Haykakan Jokat"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10472
+		division_template = "Lerrnayin Zork’ery"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+
+	}
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12320
+		division_template = "Hetselazor Jokat"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+
+	}
+
+
+	##### NAVAL UNITS #####
+	navy = {	
+		name = "Arrajin Navatormy"
+		base = 9932
+		location = 9932 # Trabzon
+		ship = { name = "Hayrenasirut’yun" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARM } } }
+		ship = { name = "Azatut’yun" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARM } } }
+		ship = { name = "Hidarnes I" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARM } } }
+		ship = { name = "Ardashir" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARM } } }
+		ship = { name = "Orontes" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARM } } }
+		ship = { name = "Hidarnes II" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ARM } } }
+	}		
+}					
+
+### Air Wings
+air_wings = {
+	230 = { 
+		fighter_equipment_0 = {
+			owner = "ARM" 
+			amount = 60
+		}
+		tac_bomber_equipment_0 =  {
+			owner = "ARM" 
+			amount = 32
+		}
+	}
+}
+
+
+		
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ARM"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+}

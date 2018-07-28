@@ -1,0 +1,60 @@
+﻿capital = 835
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+
+
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 3
+		}
+		
+		market_lib = {
+			popularity = 1
+		}
+		
+		social_liberalism = {
+			popularity = 1
+		}
+		
+		social_democracy = {
+			popularity = 1
+		}
+
+		fascism = {
+			popularity = 2
+		}
+		
+		communism = {
+			popularity = 0
+		}
+		
+		radical_socialism = {
+			popularity = 19
+		}
+		
+		anarchism = {
+			popularity = 0
+		}
+
+		neutrality = {
+			popularity = 70
+		}
+		
+		auth_dem = {
+			popularity = 3
+		}
+	}
+	
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}

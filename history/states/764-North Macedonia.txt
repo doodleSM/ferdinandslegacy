@@ -10,10 +10,11 @@ state={
 
 	history = {
 		owner = BUL
+		add_core_of = BUL
 		add_core_of = SEB
 		buildings = {
 			infrastructure = 7
-			industrial_complex = 3
+			industrial_complex = 2
 		}
 	}
 

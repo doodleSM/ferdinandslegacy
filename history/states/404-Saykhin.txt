@@ -3,15 +3,14 @@ state={
 	name="STATE_404" # Kzyl Orda
 	manpower = 667036
 	
-	state_category = wasteland
+	state_category = pastoral
 
 	history={
-		owner = KAZ
+		owner = ALA
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = KAZ
-		#add_core_of = KAZ
+		add_core_of = ALA
 	}
 
 	provinces={

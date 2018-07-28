@@ -1,4 +1,4 @@
-﻿capital = 219
+﻿capital = 195
 
 oob = "RUS_1930"
 
@@ -48,13 +48,13 @@ set_politics = {
 
 	parties = {
 		anarchism = { popularity = 9 } 
-		communism = {popularity = 9 }
-		radical_socialism = {popularity = 13}
-		social_democracy = {popularity = 10}
-		social_liberalism = {populairty = 16}
-		market_lib = {popularity = 11}
-		democratic = {popularity = 10}
-		neutrality = {popularity = 22}
+		communism = { popularity = 9 }
+		radical_socialism = { popularity = 13}
+		social_democracy = { popularity = 10}
+		social_liberalism = { popularity = 16}
+		market_lib = { popularity = 11}
+		democratic = { popularity = 10}
+		neutrality = { popularity = 22}
 		
 		
 	}

@@ -1,0 +1,26 @@
+
+state={
+	id=353
+	name="STATE_353"
+
+	history={
+		owner = ARM
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = OTT
+		add_core_of = ARM
+		victory_points = {
+			11853 3 #erzurum
+		}
+
+	}
+
+	provinces={
+		652 6991 11853 12376
+	}
+	manpower=523537
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

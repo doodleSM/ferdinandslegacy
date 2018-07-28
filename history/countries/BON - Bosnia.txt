@@ -1,4 +1,6 @@
-﻿oob = "BON_1930"
+﻿capital = 104
+
+oob = "BON_1930"
 
 set_stability = 0.75
 set_war_support = 0

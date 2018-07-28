@@ -1,4 +1,4 @@
-﻿capital = 598
+﻿capital = 232
 
 oob = "BLU_1930"
 
@@ -18,8 +18,8 @@ add_ideas = {
 	
 }
 
-set_stability = 0.65
-set_war_support = 0.4
+set_stability = 0.45
+set_war_support = 0.6
 
 set_convoys = 30
 

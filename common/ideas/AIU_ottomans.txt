@@ -1,0 +1,87 @@
+ideas = {
+	
+	country = {
+	
+		OTT_foreign_debt = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ROM_king_carol_emptied_accounts
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.20
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		OTT_joint_oil_company = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_oil
+			
+			modifier = {
+				stability_factor = -0.05
+				local_resources_factor = 0.1
+			}
+			
+			targeted_modifier = {
+				tag = ENG
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+			
+			targeted_modifier = {
+				tag = FRA
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+			
+			targeted_modifier = {
+				tag = GRM
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.5
+			}
+		}
+		
+		OTT_arab_nationalism_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.05
+				training_time_factor = 0.1
+			}
+			
+		}
+		
+	}
+
+}

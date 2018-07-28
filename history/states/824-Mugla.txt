@@ -1,0 +1,20 @@
+state={
+	id=824
+	name="STATE_824"
+	provinces={
+		9929 9941 10038 10041 10122 11917 
+	}
+	history={
+		owner = OTT
+
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = OTT
+
+	}
+	manpower=205847
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

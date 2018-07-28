@@ -16,13 +16,8 @@ state={
 			industrial_complex = 2
 			air_base = 8
 		}
-		add_core_of = SOV
 		add_core_of = BLU
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 3
-			}
-		}
+		add_core_of = RUS
 	}
 
 	provinces={

@@ -7,6 +7,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_traits_strip.dds"
 		noOfFrames = 14		
 	}
+	### GENERIC ###
+	
+	spriteType = {
+		name = "GFX_idea_generic_oil"
+		texturefile = "gfx/interface/ideas/generic_oil.dds"
+	}	
+	
 	#################RUSSIA#############
 	
 	spriteType = {

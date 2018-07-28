@@ -1,10 +1,7 @@
-﻿capital = 234
+﻿capital = 586
 
-oob = ""
+oob = "KRZ_1936"
 
-set_research_slots = 4
-set_stability = 0.6
-set_war_support = 0.7
 
 
 

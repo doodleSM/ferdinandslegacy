@@ -1,0 +1,26 @@
+state={
+	id=838
+	name="STATE_838"
+	provinces={
+		2057 4603 4968 5027 5099 7970 12455 
+	}
+	history={
+		owner = RSH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		add_core_of = OTT
+		add_core_of = RSH
+		add_core_of = IKH
+		victory_points = {
+			2057 2 #hail
+		}
+
+	}
+	manpower=94000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

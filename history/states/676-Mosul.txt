@@ -1,0 +1,31 @@
+
+state={
+	id=676
+	name="STATE_676"
+	#resources={
+	#	oil=6.000
+	#}
+
+	history={
+		owner = OTT
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			10106 5
+		}
+		add_core_of = OTT
+		add_core_of = IRQ
+		add_core_of = KUR
+
+	}
+
+	provinces={
+		1600 1938 10106 10804 12372 
+	}
+	manpower=682741
+	buildings_max_level_factor=1.000
+	state_category=town
+}

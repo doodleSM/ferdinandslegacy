@@ -1,4 +1,4 @@
-oob = "SER_1930"
+﻿oob = "SER_1930"
 capital = 107
 set_stability = 0.45
 set_war_support = 0.2

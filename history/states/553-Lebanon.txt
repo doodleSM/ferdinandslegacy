@@ -1,0 +1,32 @@
+
+state={
+	id=553
+	name="STATE_553"
+
+	history={
+		owner = OTT
+		victory_points = {
+			792 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 5
+			792 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = OTT
+		add_core_of = LEB
+
+	}
+
+	provinces={
+		792 1065 1108 1201 7107 10087 11919 
+	}
+	manpower=1804000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

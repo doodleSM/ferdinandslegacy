@@ -52,7 +52,7 @@ ideas = {
 				always = no
 			}
 
-			allowed_civil_wars = {
+			allowed_civil_war = {
 				always = yes
 			}
 
@@ -152,7 +152,7 @@ army_chief = { RUS_pyotr_wrangel = {
 				factor = 1
 			}
 		}
-		RUS_nikolai_yudenich = {
+		RUS_nikolai_yudenich_2 = {
 			
 			
 			

@@ -1,0 +1,30 @@
+state={
+	id=820
+	name="STATE_820"
+	provinces={
+		78 2004 2089 7977 8001 12726 12879 
+	}
+	history={
+		owner = OTT
+		victory_points = {
+			2089 10
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 4
+			2089 = {
+				naval_base = 2
+
+			}
+
+		}
+		add_core_of = OTT
+		add_core_of = IRQ
+
+	}
+
+	manpower=1052622
+	buildings_max_level_factor=1.000
+	state_category=town
+}

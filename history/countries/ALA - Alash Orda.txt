@@ -1,0 +1,47 @@
+﻿capital = 402
+
+oob = "ALA_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	
+}
+
+set_politics = {
+
+	parties = {
+		auth_dem = { 
+			popularity = 60
+		}
+		
+		neutrality = {
+			popularity = 40
+		}		
+	}
+	ruling_party = auth_dem
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+	
+	}
+
+create_country_leader = {
+	name = "Mustafa Shokay"
+	desc = ""
+	picture = "ALA_Shokay.dds"
+	expire = "1953.3.1"
+	ideology = auth_dem_ideology
+	traits = {
+		
+	}
+}
+
+
+
+
+
+

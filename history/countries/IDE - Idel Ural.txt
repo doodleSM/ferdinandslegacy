@@ -1,0 +1,36 @@
+﻿capital = 407
+
+oob = "IDE_1936"
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	
+}
+
+set_politics = {
+
+	parties = {
+		auth_dem = { 
+			popularity = 60
+		}
+		
+		neutrality = {
+			popularity = 40
+		}		
+	}
+	ruling_party = auth_dem
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+	
+	}
+
+
+
+
+
+
+

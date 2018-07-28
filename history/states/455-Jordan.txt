@@ -1,0 +1,29 @@
+
+state={
+	id=455
+	name="STATE_455"
+
+	history={
+		owner = OTT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			7151 1 
+		}
+		add_core_of = OTT
+		#add_core_of = JOR
+		add_core_of = HEJ
+		add_core_of = IKH
+
+	}
+
+	provinces={
+		1544 4440 4574 7151 
+	}
+	manpower=572000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

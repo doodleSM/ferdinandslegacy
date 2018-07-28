@@ -1,0 +1,389 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+ARM_INF_01 = 
+{
+	name = "Infantry Divisions"
+
+	for_countries = { ARM }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ARM_GAR_01 }
+
+	fallback_name = "%d-in Haykakan Jokat"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-in Haykakan Jokat" }
+		2 = { "%d-in Haykakan Jokat" }
+		3 = { "%d-in Haykakan Jokat" }
+		4 = { "%d-in Haykakan Jokat" }
+		5 = { "%d-in Haykakan Jokat" }
+		6 = { "%d-in Haykakan Jokat" }
+		7 = { "%d-in Haykakan Jokat" }
+		8 = { "%d-in Haykakan Jokat" }
+		9 = { "%d-in Haykakan Jokat" }
+		10 = { "%d-in Haykakan Jokat" }
+		11 = { "%d-in Haykakan Jokat" }
+		12 = { "%d-in Haykakan Jokat" }
+		13 = { "%d-in Haykakan Jokat" }
+		14 = { "%d-in Haykakan Jokat" }
+		15 = { "%d-in Haykakan Jokat" }
+		16 = { "%d-in Haykakan Jokat" }
+		17 = { "%d-in Haykakan Jokat" }
+		18 = { "%d-in Haykakan Jokat" }
+		19 = { "%d-in Haykakan Jokat" }
+		20 = { "%d-in Haykakan Jokat" }
+		21 = { "%d-in Haykakan Jokat" }
+		22 = { "%d-in Haykakan Jokat" }
+		23 = { "%d-in Haykakan Jokat" }
+		24 = { "%d-in Haykakan Jokat" }
+		25 = { "%d-in Haykakan Jokat" }
+
+	}
+}
+
+ARM_CAV_01 = 
+{
+	name = "Cavalry Divisions"
+
+	for_countries = { ARM }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ARM_INF_01 }
+
+	fallback_name = "%d-in Hetselazor Jokat"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-in Hetselazor Jokat" }
+		2 = { "%d-in Hetselazor Jokat" }
+		3 = { "%d-in Hetselazor Jokat" }
+		4 = { "%d-in Hetselazor Jokat" }
+		5 = { "%d-in Hetselazor Jokat" }
+		6 = { "%d-in Hetselazor Jokat" }
+		7 = { "%d-in Hetselazor Jokat" }
+		8 = { "%d-in Hetselazor Jokat" }
+		9 = { "%d-in Hetselazor Jokat" }
+		10 = { "%d-in Hetselazor Jokat" }
+
+	}
+}
+
+ARM_MOT_01 = 
+{
+	name = "Motorised Divisions"
+
+	for_countries = { ARM }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ARM_INF_01 }
+
+	fallback_name = "%d-in Sharzhich’ov Jokat"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-in Sharzhich’ov Jokat" }
+		2 = { "%d-in Sharzhich’ov Jokat" }
+		3 = { "%d-in Sharzhich’ov Jokat" }
+		4 = { "%d-in Sharzhich’ov Jokat" }
+		5 = { "%d-in Sharzhich’ov Jokat" }
+		6 = { "%d-in Sharzhich’ov Jokat" }
+		7 = { "%d-in Sharzhich’ov Jokat" }
+		8 = { "%d-in Sharzhich’ov Jokat" }
+		9 = { "%d-in Sharzhich’ov Jokat" }
+		10 = { "%d-in Sharzhich’ov Jokat" }
+		11 = { "%d-in Sharzhich’ov Jokat" }
+		12 = { "%d-in Sharzhich’ov Jokat" }
+		13 = { "%d-in Sharzhich’ov Jokat" }
+		14 = { "%d-in Sharzhich’ov Jokat" }
+		15 = { "%d-in Sharzhich’ov Jokat" }
+		16 = { "%d-in Sharzhich’ov Jokat" }
+		17 = { "%d-in Sharzhich’ov Jokat" }
+		18 = { "%d-in Sharzhich’ov Jokat" }
+		19 = { "%d-in Sharzhich’ov Jokat" }
+		20 = { "%d-in Sharzhich’ov Jokat" }
+		21 = { "%d-in Sharzhich’ov Jokat" }
+		22 = { "%d-in Sharzhich’ov Jokat" }
+		23 = { "%d-in Sharzhich’ov Jokat" }
+		24 = { "%d-in Sharzhich’ov Jokat" }
+		25 = { "%d-in Sharzhich’ov Jokat" }
+
+	}
+}
+
+ARM_ARM_01 = 
+{
+	name = "Armored Divisions"
+
+	for_countries = { ARM }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ARM_INF_01 }
+
+	fallback_name = "%d-in Tanki Jokat"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-in Tanki Jokat" }
+		2 = { "%d-in Tanki Jokat" }
+		3 = { "%d-in Tanki Jokat" }
+		4 = { "%d-in Tanki Jokat" }
+		5 = { "%d-in Tanki Jokat" }
+		6 = { "%d-in Tanki Jokat" }
+		7 = { "%d-in Tanki Jokat" }
+		8 = { "%d-in Tanki Jokat" }
+		9 = { "%d-in Tanki Jokat" }
+		10 = { "%d-in Tanki Jokat" }
+
+	}
+}
+
+ARM_MEC_01 = 
+{
+	name = "Mechanized Divisions"
+
+	for_countries = { ARM }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ARM_INF_01 }
+
+	fallback_name = "%d-in Mekhanikats’vats Jokat"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-in Mekhanikats’vats Jokat" }
+		2 = { "%d-in Mekhanikats’vats Jokat" }
+		3 = { "%d-in Mekhanikats’vats Jokat" }
+		4 = { "%d-in Mekhanikats’vats Jokat" }
+		5 = { "%d-in Mekhanikats’vats Jokat" }
+		6 = { "%d-in Mekhanikats’vats Jokat" }
+		7 = { "%d-in Mekhanikats’vats Jokat" }
+		8 = { "%d-in Mekhanikats’vats Jokat" }
+		9 = { "%d-in Mekhanikats’vats Jokat" }
+		10 = { "%d-in Mekhanikats’vats Jokat" }
+		11 = { "%d-in Mekhanikats’vats Jokat" }
+		12 = { "%d-in Mekhanikats’vats Jokat" }
+		13 = { "%d-in Mekhanikats’vats Jokat" }
+		14 = { "%d-in Mekhanikats’vats Jokat" }
+		15 = { "%d-in Mekhanikats’vats Jokat" }
+		16 = { "%d-in Mekhanikats’vats Jokat" }
+		17 = { "%d-in Mekhanikats’vats Jokat" }
+		18 = { "%d-in Mekhanikats’vats Jokat" }
+		19 = { "%d-in Mekhanikats’vats Jokat" }
+		20 = { "%d-in Mekhanikats’vats Jokat" }
+		21 = { "%d-in Mekhanikats’vats Jokat" }
+		22 = { "%d-in Mekhanikats’vats Jokat" }
+		23 = { "%d-in Mekhanikats’vats Jokat" }
+		24 = { "%d-in Mekhanikats’vats Jokat" }
+		25 = { "%d-in Mekhanikats’vats Jokat" }
+
+	}
+}
+
+ARM_GAR_01 = 
+{
+	name = "Garrison Divisions"
+
+	for_countries = { ARM }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { ARM_INF_01 }
+
+	fallback_name = "%d-in Haykakan Jokat"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-in Haykakan Jokat" }
+		2 = { "%d-in Haykakan Jokat" }
+		3 = { "%d-in Haykakan Jokat" }
+		4 = { "%d-in Haykakan Jokat" }
+		5 = { "%d-in Haykakan Jokat" }
+		6 = { "%d-in Haykakan Jokat" }
+		7 = { "%d-in Haykakan Jokat" }
+		8 = { "%d-in Haykakan Jokat" }
+		9 = { "%d-in Haykakan Jokat" }
+		10 = { "%d-in Haykakan Jokat" }
+		11 = { "%d-in Haykakan Jokat" }
+		12 = { "%d-in Haykakan Jokat" }
+		13 = { "%d-in Haykakan Jokat" }
+		14 = { "%d-in Haykakan Jokat" }
+		15 = { "%d-in Haykakan Jokat" }
+		16 = { "%d-in Haykakan Jokat" }
+		17 = { "%d-in Haykakan Jokat" }
+		18 = { "%d-in Haykakan Jokat" }
+		19 = { "%d-in Haykakan Jokat" }
+		20 = { "%d-in Haykakan Jokat" }
+		21 = { "%d-in Haykakan Jokat" }
+		22 = { "%d-in Haykakan Jokat" }
+		23 = { "%d-in Haykakan Jokat" }
+		24 = { "%d-in Haykakan Jokat" }
+		25 = { "%d-in Haykakan Jokat" }
+
+	}
+}
+
+ARM_MAR_01 = 
+{
+	name = "Marine Divisions"
+
+	for_countries = { ARM }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ARM_INF_01 }
+
+	fallback_name = "%d-in Tsovayin"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-in Tsovayin" }
+		2 = { "%d-in Tsovayin" }
+		3 = { "%d-in Tsovayin" }
+		4 = { "%d-in Tsovayin" }
+		5 = { "%d-in Tsovayin" }
+		6 = { "%d-in Tsovayin" }
+		7 = { "%d-in Tsovayin" }
+		8 = { "%d-in Tsovayin" }
+		9 = { "%d-in Tsovayin" }
+		10 = { "%d-in Tsovayin" }
+
+	}
+}
+
+ARM_MTN_01 = 
+{
+	name = "Mountain Divisions"
+
+	for_countries = { ARM }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ARM_INF_01 }
+
+	fallback_name = "%d-in Lerrnayin Zork’ery"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-in Lerrnayin Zork’ery" }
+		2 = { "%d-in Lerrnayin Zork’ery" }
+		3 = { "%d-in Lerrnayin Zork’ery" }
+		4 = { "%d-in Lerrnayin Zork’ery" }
+		5 = { "%d-in Lerrnayin Zork’ery" }
+		6 = { "%d-in Lerrnayin Zork’ery" }
+		7 = { "%d-in Lerrnayin Zork’ery" }
+		8 = { "%d-in Lerrnayin Zork’ery" }
+		9 = { "%d-in Lerrnayin Zork’ery" }
+		10 = { "%d-in Lerrnayin Zork’ery" }
+
+	}
+}
+
+ARM_PAR_01 = 
+{
+	name = "Paratrooper Divisions"
+
+	for_countries = { ARM }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ARM_INF_01 }
+
+	fallback_name = "%d-in Paratrooper Bazhanumy"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "%d-in Paratrooper Bazhanumy" }
+		2 = { "%d-in Paratrooper Bazhanumy" }
+		3 = { "%d-in Paratrooper Bazhanumy" }
+		4 = { "%d-in Paratrooper Bazhanumy" }
+		5 = { "%d-in Paratrooper Bazhanumy" }
+		6 = { "%d-in Paratrooper Bazhanumy" }
+		7 = { "%d-in Paratrooper Bazhanumy" }
+		8 = { "%d-in Paratrooper Bazhanumy" }
+		9 = { "%d-in Paratrooper Bazhanumy" }
+		10 = { "%d-in Paratrooper Bazhanumy" }
+
+	}
+}

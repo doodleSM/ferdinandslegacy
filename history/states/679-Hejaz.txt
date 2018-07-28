@@ -1,0 +1,28 @@
+
+state={
+	id=679
+	name="STATE_679"
+
+	history={
+		owner = HEJ
+		victory_points = {
+			12758 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = HEJ
+		add_core_of = IKH
+		add_core_of = OTT
+
+	}
+
+	provinces={
+		1033 2027 2095 7934 8092 10835 12101 12758 
+	}
+	manpower=711000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

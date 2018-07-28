@@ -1,0 +1,20 @@
+state={
+	id=828
+	name="STATE_828"
+	provinces={
+		7513 10383 12316 12442 
+	}
+	history={
+		owner = OTT
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = SYR
+		add_core_of = OTT
+
+	}
+	manpower=95675
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

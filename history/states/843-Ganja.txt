@@ -1,0 +1,22 @@
+state={
+	id=843
+	name="STATE_843"
+	provinces={
+		1539 1610 6763 11645 11674 11704 
+	}
+	history={
+		owner = CAU
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+
+		}
+		add_core_of = CAU
+		add_core_of = AZR
+
+	}
+
+	manpower=846574
+	buildings_max_level_factor=1.000
+	state_category=town
+}

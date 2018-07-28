@@ -1,0 +1,35 @@
+
+state={
+	id=339
+	name="STATE_339"
+	resources={
+		chromium=30.000
+	}
+
+	history={
+		owner = GRE
+		victory_points = {
+			4112 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 2
+			4112 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = GRE
+		add_core_of = OTT
+
+	}
+
+	provinces={
+		4112 6992 7130 11848 
+	}
+	manpower=709055
+	buildings_max_level_factor=1.000
+	state_category=town
+}

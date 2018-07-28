@@ -1,4 +1,4 @@
-oob = "WGA_1930"
+﻿oob = "WGA_1930"
 
 capital = 9
 

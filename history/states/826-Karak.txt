@@ -1,0 +1,21 @@
+state={
+	id=826
+	name="STATE_826"
+	provinces={
+		4017 4115 4562 4591 10089 11976 
+	}
+	history={
+		owner = OTT
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = OTT
+		#add_core_of = JOR
+		add_core_of = IKH
+
+	}
+	manpower=452000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
