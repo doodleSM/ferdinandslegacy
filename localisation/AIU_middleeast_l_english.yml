@@ -17,7 +17,10 @@
  
  
  #events
- 
+ crimea.1.t:0 "A New Politician!"
+ crimea.1.d:0 "Mohammad Ali Qajar, the former Shah of Persia was kicked out of the nation by his people. He fled to Russia and amassed a small army with the help of the Russian regime. After the collapse of Russia, he has situated in Odessa and is now demanding rule of the nation under the alias Mokhammad Ali Khan. Many minorities and monarchists are supporting him, however his base is medium-szed, so we can reject him without worry."
+ crimea.1.a:0 "Accept him, he has a point and a base!"
+ crimea.1.b:0 "We must ignore this rambling old madamn!"
  
  #parties
  OTT_anarchism_party:0 "Anarşist Hizip"
