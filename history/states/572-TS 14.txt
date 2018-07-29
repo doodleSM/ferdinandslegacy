@@ -6,7 +6,7 @@ state={
 	history={
 		owner = RMU
 		victory_points = {
-			9292 5 
+			9292 10
 		}
 		buildings = {
 			infrastructure = 6

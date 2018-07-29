@@ -11,6 +11,9 @@ state={
 		buildings = {
 			infrastructure = 3
 		}
+		victory_points = {
+			3124 3 #vologda
+		}
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = RMU

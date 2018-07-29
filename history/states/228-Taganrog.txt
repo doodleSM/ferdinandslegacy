@@ -4,15 +4,16 @@ state={
 	name="STATE_228" # Voroshilovgrad
 	manpower = 2167411
 	
-	state_category = town
+	state_category = city
 
 	history={
 		owner = BLU
 		victory_points = {
-			9461 1
+			9461 5 #Luhansk
 		}
 		buildings = {
 			infrastructure = 5
+			industrial_complex = 1
 		}
 		add_core_of = BLU
 		add_core_of = BAU

@@ -15,6 +15,9 @@ state={
 			infrastructure = 4
 			industrial_complex = 1
 		}
+		victory_points = {
+			392 3 #simbirsk
+		}
 		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS

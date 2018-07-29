@@ -6,30 +6,72 @@ oob = "IDE_1936"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
-	infantry_weapons1 = 1
-	
+	gw_artillery = 1
+	tech_support = 1
+	early_bomber = 1
 }
 
 set_politics = {
 
 	parties = {
-		auth_dem = { 
-			popularity = 60
+		democratic = { 
+			popularity = 70
 		}
 		
+		market_lib = {
+			popularity = 1
+		}
+		
+		social_liberalism = {
+			popularity = 2
+		}
+		
+		social_democracy = {
+			popularity = 5
+		}
+
+		fascism = {
+			popularity = 2
+		}
+		
+		communism = {
+			popularity = 4
+		}
+		
+		anarchism = {
+			popularity = 4
+		}
+		
+		radical_socialism = {
+			popularity = 8
+		}
+
 		neutrality = {
-			popularity = 40
+			popularity = 2
+		}
+		
+		auth_dem = {
+			popularity = 2
 		}		
 	}
-	ruling_party = auth_dem
-	last_election = "1936.1.1"
+	ruling_party = democratic
+	last_election = "1928.1.1"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 	
 	}
 
 
-
+create_country_leader = {
+	name = "Sadri Maksudi Arsal"
+	desc = ""
+	picture = "IDE_Arsal.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
 
 
 

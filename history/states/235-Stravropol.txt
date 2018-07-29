@@ -15,7 +15,14 @@ state={
 			infrastructure = 4
 			air_base = 2
 		}
+		victory_points = {
+			11678 5 #stavropol
+		}
 		add_core_of = DON
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
 	}
 
 	provinces={

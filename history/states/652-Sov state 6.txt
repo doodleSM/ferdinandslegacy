@@ -18,7 +18,7 @@ state={
 
 		}
 		victory_points = {
-			652 5 #orenburg
+			12128 5 #orenburg
 		}
 		add_core_of = RSP
 		add_core_of = BLU

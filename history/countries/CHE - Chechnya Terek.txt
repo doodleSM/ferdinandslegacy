@@ -1,16 +1,11 @@
 ﻿capital = 845
 
-oob = "BLU_1930"
+oob = "CHE_1930"
 
 set_technology = {
 	infantry_weapons = 1
 	gw_artillery = 1
-	early_submarine = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
-	transport = 1
-	early_fighter = 1
-	early_bomber = 1
+	tech_mountaineers = 1
 	
 }
 
@@ -18,7 +13,6 @@ add_ideas = {
 	
 }
 
-set_stability = 0.45
 set_war_support = 0.6
 
 set_convoys = 30
@@ -26,16 +20,50 @@ set_convoys = 30
 set_politics = {
 
 	parties = {
+		democratic = { 
+			popularity = 5
+		}
 		
+		market_lib = {
+			popularity = 1
+		}
 		
+		social_liberalism = {
+			popularity = 1
+		}
 		
-		neutrality = { popularity = 71 }
-		democratic = {popularity = 29 }
+		social_democracy = {
+			popularity = 1
+		}
+
+		fascism = {
+			popularity = 1
+		}
+		
+		communism = {
+			popularity = 2
+		}
+		
+		anarchism = {
+			popularity = 2
+		}
+		
+		radical_socialism = {
+			popularity = 18
+		}
+
+		neutrality = {
+			popularity = 12
+		}
+		
+		auth_dem = {
+			popularity = 57
+		}
 
 		
 	}
 	
-	ruling_party = neutrality
+	ruling_party = auth_dem
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -47,6 +75,17 @@ create_country_leader = {
 	picture = "CHE_Tchermoeff.dds"
 	expire = "1965.1.1"
 	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ivan Kalmykov"
+	desc = ""
+	picture = "CHE_kalymkov.dds"
+	expire = "1965.1.1"
+	ideology = auth_dem_ideology
 	traits = {
 		#
 	}

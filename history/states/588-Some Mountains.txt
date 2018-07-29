@@ -8,13 +8,14 @@ state={
 	}
 
 	history={
-		owner = RMU
+		owner = ZHT
 		buildings = {
 			infrastructure = 4
+			industrial_complex = 1
 
 		}
 		victory_points = {
-			12594 4 #semey
+			12594 5 #semey
 		}
 		add_core_of = BLU
 		add_core_of = RMU

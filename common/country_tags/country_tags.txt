@@ -43,6 +43,7 @@ RSH = "countries/Rashids.txt"
 SUD = "countries/Sudan.txt"
 #russia
 ALA = "countries/Alash Orda.txt"
+ALT = "countries/Altai.txt"
 ASC = "countries/AstrakhanCossacks.txt"
 BAL = "countries/BalticDuchy.txt"
 BLU = "countries/RevolutionaryRussia.txt"

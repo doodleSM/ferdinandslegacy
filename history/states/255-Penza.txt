@@ -13,6 +13,9 @@ state={
 		buildings = {
 			infrastructure = 4
 		}
+		victory_points = {
+			6248 3 #penza
+		}
 		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS

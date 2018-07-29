@@ -12,8 +12,15 @@ state={
 			infrastructure = 5
 			air_base = 8
 		}
+		victory_points = {
+			3568 1 #chernihiv
+		}
 		add_core_of = BAU
 		add_core_of = UKR
+		add_core_of = BLU
+		add_core_of = RMU
+		add_core_of = RSP
+		add_core_of = RUS
 	}
 
 	provinces={

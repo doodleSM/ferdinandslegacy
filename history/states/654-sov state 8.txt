@@ -4,13 +4,18 @@ state={
 	name="STATE_654" # Gorno-Altaysk
 	manpower = 153510
 	
-	state_category = wasteland
+	state_category = rural
 
 	history={
-		owner = RMU
+		owner = ALT
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
+			industrial_complex = 1
 		}
+		victory_points = {
+			4800 1 # Gorno-Altaysk
+		}
+		add_core_of = ALT
 		add_core_of = BLU
 		add_core_of = RMU
 		add_core_of = RSP

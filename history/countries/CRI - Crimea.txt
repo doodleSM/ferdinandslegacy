@@ -1,10 +1,9 @@
 ﻿capital = 137
 
-oob = ""
+oob = "CRI_1930"
 
-set_research_slots = 4
-set_stability = 0.6
-set_war_support = 0.7
+set_research_slots = 3
+set_war_support = 0.6
 
 
 
@@ -14,17 +13,12 @@ set_technology = {
 	infantry_weapons1 = 1
 	tech_support = 1		
 	tech_engineers = 1
-	tech_mountaineers = 1
-	motorised_infantry = 1
 	gw_artillery = 1
 	gwtank = 1
 	basic_light_tank = 1
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
 	early_fighter = 1
 	early_bomber = 1
 	naval_bomber1 = 1
-	CAS1 = 1
 	early_submarine = 1
 	early_destroyer = 1
 	early_light_cruiser = 1
@@ -33,8 +27,6 @@ set_technology = {
 	basic_battleship = 1
 	early_battlecruiser = 1
 	transport = 1
-	trench_warfare = 1
-	fleet_in_being = 1
 }
 
 
@@ -45,23 +37,51 @@ set_convoys = 30
 set_politics = {
 
 	parties = {
-		radical_socialism = { 
-			popularity = 20
+		democratic = { 
+			popularity = 15
+		}
+		
+		market_lib = {
+			popularity = 5
+		}
+		
+		social_liberalism = {
+			popularity = 10
+		}
+		
+		social_democracy = {
+			popularity = 30
 		}
 
-		anarchism = {
-			popularity = 8
+		fascism = {
+			popularity = 0
 		}
 		
 		communism = {
-			popularity = 72
+			popularity = 22
+		}
+		
+		anarchism = {
+			popularity = 3
+		}
+		
+		radical_socialism = {
+			popularity = 2
+		}
+
+		neutrality = {
+			popularity = 3
+		}
+		
+		auth_dem = {
+			popularity = 10
 		}
 	}
 	
-	ruling_party = communism
+	ruling_party = social_democracy
 	last_election = "1934.3.26"
 	election_frequency = 60
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 
@@ -72,7 +92,29 @@ create_country_leader = {
 	desc = ""
 	picture = "CRI_Noman.dds"
 	expire = "1965.1.1"
-	ideology = marxism
+	ideology = social_democracy_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Maciej Sulkiewicz"
+	desc = ""
+	picture = "CRI_Sulkiewicz.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Alexandra Kollontai"
+	desc = ""
+	picture = "CRI_Kollontai.dds"
+	expire = "1965.1.1"
+	ideology = leninism
 	traits = {
 		
 	}

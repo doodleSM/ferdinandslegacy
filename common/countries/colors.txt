@@ -693,7 +693,11 @@ SUD = {
 #russia
 ALA = {
 	color = rgb { 210 187 213 }
-	color_ui = rgb { 210 187 213  }
+	color_ui = rgb { 210 187 213 }
+}
+ALT = {
+	color = rgb { 67 89 130 }
+	color_ui = rgb { 67 89 130 }
 }
 ASC = {
 	color = rgb { 210 187 11 }
