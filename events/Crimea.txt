@@ -1,0 +1,38 @@
+add_namespace = crimea
+
+# Mohammad Ali Qajar Rises
+country_event = {
+	id = crimea.1
+	title = crimea.1.t
+	desc = crimea.1.d
+	picture = GFX_report_event_india_protests
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = CRI.tga
+		tag = CRI
+	}
+
+	mean_time_to_happen = {
+		days = 7	
+	}
+
+	option = {
+		name = crimea.1.a
+		retire_country_leader = yes
+	create_country_leader = {
+		name = "Mohkhammad Ali Khan"
+		desc = ""
+			picture = "CRI_Qajar.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				inexperienced_imperialist
+		}
+}
+
+option = {
+		name = crimea.1.b
+		}
+}
