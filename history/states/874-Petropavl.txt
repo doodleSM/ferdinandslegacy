@@ -5,12 +5,11 @@ state={
 		1391 1418 1694 4850 7741 7874 12619 
 	}
 	history={
-		owner = RMU
+		owner = ALA
 		buildings = {
 			infrastructure = 3
 
 		}
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = BLU

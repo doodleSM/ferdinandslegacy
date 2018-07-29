@@ -4,6 +4,10 @@ state={
 
 	history={
 		owner = UKR
+		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = BLU
+		add_core_of = UKR
 		buildings = {
 			infrastructure = 5
 

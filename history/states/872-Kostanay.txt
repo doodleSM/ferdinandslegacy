@@ -4,12 +4,11 @@ state={
 	name="STATE_872"
 
 	history={
-		owner = RMU
+		owner = ALA
 		buildings = {
 			infrastructure = 3
 
 		}
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = ZHT

@@ -10,6 +10,9 @@ state={
 
 		}
 		add_core_of = KRZ
+		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = BLU
 
 	}
 

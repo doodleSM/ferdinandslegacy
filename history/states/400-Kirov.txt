@@ -17,7 +17,6 @@ state={
 		victory_points = {
 			6124 3 #vyatka
 		}
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = BLU

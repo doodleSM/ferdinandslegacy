@@ -9,7 +9,7 @@ state={
 	}
 
 	history={
-		owner = RMU
+		owner = ZHT
 		buildings = {
 			infrastructure = 4
 
@@ -18,7 +18,6 @@ state={
 			7708 1 #pavlodar
 		}
 		add_core_of = BLU
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = ZHT

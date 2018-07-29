@@ -4,7 +4,7 @@ state={
 	name="STATE_245" # Millerovo
 	manpower = 761769
 	
-	state_category = rural
+	state_category = town
 
 	history={
 		owner = BLU
@@ -12,6 +12,8 @@ state={
 			infrastructure = 5
 		}
 		add_core_of = BLU
+		add_core_of = RUS
+		add_core_of = RSP
 	}
 
 	provinces={

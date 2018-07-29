@@ -12,6 +12,8 @@ state={
 			3392 1 
 		}
 		add_core_of = BLU
+		add_core_of = RUS
+		add_core_of = RSP
 	}
 
 	provinces={

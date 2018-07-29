@@ -12,14 +12,13 @@ state={
 	}
 	
 	history={
-		owner = RMU
+		owner = RSP
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
 
 		}
 		add_core_of = BLU
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		#add_core_of = KAZ

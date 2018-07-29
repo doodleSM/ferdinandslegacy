@@ -18,7 +18,6 @@ state={
 			12594 5 #semey
 		}
 		add_core_of = BLU
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = ZHT

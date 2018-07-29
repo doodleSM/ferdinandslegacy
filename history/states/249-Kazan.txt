@@ -19,7 +19,6 @@ state={
 		victory_points = {
 			6338 20
 		}
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = BLU

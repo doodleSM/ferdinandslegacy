@@ -4,7 +4,7 @@ state={
 	name="STATE_254"
 	manpower = 1824120
 	
-	state_category = town
+	state_category = city
 
 	history={
 		owner = RSP
@@ -12,9 +12,8 @@ state={
 			infrastructure = 5
 		}
 		victory_points = {
-			11248 5 #ryazan
+			11248 10 #ryazan
 		}
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = BLU

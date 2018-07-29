@@ -22,6 +22,9 @@ state={
 			}
 		}
 		add_core_of = LIT
+		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = BLU
 	}
 
 	provinces={

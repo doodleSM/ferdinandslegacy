@@ -17,7 +17,6 @@ state={
 			10142 1 #zlatoust
 		}
 		add_core_of = BLU
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 

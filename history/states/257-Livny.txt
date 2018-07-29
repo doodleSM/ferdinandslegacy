@@ -18,7 +18,6 @@ state={
 		victory_points = {
 			11351 3 #tambov
 		}
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = BLU

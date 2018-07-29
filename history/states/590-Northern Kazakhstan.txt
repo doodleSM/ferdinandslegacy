@@ -4,7 +4,7 @@ state={
 	name="STATE_590"
 
 	history={
-		owner = RMU
+		owner = ALA
 		victory_points = {
 			4333 5
 		}
@@ -14,7 +14,6 @@ state={
 			arms_factory = 1
 
 		}
-		add_core_of = RMU
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = BLU

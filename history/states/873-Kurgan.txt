@@ -5,7 +5,7 @@ state={
 		1292 1294 1775 10542 12106 
 	}
 	history={
-		owner = RMU
+		owner = RSP
 		buildings = {
 			infrastructure = 4
 
@@ -13,7 +13,6 @@ state={
 		add_core_of = RSP
 		add_core_of = BLU
 		add_core_of = RUS
-		add_core_of = RMU
 
 	}
 

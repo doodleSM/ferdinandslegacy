@@ -13,7 +13,6 @@ state= {
 		#add_core_of = JAP
 		add_core_of = RSP
 		add_core_of = RUS
-		add_core_of = RMU
 		add_core_of = BLU
 		buildings = {
 			infrastructure = 3

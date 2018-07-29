@@ -15,7 +15,6 @@ state={
 			11537 1 #uralsk
 		}
 		add_core_of = BLU
-		add_core_of = RMU
 		add_core_of = IDE
 		add_core_of = RUS
 		add_core_of = RSP

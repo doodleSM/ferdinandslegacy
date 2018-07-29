@@ -6,16 +6,22 @@ state={
 	history={
 		owner = RUS
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			4728 = {
+				naval_base = 1
+
+			}
 			12207 = {
 				naval_base = 1
 
 			}
 
 		}
+		victory_points = {
+			4728 1 #Petropavlovsk
+		 }
 		add_core_of = RSP
 		add_core_of = RUS
-		add_core_of = RMU
 		add_core_of = BLU
 
 	}
