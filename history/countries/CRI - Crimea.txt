@@ -38,7 +38,7 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 15
+			popularity = 12
 		}
 		
 		market_lib = {
@@ -50,7 +50,7 @@ set_politics = {
 		}
 		
 		social_democracy = {
-			popularity = 30
+			popularity = 20
 		}
 
 		fascism = {
@@ -58,7 +58,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 22
+			popularity = 18
 		}
 		
 		anarchism = {
@@ -70,7 +70,7 @@ set_politics = {
 		}
 
 		neutrality = {
-			popularity = 3
+			popularity = 20
 		}
 		
 		auth_dem = {
