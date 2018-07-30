@@ -21,7 +21,7 @@ country_event = {
 	option = {
 		name = crimea.1.a
 		retire_country_leader = yes
-		set_ruling_party = despotism
+		set_ruling_party = "despotism"
 	create_country_leader = {
 		name = "Mokhammad Ali Khan"
 		desc = ""
@@ -36,4 +36,5 @@ country_event = {
 	option = {
 		name = crimea.1.b
 		}
+	}
 }
