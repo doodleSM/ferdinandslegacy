@@ -1,9 +1,10 @@
 ﻿capital = 236
 
-oob = "ASC_1936"
+oob = "ASC_1930"
 
-
-
+add_ideas = {
+	limited_conscription
+}
 
 # Starting tech
 set_technology = {

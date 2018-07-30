@@ -91,6 +91,18 @@ units = {
 		start_equipment_factor = 0.8
 
 	}
+	
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 7454
+		division_template = "Haykakan Jokat"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+
+	}
 	division= {			
 		division_name = {
 			is_name_ordered = yes

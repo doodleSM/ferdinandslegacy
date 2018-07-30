@@ -1,0 +1,119 @@
+﻿division_template = {
+	name = "Garrison Force"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Cossack Division"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ASC"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}
+
+units = {
+
+	division= {	
+		name = "Krasnodar Garrison Force"
+		location = 3734
+		division_template = "Garrison Force"
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = "Stavropol Garrison Force"
+		location = 11678
+		division_template = "Garrison Force"
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = "1. Cossack Division"
+		location = 719
+		division_template = "Cossack Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2. Cossack Division"
+		location = 6783
+		division_template = "Cossack Division"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "3. Cossack Division"
+		location = 6765
+		division_template = "Cossack Division"
+		start_experience_factor = 0.25
+	}
+	
+	division= {	
+		name = "4. Cossack Division"
+		location = 6702
+		division_template = "Cossack Division"
+		start_experience_factor = 0.25
+	}
+	
+	division= {	
+		name = "5. Cossack Division"
+		location = 9663
+		division_template = "Cossack Division"
+		start_experience_factor = 0.25
+	}
+	
+	division= {	
+		name = "6. Cossack Division"
+		location = 748
+		division_template = "Cossack Division"
+		start_experience_factor = 0.25
+	}
+	
+	### nav
+	
+	navy = {					
+		name = "Don Flotiliya"				
+		base = 719
+		location = 719 #
+		ship = { name = "Krasnodar" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DON } } }		
+		ship = { name = "Sochi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = DON } } }
+	}
+	
+}
+
+##### Air units #####
+air_wings = {
+	##### Don Air Wings #####
+	234 = { 
+		tac_bomber_equipment_0 = {
+			owner = "DON" 
+			amount = 12
+		}
+	}
+}

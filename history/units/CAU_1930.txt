@@ -1,0 +1,173 @@
+﻿division_template = {
+	name = "Kveiti Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kavaleria Division"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	
+}
+
+division_template = {
+	name = "Mtis Jarebi"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+		mountaineers = { x = 2 y = 2 }		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Piyada Diviziyası"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Süvari Diviziyası"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "CAU"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}
+
+units = {
+
+	division= {	
+		name = "Tbilisi Mtsveli"
+		location = 1599
+		division_template = "Kveiti Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "Tbilisi Mtsveli"
+		location = 1599
+		division_template = "Kveiti Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	
+	division= {	
+		name = "Mtis Jarebi"
+		location = 11647
+		division_template = "Mtis Jarebi"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	
+	division= {	
+		name = "Batumi Mtsveli"
+		location = 3653
+		division_template = "Kveiti Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Damontazhebuli Politsia"
+		location = 1599
+		division_template = "Kavaleria Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division= {	
+		name = "1-ci Diviziyası"
+		location = 7661
+		division_template = "Piyada Diviziyası"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "2-ci Diviziyası"
+		location = 11645
+		division_template = "Piyada Diviziyası"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "Quraşdırılmış Briqada"
+		location = 7661
+		division_template = "Süvari Diviziyası"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	### nav
+	
+	navy = {					
+		name = "Pederaluri Ploti"				
+		base = 3653
+		location = 3653 # batumi
+		ship = { name = "TCS Patriotizmi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAU } } }		
+		ship = { name = "TCS Giorgi Saakadze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAU } } }		
+		ship = { name = "TCS Prince Aleksandre Imeretinsky" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAU } } }		
+		ship = { name = "TCS Ivane Amilakhvari" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAU } } }
+	}
+	
+}
+
+##### Air units #####
+air_wings = {
+	##### Caucasian Air Wings #####
+	229 = { 
+		# 1. Air Wing
+		fighter_equipment_0 = {
+			owner = "CAU" 
+			amount = 32
+		}
+	}
+}

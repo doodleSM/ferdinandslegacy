@@ -11,7 +11,7 @@ state={
 
 		}
 		victory_points = {
-			587 1 #fort-shevchenko
+			11701 1 #fort-shevchenko
 		}
 		add_core_of = KHI
 		add_core_of = BLU

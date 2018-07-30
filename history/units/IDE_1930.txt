@@ -1,0 +1,90 @@
+﻿division_template = {
+	name = "Uralskaya Pekhota"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Uralskaya Kavaleriya"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "IDE"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}
+
+units = {
+
+	
+	division= {	
+		name = "1. Uralskaya Pekhota"
+		location = 9453
+		division_template = "Uralskaya Pekhota"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "2. Uralskaya Pekhota"
+		location = 12128
+		division_template = "Uralskaya Pekhota"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "3. Uralskaya Pekhota"
+		location = 11537
+		division_template = "Uralskaya Pekhota"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "4. Uralskaya Pekhota"
+		location = 3502
+		division_template = "Uralskaya Pekhota"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "1. Uralskaya Kavaleriya"
+		location = 464
+		division_template = "Uralskaya Kavaleriya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	
+	division= {	
+		name = "2. Uralskaya Kavaleriya"
+		location = 9528
+		division_template = "Uralskaya Kavaleriya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	
+}

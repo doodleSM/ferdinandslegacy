@@ -1,0 +1,146 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Gornostrelkovaya Diviziya"		# Mountain Division
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+		mountaineers = { x = 2 y = 2 }	
+		mountaineers = { x = 3 y = 0 }	
+		mountaineers = { x = 3 y = 1 }	
+		mountaineers = { x = 3 y = 2 }	
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya" 	# Kavaleriyskaya Diviziya
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+##### OOB #####
+units = {
+	##### Severno-Zapadnoe TVD (North West Theatre) -- Archangelsk #####				
+	# 1ya Strelkoviy Korpus			
+	division= {			
+		name = "1. Krymskiy Diviziya"		
+		location = 3686
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.9
+
+	}			
+	division= {			
+		name = "2. Krymskiy Diviziya"		
+		location = 9680
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.9
+
+	}			
+	division= {			
+		name = "Krymskaya Kavaleriyskaya Diviziya"		
+		location = 3722
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}		
+
+
+	##### NAVAL UNITS #####
+	
+	### Black Sea Fleet -- Sevastopol
+	navy = {	
+		name = "Chernomorskiy Flot"
+		base = 3686
+		location = 3686 # Sevastopopl
+		ship = { name = "Sevastopol" definition = battleship equipment = { battleship_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Admiral Lazarev" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Svetlana" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Admiral Nakhimov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Pamiat' Merkuria" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRI } } }
+	}	
+	navy = {	
+		name = "Chernomorskiy Podvodniy Flot"
+		base = 3686
+		location = 3686 # Sevastopopl
+		# 8iy Podvodniy Flot		
+		ship = { name = "L-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRI } } }	
+		ship = { name = "L-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRI } } }	
+		ship = { name = "L-6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRI } } }	
+		# 9iy Podvodniy Flot
+		ship = { name = "Shch-121" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRI } } }			
+		ship = { name = "Shch-122" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRI } } }			
+		ship = { name = "Shch-123" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRI } } }			
+		ship = { name = "Shch-124" definition = submarine equipment = { submarine_1 = { amount = 1 owner = CRI } } }			
+	}	
+	
+}					
+
+### Air Wings
+air_wings = {
+	
+	# Sevastopol
+	137 = {
+		# 1. Air Wing
+		fighter_equipment_0 = {
+			owner = "CRI" 
+			amount = 40
+		}
+		#
+		nav_bomber_equipment_1 = {
+			owner = "CRI" 
+			amount = 32
+		}
+	}
+}
+
+
+		
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "CRI"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+}
+	#####################

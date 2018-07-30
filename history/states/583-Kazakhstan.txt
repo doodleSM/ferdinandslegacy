@@ -2,6 +2,10 @@
 state={
 	id=583
 	name="STATE_583"
+	
+	resources={
+		steel=5
+	}
 
 	history={
 		owner = ALA
