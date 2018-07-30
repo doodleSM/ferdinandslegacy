@@ -21,11 +21,15 @@ country_event = {
 	option = {
 		name = crimea.1.a
 		retire_country_leader = yes
+<<<<<<< HEAD
 		set_politics = {
 			ruling_party = neutrality
 		}
+=======
+		set_ruling_party = "despotism"
+>>>>>>> f29cd1181f8ba9ca4f8a4f61364b55ed805890c5
 	create_country_leader = {
-		name = "Mohkhammad Ali Khan"
+		name = "Mokhammad Ali Khan"
 		desc = ""
 			picture = "CRI_Qajar.dds"
 			expire = "1965.1.1"
@@ -38,4 +42,5 @@ country_event = {
 	option = {
 		name = crimea.1.b
 		}
+	}
 }
