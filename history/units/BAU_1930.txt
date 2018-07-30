@@ -1,0 +1,58 @@
+division_template = { #Infantry Militia
+	name = "Ukrayinska Militsiya"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = { #Cavalry
+	name = "Kavaleriyska Militsiya"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Odessa Militia"
+		location = 11670
+		division_template = "Ukrayinska Militsiya"
+		start_experience_factor = 0.2
+		start_equipment_facor = 0.6
+	}
+
+	division = {
+		name = "Kherson Militia"
+		location = 11715
+		division_template = "Ukrayinska Militsiya"
+		start_experience_factor = 0.2
+		start_equipment_facor = 0.6
+	}
+
+	division = {
+		name = "Yuzoka Militia"
+		location = 11715
+		division_template = "Ukrayinska Militsiya"
+		start_experience_factor = 0.2
+		start_equipment_facor = 0.6
+	}
+}
