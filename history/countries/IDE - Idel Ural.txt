@@ -1,6 +1,6 @@
 ﻿capital = 407
 
-oob = "IDE_1936"
+oob = "IDE_1930"
 
 
 # Starting tech

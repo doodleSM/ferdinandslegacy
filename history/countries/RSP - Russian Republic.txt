@@ -1,6 +1,6 @@
 ﻿capital = 219
 
-oob = "RPS_1930"
+oob = "RSP_1930"
 
 set_research_slots = 3
 
@@ -8,22 +8,36 @@ add_ideas = {
 	limited_conscription
 }
 
+# Starting tech
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	gw_artillery = 1			
-	tech_support = 1		
 	tech_recon = 1
+	tech_support = 1		
 	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
 	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
 	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	transport = 1
 }
 
-set_convoys = 20
-
-
-
-
+set_convoys = 100
 
 set_politics = {
 

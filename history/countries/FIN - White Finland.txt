@@ -1,8 +1,9 @@
 ﻿capital = 149
 
-oob = "FIN_1936"
+oob = "FIN_1930"
 
 set_research_slots = 3
+set_war_support = 0.7
 
 add_ideas = {
 	limited_conscription

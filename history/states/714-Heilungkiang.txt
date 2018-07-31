@@ -12,6 +12,9 @@ state={
 			infrastructure = 4
 
 		}
+		victory_points = {
+			7832 1 #heihe
+		}
 
 	}
 

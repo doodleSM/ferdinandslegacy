@@ -1,0 +1,197 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Jalkaväkidivisioona"		# Infantry Division
+
+	division_names_group = FIN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Erillinen Prikaati" 	# Separate Brigade - Represents groups of separate battalions (Erillinen Pataljoona) and various garrison units
+
+	division_names_group = FIN_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+	priority = 0
+}
+division_template = {
+	name = "Ratsuväkiprikaati"  		# Cavalry Division
+
+	division_names_group = FIN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 1 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }   
+	}
+}
+
+
+##### OOB #####
+units = {
+	##### LAND UNITS #####
+	##### Suomen Pääesikunta #####
+	division = {
+		#name = "6. Divisioona"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 6138
+		division_template = "Jalkaväkidivisioona"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "9. Divisioona"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 158 # Oulu
+		division_template = "Jalkaväkidivisioona"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Lapin Ryhmä"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 197 # Salla
+		division_template = "Erillinen Prikaati"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Pohjois-Karjalan Ryhmä"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 6210 # Uimaharju 
+		division_template = "Erillinen Prikaati"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	
+	# IV Corps
+	division = {
+		#name = "12. Divisioona"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 9061 # Joensuu
+		division_template = "Jalkaväkidivisioona"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "13. Divisioona"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 11141 # Kuopio
+		division_template = "Jalkaväkidivisioona"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+
+	
+	# III Corps
+	division = {
+		#name = "8. Divisioona" # Vaasa
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 3122
+		division_template = "Jalkaväkidivisioona"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "10. Divisioona"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 9056 # Jyväskylä
+		division_template = "Jalkaväkidivisioona"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Raudun Ryhmä"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9181 # Ilomantsi
+		division_template = "Erillinen Prikaati"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+
+	##### NAVAL UNITS #####
+	navy = {					
+		name = "Rannikkolaivue"				
+		base = 3122
+		location =  3122
+		ship = { name = "Ilmarinen" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = FIN } } }			
+	}					
+	navy = {					
+		name = "Sukellusvenelaivue"				
+		base = 3122
+		location =  3122
+		ship = { name = "Vetehinen" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FIN } } }
+	}					
+
+}
+	
+### No air units (first formed Jan-1938) ###
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "FIN"
+		}
+		requested_factories = 1
+		progress = 0.66
+		efficiency = 100
+	}
+}

@@ -18,9 +18,7 @@ set_technology = {
 	paratroopers = 1
 	gw_artillery = 1
 	gwtank = 1
-	basic_light_tank = 1  # PLACEHOLDER
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
+	basic_light_tank = 1
 	early_fighter = 1
 	fighter1 = 1
 	early_bomber = 1
@@ -34,16 +32,15 @@ set_technology = {
 	early_battleship = 1
 	early_battlecruiser = 1
 	transport = 1
-	mass_assault = 1
-	fleet_in_being = 1
 }
 
-set_convoys = 50
+set_convoys = 250
 
 add_ideas = RUS_economic_crisis
 add_ideas = RUS_agrarian_society
-add_ideas = RUS_constitutional_monarchy
+add_ideas = limited_conscription
 add_ideas = RUS_cossack_elites
+
 set_politics = {
 
 	parties = {
@@ -183,37 +180,12 @@ create_equipment_variant = {
 }
 
 create_equipment_variant = {
-	name = "Leningrad & Minsk Class"
+	name = "St Petersburg & Minsk Class"
 	type = destroyer_1
 	upgrades = {
 		ship_torpedo_upgrade = 3
 		destroyer_engine_upgrade = 3
 		ship_ASW_upgrade = 3
 		ship_anti_air_upgrade = 3
-	}
-}
-
-1939.1.1 = {
-
-	create_equipment_variant = {
-		name = "Series X Shchuka"
-		type = submarine_2
-		upgrades = {
-			ship_reliability_upgrade = 3
-			sub_engine_upgrade = 3
-			sub_stealth_upgrade = 3
-			sub_torpedo_upgrade = 3
-		}
-	}
-
-	create_equipment_variant = {
-		name = "Maxim Gorky Class"
-		type = heavy_cruiser_2
-		upgrades = {
-			ship_reliability_upgrade = 2
-			ship_engine_upgrade = 2
-			ship_armor_upgrade = 2
-			ship_gun_upgrade = 2
-		}
 	}
 }

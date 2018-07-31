@@ -14,7 +14,12 @@ state={
 		buildings = {
 			infrastructure = 3
 		}
+		victory_points = {
+			12559 1 #nikolayevsk
+		}
 		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = BLU
 	}
 
 	provinces={

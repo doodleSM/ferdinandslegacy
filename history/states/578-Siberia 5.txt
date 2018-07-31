@@ -4,12 +4,13 @@ state={
 	name="STATE_578" # Tomsk
 	manpower = 609304
 	
-	state_category = rural
+	state_category = town
 
 	history={
 		owner = RUS
 		buildings = {
 			infrastructure = 3
+			industrial_complex = 1
 		}
 		victory_points = {
 			7789 5 #tomsk

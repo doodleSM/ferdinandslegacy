@@ -7,8 +7,12 @@ state={
 	history={
 		owner = KRZ
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			industrial_complex = 1
 
+		}
+		victory_points = {
+			7706 3 #bishkek
 		}
 		add_core_of = KRZ
 		add_core_of = BLU
@@ -18,7 +22,7 @@ state={
 	}
 
 	
-	manpower=35645
+	manpower=455645
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=large_town
 }
