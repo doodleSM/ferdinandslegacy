@@ -1,0 +1,80 @@
+ideas = {
+	
+	country = {
+
+		RSP_the_august_revolution = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				war_support_factor = 0.1
+			}
+		}
+		
+		RSP_officer_shortage_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_yugoslavian_general_staff
+
+			modifier = {
+				planning_speed = -0.2
+				command_power_gain_mult = -0.5
+				military_leader_cost_factor = 0.50
+			}
+			
+			research_bonus = { 
+				
+			}
+		}
+		
+		RSP_russian_civil_war_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				RUS = { exists = no }
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				
+			}
+			
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = -0.2
+			}
+		}
+}
+political_advisor = {
+
+		
+}

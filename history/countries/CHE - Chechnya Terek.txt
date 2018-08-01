@@ -10,6 +10,7 @@ set_technology = {
 }
 
 add_ideas = {
+	RUS_cossack_host
 	limited_conscription
 }
 

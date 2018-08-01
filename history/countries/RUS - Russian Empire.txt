@@ -36,10 +36,11 @@ set_technology = {
 
 set_convoys = 250
 
-add_ideas = RUS_economic_crisis
-add_ideas = RUS_agrarian_society
-add_ideas = limited_conscription
+add_ideas = RUS_unpopular_tsar
 add_ideas = RUS_cossack_elites
+add_ideas = RUS_church_power_idea
+add_ideas = RUS_russian_civil_war_idea
+add_ideas = limited_conscription
 
 set_politics = {
 

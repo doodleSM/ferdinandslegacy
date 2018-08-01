@@ -4,6 +4,10 @@ state={
 	name="STATE_655"
 	manpower = 94759
 	
+	resources={
+		oil=3 # was: 4
+	}
+	
 	state_category = pastoral
 	history={
 		owner = RSP
@@ -14,6 +18,9 @@ state={
 		buildings = {
 			infrastructure = 3
 			air_base = 1
+		}
+		victory_points = {
+			1755 1 #Alexandrovka
 		}
 	}
 

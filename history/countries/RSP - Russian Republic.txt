@@ -5,6 +5,9 @@ oob = "RSP_1930"
 set_research_slots = 3
 
 add_ideas = {
+	RSP_the_august_revolution
+	RSP_officer_shortage_idea
+	RSP_russian_civil_war_idea
 	limited_conscription
 }
 
@@ -43,15 +46,27 @@ set_politics = {
 
 	parties = {
 		social_liberalism = { 
-			popularity = 70
+			popularity = 42
 		}
 
 		social_democracy = {
-			popularity = 10
+			popularity = 25
+		}
+		
+		market_lib = {
+			popularity = 5
+		}
+		
+		radical_socialism = {
+			popularity = 4
 		}
 		
 		communism = {
 			popularity = 1
+		}
+		
+		auth_dem = {
+			popularity = 4
 		}
 
 		democratic = {

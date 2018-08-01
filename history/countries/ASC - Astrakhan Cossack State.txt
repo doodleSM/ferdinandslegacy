@@ -3,6 +3,7 @@
 oob = "ASC_1930"
 
 add_ideas = {
+	RUS_cossack_host
 	limited_conscription
 }
 

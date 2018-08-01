@@ -31,6 +31,8 @@ set_technology = {
 }
 
 add_ideas = {
+	BLU_liberation_army
+	BLU_the_moscow_and_sp_uprisings_idea
 	limited_conscription
 	partial_economic_mobilisation
 }
@@ -47,18 +49,24 @@ set_politics = {
 		
 		
 		social_democracy = {
-			popularity = 21
+			popularity = 17
 		}
 
 		
 		communism = {
-			popularity = 58
+			popularity = 51
 		}
 		
+		anarchism = {
+			popularity = 5
+		}
 		
+		fascism = {
+			popularity = 2
+		}
 		
 		radical_socialism = {
-			popularity = 21
+			popularity = 25
 		}
 
 		

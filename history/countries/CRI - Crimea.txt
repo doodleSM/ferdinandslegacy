@@ -6,6 +6,7 @@ set_research_slots = 3
 set_war_support = 0.6
 
 add_ideas = {
+	RUS_black_sea_fleet_idea
 	limited_conscription
 	low_economic_mobilisation
 }

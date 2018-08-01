@@ -44,7 +44,46 @@ ideas = {
 			}
 		}
 
+		RUS_unpopular_tsar = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.2
+				mobilization_speed = -0.25
+			}
+		}
 		
+		RUS_church_power_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_orthodox_church_support
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
 
 		RUS_cossack_elites = {
 
@@ -58,12 +97,93 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = triumphant_will
+			picture = generic_motorized_equipment_manufacturer_2
 
 			modifier = {
 				cavalry_attack_factor = 0.1
+			}
+		}
+		
+		RUS_cossack_host = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_motorized_equipment_manufacturer_2
+
+			modifier = {
+				cavalry_attack_factor = 0.05
 				army_speed_factor = 0.05
-				army_morale_factor = 0.1
+			}
+		}
+		
+		RUS_black_sea_fleet_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_coastal_navy
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+				ai_focus_naval_factor = 0.5
+			}
+			
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				screen_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		
+		RUS_russian_civil_war_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				RSP = { exists = no }
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				
+			}
+			
+			targeted_modifier = {
+				tag = RSP
+				attack_bonus_against = -0.2
 			}
 		}
 }
