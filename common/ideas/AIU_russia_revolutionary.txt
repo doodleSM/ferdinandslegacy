@@ -1,0 +1,51 @@
+ideas = {
+	
+	country = {
+
+		BLU_liberation_army = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communist_army
+
+			modifier = {
+				army_org_Factor = -0.10
+				dig_in_speed_factor = -0.25
+				conscription_factor = 0.25
+				surrender_limit = 0.1
+			}
+		}
+		
+		BLU_the_moscow_and_sp_uprisings_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = prc_the_long_march2
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				mobilization_speed = -0.25
+			}
+			
+		}
+}
+political_advisor = {
+
+		
+}
