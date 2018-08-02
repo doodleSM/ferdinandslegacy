@@ -92,3 +92,82 @@ create_country_leader = {
 	}
 }
 
+create_field_marshal = {
+	name = "Lavr Kornilov"
+	#picture = "Portrait_Soviet_Lavr_Kornilov.tga"
+	traits = {
+		offensive_doctrine
+		old_guard
+		media_personality
+		cavalry_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+
+}
+
+create_field_marshal = {
+	name = "Mikhail D. Bonch-Bruyevich"
+	# picture = "Portrait_Russia_Mikhail_Bonch_Bruyevich.tga"
+	traits = {
+	 old_guard
+	 noble
+	 thorough_planner
+	 organisational_leader
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Nikolai Dukhonin"
+	# picture = "Portrait_Russia_Nikolai_Dukhonin.tga"
+	traits = {
+	old_guard
+	infantry_leader
+	trickster
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Sergei Markov"
+	#picture = "Portrait_Soviet_Sergei_Markov.tga"
+	traits = {
+		old_guard
+		career_officer
+		panzer_leader
+		trickster
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Mikhaïl Kvetsinsky"
+	#picture = "Portrait_Russia_Mikhail_Kvetsinsky.tga"
+	traits = {
+		old_guard
+		trait_cautious
+		infantry_leader
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
