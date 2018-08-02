@@ -1,0 +1,204 @@
+focus_tree = {
+	id = aiu_russia_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = RUS
+		}
+	}
+
+	focus = {
+		id = RUS_agrarian_problems
+		icon = GFX_unknown
+		x = 6
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			#add event
+		}
+	}
+
+	focus = {
+		id = RUS_ordzhonikidze_plan
+		icon = GFX_unknown
+		x = 4
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = RUS_agrarian_problems }
+
+		completion_reward = {
+			add_ideas = {
+				#
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_create_industrial_hubs
+		icon = GFX_unknown
+		x = 4
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = RUS_ordzhonikidze_plan }
+
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_cheap_labour
+		icon = GFX_unknown
+		x = 4
+		y = 3
+		cost = 5
+
+		prerequisite = { focus = RUS_create_industrial_hubs }
+
+		completion_reward = {
+			add_ideas = {
+				RUS_cheap_labour
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_chubar_plan
+		icon = GFX_unknown
+		x = 8
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = RUS_agrarian_problems}
+
+		completion_reward = {
+			add_ideas = {
+				#
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_better_agricultural_tools
+		icon = GFX_unknown
+		x = 8
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = RUS_chubar_plan }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_develop_local_industries
+		icon = GFX_unknown
+		x = 8
+		y = 3
+		cost = 5
+
+		prerequisite = { focus= RUS_better_agricultural_tools }
+
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1 
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = RUS_force_relocate
+		icon = GFX_unknown
+		x = 2
+		y = 4
+
+		cost = 5
+
+		mutually_exclusive = { focus = RUS_peaceful_relocate }
+		mutually_exclusive = { focus = RUS_gradual_relocation }
+
+		prerequisite = { focus = RUS_develop_local_industries focus = RUS_cheap_labour }
+		
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = RUS_peaceful_relocate
+		icon = GFX_unknown
+		x = 6
+		y = 4
+
+		cost = 5
+
+		prerequisite = { focus = RUS_develop_local_industries focus = RUS_cheap_labour }
+
+		mutually_exclusive = { focus = RUS_force_relocate }
+		mutually_exclusive = { focus = RUS_gradual_relocation }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = RUS_gradual_relocation
+		icon = GFX_unknown
+		x = 10
+		y = 4
+
+		cost = 5
+
+		prerequisite = { focus = RUS_develop_local_industries focus = RUS_cheap_labour }
+		mutually_exclusive = { focus = RUS_peaceful_relocate }
+		mutually_exclusive = { focus = RUS_force_relocate } 
+	}
+}

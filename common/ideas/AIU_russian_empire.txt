@@ -24,6 +24,25 @@ ideas = {
 			}
 		}
 
+		RUS_cheap_labour = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				
+			}
+		}
+
 		RUS_agrarian_society = {
 
 			allowed = {
