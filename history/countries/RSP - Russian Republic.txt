@@ -114,7 +114,6 @@ create_field_marshal = {
 	# picture = "Portrait_Russia_Mikhail_Bonch_Bruyevich.tga"
 	traits = {
 	 old_guard
-	 noble
 	 thorough_planner
 	 organisational_leader
 	}

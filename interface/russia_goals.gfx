@@ -1,0 +1,33 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goal_tsushima_legacy"
+		texturefile = "gfx/interface/goals/goal_tsushima_legacy.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_russian_empire_propaganda"
+		texturefile = "gfx/interface/goals/goal_russian_empire_propaganda.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_russia_united"
+		texturefile = "gfx/interface/goals/goal_russia_united.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_russian_soldiers"
+		texturefile = "gfx/interface/goals/goal_russian_soldiers.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_idel_ural_shield"
+		texturefile = "gfx/interface/goals/goal_idel_ural_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_mountains"
+		texturefile = "gfx/interface/goals/goal_generic_mountains.dds"
+	}
+	
+}

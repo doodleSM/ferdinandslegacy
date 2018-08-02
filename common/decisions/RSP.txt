@@ -1,0 +1,517 @@
+#Category allowed for RSP
+
+RUS_internal_politics = {
+	#
+}
+
+RUS_foreign_policy = {
+
+	RUS_annex_breakaway_neighbour_baltic = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			OR = {
+				original_tag = RUS
+				original_tag = RSP
+			}
+			has_completed_focus = RSP_restore_order
+			FROM = {
+				is_baltic_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+			has_war = no
+		}
+
+		visible = {
+			FROM = {
+				is_neighbor_of = ROOT
+				is_baltic_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+			has_completed_focus = RSP_restore_order
+		}
+
+		target_trigger = {
+			FROM = {
+				is_baltic_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+		}
+
+		days_remove = 14
+		days_re_enable = 70
+
+		cost = 50
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			FROM = { country_event = { days = 1 id = aiu_rsp.1 } set_country_flag = RUS_annex_breakaway_neighbour_flag }
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0.01
+				has_completed_focus = RSP_federal_association
+				FROM = {
+					num_of_factories > 10
+				}
+			}
+		}
+	}
+	
+	RUS_annex_breakaway_neighbour_black_sea = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			OR = {
+				original_tag = RUS
+				original_tag = RSP
+			}
+			has_completed_focus = RSP_restore_order
+			FROM = {
+				is_black_sea_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+			has_war = no
+		}
+
+		visible = {
+			FROM = {
+				is_neighbor_of = ROOT
+				is_black_sea_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+			has_completed_focus = RSP_restore_order
+		}
+
+		target_trigger = {
+			FROM = {
+				is_black_sea_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+		}
+
+		days_remove = 14
+		days_re_enable = 70
+
+		cost = 50
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			FROM = { country_event = { days = 1 id = aiu_rsp.1 } set_country_flag = RUS_annex_breakaway_neighbour_flag }
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0.01
+				has_completed_focus = RSP_federal_association
+				FROM = {
+					num_of_factories > 10
+				}
+			}
+		}
+	}
+	
+	RUS_annex_breakaway_neighbour_caucasus = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			OR = {
+				original_tag = RUS
+				original_tag = RSP
+			}
+			has_completed_focus = RSP_restore_order
+			FROM = {
+				is_caucasian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+			has_war = no
+		}
+
+		visible = {
+			FROM = {
+				is_neighbor_of = ROOT
+				is_caucasian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+			has_completed_focus = RSP_restore_order
+		}
+
+		target_trigger = {
+			FROM = {
+				is_caucasian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+		}
+
+		days_remove = 14
+		days_re_enable = 70
+
+		cost = 50
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			FROM = { country_event = { days = 1 id = aiu_rsp.1 } set_country_flag = RUS_annex_breakaway_neighbour_flag }
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0.01
+				has_completed_focus = RSP_federal_association
+				FROM = {
+					num_of_factories > 10
+				}
+			}
+		}
+	}
+	
+	RUS_annex_breakaway_neighbour_central_asia = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			OR = {
+				original_tag = RUS
+				original_tag = RSP
+			}
+			has_completed_focus = RSP_restore_order
+			FROM = {
+				is_central_asian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+			has_war = no
+		}
+
+		visible = {
+			FROM = {
+				is_neighbor_of = ROOT
+				is_central_asian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+			has_completed_focus = RSP_restore_order
+		}
+
+		target_trigger = {
+			FROM = {
+				is_central_asian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+		}
+
+		days_remove = 14
+		days_re_enable = 70
+
+		cost = 50
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			FROM = { country_event = { days = 1 id = aiu_rsp.1 } set_country_flag = RUS_annex_breakaway_neighbour_flag }
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0.01
+				has_completed_focus = RSP_federal_association
+				FROM = {
+					num_of_factories > 10
+				}
+			}
+		}
+	}
+	
+}
+
+RUS_federal_membership = {
+	
+	RUS_invite_breakaway_neighbour_baltic = {
+
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				original_tag = RUS
+				original_tag = RSP
+			}
+			has_completed_focus = RSP_federal_association
+			FROM = {
+				is_baltic_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				has_war = no
+				is_subject = no
+			}
+			has_war = no
+		}
+
+		visible = {
+			FROM = {
+				is_neighbor_of = ROOT
+				is_baltic_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+			has_completed_focus = RSP_federal_association
+		}
+
+		target_trigger = {
+			FROM = {
+				is_baltic_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+				NOT = { has_country_flag = RUS_annex_breakaway_neighbour_flag }
+			}
+		}
+
+		days_re_enable = 35
+
+		cost = 50
+
+		remove_effect = {
+			FROM = {
+				country_event = { id = generic.5 days = 1 }
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_completed_focus = RSP_federal_association
+				FROM = {
+					num_of_factories > 10
+				}
+			}
+		}
+	}
+	
+	RUS_invite_breakaway_neighbour_black_sea = {
+
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				original_tag = RUS
+				original_tag = RSP
+			}
+			has_completed_focus = RSP_federal_association
+			FROM = {
+				is_black_sea_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				has_war = no
+				is_subject = no
+			}
+			has_war = no
+		}
+
+		visible = {
+			FROM = {
+				is_neighbor_of = ROOT
+				is_black_sea_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+			has_completed_focus = RSP_federal_association
+		}
+
+		target_trigger = {
+			FROM = {
+				is_black_sea_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+				NOT = { has_country_flag = RUS_annex_breakaway_neighbour_flag }
+			}
+		}
+
+		days_re_enable = 35
+
+		cost = 50
+
+		remove_effect = {
+			FROM = {
+				country_event = { id = generic.5 days = 1 }
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_completed_focus = RSP_federal_association
+				FROM = {
+					num_of_factories > 10
+				}
+			}
+		}
+	}
+	
+	RUS_invite_breakaway_neighbour_caucasus = {
+
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				original_tag = RUS
+				original_tag = RSP
+			}
+			has_completed_focus = RSP_federal_association
+			FROM = {
+				is_caucasian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				has_war = no
+				is_subject = no
+			}
+			has_war = no
+		}
+
+		visible = {
+			FROM = {
+				is_neighbor_of = ROOT
+				is_caucasian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+			has_completed_focus = RSP_federal_association
+		}
+
+		target_trigger = {
+			FROM = {
+				is_caucasian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+				NOT = { has_country_flag = RUS_annex_breakaway_neighbour_flag }
+			}
+		}
+
+		days_re_enable = 35
+
+		cost = 50
+
+		remove_effect = {
+			FROM = {
+				country_event = { id = generic.5 days = 1 }
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_completed_focus = RSP_federal_association
+				FROM = {
+					num_of_factories > 10
+				}
+			}
+		}
+	}
+	
+	RUS_invite_breakaway_neighbour_central_asia = {
+
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				original_tag = RUS
+				original_tag = RSP
+			}
+			has_completed_focus = RSP_federal_association
+			FROM = {
+				is_central_asian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				has_war = no
+				is_subject = no
+			}
+			has_war = no
+		}
+
+		visible = {
+			FROM = {
+				is_neighbor_of = ROOT
+				is_central_asian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+			}
+			has_completed_focus = RSP_federal_association
+		}
+
+		target_trigger = {
+			FROM = {
+				is_central_asian_minor = yes
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+				NOT = { has_country_flag = RUS_annex_breakaway_neighbour_flag }
+			}
+		}
+
+		days_re_enable = 35
+
+		cost = 50
+
+		remove_effect = {
+			FROM = {
+				country_event = { id = generic.5 days = 1 }
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_completed_focus = RSP_federal_association
+				FROM = {
+					num_of_factories > 10
+				}
+			}
+		}
+	}
+
+}

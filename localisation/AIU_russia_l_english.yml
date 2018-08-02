@@ -252,6 +252,11 @@
  RSP_isolate_japan_desc:0 " "
  RSP_pacific_war:0 "Pacific War"
  RSP_pacific_war_desc:0 " "
+ RSP_restore_order_tt:0 "Unlocks §Ydecisions§! enabling us to take back the breakaway states."
+ RSP_federal_association_tt:0 "Unlocks §Ydecisions§! enabling us to offer the breakaway states membership in our federation."
+ RSP_western_fortifications_tt:0 "Builds §Yforts§! along our border with Germany."
+ RSP_berlin_moscow_alliance:0 "Berlin-Moscow Pact"
+ RSP_berlin_moscow_alliance_desc:0 " "
  
  #ideas
  RSP_the_august_revolution:0 "The August Revolution"
@@ -289,8 +294,55 @@
  RSP_germany_helping_rebuild_idea:0 "German Assistance in Reconstruction"
  RSP_lessons_of_tsushima_idea:0 "The Lessons of Tsushima"
  
+ #events
+ aiu_rsp.1.t:0 "[From.GetNameDefCap] is preparing to attack us!"
+ aiu_rsp.1.d:0 "Refusing to acknowledge the legitimacy of our government, the warmongers in [From.GetNameDef] are preparing to march into our land and take away our hard-earned and long-deserved independence. We must stand to arms!"
+ aiu_rsp.1.a:0 "We will weather this tide!"
+ 
+ #decisions
+ RUS_internal_politics:0 "Internal Politics"
+ RUS_foreign_policy:0 "Foreign Policy"
+ RUS_federal_membership:0 "Federal Membership"
+ RUS_annex_breakaway_neighbour:0 "Restore Order in [From.GetNameDef]"
+ RUS_annex_breakaway_neighbour_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. We should send in our forces and end this pretense."
+ RUS_annex_breakaway_neighbour_baltic:0 "Restore Order in [From.GetNameDef]"
+ RUS_annex_breakaway_neighbour_baltic_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. We should send in our forces and end this pretense."
+ RUS_annex_breakaway_neighbour_black_sea:0 "Restore Order in [From.GetNameDef]"
+ RUS_annex_breakaway_neighbour_black_sea_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. We should send in our forces and end this pretense."
+ RUS_annex_breakaway_neighbour_caucasus:0 "Restore Order in [From.GetNameDef]"
+ RUS_annex_breakaway_neighbour_caucasus_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. We should send in our forces and end this pretense."
+ RUS_annex_breakaway_neighbour_central_asia:0 "Restore Order in [From.GetNameDef]"
+ RUS_annex_breakaway_neighbour_central_asia_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. We should send in our forces and end this pretense."
+ RUS_invite_breakaway_neighbour:0 "Offer Federal Membership to [From.GetNameDef]"
+ RUS_invite_breakaway_neighbour_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. Our governments should work together with the best in mind for all of Russia."
+ RUS_invite_breakaway_neighbour_baltic:0 "Offer Federal Membership to [From.GetNameDef]"
+ RUS_invite_breakaway_neighbour_baltic_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. Our governments should work together with the best in mind for all of Russia."
+ RUS_invite_breakaway_neighbour_black_sea:0 "Offer Federal Membership to [From.GetNameDef]"
+ RUS_invite_breakaway_neighbour_black_sea_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. Our governments should work together with the best in mind for all of Russia."
+ RUS_invite_breakaway_neighbour_caucasus:0 "Offer Federal Membership to [From.GetNameDef]"
+ RUS_invite_breakaway_neighbour_caucasus_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. Our governments should work together with the best in mind for all of Russia."
+ RUS_invite_breakaway_neighbour_central_asia:0 "Offer Federal Membership to [From.GetNameDef]"
+ RUS_invite_breakaway_neighbour_central_asia_desc:0 "A former territory of Russia has been occupied by a government acting independently from us. Our governments should work together with the best in mind for all of Russia."
+ 
  #factions
  RSP_russian_sphere:0 "Russian Sphere"
+ 
+ #cosmetic
+ RSP_unified_russia:0 "Russia"
+ RSP_unified_russia_DEF:0 "Russia"
+ RSP_unified_russia_ADJ:0 "Russian"
+ RSP_unified_russia_social_liberalism:0 "Russia"
+ RSP_unified_russia_social_liberalism_DEF:0 "Russia"
+ RSP_unified_russia_social_liberalism_ADJ:0 "Russian"
+ RSP_unified_russia_social_democracy:0 "Russia"
+ RSP_unified_russia_social_democracy_DEF:0 "Russia"
+ RSP_unified_russia_social_democracy_ADJ:0 "Russian"
+ RSP_unified_russia_democratic:0 "Russia"
+ RSP_unified_russia_democratic_DEF:0 "Russia"
+ RSP_unified_russia_democratic_ADJ:0 "Russian"
+ RSP_unified_russia_market_lib:0 "Russia"
+ RSP_unified_russia_market_lib_DEF:0 "Russia"
+ RSP_unified_russia_market_lib_ADJ:0 "Russian"
  
  #techs
  RSP_winter_equipment_tech:0 "Rugged Equipment"

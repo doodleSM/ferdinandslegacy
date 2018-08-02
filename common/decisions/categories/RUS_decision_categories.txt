@@ -1,0 +1,29 @@
+RUS_internal_politics = {
+	icon = generic_political_actions
+	allowed = {
+		was_literally_russia = yes
+	}
+
+	visible = {
+	}
+}
+
+RUS_foreign_policy = {
+	icon = generic_crisis
+	allowed = {
+		was_literally_russia = yes
+	}
+
+	visible = {
+	}
+}
+
+RUS_federal_membership = {
+	icon = generic_political_actions
+	allowed = {
+		was_literally_russia = yes
+	}
+
+	visible = {
+	}
+}

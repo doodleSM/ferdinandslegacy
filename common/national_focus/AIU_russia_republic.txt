@@ -16,14 +16,14 @@ focus_tree = {
 
 	focus = {
 		id = RSP_conscription_targets
-		icon = GFX_focus_secret_rearmament
+		icon = GFX_goal_russian_soldiers
 		x = 2
 		y = 0
 
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 
 		available = {
@@ -138,7 +138,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 8
 		}
 
 		available = {
@@ -173,7 +173,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 8
 		}
 
 		available = {
@@ -243,7 +243,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 
 		available = {
@@ -395,7 +395,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 
 		available = {
@@ -461,7 +461,7 @@ focus_tree = {
 	
 	focus = {
 		id = RSP_winter_equipment_focus
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_goal_generic_mountains
 		x = -2
 		y = 6
 		relative_position_id = RSP_conscription_targets
@@ -744,7 +744,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 8
 		}
 
 		available = {
@@ -896,7 +896,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 
 		available = {
@@ -948,7 +948,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 
 		available = {
@@ -1201,15 +1201,6 @@ focus_tree = {
 
 		completion_reward = {
 			848 = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-						include_locked = no
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1217,15 +1208,6 @@ focus_tree = {
 				}
 			}
 			840 = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-						include_locked = no
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1233,15 +1215,7 @@ focus_tree = {
 				}
 			}
 			231 = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-						include_locked = no
-					}
-				}
+				
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1249,15 +1223,6 @@ focus_tree = {
 				}
 			}
 			229 = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-						include_locked = no
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1455,7 +1420,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 
 		available = {
@@ -1490,7 +1455,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 
 		available = {
@@ -1582,7 +1547,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 2
 		}
 
 		available = {
@@ -1618,7 +1583,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 2
 		}
 
 		available = {
@@ -1781,7 +1746,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 3
 		}
 
 		available = {
@@ -1821,7 +1786,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 3
 		}
 
 		available = {
@@ -1975,7 +1940,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 3
 		}
 
 		available = {
@@ -2010,7 +1975,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 3
 		}
 
 		available = {
@@ -2041,7 +2006,7 @@ focus_tree = {
 	
 	focus = {
 		id = RSP_lessons_of_tsushima
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_tsushima_legacy
 		x = -1
 		y = 2
 		relative_position_id = RSP_pacific_war_games
@@ -2085,7 +2050,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 3
 		}
 
 		available = {
@@ -2323,14 +2288,14 @@ focus_tree = {
 	
 	focus = {
 		id = RSP_united_russia
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_russia_united
 		x = 4
 		y = 8
 
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 30
 		}
 
 		available = {
@@ -2351,9 +2316,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			set_cosmetic_tag = RSP_unified_russia
 			if = { limit = { is_in_faction = no } create_faction = RSP_russian_sphere }
 			add_political_power = 50
-			#cosmetic tag
 		}
 	}
 	
@@ -2368,11 +2333,11 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 
 		available = {
-			always = no
+			is_subject = no
 		}
 
 		bypass = {
@@ -2388,7 +2353,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#decisions
+			custom_effect_tooltip = RSP_restore_order_tt
 		}
 	}
 	
@@ -2403,7 +2368,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 
 		available = {
@@ -2441,11 +2406,11 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 
 		available = {
-			always = no
+			is_subject = no
 		}
 
 		bypass = {
@@ -2461,7 +2426,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#decisions
+			custom_effect_tooltip = RSP_federal_association_tt
 		}
 	}
 	
@@ -2515,7 +2480,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = no
+			is_subject = no
 		}
 
 		bypass = {
@@ -2579,13 +2544,13 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 20
 		}
 
 		available = {
 			RUS = { exists = no }
 			BLU = { exists = no }
-			always = no
+			is_subject = no
 		}
 
 		bypass = {
@@ -2622,7 +2587,10 @@ focus_tree = {
 		}
 
 		available = {
-			GER = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } }
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } }
+			any_neighbor_country = {
+					tag = GRM
+					}
 		}
 
 		bypass = {
@@ -2638,7 +2606,29 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#forts
+			custom_effect_tooltip = RSP_western_fortifications_tt
+			hidden_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = RSP
+					any_neighbor_state = {
+						OR = {
+							is_owned_by = GRM
+							is_owned_by = POL
+							}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+							limit_to_border = yes
+					}
+					level = 3
+					instant_build = yes
+					}
+				}
+			}
 		}
 	}
 	
@@ -2733,7 +2723,7 @@ focus_tree = {
 		cost = 8
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
 		}
 
 		available = {
@@ -2890,6 +2880,53 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = RSP_berlin_moscow_alliance
+		icon = GFX_goal_generic_alliance
+		x = -3
+		y = 4
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_joint_officer_training }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+			OR = {
+				AND = {
+					is_faction_leader = yes
+					GRM = { is_in_faction = no }
+				}
+				AND = {
+					is_in_faction = no
+					GRM = { is_faction_leader = yes }
+					}
+			}
+			NOT = { has_war_with = GRM }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { is_faction_leader = yes } GRM = { country_event = { id = generic.5 days = 1 } } }
+			if = { limit = { is_in_faction = no } GRM = { country_event = { id = generic.2 days = 1 } } }
+		}
+	}
+	
+	focus = {
 		id = RSP_paris_diplomacy
 		icon = GFX_goal_french_shield
 		x = -1
@@ -2988,7 +3025,18 @@ focus_tree = {
 		}
 
 		available = {
-			
+			OR = {
+				AND = {
+					is_faction_leader = yes
+					FRA = { is_in_faction = no }
+				}
+				AND = {
+					is_in_faction = no
+					FRA = { is_faction_leader = yes }
+					}
+			}
+			NOT = { has_war_with = FRA }
+			is_subject = no
 		}
 
 		bypass = {
@@ -3004,7 +3052,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#faction
+			if = { limit = { is_faction_leader = yes } FRA = { country_event = { id = generic.5 days = 1 } } }
+			if = { limit = { is_in_faction = no } FRA = { country_event = { id = generic.2 days = 1 } } }
 		}
 	}
 	
@@ -3107,7 +3156,18 @@ focus_tree = {
 		}
 
 		available = {
-			
+			OR = {
+				AND = {
+					is_faction_leader = yes
+					ENG = { is_in_faction = no }
+				}
+				AND = {
+					is_in_faction = no
+					ENG = { is_faction_leader = yes }
+					}
+			}
+			NOT = { has_war_with = ENG }
+			is_subject = no
 		}
 
 		bypass = {
@@ -3123,7 +3183,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#faction
+			if = { limit = { is_faction_leader = yes } ENG = { country_event = { id = generic.5 days = 1 } } }
+			if = { limit = { is_in_faction = no } ENG = { country_event = { id = generic.2 days = 1 } } }
 		}
 	}
 	
@@ -3142,7 +3203,7 @@ focus_tree = {
 		}
 
 		available = {
-			
+			always = no
 		}
 
 		bypass = {
