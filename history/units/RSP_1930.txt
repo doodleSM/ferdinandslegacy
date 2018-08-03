@@ -601,6 +601,12 @@ units = {
 		base = 957
 		location = 957 # Vladivostok
 		# 8ya Flotiliya Esmintsev
+		ship = { name = "Imperatritsa Mariya" definition = battleship equipment = { battleship_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Izmail" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Navarin" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Rurik" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Admiral Makarov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Bayan" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSP } } }
 		ship = { name = "Zabiyaka" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSP } } }
 		ship = { name = "Samson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSP } } }
 		ship = { name = "Letun" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSP } } }

@@ -85,6 +85,8 @@ units = {
 		base = 3686
 		location = 3686 # Sevastopopl
 		ship = { name = "Sevastopol" definition = battleship equipment = { battleship_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Imperatritsa Ekaterina Velikaya" definition = battleship equipment = { battleship_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Imperator Nikolai I" definition = battleship equipment = { battleship_1 = { amount = 1 owner = CRI } } }
 		ship = { name = "Admiral Lazarev" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = CRI } } }
 		ship = { name = "Svetlana" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRI } } }
 		ship = { name = "Admiral Nakhimov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRI } } }

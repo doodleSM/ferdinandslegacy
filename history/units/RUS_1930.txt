@@ -630,6 +630,9 @@ units = {
 		location = 3151 # Leningrad
 		ship = { name = "Petropavlovsk" definition = battleship equipment = { battleship_1 = { amount = 1 owner = RUS } } }
 		ship = { name = "Gangut" definition = battleship equipment = { battleship_1 = { amount = 1 owner = RUS } } }
+		ship = { name = "Kinburn" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RUS } } }
+		ship = { name = "Borodino" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RUS } } }
+		ship = { name = "Pallada" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RUS } } }
 		# 3ya Flotiliya Esmintsev
 		ship = { name = "Desna" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RUS } } }
 		ship = { name = "Grom" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RUS } } }
