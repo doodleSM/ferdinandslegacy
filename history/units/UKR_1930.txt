@@ -157,6 +157,7 @@ air_wings = {
 	
 }
 
+instant_effect = {
 add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
@@ -176,3 +177,4 @@ add_equipment_production = {
 		progress = 0.1
 		efficiency = 50
 	}
+}

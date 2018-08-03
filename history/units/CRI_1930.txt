@@ -91,6 +91,14 @@ units = {
 		ship = { name = "Svetlana" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRI } } }
 		ship = { name = "Admiral Nakhimov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRI } } }
 		ship = { name = "Pamiat' Merkuria" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Bespokoiny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Derzky" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Gnevny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Pronzitelny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Bystry" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Gromki" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Pospeshny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRI } } }
+		ship = { name = "Pylki" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CRI } } }
 	}	
 	navy = {	
 		name = "Chernomorskiy Podvodniy Flot"
