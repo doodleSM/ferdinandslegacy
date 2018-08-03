@@ -72,6 +72,22 @@ units = {
 	}
 	
 	division= {	
+		name = "5. Jayaw Äsker Bölimi"
+		location = 10284
+		division_template = "Jayaw Äsker Bölimi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "6. Jayaw Äsker Bölimi"
+		location = 10264
+		division_template = "Jayaw Äsker Bölimi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
 		name = "1. Äskerler Bölimi"
 		location = 12227
 		division_template = "Äskerler Bölimi"

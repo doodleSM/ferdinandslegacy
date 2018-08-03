@@ -1,4 +1,4 @@
-﻿capital = 407
+﻿capital = 652
 
 oob = "IDE_1930"
 

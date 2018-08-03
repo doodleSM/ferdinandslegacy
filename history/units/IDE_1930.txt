@@ -72,6 +72,30 @@ units = {
 	}
 	
 	division= {	
+		name = "5. Uralskaya Pekhota"
+		location = 11225
+		division_template = "Uralskaya Pekhota"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "6. Uralskaya Pekhota"
+		location = 6601
+		division_template = "Uralskaya Pekhota"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "7. Uralskaya Pekhota"
+		location = 1278
+		division_template = "Uralskaya Pekhota"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
 		name = "1. Uralskaya Kavaleriya"
 		location = 464
 		division_template = "Uralskaya Kavaleriya"
@@ -82,6 +106,14 @@ units = {
 	division= {	
 		name = "2. Uralskaya Kavaleriya"
 		location = 9528
+		division_template = "Uralskaya Kavaleriya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	
+	division= {	
+		name = "3. Uralskaya Kavaleriya"
+		location = 9271
 		division_template = "Uralskaya Kavaleriya"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
