@@ -9,6 +9,8 @@ focus_tree = {
 		}
 	}
 
+	continuous_focus_position = { x = 50 y = 1600 }
+
 	focus = {
 		id = RUS_agrarian_problems
 		icon = GFX_unknown
@@ -200,5 +202,94 @@ focus_tree = {
 		prerequisite = { focus = RUS_develop_local_industries focus = RUS_cheap_labour }
 		mutually_exclusive = { focus = RUS_peaceful_relocate }
 		mutually_exclusive = { focus = RUS_force_relocate } 
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = RUS_build_industrial_towns
+		icon = GFX_unknown
+		x = 4
+		y = 5
+
+		cost = 5
+
+		prerequisite = { focus = RUS_peaceful_relocate focus = RUS_gradual_relocation focus = RUS_force_relocate }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = RUS_expand_city_holding
+		icon = GFX_unknown
+		x = 4
+		y = 6
+		cost = 5
+
+		prerequisite = { focus = RUS_build_industrial_towns }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = RUS_employment_act #lmao
+		icon = GFX_unknown
+		x = 4
+		y = 7
+		cost = 5
+
+		prerequisite = { focus = RUS_expand_city_holding }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = RUS_industrial_jobs
+		icon = GFX_unknown
+		x = 8
+		y = 5
+		cost = 5
+
+		prerequisite = { focus = RUS_force_relocate focus = RUS_peaceful_relocate focus = RUS_gradual_relocation }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = RUS_employ_railways
+		icon = GFX_unknown
+		x = 8
+		y = 6
+		cost = 5
+
+		prerequisite = { focus = RUS_industrial_jobs }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = RUS_incentize_workers
+		icon = GFX_unknown
+		x = 8
+		y = 7
+		cost = 5
+
+		prerequisite = { focus = RUS_employ_railways }
+
+		completion_reward = {
+		
+		}
 	}
 }
