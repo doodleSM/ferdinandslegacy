@@ -186,6 +186,45 @@ ideas = {
 				attack_bonus_against = -0.2
 			}
 		}
+
+		RUS_orohodzinkes_plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		RUS_chubars_plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
 }
 political_advisor = {
 

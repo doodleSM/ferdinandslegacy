@@ -295,6 +295,10 @@
  RSP_lessons_of_tsushima_idea:0 "The Lessons of Tsushima"
  RSP_restless_left_idea:0 "Restless Left"
  RSP_restless_left_idea_desc:0 "Though we drove out the attempted Moscow uprising, stay-behind guerillas and agitators still persist in our territory."
+ RUS_orohodzinkes_plan:0 "Ordzhonikidze's Plan"
+ RUS_orohodzinkes_plan_desc:0 "Ordzhonikidze's plan is to quicken the reforms of the agriculture in Russia."
+ RUS_chubars_plan:0 "Chubar's Plan"
+ RUS_chubars_plan_desc:0 "Chubar's plan is to gradually and slowly integrate reformation in to the agriculture in Russia."
  
  #events
  aiu_rsp.1.t:0 "[From.GetNameDefCap] is preparing to attack us!"
