@@ -30,4 +30,39 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_generic_mountains.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_goal_religious_tolerance"
+		texturefile = "gfx/interface/goals/goal_religious_tolerance.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_steppe_rider"
+		texturefile = "gfx/interface/goals/goal_steppe_rider.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_empty_account"
+		texturefile = "gfx/interface/goals/goal_empty_account.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_woman_soldier"
+		texturefile = "gfx/interface/goals/goal_woman_soldier.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_kazan_shield"
+		texturefile = "gfx/interface/goals/goal_kazan_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_stamp_communism"
+		texturefile = "gfx/interface/goals/goal_stamp_communism.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_money"
+		texturefile = "gfx/interface/goals/goal_generic_money.dds"
+	}
+	
 }
