@@ -19,7 +19,7 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			#add event
+			add_political_power = 25
 		}
 	}
 
@@ -32,10 +32,10 @@ focus_tree = {
 
 		prerequisite = { focus = RUS_agrarian_problems }
 
+		mutually_exclusive = { focus = RUS_chubar_plan }
+
 		completion_reward = {
-			add_ideas = {
-				#
-			}
+			add_ideas = { RUS_orohodzinkes_plan }
 		}
 	}
 
@@ -88,12 +88,12 @@ focus_tree = {
 		y = 1
 		cost = 5
 
-		prerequisite = { focus = RUS_agrarian_problems}
+		prerequisite = { focus = RUS_agrarian_problems }
+
+		mutually_exclusive = { focus = }
 
 		completion_reward = {
-			add_ideas = {
-				#
-			}
+			add_ideas = { RUS_ordzhonikidze_plan }
 		}
 	}
 
@@ -289,7 +289,7 @@ focus_tree = {
 		prerequisite = { focus = RUS_employ_railways }
 
 		completion_reward = {
-		
+
 		}
 	}
 }

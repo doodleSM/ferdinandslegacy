@@ -30,6 +30,7 @@ TAI = "countries/Taiwan.txt"
 XSG = "countries/Gansu Ma Clique.txt"
 ZHI = "countries/Zhili.txt"
 ZHJ = "countries/Zhejiang.txt"
+FIC = "countries/French Indochina.txt"
 #middle east and africa
 ARA = "countries/Arabia.txt"
 CRE = "countries/Crete.txt"
