@@ -1,0 +1,22 @@
+state={
+	id=876
+	name="STATE_876"
+	provinces={
+		23 106 135 196 3087 3099 3135 6112 6113 6119 6158 6180 6190 9043 9133 9136 9200 9210 9222 11027 11035 11075 11143 11180 
+	}
+	history={
+		owner = RSP
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = BLU
+
+	}
+
+	manpower=289564
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

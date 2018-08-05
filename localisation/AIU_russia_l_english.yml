@@ -349,6 +349,7 @@
  RSP_unified_russia_market_lib:0 "Russia"
  RSP_unified_russia_market_lib_DEF:0 "Russia"
  RSP_unified_russia_market_lib_ADJ:0 "Russian"
+ RSP_russia_is_unified:0 "Russia is unified under the Provisional Government"
  
  #techs
  RSP_winter_equipment_tech:0 "Rugged Equipment"

@@ -65,4 +65,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_generic_money.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_goal_generic_dove"
+		texturefile = "gfx/interface/goals/goal_generic_dove.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_transcaucasia_shield"
+		texturefile = "gfx/interface/goals/goal_transcaucasia_shield.dds"
+	}
+	
 }

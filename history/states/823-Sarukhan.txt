@@ -2,7 +2,7 @@ state={
 	id=823
 	name="STATE_823"
 	provinces={
-		928 3927 9921 11898 
+		928 3927 6992 9921 11898 
 	}
 	resources={
 		chromium=30.000

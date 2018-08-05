@@ -1,0 +1,23 @@
+state={
+	id=882
+	name="STATE_882"
+	provinces={
+		7448 7584 7984 10476 10852 10896 12248 12877 
+	}
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			7584 1 #balkh
+		}
+		add_core_of = AFG
+
+	}
+
+	manpower=1984643
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

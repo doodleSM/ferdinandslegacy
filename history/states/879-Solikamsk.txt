@@ -1,0 +1,22 @@
+state={
+	id=879
+	name="STATE_879"
+	provinces={
+		123 189 3127 4314 4326 4802 11111 11195 12175 12187 12527 12587 
+	}
+
+	history={
+		owner = RSP
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = BLU
+
+	}
+	manpower=457463
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

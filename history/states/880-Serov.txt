@@ -1,0 +1,21 @@
+state={
+	id=880
+	name="STATE_880"
+	provinces={
+		1704 1771 1841 4813 7778 10648 10716 10720 12696 
+	}
+	history={
+		owner = RSP
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = BLU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+	manpower=467564
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

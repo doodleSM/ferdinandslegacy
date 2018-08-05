@@ -2319,6 +2319,7 @@ focus_tree = {
 			set_cosmetic_tag = RSP_unified_russia
 			if = { limit = { is_in_faction = no } create_faction = RSP_russian_sphere }
 			add_political_power = 50
+			set_country_flag = RSP_russia_is_unified
 		}
 	}
 	
@@ -2467,7 +2468,7 @@ focus_tree = {
 	
 	focus = {
 		id = RSP_purge_marxism
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_goal_stamp_communism
 		x = 2
 		y = 1
 		relative_position_id = RSP_united_russia
@@ -2480,7 +2481,6 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
 		}
 
 		bypass = {
@@ -2496,7 +2496,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#remove negative idea
+			remove_ideas = RSP_restless_left_idea
 		}
 	}
 	
