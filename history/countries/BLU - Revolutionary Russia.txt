@@ -34,7 +34,7 @@ add_ideas = {
 	BLU_liberation_army
 	BLU_the_moscow_and_sp_uprisings_idea
 	limited_conscription
-	partial_economic_mobilisation
+	low_economic_mobilisation
 }
 
 set_research_slots = 3
@@ -42,6 +42,50 @@ set_research_slots = 3
 set_war_support = 0.65
 
 set_convoys = 100
+
+puppet = BLR
+
+BLR = {
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 6
+		}
+		
+		social_democracy = { 
+			popularity = 7
+		}
+
+		neutrality = {
+			popularity = 3
+		}
+		
+		anarchism = {
+			popularity = 2
+		}
+		
+		radical_socialism = {
+			popularity = 19
+		}
+		
+		communism = {
+			popularity = 71
+		}
+
+		fascism = { 
+			popularity = 2
+		}
+	}
+	
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+}
 
 set_politics = {
 
@@ -109,4 +153,53 @@ create_country_leader = {
 	traits = {
 		#
 	}
+}
+
+create_corps_commander = {
+	name = "Vasily Chuikov"
+	picture = "Portrait_Soviet_Vasily_Chuikov.dds"
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	traits = { brilliant_strategist career_officer }
+}
+
+create_corps_commander = {
+	name = "Boris Shaposhnikov"
+		picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
+	traits = { trait_cautious career_officer }
+	skill = 3
+	
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Vasily Kuznetsov"
+		picture = "Portrait_Soviet_Vasily_Kuznetsov.dds"
+	traits = { commando infantry_officer }
+	skill = 3
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Semyon Timoshenko"
+	picture = "Portrait_Soviet_Semyon_Timoshenko.dds"
+	traits = { cavalry_officer politically_connected career_officer }
+	skill = 3
+
+
+	
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
 }

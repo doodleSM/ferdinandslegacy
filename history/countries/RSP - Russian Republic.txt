@@ -82,6 +82,14 @@ set_politics = {
 }
 
 
+declare_war_on = {
+		target = BLU
+		type = annex_everything
+	}
+
+add_opinion_modifier = { target = RSP modifier = hostile_status }
+
+
 create_country_leader = {
 	name = "Alexsander Kerensky"
 	desc = ""

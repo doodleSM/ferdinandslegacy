@@ -147,7 +147,7 @@ units = {
 		location = 11476
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -158,7 +158,7 @@ units = {
 		location = 484
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -169,7 +169,7 @@ units = {
 		location = 9565
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -180,7 +180,7 @@ units = {
 		location = 510
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -191,7 +191,7 @@ units = {
 		location = 413
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -202,7 +202,7 @@ units = {
 		location = 3580
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -213,7 +213,7 @@ units = {
 		location = 9288
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -224,7 +224,7 @@ units = {
 		location = 3320
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -235,7 +235,7 @@ units = {
 		location = 3392
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -246,7 +246,7 @@ units = {
 		location = 11301
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -257,7 +257,7 @@ units = {
 		location = 11241
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -268,7 +268,7 @@ units = {
 		location = 11234
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -279,7 +279,7 @@ units = {
 		location = 9254
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	# 		
@@ -290,7 +290,95 @@ units = {
 		location = 11259
 		division_template = "Strelkovaya Diviziya"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
+
+	}
+	division= {	# 		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 6262
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division= {	# 		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = 3199
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division= {	# 		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 437
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division= {	# 		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+		location = 9399
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division= {	# 		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = 3313
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division= {	# 		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = 3250
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division= {	# 		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = 6428
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division= {	# 		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 32
+		}
+		location = 9461
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -318,12 +406,34 @@ units = {
 	division= {	#		
 		division_name = {
 			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 11230
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	division= {	#		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 3376
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	division= {	#		
+		division_name = {
+			is_name_ordered = yes
 			name_order = 1
 		}
 		location = 354
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -334,7 +444,7 @@ units = {
 		location = 335
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -345,7 +455,7 @@ units = {
 		location = 3308
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -356,9 +466,22 @@ units = {
 		location = 6317
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
+	
+	division= {	#		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6517
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+
+	}
+	
 	division= {	#		
 		division_name = {
 			is_name_ordered = yes
@@ -367,7 +490,7 @@ units = {
 		location = 6566
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -378,7 +501,7 @@ units = {
 		location = 9253
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -389,7 +512,7 @@ units = {
 		location = 533
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -400,7 +523,7 @@ units = {
 		location = 9274
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -411,7 +534,7 @@ units = {
 		location = 233
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -422,7 +545,7 @@ units = {
 		location = 11259
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 	division= {	#		
@@ -433,7 +556,7 @@ units = {
 		location = 11301
 		division_template = "Militsiya"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.75
 
 	}
 
@@ -466,7 +589,7 @@ air_wings = {
 			amount = 60
 		}
 	}
-	206 = { 
+	218 = { 
 		# 15ya Istrebitel'nye Aviabrigada
 		fighter_equipment_0 = {
 			owner = "BLU" 

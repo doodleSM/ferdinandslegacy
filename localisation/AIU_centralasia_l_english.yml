@@ -661,6 +661,7 @@
  IDE_raid_ala:0 "Conduct A Raid Against Alash"
  IDE_raid_khi:0 "Conduct A Raid Against Khiva"
  IDE_raid_don:0 "Conduct A Raid Against Don"
+ IDE_raid_che:0 "Conduct A Raid Against Terek"
  IDE_raid_rsp:0 "Conduct A Raid Against The Russian Republic"
  IDE_raid_blu:0 "Conduct A Raid Against The Reds"
  IDE_offer_astrakhan_protection:0 "Defensive Alliance with Astrakhan"

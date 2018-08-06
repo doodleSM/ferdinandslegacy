@@ -14,6 +14,12 @@ IDE_foreign_policy = {
 			ASC = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } }
 			is_subject = no 
 		}
+		
+		target_trigger = {
+            FROM = {
+                  tag = ASC
+              }
+        }
 
 		visible = {
 			ASC = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
@@ -73,6 +79,12 @@ IDE_foreign_policy = {
 			ALA = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
 			is_subject = no 
 		}
+		
+		target_trigger = {
+            FROM = {
+                  tag = ALA
+              }
+        }
 
 		visible = {
 			ALA = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
@@ -131,6 +143,12 @@ IDE_foreign_policy = {
 			KHI = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
 			is_subject = no 
 		}
+		
+		target_trigger = {
+            FROM = {
+                  tag = KHI
+              }
+        }
 
 		visible = {
 			KHI = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no  }
@@ -188,6 +206,12 @@ IDE_foreign_policy = {
 			DON = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } }
 			is_subject = no 
 		}
+		
+		target_trigger = {
+            FROM = {
+                  tag = DON
+              }
+        }
 
 		visible = {
 			DON = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no  }
@@ -238,6 +262,70 @@ IDE_foreign_policy = {
 		}
 	}
 	
+	IDE_raid_che = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			CHE = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } }
+			is_subject = no 
+		}
+		
+		target_trigger = {
+            FROM = {
+                  tag = CHE
+              }
+        }
+
+		visible = {
+			CHE = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no  }
+			NOT = { has_guaranteed = CHE }
+			any_neighbor_country = {
+					tag = CHE
+				}
+			has_completed_focus = IDE_border_raids
+			NOT = { has_country_flag = IDE_preparing_a_raid }
+			NOT = { OR = { has_idea = IDE_very_successful_raid has_idea = IDE_successful_raid has_idea = IDE_failed_raid } }
+		}
+
+		days_remove = 7
+		days_re_enable = 120
+
+		cost = 25
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			set_country_flag = IDE_preparing_a_raid
+		}
+			
+		remove_effect = {
+			#country_event = { days = 1 id = ide.# }
+			#CHE = { country_event = { days = 1 id = ide.# } }
+			random_list = {
+				33 = {
+					country_event = { days = 1 id = aiu_ide.5 }
+					hidden_effect = { CHE = { country_event = { days = 1 id = aiu_ide.8 } } }
+				}
+				33 = {
+					country_event = { days = 1 id = aiu_ide.6 }
+					hidden_effect = { CHE = { country_event = { days = 1 id = aiu_ide.9 } } }
+				}
+				33 = {
+					country_event = { days = 1 id = aiu_ide.7 }
+					hidden_effect = { CHE = { country_event = { days = 1 id = aiu_ide.9 } } }
+				}
+			}
+			clr_country_flag = IDE_preparing_a_raid
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
 	IDE_raid_rsp = {
 
 		icon = generic_ignite_civil_war
@@ -246,6 +334,12 @@ IDE_foreign_policy = {
 			RSP = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } }
 			is_subject = no 
 		}
+		
+		target_trigger = {
+            FROM = {
+                  tag = RSP
+              }
+        }
 
 		visible = {
 			RSP = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no  }
@@ -305,6 +399,12 @@ IDE_foreign_policy = {
 			BLU = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } }
 			is_subject = no 
 		}
+		
+		target_trigger = {
+            FROM = {
+                  tag = BLU
+              }
+        }
 
 		visible = {
 			BLU = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }

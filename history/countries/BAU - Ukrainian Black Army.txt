@@ -23,6 +23,11 @@ add_ideas = {
 	low_economic_mobilisation
 }
 
+declare_war_on = {
+		target = UKR
+		type = annex_everything
+	}
+
 set_convoys = 30
 
 set_politics = {

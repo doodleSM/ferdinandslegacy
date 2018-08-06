@@ -85,6 +85,7 @@ ideas = {
 			
 			cancel = {
 				RUS = { exists = no }
+				BLU = { exists = no }
 			}
 
 			picture = FRA_scw_intervention_nationalists_focus
@@ -375,6 +376,25 @@ ideas = {
 				enemy_partisan_effect = -0.2
 				communism_drift = -0.02
 				anarchism_drift = -0.02
+			}
+		}
+		
+		RSP_winter_gear_idea = {
+
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				winter_attrition_factor = -0.2
 			}
 		}
 		

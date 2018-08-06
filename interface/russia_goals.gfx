@@ -75,4 +75,44 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_transcaucasia_shield.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_goal_generic_wheat"
+		texturefile = "gfx/interface/goals/goal_generic_wheat.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukrainian_shield"
+		texturefile = "gfx/interface/goals/goal_ukrainian_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukrainian_shield_skull"
+		texturefile = "gfx/interface/goals/goal_ukrainian_shield_skull.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_finland_shield"
+		texturefile = "gfx/interface/goals/goal_finland_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_soviet_animation"
+		texturefile = "gfx/interface/goals/goal_soviet_animation.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_crimean_peninsula"
+		texturefile = "gfx/interface/goals/goal_crimean_peninsula.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_central_asia"
+		texturefile = "gfx/interface/goals/goal_central_asia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_baltic_states"
+		texturefile = "gfx/interface/goals/goal_baltic_states.dds"
+	}
+	
 }

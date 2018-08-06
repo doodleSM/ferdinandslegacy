@@ -173,6 +173,7 @@ ideas = {
 			
 			cancel = {
 				RSP = { exists = no }
+				BLU = { exists = no }
 			}
 
 			picture = FRA_scw_intervention_nationalists_focus

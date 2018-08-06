@@ -36,6 +36,15 @@ set_technology = {
 
 set_convoys = 250
 
+
+declare_war_on = {
+		target = BLU
+		type = annex_everything
+	}
+	
+
+add_opinion_modifier = { target = RSP modifier = hostile_status }
+
 add_ideas = RUS_unpopular_tsar
 add_ideas = RUS_cossack_elites
 add_ideas = RUS_church_power_idea

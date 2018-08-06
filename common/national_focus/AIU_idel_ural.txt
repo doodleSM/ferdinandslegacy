@@ -134,7 +134,7 @@ focus_tree = {
 	
 	focus = {
 		id = IDE_our_land_our_bread
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_wheat
 		x = -3
 		y = 2
 		relative_position_id = IDE_the_new_state
@@ -2755,7 +2755,7 @@ focus_tree = {
 	
 	focus = {
 		id = IDE_ukrainian_alliance
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_goal_ukrainian_shield
 		x = 2
 		y = 1
 		prerequisite = { focus = IDE_foreign_policy }
