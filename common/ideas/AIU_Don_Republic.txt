@@ -1,0 +1,193 @@
+ideas = {
+	
+	country = {
+	
+	DON_scourge_of_the_steppes = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				political_power_gain = 0.1
+				cavalry_attack_factor = 0.1
+				army_speed_factor = 0.1
+				conscription_factor = 0.025
+			}
+		}
+	DON_succesful_raid = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				consumer_good_factor = -0.05
+			}
+		}
+		DON_very_succesful_raid = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				consumer_good_factor = -0.1
+			}
+		}
+		DON_failed_raid = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				war_support_factor = -0.1
+			}
+		}
+		DON_emergency_workers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = GFX_idea_generic_exploit_mines
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		DON_accepted_refugees = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = GFX_idea_generic_exploit_mines
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				monthly_population = 0.1
+				political_power_gain = -0.05
+			}
+		}
+		DON_surplus_harvest = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = GFX_idea_generic_agrarian_society
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		DON_invasion_preperation = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				planning_speed = 0.2
+				training_time_army_factor = -0.1
+				army_morale_factor = 0.04
+			}
+		}	
+
+		
+	}
+
+}
