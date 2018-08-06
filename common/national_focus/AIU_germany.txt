@@ -911,7 +911,7 @@ focus_tree = {
 		x = 7
 		y = 11
 		prerequisite = { focus = GRM_seize_chinese_lands }
-		mutually_exlusive = {focus = GRM_threaten_anhui}
+		mutually_exclusive = {focus = GRM_threaten_anhui}
 		
 		cost = 10
 
@@ -977,7 +977,7 @@ focus_tree = {
 		x = 11
 		y = 11
 		prerequisite = { focus = GRM_seize_chinese_lands }
-		mutually_exlusive = {focus = GRM_strengthen_ties_with_beyinyang}
+		mutually_exclusive = {focus = GRM_strengthen_ties_with_beyinyang}
 		
 		cost = 10
 

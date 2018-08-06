@@ -1,0 +1,3000 @@
+focus_tree = {
+	id = aiu_idel_ural_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = IDE
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1600 }
+
+	focus = {
+		id = IDE_the_new_state
+		icon = GFX_goal_idel_ural_shield
+		x = 6
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = IDE_socialist_ideals
+		icon = GFX_goal_red_flag
+		x = -4
+		y = 1
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_the_new_state }
+		mutually_exclusive = { focus = IDE_democratic_federal_republic }
+		mutually_exclusive = { focus = IDE_restore_the_khanate }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.4
+			}
+			add_stability = -0.05
+		}
+	}
+	
+	focus = {
+		id = IDE_immediate_land_reform
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -5
+		y = 2
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_socialist_ideals }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_our_land_our_bread
+		icon = GFX_goal_generic_consumer_goods
+		x = -3
+		y = 2
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_socialist_ideals }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_red_militias
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = -4
+		y = 3
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_immediate_land_reform }
+		prerequisite = { focus = IDE_our_land_our_bread }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_red_militias_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_union_of_brothers_and_sisters
+		icon = GFX_goal_woman_soldier
+		x = -3
+		y = 6
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_regional_training_grounds }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_ideas = IDE_union_of_brothers_and_sisters_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_local_industry
+		icon = GFX_goal_generic_soviet_construction
+		x = -6
+		y = 3
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_immediate_land_reform }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_expel_parasite_landowners
+		icon = GFX_focus_rom_parties_end
+		x = -3
+		y = 4
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_red_militias }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = IDE_powerful_landowners
+		}
+	}
+	
+	focus = {
+		id = IDE_regional_training_grounds
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = -4
+		y = 5
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_red_militias }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_regional_training_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_peoples_war
+		icon = GFX_focus_generic_support_the_left_right
+		x = -5
+		y = 6
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_regional_training_grounds }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.2
+		}
+	}
+	
+	focus = {
+		id = IDE_socialist_education
+		icon = GFX_focus_generic_socialist_science
+		x = -4
+		y = 7
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_regional_training_grounds }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = IDE_building_utopia
+		icon = GFX_goal_support_communism
+		x = -5
+		y = 4
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_red_militias }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = IDE_democratic_federal_republic
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 1
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_the_new_state }
+		mutually_exclusive = { focus = IDE_socialist_ideals }
+		mutually_exclusive = { focus = IDE_restore_the_khanate }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = IDE_league_of_peoples
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 2
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_democratic_federal_republic }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_league_of_peoples_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_represent_all_nations
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = -1
+		y = 3
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_league_of_peoples }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IDE_league_of_peoples_idea
+				add_idea = IDE_league_of_peoples_idea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_rural_loans
+		icon = GFX_goal_generic_construct_civilian
+		x = -1
+		y = 4
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_represent_all_nations }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_ally_kulaks
+		icon = GFX_goal_generic_improve_relations
+		x = -1
+		y = 5
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_rural_loans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IDE_powerful_landowners
+				add_idea = IDE_powerful_landowners_allied
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_progressive_madrassahs
+		icon = GFX_goal_generic_scientific_exchange
+		x = 1
+		y = 3
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_league_of_peoples }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = IDE_return_of_the_diaspora
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 4
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_progressive_madrassahs }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { has_full_control_of_state = 652 } 652 = { add_manpower = 100000 add_extra_state_shared_building_slots = 1 } }
+			if = { limit = { has_full_control_of_state = 251 } 251 = { add_manpower = 100000 add_extra_state_shared_building_slots = 1 } }
+			if = { limit = { has_full_control_of_state = 401 } 401 = { add_manpower = 100000 add_extra_state_shared_building_slots = 1 } }
+			if = { limit = { has_full_control_of_state = 651 } 651 = { add_manpower = 100000 add_extra_state_shared_building_slots = 1 } }
+			if = { limit = { has_full_control_of_state = 249 } 249 = { add_manpower = 100000 add_extra_state_shared_building_slots = 1 } }
+			if = { limit = { has_full_control_of_state = 217 } 217 = { add_manpower = 100000 add_extra_state_shared_building_slots = 1 } }
+		}
+	}
+	
+	focus = {
+		id = IDE_religious_tolerance
+		icon = GFX_goal_religious_tolerance
+		x = 1
+		y = 5
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_return_of_the_diaspora }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = IDE_loyal_army
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 6
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_ally_kulaks }
+		prerequisite = { focus = IDE_religious_tolerance }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_loyal_army_idea
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = IDE_restore_the_khanate
+		icon = GFX_goal_kazan_shield
+		x = 4
+		y = 1
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_the_new_state }
+		mutually_exclusive = { focus = IDE_socialist_ideals }
+		mutually_exclusive = { focus = IDE_democratic_federal_republic }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = IDE_kazan
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			hidden_effect = {
+			
+				create_country_leader = {
+				name = "Khan Felix I Yusupov"
+				desc = "POLITICS_FELIX_I_DESC"
+				picture = "IDE_Khan_Yusupov.dds"			
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					trait_bohemian
+				}
+				id = 11776
+				}
+				
+				country_event = { days = 1 id = aiu_ide.11 }
+			
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.33
+			}
+			hidden_effect = {
+			create_field_marshal = {
+			name = "Felix I Yusupov"
+			picture = "IDE_Khan_Yusupov.dds"
+			traits = {
+				media_personality
+				trait_reckless
+			}
+			id = 11777
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_cultural_awakening
+		icon = GFX_goal_generic_demand_territory
+		x = 4
+		y = 2
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_restore_the_khanate }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_cultural_awakening_idea
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_border_raids
+		icon = GFX_focus_generic_provoke_border_clashes #GFX_goal_generic_occupy_states_ongoing_war
+		x = 3
+		y = 3
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_cultural_awakening }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = IDE_border_raids_tt
+			#decisions
+		}
+	}
+	
+	focus = {
+		id = IDE_five_darugas
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 5
+		y = 3
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_cultural_awakening }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_darugas_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_khans_royal_guard
+		icon = GFX_goal_generic_military_sphere
+		x = 5
+		y = 4
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_five_darugas }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = IDE_khans_royal_guard_tt
+			hidden_effect = {
+				division_template = {
+					name = "Zashtitnitsite na Khan"
+					is_locked = no
+					priority = 2
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+			
+	    	   		 	infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+			
+	    	   		 	infantry = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 652 }
+					create_unit = {
+						division = "name = \"1. Zashtitnitsite na Khan\" division_template = \"Zashtitnitsite na Khan\" start_experience_factor = 0.8" 
+						owner = "IDE"
+					}
+					create_unit = {
+						division = "name = \"2. Zashtitnitsite na Khan\" division_template = \"Zashtitnitsite na Khan\" start_experience_factor = 0.8" 
+						owner = "IDE"
+					}
+				}			
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_youth_mobilisation
+		icon = GFX_goal_support_fascism
+		x = 4
+		y = 5
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_five_darugas }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_youth_mobilisation_idea
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_dragonhearted
+		icon = GFX_goal_generic_special_forces
+		x = 4
+		y = 6
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_youth_mobilisation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_dragonhearted_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_morzalar_officers
+		icon = GFX_goal_generic_cavalry
+		x = 6
+		y = 5
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_five_darugas }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_morzalar_officers_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_hand_out_new_titles
+		icon = GFX_focus_generic_home_defense
+		x = 6
+		y = 6
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_morzalar_officers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IDE_powerful_landowners
+				add_idea = IDE_powerful_landowners_titled
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_kazan_empire
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 5
+		y = 7
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_dragonhearted }
+		prerequisite = { focus = IDE_hand_out_new_titles }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = IDE_ulanus_university
+		icon = GFX_focus_research
+		x = 7
+		y = 7
+		relative_position_id = IDE_the_new_state
+		prerequisite = { focus = IDE_hand_out_new_titles }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = IDE_engineering_a_nation
+		icon = GFX_goal_generic_production2
+		x = 17
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_engineering_a_nation
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_new_manufactories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_engineering_a_nation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				prioritize = { 251 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_gun_workshops
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 2
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_new_manufactories }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+	
+	focus = {
+		id = IDE_arms_production
+		icon = GFX_goal_generic_build_tank
+		x = -1
+		y = 3
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_gun_workshops }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				prioritize = { 651 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_new_country_roads
+		icon = GFX_goal_generic_construct_civilian
+		x = 1
+		y = 1
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_engineering_a_nation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				prioritize = { 407 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 5
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				prioritize = { 856 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 5
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_ufa_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 1
+		y = 2
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_new_country_roads }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				prioritize = { 651 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_national_bank
+		icon = GFX_goal_generic_money
+		x = 1
+		y = 3
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_ufa_railway }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_reformed_bank_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_technical_colleges
+		icon = GFX_focus_research2
+		x = 0
+		y = 4
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_arms_production }
+		prerequisite = { focus = IDE_national_bank }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = IDE_oil_extraction
+		icon = GFX_goal_generic_oil_refinery
+		x = -2
+		y = 5
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_technical_colleges }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_full_control_of_state = 651
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			651 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+			if = { limit = { has_full_control_of_state = 582 }
+				582 = {
+				add_resource = {
+					type = oil
+					amount = 8
+					}
+				}
+			}
+			if = { limit = { has_full_control_of_state = 249 }
+				249 = {
+				add_resource = {
+					type = oil
+					amount = 8
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_rubber_fields
+		icon = GFX_goal_generic_army_motorized
+		x = -2
+		y = 7
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_oil_extraction }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_full_control_of_state = 856
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			856 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}
+			}
+			if = { limit = { has_full_control_of_state = 402 }
+				402 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_ural_resources
+		icon = GFX_focus_generic_steel
+		x = -1
+		y = 6
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_technical_colleges }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_full_control_of_state = 582
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			582 = {
+				add_resource = {
+					type = tungsten
+					amount = 8
+					}
+				add_resource = {
+					type = aluminium
+					amount = 8
+					}
+				add_resource = {
+					type = chromium
+					amount = 8
+					}
+				}
+		}
+	}
+	
+	focus = {
+		id = IDE_kazan_capital
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 5
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_technical_colleges }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			has_full_control_of_state = 249
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_capital = 249
+			249 = {
+				add_manpower = 100000
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_aircraft_designs
+		icon = GFX_goal_generic_build_airforce
+		x = 2
+		y = 5
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_technical_colleges }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 10
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_fighter_designs
+		icon = GFX_goal_generic_air_fighter
+		x = 1
+		y = 6
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_aircraft_designs }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.75
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_cas_designs
+		icon = GFX_goal_generic_CAS
+		x = 3
+		y = 6
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_aircraft_designs }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_cas_designs
+				bonus = 0.75
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_bomber_designs
+		icon = GFX_goal_generic_air_bomber
+		x = 2
+		y = 7
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_fighter_designs }
+		prerequisite = { focus = IDE_cas_designs }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_tac_bomber_focus
+				bonus = 0.75
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_air_training
+		icon = GFX_goal_generic_air_doctrine
+		x = 2
+		y = 8
+		relative_position_id = IDE_engineering_a_nation
+		prerequisite = { focus = IDE_bomber_designs }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_modern_army
+		icon = GFX_focus_chi_army_reform
+		x = 23
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_arms_shortages
+		icon = GFX_goal_generic_defence
+		x = -2
+		y = 1
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_modern_army }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_arms_shortages_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_new_rifle
+		icon = GFX_goal_generic_small_arms
+		x = -2
+		y = 2
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_arms_shortages }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_new_rifle
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_heavy_artillery
+		icon = GFX_goal_generic_army_artillery2
+		x = -2
+		y = 3
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_new_rifle }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_heavy_artillery
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_live_off_the_land
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 1
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_modern_army }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_live_off_the_land_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_steppe_cavalry
+		icon = GFX_goal_generic_cavalry
+		x = 0
+		y = 2
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_live_off_the_land }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_steppe_cavalry_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_ghost_riders
+		icon = GFX_goal_steppe_rider
+		x = 0
+		y = 3
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_steppe_cavalry }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = IDE_steppe_cavalry_idea
+				add_idea = IDE_steppe_cavalry_idea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_scouts_and_engineers
+		icon = GFX_goal_generic_construction2
+		x = 2
+		y = 1
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_modern_army }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_scouts_and_engineers
+				bonus = 0.5
+				uses = 2
+				category = engineers_tech
+				category = recon_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_mountain_divisions
+		icon = GFX_goal_generic_special_forces
+		x = 2
+		y = 2
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_scouts_and_engineers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_mountain_divisions
+				bonus = 0.75
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_warriors_of_the_urals
+		icon = GFX_goal_generic_mountains
+		x = 2
+		y = 3
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_mountain_divisions }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			custom_effect_tooltip = RSP_winter_equipment_focus_effect
+			hidden_effect = { set_technology = { RSP_winter_equipment_tech = 1 } }
+		}
+	}
+	
+	focus = {
+		id = IDE_war_direction_council
+		icon = GFX_goal_generic_position_armies
+		x = -1
+		y = 4
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_heavy_artillery focus = IDE_ghost_riders focus = IDE_warriors_of_the_urals }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_increased_officer_coordination
+		icon = GFX_focus_generic_military_mission
+		x = -1
+		y = 5
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_war_direction_council }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_increased_officer_coordination_idea
+		}
+	}
+	
+	focus = {
+		id = IDE_the_modern_art_of_war
+		icon = GFX_focus_generic_combined_arms
+		x = 1
+		y = 4
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_heavy_artillery focus = IDE_ghost_riders focus = IDE_warriors_of_the_urals }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_army_motorisation
+		icon = GFX_goal_generic_army_motorized
+		x = 1
+		y = 5
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_the_modern_art_of_war }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				technology = motorised_infantry
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_armoured_vehicles
+		icon = GFX_focus_generic_tank_production
+		x = 1
+		y = 6
+		relative_position_id = IDE_modern_army
+		prerequisite = { focus = IDE_army_motorisation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_armoured_vehicles
+				uses = 1
+				bonus = 0.5
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_foreign_policy
+		icon = GFX_goal_idel_alliance
+		x = 6
+		y = 8
+		prerequisite = { focus = IDE_socialist_education focus = IDE_loyal_army focus = IDE_kazan_empire }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_subject = no 
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = IDE_caucasian_alliance
+		icon = GFX_goal_transcaucasia_shield
+		x = -2
+		y = 1
+		prerequisite = { focus = IDE_foreign_policy }
+		relative_position_id = IDE_foreign_policy
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			CAU = { exists = yes is_in_faction = no has_war = no is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { is_faction_leader = yes } CAU = { country_event = { id = generic.5 days = 1 } } }
+			else = { CAU = { country_event = { days = 1 id = aiu_ide.1 } } }
+		}
+	}
+	
+	focus = {
+		id = IDE_ukrainian_alliance
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 1
+		prerequisite = { focus = IDE_foreign_policy }
+		relative_position_id = IDE_foreign_policy
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+			BAU = { exists = yes is_in_faction = no has_war = no is_subject = no }
+			UKR = { exists = yes is_in_faction = no has_war = no is_subject = no }
+			}
+			OR = {
+				BAU = { exists = no }
+				AND = {
+					UKR = { exists = no }
+					has_government = communism
+				}
+			}
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { is_faction_leader = yes BAU = { exists = yes } } BAU = { country_event = { id = generic.5 days = 1 } } }
+			else_if = { limit = { BAU = { exists = yes } } BAU = { country_event = { days = 1 id = aiu_ide.1 } } }
+			else_if = { limit = { is_faction_leader = yes UKR = { exists = yes } } UKR = { country_event = { id = generic.5 days = 1 } } }
+			else_if = { limit = { UKR = { exists = yes } } UKR = { country_event = { days = 1 id = aiu_ide.1 } } }
+		}
+	}
+	
+	focus = {
+		id = IDE_research_agreement
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = -4
+		y = 1
+		prerequisite = { focus = IDE_foreign_policy }
+		relative_position_id = IDE_foreign_policy
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_in_faction = yes
+			num_faction_members > 3
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = IDE_faction_officer_exchange
+		icon = GFX_focus_generic_military_academy
+		x = 4
+		y = 1
+		prerequisite = { focus = IDE_foreign_policy }
+		relative_position_id = IDE_foreign_policy
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_in_faction = yes
+			num_faction_members > 3
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IDE_faction_officer_exchange_idea
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				add_ideas = IDE_faction_officer_exchange_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_build_our_alliance
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		prerequisite = { focus = IDE_foreign_policy }
+		relative_position_id = IDE_foreign_policy
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 5
+				is_guaranteed_by = CAU
+			}
+			modifier = {
+				add = 5
+				is_guaranteed_by = DON
+			}
+			modifier = {
+				add = 5
+				is_guaranteed_by = ALT
+			}
+		}
+
+		available = {
+			is_in_faction = no
+			is_subject = no
+			any_other_country = {
+				is_guaranteed_by = ROOT
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_faction = IDE_caspian_pact
+			custom_effect_tooltip = IDE_build_our_alliance_tt
+			every_other_country = {
+				limit = {
+					is_in_faction = no
+					is_subject = no
+					has_war = no
+					is_guaranteed_by = ROOT
+				}
+				country_event = { id = generic.5 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = IDE_tackle_the_bear
+		icon = GFX_goal_russian_empire_propaganda
+		x = 0
+		y = 2
+		prerequisite = { focus = IDE_build_our_alliance }
+		relative_position_id = IDE_foreign_policy
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_in_faction = yes
+			is_subject = no
+			OR = {
+				BLU = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+				RSP = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+				RUS = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } }
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { BLU = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } } }
+			create_wargoal = {
+				type = annex_everything
+				target = BLU
+				}
+			}
+			if = { limit = { RSP = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } } }
+			create_wargoal = {
+				type = annex_everything
+				target = RSP
+				}
+			}
+			if = { limit = { RUS = { exists = yes is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } } }
+			create_wargoal = {
+				type = annex_everything
+				target = RUS
+				}
+			}
+		}
+	}
+	
+}

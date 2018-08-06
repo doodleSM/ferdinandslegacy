@@ -1,0 +1,408 @@
+﻿###########################
+# AIU IDEL URAL Events
+###########################
+
+add_namespace = aiu_ide
+
+# generic mutual protection
+country_event = {
+	id = aiu_ide.1
+	title = aiu_ide.1.t
+	desc = aiu_ide.1.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+	
+	# 
+	option = { 
+		name = aiu_ide.1.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				has_country_flag = IDE_raided_us
+			}
+		}
+		FROM = {
+			give_guarantee = ROOT
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+			country_event = { id = aiu_ide.2 }
+		}
+		ROOT = {
+			give_guarantee = FROM
+			add_ai_strategy = {
+				type = alliance
+				id = "FROM"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "FROM"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "FROM"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "FROM"
+				value = 100
+			}
+		}
+	}
+	
+	option = { 
+		name = aiu_ide.1.b
+		ai_chance = {
+			factor = 20
+		}
+		FROM = { add_opinion_modifier = { target = ROOT modifier = medium_decrease } country_event = { id = aiu_ide.3 } }
+	}
+}
+
+# agreed to pact
+country_event = {
+	id = aiu_ide.2
+	title = aiu_ide.2.t
+	desc = aiu_ide.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_ide.2.a
+	}
+}
+
+# rejected pact
+country_event = {
+	id = aiu_ide.3
+	title = aiu_ide.3.t
+	desc = aiu_ide.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_ide.3.a
+	}
+}
+
+# general someone is preparing to attack us
+country_event = {
+	id = aiu_ide.4
+	title = aiu_ide.4.t
+	desc = aiu_ide.4.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	
+	option = { #oh no
+		name = aiu_ide.4.a
+		effect_tooltip = {
+			FROM = {
+			create_wargoal = {
+			type = annex_everything
+			target = ROOT
+				}
+			}
+		}
+	}
+}
+
+# failed_raid
+country_event = {
+	id = aiu_ide.5
+	title = aiu_ide.5.t
+	desc = aiu_ide.5.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_ide.5.a
+		ai_chance = { factor = 9 }
+		army_experience = 5
+		add_manpower = -500
+		add_timed_idea = { days = 60 idea = IDE_failed_raid } 
+	}
+	
+	option = {
+		name = aiu_ide.5.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_country_leader = { name = "Khan Felix I Yusupov" }
+			}
+		army_experience = 5
+		add_manpower = -500
+		hidden_effect = {
+			country_event = { id = aiu_ide.12 days = 5 }
+		}
+		add_timed_idea = { days = 60 idea = IDE_failed_raid } 
+	}
+}
+
+# successful_raid
+country_event = {
+	id = aiu_ide.6
+	title = aiu_ide.6.t
+	desc = aiu_ide.6.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_ide.6.a
+		army_experience = 10
+		add_manpower = -250
+		add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+				producer = IDE
+			}
+		add_timed_idea = { days = 60 idea = IDE_successful_raid } 
+	}
+}
+
+# very successful_raid
+country_event = {
+	id = aiu_ide.7
+	title = aiu_ide.7.t
+	desc = aiu_ide.7.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_ide.6.a
+		army_experience = 15
+		add_manpower = -100
+		add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = IDE
+			}
+		add_timed_idea = { days = 60 idea = IDE_very_successful_raid } 
+	}
+}
+
+# failed_raid - target
+country_event = {
+	id = aiu_ide.8
+	title = aiu_ide.8.t
+	desc = aiu_ide.8.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_ide.8.a
+		ai_chance = { factor = 8 }
+		army_experience = 5
+		add_manpower = -500
+		set_country_flag = IDE_raided_us
+		add_ai_strategy = {
+			type = antagonize
+			id = "IDE"
+			value = 900
+			}
+		add_opinion_modifier = { target = IDE modifier = large_decrease }
+		}
+		
+	option = {
+		name = aiu_ide.8.b
+		ai_chance = { factor = 2 modifier = { factor = 20 has_country_flag = IDE_raided_us } }
+		army_experience = 5
+		add_manpower = -500
+		set_country_flag = IDE_raided_us
+		add_ai_strategy = {
+			type = antagonize
+			id = "IDE"
+			value = 900
+			}
+		add_opinion_modifier = { target = IDE modifier = large_decrease }
+		create_wargoal = {
+			type = annex_everything
+			target = IDE
+			}
+		}
+}
+
+# successful_raid - target
+country_event = {
+	id = aiu_ide.9
+	title = aiu_ide.9.t
+	desc = aiu_ide.9.d
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_ide.9.a
+		ai_chance = { factor = 8 }
+		army_experience = 5
+		add_manpower = -1000
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { is_owned_by = FROM }
+				industrial_complex > 0
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.25
+			}
+		}
+		set_country_flag = IDE_raided_us
+		add_ai_strategy = {
+			type = antagonize
+			id = "IDE"
+			value = 900
+			}
+		add_opinion_modifier = { target = IDE modifier = large_decrease }
+		}
+		
+		option = {
+		name = aiu_ide.9.b
+		ai_chance = { factor = 2 modifier = { factor = 20 has_country_flag = IDE_raided_us } }
+		army_experience = 5
+		add_manpower = -1000
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				any_neighbor_state = { is_owned_by = FROM }
+				industrial_complex > 0
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.25
+			}
+		}
+		set_country_flag = IDE_raided_us
+		add_ai_strategy = {
+			type = antagonize
+			id = "IDE"
+			value = 900
+			}
+		add_opinion_modifier = { target = IDE modifier = large_decrease }
+		create_wargoal = {
+			type = annex_everything
+			target = IDE
+			}
+		}
+}
+
+# idel seeks alliance - alash
+country_event = {
+	id = aiu_ide.10
+	title = aiu_ide.10.t
+	desc = aiu_ide.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# yes, in exchange for land
+	option = {
+		name = aiu_ide.10.a
+		ai_chance = { factor = 8 }
+		}
+		
+	# yes
+	option = {
+		name = aiu_ide.10.b
+		ai_chance = { factor = 0 }
+		}
+		
+	# no
+	option = {
+		name = aiu_ide.10.c
+		ai_chance = { factor = 2 }
+		}
+}
+
+# a new khan
+country_event = {
+	id = aiu_ide.11
+	title = aiu_ide.11.t
+	desc = aiu_ide.11.d
+	picture = GFX_report_event_royal_visit
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_ide.11.a
+		}
+		
+}
+
+# a new khanum
+country_event = {
+	id = aiu_ide.12
+	title = aiu_ide.12.t
+	desc = aiu_ide.12.d
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_ide.12.a
+		retire_country_leader = yes
+		remove_unit_leader = 11777
+		create_country_leader = {
+				name = "Khanum Irina Alexandrovna"
+				desc = "POLITICS_IRINA_DESC"
+				picture = "IDE_Khanum_Irina.dds"			
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					trait_princess_alexandrovna
+					}
+				}
+		hidden_effect = {
+			create_field_marshal = {
+			name = "Irina Alexandrovna"
+			picture = "IDE_Khanum_Irina.dds"
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			traits = {
+				defensive_doctrine
+				thorough_planner
+				trait_cautious
+				}
+			}
+		}
+	}		
+}

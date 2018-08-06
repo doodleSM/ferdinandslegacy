@@ -1,0 +1,21 @@
+state={
+	id=883
+	name="STATE_883"
+	provinces={
+		7519 12653 
+	}
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = AFG
+		add_core_of = BKH
+
+	}
+
+	manpower=267985
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

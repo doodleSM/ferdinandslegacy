@@ -18,6 +18,7 @@ state={
 		add_core_of = IDE
 		add_core_of = RUS
 		add_core_of = RSP
+		add_core_of = ALA
 	}
 
 	provinces={
