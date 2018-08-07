@@ -225,8 +225,8 @@ DON_cossack_raids_decisions = {
                     tag = ASC
                 }
             has_completed_focus = DON_institute_cossack_raids
-            NOT = { has_country_flag = IDE_preparing_a_raid }
-            NOT = { OR = { has_idea = IDE_very_successful_raid has_idea = IDE_successful_raid has_idea = IDE_failed_raid } }
+            NOT = { has_country_flag = don_preparing_a_raid }
+            NOT = { OR = { has_dona = don_very_successful_raid has_dona = don_successful_raid has_dona = don_failed_raid } }
         }
 
         days_remove = 7
@@ -239,28 +239,28 @@ DON_cossack_raids_decisions = {
         }
 
         complete_effect = {
-            set_country_flag = IDE_preparing_a_raid
+            set_country_flag = DON_preparing_a_raid
         }
             
         remove_effect = {
-            #country_event = { days = 1 id = ide.# }
-            #ASC = { country_event = { days = 1 id = ide.# } }
+            #country_event = { days = 1 id = don.# }
+            #ASC = { country_event = { days = 1 id = don.# } }
             random_list = {
                 33 = {
                     country_event = { days = 1 id = aiu_don.5 }
-                    hidden_effect = { ASC = { country_event = { days = 1 id = aiu_ide.8 } } }
+                    hidden_effect = { ASC = { country_event = { days = 1 id = aiu_don.8 } } }
                 }
                 33 = {
                     country_event = { days = 1 id = aiu_don.6 }
-                    hidden_effect = { ASC = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { ASC = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
                 
                 33 = {
                     country_event = { days = 1 id = aiu_don.7 }
-                    hidden_effect = { ASC = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { ASC = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
             }
-            clr_country_flag = IDE_preparing_a_raid
+            clr_country_flag = DON_preparing_a_raid
         }
         
         ai_will_do = {
@@ -290,8 +290,8 @@ DON_raid_che = {
                     tag = CHE
                 }
             has_completed_focus = DON_institute_cossack_raids
-            NOT = { has_country_flag = IDE_preparing_a_raid }
-            NOT = { OR = { has_idea = IDE_very_successful_raid has_idea = IDE_successful_raid has_idea = IDE_failed_raid } }
+            NOT = { has_country_flag = DON_preparing_a_raid }
+            NOT = { OR = { has_dona = don_very_successful_raid has_dona = don_successful_raid has_dona = don_failed_raid } }
         }
 
         days_remove = 7
@@ -304,28 +304,28 @@ DON_raid_che = {
         }
 
         complete_effect = {
-            set_country_flag = IDE_preparing_a_raid
+            set_country_flag = DON_preparing_a_raid
         }
             
         remove_effect = {
-            #country_event = { days = 1 id = ide.# }
-            #ASC = { country_event = { days = 1 id = ide.# } }
+            #country_event = { days = 1 id = don.# }
+            #ASC = { country_event = { days = 1 id = don.# } }
             random_list = {
                 33 = {
                     country_event = { days = 1 id = aiu_don.5 }
-                    hidden_effect = { CHE = { country_event = { days = 1 id = aiu_ide.8 } } }
+                    hidden_effect = { CHE = { country_event = { days = 1 id = aiu_don.8 } } }
                 }
                 33 = {
                     country_event = { days = 1 id = aiu_don.6 }
-                    hidden_effect = { CHE = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { CHE = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
                 
                 33 = {
                     country_event = { days = 1 id = aiu_don.7 }
-                    hidden_effect = { CHE = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { CHE = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
             }
-            clr_country_flag = IDE_preparing_a_raid
+            clr_country_flag = DON_preparing_a_raid
         }
         
         ai_will_do = {
@@ -355,8 +355,8 @@ DON_raid_che = {
                     tag =  CAU
                 }
             has_completed_focus = DON_institute_cossack_raids
-            NOT = { has_country_flag = IDE_preparing_a_raid }
-            NOT = { OR = { has_idea = IDE_very_successful_raid has_idea = IDE_successful_raid has_idea = IDE_failed_raid } }
+            NOT = { has_country_flag = don_preparing_a_raid }
+            NOT = { OR = { has_dona = don_very_successful_raid has_dona = don_successful_raid has_dona = don_failed_raid } }
         }
 
         days_remove = 7
@@ -369,28 +369,28 @@ DON_raid_che = {
         }
 
         complete_effect = {
-            set_country_flag = IDE_preparing_a_raid
+            set_country_flag = don_preparing_a_raid
         }
             
         remove_effect = {
-            #country_event = { days = 1 id = ide.# }
-            #ASC = { country_event = { days = 1 id = ide.# } }
+            #country_event = { days = 1 id = don.# }
+            #ASC = { country_event = { days = 1 id = don.# } }
             random_list = {
                 33 = {
                     country_event = { days = 1 id = aiu_don.5 }
-                    hidden_effect = { CAU = { country_event = { days = 1 id = aiu_ide.8 } } }
+                    hidden_effect = { CAU = { country_event = { days = 1 id = aiu_don.8 } } }
                 }
                 33 = {
                     country_event = { days = 1 id = aiu_don.6 }
-                    hidden_effect = { CAU = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { CAU = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
                 
                 33 = {
                     country_event = { days = 1 id = aiu_don.7 }
-                    hidden_effect = { CAU = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { CAU = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
             }
-            clr_country_flag = IDE_preparing_a_raid
+            clr_country_flag = don_preparing_a_raid
         }
         
         ai_will_do = {
@@ -420,8 +420,8 @@ DON_raid_rsp = {
                     tag =  RSP
                 }
             has_completed_focus = DON_institute_cossack_raids
-            NOT = { has_country_flag = IDE_preparing_a_raid }
-            NOT = { OR = { has_idea = IDE_very_successful_raid has_idea = IDE_successful_raid has_idea = IDE_failed_raid } }
+            NOT = { has_country_flag = don_preparing_a_raid }
+            NOT = { OR = { has_dona = don_very_successful_raid has_dona = don_successful_raid has_dona = don_failed_raid } }
         }
 
         days_remove = 7
@@ -434,28 +434,28 @@ DON_raid_rsp = {
         }
 
         complete_effect = {
-            set_country_flag = IDE_preparing_a_raid
+            set_country_flag = don_preparing_a_raid
         }
             
         remove_effect = {
-            #country_event = { days = 1 id = ide.# }
-            #ASC = { country_event = { days = 1 id = ide.# } }
+            #country_event = { days = 1 id = don.# }
+            #ASC = { country_event = { days = 1 id = don.# } }
             random_list = {
                 33 = {
                     country_event = { days = 1 id = aiu_don.5 }
-                    hidden_effect = { RSP = { country_event = { days = 1 id = aiu_ide.8 } } }
+                    hidden_effect = { RSP = { country_event = { days = 1 id = aiu_don.8 } } }
                 }
                 33 = {
                     country_event = { days = 1 id = aiu_don.6 }
-                    hidden_effect = { RSP = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { RSP = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
                 
                 33 = {
                     country_event = { days = 1 id = aiu_don.7 }
-                    hidden_effect = { RSP = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { RSP = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
             }
-            clr_country_flag = IDE_preparing_a_raid
+            clr_country_flag = don_preparing_a_raid
         }
         
         ai_will_do = {
@@ -485,8 +485,8 @@ DON_raid_blu = {
                     tag =  BLU
                 }
             has_completed_focus = DON_institute_cossack_raids
-            NOT = { has_country_flag = IDE_preparing_a_raid }
-            NOT = { OR = { has_idea = IDE_very_successful_raid has_idea = IDE_successful_raid has_idea = IDE_failed_raid } }
+            NOT = { has_country_flag = don_preparing_a_raid }
+            NOT = { OR = { has_dona = don_very_successful_raid has_dona = don_successful_raid has_dona = don_failed_raid } }
         }
 
         days_remove = 7
@@ -499,28 +499,28 @@ DON_raid_blu = {
         }
 
         complete_effect = {
-            set_country_flag = IDE_preparing_a_raid
+            set_country_flag = don_preparing_a_raid
         }
             
         remove_effect = {
-            #country_event = { days = 1 id = ide.# }
-            #ASC = { country_event = { days = 1 id = ide.# } }
+            #country_event = { days = 1 id = don.# }
+            #ASC = { country_event = { days = 1 id = don.# } }
             random_list = {
                 33 = {
                     country_event = { days = 1 id = aiu_don.5 }
-                    hidden_effect = { BLU = { country_event = { days = 1 id = aiu_ide.8 } } }
+                    hidden_effect = { BLU = { country_event = { days = 1 id = aiu_don.8 } } }
                 }
                 33 = {
                     country_event = { days = 1 id = aiu_don.6 }
-                    hidden_effect = { BLU = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { BLU = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
                 
                 33 = {
                     country_event = { days = 1 id = aiu_don.7 }
-                    hidden_effect = { BLU = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { BLU = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
             }
-            clr_country_flag = IDE_preparing_a_raid
+            clr_country_flag = don_preparing_a_raid
         }
         
         ai_will_do = {
@@ -551,8 +551,8 @@ DON_raid_cri = {
                     tag =  CRI
                 }
             has_completed_focus = DON_institute_cossack_raids
-            NOT = { has_country_flag = IDE_preparing_a_raid }
-            NOT = { OR = { has_idea = IDE_very_successful_raid has_idea = IDE_successful_raid has_idea = IDE_failed_raid } }
+            NOT = { has_country_flag = don_preparing_a_raid }
+            NOT = { OR = { has_dona = don_very_successful_raid has_dona = don_successful_raid has_dona = don_failed_raid } }
         }
 
         days_remove = 7
@@ -565,28 +565,28 @@ DON_raid_cri = {
         }
 
         complete_effect = {
-            set_country_flag = IDE_preparing_a_raid
+            set_country_flag = don_preparing_a_raid
         }
             
         remove_effect = {
-            #country_event = { days = 1 id = ide.# }
-            #ASC = { country_event = { days = 1 id = ide.# } }
+            #country_event = { days = 1 id = don.# }
+            #ASC = { country_event = { days = 1 id = don.# } }
             random_list = {
                 33 = {
                     country_event = { days = 1 id = aiu_don.5 }
-                    hidden_effect = {CRI = { country_event = { days = 1 id = aiu_ide.8 } } }
+                    hidden_effect = {CRI = { country_event = { days = 1 id = aiu_don.8 } } }
                 }
                 33 = {
                     country_event = { days = 1 id = aiu_don.6 }
-                    hidden_effect = { CRI = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { CRI = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
                 
                 33 = {
                     country_event = { days = 1 id = aiu_don.7 }
-                    hidden_effect = { CRI = { country_event = { days = 1 id = aiu_ide.9 } } }
+                    hidden_effect = { CRI = { country_event = { days = 1 id = aiu_don.9 } } }
                 }
             }
-            clr_country_flag = IDE_preparing_a_raid
+            clr_country_flag = don_preparing_a_raid
         }
         
         ai_will_do = {

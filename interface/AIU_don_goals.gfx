@@ -85,5 +85,9 @@ SpriteTypes = {
 		name = "GFX_goal_donidealliance"
 		texturefile = "/gfx/interface/goals/donidealliance.dds"
 	}
+	spriteType = {
+		name = "GFX_goal_don_military_purge"
+		texturefile = "/gfx/interface/goals/don_military_purge.dds"
+	}
 	
 }
