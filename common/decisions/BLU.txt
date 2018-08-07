@@ -1,0 +1,375 @@
+#Category allowed for IDE
+
+RUS_foreign_policy = {
+
+	BLU_crimean_ssr = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			CRI = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			has_completed_focus = BLU_new_ssrs
+		}
+		
+		target_trigger = {
+            FROM = {
+                 tag = CRI
+              }
+        }
+
+		visible = {
+			CRI = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			is_faction_leader = yes
+			has_completed_focus = BLU_new_ssrs
+		}
+
+		#days_remove = 7
+		#days_re_enable = 120
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+			
+		remove_effect = {
+			if = { limit = { CRI = { num_of_factories > 15 } } CRI = { country_event = { days = 1 id = generic.5 } } }
+			else = { CRI = { country_event = { days = 1 id = aiu_blu.1 } } }
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	BLU_ukrainian_ssr = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			UKR = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			has_completed_focus = BLU_new_ssrs
+		}
+		
+		target_trigger = {
+            FROM = {
+                 tag = UKR
+              }
+        }
+
+		visible = {
+			UKR = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			is_faction_leader = yes
+			has_completed_focus = BLU_new_ssrs
+		}
+
+		#days_remove = 7
+		#days_re_enable = 120
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+			
+		remove_effect = {
+			if = { limit = { UKR = { num_of_factories > 15 } } UKR = { country_event = { days = 1 id = generic.5 } } }
+			else = { UKR = { country_event = { days = 1 id = aiu_blu.1 } } }
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	BLU_caucasian_ssr = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			CAU = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			has_completed_focus = BLU_new_ssrs
+		}
+		
+		target_trigger = {
+            FROM = {
+                 tag = CAU
+              }
+        }
+
+		visible = {
+			CAU = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			is_faction_leader = yes
+			has_completed_focus = BLU_new_ssrs
+		}
+
+		#days_remove = 7
+		#days_re_enable = 120
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+			
+		remove_effect = {
+			if = { limit = { CAU = { num_of_factories > 15 } } CAU = { country_event = { days = 1 id = generic.5 } } }
+			else = { CAU = { country_event = { days = 1 id = aiu_blu.1 } } }
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	BLU_idel_ssr = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			IDE = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			has_completed_focus = BLU_new_ssrs
+		}
+		
+		target_trigger = {
+            FROM = {
+                 tag = IDE
+              }
+        }
+
+		visible = {
+			IDE = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			is_faction_leader = yes
+			has_completed_focus = BLU_new_ssrs
+		}
+
+		#days_remove = 7
+		#days_re_enable = 120
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+			
+		remove_effect = {
+			if = { limit = { IDE = { num_of_factories > 15 } } IDE = { country_event = { days = 1 id = generic.5 } } }
+			else = { IDE = { country_event = { days = 1 id = aiu_blu.1 } } }
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	BLU_trc_ssr = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			TRC = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			has_completed_focus = BLU_new_ssrs
+		}
+		
+		target_trigger = {
+            FROM = {
+                 tag = TRC
+              }
+        }
+
+		visible = {
+			TRC = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			is_faction_leader = yes
+			has_completed_focus = BLU_new_ssrs
+		}
+
+		#days_remove = 7
+		#days_re_enable = 120
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+			
+		remove_effect = {
+			if = { limit = { TRC = { num_of_factories > 15 } } TRC = { country_event = { days = 1 id = generic.5 } } }
+			else = { TRC = { country_event = { days = 1 id = aiu_blu.1 } } }
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	BLU_rfi_ssr = {
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			RFI = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			has_completed_focus = BLU_new_ssrs
+		}
+		
+		target_trigger = {
+            FROM = {
+                 tag = RFI
+              }
+        }
+
+		visible = {
+			RFI = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no OR = { has_government = communism has_government = radical_socialism } }
+			is_subject = no
+			is_faction_leader = yes
+			has_completed_focus = BLU_new_ssrs
+		}
+
+		#days_remove = 7
+		#days_re_enable = 120
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+			
+		remove_effect = {
+			if = { limit = { RFI = { num_of_factories > 15 } } RFI = { country_event = { days = 1 id = generic.5 } } }
+			else = { RFI = { country_event = { days = 1 id = aiu_blu.1 } } }
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	BLU_move_capital_to_moscow = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_war = no
+			has_full_control_of_state = 219
+		}
+
+		visible = {
+			has_war = no
+			has_full_control_of_state = 219
+			NOT = { has_country_flag = BLU_moved_capital }
+		}
+
+		#days_remove = 7
+		#days_re_enable = 120
+		
+		fire_only_once = yes
+
+		cost = 10
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+			
+		remove_effect = {
+			set_capital = 219
+			set_province_name = { id = 3151 name = "Leningrad"}
+			set_country_flag = BLU_moved_capital
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	BLU_move_capital_to_st_petersburg = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_war = no
+			has_full_control_of_state = 195
+		}
+
+		visible = {
+			has_war = no
+			has_full_control_of_state = 195
+			NOT = { has_country_flag = BLU_moved_capital }
+		}
+
+		#days_remove = 7
+		#days_re_enable = 120
+		
+		fire_only_once = yes
+
+		cost = 10
+
+		modifier = {
+			
+		}
+
+		complete_effect = {
+			
+		}
+			
+		remove_effect = {
+			set_capital = 195
+			set_province_name = { id = 3151 name = "Leningrad"}
+			set_country_flag = BLU_moved_capital
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+}

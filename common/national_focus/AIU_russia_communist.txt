@@ -1,0 +1,3693 @@
+focus_tree = {
+	id = aiu_russia_communist_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = BLU
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 2000 }
+
+	focus = {
+		id = BLU_november_march_focus
+		icon = GFX_focus_prc_infiltration
+		x = 8
+		y = 0
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = BLU_the_moscow_and_sp_uprisings_idea
+			add_timed_idea = { idea = BLU_the_moscow_and_sp_uprisings_idea_2 days = 100 }
+		}
+	}
+	
+	# army
+	
+	focus = {
+		id = BLU_the_war_economy
+		icon = GFX_goal_generic_build_tank
+		x = -5
+		y = 1
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_november_march_focus }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { OR = { has_idea = low_economic_mobilisation has_idea = partial_economic_mobilisation } } add_ideas = war_economy }
+			else = { add_political_power = 100 }
+		}
+	}
+	
+	focus = {
+		id = BLU_tanks_and_bombs
+		icon = GFX_goal_generic_army_tanks
+		x = -8
+		y = 2
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_the_war_economy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLU_tanks_and_bombs
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = BLU_tanks_and_bombs
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_bombs_and_guns
+		icon = GFX_goal_generic_army_artillery
+		x = -8
+		y = 3
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_tanks_and_bombs }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLU_bombs_and_guns
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = BLU_bombs_and_guns
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_were_still_fighting
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = -8
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_bombs_and_guns }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLU_were_still_fighting
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = BLU_were_still_fighting
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_draft_them_all
+		icon = GFX_goal_generic_more_territorial_claims
+		x = -6
+		y = 2
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_the_war_economy }
+		mutually_exclusive = { focus = BLU_special_exemptions }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = limited_conscription } add_ideas = service_by_requirement }
+			else = { add_manpower = 100000 }
+			add_ideas = BLU_draft_them_all_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_elected_officers
+		icon = GFX_goal_generic_dangerous_deal
+		x = -6
+		y = 3
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_draft_them_all focus = BLU_special_exemptions }
+		mutually_exclusive = { focus = BLU_officer_privileges }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_elected_officers_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_punitive_brigades
+		icon = GFX_focus_CZE_german_puppet
+		x = -6
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_elected_officers focus = BLU_officer_privileges }
+		mutually_exclusive = { focus = BLU_trustworthy_army }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_punitive_brigades_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_special_exemptions
+		icon = GFX_goal_generic_scientific_exchange
+		x = -4
+		y = 2
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_the_war_economy }
+		mutually_exclusive = { focus = BLU_draft_them_all }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = limited_conscription } add_ideas = extensive_conscription }
+			else = { add_manpower = 100000 }
+			add_ideas = BLU_special_exemptions_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_officer_privileges
+		icon = GFX_focus_generic_military_mission
+		x = -4
+		y = 3
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_draft_them_all focus = BLU_special_exemptions }
+		mutually_exclusive = { focus = BLU_elected_officers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_officer_privileges_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_trustworthy_army
+		icon = GFX_focus_generic_little_entente
+		x = -4
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_elected_officers focus = BLU_officer_privileges }
+		mutually_exclusive = { focus = BLU_punitive_brigades }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_trustworthy_army_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_commissars_focus
+		icon = GFX_goal_generic_political_pressure
+		x = -2
+		y = 2
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_the_war_economy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_commissars_idea
+			add_tech_bonus = {
+				name = BLU_commissars_focus
+				bonus = 0.5
+				uses = 1
+				category = military_police_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_military_intelligence
+		icon = GFX_goal_generic_radar
+		x = -2
+		y = 3
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_commissars_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLU_military_intelligence
+				bonus = 0.75
+				uses = 1
+				category = decryption_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_stand_the_line
+		icon = GFX_goal_generic_defence
+		x = -2
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_military_intelligence }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_stand_the_line_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_rmc_focus
+		icon = GFX_goal_generic_army_doctrines
+		x = -5
+		y = 5
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_were_still_fighting focus = BLU_stand_the_line }
+		prerequisite = { focus = BLU_punitive_brigades focus = BLU_trustworthy_army }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = BLU_liberation_army
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_offensive_orientation
+		icon = GFX_goal_generic_cavalry
+		x = -6
+		y = 6
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_rmc_focus }
+		mutually_exclusive = { focus = BLU_defensive_orientation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_offensive_orientation_idea
+			every_army_leader = {
+				add_attack = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_defensive_orientation
+		icon = GFX_goal_generic_construct_military
+		x = -4
+		y = 6
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_rmc_focus }
+		mutually_exclusive = { focus = BLU_offensive_orientation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_defensive_orientation_idea
+			every_army_leader = {
+				add_defense = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_red_army_is_the_strongest
+		icon = GFX_goal_generic_military_sphere
+		x = -5
+		y = 7
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_offensive_orientation focus = BLU_defensive_orientation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_red_army_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_women_soldiers
+		icon = GFX_goal_woman_soldier
+		x = 0
+		y = 2
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_the_war_economy focus = BLU_army_of_work }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_ideas = BLU_women_soldiers_idea
+		}
+	}
+	
+	# industry
+	
+	focus = {
+		id = BLU_army_of_work
+		icon = GFX_goal_generic_construction2
+		x = 5
+		y = 1
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_november_march_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLU_army_of_work
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			random_owned_state = {
+				prioritize = { 224 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_women_workers
+		icon = GFX_goal_generic_construct_civilian
+		x = 2
+		y = 2
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_army_of_work }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_women_workers_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_family_code
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 3
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_women_soldiers }
+		prerequisite = { focus = BLU_women_workers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = BLU_reject_inheritance
+		icon = GFX_goal_generic_forceful_treaty
+		x = 0
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_family_code }
+		mutually_exclusive = { focus = BLU_natalist_policy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_non_natalist_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_natalist_policy
+		icon = GFX_focus_generic_treaty
+		x = 2
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_family_code }
+		mutually_exclusive = { focus = BLU_reject_inheritance }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_natalist_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_gosplan
+		icon = GFX_goal_generic_soviet_construction
+		x = 4
+		y = 2
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_army_of_work }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_gosplan_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_heavy_industry_focus
+		icon = GFX_goal_generic_production
+		x = 4
+		y = 3
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_gosplan }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_gosbank
+		icon = GFX_goal_generic_money
+		x = 6
+		y = 2
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_army_of_work }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_gosbank_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_sberkassa
+		icon = GFX_goal_generic_neutrality_focus
+		x = 6
+		y = 3
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_gosbank }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BLU_gosbank_idea
+				add_idea = BLU_gosbank_idea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_gossnab
+		icon = GFX_goal_generic_construction
+		x = 8
+		y = 2
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_army_of_work }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_gossnab_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_metallurgical_studies
+		icon = GFX_focus_generic_steel
+		x = 8
+		y = 3
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_gossnab }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLU_metallurgical_studies
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = BLU_metallurgical_studies
+				bonus = 0.5
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_tax_in_kind
+		icon = GFX_goal_generic_consumer_goods
+		x = 5
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_heavy_industry_focus focus = BLU_sberkassa focus = BLU_metallurgical_studies }
+		mutually_exclusive = { focus = BLU_five_year_plans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_tax_in_kind_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_five_year_plans
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 7
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_heavy_industry_focus focus = BLU_sberkassa focus = BLU_metallurgical_studies }
+		mutually_exclusive = { focus = BLU_tax_in_kind }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_five_year_plans_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_industrial_innovations
+		icon = GFX_goal_generic_production2
+		x = 6
+		y = 5
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_tax_in_kind focus = BLU_five_year_plans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = BLU_foreign_capital
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 4
+		y = 5
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_tax_in_kind }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_crush_wreckers
+		icon = GFX_goal_generic_propaganda
+		x = 8
+		y = 5
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_five_year_plans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = BLU_technikum_system
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 6
+		y = 6
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_industrial_innovations }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			num_of_factories > 50
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = BLU_comecon
+		icon = GFX_focus_generic_socialist_science
+		x = 6
+		y = 7
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_technikum_system }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			is_faction_leader = yes
+			num_faction_members > 4			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_other_country = {
+				limit = { is_in_faction_with = ROOT }
+				add_ideas = BLU_comecon_idea
+			}
+		}
+	}
+	
+	# navy
+	
+	focus = {
+		id = BLU_the_red_fleet
+		icon = GFX_goal_generic_build_navy
+		x = 10
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_metallurgical_studies }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_underwater_menace
+		icon = GFX_goal_generic_navy_submarine
+		x = 10
+		y = 5
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_the_red_fleet }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_blue_water_fleet
+		icon = GFX_goal_generic_navy_cruiser
+		x = 10
+		y = 6
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_underwater_menace }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.5
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_first_carriers
+		icon = GFX_goal_generic_navy_carrier
+		x = 11
+		y = 7
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_blue_water_fleet }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_battleship_production
+		icon = GFX_goal_generic_navy_battleship
+		x = 9
+		y = 7
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_blue_water_fleet }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+	}
+	
+	# air
+	
+	focus = {
+		id = BLU_march_of_the_pilots
+		icon = GFX_goal_generic_build_airforce
+		x = 13
+		y = 4
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_metallurgical_studies }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_fighter_supremacy
+		icon = GFX_goal_generic_air_fighter
+		x = 12
+		y = 5
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_march_of_the_pilots }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.4
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_tactical_destruction
+		icon = GFX_goal_generic_CAS
+		x = 14
+		y = 5
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_march_of_the_pilots }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.4
+				uses = 2
+				category = cas_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_strategic_air_warfare
+		icon = GFX_goal_generic_air_bomber
+		x = 13
+		y = 6
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_fighter_supremacy }
+		prerequisite = { focus = BLU_tactical_destruction }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.75
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_special_weapons_bureau
+		icon = GFX_focus_wonderweapons
+		x = 14
+		y = 7
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_strategic_air_warfare }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLU_special_weapons_bureau
+				bonus = 0.5
+				uses = 2
+				category = nuclear
+				category = rocketry
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_naval_aircraft_focus
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 13
+		y = 8
+		relative_position_id = BLU_november_march_focus
+		prerequisite = { focus = BLU_first_carriers }
+		prerequisite = { focus = BLU_strategic_air_warfare }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLU_naval_aircraft_focus
+				bonus = 0.4
+				uses = 2
+				category = naval_air
+			}
+		}
+	}
+	
+	# foreign policy
+	
+	focus = {
+		id = BLU_call_third_internationale
+		icon = GFX_goal_support_communism
+		x = 8
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 35
+		}
+
+		available = {
+			RSP = { exists = no }
+			RUS = { exists = no }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = BLU_SOV
+			if = { limit = { is_in_faction = no } create_faction = BLU_third_international }
+			set_rule = { can_send_volunteers = yes }
+			#event
+		}
+	}
+	
+	# aggressive path
+	
+	focus = {
+		id = BLU_spread_the_revolution
+		icon = GFX_goal_generic_war_with_comintern
+		x = -5
+		y = 1
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_call_third_internationale }
+		mutually_exclusive = { focus = BLU_steady_as_she_goes }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			has_army_manpower = { size > 999999 }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+			#custom_effect_tooltip = BLU_spread_the_revolution_tt
+			add_named_threat = { threat = 5 name = BLU_spread_the_revolution }
+		}
+	}
+	
+	focus = {
+		id = BLU_annex_ukraine
+		icon = GFX_goal_ukrainian_shield_skull
+		x = -8
+		y = 2
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_spread_the_revolution }
+		will_lead_to_war_with = BAU
+		will_lead_to_war_with = UKR
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			OR = {
+			BAU = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			UKR = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			}
+			OR = {
+				BAU = { exists = no }
+				UKR = { exists = no }
+			}
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				BAU = { exists = no }
+				BAU = { is_subject = yes }
+				BAU = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				UKR = { exists = no }
+				UKR = { is_subject = yes }
+				UKR = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { BAU = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = BAU
+				}
+				}
+			else_if = { limit = { UKR = { exists = yes NOT = { is_in_faction_with = ROOT } } }
+				create_wargoal = {
+				type = annex_everything
+				target = UKR
+				}
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_crimean_revolution
+		icon = GFX_goal_crimean_peninsula #GFX_goal_generic_occupy_states_coastal
+		x = -8
+		y = 3
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_annex_ukraine }
+		will_lead_to_war_with = CRI
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			CRI = { exists = yes  NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				CRI = { exists = no }
+				CRI = { is_subject = yes }
+				CRI = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CRI
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_caucasian_expedition
+		icon = GFX_goal_raid_the_caucases
+		x = -6
+		y = 2
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_spread_the_revolution }
+		will_lead_to_war_with = CAU
+		will_lead_to_war_with = DON
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			OR = {
+				CAU = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				DON = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				}
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				CAU = { exists = no }
+				CAU = { is_subject = yes }
+				CAU = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				DON = { exists = no }
+				DON = { is_subject = yes }
+				DON = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { CAU = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = CAU
+				}
+				}
+			if = { limit = { DON = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = DON
+				}
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_integrate_armenia
+		icon = GFX_goal_generic_political_pressure
+		x = -6
+		y = 3
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_caucasian_expedition }
+		will_lead_to_war_with = ARM
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			ARM = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				ARM = { exists = no }
+				ARM = { is_subject = yes }
+				ARM = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ARM
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_attack_sick_man
+		icon = GFX_goal_strike_fallen_empire
+		x = -7
+		y = 4
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_crimean_revolution }
+		prerequisite = { focus = BLU_integrate_armenia }
+		will_lead_to_war_with = OTT
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			OTT = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = OTT
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_baltic_conquests
+		icon = GFX_goal_baltic_states #GFX_goal_generic_demand_territory
+		x = -4
+		y = 2
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_spread_the_revolution }
+		will_lead_to_war_with = EST
+		will_lead_to_war_with = LAT
+		will_lead_to_war_with = LIT
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			OR = {
+				EST = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				LAT = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				LIT = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			}
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				EST = { exists = no }
+				EST = { is_subject = yes }
+				EST = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				LAT = { exists = no }
+				LAT = { is_subject = yes }
+				LAT = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				LIT = { exists = no }
+				LIT = { is_subject = yes }
+				LIT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { EST = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = EST
+				}
+				}
+			if = { limit = { LAT = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = LAT
+				}
+				}
+			if = { limit = { LIT = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = LIT
+				}
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_winter_war
+		icon = GFX_goal_finland_shield
+		x = -4
+		y = 3
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_baltic_conquests }
+		will_lead_to_war_with = FIN
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			FIN = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				FIN = { exists = no }
+				FIN = { is_subject = yes }
+				FIN = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = FIN
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_deal_with_idel_ural
+		icon = GFX_goal_idel_attack
+		x = -2
+		y = 2
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_spread_the_revolution }
+		will_lead_to_war_with = IDE
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			IDE = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				IDE = { exists = no }
+				IDE = { is_subject = yes }
+				IDE = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = IDE
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_the_red_steppe
+		icon = GFX_goal_central_asia #GFX_goal_generic_more_territorial_claims
+		x = -2
+		y = 3
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_deal_with_idel_ural }
+		will_lead_to_war_with = ASC
+		will_lead_to_war_with = CHE
+		will_lead_to_war_with = ALA
+		will_lead_to_war_with = KHI
+		will_lead_to_war_with = BKH
+		will_lead_to_war_with = ALT
+		will_lead_to_war_with = KRZ
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			OR = {
+				ASC = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				CHE = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				ALA = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				KHI = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				BKH = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				ALT = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				KRZ = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			}
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				ASC = { exists = no }
+				ASC = { is_subject = yes }
+				ASC = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				CHE = { exists = no }
+				CHE = { is_subject = yes }
+				CHE = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				ALA = { exists = no }
+				ALA = { is_subject = yes }
+				ALA = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				KHI = { exists = no }
+				KHI = { is_subject = yes }
+				KHI = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				BKH = { exists = no }
+				BKH = { is_subject = yes }
+				BKH = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				ALT = { exists = no }
+				ALT = { is_subject = yes }
+				ALT = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				KRZ = { exists = no }
+				KRZ = { is_subject = yes }
+				KRZ = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			
+			if = { limit = { ASC = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = ASC
+				}
+				}
+			if = { limit = { CHE = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = CHE
+				}
+				}
+			if = { limit = { ALA = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = ALA
+				}
+				}
+			if = { limit = { KHI = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = KHI
+				}
+				}
+			if = { limit = { BKH = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = BKH
+				}
+				}
+			if = { limit = { ALT = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = ALT
+				}
+				}
+			if = { limit = { KRZ = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = KRZ
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_southern_thrust
+		icon = GFX_goal_generic_major_war
+		x = -3
+		y = 4
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_winter_war }
+		prerequisite = { focus = BLU_the_red_steppe }
+		will_lead_to_war_with = AFG
+		will_lead_to_war_with = PER
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			OR = {
+				AFG = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+				PER = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			}
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { AFG = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = AFG
+				}
+				}
+			if = { limit = { PER = { exists = yes NOT = { is_in_faction_with = ROOT } } } 
+				create_wargoal = {
+				type = annex_everything
+				target = PER
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_anti_capitalist_declaration
+		icon = GFX_focus_ger_great_red_menace
+		x = -5
+		y = 4
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_spread_the_revolution }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			#event
+			every_other_country = {
+				limit = { is_major = yes is_subject = no NOT = { has_government = ROOT } }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = 100
+					}
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_fund_african_revolts
+		icon = GFX_goal_generic_small_arms
+		x = -8
+		y = 5
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_anti_capitalist_declaration }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = BLU_revive_the_commune
+		icon = GFX_focus_generic_join_comintern
+		x = -8
+		y = 6
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_fund_african_revolts }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			FRA = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				FRA = { exists = no }
+				FRA = { is_subject = yes }
+				FRA = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+					type = topple_government
+					target = FRA
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_incite_india
+		icon = GFX_focus_RAJ_seek_help_from_soviet
+		x = -6
+		y = 5
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_anti_capitalist_declaration }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = BLU_shatter_the_empire
+		icon = GFX_focus_AST_never_gallipoli
+		x = -6
+		y = 6
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_incite_india }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			ENG = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				ENG = { exists = no }
+				ENG = { is_subject = yes }
+				ENG = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+					type = topple_government
+					target = ENG
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_finish_poland
+		icon = GFX_goal_poland_goal
+		x = -4
+		y = 5
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_anti_capitalist_declaration }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			POL = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				POL = { exists = no }
+				POL = { is_subject = yes }
+				POL = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_topple_the_kaiser
+		icon = GFX_focus_ger_return_of_the_kaiser #GFX_goal_generic_occupy_start_war
+		x = -4
+		y = 6
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_finish_poland }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			GRM = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				GRM = { exists = no }
+				GRM = { is_subject = yes }
+				GRM = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+					type = topple_government
+					target = GRM
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_fortify_far_east
+		icon = GFX_goal_generic_construct_military
+		x = -2
+		y = 5
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_anti_capitalist_declaration }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			has_full_control_of_state = 408
+			has_full_control_of_state = 409
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			409 = {
+				if = {
+					#limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9604
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 9604
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			408 = {
+				if = {
+					#limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 11643
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 11643
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_liberate_japan
+		icon = GFX_focus_AST_war_japan
+		x = -2
+		y = 6
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_fortify_far_east }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			JAP = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				JAP = { exists = no }
+				JAP = { is_subject = yes }
+				JAP = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+					type = topple_government
+					target = JAP
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_world_revolution
+		icon = GFX_goal_red_flag
+		x = -5
+		y = 7
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_revive_the_commune }
+		prerequisite = { focus = BLU_shatter_the_empire }
+		prerequisite = { focus = BLU_topple_the_kaiser }
+		prerequisite = { focus = BLU_liberate_japan }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_world_revolution_idea
+		}
+	}
+	
+	# realpolitik path
+	
+	focus = {
+		id = BLU_steady_as_she_goes
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 5
+		y = 1
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_call_third_internationale }
+		mutually_exclusive = { focus = BLU_spread_the_revolution }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			#custom_effect_tooltip = BLU_steady_as_she_goes_tt
+		}
+	}
+	
+	focus = {
+		id = BLU_accept_famine_aid
+		icon = GFX_goal_generic_wheat
+		x = 8
+		y = 2
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_steady_as_she_goes }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_invite_technical_expertise
+		icon = GFX_goal_generic_production
+		x = 6
+		y = 3
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_accept_famine_aid }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BLU_invite_technical_expertise
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_promote_science
+		icon = GFX_goal_generic_scientific_exchange
+		x = 6
+		y = 4
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_invite_technical_expertise }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_promote_science_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_mass_media
+		icon = GFX_goal_generic_radar
+		x = 8
+		y = 3
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_accept_famine_aid }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = BLU_mass_media_idea
+		}
+	}
+	
+	focus = {
+		id = BLU_union_animation
+		icon = GFX_goal_soviet_animation #GFX_goal_generic_propaganda
+		x = 8
+		y = 4
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_mass_media }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BLU_mass_media_idea
+				add_idea = BLU_mass_media_idea_2
+			}
+			every_other_country = {
+				limit = { is_major = yes NOT = { has_war_with = ROOT } NOT = { tag = JAP } }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+				add_ai_strategy = {
+					type = support
+					id = ROOT
+					value = 50
+					}
+			}
+			every_other_country = {
+				limit = { is_major = yes NOT = { has_war_with = ROOT } tag = JAP }
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+				add_ai_strategy = {
+					type = support
+					id = ROOT
+					value = 100
+					}
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_scandinavian_pivot
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 10
+		y = 3
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_accept_famine_aid }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { DEN = { exists = yes NOT = { has_war_with = ROOT } } } DEN = { add_timed_idea = { idea = BLU_scandinavian_pivot_idea days = 200 } } }
+			if = { limit = { NOR = { exists = yes NOT = { has_war_with = ROOT } } } NOR = { add_timed_idea = { idea = BLU_scandinavian_pivot_idea days = 200 } } }
+			if = { limit = { SWE = { exists = yes NOT = { has_war_with = ROOT } } } SWE = { add_timed_idea = { idea = BLU_scandinavian_pivot_idea days = 200 } } }
+		}
+	}
+	
+	focus = {
+		id = BLU_western_detente
+		icon = GFX_goal_generic_alliance
+		x = 10
+		y = 4
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_scandinavian_pivot }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = BLU_consolidate_our_backyard
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 2
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_steady_as_she_goes }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = BLU_liberate_ukraine
+		icon = GFX_goal_ukrainian_shield
+		x = 1
+		y = 3
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_consolidate_our_backyard }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			BAU = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				BAU = { exists = no }
+				BAU = { is_subject = yes }
+				BAU = { is_in_faction_with = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = BAU
+			}
+		}
+	}
+	
+	focus = {
+		id = BLU_crimea_plebiscite
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 5
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_liberate_ukraine }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			CRI = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			CRI = { country_event = aiu_blu.4 }
+		}
+	}
+	
+	focus = {
+		id = BLU_provoke_the_cossacks
+		icon = GFX_goal_generic_cavalry
+		x = 3
+		y = 3
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_consolidate_our_backyard }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+			DON = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			ASC = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			CHE = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			}
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { DON = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no } }
+				DON = { country_event = { id = aiu_blu.7 days = 7 } }
+				}
+			if = { limit = { ASC = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no } }
+				ASC = { country_event = { id = aiu_blu.7 days = 7 } }
+				}
+			if = { limit = { CHE = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no } }
+				CHE = { country_event = { id = aiu_blu.7 days = 7 } }
+				}
+		}
+	}
+	
+	focus = {
+		id = BLU_transcaspian_ambition
+		icon = GFX_goal_generic_dangerous_deal
+		x = 2
+		y = 4
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_consolidate_our_backyard }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			TRC = { exists = yes NOT = { has_war_with = ROOT } OR = { is_subject = no is_subject_of = ROOT } }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			TRC = { country_event = { id = aiu_blu.8 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = BLU_entrap_idel
+		icon = GFX_goal_idel_ural_shield
+		x = 3
+		y = 5
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_provoke_the_cossacks }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			IDE = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
+			NOT = {
+				any_other_country = {
+					num_of_factories > 15
+					has_guaranteed = IDE
+				}
+			}
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = IDE
+			}
+		}
+	}
+	
+	# new ssrs
+	
+	focus = {
+		id = BLU_new_ssrs
+		icon = GFX_goal_tripartite_pact
+		x = 0
+		y = 2
+		relative_position_id = BLU_call_third_internationale
+		prerequisite = { focus = BLU_spread_the_revolution focus = BLU_steady_as_she_goes }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = BLU_new_ssrs_tt
+		}
+	}
+	
+}

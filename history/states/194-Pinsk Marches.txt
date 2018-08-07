@@ -7,7 +7,7 @@ state={
 	state_category = rural
 
 	history={
-		owner = BLU
+		owner = BLR
 		buildings = {
 			infrastructure = 3
 			air_base = 3
@@ -15,6 +15,7 @@ state={
 		add_core_of = BLU
 		add_core_of = RUS
 		add_core_of = RSP
+		add_core_of = BLR
 	}
 
 	provinces={

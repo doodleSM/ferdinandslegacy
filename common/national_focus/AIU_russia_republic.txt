@@ -496,6 +496,41 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = RSP_winter_gear_focus
+		icon = GFX_goal_generic_military_sphere
+		x = -2
+		y = 7
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_winter_equipment_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_winter_gear_idea
+		}
+	}
+	
+	focus = {
 		id = RSP_elite_mountaineers
 		icon = GFX_goal_generic_special_forces
 		x = 0
@@ -1411,7 +1446,7 @@ focus_tree = {
 	
 	focus = {
 		id = RSP_new_agriculture
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_goal_generic_wheat
 		x = 1
 		y = 4
 		relative_position_id = RSP_ural_industry

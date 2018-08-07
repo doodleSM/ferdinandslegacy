@@ -1,0 +1,378 @@
+﻿###########################
+# AIU BLU Events
+###########################
+
+add_namespace = aiu_blu
+
+# blu wants puppet
+country_event = {
+	id = aiu_blu.1
+	title = aiu_blu.1.t
+	desc = aiu_blu.1.d
+	picture = GFX_report_event_soviet_soldiers_tank
+	
+	is_triggered_only = yes
+	
+	option = { #become their puppet
+		name = aiu_blu.1.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.1
+				num_of_factories > 15
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = BLU
+					value > 0
+				}
+			}
+			modifier = {
+				factor = 4
+				BLU = { has_army_size = { size > 79 } }
+			}
+		}
+		BLU = { country_event = aiu_blu.2 }
+	}
+
+	option = { #refuse
+		name = aiu_blu.1.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 5
+				has_army_size = { size > 23 }
+			}
+			modifier = {
+				factor = 2
+				num_of_factories > 15
+			}
+			modifier = {
+				NOT = {
+					any_neighbor_country = {
+						tag = BLU
+					}
+				}
+				factor = 2
+			}
+			modifier = {
+				factor = 2
+				BLU = { has_army_size = { size < 59 } }
+			}
+		}
+		BLU = { country_event = aiu_blu.3 }	
+	}
+
+}
+#country agrees to become puppet
+country_event = {
+	id = aiu_blu.2
+	title = aiu_blu.2.t
+	desc = aiu_blu.2.d
+	picture = GFX_report_event_soviet_in_riga
+	
+	is_triggered_only = yes
+
+	option = { #cool
+		name = aiu_blu.2.a
+		puppet = FROM
+		}
+
+}
+
+#country refuses
+country_event = {
+	id = aiu_blu.3
+	title = aiu_blu.3.t
+	desc = aiu_blu.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = { #cool
+		name = aiu_blu.3.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				strength_ratio = { tag = FROM ratio < 0.5 }
+				factor = 10
+			}
+			modifier = {
+				NOT = {
+					any_neighbor_country = {
+						tag = FROM
+					}
+				}
+				factor = 2
+			}
+		}
+	}
+
+	option = { #war
+		name = aiu_blu.3.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+	}
+
+}
+
+# crimean referendum
+country_event = {
+	id = aiu_blu.4
+	title = aiu_blu.4.t
+	desc = aiu_blu.4.d
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = aiu_blu.4.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.1
+				num_of_factories > 15
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = BLU
+					value > 0
+				}
+			}
+			modifier = {
+				factor = 4
+				BLU = { has_army_size = { size > 79 } }
+			}
+		}
+		effect_tooltip = {
+			BLU = {
+				annex_country = {
+					target = CRI
+					transfer_troops = yes
+					}
+			}
+		}
+		BLU = { country_event = aiu_blu.5 }
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+
+	option = { #nope
+		name = aiu_blu.4.b
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 5
+				has_army_size = { size > 23 }
+			}
+			modifier = {
+				factor = 2
+				num_of_factories > 15
+			}
+			modifier = {
+				NOT = {
+					any_neighbor_country = {
+						tag = BLU
+					}
+				}
+				factor = 2
+			}
+			modifier = {
+				factor = 2
+				BLU = { has_army_size = { size < 59 } }
+			}
+		}
+		BLU = { country_event = aiu_blu.6 }	
+	}
+
+}
+
+#country agrees to become puppet
+country_event = {
+	id = aiu_blu.5
+	title = aiu_blu.5.t
+	desc = aiu_blu.5.d
+	picture = GFX_report_event_soviet_in_riga
+	
+	is_triggered_only = yes
+
+	option = { #cool
+		name = aiu_blu.5.a
+		annex_country = {
+			target = CRI
+			transfer_troops = yes } 
+		}
+
+}
+
+#country refuses
+country_event = {
+	id = aiu_blu.6
+	title = aiu_blu.6.t
+	desc = aiu_blu.6.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	option = { #cool
+		name = aiu_blu.6.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				strength_ratio = { tag = FROM ratio < 0.5 }
+				factor = 10
+			}
+			modifier = {
+				NOT = {
+					any_neighbor_country = {
+						tag = FROM
+					}
+				}
+				factor = 2
+			}
+		}
+	}
+
+	option = { #war
+		name = aiu_blu.6.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+	}
+
+}
+
+# blu provokes cossacks
+country_event = {
+	id = aiu_blu.7
+	title = aiu_blu.7.t
+	desc = aiu_blu.7.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { #waaagh
+		name = aiu_blu.7.a
+		ai_chance = {
+			factor = 100
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+		add_political_power = 50
+		add_war_support = 0.1
+	}
+
+	option = { #nope
+		name = aiu_blu.7.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -50
+	}
+
+}
+
+# blu encourages trc to take over central asia
+country_event = {
+	id = aiu_blu.8
+	title = aiu_blu.8.t
+	desc = aiu_blu.8.d
+	picture = GFX_report_event_yugoslavian_cavalry
+	
+	is_triggered_only = yes
+	
+	option = { #waaagh
+		name = aiu_blu.8.a
+		ai_chance = {
+			factor = 100
+		}
+		if = { limit = { ALA = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } NOT = { is_in_faction_with = FROM } } }
+		create_wargoal = {
+			type = annex_everything
+			target = ALA
+			}
+		}
+		if = { limit = { KHI = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } NOT = { is_in_faction_with = FROM } } }
+		create_wargoal = {
+			type = annex_everything
+			target = KHI
+			}
+		}
+		if = { limit = { BKH = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } NOT = { is_in_faction_with = FROM } } }
+		create_wargoal = {
+			type = annex_everything
+			target = BKH
+			}
+		}
+		if = { limit = { KRZ = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } NOT = { is_in_faction_with = FROM } } }
+		create_wargoal = {
+			type = annex_everything
+			target = KRZ
+			}
+		}
+		if = { limit = { ALT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } NOT = { is_in_faction_with = FROM } } }
+		create_wargoal = {
+			type = annex_everything
+			target = ALT
+			}
+		}
+		if = { limit = { ZHT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } NOT = { is_in_faction_with = FROM } } }
+		create_wargoal = {
+			type = annex_everything
+			target = ZHT
+			}
+		}
+		add_war_support = 0.1
+		add_manpower = 5000
+		add_equipment_to_stockpile = {
+               type = infantry_equipment_0
+               amount = 4000
+               producer = BLU
+            }
+	}
+
+	option = { #nope
+		name = aiu_blu.8.b
+		ai_chance = {
+			factor = 0
+		}
+		add_political_power = -50
+	}
+
+}
