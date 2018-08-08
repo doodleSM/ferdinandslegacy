@@ -404,7 +404,7 @@ country_event = {
 	option = { #time to rebuild
 		name = aiu_blu.9.a
 		add_political_power = 100
-		add_timed_idea = {idea = BLU_rebuilding_the_country_idea days = 120 }
+		add_timed_idea = {idea = BLU_rebuilding_the_country_idea days = 180 }
 	}
 
 }
