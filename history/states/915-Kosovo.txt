@@ -1,0 +1,25 @@
+state={
+	id=915
+	name="STATE_915"
+	provinces={
+		6940 9849 9874 9890 
+	}
+	history={
+		owner = SER
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			9874 1 #pristina
+		}
+		add_core_of = SER
+		add_core_of = ALB
+
+	}
+
+	manpower=356432
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

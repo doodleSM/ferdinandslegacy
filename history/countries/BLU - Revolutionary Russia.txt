@@ -134,6 +134,17 @@ create_country_leader = {
 }
 
 create_country_leader = {
+	name = "Alexei Rykov"
+	desc = ""
+	picture = "BLU_Rykov.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
 	name = "Alexander Bogdanov"
 	desc = ""
 	picture = "BLU_Bogdanov.dds"
@@ -153,6 +164,23 @@ create_country_leader = {
 	traits = {
 		#
 	}
+}
+
+create_field_marshal = {
+	name = "Leon Trotsky"
+	picture = "Portrait_Leon_Trotsky.dds"
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+	traits = {
+		media_personality
+		harsh_leader
+		organisational_leader
+		commando
+	}
+
 }
 
 create_corps_commander = {

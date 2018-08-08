@@ -16,7 +16,7 @@ state={
 			infrastructure = 4
 		}
 		victory_points = {
-			11351 3 #tambov
+			11351 10 #tambov
 		}
 		add_core_of = RSP
 		add_core_of = RUS

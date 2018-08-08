@@ -7,14 +7,18 @@ state={
 		aluminium=4 # was: 6
 	}
 	
-	state_category = rural
+	state_category = town
 
 	history={
-		owner = TRA
+		owner = HUN
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 2
 		}
+		victory_points = {
+			9606 2 #Temesvár
+		}
+		add_core_of = HUN
 		add_core_of = TRA
 	}
 

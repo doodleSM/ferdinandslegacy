@@ -301,10 +301,6 @@ RAJ = {
 	color_ui = rgb { 200  10  10 }
 }
 
-CRA = {
-	color = rgb { 230  70  180 }
-	color_ui = rgb { 230 255 122 }
-}
 
 PRC = {
 	color = rgb { 245 12 55 }
@@ -546,37 +542,25 @@ CRO = {
 	color = rgb { 238 232 170 }
 	color_ui = { 238 232 170 }
 }
-HUG = {
-	color = rgb { 30 144 255 }
-	color_ui = { 30 144 255 }
-}
-VOJ = {
-	color = rgb { 176 224 230 }
-	color_ui = { 176 224 230 }
-}
 BOH = {
-	color = rgb { 144 238 144 }
-	color_ui = { 144 238 144 } 
-}
-WGA = {
-	color = rgb { 222 184 135 }
-	color_ui = { 222 184 135 }
-}
-EGA = {
-	color = rgb { 255 69 0 }
-	color_ui = { 255 69 0 }
+	color = rgb { 54 167 156 }
+	color_ui = rgb { 70 217 203 }
 }
 TRA = {
 	color = rgb { 0 191 255 }
 	color_ui = { 0 191 255 }
 }
-SEB = {
-	color = rgb { 70 130 180 }
-	color_ui = { 70 130 180 }
-}
 BON = {
 	color = rgb { 30 144 255 }
 	color_ui = { 30 144 255 }
+}
+MDV = {
+	color = rgb { 136  157  23 }
+	color_ui = rgb { 136  157  23 }
+}
+SLV = {
+	color = rgb { 94 143 163 }
+	color_ui = rgb { 94 143 163 }
 }
 #new colors asia
 ANH = {

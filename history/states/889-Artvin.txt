@@ -1,0 +1,25 @@
+state={
+	id=889
+	name="STATE_889"
+	provinces={
+		789 7454 11753 
+	}
+	history={
+		owner = ARM
+		victory_points = {
+			11753 1 #ardvin
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = ARM
+		add_core_of = CAU
+		add_core_of = OTT
+
+	}
+
+	manpower=143526
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

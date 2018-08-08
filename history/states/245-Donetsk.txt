@@ -8,6 +8,9 @@ state={
 
 	history={
 		owner = BLU
+		victory_points = {
+			3519 1 #millerovo
+		}
 		buildings = {
 			infrastructure = 5
 		}

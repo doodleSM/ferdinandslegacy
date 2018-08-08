@@ -1,0 +1,25 @@
+state={
+	id=908
+	name="STATE_908"
+	provinces={
+		711 3689 9668 9670 9685 
+	}
+	history={
+		owner = HUN
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			711 1 #csik 
+		}
+		add_core_of = HUN
+		add_core_of = TRA
+
+	}
+
+	
+	manpower=675443
+	buildings_max_level_factor=1.000
+	state_category=town
+}

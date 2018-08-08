@@ -8,7 +8,7 @@ country_event = {
 	desc = aiu_don.1.d
 	picture = GFX_report_event_cossack_raid
 
-	trigger = { original_tag = DON date = 1936.2.1 }
+	trigger = { original_tag = DON date > 1936.2.1 }
 	fire_only_once = yes
 	mean_time_to_happen = { days = 10 }
 	
@@ -153,7 +153,7 @@ country_event = {
                 amount = 500
                 producer = DON
             }
-        add_timed_idea = { days = 60 idea = DON_succesful_raidd } 
+        add_timed_idea = { days = 60 idea = DON_successful_raid } 
     }
 }
 
@@ -176,7 +176,7 @@ country_event = {
                 amount = 1000
                 producer = DON
             }
-        add_timed_idea = { days = 60 idea = DON_very_succesful_raid } 
+        add_timed_idea = { days = 60 idea = DON_very_successful_raid } 
     }
 }
 
@@ -273,7 +273,7 @@ country_event = {
                 damage = 0.25
             }
         }
-        set_country_flag = IDE_raided_us
+        set_country_flag = DON_raided_us
         add_ai_strategy = {
             type = antagonize
             id = "DON"

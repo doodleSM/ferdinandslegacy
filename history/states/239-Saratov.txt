@@ -13,7 +13,7 @@ state={
 			industrial_complex = 1
 		}
 		victory_points = {
-			3578 10
+			3578 15
 		}
 		add_core_of = RSP
 		add_core_of = RUS

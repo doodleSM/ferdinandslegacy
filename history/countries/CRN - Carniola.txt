@@ -1,4 +1,6 @@
-oob = "CRN_1930"
+﻿oob = "CRN_1930"
+
+capital = 102
 
 set_stability = 0.75
 set_war_support = 0

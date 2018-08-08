@@ -6,6 +6,9 @@ state={
 	}
 	history={
 		owner = CAU
+		victory_points = {
+			11599 1 #sukhumi
+		}
 		buildings = {
 			infrastructure = 3
 

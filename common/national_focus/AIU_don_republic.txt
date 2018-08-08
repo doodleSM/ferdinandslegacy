@@ -1825,26 +1825,6 @@ continuous_focus_position = { x = 50 y = 1600 }
 		prerequisite = {focus = DON_develop_local_industries}
 		completion_reward = {
 			238 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1910,26 +1890,6 @@ continuous_focus_position = { x = 50 y = 1600 }
 		prerequisite = {focus = DON_research_grant}
 		completion_reward = {
 			236 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -1951,34 +1911,14 @@ continuous_focus_position = { x = 50 y = 1600 }
 			factor = 5
 		}
 
-		available = { OR = {has_full_control_of_state = 232 any_other_country = { is_puppet_of = ROOT has_full_control_of_state = 232 }}
+		available = { OR = { has_full_control_of_state = 232 any_other_country = { is_puppet_of = ROOT has_full_control_of_state = 232 }}
 			
 		}
 		prerequisite = {focus = DON_develop_astrakhan}
 		completion_reward = {
 			232 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
 				add_building_construction = {
-					type = arms_factory = 1
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -1986,6 +1926,7 @@ continuous_focus_position = { x = 50 y = 1600 }
 			
 		}
 	}
+	
 	focus = {
 		id = DON_settle_cossacks
 		icon = GFX_goal_steppe_rider
@@ -2020,26 +1961,6 @@ continuous_focus_position = { x = 50 y = 1600 }
 		prerequisite = {focus = DON_research_grant }
 		completion_reward = {
 			234 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -2047,26 +1968,6 @@ continuous_focus_position = { x = 50 y = 1600 }
 				}
 			}
 			234 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -2323,7 +2224,7 @@ continuous_focus_position = { x = 50 y = 1600 }
 		prerequisite = { focus = DON_joint_military_cooperation }
 		completion_reward = {
         custom_effect_tooltip = DON_open_borders_tt
-        hidden effect = {	diplomatic_relation = {
+        hidden_effect = {	diplomatic_relation = {
 					country = RSP
 					relation = military_access
 					active = yes

@@ -1,0 +1,29 @@
+state={
+	id=904
+	name="STATE_904"
+	resources={
+		oil=4.000
+	}
+	provinces={
+		686 701 3683 6720 9676 11627 11663 
+	}
+	history={
+		owner = HUN
+		victory_points = {
+			686 5 #sopron
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 3
+
+		}
+		add_core_of = HUN
+
+	}
+
+	manpower=1297605
+	buildings_max_level_factor=1.000
+	state_category=city
+}

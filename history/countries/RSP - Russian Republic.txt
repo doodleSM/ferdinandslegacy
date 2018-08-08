@@ -163,7 +163,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Mikhaïl Kvetsinsky"
-	picture = "Portrait_Russia_Mikhail_Kvetsinsky.tga"
+	#picture = "Portrait_Russia_Mikhail_Kvetsinsky.tga"
 	traits = {
 		trait_cautious
 		infantry_leader
