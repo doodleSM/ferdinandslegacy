@@ -4,7 +4,7 @@ country = {
 
 	POL_russian_rule = {
 
-		picture = generic_pp_unity_bonus	
+		picture = GFX_idea_POL_russian_rule	
 	
 		modifier = {
 			political_power_factor = -0.05
