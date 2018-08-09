@@ -16,6 +16,11 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		tag = POL
+		date > 1936.1.15
+	}
 
 	option = {
 		name = polfl.0.a
