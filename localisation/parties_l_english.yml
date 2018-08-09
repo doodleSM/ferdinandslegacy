@@ -80,8 +80,8 @@
   UKR_auth_dem_party:0 "All-Ukrainian Military Deputies Council"
   UKR_fascism_party:0 "OUN"
   ###Poland###
-  POL_anarchism_party:0 ""
-  POL_anarchism_party_long:0 ""
+  POL_anarchism_party:0 "AFP"
+  POL_anarchism_party_long:0 "Anarchistyczna Federacja Polski"
   POL_communism_party:0 "SDKPiL"
   POL_communism_party_long:0 "Socjaldemokracja Królestwa Polskiego i Litwy"
   POL_radical_socialism_party:0 "PPS"
