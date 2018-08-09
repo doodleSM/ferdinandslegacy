@@ -1,1 +1,111 @@
+﻿add_namespace = polfl     #Flavor
+ add_namespace = polsejm   #Sejm events
 
+################################
+## German Events
+################################
+
+
+### Introduction event
+country_event = {
+	id = polfl.0
+	title = polfl.0.t
+	desc = polfl.0.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polfl.0.a
+	}
+  
+}
+
+#Status of polish parties
+country_event = {
+	id = polsejm.0
+	title = polsejm.0.t
+	desc = polsejm.0.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor, ban them
+		name = polsejm.0.a
+	}
+  
+  option = { #PPP, loyal to tsar stays, other ban
+		name = polsejm.0.b
+	}
+  
+  option = { #Rest, support them
+		name = polsejm.0.c
+	}
+  
+}
+
+#Status of Governor
+country_event = {
+	id = polsejm.1
+	title = polsejm.1.t
+	desc = polsejm.1.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor, all power to him
+		name = polsejm.1.a
+	}
+  
+  option = { #PPP, status quo
+		name = polsejm.1.b
+	}
+  
+  option = { #Rest, abolish position
+		name = polsejm.1.c
+	}
+  
+}
+
+#Status of Tsar
+country_event = {
+	id = polsejm.2
+	title = polsejm.2.t
+	desc = polsejm.2.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Be with Tsar
+		name = polsejm.2.a
+	}
+  
+  option = { #Dethrone him
+		name = polsejm.2.b
+	}
+  
+}
+
+#Status of current constitution
+country_event = {
+	id = polsejm.3
+	title = polsejm.3.t
+	desc = polsejm.3.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Stays
+		name = polsejm.3.a
+	}
+  
+  option = { #Dethrone him
+		name = polsejm.3.b
+	}
+  
+}
