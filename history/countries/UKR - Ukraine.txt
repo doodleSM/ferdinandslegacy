@@ -39,38 +39,23 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 15
-		}
-		
-		radical_socialism = { 
-			popularity = 3
+			popularity = 44
 		}
 		
 		social_democracy = { 
-			popularity = 9
+			popularity = 27
 		}
 		
-		social_liberalism = { 
-			popularity = 7
-		}
 		
-		market_lib = { 
-			popularity = 1
-		}
 
 		fascism = {
-			popularity = 16
+			popularity = 19
 		}
 		
-		neutrality = {
-			popularity = 5
-		}
+		neutrality = { popularity =25 }
 		
-		auth_dem = {
-			popularity = 44
-		}
 	}
-	ruling_party = auth_dem
+	ruling_party = democratic
 	last_election = "1917.6.0"
 	election_frequency = 48
 	elections_allowed = no
@@ -81,13 +66,41 @@ create_country_leader = {
 	desc = ""
 	picture = "UKR_Volodymr.dds"
 	expire = "1953.3.1"
-	ideology = auth_dem_ideology
+	ideology = social_democracy_ideology
 	traits = {
 		
 	}
 }
-
-
+create_country_leader = {
+	name = "Stepan Bandera"
+	desc = ""
+	picture = "UKR_Bandera.dds"
+	expire = "1953.3.1"
+	ideology = radical_populist
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Symon Petilura"
+	desc = ""
+	picture = "UKR_Petilura.dds"
+	expire = "1953.3.1"
+	ideology = conservatism
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Pavlo Skoropadskyi"
+	desc = ""
+	picture = "UKR_Pavlo.dds"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
 
 
 
