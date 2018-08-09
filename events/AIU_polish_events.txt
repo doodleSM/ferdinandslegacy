@@ -12,7 +12,6 @@ country_event = {
 	id = polfl.0
 	title = polfl.0.t
 	desc = polfl.0.d
-	picture = GFX_report_event_GRM_intro
 
 	fire_only_once = yes
 	is_triggered_only = yes
