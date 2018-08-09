@@ -14,6 +14,9 @@ state={
 		victory_points = {
 			9427 10		
 		}
+		victory_points = {
+			6499 1 #Rzeszów
+		}
 		buildings = {
 			infrastructure = 6
 			arms_factory = 1

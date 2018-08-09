@@ -14,7 +14,7 @@ state={
 
 		}
 		victory_points = {
-			6470 5 #carlsbad
+			6470 3 #carlsbad
 		}
 		add_core_of = BOH
 

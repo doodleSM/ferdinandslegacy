@@ -9,7 +9,7 @@ state={
 	history={
 		owner = HUN
 		victory_points = {
-			9692 10 
+			9692 15
 		}
 		buildings = {
 			infrastructure = 5
@@ -26,7 +26,7 @@ state={
 	provinces={
 		541 3484 3716 9539 9692 11522 11679 
 	}
-	manpower=950500
+	manpower=1200500
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=large_city
 }

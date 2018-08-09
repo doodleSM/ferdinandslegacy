@@ -322,7 +322,8 @@ RUS_foreign_policy = {
 			
 		remove_effect = {
 			set_capital = 219
-			set_province_name = { id = 3151 name = "Leningrad"}
+			set_province_name = { id = 3151 name = "Petrograd"}
+			set_province_name = { id = 3529 name = "Volgograd"}
 			set_country_flag = BLU_moved_capital
 		}
 		
@@ -363,7 +364,8 @@ RUS_foreign_policy = {
 			
 		remove_effect = {
 			set_capital = 195
-			set_province_name = { id = 3151 name = "Leningrad"}
+			set_province_name = { id = 3151 name = "Petrograd"}
+			set_province_name = { id = 3529 name = "Volgograd"}
 			set_country_flag = BLU_moved_capital
 		}
 		

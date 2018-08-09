@@ -1,22 +1,24 @@
-
 state={
-	id=63
-	name="STATE_63"
+	id=923
+	name="STATE_923"
+	provinces={
+		9252 9306 11260 11288 11316 11343 11372 
+	}
 	resources={
-		steel=14.000
-		aluminium=6.000
+		steel=10.000
+		aluminium=4.000
 	}
 
 	history={
 		owner = GRM
 		victory_points = {
-			6282 1 
+			11372 1 
 		}
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 1
-			6282 = {
-				naval_base = 4
+			11372 = {
+				naval_base = 1
 
 			}
 			air_base = 3
@@ -26,10 +28,7 @@ state={
 
 	}
 
-	provinces={
-		6282 6309 6334 6390 9277 9334 9361 
-	}
-	manpower=654532
+	manpower=578463
 	buildings_max_level_factor=1.000
 	state_category=town
 }

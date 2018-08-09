@@ -13,7 +13,7 @@ state={
 
 		}
 		victory_points = {
-			6700 1 #szeged
+			6700 5 #szeged
 		}
 		add_core_of = HUN
 
