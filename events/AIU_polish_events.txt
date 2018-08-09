@@ -19,7 +19,6 @@ country_event = {
 	
 	trigger = {
 		tag = POL
-		date > 1936.1.1
 	}
 	
 	mean_time_to_happen = { days = 5 }
