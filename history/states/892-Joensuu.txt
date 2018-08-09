@@ -1,0 +1,21 @@
+state={
+	id=892
+	name="STATE_892"
+	provinces={
+		3030 3068 3185 6210 9061 9181 13114 13115 
+	}
+	history={
+		owner = FIN
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = FIN
+		add_core_of = RFI
+
+	}
+
+	manpower=56743
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

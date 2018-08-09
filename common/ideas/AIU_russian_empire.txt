@@ -381,7 +381,7 @@ high_command = { RUS_alexey_kaledin = {
 			
 
 			
-			traits = { army_regrouping_2 old_guard }
+			traits = { army_regrouping_2 }
 			
 			ai_will_do = {
 				factor = 1

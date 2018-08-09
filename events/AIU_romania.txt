@@ -1,33 +1,5 @@
-add_namespace = romania
+﻿add_namespace = romania
 
 ################################
 ## Romanian Events
 ################################
-
-country_event = {
-	id = romania.1 #Austrians Want More
-	title = romania.1.t
-	desc = romania.1.d
-	picture = GFX_report_event_generic_factory
-
-	fire_only_once = yes
-
-	triggers = {
-
-		}
-	option = {
-			name = romania.1.a
-			add_ideas = austrian_deal
-		}
-	option = {
-			name = romania.1.b
-			GOR = {
-				country_event = {
-					id = austria.2
-					days = 5
-				}
-				set_country_flag = GOR_refused_deal
-			}
-		}
-	}
-}

@@ -1,0 +1,25 @@
+state={
+	id=896
+	name="STATE_896"
+	provinces={
+		653 6690 9646 9648 9661 9679 11630 
+	}
+	history={
+		owner = GOR
+		victory_points = {
+			9648 10 #graz
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		add_core_of = GOR
+
+	}
+
+	manpower=1145983
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -403,8 +403,6 @@ GRM_MIL =
 
 	for_countries = { GRM }
 
-	
-
 	division_types = {  "infantry"  }
 
 	fallback_name = "%d. Landwehr"
@@ -609,8 +607,6 @@ GRM_MLP =
 	for_countries = { GRM }
 
 	can_use = { always = yes }
-
-	division_types = { "mountaineers"  }
 
 	fallback_name = "%d. Feldgendarmerie"
 

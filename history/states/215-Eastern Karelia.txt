@@ -1,8 +1,9 @@
+
 state={
 	id=215
 	name="STATE_215"
 	resources={
-		steel=30 # was: 52.000
+		steel=30.000
 	}
 
 	history={
@@ -12,7 +13,7 @@ state={
 
 		}
 		victory_points = {
-			9045 1 #belomorsk
+			9045 1 
 		}
 		add_core_of = RSP
 		add_core_of = RUS
@@ -21,10 +22,9 @@ state={
 	}
 
 	provinces={
-		36 80 86 94 134 155 157 170 176 2998 3008 3067 3071 3078 3189 6021 6029 6090 6096 6098 6159 6175 9045 9055 9074 9119 9195 9198 11045 11054 11094 11096 11146 11175 11181 11212 13130 
+		86 94 170 176 3008 3078 3189 6021 6029 6090 6159 9045 9055 9195 11045 11094
 	}
-	manpower=214858
-	
-	state_category = rural
+	manpower=165435
 	buildings_max_level_factor=1.000
+	state_category=rural
 }

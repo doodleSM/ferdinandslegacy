@@ -9,7 +9,7 @@ state={
 	history={
 		owner = RSP
 		victory_points = {
-			3529 35
+			3529 25
 		}
 		buildings = {
 			infrastructure = 7

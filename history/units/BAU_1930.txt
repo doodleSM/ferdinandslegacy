@@ -1,4 +1,4 @@
-division_template = { #Infantry Militia
+﻿division_template = { #Infantry Militia
 	name = "Ukrayinska Militsiya"
 	division_names_group = UKR_GAR_01
 

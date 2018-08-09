@@ -9,6 +9,9 @@ state={
 		victory_points = {
 			3653 3 
 		}
+		victory_points = {
+			3658 1 #kutaisi
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

@@ -19,7 +19,7 @@ state={
 
 		}
 		victory_points = {
-			1591 10
+			1591 10 
 		}
 		add_core_of = KRZ
 		add_core_of = ALA
@@ -31,7 +31,7 @@ state={
 	}
 
 	provinces={
-		1591 1825 4224 12583 13147 
+		1591 4224 13147 
 	}
 	manpower=1863404
 	buildings_max_level_factor=1.000

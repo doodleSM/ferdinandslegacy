@@ -161,7 +161,96 @@ create_country_leader = {
 }
 
 
+create_field_marshal = {
+	name = "Pyotr Wrangel"
+	# picture = "Portrait_Russia_Pyotr_Wrangel.tga"
+	traits = {
+	 thorough_planner
+	 harsh_leader
+	inspirational_leader
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
 
+create_field_marshal = {
+	name = "Anton Denikin"
+	# picture = "Portrait_Russia_Anton_Denikin.tga"
+	traits = {
+	 old_guard
+	 war_hero
+	 organisational_leader
+	 brilliant_strategist
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Vladimir Kappel"
+	#picture = "Portrait_Soviet_Vladimir_Kappel.tga"
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+	traits = {
+		winter_specialist
+		winter_expert
+	}
+}
+
+create_corps_commander = {
+	name = "Mikhail Drozdovsky"
+	#picture = "Portrait_Soviet_Mikhail_Drozdovsky.tga"
+	traits = {
+		career_officer
+		infantry_leader
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Boris Annenkov"
+	#picture = "Portrait_Russia_Boris_Annenkov.tga"
+	traits = {
+		cavalry_officer
+		cavalry_leader
+		winter_specialist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Vladimir von Manstein"
+	#picture = "Portrait_Soviet_Vladimir_von_Manstein.tga"
+	traits = {
+		infantry_officer
+		commando
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+
+}
 
 
 ### Ship Variants ###

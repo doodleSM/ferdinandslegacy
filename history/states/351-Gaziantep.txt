@@ -10,7 +10,7 @@ state={
 
 		}
 		victory_points = {
-			3124 3 
+			3124 5 #vologda
 		}
 		add_core_of = RSP
 		add_core_of = RUS

@@ -502,6 +502,7 @@
  BLU_mass_media_idea_2:0 "Mass Media"
  BLU_scandinavian_pivot_idea:0 "Soviet Influence"
  BLU_world_revolution_idea:0 "World In Revolution"
+ BLU_rebuilding_the_country_idea:0 "Rebuilding Russia"
  
  #events
  aiu_rsp.1.t:0 "[From.GetNameDefCap] is preparing to attack us!"
@@ -537,6 +538,9 @@
  aiu_blu.8.d:0 "In recent secret meetings, representatives from [From.GetNameDef] have offered us material and diplomat support to begin an all-out campaign to secure Central Asia. If we agree, they will provide us with plenty of men and material."
  aiu_blu.8.a:0 "What are we waiting for?"
  aiu_blu.8.b:0 "No, we are not ready for this."
+ aiu_blu.9.t:0 "Russia is Ours!"
+ aiu_blu.9.d:0 "Through courage and steel, we have retaken Russia from our enemies and rescued its people from their clutches. However, many have died, both military and civilian, and large swathes of the country lie in ruins. It will take time to restore the land to its former productivity."
+ aiu_blu.9.a:0 "Our Motherland can now stand proud once more."
  
  #decisions
  RUS_internal_politics:0 "Internal Politics"

@@ -1,4 +1,4 @@
-add_namespace = crimea
+﻿add_namespace = crimea
 
 # Mohammad Ali Qajar Rises
 country_event = {
@@ -32,11 +32,10 @@ country_event = {
 			ideology = despotism
 			traits = {
 				inexperienced_imperialist
+			}
 		}
 	}
-}
 	option = {
 		name = crimea.1.b
-		}
 	}
 }

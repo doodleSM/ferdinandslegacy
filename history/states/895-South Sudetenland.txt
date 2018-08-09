@@ -1,0 +1,24 @@
+state={
+	id=895
+	name="STATE_895"
+	provinces={
+		543 5283 7857 
+	}
+	history={
+		owner = BOH
+		buildings = {
+			infrastructure = 7
+
+		}
+		victory_points = {
+			11525 1 #znaim
+		}
+		add_core_of = BOH
+
+	}
+
+
+	manpower=456342
+	buildings_max_level_factor=1.000
+	state_category=town
+}

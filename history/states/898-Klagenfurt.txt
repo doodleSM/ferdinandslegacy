@@ -1,0 +1,23 @@
+state={
+	id=898
+	name="STATE_898"
+	provinces={
+		3673 3674 6687 6691 
+	}
+	history={
+		owner = GOR
+		buildings = {
+			infrastructure = 6
+
+		}
+		victory_points = {
+			3673 1 #klagenfurt 
+		}
+		add_core_of = GOR
+
+	}
+
+	manpower=654632
+	buildings_max_level_factor=1.000
+	state_category=town
+}

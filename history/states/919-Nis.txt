@@ -1,0 +1,25 @@
+state={
+	id=919
+	name="STATE_919"
+	provinces={
+		630 9602 9756 11887 
+	}
+
+	history={
+		owner = SER
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			9602 1 #nis
+		}
+		add_core_of = SER
+
+	}
+
+
+	manpower=633000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

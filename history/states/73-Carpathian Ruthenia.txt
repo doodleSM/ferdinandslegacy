@@ -6,18 +6,13 @@ state={
 	state_category = rural
 	
 	history={
-		owner = HUG
+		owner = HUN
 		buildings = {
 			infrastructure = 5
 		}
-		add_core_of = HUG
-
-		1939.3.14 = {
-			owner = HUN
-			controller = HUN
-			remove_claim_by = HUN
-			add_core_of = HUN
-			add_core_of = SLO
+		add_core_of = HUN
+		victory_points = {
+			11691 1 #uzhorod
 		}
 	}
 
