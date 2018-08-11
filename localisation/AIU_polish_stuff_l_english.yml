@@ -7,9 +7,9 @@ polfl.0.a:0 "Let's begin the Sejm proceedings!"
 
 polsejm.0.t:0 "Day 1: Question of Polish Parties"
 polsejm.0.d:0 "-"
-polsejm.0.a:0 "Whites: We need to ban all Polish parties"
-polsejm.0.b:0 "Pedecs: Let's ban all parties that are enemies of a Tsar!"
-polsejm.0.c:0 "Chjena/Pesels: Why Polish parties shoul be banned in Poland?"
+polsejm.0.a:0 "§WWhites§: We need to ban all Polish parties"
+polsejm.0.b:0 "§YPedecs§: Let's ban all parties that are enemies of a Tsar!"
+polsejm.0.c:0 "§BChjena§/§GPesels§: Why Polish parties shoul be banned in Poland?"
 
 polsejm.1.t:0 "Day 2: Question of Governor's Power"
 polsejm.1.d:0 "-"
