@@ -103,7 +103,7 @@ units = {
 	
 	division= {	
 		name = "Mtis Jarebi"
-		location = 11647
+		location = 11617
 		division_template = "Mtis Jarebi"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7

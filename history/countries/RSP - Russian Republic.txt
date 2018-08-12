@@ -43,6 +43,18 @@ set_technology = {
 
 set_convoys = 100
 
+add_ai_strategy = {
+				type = antagonize
+				id = BLU
+				value = 400
+			}
+
+add_ai_strategy = {
+				type = antagonize
+				id = RUS
+				value = 400
+			}
+
 set_politics = {
 
 	parties = {

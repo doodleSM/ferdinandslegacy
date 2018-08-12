@@ -114,7 +114,23 @@ units = {
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.85
 
-	}	
+	}
+	division= {	# 		
+		name = "1ya Latyshskiy Strelok"
+		location = 6411
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.95
+
+	}
+	division= {	# 		
+		name = "2ya Latyshskiy Strelok"
+		location = 3390
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.95
+
+	}
 	division= {	# 		
 		name = "Narodnoye Diviziya Minska"
 		location = 11370

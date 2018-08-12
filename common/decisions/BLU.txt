@@ -297,11 +297,13 @@ RUS_foreign_policy = {
 		available = {
 			has_war = no
 			has_full_control_of_state = 219
+			original_tag = BLU
 		}
 
 		visible = {
 			has_war = no
 			has_full_control_of_state = 219
+			original_tag = BLU
 			NOT = { has_country_flag = BLU_moved_capital }
 		}
 
@@ -339,11 +341,13 @@ RUS_foreign_policy = {
 		available = {
 			has_war = no
 			has_full_control_of_state = 195
+			original_tag = BLU
 		}
 
 		visible = {
 			has_war = no
 			has_full_control_of_state = 195
+			original_tag = BLU
 			NOT = { has_country_flag = BLU_moved_capital }
 		}
 

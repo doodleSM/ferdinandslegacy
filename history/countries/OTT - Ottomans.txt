@@ -104,6 +104,17 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Sultan Yusuf"
+	desc = "POLITICS_YUSUF_DESC"
+	picture = "Portrait_Yusuf.dds"
+	expire = "1965.1.1"
+	ideology = auth_dem_ideology
+	traits = {
+		#
+	}
+}
+
 create_corps_commander = {
 	name = "Cemil Cahit Toydemir"
 	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"

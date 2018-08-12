@@ -14,7 +14,7 @@ state={
 			air_base = 2
 		}
 		victory_points = {
-			10696 10
+			10696 15
 		}
 		add_core_of = BLU
 		add_core_of = RSP

@@ -1,4 +1,4 @@
-add_namespace = polfl     #Flavor events
+﻿add_namespace = polfl     #Flavor events
 add_namespace = polsejm   #Sejm events
 add_namespace = polele    #Election events
 

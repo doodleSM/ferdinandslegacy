@@ -1,0 +1,26 @@
+state={
+	id=924
+	name="STATE_924"
+	provinces={
+		6997 13216
+	}
+	history={
+		owner = ARM
+		victory_points = {
+			6997 1 #nakhchivan
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = ARM
+		add_claim_by = CAU
+		add_core_of = AZR
+
+	}
+
+	
+	manpower=345654
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

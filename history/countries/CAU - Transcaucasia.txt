@@ -8,6 +8,9 @@ set_war_support = 0.5
 
 add_ideas = {
 	limited_conscription
+	CAU_caucasus_army_district
+	CAU_azerbaijani_separatism
+	CAU_powerful_soviets_idea
 }
 
 # Starting tech
@@ -40,7 +43,7 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 14
+			popularity = 12
 		}
 		
 		market_lib = {
@@ -48,7 +51,7 @@ set_politics = {
 		}
 		
 		social_liberalism = {
-			popularity = 24
+			popularity = 17
 		}
 		
 		social_democracy = {
@@ -60,7 +63,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 4
+			popularity = 10
 		}
 		
 		anarchism = {
@@ -72,7 +75,7 @@ set_politics = {
 		}
 
 		neutrality = {
-			popularity = 5
+			popularity = 8
 		}
 		
 		auth_dem = {
@@ -81,7 +84,7 @@ set_politics = {
 	}
 	
 	ruling_party = social_democracy
-	last_election = "1934.3.26"
+	last_election = "1929.3.26"
 	election_frequency = 60
 	elections_allowed = yes
 }
@@ -90,7 +93,7 @@ set_politics = {
 
 
 create_country_leader = {
-	name = " Akaki Chkhenkeli"
+	name = "Akaki Chkhenkeli"
 	desc = ""
 	picture = "CAU_Akaki.dds"
 	expire = "1965.1.1"
@@ -100,3 +103,132 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Sergo Ordzhonikidze"
+	desc = ""
+	picture = "CAU_Ordzhonikidze.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Kote Abkhazi"
+	desc = ""
+	picture = "CAU_Kote.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Kote Abkhazi"
+	desc = ""
+	picture = "CAU_Kote.dds"
+	expire = "1965.1.1"
+	ideology = auth_dem_ideology
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Kote Abkhazi"
+	desc = ""
+	picture = "CAU_Kote.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		
+	}
+}
+
+create_field_marshal = {
+	name = "Kote Abkhazi"
+	picture = "CAU_Kote.dds"
+	id = 88110
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+	traits = {
+		infantry_officer
+		organisational_leader
+		winter_specialist
+	}
+
+}
+
+create_field_marshal = {
+	name = "Samadbey Mehmandarov"
+	picture = "Portrait_Samadbey_Mehmandarovi.dds"
+	id = 88112
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+	traits = {
+		inflexible_strategist
+		war_hero
+		inspirational_leader
+		defensive_doctrine
+	}
+}
+
+create_corps_commander = {
+	name = "Ivane Kazbegi"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	traits = {
+		war_hero
+		hill_fighter
+		skilled_staffer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Valiko Jugheli"
+	picture = "Portrait_Valiko_Jugheli.dds"
+	skill = 2
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	traits = {
+		trait_reckless
+		infantry_officer
+	}
+}
+
+create_corps_commander = {
+	name = "Ali-Agha Shikhlinski"
+	picture = "Portrait_Ali-Agha_Shikhlinski.dds"
+	id = 88111
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+	traits = {
+		war_hero
+		bearer_of_artillery
+		trait_engineer
+	}
+}
+
+create_navy_leader = {
+	name = "Viktor Lomidze"
+	#portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+	traits = { blockade_runner }
+	skill = 2
+}

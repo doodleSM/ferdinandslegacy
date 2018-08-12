@@ -754,7 +754,7 @@ IDE_foreign_policy = {
 		
 		fire_only_once = yes
 
-		cost = 50
+		cost = 25
 
 		modifier = {
 			
@@ -786,9 +786,9 @@ IDE_foreign_policy = {
 		}
 		
 		ai_will_do = {
-			factor = 4
+			factor = 10
 			modifier = {
-				factor = 10
+				factor = 5
 				has_government = neutrality
 			}
 		}

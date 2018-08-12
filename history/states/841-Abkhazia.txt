@@ -14,7 +14,7 @@ state={
 
 		}
 		add_core_of = CAU
-		add_core_of = GEO
+		#add_core_of = GEO
 
 	}
 	manpower=432645

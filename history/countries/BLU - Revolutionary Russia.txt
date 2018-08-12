@@ -37,6 +37,18 @@ add_ideas = {
 	low_economic_mobilisation
 }
 
+add_ai_strategy = {
+				type = antagonize
+				id = RSP
+				value = 400
+			}
+
+add_ai_strategy = {
+				type = antagonize
+				id = RUS
+				value = 400
+			}
+
 set_research_slots = 3
 
 set_war_support = 0.65
