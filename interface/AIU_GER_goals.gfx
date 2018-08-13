@@ -105,4 +105,9 @@ SpriteTypes = {
 		name = "GFX_focus_generic_asian_union"
 		texturefile = "/gfx/interface/goals/focus_generic_asian_union.dds"
 	}
+
+	spriteType = {
+		name = "GFX_focus_colonial_ambition"
+		texturefile = "/gfx/interface/goals/Germany/focus_colonial_ambition.dds"
+	}
 }

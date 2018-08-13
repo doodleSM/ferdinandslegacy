@@ -99,3 +99,23 @@
  GRM_nanking_road_incident_desc:0 "TEST"
  GRM_tsingtao_conference:0 "Tsingtao Conference"
  GRM_tsingtao_conference_desc:0 "I'm too Lazy to Do this, I'll finish it later"
+
+ ###RCW intervention
+ GRM_generals_meeting:0 "Meeting of the Generals"
+ GRM_generals_meeting_desc:0 "We must call our top generals from acoss to country to meet and discuss current affairs"
+ GRM_mitteleuropa:0 "Discuss Mitteleuropa"
+ GRM_mitteleuropa_desc:0 "The Mitteleuropa plan was the German Ambition in Eastern Europe. We will discuss on how to go about this plan."
+ GRM_polen_und_ostee:0 "Ratify Plan Polen und Ostee"
+ GRM_polen_und_ostee_desc:0 "This plan is aimed at minimal expansion that will onlt extend to Poland and the Baltics."
+ GRM_osteuropa:0 "Ratify Plan Osteuropa"
+ GRM_osteuropa_desc:0 "This plan is aimed at moderate expansion that will not stop at Poland or the Baltics but will involve Finaldn and the Ukraine."
+ GRM_westrussland:0 "Ratify Plan Westrussland"
+ GRM_westrussland_desc:0 "This plan is aimed at maximum expansion that will extend from Poland to Caucasia."
+
+
+ ##Septemberprogramm
+ GRM_Septemberprogramm:0 "Revise the Septemberprogramm"
+ GRM_Septemberprogramm_desc:0 "Ever since we thought war was emminent we drafted up a plan for its outcome. Allas a war never happened and the plan was forgotten by our military high command, but now that tensions are rising we shall take a look at it again to plan out our ambitions."
+ GRM_colonial_question:0 "Colonial Question"
+ GRM_colonial_question_desc:0 "The state of the German Colonial Empire has always been in discussion. Today we continue that discussion on what how to continue it."
+ 

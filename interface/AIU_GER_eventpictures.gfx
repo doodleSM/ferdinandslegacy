@@ -1,0 +1,26 @@
+spriteTypes = {
+		
+	spriteType = {
+		name = "GFX_report_event_GRM_intro"
+		texturefile = "gfx/event_pictures/GFX_report_event_GRM_intro.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_General_Meeting"
+		texturefile = "gfx/event_pictures/Germany/GFX_report_event_General_Meeting.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_Meeting_Concluded"
+		texturefile = "gfx/event_pictures/Germany/GFX_report_event_Meeting_Concluded.png"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_Wilhelm_Signing"
+		texturefile = "gfx/event_pictures/Germany/GFX_report_event_Wilhelm_Signing.dds"
+	}
+	
+}
+	
+	
+	

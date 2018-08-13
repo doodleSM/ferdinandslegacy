@@ -1,0 +1,375 @@
+﻿add_namespace = ger_rcw
+add_namespace = ger_sp
+add_namespace = ger_rcw_pol
+
+################################
+## German Intervention in Russian civil war
+################################
+
+
+### Munich Conference
+country_event = {
+	id = ger_rcw.0
+	title = ger_rcw.0.t
+	desc = ger_rcw.0.d
+	picture = GFX_report_event_General_Meeting
+
+	is_triggered_only = yes
+
+	option = {
+		name = ger_rcw.0.a
+	}
+}
+
+#Mitteleuropa
+country_event = {
+	id = ger_rcw.1
+	title = ger_rcw.1.t
+	desc = ger_rcw.1.d
+	picture = GFX_report_event_Meeting_Concluded
+
+	is_triggered_only = yes
+
+	#Diplomatic
+	option = {
+		name = ger_rcw.1.a
+	}
+}
+
+country_event = {
+	id = ger_rcw.2
+	title = ger_rcw.2.t
+	desc = ger_rcw.2.d
+	picture = GFX_report_event_Wilhelm_Signing
+
+	is_triggered_only = yes
+
+	#Diplomatic
+	option = {
+		name = ger_rcw.2.a
+	}
+}
+
+country_event = {
+	id = ger_rcw.3
+	title = ger_rcw.3.t
+	desc = ger_rcw.3.d
+	picture = GFX_report_event_Wilhelm_Signing
+
+	is_triggered_only = yes
+
+	#Diplomatic
+	option = {
+		name = ger_rcw.3.a
+	}
+}
+
+
+country_event = {
+	id = ger_rcw.4
+	title = ger_rcw.4.t
+	desc = ger_rcw.4.d
+	picture = GFX_report_event_Wilhelm_Signing
+
+	is_triggered_only = yes
+
+	#Diplomatic
+	option = {
+		name = ger_rcw.4.a
+	}
+}
+
+
+#################
+Polish Conference
+##################
+
+#Diplomats sent to warsaw
+country_event = {
+	id = ger_rcw_pol.0
+	title = ger_rcw_pol.0.t
+	desc = ger_rcw_pol.0.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_pol.0.a
+		POL = { country_event = { days = 1 id = ger_rcw_pol.1 } }
+	}
+}
+
+#german diplomats arrive
+country_event = {
+	id = ger_rcw_pol.1
+	title = ger_rcw_pol.1.t
+	desc = ger_rcw_pol.1.d 
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_pol.1.a
+		GRM = { country_event = { days = 1 id = ger_rcw_pol.2 } }
+	}
+}
+
+#Propose Aid
+country_event = {
+	id = ger_rcw_pol.2
+	title = ger_rcw_pol.2.t
+	desc = ger_rcw_pol.2.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_pol.2.a
+		POL = {
+			random_list = {
+				50 = { country_event = { id = ger_rcw_pol.3 days = 1 } }  #accept
+				50 = { country_event = { id = ger_rcw_pol.4 days = 1 } }  #reject
+			}
+		}
+	}
+}
+
+#Accept
+country_event = {
+	id = ger_rcw_pol.3
+	title = ger_rcw_pol.3.t
+	desc = ger_rcw_pol.3.d 
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.3.a
+		GRM = { country_event = { days = 1 id = ger_rcw_pol.5 } }
+	}
+}
+
+#reject
+country_event = {
+	id = ger_rcw_pol.4
+	title = ger_rcw_pol.4.t
+	desc = ger_rcw_pol.4.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.4.a
+		GRM = { country_event = { days = 1 id = ger_rcw_pol.6 } }
+	}
+}
+
+
+country_event = {
+	id = ger_rcw_pol.5
+	title = ger_rcw_pol.5.t
+	desc = ger_rcw_pol.5.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.5.a
+		GRM = { puppet = POL }
+		POL = { set_country_flag = accepted_puppet }
+		GRM = { country_event = { days = 1 id = ger_rcw_pol.12 } }
+	}
+}
+
+country_event = {
+	id = ger_rcw_pol.6
+	title = ger_rcw_pol.6.t
+	desc = ger_rcw_pol.6.d
+
+	is_triggered_only = yes
+
+
+	option = { #Bastards
+		name = ger_rcw_pol.6.a
+		POL = { set_country_flag = rejected_puppet }
+		GRM = { country_event = { days = 1 id = ger_rcw_pol.7 } }
+	}
+}
+
+country_event = {
+	id = ger_rcw_pol.7
+	title = ger_rcw_pol.7.t
+	desc = ger_rcw_pol.7.d
+
+	is_triggered_only = yes
+
+
+	option = { #Bastards
+		name = ger_rcw_pol.7.a
+		POL = {
+			random_list = {
+				50 = { country_event = { id = ger_rcw_pol.8 days = 1 } }  #accept
+				50 = { country_event = { id = ger_rcw_pol.9 days = 1 } }  #reject
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ger_rcw_pol.8
+	title = ger_rcw_pol.8.t
+	desc = ger_rcw_pol.8.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.8.a
+		GRM = { country_event = { days = 1 id = ger_rcw_pol.10 } }
+	}
+}
+
+country_event = {
+	id = ger_rcw_pol.9
+	title = ger_rcw_pol.9.t
+	desc = ger_rcw_pol.9.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.9.a
+		GRM = { country_event = { days = 1 id = ger_rcw_pol.11 } }
+	}
+}
+
+country_event = {
+	id = ger_rcw_pol.10
+	title = ger_rcw_pol.10.t
+	desc = ger_rcw_pol.10.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.10.a
+		POL = { set_country_flag = nominal_mitteleuropa_member }
+	}
+}
+
+country_event = {
+	id = ger_rcw_pol.11
+	title = ger_rcw_pol.11.t
+	desc = ger_rcw_pol.11.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.11.a
+		POL = { set_country_flag = rejected_alliance }
+	}
+}
+
+#let poles choose
+country_event = {
+	id = ger_rcw_pol.12
+	title = ger_rcw_pol.12.t
+	desc = ger_rcw_pol.12.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.12.a
+		POL = {  country_event = { id = ger_rcw_pol.13 days = 1 } }
+	}
+}
+
+country_event = {
+	id = ger_rcw_pol.13
+	title = ger_rcw_pol.13.t
+	desc = ger_rcw_pol.13.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.13.a
+		GRM = { country_event = { days = 1 id = ger_rcw_pol.15 } } #chose sejm
+	}
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.13.a
+		GRM = { country_event = { days = 1 id = ger_rcw_pol.16 } } #chose monarch
+	}
+}
+
+
+country_event = {
+	id = ger_rcw_pol.15
+	title = ger_rcw_pol.15.t
+	desc = ger_rcw_pol.15.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.15.a
+		POL = { 
+			create_country_leader = {
+				name = "Polish Sejm"
+				desc = "POLITICS_JOZEF_PILSUDZKI_DESC"
+				picture = "gfx/leaders/POL/Portrait_Poland_Sejm.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ger_rcw_pol.16
+	title = ger_rcw_pol.16.t
+	desc = ger_rcw_pol.16.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.16.a
+		POL = { 
+			country_event = { days = 1 id = ger_rcw_pol.17 }
+		}
+	}
+}
+
+country_event = {
+	id = ger_rcw_pol.17
+	title = ger_rcw_pol.17.t
+	desc = ger_rcw_pol.17.d
+
+	is_triggered_only = yes
+
+
+	option = { #Wunderbar
+		name = ger_rcw_pol.17.a
+		POL = { 
+			create_country_leader = {
+				name = "Friedrich Christian"
+				desc = "POLITICS_FREIDRICH_CHRISTIAN_DESC"
+				picture = "gfx/leaders/POL/Portrait_Poland_Freidrich_Christian.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+}
+
+
