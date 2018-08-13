@@ -1,0 +1,81 @@
+focus_tree = {
+	id = finland_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = FIN
+		}
+	}
+
+	default = no
+
+	###post-civil war###
+	focus = {
+		id = FIN_civil_war_recovery
+		icon = GFX_unknown
+		x = 2
+		y = 0
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FIN_economic_stability
+		icon = GFX_unknown
+		x = 2
+		y = 1
+		cost = 5
+
+		prerequisite = { focus = FIN_civil_war_recovery }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = FIN_choose_economics
+		icon = GFX_unknown
+		x = 2
+		y = 2
+		cost = 5
+
+		prerequisite = { focus = FIN_economic_stability }
+
+		completion_reward = {
+
+		}
+	}
+
+	### russian aid
+
+	focus = {
+		id = FIN_russian_aid
+		x = 5
+		y = 0
+		cost = 5
+
+		available = {
+			country_exists = RUS
+			RUS = {
+				has_government = neutrality
+			}
+		}
+
+		completion_reward = {
+			country_event = {
+				id = aiu_whitefinland.1
+			}
+		}
+	}
+}

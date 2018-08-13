@@ -1,0 +1,45 @@
+ideas = {
+	
+	country = {
+
+		FIN_russian_aid = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_yugoslavian_general_staff
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		FIN_our_own = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.05
+			}
+		}
+	}
+}
