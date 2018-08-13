@@ -1,0 +1,496 @@
+ideas = {
+	
+	country = {
+
+		IDE_idel_ural_realised = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		IDE_powerful_landowners = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		IDE_powerful_landowners_allied = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		IDE_powerful_landowners_titled = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		IDE_red_militias_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communist_army
+
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		IDE_union_of_brothers_and_sisters_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription_factor = 0.2
+			}
+		}
+		
+		IDE_regional_training_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				training_time_army_factor = -0.15
+			}
+		}
+		
+		IDE_league_of_peoples_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				conscription_factor = 0.2
+				army_morale_factor = 0.1
+			}
+		}
+		
+		IDE_league_of_peoples_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				conscription_factor = 0.2
+				army_morale_factor = 0.1
+				enemy_partisan_effect = -0.25
+				non_core_manpower = 0.02
+			}
+		}
+		
+		IDE_loyal_army_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				conscription = 0.01
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		IDE_cultural_awakening_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				justify_war_goal_time = -0.25
+			}
+		}
+		
+		IDE_darugas_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_federal_defense_council
+
+			modifier = {
+				political_power_gain = 0.1
+				training_time_factor = -0.1				
+			}
+		}
+		
+		IDE_youth_mobilisation_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_national_mobilization_focus
+
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		IDE_dragonhearted_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				army_attack_factor = 0.1
+				org_loss_when_moving = -0.1				
+			}
+		}
+		
+		IDE_morzalar_officers_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_yugoslavian_general_staff
+
+			modifier = {
+				military_leader_cost_factor = -0.50
+				high_command_cost_factor = -0.25
+				air_chief_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
+			}
+		}
+		
+		IDE_reformed_bank_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		IDE_arms_shortages_idea = {
+
+			picture = generic_infantry_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		
+		IDE_live_off_the_land_idea = {
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.1
+				attrition = -0.1
+				out_of_supply_factor = -0.25
+			}
+		}
+		
+		IDE_steppe_cavalry_idea = {
+
+			picture = generic_motorized_equipment_manufacturer_2
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.05
+			}
+		}
+		
+		IDE_steppe_cavalry_idea_2 = {
+
+			picture = generic_motorized_equipment_manufacturer_2
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.05
+				army_speed_factor = 0.10
+			}
+		}
+		
+		IDE_increased_officer_coordination_idea = {
+
+			picture = generic_army_war_college
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				max_planning = 0.25
+				planning_speed = 0.25
+			}
+		}
+		
+		IDE_very_successful_raid = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		IDE_successful_raid = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		IDE_failed_raid = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+
+			modifier = {
+				
+			}
+		}
+		
+		IDE_faction_officer_exchange_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = chi_wargaming_division
+
+			modifier = {
+				army_org_Factor = 0.05
+				planning_speed = 0.05
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+		}
+	
+		}
+		
+	political_advisor = {
+
+		}
+}

@@ -12,17 +12,21 @@ state={
 	history={
 		owner = RSP
 		victory_points = {
-			957 15
+			957 20
 		}
 		buildings = {
-			infrastructure = 4
-			dockyard = 1
-			industrial_complex = 1
+			infrastructure = 5
+			dockyard = 2
+			industrial_complex = 2
 			arms_factory = 1
 			air_base = 5
 			957 = {
 				naval_base = 8
 				coastal_bunker = 3
+			}
+			9895 = {
+				naval_base = 2
+				coastal_bunker = 1
 			}
 		}
 		add_core_of = RSP

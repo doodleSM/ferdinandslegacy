@@ -1,0 +1,25 @@
+state={
+	id=925
+	name="STATE_925"
+	provinces={
+		13217 13218
+	}
+	history={
+		owner = ARM
+		victory_points = {
+			13217 1 #lori
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = ARM
+		add_core_of = CAU
+
+	}
+
+	
+	manpower=260532
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

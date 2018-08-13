@@ -13,7 +13,7 @@ state={
 		add_core_of = UKR
 		add_core_of = POL
 		victory_points = {
-			11479 5 
+			11479 10
 		}
 		buildings = {
 			infrastructure = 6

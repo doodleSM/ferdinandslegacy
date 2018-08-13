@@ -1,0 +1,24 @@
+state={
+	id=877
+	name="STATE_877"
+	provinces={
+		62 97 143 164 3056 3091 3190 6077 6135 6215 6358 9033 9159 9257 11134 11239 11252 
+	}
+	history={
+		owner = RSP
+		victory_points = {
+			3190 1 # kostroma
+		}
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = BLU
+
+	}
+	manpower=356473
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,25 @@
+state={
+	id=918
+	name="STATE_918"
+	provinces={
+		863 976 3864 3973 6930 
+	}
+
+	history={
+		owner = GRE
+		victory_points = {
+			863 2 #larissa
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		add_core_of = GRE
+
+	}
+
+	manpower=8992500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

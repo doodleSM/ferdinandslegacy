@@ -4,6 +4,9 @@ state={
 	provinces={
 		1243 1312 1382 4250 4277 4389 10179 10220 10268 12111 12121 12194 
 	}
+	resources={
+		steel=7
+	}
 	history={
 		owner = ALA
 		buildings = {

@@ -23,6 +23,9 @@ set_technology = {
 	trench_warfare = 1
 }
 
+add_ideas = {
+    POL_russian_rule
+}
 
 set_convoys = 10
 
@@ -63,42 +66,9 @@ set_politics = {
 create_country_leader = {
 	name = "Polish Sejm"
 	desc = "POLITICS_JOZEF_PILSUDZKI_DESC"
-	picture = "gfx/leaders/POL/Portrait_Poland_Sejm.dds
+	picture = "Portrait_Poland_Sejm_Building.dds"
 	expire = "1965.1.1"
 	ideology = oligarchism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Władysław Gomułka"
-	desc = "POLITICS_WLADYSLAW_GOMULKA_DESC"
-	picture = "Portrait_Poland_Wladyslaw_Gomulka.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Wincenty Witos"
-	desc = "POLITICS_WINCENTY_WITOS_DESC"
-	picture = "GFX_POL_wincenty_witos"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Bolesław Piasecki"
-	desc = "POLITICS_BOLESLAW_PIASECKI_DESC"
-	picture = "GFX_POL_boleslaw_piasecki"
-	expire = "1965.1.1"
-	ideology = falangism
 	traits = {
 		#
 	}

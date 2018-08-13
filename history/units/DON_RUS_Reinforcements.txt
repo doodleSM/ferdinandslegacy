@@ -1,0 +1,35 @@
+﻿division_template = {
+	name = "Cossack Reserves"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "1st Cossack Reserve Regiment"
+		location = 3151
+		division_template = "Cossack Reserves"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "2nd Cossack Reserve Regiment"
+		location = 3151
+		division_template = "Cossack Reserves"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "3rd Cossack Reserve Regiment"
+		location = 3151
+		division_template = "Cossack Reserves"
+		start_experience_factor = 1
+	}
+	
+}

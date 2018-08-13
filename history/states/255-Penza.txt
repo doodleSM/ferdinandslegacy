@@ -14,11 +14,12 @@ state={
 			infrastructure = 4
 		}
 		victory_points = {
-			6248 3 #penza
+			6248 5 #penza
 		}
 		add_core_of = RSP
 		add_core_of = RUS
 		add_core_of = BLU
+		add_core_of = IDE
 	}
 
 	provinces={

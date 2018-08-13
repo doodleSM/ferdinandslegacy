@@ -4,7 +4,7 @@ state={
 	name="STATE_561" # Amur
 	manpower = 454281
 	
-	state_category = rural
+	state_category = town
 
 	history={
 		owner = RSP
@@ -12,7 +12,12 @@ state={
 			infrastructure = 3
 			arms_factory = 1
 		}
+		victory_points = {
+			7763 1 #Blagoveshchensk
+		}
 		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = BLU
 	}
 
 	provinces={

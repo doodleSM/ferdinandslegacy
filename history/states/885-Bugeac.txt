@@ -1,0 +1,33 @@
+state={
+	id=885
+	name="STATE_885"
+	provinces={
+		3701 6727 6743 
+	}
+	history={
+		owner = MDV
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			dockyard = 1
+			6727 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			6727 1 
+		}
+		add_core_of = MDV
+		add_core_of = ROM
+		add_core_of = RUS
+		add_core_of = RSP
+		add_core_of = BLU
+
+	}
+
+	manpower=899654
+	buildings_max_level_factor=1.000
+	state_category=town
+}

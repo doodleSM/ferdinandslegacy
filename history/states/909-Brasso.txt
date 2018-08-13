@@ -1,0 +1,24 @@
+state={
+	id=909
+	name="STATE_909"
+	provinces={
+		690 3676 6709 11639 
+	}
+	history={
+		owner = HUN
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			3665 1 #Déva
+		}
+		add_core_of = HUN
+		add_core_of = TRA
+
+	}
+
+	manpower=722300
+	buildings_max_level_factor=1.000
+	state_category=town
+}

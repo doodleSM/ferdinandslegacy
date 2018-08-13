@@ -1,0 +1,5139 @@
+focus_tree = {
+	id = aiu_transcaucasia_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			OR = {
+				tag = CAU
+				tag = GEO
+				}
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1800 }
+
+	focus = {
+		id = CAU_crisis_in_the_sejm
+		icon = GFX_goal_generic_forceful_treaty
+		x = 8
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = aiu_cau.4
+		}
+	}
+	
+	# continued federation
+	
+	focus = {
+		id = CAU_renewed_brotherhood
+		icon = GFX_goal_transcaucasia_united
+		x = -6
+		y = 1
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_crisis_in_the_sejm }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = CAU_azerbaijan_stayed
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = CAU_federalise_the_army
+		icon = GFX_focus_generic_little_entente
+		x = -7
+		y = 2
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_renewed_brotherhood }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_ideas = CAU_federal_army_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_mountain_warriors
+		icon = GFX_goal_generic_special_forces
+		x = -7
+		y = 3
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_federalise_the_army }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_east_caucasus_military_academy
+		icon = GFX_goal_generic_army_doctrines
+		x = -7
+		y = 4
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_mountain_warriors }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_trilingual_officer_school
+		icon = GFX_goal_generic_neutrality_focus
+		x = -7
+		y = 5
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_east_caucasus_military_academy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_trilingual_officer_school_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_federal_military_research_division
+		icon = GFX_focus_research
+		x = -5
+		y = 6
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_national_production_plan focus = CAU_defend_our_minds }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			amount_research_slots < 5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = CAU_adaptable_education
+		icon = GFX_focus_generic_treaty
+		x = -5
+		y = 2
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_renewed_brotherhood }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_adaptable_education_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_progressive_tax_reform
+		icon = GFX_goal_generic_money
+		x = -5
+		y = 3
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_adaptable_education }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = CAU_national_production_plan
+		icon = GFX_goal_generic_construction
+		x = -5
+		y = 4
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_progressive_tax_reform }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_national_production_plan_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_against_all_odds
+		icon = GFX_goal_generic_major_alliance
+		x = -7
+		y = 6
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_trilingual_officer_school }
+		#prerequisite = { focus = CAU_national_production_plan }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAU_azerbaijani_separatism
+				add_idea = CAU_azerbaijani_separatism_2
+			}
+			set_country_flag = CAU_sejm_crisis_resolved
+			custom_effect_tooltip = CAU_sejm_crisis_resolved_tt
+		}
+	}
+	
+	# peaceful secession
+	
+	focus = {
+		id = CAU_letting_go
+		icon = GFX_goal_georgia_shield
+		x = -2
+		y = 1
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_crisis_in_the_sejm }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = CAU_azerbaijan_left_peacefully
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = CAU_GEO
+			every_state = {
+				limit = { 
+					is_core_of = AZR
+					is_owned_by = AZR
+				}
+				remove_core_of = ROOT
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_refocus_the_economy
+		icon = GFX_goal_generic_production
+		x = -3
+		y = 2
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_letting_go }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_diversify_exports
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -3
+		y = 3
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_refocus_the_economy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_rural_investment
+		icon = GFX_goal_generic_wheat
+		x = -1
+		y = 2
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_letting_go }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = { is_core_of = ROOT }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_support_local_government
+		icon = GFX_focus_generic_self_management
+		x = -1
+		y = 3
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_rural_investment }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAU_powerful_soviets_idea
+				add_idea = CAU_all_georgian_soviets_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_georgia_alone
+		icon = GFX_goal_georgia_alone
+		x = -2
+		y = 4
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_diversify_exports }
+		prerequisite = { focus = CAU_support_local_government }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_georgia_alone_idea
+			set_country_flag = CAU_sejm_crisis_resolved
+			custom_effect_tooltip = CAU_sejm_crisis_resolved_tt
+		}
+	}
+	
+	focus = {
+		id = CAU_defend_our_borders
+		icon = GFX_goal_generic_construct_military
+		x = -1
+		y = 5
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_georgia_alone }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAU_georgia_alone_idea
+				add_idea = CAU_georgia_alone_idea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_defend_our_minds
+		icon = GFX_goal_brain_shield
+		x = -3
+		y = 5
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_georgia_alone }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_fortify_our_minds_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_unconquerable_spirit
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 6
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_defend_our_borders }
+		prerequisite = { focus = CAU_defend_our_minds }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAU_georgia_alone_idea_2
+				add_idea = CAU_georgia_alone_idea_3
+			}
+		}
+	}
+	
+	# reject secession
+	
+	focus = {
+		id = CAU_dissolve_baku_soviet
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_crisis_in_the_sejm }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = CAU_enforced_caucasian_unity
+			has_full_control_of_state = 229
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.25
+			}
+			add_stability = -0.2
+		}
+	}
+	
+	focus = {
+		id = CAU_paramilitaries
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 2
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_dissolve_baku_soviet }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_paramilitaries_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_shut_down_azeri_press
+		icon = GFX_goal_demand_sudetenland
+		x = 3
+		y = 2
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_dissolve_baku_soviet }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = CAU_azerbaijani_resistance
+		}
+	}
+	
+	focus = {
+		id = CAU_emergency_powers
+		icon = GFX_goal_generic_forceful_treaty
+		x = 2
+		y = 3
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_paramilitaries }
+		prerequisite = { focus = CAU_shut_down_azeri_press }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_emergency_powers_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_national_language
+		icon = GFX_goal_generic_radar
+		x = 1
+		y = 4
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_emergency_powers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_restore_titles
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 5
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_national_language }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = CAU_ban_unions
+		icon = GFX_goal_stamp_communism
+		x = 3
+		y = 4
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_emergency_powers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = CAU_powerful_soviets_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_extractive_industry
+		icon = GFX_goal_generic_construction2
+		x = 3
+		y = 5
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_ban_unions }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_patriotic_duty
+		icon = GFX_goal_expand_recruitment
+		x = 2
+		y = 6
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_restore_titles focus = CAU_extractive_industry }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAU_paramilitaries_idea
+				add_idea = CAU_paramilitaries_idea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_kartvelian_restoration
+		icon = GFX_goal_anschluss
+		x = 1
+		y = 7
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_patriotic_duty }
+		mutually_exclusive = { focus = CAU_party_first }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = CAU_GEO_EMPIRE
+			add_popularity = {
+				ideology = auth_dem
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_monarchy
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 8
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_kartvelian_restoration }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = aiu_cau.8
+		}
+	}
+	
+	focus = {
+		id = CAU_party_first
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 3
+		y = 7
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_patriotic_duty }
+		mutually_exclusive = { focus = CAU_kartvelian_restoration }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_georgian_futurism
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 8
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_party_first }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_georgian_futurism_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_church_support
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 8
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_kartvelian_restoration focus = CAU_party_first }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_church_support_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_cultural_awakening
+		icon = GFX_goal_panther_knight
+		x = 2
+		y = 9
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_church_support }
+		prerequisite = { focus = CAU_monarchy focus = CAU_georgian_futurism }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+			set_country_flag = CAU_sejm_crisis_resolved
+			custom_effect_tooltip = CAU_sejm_crisis_resolved_tt
+		}
+	}
+	
+	focus = {
+		id = CAU_queen_tamar_university
+		icon = GFX_goal_queen_tamar
+		x = 2
+		y = 10
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_cultural_awakening }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			amount_research_slots < 5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	# commie path
+	
+	focus = {
+		id = CAU_strengthen_the_soviets
+		icon = GFX_goal_support_communism
+		x = 6
+		y = 1
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_crisis_in_the_sejm }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = CAU_the_soviets_resolved_azerbaijan_problem
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = radical_socialism
+				popularity = 0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_underground_printing
+		icon = GFX_goal_generic_propaganda
+		x = 5
+		y = 2
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_strengthen_the_soviets }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_weaken_the_sejm
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 7
+		y = 2
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_strengthen_the_soviets }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CAU_powerful_soviets_idea
+				add_idea = CAU_powerful_soviets_idea_2
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_integrate_soldiers_deputies
+		icon = GFX_goal_generic_military_deal
+		x = 6
+		y = 3
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_underground_printing focus = CAU_weaken_the_sejm }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_tsiteli_mtsveli
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = 6
+		y = 4
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_integrate_soldiers_deputies }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_tsiteli_mtsveli_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_end_the_sejm
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 6
+		y = 5
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_tsiteli_mtsveli }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			remove_ideas = CAU_azerbaijani_separatism
+			set_country_flag = CAU_sejm_crisis_resolved
+			custom_effect_tooltip = CAU_sejm_crisis_resolved_tt
+		}
+	}
+	
+	focus = {
+		id = CAU_land_redistribution
+		icon = GFX_goal_generic_construct_civilian
+		x = 5
+		y = 6
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_end_the_sejm }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 231 }
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				prioritize = { 229 }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_peoples_bank
+		icon = GFX_goal_generic_money
+		x = 5
+		y = 7
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_land_redistribution }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = CAU_factory_nationalisation
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 7
+		y = 6
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_end_the_sejm }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_georgia_technical_university
+		icon = GFX_focus_generic_socialist_science
+		x = 6
+		y = 8
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_peoples_bank }
+		prerequisite = { focus = CAU_new_industrial_plan }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			amount_research_slots < 5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = CAU_new_industrial_plan
+		icon = GFX_goal_generic_soviet_construction
+		x = 7
+		y = 7
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_factory_nationalisation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_new_industrial_plan_idea
+		}
+	}
+	
+	# industry and military
+	
+	focus = {
+		id = CAU_extend_military_road
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 25
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					is_core_of = ROOT
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_import_modern_machinery
+		icon = GFX_goal_generic_construction
+		x = -8
+		y = 1
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_extend_military_road }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.6
+					uses = 1
+					category = industry
+				}
+		}
+	}
+	
+	focus = {
+		id = CAU_foreign_technical_advisors
+		icon = GFX_goal_generic_production2
+		x = -8
+		y = 2
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_import_modern_machinery }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 0.4
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.4
+					uses = 1
+					category = industry
+				}
+		}
+	}
+	
+	focus = {
+		id = CAU_state_university_ties
+		icon = GFX_focus_research2
+		x = -8
+		y = 3
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_foreign_technical_advisors }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			amount_research_slots < 5
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = CAU_light_industry_expansion
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -4
+		y = 1
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_extend_military_road }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_open_arms_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -5
+		y = 2
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_light_industry_expansion }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_introduce_improved_rifles
+		icon = GFX_goal_generic_small_arms
+		x = -5
+		y = 4
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_open_arms_factories }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAU_introduce_improved_rifles
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_reliable_designs
+		icon = GFX_goal_generic_production
+		x = -5
+		y = 5
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_introduce_improved_rifles }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_reliable_designs_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_artillery_production
+		icon = GFX_goal_generic_army_artillery2
+		x = -4
+		y = 3
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_open_arms_factories }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAU_artillery_production
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_special_battalions
+		icon = GFX_goal_generic_military_sphere
+		x = -6
+		y = 3
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_open_arms_factories }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAU_special_battalions
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_metallurgical_plants
+		icon = GFX_focus_generic_steel
+		x = -3
+		y = 2
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_light_industry_expansion }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			231 = {
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_new_mining_techniques
+		icon = GFX_goal_generic_construction2
+		x = -3
+		y = 4
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_metallurgical_plants }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_new_mining_techniques_idea
+			add_tech_bonus = {
+				name = CAU_new_mining_techniques
+				bonus = 0.5
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_train_mountain_troops
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 1
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_extend_military_road }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RSP_winter_equipment_focus_effect
+			hidden_effect = { set_technology = { RSP_winter_equipment_tech = 1 } }
+		}
+	}
+	
+	focus = {
+		id = CAU_expanded_officer_corps
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 2
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_train_mountain_troops }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_new_mountain_gear
+		icon = GFX_goal_generic_mountains
+		x = -1
+		y = 3
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_expanded_officer_corps }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_winter_gear_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_reformed_general_staff
+		icon = GFX_goal_generic_army_doctrines
+		x = 1
+		y = 3
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_expanded_officer_corps }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+			}
+			add_ideas = CAU_reformed_general_staff_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_land_of_wolves
+		icon = GFX_goal_generic_wolf_pack
+		x = 0
+		y = 4
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_new_mountain_gear }
+		prerequisite = { focus = CAU_reformed_general_staff }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_land_of_wolves_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_expand_batumi_port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 4
+		y = 1
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_extend_military_road }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_full_control_of_state = 840
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			840 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+					type = naval_base
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				}
+		}
+	}
+	
+	focus = {
+		id = CAU_light_ship_slipways
+		icon = GFX_focus_generic_destroyer
+		x = 3
+		y = 2
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_expand_batumi_port }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAU_light_ship_slipways
+				bonus = 0.4
+				uses = 2
+				category = dd_tech
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_parallel_production
+		icon = GFX_goal_continuous_naval_production
+		x = 3
+		y = 3
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_light_ship_slipways }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_parallel_production_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_submarine_purchases
+		icon = GFX_goal_generic_navy_submarine
+		x = 5
+		y = 2
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_expand_batumi_port }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.6
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_segmented_construction
+		icon = GFX_goal_continuous_naval_production
+		x = 5
+		y = 3
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_submarine_purchases }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_segmented_construction_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_promote_able_officers
+		icon = GFX_goal_generic_build_navy
+		x = 4
+		y = 4
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_parallel_production }
+		prerequisite = { focus = CAU_segmented_construction }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_caucasian_skies
+		icon = GFX_goal_generic_air_fighter2
+		x = 8
+		y = 1
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_extend_military_road }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.6
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_ground_attack
+		icon = GFX_goal_generic_CAS
+		x = 7
+		y = 2
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_caucasian_skies }
+		mutually_exclusive = { focus = CAU_indigenous_bombers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_indigenous_bombers
+		icon = GFX_goal_generic_air_bomber
+		x = 9
+		y = 2
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_caucasian_skies }
+		mutually_exclusive = { focus = CAU_ground_attack }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_air_defence_constructions
+		icon = GFX_goal_generic_fortify_city
+		x = 8
+		y = 3
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_ground_attack focus = CAU_indigenous_bombers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = CAU_air_defence_constructions
+				bonus = 0.5
+				uses = 1
+				technology = interwar_antiair
+				technology = antiair1
+				technology = antiair2
+				technology = antiair3
+				technology = antiair4
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_unified_air_plan
+		icon = GFX_goal_generic_air_production
+		x = 8
+		y = 4
+		relative_position_id = CAU_extend_military_road
+		prerequisite = { focus = CAU_air_defence_constructions }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAU_unified_air_plan
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	
+	# baku oil stuff
+	
+	focus = {
+		id = CAU_black_gold
+		icon = GFX_goal_generic_oil_refinery
+		x = -5
+		y = 7
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_against_all_odds focus = CAU_patriotic_duty }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_full_control_of_state = 229
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_black_gold_idea
+			set_country_flag = CAU_black_gold_focus_taken
+		}
+	}
+	
+	focus = {
+		id = CAU_british_support
+		icon = GFX_goal_british_shield
+		x = -7
+		y = 8
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_black_gold }
+		#mutually_exclusive = { focus = CAU_german_support }
+		#mutually_exclusive = { focus = CAU_french_support }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_country_flag = CAU_german_prince_leader
+			}
+		}
+
+		available = {
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			NOT = { has_country_flag = CAU_german_support_agreed }
+			NOT = { has_country_flag = CAU_french_support_agreed }
+			has_full_control_of_state = 229
+		}
+
+		bypass = {
+			is_in_faction_with = ENG
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = protect
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = support
+					id = "ROOT"
+					value = 100
+				}
+				country_event = aiu_cau.12
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = CAU_the_baku_force
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = -7
+		y = 9
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_british_support }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = ROOT } surrender_progress < 0.3 }
+			has_country_flag = CAU_british_support_agreed
+			has_full_control_of_state = 229
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CAU_the_baku_force_tt
+			hidden_effect = {
+				division_template = {
+					name = "British Expeditionary Division"
+					is_locked = yes
+					priority = 2
+					division_names_group = ENG_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+			
+	    	   		 	infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+			
+	    	   		 	infantry = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { CAU = { has_full_control_of_state = PREV } }
+					prioritize = { 231 }
+					create_unit = {
+						division = "name = \"1. British Expeditionary Division\" division_template = \"British Expeditionary Division\" start_experience_factor = 0.6" 
+						owner = "CAU"
+					}
+					create_unit = {
+						division = "name = \"2. British Expeditionary Division\" division_template = \"British Expeditionary Division\" start_experience_factor = 0.6" 
+						owner = "CAU"
+					}
+				}			
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_persian_road
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -7
+		y = 10
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_the_baku_force }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			ENG = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			any_other_country = {
+				OR = { original_tag = ENG original_tag = PER original_tag = CAU is_subject_of = CAU }
+				has_full_control_of_state = 420
+				has_full_control_of_state = 266
+				has_full_control_of_state = 413
+				has_full_control_of_state = 417
+				NOT = { has_war_with = ENG }
+				NOT = { has_war_with = CAU }
+			}
+			has_full_control_of_state = 229
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			231 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			843 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			229 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			420 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			417 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			413 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_german_support
+		icon = GFX_goal_german_shield
+		x = -5
+		y = 8
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_black_gold }
+		#mutually_exclusive = { focus = CAU_british_support }
+		#mutually_exclusive = { focus = CAU_french_support }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_country_flag = CAU_british_prince_leader
+			}
+		}
+
+		available = {
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			NOT = { has_country_flag = CAU_british_support_agreed }
+			NOT = { has_country_flag = CAU_french_support_agreed }
+			has_full_control_of_state = 229
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			GRM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = protect
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = support
+					id = "ROOT"
+					value = 100
+				}
+				country_event = aiu_cau.12
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = CAU_construction_experts
+		icon = GFX_goal_generic_construction2
+		x = -5
+		y = 9
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_german_support }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_full_control_of_state = 229
+			has_country_flag = CAU_german_support_agreed
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_construction_experts_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_industrial_subsidiaries
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -5
+		y = 10
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_construction_experts }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_full_control_of_state = 229
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_french_support
+		icon = GFX_goal_french_shield
+		x = -3
+		y = 8
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_black_gold }
+		#mutually_exclusive = { focus = CAU_british_support }
+		#mutually_exclusive = { focus = CAU_french_support }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_country_flag = CAU_british_prince_leader
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = CAU_german_prince_leader
+			}
+		}
+
+		available = {
+			FRA = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			NOT = { has_country_flag = CAU_british_support_agreed }
+			NOT = { has_country_flag = CAU_german_support_agreed }
+			has_full_control_of_state = 229
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			FRA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = protect
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = support
+					id = "ROOT"
+					value = 100
+				}
+			country_event = aiu_cau.12
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_french_military_mission
+		icon = GFX_focus_generic_military_mission
+		x = -3
+		y = 9
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_french_support }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_full_control_of_state = 229
+			has_country_flag = CAU_french_support_agreed
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_army_leader = {
+			add_defense = 1
+		}
+		add_ideas = CAU_french_military_mission_idea
+		}
+	}
+	
+	focus = {
+		id = CAU_french_favourable_loan
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -3
+		y = 10
+		relative_position_id = CAU_crisis_in_the_sejm
+		prerequisite = { focus = CAU_french_military_mission }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_full_control_of_state = 229
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_timed_idea = { idea = CAU_french_loan_idea days = 200 }
+		}
+	}
+	
+	# rcw politics
+	
+	focus = {
+		id = CAU_russian_civil_war
+		icon = GFX_goal_generic_occupy_start_war
+		x = 19
+		y = 7
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = CAU_sejm_crisis_resolved
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = CAU_imperial_partnership
+		icon = GFX_goal_russian_empire_shield
+		x = -3
+		y = 1
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_russian_civil_war }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 4
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 6
+				has_government = auth_dem
+			}
+			modifier = {
+				factor = 6
+				has_government = fascism
+			}
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+			modifier = {
+				factor = 4
+				has_country_flag = CAU_romanov_prince_leader
+			}
+		}
+
+		available = {
+			NOT = { has_country_flag = CAU_supporting_rsp }
+			NOT = { has_country_flag = CAU_supporting_blu }
+			RUS = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			RUS = { country_event = aiu_cau.15 }
+		}
+	}
+	
+	focus = {
+		id = CAU_tsarist_officer_loyalty
+		icon = GFX_goal_generic_major_war
+		x = -3
+		y = 2
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_imperial_partnership }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_country_flag = CAU_supporting_rus
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_support_republic
+		icon = GFX_goal_russian_shield
+		x = -1
+		y = 1
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_russian_civil_war }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 6
+				has_government = social_democracy
+			}
+			modifier = {
+				factor = 6
+				has_government = social_liberalism
+			}
+			modifier = {
+				factor = 4
+				has_government = market_lib
+			}
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = CAU_romanov_prince_leader
+			}
+		}
+
+		available = {
+			NOT = { has_country_flag = CAU_supporting_rus }
+			NOT = { has_country_flag = CAU_supporting_blu }
+			RSP = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			RSP = { country_event = aiu_cau.15 }
+		}
+	}
+	
+	focus = {
+		id = CAU_democratic_ideals
+		icon = GFX_goal_support_democracy
+		x = -1
+		y = 2
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_support_republic }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_country_flag = CAU_supporting_rsp
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = CAU_recognise_bolsheviks
+		icon = GFX_goal_revolutionary_russia_shield
+		x = 1
+		y = 1
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_russian_civil_war }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 10
+				has_government = communism
+			}
+			modifier = {
+				factor = 5
+				has_government = radical_socialism
+			}
+			modifier = {
+				factor = 0
+				has_government = fascism
+			}
+			modifier = {
+				factor = 0
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 0
+				has_government = auth_dem
+			}
+			modifier = {
+				factor = 0.1
+				has_government = democratic
+			}
+			modifier = {
+				factor = 0.1
+				has_government = market_lib
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = CAU_romanov_prince_leader
+			}
+		}
+
+		available = {
+			NOT = { has_country_flag = CAU_supporting_rus }
+			NOT = { has_country_flag = CAU_supporting_rsp }
+			BLU = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			BLU = { country_event = aiu_cau.15 }
+		}
+	}
+	
+	focus = {
+		id = CAU_evacuated_industry
+		icon = GFX_goal_generic_soviet_construction
+		x = 1
+		y = 2
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_recognise_bolsheviks }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = CAU_supporting_blu
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_join_rcw
+		icon = GFX_goal_generic_attack_allies
+		x = -1
+		y = 3
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_tsarist_officer_loyalty focus = CAU_democratic_ideals focus = CAU_evacuated_industry }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 10
+				DON = { exists = no }
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = CAU_join_rcw_tt
+		}
+	}
+	
+	focus = {
+		id = CAU_opportunism
+		icon = GFX_goal_generic_cavalry
+		x = 4
+		y = 1
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_russian_civil_war }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = CAU_befriend_north_caucasians
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 2
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_opportunism }
+		mutually_exclusive = { focus = CAU_recognise_don_republic }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			DON = { exists = yes is_subject = no NOT = { has_war_with = ROOT } has_full_control_of_state = 233 has_full_control_of_state = 847 has_full_control_of_state = 848 }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			DON = { add_timed_idea = { idea = CAU_north_caucasian_agitation days = 180 } }
+		}
+	}
+	
+	focus = {
+		id = CAU_defeat_terek
+		icon = GFX_goal_terek_shield_skull
+		x = 2
+		y = 3
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_befriend_north_caucasians }
+		will_lead_to_war_with = CHE
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.1
+				has_war = yes
+			}
+		}
+
+		available = {
+			CHE = { exists = yes is_subject = no NOT = { has_war_with = ROOT } has_full_control_of_state = 845 }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CHE
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_expel_don_cossacks
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 4
+		y = 3
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_befriend_north_caucasians }
+		will_lead_to_war_with = DON
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.1
+				has_war = yes
+			}
+		}
+
+		available = {
+			DON = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = DON
+				generator = { 233 847 848 }
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_align_with_ukraine
+		icon = GFX_goal_ukrainian_shield
+		x = 4
+		y = 4
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_expel_don_cossacks }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			UKR = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			UKR = { country_event = aiu_cau.9 }
+		}
+	}
+	
+	focus = {
+		id = CAU_align_with_idel_ural
+		icon = GFX_goal_idel_ural_shield
+		x = 2
+		y = 4
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_expel_don_cossacks }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			IDE = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			IDE = { country_event = aiu_cau.9 }
+		}
+	}
+	
+	focus = {
+		id = CAU_offer_crimea_protection
+		icon = GFX_goal_crimean_peninsula
+		x = 6
+		y = 4
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_expel_don_cossacks }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			CRI = { exists = yes is_subject = no is_in_faction = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			CRI = { country_event = aiu_cau.9 }
+		}
+	}
+	
+	focus = {
+		id = CAU_recognise_don_republic
+		icon = GFX_goal_don_republic_shield
+		x = 6
+		y = 2
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_opportunism }
+		mutually_exclusive = { focus = CAU_befriend_north_caucasians }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			DON = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			DON = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = protect
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = support
+					id = "ROOT"
+					value = 100
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_don_pact
+		icon = GFX_goal_generic_alliance
+		x = 6
+		y = 3
+		relative_position_id = CAU_russian_civil_war
+		prerequisite = { focus = CAU_recognise_don_republic }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			DON = { exists = yes is_faction_leader = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+			is_in_faction = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			DON = { country_event = { id = generic.2 days = 1 } }
+		}
+	}
+	
+	# regional politics
+	
+	focus = {
+		id = CAU_regional_politics
+		icon = GFX_goal_generic_position_armies
+		x = 30
+		y = 7
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			has_country_flag = CAU_sejm_crisis_resolved
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = CAU_entreat_the_ottomans
+		icon = GFX_goal_ottoman_shield #GFX_goal_generic_dangerous_deal
+		x = 1
+		y = 1
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_regional_politics }
+		mutually_exclusive = { focus = CAU_davids_coalition }
+		mutually_exclusive = { focus = CAU_defuse_armenian_tensions }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OTT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			OTT = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = protect
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = support
+					id = "ROOT"
+					value = 100
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_plan_for_armenia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 1
+		y = 2
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_entreat_the_ottomans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			OTT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			ARM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			OTT = { country_event = aiu_cau.18 }
+		}
+	}
+	
+	focus = {
+		id = CAU_ottoman_suzerainty
+		icon = GFX_focus_CZE_german_puppet
+		x = 1
+		y = 3
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_plan_for_armenia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			OTT = { exists = yes is_faction_leader = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			OTT = { country_event = { id = generic.2 days = 1 } }
+		}
+	}
+	
+	focus = {
+		id = CAU_claims_on_armenia
+		icon = GFX_goal_generic_more_territorial_claims
+		x = -3
+		y = 1
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_regional_politics }
+		mutually_exclusive = { focus = CAU_defuse_armenian_tensions }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			ARM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			ARM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_decrease
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_strike_armenia
+		icon = GFX_goal_armenia_shield_skull
+		x = -3
+		y = 3
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_plan_for_armenia focus = CAU_claims_on_armenia focus = CAU_defuse_armenian_tensions }
+
+		will_lead_to_war_with = ARM
+		
+		cost = 4
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = CAU_plan_for_armenia
+				has_completed_focus = CAU_claims_on_armenia
+				has_country_flag = CAU_armenian_negotiations_failed
+			}
+			ARM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { has_cosmetic_tag = CAU_GEO }
+			create_wargoal = {
+				type = take_state_focus
+				target = ARM
+				generator = { 889 925 }
+				}
+			}
+			else = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ARM
+				generator = { 842 889 924 925 }
+				}
+			}
+			if = { limit = { has_country_flag = CAU_ottomans_agreed } 
+				OTT = {
+					create_wargoal = {
+						type = annex_everything
+						target = ARM
+						}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_defuse_armenian_tensions
+		icon = GFX_goal_armenia_shield #GFX_goal_generic_improve_relations
+		x = -1
+		y = 1
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_regional_politics }
+		mutually_exclusive = { focus = CAU_claims_on_armenia }
+		mutually_exclusive = { focus = CAU_entreat_the_ottomans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			ARM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = aiu_cau.21
+		}
+	}
+	
+	focus = {
+		id = CAU_armenia_mutual_protection
+		icon = GFX_goal_generic_defence
+		x = -1
+		y = 2
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_defuse_armenian_tensions }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			ARM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+			NOT = { has_country_flag = CAU_armenian_negotiations_failed }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			ARM = { country_event = aiu_cau.9 }
+		}
+	}
+	
+	focus = {
+		id = CAU_davids_coalition
+		icon = GFX_goal_ottoman_crosshairs
+		x = 3
+		y = 1
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_regional_politics }
+		mutually_exclusive = { focus = CAU_entreat_the_ottomans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			OTT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = CAU_anti_ottoman_coalition_idea
+			OTT = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = 100
+					}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_the_enemy_of_my_enemy
+		icon = GFX_goal_greece_shield
+		x = 3
+		y = 3
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_davids_coalition }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			GRE = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			is_in_faction_with = GRE
+			GRE = { is_subject = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			GRE = { country_event = aiu_cau.28 }
+		}
+	}
+	
+	focus = {
+		id = CAU_support_the_kurds
+		icon = GFX_goal_kurdistan_shield
+		x = 1
+		y = 4
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_the_enemy_of_my_enemy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			OTT = { OR = { owns_state = 832 owns_state = 830 owns_state = 829 owns_state = 827 owns_state = 825 owns_state = 680 owns_state = 676 } }
+			KUR = { OR = { exists = no is_subject_of = OTT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			OTT = { add_ideas = CAU_kurdish_agitation country_event = aiu_cau.32 }
+		}
+	}
+	
+	focus = {
+		id = CAU_persian_interests
+		icon = GFX_goal_persia_shield
+		x = 3
+		y = 4
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_the_enemy_of_my_enemy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			PER = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			OTT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			PER = { country_event = aiu_cau.28 }
+		}
+	}
+	
+	focus = {
+		id = CAU_support_syria_republicans
+		icon = GFX_goal_syria_shield
+		x = 5
+		y = 4
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_the_enemy_of_my_enemy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			OTT = { OR = { owns_state = 827 owns_state = 828 owns_state = 680 owns_state = 677 owns_state = 554 } }
+			SYR = { OR = { exists = no is_subject_of = OTT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			OTT = { add_ideas = CAU_syrian_agitation country_event = aiu_cau.33 }
+		}
+	}
+	
+	focus = {
+		id = CAU_solidify_the_pact
+		icon = GFX_goal_generic_major_alliance
+		x = 3
+		y = 5
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_support_the_kurds focus = CAU_persian_interests focus = CAU_support_syria_republicans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_country_flag = CAU_greece_in_coalition
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = CAU_persia_in_coalition
+			}
+			modifier = {
+				factor = 2
+				OTT = { has_idea = CAU_syrian_agitation }
+			}
+			modifier = {
+				factor = 2
+				OTT = { has_idea = CAU_kurdish_agitation }
+			}
+		}
+
+		available = {
+			any_other_country = {
+				has_idea = CAU_anti_ottoman_coalition_idea
+				is_in_faction = no
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_idea = CAU_anti_ottoman_coalition_idea
+				}
+				swap_ideas = {
+					remove_idea = CAU_anti_ottoman_coalition_idea
+					add_idea = CAU_anti_ottoman_coalition_idea_2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = CAU_take_on_goliath
+		icon = GFX_goal_dragon_slayer
+		x = 3
+		y = 6
+		relative_position_id = CAU_regional_politics
+		prerequisite = { focus = CAU_solidify_the_pact }
+		will_lead_to_war_with = OTT
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+			OTT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = OTT
+			}
+		}
+	}
+	
+}

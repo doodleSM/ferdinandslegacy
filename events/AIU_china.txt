@@ -31,7 +31,7 @@ country_event = {
 
 	# no
 	option = {
-		name = wtt_japan.126.b
+		name = aiu_china.1.b
 		ai_chance = {
 			factor = 0
 		}

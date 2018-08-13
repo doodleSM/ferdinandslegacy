@@ -1,0 +1,20 @@
+﻿###########################
+# AIU RSP Events
+###########################
+
+add_namespace = aiu_rsp
+
+# general someone is preparing to attack us
+country_event = {
+	id = aiu_rsp.1
+	title = aiu_rsp.1.t
+	desc = aiu_rsp.1.d
+	picture = GFX_report_event_soviet_invasion_map
+
+	is_triggered_only = yes
+	
+	# do this later
+	option = { #oh no
+		name = aiu_rsp.1.a
+	}
+}

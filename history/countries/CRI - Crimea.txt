@@ -5,7 +5,11 @@ oob = "CRI_1930"
 set_research_slots = 3
 set_war_support = 0.6
 
-
+add_ideas = {
+	RUS_black_sea_fleet_idea
+	limited_conscription
+	low_economic_mobilisation
+}
 
 # Starting tech
 set_technology = {
@@ -20,6 +24,7 @@ set_technology = {
 	early_bomber = 1
 	naval_bomber1 = 1
 	early_submarine = 1
+	basic_submarine = 1
 	early_destroyer = 1
 	early_light_cruiser = 1
 	early_heavy_cruiser = 1
@@ -38,7 +43,7 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 12
+			popularity = 15
 		}
 		
 		market_lib = {
@@ -50,7 +55,7 @@ set_politics = {
 		}
 		
 		social_democracy = {
-			popularity = 20
+			popularity = 30
 		}
 
 		fascism = {
@@ -58,7 +63,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 18
+			popularity = 22
 		}
 		
 		anarchism = {
@@ -70,7 +75,7 @@ set_politics = {
 		}
 
 		neutrality = {
-			popularity = 20
+			popularity = 3
 		}
 		
 		auth_dem = {
@@ -117,6 +122,42 @@ create_country_leader = {
 	ideology = leninism
 	traits = {
 		
+	}
+}
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "Series I Debakrist"
+	type = submarine_1
+	upgrades = {
+		ship_reliability_upgrade = 1
+		sub_engine_upgrade = 1
+		sub_stealth_upgrade = 1
+		sub_torpedo_upgrade = 1
+	}
+	obsolete = yes
+}
+
+create_equipment_variant = {
+	name = "Series IX Srednyaya"
+	type = submarine_2
+	upgrades = {
+		ship_reliability_upgrade = 1
+		sub_engine_upgrade = 1
+		sub_stealth_upgrade = 1
+		sub_torpedo_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Kiev & Minsk Class"
+	type = destroyer_1
+	upgrades = {
+		ship_torpedo_upgrade = 3
+		destroyer_engine_upgrade = 3
+		ship_ASW_upgrade = 3
+		ship_anti_air_upgrade = 3
 	}
 }
 

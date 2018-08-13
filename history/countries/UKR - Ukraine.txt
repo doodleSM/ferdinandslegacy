@@ -1,8 +1,13 @@
 ﻿capital = 202 #Kiev
 
-oob = "UKR_1936"
+oob = "UKR_1930"
 
 set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+	low_economic_mobilisation
+}
 
 # Starting tech
 set_technology = {
@@ -11,19 +16,12 @@ set_technology = {
 	tech_recon = 1
 	tech_support = 1		
 	tech_engineers = 1
-	tech_military_police = 1
 	tech_mountaineers = 1
-	motorised_infantry = 1
-	paratroopers = 1
 	gw_artillery = 1
 	gwtank = 1
-	basic_light_tank = 1  # PLACEHOLDER
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
+	basic_light_tank = 1
 	early_fighter = 1
-	fighter1 = 1
 	early_bomber = 1
-	strategic_bomber1 = 1
 	naval_bomber1 = 1
 	early_submarine = 1
 	basic_submarine = 1
@@ -33,26 +31,31 @@ set_technology = {
 	early_battleship = 1
 	early_battlecruiser = 1
 	transport = 1
-	mass_assault = 1
-	fleet_in_being = 1
 }
+
+set_convoys = 40
 
 set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 15
-		}
-
-		fascism = {
-			popularity = 30
+			popularity = 44
 		}
 		
-		auth_dem = {
-			popularity = 50
+		social_democracy = { 
+			popularity = 27
 		}
+		
+		
+
+		fascism = {
+			popularity = 19
+		}
+		
+		neutrality = { popularity =25 }
+		
 	}
-	ruling_party = auth_dem
+	ruling_party = democratic
 	last_election = "1917.6.0"
 	election_frequency = 48
 	elections_allowed = no
@@ -63,13 +66,41 @@ create_country_leader = {
 	desc = ""
 	picture = "UKR_Volodymr.dds"
 	expire = "1953.3.1"
-	ideology = auth_dem_ideology
+	ideology = social_democracy_ideology
 	traits = {
 		
 	}
 }
-
-
+create_country_leader = {
+	name = "Stepan Bandera"
+	desc = ""
+	picture = "UKR_Bandera.dds"
+	expire = "1953.3.1"
+	ideology = radical_populist
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Symon Petilura"
+	desc = ""
+	picture = "UKR_Petilura.dds"
+	expire = "1953.3.1"
+	ideology = conservatism
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Pavlo Skoropadskyi"
+	desc = ""
+	picture = "UKR_Pavlo.dds"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
 
 
 

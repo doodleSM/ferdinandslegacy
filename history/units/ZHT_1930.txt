@@ -1,0 +1,82 @@
+﻿division_template = {
+	name = "Jayaw Äsker Bölimi"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Äskerler Bölimi"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ZHT"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}
+
+units = {
+
+	
+	division= {	
+		name = "1. Jayaw Äsker Bölimi"
+		location = 10146
+		division_template = "Jayaw Äsker Bölimi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "2. Jayaw Äsker Bölimi"
+		location = 1239
+		division_template = "Jayaw Äsker Bölimi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "3. Jayaw Äsker Bölimi"
+		location = 12594
+		division_template = "Jayaw Äsker Bölimi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "1. Äskerler Bölimi"
+		location = 7708
+		division_template = "Äskerler Bölimi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "2. Äskerler Bölimi"
+		location = 10680
+		division_template = "Äskerler Bölimi"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+}

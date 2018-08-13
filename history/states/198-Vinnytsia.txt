@@ -12,6 +12,9 @@ state={
 			infrastructure = 5
 			air_base = 3
 		}
+		victory_points = {
+			476 1 #Vinnytsia
+		}
 		add_core_of = BAU
 		add_core_of = UKR
 		add_core_of = RSP

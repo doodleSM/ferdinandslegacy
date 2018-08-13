@@ -1,0 +1,223 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goal_tsushima_legacy"
+		texturefile = "gfx/interface/goals/goal_tsushima_legacy.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_russian_empire_propaganda"
+		texturefile = "gfx/interface/goals/goal_russian_empire_propaganda.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_russia_united"
+		texturefile = "gfx/interface/goals/goal_russia_united.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_russian_soldiers"
+		texturefile = "gfx/interface/goals/goal_russian_soldiers.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_idel_ural_shield"
+		texturefile = "gfx/interface/goals/goal_idel_ural_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_mountains"
+		texturefile = "gfx/interface/goals/goal_generic_mountains.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_religious_tolerance"
+		texturefile = "gfx/interface/goals/goal_religious_tolerance.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_steppe_rider"
+		texturefile = "gfx/interface/goals/goal_steppe_rider.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_empty_account"
+		texturefile = "gfx/interface/goals/goal_empty_account.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_woman_soldier"
+		texturefile = "gfx/interface/goals/goal_woman_soldier.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_kazan_shield"
+		texturefile = "gfx/interface/goals/goal_kazan_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_stamp_communism"
+		texturefile = "gfx/interface/goals/goal_stamp_communism.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_money"
+		texturefile = "gfx/interface/goals/goal_generic_money.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_dove"
+		texturefile = "gfx/interface/goals/goal_generic_dove.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_transcaucasia_shield"
+		texturefile = "gfx/interface/goals/goal_transcaucasia_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_wheat"
+		texturefile = "gfx/interface/goals/goal_generic_wheat.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukrainian_shield"
+		texturefile = "gfx/interface/goals/goal_ukrainian_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukrainian_shield_skull"
+		texturefile = "gfx/interface/goals/goal_ukrainian_shield_skull.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_finland_shield"
+		texturefile = "gfx/interface/goals/goal_finland_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_soviet_animation"
+		texturefile = "gfx/interface/goals/goal_soviet_animation.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_crimean_peninsula"
+		texturefile = "gfx/interface/goals/goal_crimean_peninsula.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_central_asia"
+		texturefile = "gfx/interface/goals/goal_central_asia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_baltic_states"
+		texturefile = "gfx/interface/goals/goal_baltic_states.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_don_republic_shield"
+		texturefile = "gfx/interface/goals/goal_don_republic_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ottoman_shield"
+		texturefile = "gfx/interface/goals/goal_ottoman_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_persia_shield"
+		texturefile = "gfx/interface/goals/goal_persia_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_terek_shield"
+		texturefile = "gfx/interface/goals/goal_terek_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_terek_shield_skull"
+		texturefile = "gfx/interface/goals/goal_terek_shield_skull.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_revolutionary_russia_shield"
+		texturefile = "gfx/interface/goals/goal_revolutionary_russia_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_armenia_shield"
+		texturefile = "gfx/interface/goals/goal_armenia_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_armenia_shield_skull"
+		texturefile = "gfx/interface/goals/goal_armenia_shield_skull.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_kurdistan_shield"
+		texturefile = "gfx/interface/goals/goal_kurdistan_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_greece_shield"
+		texturefile = "gfx/interface/goals/goal_greece_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_georgia_shield"
+		texturefile = "gfx/interface/goals/goal_georgia_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_georgia_alone"
+		texturefile = "gfx/interface/goals/goal_georgia_alone.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_brain_shield"
+		texturefile = "gfx/interface/goals/goal_brain_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_syria_shield"
+		texturefile = "gfx/interface/goals/goal_syria_shield.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_transcaucasia_united"
+		texturefile = "gfx/interface/goals/goal_transcaucasia_united.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_transcaucasia_divided"
+		texturefile = "gfx/interface/goals/goal_transcaucasia_divided.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_panther_knight"
+		texturefile = "gfx/interface/goals/goal_panther_knight.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_dragon_slayer"
+		texturefile = "gfx/interface/goals/goal_dragon_slayer.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_queen_tamar"
+		texturefile = "gfx/interface/goals/goal_queen_tamar.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_orthodox_church"
+		texturefile = "gfx/interface/goals/goal_orthodox_church.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ottoman_crosshairs"
+		texturefile = "gfx/interface/goals/goal_ottoman_crosshairs.dds"
+	}
+	
+}

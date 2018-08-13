@@ -1,0 +1,27 @@
+DON_cossack_raids_decisions = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = DON
+	}
+
+	visible = {
+	}
+}
+DON_subjugate_neighbours_decisions = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = DON
+	}
+
+	visible = {
+	}
+}
+DON_subjugate_central_asia = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = DON
+	}
+
+	visible = {
+	}
+}

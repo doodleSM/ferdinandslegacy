@@ -11,6 +11,9 @@ state={
 			infrastructure = 3
 
 		}
+		victory_points = {
+			3667 1 #nazran
+		}
 		add_core_of = CHE
 		add_core_of = DON
 		add_core_of = BLU
@@ -20,7 +23,7 @@ state={
 	}
 
 
-	manpower=45634
+	manpower=105634
 	buildings_max_level_factor=1.000
 	state_category=pastoral
 }

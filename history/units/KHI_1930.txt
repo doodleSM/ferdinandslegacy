@@ -1,0 +1,87 @@
+﻿division_template = {
+	name = "Piyodalarga Bolinish"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Otliqlar Bolinmasi"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Qirollik Soqchilari"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "KHI"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}
+
+units = {
+
+	
+	division= {	
+		name = "1. Piyodalarga Bolinish"
+		location = 12465
+		division_template = "Piyodalarga Bolinish"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division= {	
+		name = "2. Piyodalarga Bolinish"
+		location = 11701
+		division_template = "Piyodalarga Bolinish"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division= {	
+		name = "1. Otliqlar Bolinmasi"
+		location = 1479
+		division_template = "Otliqlar Bolinmasi"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	
+	division= {	
+		name = "2. Otliqlar Bolinmasi"
+		location = 7635
+		division_template = "Otliqlar Bolinmasi"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	
+}

@@ -1,0 +1,23 @@
+state={
+	id=897
+	name="STATE_897"
+	provinces={
+		688 6708 
+	}
+	history={
+		owner = GOR
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+		}
+		victory_points = {
+			688 10 #salzburg
+		}
+		add_core_of = GOR
+
+	}
+
+	manpower=701543
+	buildings_max_level_factor=1.000
+	state_category=city
+}

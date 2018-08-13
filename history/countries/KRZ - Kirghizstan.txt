@@ -12,7 +12,9 @@ set_technology = {
 	early_bomber = 1
 }
 
-
+add_ideas = {
+	limited_conscription
+}
 
 
 set_convoys = 20

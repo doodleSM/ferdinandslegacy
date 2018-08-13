@@ -1,5 +1,7 @@
 ﻿oob = "GRM_1930"
 
+capital = 64
+
 set_stability = 0.75
 set_war_support = 15
 set_research_slots = 3
@@ -129,7 +131,7 @@ create_corps_commander = {
 				gfx = GFX_portrait_ger_von_lettow_vorbeck
 				traits = { trickster war_hero media_personality jungle_rat}
 				skill = 4
-				id = 4
+				id = 1904
 				attack_skill = 3
 				defense_skill = 3
 				planning_skill = 2

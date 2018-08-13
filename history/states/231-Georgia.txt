@@ -10,17 +10,17 @@ state={
 	history={
 		owner = CAU
 		victory_points = {
-			1599 5 
+			1599 10
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 4
 			industrial_complex = 2
 			arms_factory = 1
 			air_base = 3
 
 		}
 		add_core_of = CAU
-		add_core_of = GEO
+		#add_core_of = GEO
 
 	}
 

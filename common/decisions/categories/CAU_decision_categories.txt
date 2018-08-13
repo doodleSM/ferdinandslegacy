@@ -1,0 +1,19 @@
+CAU_foreign_policy = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = CAU
+	}
+
+	visible = {
+	}
+}
+
+CAU_domestic_politics = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = CAU
+	}
+
+	visible = {
+	}
+}

@@ -1,0 +1,3474 @@
+focus_tree = {
+	
+		country = {
+			factor = 0
+		
+		modifier = {
+			add = 10
+			tag = DON
+		}
+	}
+
+
+continuous_focus_position = { x = 50 y = 1600 }
+	#### Army #####
+	focus = {
+		id = DON_don_army
+		icon = GFX_goal_generic_major_war
+		x = 45
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		army_experience = 10
+		}
+	}
+	focus = {
+		id = DON_traditional_army
+		icon = GFX_goal_generic_cavalry
+		x = 41
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { focus = DON_modern_army}
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_don_army}
+		completion_reward = {
+	 	add_ideas = DON_traditional_army
+		army_experience = 5
+		}
+	}
+	focus = {
+		id = DON_black_sea_dominance
+		icon = GFX_goal_generic_build_navy
+		x = 55
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { }
+		completion_reward = {
+	 	navy_experience = 20
+		}
+	}
+	focus = {
+		id = DON_naval_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 54
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_black_sea_dominance }
+		completion_reward = {
+			
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+	focus = {
+		id = DON_naval_bases
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 54
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_black_sea_dominance }
+		completion_reward = {
+			
+			234 = {
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 719
+						instant_build = yes
+					}
+				}
+		}
+	}
+	focus = {
+		id = DON_coastal_defence
+		icon = GFX_goal_generic_occupy_start_war
+		x = 56
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_black_sea_dominance }
+		completion_reward = {
+			
+			add_ideas = ROM_coastal_defense_ships
+		}
+	}
+	focus = {
+		id = DON_destroyers
+		icon = GFX_focus_generic_destroyer
+		x = 56
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_black_sea_dominance }
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = RSP_new_destroyers
+				bonus = 0.6
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = DON_cruisers
+		icon = GFX_focus_generic_cruiser2
+		x = 55
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_destroyers }
+		completion_reward = {
+			navy_experience = 15
+			add_tech_bonus = {
+				name = RSP_new_cruisers
+				bonus = 0.6
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = DON_submarines
+		icon = GFX_goal_generic_navy_submarine
+		x = 55
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_cruisers}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROM_modern_submarines
+				bonus = 0.5
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = DON_battleships
+		icon = GFX_goal_generic_navy_battleship
+		x = 57
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_destroyers}
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = RSP_new_battleships
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+	}
+	focus = {
+		id = DON_cossack_marines
+		icon = GFX_goal_generic_amphibious_assault
+		x = 57
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_battleships}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROM_expand_the_marine_regiment
+				bonus = 0.5
+				uses = 2
+				category = tp_tech
+				category = marine_tech
+			}
+		}
+	}
+	focus = {
+		id = DON_naval_doctrine
+		icon = GFX_goal_generic_wolf_pack
+		x = 56
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_cossack_marines focus = DON_submarines}
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DON_masters_of_the_steppe
+		icon = GFX_goal_generic_position_armies
+		x = 42
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		mutually_exclusive = {}
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_traditional_army}
+		completion_reward = {
+	 	add_ideas = IDE_live_off_the_land_idea
+		}
+	}
+	focus = {
+		id = DON_study_old_tactics
+		icon = GFX_focus_generic_military_mission
+		x = 42
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		mutually_exclusive = {}
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_masters_of_the_steppe}
+		completion_reward = {
+	 	army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DON_conscript_minorities
+		icon = GFX_goal_generic_special_forces
+		x = 40
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		mutually_exclusive = {}
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_traditional_army}
+		completion_reward = {
+	 	add_ideas = RSP_ethnic_regiments_idea
+		}
+	}
+	focus = {
+		id = DON_promote_cossack_officers
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		x = 40
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		mutually_exclusive = {}
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_traditional_army}
+		completion_reward = {
+			add_ideas = RSP_leader_defence_idea 
+			every_army_leader = {
+				add_defense = 1
+			}
+		}
+	}
+	focus = {
+		id = DON_cossack_glory
+		icon = GFX_goal_scourge_of_the_steppes
+		x = 41
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		mutually_exclusive = {}
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_study_old_tactics focus = DON_promote_cossack_officers}
+		completion_reward = {
+			add_ideas = IDE_steppe_cavalry_idea
+		}
+	}
+	focus = {
+		id = DON_standard_rifle
+		icon = GFX_goal_generic_small_arms
+		x = 41
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		mutually_exclusive = {}
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_conscript_minorities focus = DON_masters_of_the_steppe}
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_new_rifle
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = DON_modern_army
+		icon = GFX_goal_generic_build_tank
+		x = 49
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { focus = DON_traditional_army}
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_don_army}
+		completion_reward = {
+	 	add_ideas = DON_modern_army
+	 	add_war_support = -0.05
+	 	add_stability   = -0.1
+		army_experience = 15
+		}
+	}
+	focus = {
+		id = DON_motorised_cavalry
+		icon = GFX_goal_generic_army_motorized
+		x = 48
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_modern_army}
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				technology = motorised_infantry
+			}
+		}
+	}
+	focus = {
+		id = DON_modern_tactics
+		icon = GFX_goal_generic_army_doctrines
+		x = 50
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_modern_army}
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.3
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = DON_caucasian_mountaineers
+		icon = GFX_goal_generic_mountains
+		x = 50
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_modern_tactics}
+		completion_reward = {
+			army_experience = 10
+			custom_effect_tooltip = RSP_winter_equipment_focus_effect
+			hidden_effect = { set_technology = { RSP_winter_equipment_tech = 1 } }
+		}
+	}
+	focus = {
+		id = DON_army_reform
+		icon = GFX_goal_reintegrate_cossacks
+		x = 49
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_caucasian_mountaineers focus = DON_support_companies}
+		completion_reward = {
+			army_experience = 20
+			hidden_effect = {complete_national_focus = DON_begin_reform }
+			
+		}
+	}
+	focus = {
+		id = DON_begin_reform
+		icon = GFX_goal_reintegrate_cossacks
+		x = 45
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			always = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = DON_french_advisors
+		icon = GFX_goal_french_shield
+		x = 43
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { focus = DON_german_advisors}
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_begin_reform }
+		completion_reward = {
+		add_ideas = DON_french_advisors
+		FRA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}	
+	}
+	}
+	focus = {
+		id = DON_install_french_drill
+		icon = GFX_focus_generic_little_entente
+		x = 44
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_french_advisors }
+		completion_reward = {
+		add_ideas = DON_french_drill
+		
+	}
+	}
+	focus = {
+		id = DON_french_officer_training
+		icon = GFX_focus_generic_military_academy
+		x = 42
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_french_advisors }
+		completion_reward = {
+		add_ideas = DON_french_officer_training
+		
+	}
+	}
+	focus = {
+		id = DON_german_advisors
+		icon = GFX_goal_german_shield
+		x = 47
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { focus = DON_french_advisors}
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_begin_reform}
+		completion_reward = {
+		add_ideas = KOR_german_advisors
+		GRM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}	
+	}
+	}
+	focus = {
+		id = DON_german_arms_deal
+		icon = GFX_focus_secret_rearmament
+		x = 48
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_german_advisors}
+		completion_reward = {
+		add_equipment_to_stockpile = {
+                type = infantry_weapons_1
+                amount = 500
+                producer = GRM
+            }
+		
+	}
+	}
+	focus = {
+		id = DON_german_generals
+		icon = GFX_focus_chi_army_reform
+		x = 46
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_german_advisors}
+		completion_reward = {
+		create_corps_commander = {
+	name = "Helmuth von Pannwitz"
+	picture = "DON_pannwitz.dds"
+	traits = {
+	#
+	
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+		
+	}
+	}
+	focus = {
+		id = DON_purge_stubborn_officers
+		icon = GFX_goal_don_military_purge
+		x = 45
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = {focus = DON_french_officer_training focus = DON_german_generals}
+		prerequisite = {focus = DON_german_arms_deal focus = DON_install_french_drill}
+		completion_reward = {
+		add_timed_idea = { idea = DON_purged_officers days = 120 }
+		add_ideas = DON_reorganised_army
+	}
+	}
+	focus = {
+		id = DON_support_companies
+		icon = GFX_goal_generic_construction2
+		x = 48
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_motorised_cavalry}
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_scouts_and_engineers
+				bonus = 0.5
+				uses = 2
+				category = engineers_tech
+				category = recon_tech
+			}
+		}
+	}
+	focus = {
+		id = DON_a_tank
+		icon = GFX_goal_generic_army_tanks
+		x = 49
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_motorised_cavalry focus = DON_modern_tactics}
+		completion_reward = {
+			add_tech_bonus = {
+				name = IDE_armoured_vehicles
+				uses = 1
+				bonus = 0.5
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = DON_establish_air_force
+		icon = GFX_goal_generic_air_fighter
+		x = 45
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			num_of_factories > 10
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_don_army}
+		completion_reward = {
+	 	
+	 	
+		air_experience = 25
+		}
+	}
+	focus = {
+		id = DON_fighter_factories
+		icon = GFX_goal_generic_air_production
+		x = 45
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_cas_effort focus = DON_naval_bomber_focus}
+		completion_reward = {
+			capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+				
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+	focus = {
+		id = DON_bomber_effort
+		icon = GFX_goal_generic_occupy_start_war
+		x = 46
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_establish_air_force}
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_tac_bomber_focus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = DON_naval_bomber_focus
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 46
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_bomber_effort}
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_naval_bomber_focus
+				bonus = 0.6
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	focus = {
+		id = DON_aviation_university
+		icon = GFX_focus_research
+		x = 43
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			num_of_factories > 20
+
+		}
+		prerequisite = {focus = DON_fighter_factories}
+		completion_reward = { add_research_slot = 1}
+	}
+	focus = {
+		id = DON_purchase_foreign_aircraft
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 47
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+
+		}
+		prerequisite = {focus = DON_fighter_factories}
+		completion_reward = {add_equipment_to_stockpile = {
+                type = early_fighter
+                amount = 100
+                producer = DON
+            }}
+	}
+	focus = {
+		id = DON_light_air_effort
+		icon = GFX_goal_generic_air_fighter2
+		x = 44
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_establish_air_force}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	focus = {
+		id = DON_cas_effort
+		icon = GFX_goal_generic_CAS
+		x = 44
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		mutually_exclusive = { }
+		complete_tooltip = {
+
+		}
+		prerequisite = { focus = DON_light_air_effort}
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_close_air_support_focus
+				bonus = 0.6
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	####Industry####
+	focus = {
+		id = DON_develop_industry
+		icon = GFX_goal_generic_construction
+		x = 33
+		y = 0
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		
+		completion_reward = {
+        	add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.25
+				uses = 2
+				category = industry
+			}
+    	}
+	}
+	focus = {
+		id = DON_coastal_manufactories
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 33
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_develop_industry}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 848}
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+	focus = {
+		id = DON_black_sea_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 36
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_develop_industry}
+		completion_reward = {
+			
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+	focus = {
+		id = DON_local_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 30
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_develop_industry}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DON_develop_local_industries
+		icon = GFX_goal_generic_national_unity
+		x = 33
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_local_railways focus = DON_coastal_manufactories focus = DON_black_sea_dockyards}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {235}
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+	focus = {
+		id = DON_arms_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 32
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_develop_local_industries}
+		completion_reward = {
+			random_owned_controlled_state = {
+				
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+	focus = {
+		id = DON_expand_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 32
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_arms_factories}
+		completion_reward = {
+			random_owned_controlled_state = { prioritize = {234}
+				
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+	focus = {
+		id = DON_vologodonsk_railway
+		icon = GFX_goal_generic_construct_civilian
+		x = 34
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_develop_local_industries}
+		completion_reward = {
+			238 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	focus = {
+		id = DON_foreign_investments
+		icon = GFX_focus_generic_treaty
+		x = 34
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_vologodonsk_railway}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+	focus = {
+		id = DON_research_grant
+		icon = GFX_focus_research
+		x = 33
+		y = 5
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_expand_arms_industry focus = DON_foreign_investments}
+		completion_reward = { add_research_slot = 1}
+	}
+	focus = {
+		id = DON_develop_astrakhan
+		icon = GFX_goal_generic_construct_civilian
+		x = 30
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = { OR = {has_full_control_of_state = 236 any_other_country = { is_puppet_of = ROOT has_full_control_of_state = 236 }}
+			
+		}
+		prerequisite = {focus = DON_research_grant}
+		completion_reward = {
+			236 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	focus = {
+		id = DON_develop_grozny
+		icon = GFX_goal_generic_construct_civilian
+		x = 30
+		y = 8
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = { OR = { has_full_control_of_state = 232 any_other_country = { is_puppet_of = ROOT has_full_control_of_state = 232 }}
+			
+		}
+		prerequisite = {focus = DON_develop_astrakhan}
+		completion_reward = {
+			232 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = DON_settle_cossacks
+		icon = GFX_goal_steppe_rider
+		x = 31
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {}
+		prerequisite = {focus = DON_develop_astrakhan}
+		completion_reward = {
+			add_ideas = DON_cossacks_settled
+			}
+	}
+	focus = {
+		id = DON_develop_krasnodar
+		icon = GFX_goal_generic_construct_civilian
+		x = 33
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = { }
+		prerequisite = {focus = DON_research_grant }
+		completion_reward = {
+			234 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			234 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+	focus = {
+		id = DON_build_uranium_refineries
+		icon = GFX_focus_wonderweapons
+		x = 35
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = {focus = DON_krasnodar_oil_wells}
+		completion_reward = {
+			add_ideas = RSP_uranium_idea
+		}
+	}
+	focus = {
+		id = DON_krasnodar_oil_wells
+		icon = GFX_goal_generic_oil_refinery
+		x = 36
+		y = 6
+		
+		prerequisite = { focus = DON_research_grant}
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+				has_full_control_of_state = 234
+				
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			234 = {
+				add_resource = {
+					type = oil
+					amount = 6
+				}
+			}
+			
+		}
+	}
+	focus = {
+		id = DON_synthetic_rubber
+		icon = GFX_focus_generic_rubber
+		x = 36
+		y = 8
+		
+		prerequisite = { focus = DON_research_grant}
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+				has_full_control_of_state = 234
+				
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			234 = {
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+			}
+			
+		}
+	}
+	focus = {
+		id = DON_krasnodar_electronics_university
+		icon = GFX_focus_research
+		x = 33
+		y = 8
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			num_of_factories > 20
+		}
+		prerequisite = {focus = DON_develop_krasnodar}
+		completion_reward = { add_research_slot = 1
+				add_tech_bonus = {
+				name = RSP_electronics_experise
+				bonus = 0.3
+				uses = 2
+				category = electronics
+			}}
+	}
+	# External Policy #
+	focus = {
+		id = DON_approach_foreign_policy
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 20
+		y = 0
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		
+		completion_reward = {
+        	add_political_power = 100
+    	}
+	}
+	focus = {
+		id = DON_approach_the_republic
+		icon = GFX_goal_russian_shield
+		x = 25
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 2
+		}
+
+		available = {
+		RSP = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		NOT = { is_in_faction_with = RUS }
+	}
+		mutually_exclusive = { focus = DON_our_own_sphere focus = DON_approach_the_tsar}
+		prerequisite = { focus = DON_approach_foreign_policy}
+		completion_reward = {
+        	RSP = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}	
+    	}
+	}
+	focus = {
+		id = DON_joint_military_cooperation
+		icon = GFX_focus_generic_combined_arms
+		x = 24
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			RSP = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		}
+		prerequisite = { focus = DON_approach_the_republic}
+		completion_reward = {
+			add_ideas = KOR_russian_advisors
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			RSP = {
+				army_experience = 10
+				add_tech_bonus = {
+					name = land_doc_bonus
+					bonus = 0.25
+					uses = 1
+					category = land_doctrine
+				}
+			}
+		}
+	}
+	focus = {
+		id = DON_open_border_policy
+		icon = GFX_goal_generic_improve_relations
+		x = 24
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_joint_military_cooperation }
+		completion_reward = {
+        custom_effect_tooltip = DON_open_borders_tt
+        hidden_effect = {	diplomatic_relation = {
+					country = RSP
+					relation = military_access
+					active = yes
+				}
+				RSP = { diplomatic_relation = {
+					country = DON
+					relation = military_access
+					active = yes
+				}
+    	}
+    	 }
+    	 }
+	}
+	focus = {
+		id = DON_send_surplus_harvest
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 26
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_approach_the_republic }
+		completion_reward = {
+        	add_stability = 0.1
+        	RSP = {add_ideas = DON_surplus_harvest add_stability= 0.05 }
+    	}
+	}
+	focus = {
+		id = DON_russian_chromium_deal
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 26
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_send_surplus_harvest }
+		completion_reward = {
+        	
+			847 = {
+				
+				add_resource = {
+					type = chromium
+					amount = 12
+				}
+			}
+			RSP = { random_owned_state = {
+				
+				add_resource = {
+					type = chromium
+					amount = 6
+				}
+			}
+		} 
+    	}
+	}
+	focus = {
+		id = DON_join_republic_sphere
+		icon = GFX_goal_russian_shield
+		x = 25
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 3
+		}
+
+		available = {
+			RUS = { exists = yes is_subject = no NOT = { has_war_with = DON } is_faction_leader = yes }
+			
+			is_in_faction = no
+			is_subject = no
+		}
+		bypass = {
+			is_in_faction_with = RUS
+		}
+		prerequisite = { focus = DON_russian_chromium_deal focus = DON_open_border_policy }
+		completion_reward = {
+			RSP = { country_event = { id = generic.2 days = 1 } }
+		}
+	}
+	focus = {
+		id = DON_fortify_the_don
+		icon = GFX_goal_don_dominance
+		x = 25
+		y = 5
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_join_republic_sphere}
+		completion_reward = {
+        	238 = {
+				add_building_construction = {
+					type = bunker
+					province = 6490
+					level = 1
+					instant_build = yes
+				}
+			
+				add_building_construction = {
+					type = bunker
+					province = 3464
+					level = 1
+					instant_build = yes
+				}
+			
+				add_building_construction = {
+					type = bunker
+					province = 11403
+					level = 1
+					instant_build = yes
+				}
+			
+				add_building_construction = {
+					type = bunker
+					province = 426
+					level = 1
+					instant_build = yes
+				}
+			
+				add_building_construction = {
+					type = bunker
+					province = 3857
+					level = 1
+					instant_build = yes
+				}
+			}
+    	}
+	}
+	focus = {
+		id = DON_join_the_civil_war
+		icon = GFX_goal_generic_political_pressure
+		x = 25
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 9
+		}
+
+		available = {
+			
+			
+		}
+		prerequisite = { focus = DON_fortify_the_don}
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = RUS
+						
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = BLU
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_our_own_sphere
+		icon = GFX_goal_don_raise_banners
+		x = 20
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 8
+		}
+
+		available = {
+			
+		}
+		mutually_exclusive = { focus = DON_approach_the_tsar focus = DON_approach_the_republic}
+		prerequisite = { focus = DON_approach_foreign_policy}
+		completion_reward = {
+        	create_faction = "Don Pact"
+    	}
+	}
+	focus = {
+		id = DON_institute_cossack_raids
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 20
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_our_own_sphere}
+		completion_reward = {
+        	custom_effect_tooltip = DON_cossack_raid_tt
+    	}
+	}
+	focus = {
+		id = DON_ally_idel_ural
+		icon = GFX_goal_donidealliance
+		x = 21
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		mutually_exclusive = { focus = DON_ally_the_alash}
+		prerequisite = { focus = DON_institute_cossack_raids}
+		completion_reward = {
+        	IDE  = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}
+		IDE = { country_event = { id = generic.5 days = 1 } }
+    	}
+	}
+	focus = {
+		id = DON_ally_the_alash
+		icon = GFX_goal_alash_alliance
+		x = 19
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		mutually_exclusive = { focus = DON_ally_idel_ural}
+		prerequisite = { focus = DON_institute_cossack_raids}
+		completion_reward = {
+        	ALA  = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}
+		ALA = { country_event = { id = generic.5 days = 1 } }
+    	}
+	}
+	focus = {
+		id = DON_strike_the_alash
+		icon = GFX_goal_alash_attack
+		x = 21
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = { OR = { is_neighbor_of = ALA
+					      is_in_faction_with = IDE }
+			
+		}
+		mutually_exclusive = { }
+		prerequisite = { focus = DON_ally_idel_ural}
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = ALA
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_strike_the_idel_ural
+		icon = GFX_goal_idel_attack
+		x = 19
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = { OR = { is_neighbor_of = IDE
+					      is_in_faction_with = ALA }
+			
+		}
+		mutually_exclusive = { }
+		prerequisite = { focus = DON_ally_the_alash}
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = IDE
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_exploit_weak_neighbours
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 20
+		y = 5
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+		mutually_exclusive = { }
+		prerequisite = { focus = DON_strike_the_idel_ural focus = DON_strike_the_alash}
+		completion_reward = {
+		random_neighbor_country = {
+			limit = { 
+				
+				
+				exists = yes
+
+				NOT = { has_war_with = ROOT }
+				NOT = { has_guaranteed = ROOT }
+				NOT = { is_guaranteed_by = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+				ic_ratio = { 
+							tag = ROOT 
+							ratio < 1
+						}
+					}
+			country_event = { id = aiu_china.6 days = 1 }
+			}
+
+		}
+	}
+	focus = {
+		id = DON_into_ukraine
+		icon = GFX_goal_generic_major_war
+		x = 21
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		mutually_exclusive = { }
+		prerequisite = { focus = DON_exploit_weak_neighbours}
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = BAU
+						
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = UKR
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_central_asian_excursion
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		x = 19
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		mutually_exclusive = { }
+		prerequisite = { focus = DON_exploit_weak_neighbours}
+		completion_reward = {
+        	custom_effect_tooltip = DON_central_asian_dominance_tt
+    	}
+	}
+	focus = {
+		id = DON_strike_russia
+		icon = GFX_focus_ger_strike_at_the_source
+		x = 20
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 2
+		}
+
+		available = {
+			OR = { RUS = {exists = yes NOT = { is_in_faction_with = ROOT}} RSP = {exists = yes NOT = { is_in_faction_with = ROOT}} BLU = {exists = yes NOT = { is_in_faction_with = ROOT}} }
+		}
+		mutually_exclusive = { }
+		prerequisite = { focus = DON_exploit_weak_neighbours}
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = BLU
+						
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = RUS
+						
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = RSP
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_approach_the_tsar
+		icon = GFX_goal_russian_empire_shield
+		x = 15
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+		mutually_exclusive = { focus = DON_our_own_sphere focus = DON_approach_the_republic}
+		prerequisite = { focus = DON_approach_foreign_policy}
+		completion_reward = {
+        	RUS = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}	
+    	}
+	}
+	focus = {
+		id = DON_send_cossack_guards
+		icon = GFX_goal_scourge_of_the_steppes
+		x = 14
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_approach_the_tsar}
+		completion_reward = {
+			custom_effect_tooltip = DON_RUS_Reinforcements_tt
+        	hidden_effect = {RUS = { load_oob = DON_RUS_Reinforcements} }
+    	}
+	}
+	focus = {
+		id = DON_take_in_refugees
+		icon = GFX_focus_generic_concessions
+		x = 14
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_send_cossack_guards}
+		completion_reward = {
+        	add_manpower = 5000
+        	add_timed_idea = { idea = DON_accepted_refugees days = 365 }
+    	}
+	}
+	focus = {
+		id = DON_send_emergency_workers
+		icon = GFX_goal_generic_construction
+		x = 16
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_approach_the_tsar}
+		completion_reward = {
+			add_political_power = 75
+        	RUS = {add_ideas = DON_emergency_workers}
+        	
+        	RUS = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			}
+    	}
+	}
+	focus = {
+		id = DON_economic_aid
+		icon = GFX_focus_generic_self_management
+		x = 16
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_send_emergency_workers}
+		completion_reward = {
+        	RUS = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}
+		RUS = { add_offsite_building = { type = industrial_complex level = 2 }}	
+    	}
+	}
+	focus = {
+		id = DON_declare_for_the_tsar
+		icon = GFX_goal_generic_alliance
+		x = 15
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			RUS = { exists = yes is_subject = no NOT = { has_war_with = DON } is_faction_leader = yes }
+			
+			is_in_faction = no
+			is_subject = no
+		}
+		bypass = {
+			is_in_faction_with = RUS
+		}
+		prerequisite = { focus = DON_economic_aid focus = DON_take_in_refugees}
+		completion_reward = {
+			RUS = { country_event = { id = generic.2 days = 1 } }
+		}
+	}
+	focus = {
+		id = DON_prepare_for_backhand_blow
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 15
+		y = 5
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_declare_for_the_tsar}
+		completion_reward = {
+        	add_timed_idea = { idea = DON_invasion_preperation days = 180}
+    	}
+	}
+	focus = {
+		id = DON_stands_by_the_tsar
+		icon = GFX_goal_reintegrate_cossacks
+		x = 15
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		prerequisite = { focus = DON_economic_aid focus = DON_take_in_refugees}
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = RSP
+						
+					}
+					create_wargoal = {
+						type = take_state_focus
+						target = BLU
+						
+					}
+    	}
+	}
+	# Bogaevsky's Speech # 
+
+	focus = {
+		id = DON_boga_makes_a_speech
+		icon = GFX_goal_bogas_speech
+		x = 7
+		y = 0
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			always = no
+		}
+		bypass = { has_country_flag = bogaevsky_speech}
+		completion_reward = {
+        	add_political_power = 15
+    	}
+	}
+	focus = {
+		id = DON_boga_resigns
+		icon = GFX_goal_generic_forceful_treaty
+		x = 4
+		y = 1
+
+		cost = 10
+		prerequisite = { focus = DON_boga_makes_a_speech}
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			always = no
+		}
+		bypass = { has_country_flag = bogaevsky_resigns}
+		completion_reward = {
+        	create_country_leader = {
+				name = "Don Council"
+				desc = ""
+				picture = "don_council.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+    	}
+	}
+	focus = {
+		id = DON_boga_stays_in_power
+		icon = GFX_goal_don_dominance
+		x = 10
+		y = 1
+
+		cost = 10
+		prerequisite = { focus = DON_boga_makes_a_speech}
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			always = no
+		}
+		bypass = { has_country_flag = bogaevsky_stays}
+		completion_reward = {
+        	add_political_power = +15
+    	}
+	}
+	focus = {
+		id = DON_elect_new_ataman
+		icon = GFX_goal_reintegrate_cossacks
+		x = 4
+		y = 2
+
+		cost = 5
+		prerequisite = { focus = DON_boga_resigns}
+		ai_wilL_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	add_political_power = 15
+    	}
+	}
+	focus = {
+		id = DON_ataman_kaledin
+		icon = GFX_goal_ataman_kaledin
+		x = 2
+		y = 3
+
+		cost = 2
+		prerequisite = { focus = DON_elect_new_ataman}
+		mutually_exclusive = { focus = DON_ataman_krasnov}
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	create_country_leader = {
+				name = "Alexey Kaledin"
+				desc = ""
+				picture = "DON_kaledin.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+    	}
+	}
+	focus = {
+		id = DON_approach_terek_cossacks
+		icon = GFX_goal_approach_terek
+		x = 2
+		y = 4
+
+		cost = 8
+		prerequisite = { focus = DON_ataman_kaledin}
+		
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	CHE = { country_event = { id = aiu_don.10 days = 1 } }
+    	}
+	}
+	focus = {
+		id = DON_approach_astrakhan_cossacks
+		icon = GFX_goal_approach_astrakhan
+		x = 2
+		y = 5
+
+		cost = 8
+		prerequisite = { focus = DON_approach_terek_cossacks}
+		
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	ASC = { country_event = { id = aiu_don.12 days = 1 } }
+    	}
+	}
+	focus = {
+		id = DON_one_leader_one_host
+		icon = GFX_goal_reintegrate_cossacks
+		x = 4
+		y = 7
+
+		cost = 8
+		prerequisite = { focus = DON_approach_astrakhan_cossacks  focus = DON_seize_astrakhan}
+		
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	add_state_core = 846
+			add_state_core = 232
+			add_state_core = 845
+			add_state_core = 850
+			add_state_core = 237
+			add_state_core = 236
+	} }
+	focus = {
+		id = DON_scourge_of_the_steppe
+		icon = GFX_goal_scourge_of_the_steppes
+		x = 4
+		y = 8
+
+		cost = 10
+		prerequisite = { focus = DON_one_leader_one_host}
+		
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	add_ideas = DON_scourge_of_the_steppes
+    	}
+	}
+	
+	focus = {
+		id = DON_ataman_krasnov
+		icon = GFX_goal_ataman_krasnov
+		x = 6
+		y = 3
+
+		cost = 2
+		prerequisite = { focus = DON_elect_new_ataman}
+		mutually_exclusive = { focus = DON_ataman_kaledin}
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	create_country_leader = {
+				name = "Pyotr Krasnov"
+				desc = ""
+				picture = "DON_krasnov.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+			}
+	}
+	focus = {
+		id = DON_destroy_kalmykov
+		icon = GFX_goal_eliminate_kalmykov
+		x = 6
+		y = 4
+
+		cost = 8
+		prerequisite = { focus = DON_ataman_krasnov}
+		mutually_exclusive = { }
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = CHE
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_seize_astrakhan
+		icon = GFX_goal_seize_astrakhan
+		x = 6
+		y = 5
+
+		cost = 8
+		prerequisite = { focus = DON_destroy_kalmykov}
+		mutually_exclusive = { }
+		ai_wilL_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = ASC
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_raise_the_banners
+		icon = GFX_goal_don_raise_banners
+		x = 10
+		y = 2
+
+		cost = 3
+		prerequisite = { focus = DON_boga_stays_in_power}
+		mutually_exclusive = { }
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	custom_effect_tooltip = DON_raise_cossacks_tt
+        	hidden_effect = { load_oob = DON_cossack_host }
+    	}
+	}
+	focus = {
+		id = DON_raid_the_caucases
+		icon = GFX_goal_raid_the_caucases
+		x = 10
+		y = 3
+
+		cost = 2
+		prerequisite = { focus = DON_raise_the_banners}
+		mutually_exclusive = { }
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = CAU
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_integrate_the_caucasians
+		icon = GFX_goal_generic_improve_relations
+		x = 11
+		y = 4
+
+		cost = 8
+		prerequisite = { focus = DON_raid_the_caucases}
+		mutually_exclusive = {focus = DON_execute_pogroms }
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	add_political_power = -50
+        	add_stability = -0.1
+        	add_war_support = -0.05
+        	add_state_core = 841
+			add_state_core = 840
+			add_state_core = 231
+			add_state_core = 843
+			add_state_core = 229
+			
+    	}
+	}
+	focus = {
+		id = DON_execute_pogroms
+		icon = GFX_goal_generic_political_pressure
+		x = 9
+		y = 4
+
+		cost = 8
+		prerequisite = { focus = DON_raid_the_caucases}
+		mutually_exclusive = { focus = DON_integrate_the_caucasians}
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	add_manpower = -3000
+        	add_stability = 0.1
+    	}
+	}
+	focus = {
+		id = DON_seize_black_sea_fleet
+		icon = GFX_goal_generic_navy_battleship
+		x = 10
+		y = 5
+
+		cost = 2
+		prerequisite = { focus = DON_execute_pogroms focus = DON_integrate_the_caucasians}
+		mutually_exclusive = { }
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = CRI
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_armenian_raids
+		icon = GFX_goal_armenian_raids
+		x = 10
+		y = 6
+
+		cost = 4
+		prerequisite = { focus = DON_seize_black_sea_fleet}
+		mutually_exclusive = { }
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = ARM
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_strike_at_the_fallen_empire
+		icon = GFX_goal_strike_fallen_empire
+		x = 11
+		y = 7
+
+		cost = 4
+		prerequisite = { focus = DON_armenian_raids }
+		mutually_exclusive = { }
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = { has_army_manpower = { size > 150000 }
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = OTT
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_iranian_steppes
+		icon = GFX_goal_generic_cavalry
+		x = 9
+		y = 7
+
+		cost = 4
+		prerequisite = { focus = DON_armenian_raids }
+		mutually_exclusive = { }
+		ai_wilL_do = {
+			factor = 4
+		}
+
+		available = { has_army_manpower = { size > 100000 } 
+			
+		}
+		bypass = { }
+		completion_reward = {
+        	create_wargoal = {
+						type = take_state_focus
+						target = PER
+						
+					}
+    	}
+	}
+	focus = {
+		id = DON_emperor_of_the_steppes
+		icon = GFX_goal_emperor_of_the_steppes
+		x = 10
+		y = 8
+
+		cost = 12
+		prerequisite = { focus = DON_iranian_steppes }
+		prerequisite = { focus = DON_strike_at_the_fallen_empire }
+		mutually_exclusive = { }
+		ai_wilL_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		bypass = { }
+		completion_reward = { custom_effect_tooltip = DON_emperor_of_the_steppes_tt
+							  set_cosmetic_tag = DON_EMPIRE
+							  add_state_core = 354
+							  add_state_core = 831
+							  add_state_core = 230
+							  add_state_core = 842
+							  add_state_core = 353
+							  add_state_core = 352
+							  add_state_core = 825
+							  add_state_core = 833
+							  add_state_core = 419
+							  add_state_core = 420
+							  add_state_core = 846
+							add_state_core = 232
+							add_state_core = 845
+							add_state_core = 850
+							add_state_core = 237
+							add_state_core = 236
+        					  hidden_effect = { create_country_leader = {
+	name = "Emperor Bogaevsky"
+	desc = ""
+	picture = "DON_Bogaewsky.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}}
+    	}
+	}
+	
+	
+}

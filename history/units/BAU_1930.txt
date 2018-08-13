@@ -1,5 +1,22 @@
-division_template = { #Infantry Militia
+﻿division_template = { #Infantry Militia
 	name = "Ukrayinska Militsiya"
+	division_names_group = UKR_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	priority = 0
+}
+
+division_template = { #black army div
+	name = "Chorno-Armiyske Dyviziya"
+	division_names_group = UKR_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -20,13 +37,21 @@ division_template = { #Infantry Militia
 }
 
 division_template = { #Cavalry
-	name = "Kavaleriyska Militsiya"
+	name = "Kavaleriyska Dyviziya"
+	division_names_group = UKR_CAV_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
 		cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
 	}
 }
 
@@ -36,23 +61,159 @@ units = {
 		name = "Odessa Militia"
 		location = 11670
 		division_template = "Ukrayinska Militsiya"
-		start_experience_factor = 0.2
-		start_equipment_facor = 0.6
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.8
 	}
 
 	division = {
 		name = "Kherson Militia"
 		location = 11715
 		division_template = "Ukrayinska Militsiya"
-		start_experience_factor = 0.2
-		start_equipment_facor = 0.6
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.8
 	}
 
 	division = {
-		name = "Yuzoka Militia"
-		location = 11715
+		name = "Yuzovka Militia"
+		location = 6474
 		division_template = "Ukrayinska Militsiya"
-		start_experience_factor = 0.2
-		start_equipment_facor = 0.6
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3757
+		division_template = "Chorno-Armiyske Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11438
+		division_template = "Chorno-Armiyske Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6605
+		division_template = "Chorno-Armiyske Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 522
+		division_template = "Chorno-Armiyske Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 418
+		division_template = "Chorno-Armiyske Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 3466
+		division_template = "Chorno-Armiyske Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 9479
+		division_template = "Kavaleriyska Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11424
+		division_template = "Kavaleriyska Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11541
+		division_template = "Kavaleriyska Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+}
+
+### Air Wings
+air_wings = {
+	
+
+	# Odessa
+	192 = {
+		fighter_equipment_0 = {
+			owner = "BAU" 
+			amount = 18
+		}
+	}
+	
+}
+
+instant_effect = {
+add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "BAU"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+	
+add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "BAU"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
 	}
 }

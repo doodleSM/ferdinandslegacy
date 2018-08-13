@@ -1,0 +1,435 @@
+#Category allowed for CAU
+
+
+CAU_foreign_policy = {
+
+	CAU_offer_peace_DON = {
+
+		available = {
+			controls_state = 233
+			controls_state = 847
+			controls_state = 848
+			surrender_progress < 0.1
+			FROM = { 
+				surrender_progress > 0.4
+			}
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = DON
+			}
+		}
+
+		visible = {
+			tag = CAU
+			has_war_with = DON
+			has_completed_focus = CAU_expel_don_cossacks
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			DON = {
+				country_event = { id = aiu_cau.1 days = 1 }
+			}
+		}
+	}
+	
+	CAU_join_blu_faction = {
+
+		available = {
+			BLU = { is_faction_leader = yes }
+			is_in_faction = no
+			is_subject = no
+			NOT = { has_war_with = BLU }
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = BLU
+			}
+		}
+
+		visible = {
+			tag = CAU
+			BLU = { is_faction_leader = yes }
+			is_in_faction = no
+			has_country_flag = CAU_supporting_blu
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			BLU = {
+				country_event = { id = generic.2 days = 1 }
+			}
+		}
+	}
+	
+	CAU_join_rsp_faction = {
+
+		available = {
+			RSP = { is_faction_leader = yes }
+			is_in_faction = no
+			is_subject = no
+			NOT = { has_war_with = RSP }
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = RSP
+			}
+		}
+
+		visible = {
+			tag = CAU
+			RSP = { is_faction_leader = yes }
+			is_in_faction = no
+			has_country_flag = CAU_supporting_rsp
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			RSP = {
+				country_event = { id = generic.2 days = 1 }
+			}
+		}
+	}
+	
+	CAU_join_rus_faction = {
+
+		available = {
+			RUS = { is_faction_leader = yes }
+			is_in_faction = no
+			is_subject = no
+			NOT = { has_war_with = RUS }
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = RUS
+			}
+		}
+
+		visible = {
+			tag = CAU
+			RUS = { is_faction_leader = yes }
+			is_in_faction = no
+			has_country_flag = CAU_supporting_rus
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			RUS = {
+				country_event = { id = generic.2 days = 1 }
+			}
+		}
+	}
+	
+	CAU_join_war_on_rus_side = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			RUS = { OR = { has_war_with = RSP has_war_with = BLU } }
+			has_country_flag = CAU_supporting_rus
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = RUS
+			}
+		}
+
+		visible = {
+			tag = CAU
+			RUS = { OR = { has_war_with = RSP has_war_with = BLU } }
+			has_war = no
+			has_country_flag = CAU_supporting_rus
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			if = { limit = { RUS = { has_war_with = RSP } } add_to_war = { targeted_alliance = RUS enemy = RSP hostility_reason = ally } }
+			if = { limit = { RUS = { has_war_with = BLU } } add_to_war = { targeted_alliance = RUS enemy = BLU hostility_reason = ally } }
+		}
+	}
+	
+	CAU_join_war_on_rsp_side = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			RSP = { OR = { has_war_with = RUS has_war_with = BLU } }
+			has_country_flag = CAU_supporting_rsp
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = RSP
+			}
+		}
+
+		visible = {
+			tag = CAU
+			RSP = { OR = { has_war_with = RUS has_war_with = BLU } }
+			has_war = no
+			has_country_flag = CAU_supporting_rsp
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			if = { limit = { RSP = { has_war_with = RUS } } add_to_war = { targeted_alliance = RSP enemy = RUS hostility_reason = ally } }
+			if = { limit = { RSP = { has_war_with = BLU } } add_to_war = { targeted_alliance = RSP enemy = BLU hostility_reason = ally } }
+		}
+	}
+	
+	CAU_join_war_on_blu_side = {
+
+		icon = generic_prepare_civil_war
+		
+		available = {
+			BLU = { OR = { has_war_with = RSP has_war_with = RUS } }
+		}
+
+		target_trigger = {
+			#Target is FROM
+			FROM = {
+				tag = BLU
+			}
+		}
+
+		visible = {
+			tag = CAU
+			BLU = { OR = { has_war_with = RSP has_war_with = RUS } }
+			has_war = no
+			has_country_flag = CAU_supporting_rus
+		}
+
+		cost = 10
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			if = { limit = { BLU = { has_war_with = RSP } } add_to_war = { targeted_alliance = BLU enemy = RSP hostility_reason = ally } }
+			if = { limit = { BLU = { has_war_with = RUS } } add_to_war = { targeted_alliance = BLU enemy = RUS hostility_reason = ally } }
+		}
+	}
+
+}
+
+CAU_foreign_policy = {
+
+	CAU_integrate_northwest_caucasus = {
+
+		icon = generic_operation
+	
+		allowed = {
+			original_tag = CAU
+		}
+		
+		available = {
+			original_tag = CAU
+			controls_state = 233
+			controls_state = 847
+			controls_state = 848
+		}
+
+		cost = 25
+		
+		days_remove = 120
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		visible = {
+			original_tag = CAU
+			OR = {
+				controls_state = 233
+				controls_state = 847
+				controls_state = 848
+				}
+			has_completed_focus = CAU_befriend_north_caucasians
+		}
+		
+		remove_effect = {
+			233 = {
+				add_core_of = ROOT
+			}
+			847 = {
+				add_core_of = ROOT
+			}
+			848 = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	
+	CAU_integrate_northeast_caucasus = {
+
+		icon = generic_operation
+	
+		allowed = {
+			original_tag = CAU
+		}
+		
+		available = {
+			original_tag = CAU
+			controls_state = 845
+			controls_state = 232
+			controls_state = 846
+		}
+
+		cost = 25
+		
+		days_remove = 120
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		visible = {
+			original_tag = CAU
+			OR = {
+				controls_state = 845
+				controls_state = 232
+				controls_state = 846
+				}
+			has_completed_focus = CAU_befriend_north_caucasians
+		}
+		
+		remove_effect = {
+			845 = {
+				add_core_of = ROOT
+			}
+			232 = {
+				add_core_of = ROOT
+			}
+			846 = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	
+	CAU_integrate_south_caucasus = {
+
+		icon = generic_operation
+	
+		allowed = {
+			original_tag = CAU
+		}
+		
+		available = {
+			original_tag = CAU
+			controls_state = 842
+			controls_state = 924
+		}
+
+		cost = 25
+		
+		days_remove = 120
+		
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+		
+		visible = {
+			original_tag = CAU
+			NOT = { has_cosmetic_tag = CAU_GEO }
+			OR = {
+				controls_state = 842
+				controls_state = 924
+				}
+		}
+		
+		remove_effect = {
+			842 = {
+				add_core_of = ROOT
+			}
+			924 = {
+				add_core_of = ROOT
+			}
+			if = { limit = { owns_state = 230 }
+				230 = {
+				add_core_of = ROOT
+				}
+			}
+			if = { limit = { owns_state = 831 }
+				831 = {
+				add_core_of = ROOT
+				}
+			}
+		}
+	}
+
+}

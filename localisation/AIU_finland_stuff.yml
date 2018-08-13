@@ -1,0 +1,12 @@
+﻿l_english:
+  ###EVENTS###
+  aiu_whitefinland.1.t:0 "Russian Military Aid"
+  aiu_whitefinland.1.d:0 ""
+  aiu_whitefinland.1.a:0 "We shall stand alone against the Reds."
+  aiu_whitefinland.1.b:0 "We shall reach out for aid."
+
+  ###FOCUS###
+
+  ###IDEAS###
+  FIN_russian_aid:0 "Russian Aid"
+  FIN_our_own:0 "Finland Stands Alone"

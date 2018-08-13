@@ -12,7 +12,7 @@ state={
 			infrastructure = 5
 		}
 		victory_points = {
-			11248 10 #ryazan
+			11248 15 #ryazan
 		}
 		add_core_of = RSP
 		add_core_of = RUS

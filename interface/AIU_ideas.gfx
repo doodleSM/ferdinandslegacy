@@ -76,6 +76,13 @@ spriteTypes = {
 		name = "GFX_idea_RUS_alexander_ivanovich_konovalov"
 		texturefile = "gfx/interface/ideas/RUS_alexander_ivanovich_konovalov.dds"
 	}
+	
+	######POLAND#####
+	
+	spriteType = {
+		name = "GFX_idea_POL_russian_rule"
+		texturefile = "gfx/interface/ideas/idea_russian_rule.dds"
+	}
 
 	
 }

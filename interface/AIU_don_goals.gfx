@@ -1,0 +1,93 @@
+SpriteTypes = {
+		
+	
+	spriteType = {
+		name = "GFX_goal_bogas_speech"
+		texturefile = "/gfx/interface/goals/goal_bogas_speech.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_don_dominance"
+		texturefile = "/gfx/interface/goals/don_dominance.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_reintegrate_cossacks"
+		texturefile = "/gfx/interface/goals/reintegrate_cossacks.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_don_raise_banners"
+		texturefile = "/gfx/interface/goals/don_raise_banners.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_emperor_of_the_steppes"
+		texturefile = "/gfx/interface/goals/emperor_of_the_steppes.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_raid_the_caucases"
+		texturefile = "/gfx/interface/goals/don_raid_the_caucases.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ataman_krasnov"
+		texturefile = "/gfx/interface/goals/don_ataman_krasnov.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_ataman_kaledin"
+		texturefile = "/gfx/interface/goals/don_ataman_kaledin.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_scourge_of_the_steppes"
+		texturefile = "/gfx/interface/goals/scourge_of_the_steppes.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_approach_terek"
+		texturefile = "/gfx/interface/goals/don_approach_terek.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_approach_astrakhan"
+		texturefile = "/gfx/interface/goals/don_approach_astrakhan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_eliminate_kalmykov"
+		texturefile = "/gfx/interface/goals/don_eliminate_kalmykov.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_seize_astrakhan"
+		texturefile = "/gfx/interface/goals/don_seize_astrakhan.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_armenian_raids"
+		texturefile = "/gfx/interface/goals/don_armenian_raids.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_strike_fallen_empire"
+		texturefile = "/gfx/interface/goals/don_strike_fallen_empire.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_alash_alliance"
+		texturefile = "/gfx/interface/goals/alash_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_alash_attack"
+		texturefile = "/gfx/interface/goals/alash_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_idel_alliance"
+		texturefile = "/gfx/interface/goals/idel_alliance.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_idel_attack"
+		texturefile = "/gfx/interface/goals/idel_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_russian_empire_shield"
+		texturefile = "/gfx/interface/goals/russian_empire_shield.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_donidealliance"
+		texturefile = "/gfx/interface/goals/donidealliance.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_don_military_purge"
+		texturefile = "/gfx/interface/goals/don_military_purge.dds"
+	}
+	
+}

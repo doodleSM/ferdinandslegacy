@@ -1,0 +1,133 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+# 
+#	THIS FILE IS FOR TRIGGERS SPECIFICALLY FOR RUSSIA TAGS
+
+
+
+is_literally_russia = {
+	OR = {
+		original_tag = RUS
+		original_tag = RSP
+		original_tag = BLU
+		original_tag = CRI
+		original_tag = DON
+		original_tag = ASC
+		original_tag = CHE
+		original_tag = ALT
+	}
+}
+
+was_literally_russia = {
+	OR = {
+		original_tag = RUS
+		original_tag = RSP
+		original_tag = BLU
+		original_tag = FIN		
+		original_tag = RFI
+		original_tag = UKR
+		original_tag = BAU
+		original_tag = LIT
+		original_tag = LAT
+		original_tag = EST
+		original_tag = CRI
+		original_tag = DON
+		original_tag = ASC
+		original_tag = CHE
+		original_tag = CAU
+		original_tag = GEO
+		original_tag = AZR
+		original_tag = ARM
+		original_tag = IDE
+		original_tag = ALA
+		original_tag = KHI
+		original_tag = TRC
+		original_tag = BKH
+		original_tag = KRZ
+		original_tag = ZHT
+		original_tag = ALT
+	}
+}
+
+is_russian_minor = {
+	OR = {		
+		original_tag = FIN		
+		original_tag = RFI
+		original_tag = UKR
+		original_tag = BAU
+		original_tag = LIT
+		original_tag = LAT
+		original_tag = EST
+		original_tag = CRI
+		original_tag = DON
+		original_tag = ASC
+		original_tag = CHE
+		original_tag = CAU
+		original_tag = GEO
+		original_tag = AZR
+		original_tag = ARM
+		original_tag = IDE
+		original_tag = ALA
+		original_tag = KHI
+		original_tag = TRC
+		original_tag = BKH
+		original_tag = KRZ
+		original_tag = ZHT
+		original_tag = ALT
+	}
+}
+
+is_baltic_minor = {
+	OR = {		
+		original_tag = FIN		
+		original_tag = RFI
+		original_tag = LIT
+		original_tag = LAT
+		original_tag = EST
+	}
+}
+
+is_black_sea_minor = {
+	OR = {		
+		original_tag = UKR
+		original_tag = BAU
+		original_tag = CRI
+		original_tag = DON
+	}
+}
+
+is_caucasian_minor = {
+	OR = {		
+		original_tag = ASC
+		original_tag = CHE
+		original_tag = CAU
+		original_tag = GEO
+		original_tag = AZR
+		original_tag = ARM
+	}
+}
+
+is_central_asian_minor = {
+	OR = {		
+		original_tag = IDE
+		original_tag = ALA
+		original_tag = KHI
+		original_tag = TRC
+		original_tag = BKH
+		original_tag = KRZ
+		original_tag = ZHT
+		original_tag = ALT
+	}
+}
+

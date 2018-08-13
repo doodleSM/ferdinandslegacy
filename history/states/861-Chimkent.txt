@@ -1,14 +1,17 @@
+
 state={
 	id=861
 	name="STATE_861"
-	provinces={
-		4686 7706 10148 10660 12640 
-	}
+
 	history={
 		owner = KRZ
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			industrial_complex = 1
 
+		}
+		victory_points = {
+			12583 3 
 		}
 		add_core_of = KRZ
 		add_core_of = BLU
@@ -17,8 +20,10 @@ state={
 
 	}
 
-	
-	manpower=35645
+	provinces={
+		1825 4686 7706 10148 10660 12583 12640 
+	}
+	manpower=455645
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=large_town
 }

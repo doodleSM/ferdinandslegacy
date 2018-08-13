@@ -4,25 +4,100 @@ oob = "BLU_1930"
 
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
 	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
 	early_submarine = 1
+	basic_submarine = 1
 	early_destroyer = 1
 	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
 	transport = 1
-	early_fighter = 1
-	early_bomber = 1
-	
 }
 
 add_ideas = {
-	
+	BLU_liberation_army
+	BLU_the_moscow_and_sp_uprisings_idea
+	limited_conscription
+	low_economic_mobilisation
 }
+
+add_ai_strategy = {
+				type = antagonize
+				id = RSP
+				value = 400
+			}
+
+add_ai_strategy = {
+				type = antagonize
+				id = RUS
+				value = 400
+			}
 
 set_research_slots = 3
 
-set_war_support = 0.6
+set_war_support = 0.65
 
-set_convoys = 30
+set_convoys = 100
+
+puppet = BLR
+
+BLR = {
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 6
+		}
+		
+		social_democracy = { 
+			popularity = 7
+		}
+
+		neutrality = {
+			popularity = 3
+		}
+		
+		anarchism = {
+			popularity = 2
+		}
+		
+		radical_socialism = {
+			popularity = 19
+		}
+		
+		communism = {
+			popularity = 71
+		}
+
+		fascism = { 
+			popularity = 2
+		}
+	}
+	
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+}
 
 set_politics = {
 
@@ -30,18 +105,24 @@ set_politics = {
 		
 		
 		social_democracy = {
-			popularity = 21
+			popularity = 17
 		}
 
 		
 		communism = {
-			popularity = 58
+			popularity = 51
 		}
 		
+		anarchism = {
+			popularity = 5
+		}
 		
+		fascism = {
+			popularity = 2
+		}
 		
 		radical_socialism = {
-			popularity = 21
+			popularity = 25
 		}
 
 		
@@ -57,6 +138,17 @@ create_country_leader = {
 	name = "Grigory Zinoviev"
 	desc = ""
 	picture = "BLU_zinoniev.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Alexei Rykov"
+	desc = ""
+	picture = "BLU_Rykov.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
@@ -84,4 +176,70 @@ create_country_leader = {
 	traits = {
 		#
 	}
+}
+
+create_field_marshal = {
+	name = "Leon Trotsky"
+	picture = "Portrait_Leon_Trotsky.dds"
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+	traits = {
+		media_personality
+		harsh_leader
+		organisational_leader
+		commando
+	}
+
+}
+
+create_corps_commander = {
+	name = "Vasily Chuikov"
+	picture = "Portrait_Soviet_Vasily_Chuikov.dds"
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	traits = { brilliant_strategist career_officer }
+}
+
+create_corps_commander = {
+	name = "Boris Shaposhnikov"
+		picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
+	traits = { trait_cautious career_officer }
+	skill = 3
+	
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Vasily Kuznetsov"
+		picture = "Portrait_Soviet_Vasily_Kuznetsov.dds"
+	traits = { commando infantry_officer }
+	skill = 3
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Semyon Timoshenko"
+	picture = "Portrait_Soviet_Semyon_Timoshenko.dds"
+	traits = { cavalry_officer politically_connected career_officer }
+	skill = 3
+
+
+	
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
 }

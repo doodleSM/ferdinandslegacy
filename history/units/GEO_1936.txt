@@ -1,0 +1,86 @@
+﻿division_template = {
+	name = "Kveiti Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kavaleria Division"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	
+}
+
+division_template = {
+	name = "Mtis Jarebi"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+		mountaineers = { x = 2 y = 2 }		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GEO"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}
+
+units = {
+
+	division= {	
+		name = "Tbilisi Mtsveli"
+		location = 1599
+		division_template = "Kveiti Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Mtis Jarebi"
+		location = 11647
+		division_template = "Mtis Jarebi"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Batumi Mtsveli"
+		location = 3653
+		division_template = "Kveiti Division"
+		start_experience_factor = 0.2
+	}
+	division= {	
+		name = "Damontazhebuli Politsia"
+		location = 1599
+		division_template = "Kavaleria Division"
+		start_experience_factor = 0.2
+	}
+}

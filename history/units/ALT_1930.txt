@@ -1,0 +1,87 @@
+﻿division_template = {
+	name = "Altayskaya Pekhota"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Altayskaya Kavaleriya"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Gornaya Brigada"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }		
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ALT"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}
+
+units = {
+
+	
+	division= {	
+		name = "Gornaya Brigada"
+		location = 1794
+		division_template = "Gornaya Brigada"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division= {	
+		name = "1. Altayskaya Pekhota"
+		location = 4800
+		division_template = "Altayskaya Pekhota"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	
+	division= {	
+		name = "2. Altayskaya Pekhota"
+		location = 1797
+		division_template = "Altayskaya Pekhota"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	
+	division= {	
+		name = "Altayskaya Kavaleriya"
+		location = 12515
+		division_template = "Altayskaya Kavaleriya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	
+}

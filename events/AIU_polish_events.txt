@@ -1,0 +1,458 @@
+﻿add_namespace = polfl     #Flavor events
+add_namespace = polsejm   #Sejm events
+add_namespace = polele    #Election events
+
+################################
+## Polish Events
+################################
+
+
+### Introduction event
+country_event = {
+	id = polfl.0
+	title = polfl.0.t
+	desc = polfl.0.d
+
+	fire_only_once = yes
+	
+	trigger = { original_tag = POL date > 1936.1.1 }
+	
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = polfl.0.a
+		hidden_effect = {
+			country_event = { days = 7 id = polsejm.0 }
+		}
+		set_country_flag = { flag = POL_RUSEMP value = 0 }
+		set_country_flag = { flag = POL_PPPAUT value = 0 }
+		set_country_flag = { flag = POL_INDEPE value = 0 }
+		set_country_flag = { flag = POL_RUSREP value = 0 }
+	}
+  
+}
+
+#Status of polish parties
+country_event = {
+	id = polsejm.0
+	title = polsejm.0.t
+	desc = polsejm.0.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor, ban them
+		name = polsejm.0.a
+		country_event = { days = 7 id = polsejm.1 }
+		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		add_popularity = { ideology = anarchism popularity = -0.10 }
+		add_popularity = { ideology = communism popularity = -0.10 }
+		add_popularity = { ideology = radical_socialism popularity = -0.10 }
+		add_popularity = { ideology = social_democracy popularity = -0.10 }
+		add_popularity = { ideology = social_liberalism popularity = -0.10 }
+		add_popularity = { ideology = market_lib popularity = -0.10 }
+		add_popularity = { ideology = democratic popularity = -0.10 }
+		add_popularity = { ideology = fascism popularity = -0.10 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+  
+        option = { #PPP, loyal to tsar stays, other ban
+		name = polsejm.0.b
+		country_event = { days = 7 id = polsejm.1 }
+		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		add_popularity = { ideology = market_lib popularity = 0.05 }
+		add_popularity = { ideology = anarchism popularity = -0.10 }
+		add_popularity = { ideology = communism popularity = -0.10 }
+		add_popularity = { ideology = radical_socialism popularity = -0.10 }
+		add_popularity = { ideology = democratic popularity = -0.10 }
+	}
+	
+	option = { #Rest/Republic, every Party can be
+		name = polsejm.0.c
+		country_event = { days = 7 id = polsejm.1 }
+		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_popularity = { ideology = social_democracy popularity = 0.05 }
+	}
+  
+}
+
+#Status of Governor
+country_event = {
+	id = polsejm.1
+	title = polsejm.1.t
+	desc = polsejm.1.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor, all power to him
+		name = polsejm.1.a
+		country_event = { days = 7 id = polsejm.2 }
+		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+  
+        option = { #PPP, status quo
+		name = polsejm.1.b
+		country_event = { days = 7 id = polsejm.2 }
+		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		add_popularity = { ideology = market_lib popularity = 0.05 }
+	}
+  
+        option = { #Rest, abolish position
+		name = polsejm.1.c
+		country_event = { days = 7 id = polsejm.2 }
+		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+	}
+	
+	option = { #Republic, prepare for republic
+		name = polsejm.1.e
+		country_event = { days = 7 id = polsejm.2 }
+		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		add_popularity = { ideology = social_democracy popularity = 0.05 }
+	}
+  
+}
+
+#Status of Tsar
+country_event = {
+	id = polsejm.2
+	title = polsejm.2.t
+	desc = polsejm.2.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor, Absolute Tsar
+		name = polsejm.2.a
+		country_event = { days = 7 id = polsejm.3 }
+		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+	
+	option = { #PPP, Be with Tsar
+		name = polsejm.2.b
+		country_event = { days = 7 id = polsejm.3 }
+		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		add_popularity = { ideology = market_lib popularity = 0.05 }
+	}
+  
+        option = { #Rest/Republic, Dethrone him
+		name = polsejm.2.c
+		country_event = { days = 7 id = polsejm.3 }
+		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_popularity = { ideology = social_democracy popularity = 0.05 }
+	}
+  
+}
+
+#Status of current constitution
+country_event = {
+	id = polsejm.3
+	title = polsejm.3.t
+	desc = polsejm.3.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor, Stays
+		name = polsejm.3.a
+		country_event = { days = 7 id = polsejm.4 }
+		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+	
+	option = { #PPP, Some Changes
+		name = polsejm.3.b
+		country_event = { days = 7 id = polsejm.4 }
+		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		add_popularity = { ideology = market_lib popularity = 0.05 }
+	}
+  
+        option = { #Rest, Abolish it
+		name = polsejm.3.c
+		country_event = { days = 7 id = polsejm.4 }
+		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+	}
+	
+	option = { #Republic, Change it
+		name = polsejm.3.e
+		country_event = { days = 7 id = polsejm.4 }
+		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		add_popularity = { ideology = social_democracy popularity = 0.05 }
+	}
+  
+}
+
+#Status of elections
+country_event = {
+	id = polsejm.4
+	title = polsejm.4.t
+	desc = polsejm.4.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor, No elections
+		name = polsejm.4.a
+		country_event = { days = 7 id = polsejm.5 }
+		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+  
+        option = { #Rest/PPP/Republic, Free elections
+		name = polsejm.4.c
+		country_event = { days = 7 id = polsejm.5 }
+		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		add_popularity = { ideology = market_lib popularity = 0.05 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_popularity = { ideology = social_democracy popularity = 0.05 }
+	}
+  
+}
+
+#Status of civil war
+country_event = {
+	id = polsejm.5
+	title = polsejm.5.t
+	desc = polsejm.5.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor/PPP, Tsar
+		name = polsejm.5.a
+		country_event = { days = 7 id = polsejm.6 }
+		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_popularity = { ideology = market_lib popularity = 0.05 }
+	}
+	
+	option = { #Republic, Republicans
+		name = polsejm.5.b
+		country_event = { days = 7 id = polsejm.6 }
+		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		add_popularity = { ideology = social_democracy popularity = 0.05 }
+	}
+  
+        option = { #Rest, Independence
+		name = polsejm.5.c
+		country_event = { days = 7 id = polsejm.6 }
+		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+	}
+  
+}
+
+#Status of prime minister
+country_event = {
+	id = polsejm.6
+	title = polsejm.6.t
+	desc = polsejm.6.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor, Abolish
+		name = polsejm.6.a
+		country_event = { days = 7 id = polsejm.7 }
+		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+	
+	option = { #PPP/Rest, Moderate power
+		name = polsejm.6.b
+		country_event = { days = 7 id = polsejm.7 }
+		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		add_popularity = { ideology = market_lib popularity = 0.05 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+	}
+  
+        option = { #Republic, Full power
+		name = polsejm.6.c
+		country_event = { days = 7 id = polsejm.7 }
+		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		add_popularity = { ideology = social_democracy popularity = 0.05 }
+	}
+  
+}
+
+#Status of government
+country_event = {
+	id = polsejm.7
+	title = polsejm.7.t
+	desc = polsejm.7.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor, Purge suspicious
+		name = polsejm.7.a
+		country_event = { days = 1 id = polsejm.8 }
+		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+	
+	option = { #PPP, Let have it to elections
+		name = polsejm.7.b
+		country_event = { days = 1 id = polsejm.8 }
+		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		add_popularity = { ideology = market_lib popularity = 0.05 }
+	}
+  
+        option = { #Republic/Rest, Elections NOW
+		name = polsejm.7.c
+		country_event = { days = 1 id = polsejm.8 }
+		country_event = { days = 1 id = polele.0 }
+		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_popularity = { ideology = social_democracy popularity = 0.05 }
+	}
+  
+}
+
+#Sejm election result
+country_event = {
+	id = polsejm.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event polsejm.6"}
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = { flag = POL_RUSEMP value > 5 } }
+			country_event = polsejm.9
+		}
+		if = {
+			limit = { has_country_flag = { flag = POL_PPPAUT value > 5 } }
+			country_event = polsejm.10
+		}
+		if = {
+			limit = { has_country_flag = { flag = POL_INDEPE value > 5 } }
+			country_event = polsejm.11
+		}
+		if = {
+			limit = { has_country_flag = { flag = POL_RUSREP value > 5 } }
+			country_event = polsejm.12
+		}
+		if = {
+			limit = {
+				has_country_flag = { flag = FRA_ANAR value < 4 }
+				has_country_flag = { flag = FRA_JACO value < 4 }
+				has_country_flag = { flag = FRA_SORE value < 4 }
+				has_country_flag = { flag = FRA_TRAV value < 4 }
+			}
+			country_event = polsejm.13
+		}
+	}
+}
+
+country_event = {
+	id = polsejm.9
+	title = polsejm.9.t
+	desc = polsejm.9.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polsejm.9.a
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+	}
+  
+}
+
+country_event = {
+	id = polsejm.10
+	title = polsejm.10.t
+	desc = polsejm.10.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polsejm.10.a
+		set_politics = {
+			ruling_party = market_lib
+			elections_allowed = yes
+		}
+	}
+  
+}
+
+country_event = {
+	id = polsejm.11
+	title = polsejm.11.t
+	desc = polsejm.11.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polsejm.11.a
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+	}
+  
+}
+
+country_event = {
+	id = polsejm.12
+	title = polsejm.12.t
+	desc = polsejm.12.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polsejm.12.a
+		set_politics = {
+			ruling_party = social_democracy
+			elections_allowed = yes
+		}
+	}
+  
+}
+
+country_event = {
+	id = polsejm.13
+	title = polsejm.13.t
+	desc = polsejm.13.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polsejm.13.a
+	}
+  
+}

@@ -4,7 +4,7 @@ oob = "RUS_1930"
 
 set_research_slots = 3
 set_stability = 0.5
-set_war_support = 0.8
+set_war_support = 0.6
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -18,9 +18,7 @@ set_technology = {
 	paratroopers = 1
 	gw_artillery = 1
 	gwtank = 1
-	basic_light_tank = 1  # PLACEHOLDER
-	#basic_heavy_tank = 1  # PLACEHOLDER
-	#basic_medium_tank = 1 # PLACEHOLDER
+	basic_light_tank = 1
 	early_fighter = 1
 	fighter1 = 1
 	early_bomber = 1
@@ -34,16 +32,37 @@ set_technology = {
 	early_battleship = 1
 	early_battlecruiser = 1
 	transport = 1
-	mass_assault = 1
-	fleet_in_being = 1
 }
 
-set_convoys = 50
+set_convoys = 250
 
-add_ideas = RUS_economic_crisis
-add_ideas = RUS_agrarian_society
-add_ideas = RUS_constitutional_monarchy
+
+declare_war_on = {
+		target = BLU
+		type = annex_everything
+	}
+	
+add_ai_strategy = {
+				type = antagonize
+				id = RSP
+				value = 400
+			}
+
+add_ai_strategy = {
+				type = antagonize
+				id = BLU
+				value = 400
+			}
+	
+
+add_opinion_modifier = { target = RSP modifier = hostile_status }
+
+add_ideas = RUS_unpopular_tsar
 add_ideas = RUS_cossack_elites
+add_ideas = RUS_church_power_idea
+add_ideas = RUS_russian_civil_war_idea
+add_ideas = limited_conscription
+
 set_politics = {
 
 	parties = {
@@ -154,7 +173,96 @@ create_country_leader = {
 }
 
 
+create_field_marshal = {
+	name = "Pyotr Wrangel"
+	# picture = "Portrait_Russia_Pyotr_Wrangel.tga"
+	traits = {
+	 thorough_planner
+	 harsh_leader
+	inspirational_leader
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
 
+create_field_marshal = {
+	name = "Anton Denikin"
+	# picture = "Portrait_Russia_Anton_Denikin.tga"
+	traits = {
+	 old_guard
+	 war_hero
+	 organisational_leader
+	 brilliant_strategist
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Vladimir Kappel"
+	#picture = "Portrait_Soviet_Vladimir_Kappel.tga"
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+	traits = {
+		winter_specialist
+		winter_expert
+	}
+}
+
+create_corps_commander = {
+	name = "Mikhail Drozdovsky"
+	#picture = "Portrait_Soviet_Mikhail_Drozdovsky.tga"
+	traits = {
+		career_officer
+		infantry_leader
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Boris Annenkov"
+	#picture = "Portrait_Russia_Boris_Annenkov.tga"
+	traits = {
+		cavalry_officer
+		cavalry_leader
+		winter_specialist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Vladimir von Manstein"
+	#picture = "Portrait_Soviet_Vladimir_von_Manstein.tga"
+	traits = {
+		infantry_officer
+		commando
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+
+}
 
 
 ### Ship Variants ###
@@ -183,37 +291,12 @@ create_equipment_variant = {
 }
 
 create_equipment_variant = {
-	name = "Leningrad & Minsk Class"
+	name = "St Petersburg & Minsk Class"
 	type = destroyer_1
 	upgrades = {
 		ship_torpedo_upgrade = 3
 		destroyer_engine_upgrade = 3
 		ship_ASW_upgrade = 3
 		ship_anti_air_upgrade = 3
-	}
-}
-
-1939.1.1 = {
-
-	create_equipment_variant = {
-		name = "Series X Shchuka"
-		type = submarine_2
-		upgrades = {
-			ship_reliability_upgrade = 3
-			sub_engine_upgrade = 3
-			sub_stealth_upgrade = 3
-			sub_torpedo_upgrade = 3
-		}
-	}
-
-	create_equipment_variant = {
-		name = "Maxim Gorky Class"
-		type = heavy_cruiser_2
-		upgrades = {
-			ship_reliability_upgrade = 2
-			ship_engine_upgrade = 2
-			ship_armor_upgrade = 2
-			ship_gun_upgrade = 2
-		}
 	}
 }

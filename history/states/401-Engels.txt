@@ -4,7 +4,7 @@ state={
 	name="STATE_401"
 	manpower = 927795
 	
-	state_category = rural
+	state_category = town
 	
 	resources={
 		steel=24 # was: 40
@@ -12,9 +12,13 @@ state={
 	}
 
 	history={
-		owner = RSP
+		owner = IDE
 		buildings = {
 			infrastructure = 4
+			industrial_complex = 1
+		}
+		victory_points = {
+			11523 2 #pokrovsk
 		}
 		add_core_of = RSP
 		add_core_of = RUS

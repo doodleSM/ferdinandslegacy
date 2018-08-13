@@ -1,0 +1,24 @@
+state={
+	id=920
+	name="STATE_920"
+	provinces={
+		266 281 348 395 3384 9327 11386 
+	}
+	history={
+		owner = GRM
+		controller = GRM
+		victory_points = {
+			3384 1 #gumbinnen
+		}
+		buildings = {
+			infrastructure = 6
+		}
+		add_core_of = GRM
+
+	}
+
+	
+	manpower=621564
+	buildings_max_level_factor=1.000
+	state_category=town
+}

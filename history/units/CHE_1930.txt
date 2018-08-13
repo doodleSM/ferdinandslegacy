@@ -1,0 +1,78 @@
+﻿division_template = {
+	name = "Syrko Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Cossack Division"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "CHE"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}
+
+units = {
+
+	division= {	
+		name = "1. Syrko Division"
+		location = 3672
+		division_template = "Syrko Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	
+	division= {	
+		name = "2. Syrko Division"
+		location = 4463
+		division_template = "Syrko Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	
+	division= {	
+		name = "1. Cossack Division"
+		location = 6748
+		division_template = "Cossack Division"
+		start_experience_factor = 0.25
+	}
+	
+	division= {	
+		name = "2. Cossack Division"
+		location = 670
+		division_template = "Cossack Division"
+		start_experience_factor = 0.25
+	}
+	
+	division= {	
+		name = "3. Cossack Division"
+		location = 712
+		division_template = "Cossack Division"
+		start_experience_factor = 0.25
+	}
+	
+}

@@ -9,6 +9,9 @@ state={
 		victory_points = {
 			3653 3 
 		}
+		victory_points = {
+			3658 1 #kutaisi
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -20,7 +23,7 @@ state={
 
 		}
 		add_core_of = CAU
-		add_core_of = GEO
+		#add_core_of = GEO
 
 	}
 	manpower=1254632

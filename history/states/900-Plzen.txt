@@ -1,0 +1,24 @@
+state={
+	id=900
+	name="STATE_900"
+	provinces={
+		6418 6592 9421 9541 9569 
+	}
+	history={
+		owner = BOH
+		victory_points = {
+			6418 5 #plzen
+		}
+		buildings = {
+			infrastructure = 7
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		add_core_of = BOH
+
+	}
+	manpower=1235846
+	buildings_max_level_factor=1.000
+	state_category=city
+}

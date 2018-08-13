@@ -8,7 +8,7 @@ state={
 	}
 
 
-	state_category = pastoral
+	state_category = rural
 
 	history={
 		owner = RSP
@@ -17,6 +17,8 @@ state={
 			air_base = 2
 		}
 		add_core_of = RSP
+		add_core_of = RUS
+		add_core_of = BLU
 	}
 
 	provinces={

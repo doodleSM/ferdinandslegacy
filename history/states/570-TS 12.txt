@@ -9,7 +9,7 @@ state={
 	history={
 		owner = RUS
 		victory_points = {
-			7274 5
+			7274 10 # Novonikolayevsk
 		}
 		buildings = {
 			infrastructure = 4

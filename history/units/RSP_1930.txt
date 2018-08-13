@@ -1,0 +1,719 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+	division_names_group = RUS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Gornostrelkovaya Diviziya"		# Mountain Division
+	division_names_group = RUS_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+		mountaineers = { x = 2 y = 2 }	
+		mountaineers = { x = 3 y = 0 }	
+		mountaineers = { x = 3 y = 1 }	
+		mountaineers = { x = 3 y = 2 }	
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 		# Engineer bn
+		artillery = { x = 0 y = 1 } 	# Heavy Arty Regiment had 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Motostrelkovaya Diviziya"		# Motor Rifle Division
+	division_names_group = RUS_MOT_01
+											# Note: only represents Moscow Proletariat Division in 1936; after 1938-40, Motor Rifle Divisions had +1 mot regiment (3 bns) 
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 		# Recon bn had 16x L tanks, 45 ACs #Eng and recon removed and they seem rather OP. Could revisit if balance changes 
+		engineer = { x = 0 y = 1 } 	# (mot) Engineer bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya" 	# Cavalry Division
+	division_names_group = RUS_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+##### OOB #####
+units = {
+
+	##### Western Army #####				
+	# 		
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 3327
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 6290
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 6245
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 9378
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 3358
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 3391
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 6203
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 6101
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 121
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 9358
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = 12
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 11375
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = 6124
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 36
+		}
+		location = 3017
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 41
+		}
+		location = 7375
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 48
+		}
+		location = 12527
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 81
+		}
+		location = 1750
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 89
+		}
+		location = 12106
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 9292
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 50
+		}
+		location = 10716
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 72
+		}
+		location = 12117
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	
+	##### Southern Army #####				
+	# 		
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 9266
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 111
+		}
+		location = 9313
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 45
+		}
+		location = 9273
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 74
+		}
+		location = 11351
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 77
+		}
+		location = 11436
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 132
+		}
+		location = 3431
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 9474
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 6503
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = 3517
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 124
+		}
+		location = 9338
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 135
+		}
+		location = 3316
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 126
+		}
+		location = 3348
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 143
+		}
+		location = 4411
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 3578
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+		location = 9367
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9278
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	
+	##### Eastern Army #####				
+	# 		
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 957
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 9895
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 6684
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 68
+		}
+		location = 12189
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 75
+		}
+		location = 7868
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#	
+		division_name = {
+			is_name_ordered = yes
+			name_order = 91
+		}
+		location = 4779
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 10590
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	#		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 12678
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	##### NAVAL UNITS #####
+		
+
+	### Pacific Fleet -- Vladivostok
+	navy = {	
+		name = "Tikhookeanskiy Flot"
+		base = 957
+		location = 957 # Vladivostok
+		# 8ya Flotiliya Esmintsev
+		ship = { name = "Imperatritsa Mariya" definition = battleship equipment = { battleship_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Izmail" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Navarin" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Rurik" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Admiral Makarov" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Bayan" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Zabiyaka" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Samson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Letun" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSP } } }
+		ship = { name = "Gavriil" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = RSP } } }
+	}	
+	navy = {	
+		name = "Tihookyeanskiy Podvodniy Flot"
+		base = 957
+		location = 957 # Vladivostok
+		# 10iy Podvodniy Flot
+		ship = { name = "Shch-101" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-102" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-103" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-104" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-105" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-106" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		# 11iy Podvodniy Flot
+		ship = { name = "Shch-107" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-108" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-109" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-110" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-111" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+		ship = { name = "Shch-112" definition = submarine equipment = { submarine_1 = { amount = 1 owner = RSP } } }			
+	}		
+}					
+
+### Air Wings
+air_wings = {
+	
+
+	# Moscow
+	219 = {
+		# 2ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "RSP" 
+			amount = 94
+		}
+		tac_bomber_equipment_0 =  {
+			owner = "RSP" 
+			amount = 48
+		}
+	}
+	
+	# Tsaritsyn
+	217 = {
+		# 2ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "RSP" 
+			amount = 48
+		}
+	}
+
+	# Vladivostock	
+	408 = {
+		# 12ya Istrebitel'nye Aviabrigada
+		# 20ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "RSP" 
+			amount = 102
+		}
+		tac_bomber_equipment_0 =  {
+			owner = "RSP" 
+			amount = 24
+		}
+		nav_bomber_equipment_1 = {
+			owner = "RUS" 
+			amount = 32
+		}
+	}
+}
+
+
+		
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "RSP"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "RSP" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "RSP" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+}
+	#####################

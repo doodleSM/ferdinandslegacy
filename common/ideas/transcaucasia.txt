@@ -1,0 +1,910 @@
+ideas = {
+	
+	country = {
+
+		CAU_caucasus_army_district = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+
+			modifier = {
+				army_org_Factor = 0.05
+				conscription = 0.01				
+			}
+		}
+		
+		CAU_azerbaijani_separatism = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = raj_marginalized_muslim_community
+
+			modifier = {
+				stability_factor = -0.1
+				conscription_factor = -0.2
+			}
+		}
+		
+		CAU_azerbaijani_separatism_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = raj_marginalized_muslim_community_happy
+
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		
+		CAU_azerbaijani_resistance = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = raj_marginalized_muslim_community_angry
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.2
+			}
+		}
+		
+		CAU_powerful_soviets_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_matignon_agreements
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = 0.05			
+			}
+		}
+		
+		CAU_powerful_soviets_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_political_support
+
+			modifier = {
+				political_power_gain = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.1		
+			}
+		}
+		
+		CAU_all_georgian_soviets_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				stability_factor = 0.1				
+			}
+		}
+		
+		CAU_federal_army_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription_factor = 0.1
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+		CAU_adaptable_education_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_time_factor = -0.025
+			}
+		}
+		
+		CAU_trilingual_officer_school_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_war_college
+
+			modifier = {
+				planning_speed = 0.2
+				max_planning = 0.1
+				military_leader_cost_factor = -0.50
+			}
+		}
+		
+		CAU_national_production_plan_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		
+		CAU_georgia_alone_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				army_core_defence_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		
+		CAU_georgia_alone_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				army_core_defence_factor = 0.2
+				war_support_factor = 0.1
+				production_speed_bunker_factor = 0.1
+			}
+		}
+		
+		CAU_georgia_alone_idea_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				army_defence_factor = 0.1
+				army_core_defence_factor = 0.2
+				war_support_factor = 0.2
+				production_speed_bunker_factor = 0.1
+				max_dig_in_factor = 0.25
+			}
+		}
+		
+		CAU_fortify_our_minds_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = jap_supremacy_of_will
+
+			modifier = {
+				research_time_factor = -0.025
+				political_power_factor = 0.1
+			}
+		}
+		
+		CAU_paramilitaries_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				conscription = 0.01	
+				training_time_factor = -0.1			
+			}
+		}
+		
+		CAU_emergency_powers_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				political_power_gain = 0.25			
+			}
+		}
+		
+		CAU_paramilitaries_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				conscription = 0.02
+				training_time_factor = -0.1
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05				
+			}
+		}
+		
+		CAU_georgian_futurism_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = jap_supremacy_of_technology
+
+			modifier = {
+				research_time_factor = -0.025
+				war_support_factor = 0.1
+			}
+		}
+		
+		CAU_church_support_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_orthodox_church_support
+
+			modifier = {
+				stability_factor = 0.2
+				resistance_tick = -0.2
+			}
+		}
+		
+		CAU_tsiteli_mtsveli_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_communist_army
+
+			modifier = {
+				conscription = 0.02			
+			}
+		}
+		
+		CAU_new_industrial_plan_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_local_self_management
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1				
+			}
+		}
+		
+		CAU_reliable_designs_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_artillery_regiments
+
+			modifier = {
+								
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					instant = yes
+				}
+				support_equipment = {
+					reliability = 0.1
+					instant = yes
+				}
+				artillery_equipment = {
+					reliability = 0.1
+					instant = yes
+				}
+			}
+		}
+		
+		CAU_new_mining_techniques_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				local_resources_factor = 0.15				
+			}
+		}
+		
+		CAU_reformed_general_staff_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = CZE_planning_bonus
+
+			modifier = {
+				max_planning = 0.2
+				army_leader_start_planning_level = 1
+			}
+		}
+		
+		CAU_land_of_wolves_idea = {
+
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = -0.1
+				attrition = -0.1
+				land_night_attack = 0.1
+			}
+		}
+		
+		CAU_parallel_production_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_coastal_navy
+
+			modifier = {
+								
+			}
+			
+			equipment_bonus = {
+				screen_ship = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		
+		CAU_segmented_construction_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = escort_effort_focus
+
+			modifier = {
+								
+			}
+			
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		
+		CAU_black_gold_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				NOT = { controls_state = 229 }
+			}
+
+			removal_cost = -1
+
+			picture = generic_industrial_concern_2
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		CAU_construction_experts_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = ast_all_in
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		CAU_french_military_mission_idea = {
+
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_start_defense_level = 1
+			}
+		}
+		
+		CAU_french_loan_idea = {
+
+			picture = generic_foreign_capital
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_infrastructure_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.2
+			}
+		}
+		
+		CAU_north_caucasian_agitation = {
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				NOT = { owns_state = 233 owns_state = 848 owns_state = 849 }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				max_dig_in_factor = -0.25
+			}
+		}
+		
+		CAU_kurdish_agitation = {
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				NOT = { any_owned_state = { is_core_of = KUR } }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		
+		CAU_syrian_agitation = {
+
+			picture = tfv_can_conscription_crisis
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				NOT = { any_owned_state = { is_core_of = SYR } }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		
+		CAU_anti_ottoman_coalition_idea = {
+
+			picture = generic_war_preparation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				OR = {
+				OTT = { exists = no }
+				OTT = { is_subject = yes }
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+			
+			targeted_modifier = {
+				tag = OTT
+				attack_bonus_against = 0.05
+			}
+		}
+		
+		CAU_anti_ottoman_coalition_idea_2 = {
+
+			picture = generic_war_preparation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				OR = {
+				OTT = { exists = no }
+				OTT = { is_subject = yes }
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.05
+			}
+			
+			targeted_modifier = {
+				tag = OTT
+				attack_bonus_against = 0.1
+			}
+		}
+		
+		CAU_georgian_payment_idea_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		CAU_georgian_payment_idea_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+	
+		}
+		
+	political_advisor = {
+
+		}
+}

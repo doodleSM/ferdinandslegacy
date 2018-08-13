@@ -1,0 +1,24 @@
+state={
+	id=912
+	name="STATE_912"
+	provinces={
+		3985 6614 6957 9586 
+	}
+	history={
+		owner = BON
+		victory_points = {
+			9586 1 #bihac
+		}
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = BON
+
+	}
+
+	
+	manpower=615432
+	buildings_max_level_factor=1.000
+	state_category=town
+}

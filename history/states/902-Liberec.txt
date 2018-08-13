@@ -1,0 +1,27 @@
+state={
+	id=902
+	name="STATE_902"
+	provinces={
+		469 11401 11414 11432 
+	}
+	resources={
+		steel=4.000
+	}
+	history={
+		owner = BOH
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			11401 2 #liberec
+		}
+		add_core_of = BOH
+
+	}
+
+	manpower=1235643
+	buildings_max_level_factor=1.000
+	state_category=town
+}

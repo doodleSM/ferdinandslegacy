@@ -1,0 +1,180 @@
+﻿division_template = { 
+	name = "Pikhotna Dyviziya"
+	division_names_group = UKR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = { #Cavalry
+	name = "Kavaleriyska Bryhada"
+	division_names_group = UKR_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 525
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9437
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 6497
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9435
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 11514
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 11479
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 3494
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3494
+		division_template = "Kavaleriyska Bryhada"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3457
+		division_template = "Kavaleriyska Bryhada"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 3480
+		division_template = "Kavaleriyska Bryhada"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.9
+	}
+}
+
+### Air Wings
+air_wings = {
+	
+
+	# Kiev
+	202 = {
+		fighter_equipment_0 = {
+			owner = "UKR" 
+			amount = 24
+		}
+	}
+	
+}
+
+instant_effect = {
+add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "UKR"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+	
+add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "UKR"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+}

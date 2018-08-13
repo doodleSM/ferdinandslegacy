@@ -1,0 +1,27 @@
+state={
+	id=922
+	name="STATE_922"
+	provinces={
+		243 279 334 3295 3324 
+	}
+	history={
+		owner = GRM
+		victory_points = {
+			243 1 #bromberg
+		}
+		victory_points = {
+			3295 1 #thorn
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+
+		}
+		add_core_of = GRM
+
+	}
+
+	manpower=475643
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

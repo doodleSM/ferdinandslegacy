@@ -1,0 +1,444 @@
+ideas = {
+	
+	country = {
+
+		RSP_the_august_revolution = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				war_support_factor = 0.1
+				drift_defence_factor = 0.2
+			}
+		}
+		
+		RSP_officer_shortage_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_yugoslavian_general_staff
+
+			modifier = {
+				planning_speed = -0.2
+				command_power_gain_mult = -0.5
+				military_leader_cost_factor = 0.50
+			}
+			
+			research_bonus = { 
+				
+			}
+		}
+		
+		RSP_federal_guard_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = YUG_federal_defense_council
+
+			modifier = {
+				conscription = 0.005
+				army_infantry_defence_factor = 0.05
+			}
+			
+			research_bonus = { 
+				
+			}
+		}
+		
+		RSP_russian_civil_war_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				RUS = { exists = no }
+				BLU = { exists = no }
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				surrender_limit = -0.1
+			}
+			
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = -0.2
+			}
+		}
+		
+		RSP_anti_communism_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				
+			}
+
+			picture = ger_bulwark_against_bolshevism
+
+			modifier = {
+				
+			}
+			
+			targeted_modifier = {
+				tag = BLU
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		
+		RSP_restless_left_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				
+			}
+
+			picture = generic_spy_political
+
+			modifier = {
+				political_power_gain = -0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		RSP_anti_japan_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				
+			}
+
+			picture = FRA_army_of_aggression_focus
+
+			modifier = {
+				
+			}
+			
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			}
+		}
+		
+		RSP_leader_defence_idea = {
+
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_start_defense_level = 1
+			}
+		}
+		
+		RSP_new_agriculture_idea = {
+
+			picture = generic_agrarian_reform
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+		
+		RSP_uranium_idea = {
+
+			picture = generic_exploit_mines
+
+			removal_cost = -1
+			
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			research_bonus = {
+				nuclear = 0.05
+			}
+			
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.25
+			}
+		}
+		
+		RSP_fighter_coverage_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = air_support_focus
+			
+			modifier = {
+				
+			}
+			
+			equipment_bonus = {
+				fighter_equipment = {
+					air_range = 0.15
+					instant = yes
+				}
+				heavy_fighter_equipment = {
+					air_range = 0.15
+					instant = yes
+				}
+			}
+		}
+		
+		RSP_air_harassment_plans_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = air_support_focus
+			
+			modifier = {
+				
+			}
+			
+			equipment_bonus = {
+				CAS_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		RSP_tsarist_officers_idea = {
+
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_start_planning_level = 1
+			}
+		}
+		
+		RSP_ethnic_regiments_idea = {
+
+			picture = generic_reserve_divisions
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recon_factor = 0.1
+				org_loss_when_moving = -0.05
+			}
+		}
+		
+		RSP_new_mines_idea = {
+
+			picture = generic_exploit_mines
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+		
+		RSP_reform_secret_police_idea = {
+
+			picture = generic_secret_police
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				enemy_partisan_effect = -0.2
+				communism_drift = -0.02
+				anarchism_drift = -0.02
+			}
+		}
+		
+		RSP_winter_gear_idea = {
+
+			picture = generic_infantry_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				winter_attrition_factor = -0.2
+			}
+		}
+		
+		RSP_germany_helping_rebuild_idea = {
+
+			picture = GER_rebuild_the_nation
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industry_repair_factor = 0.50
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		RSP_lessons_of_tsushima_idea = {
+
+			picture = generic_sea_focused_navy
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				navy_capital_ship_attack_factor = 0.1
+				navy_max_range_factor = 0.15
+			}
+		}
+}
+political_advisor = {
+
+		
+}

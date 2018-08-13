@@ -1,0 +1,412 @@
+﻿
+add_namespace = aiu_don
+
+####### Country Informed of Raid #########
+country_event = {
+	id = aiu_don.1
+	title = aiu_don.1.t
+	desc = aiu_don.1.d
+	picture = GFX_report_event_cossack_raid
+
+	trigger = { original_tag = DON date > 1936.2.1 }
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+		name = aiu_don.1.a
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = { country_event = { days = 3 id = aiu_don.2 } }
+		
+		
+	}
+	
+	
+}
+########## Bogaewsky's Speech ##########
+country_event = {
+	id = aiu_don.2
+	title = aiu_don.2.t
+	desc = aiu_don.2.d
+	picture = GFX_report_event_bogaewsky
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = aiu_don.2.a
+		ai_chance = {
+			factor = 8
+		}
+		hidden_effect = { complete_national_focus = DON_boga_makes_a_speech country_event = { days = 3 id = aiu_don.3 } }
+		
+		
+	}
+	option = {
+		name = aiu_don.2.b
+		ai_chance = {
+			factor = 2
+		}
+		hidden_effect = { complete_national_focus = DON_boga_makes_a_speech country_event = { days = 3 id = aiu_don.4 } }
+		
+		
+	}
+	
+	
+}
+#################Bogaewsky Resigns
+country_event = {
+	id = aiu_don.3
+	title = aiu_don.3.t
+	desc = aiu_don.3.d
+	picture = GFX_report_event_bogaewsky
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = aiu_don.3.a
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = { complete_national_focus = DON_boga_resigns  create_country_leader = {
+				name = "Don Council"
+				desc = ""
+				picture = "don_council.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			} }
+		
+		
+	}
+	
+	
+	
+}
+########## Bogaewsky's Remains in Power ##########
+country_event = {
+	id = aiu_don.4
+	title = aiu_don.4.t
+	desc = aiu_don.4.d
+	picture = GFX_report_event_bogaewsky
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = aiu_don.4.a
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = { complete_national_focus = DON_boga_stays_in_power }
+		
+		
+	}
+	
+	
+	
+}
+# Failed Raid #
+country_event = {
+    id = aiu_don.5
+    title = aiu_don.5.t
+    desc = aiu_don.5.d
+    picture = GFX_report_event_generic_battle
+
+    is_triggered_only = yes
+    
+    # 
+    option = {
+        name = aiu_don.5.a
+        ai_chance = { factor = 9 }
+        army_experience = 5
+        add_manpower = -500
+        add_timed_idea = { days = 60 idea = DON_failed_raid } 
+    }
+    
+    
+}
+
+# successful_raid
+country_event = {
+    id = aiu_don.6
+    title = aiu_don.6.t
+    desc = aiu_don.6.d
+    picture = GFX_report_event_generic_battle
+
+    is_triggered_only = yes
+    
+    # 
+    option = {
+        name = aiu_don.6.a
+        army_experience = 10
+        add_manpower = -250
+        add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 500
+                producer = DON
+            }
+        add_timed_idea = { days = 60 idea = DON_successful_raid } 
+    }
+}
+
+# very successful_raid
+country_event = {
+    id = aiu_don.7
+    title = aiu_don.7.t
+    desc = aiu_don.7.d
+    picture = GFX_report_event_generic_battle
+
+    is_triggered_only = yes
+    
+    # 
+    option = {
+        name = aiu_don.6.a
+        army_experience = 15
+        add_manpower = -100
+        add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 1000
+                producer = DON
+            }
+        add_timed_idea = { days = 60 idea = DON_very_successful_raid } 
+    }
+}
+
+# failed_raid - target
+country_event = {
+    id = aiu_don.8
+    title = aiu_don.8.t
+    desc = aiu_don.8.d
+    picture = GFX_report_event_generic_battle
+
+    is_triggered_only = yes
+    
+    # 
+    option = {
+        name = aiu_don.8.a
+        ai_chance = { factor = 8 }
+        army_experience = 5
+        add_manpower = -500
+       
+        add_ai_strategy = {
+            type = antagonize
+            id = "DON"
+            value = 900
+            }
+        add_opinion_modifier = { target = DON modifier = large_decrease }
+        }
+        
+    option = {
+        name = aiu_don.8.b
+        ai_chance = { factor = 2  }
+        army_experience = 5
+        add_manpower = -500
+       
+        add_ai_strategy = {
+            type = antagonize
+            id = "DON"
+            value = 900
+            }
+        add_opinion_modifier = { target = DON modifier = large_decrease }
+        create_wargoal = {
+            type = annex_everything
+            target = DON
+            }
+        }
+}
+# successful_raid - target
+country_event = {
+    id = aiu_don.9
+    title = aiu_don.9.t
+    desc = aiu_don.9.d
+    picture = GFX_report_event_generic_battle
+
+    is_triggered_only = yes
+    
+    # 
+    option = {
+        name = aiu_don.9.a
+        ai_chance = { factor = 8 }
+        army_experience = 5
+        add_manpower = -1000
+        random_owned_state = {
+            limit = {
+                is_fully_controlled_by = ROOT
+                any_neighbor_state = { is_owned_by = FROM }
+                industrial_complex > 0
+            }
+            damage_building = {
+                type = industrial_complex
+                damage = 0.25
+            }
+        }
+        
+        add_ai_strategy = {
+            type = antagonize
+            id = "DON"
+            value = 900
+            }
+        add_opinion_modifier = { target = DON modifier = large_decrease }
+        }
+        
+        option = {
+        name = aiu_don.9.b
+        ai_chance = { factor = 2  }
+        army_experience = 5
+        add_manpower = -1000
+        random_owned_state = {
+            limit = {
+                is_fully_controlled_by = ROOT
+                any_neighbor_state = { is_owned_by = FROM }
+                industrial_complex > 0
+            }
+            damage_building = {
+                type = industrial_complex
+                damage = 0.25
+            }
+        }
+        set_country_flag = DON_raided_us
+        add_ai_strategy = {
+            type = antagonize
+            id = "DON"
+            value = 900
+            }
+        add_opinion_modifier = { target = DON modifier = large_decrease }
+        create_wargoal = {
+            type = annex_everything
+            target = DON
+            }
+        }
+}
+#######Ask Terek for Annexation####
+country_event = {
+	id = aiu_don.10
+	title = aiu_don.10.t
+	desc = aiu_don.10.d
+	picture = GFX_report_event_bogaewsky
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	##########Accept######
+	option = {
+		name = aiu_don.10.a
+		ai_chance = {
+			factor = 8
+		}
+		DON = {annex_country = { target = CHE transfer_troops = yes } }
+		
+		
+	}
+	#######Refuse######
+	option = {
+		name = aiu_don.10.b
+		ai_chance = {
+			factor = 2
+		}
+		DON = {country_event = aiu_don.11}
+		
+		
+	}
+	
+	
+	
+}
+########Terek Refuses##########
+country_event = {
+	id = aiu_don.11
+	title = aiu_don.11.t
+	desc = aiu_don.11.d
+	picture = GFX_report_event_bogaewsky
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = aiu_don.11.a
+		ai_chance = {
+			factor = 10
+		}
+		create_wargoal = {
+            type = annex_everything
+            target = CHE
+            }
+		
+		
+	}
+	
+	
+	
+	
+}
+#######Ask Astrakhan for Annexation####
+country_event = {
+	id = aiu_don.12
+	title = aiu_don.12.t
+	desc = aiu_don.12.d
+	picture = GFX_report_event_bogaewsky
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	##########Accept######
+	option = {
+		name = aiu_don.12.a
+		ai_chance = {
+			factor = 6
+		}
+		DON = {annex_country = { target = ASC transfer_troops = yes } }
+		
+		
+	}
+	#######Refuse######
+	option = {
+		name = aiu_don.12.b
+		ai_chance = {
+			factor = 4
+		}
+		DON = {country_event = aiu_don.13}
+		
+		
+	}
+	
+	
+	
+}
+########Astrakhan Refuses##########
+country_event = {
+	id = aiu_don.13
+	title = aiu_don.13.t
+	desc = aiu_don.13.d
+	picture = GFX_report_event_bogaewsky
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = aiu_don.13.a
+		ai_chance = {
+			factor = 10
+		}
+		create_wargoal = {
+            type = annex_everything
+            target = ASC
+            }
+		
+		
+	}
+	
+	
+	
+	
+}

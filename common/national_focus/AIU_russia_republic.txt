@@ -1,0 +1,3499 @@
+focus_tree = {
+	id = aiu_russia_republic_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = RSP
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1600 }
+
+	focus = {
+		id = RSP_conscription_targets
+		icon = GFX_goal_russian_soldiers
+		x = 2
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	focus = {
+		id = RSP_new_armories
+		icon = GFX_goal_generic_small_arms
+		x = -2
+		y = 1
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_conscription_targets }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_new_armories
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_artillery_modernisation
+		icon = GFX_goal_generic_army_artillery2
+		x = -2
+		y = 2
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_new_armories }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_artillery_modernisation
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_federal_guard
+		icon = GFX_focus_generic_little_entente
+		x = -2
+		y = 3
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_artillery_modernisation }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_federal_guard_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_anti_communist_spirit
+		icon = GFX_focus_ger_bulwark_against_bolshevism #GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 1
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_conscription_targets }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_anti_communism_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_demonise_tsar
+		icon = GFX_focus_rom_abdicate
+		x = 0
+		y = 2
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_anti_communist_spirit }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			NOT = { has_idea = RSP_russian_civil_war_idea }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = RSP_russian_civil_war_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_eastern_threat_focus
+		icon = GFX_focus_generic_japanese_imperial_glory
+		x = 0
+		y = 3
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_demonise_tsar }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+				has_war_with = JAP
+				JAP = { controls_state = 655 }
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_anti_japan_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_expand_logistics
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 1
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_conscription_targets }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_expand_logistics
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_ethnic_regiments
+		icon = GFX_goal_generic_cavalry
+		x = 2
+		y = 2
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_expand_logistics }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_ethnic_regiments_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_new_officers_focus
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		x = 2
+		y = 3
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_ethnic_regiments }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_leader_defence_idea 
+			every_army_leader = {
+				add_defense = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_new_military_leadership
+		icon = GFX_focus_chi_army_reform
+		x = 0
+		y = 4
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_federal_guard }
+		prerequisite = { focus = RSP_new_officers_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = RSP_officer_shortage_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_infantry_weapons
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -2
+		y = 5
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_new_military_leadership }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_new_armories
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_winter_equipment_focus
+		icon = GFX_goal_generic_mountains
+		x = -2
+		y = 6
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_infantry_weapons }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RSP_winter_equipment_focus_effect
+			hidden_effect = { set_technology = { RSP_winter_equipment_tech = 1 } }
+		}
+	}
+	
+	focus = {
+		id = RSP_winter_gear_focus
+		icon = GFX_goal_generic_military_sphere
+		x = -2
+		y = 7
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_winter_equipment_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_winter_gear_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_elite_mountaineers
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 5
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_new_military_leadership }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_elite_mountaineers
+				bonus = 0.5
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_paratrooper_focus
+		icon = GFX_goal_generic_air_doctrine
+		x = 0
+		y = 6
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_elite_mountaineers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_paratrooper_focus
+				bonus = 0.5
+				uses = 1
+				category = para_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_mechanisation_focus
+		icon = GFX_goal_generic_army_motorized
+		x = 2
+		y = 5
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_new_military_leadership }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				technology = motorised_infantry
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_armour_innovations
+		icon = GFX_goal_generic_army_tanks
+		x = 2
+		y = 6
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_mechanisation_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_armour_innovations
+				uses = 1
+				bonus = 0.5
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_heavy_armour
+		icon = GFX_focus_generic_tank_production
+		x = 3
+		y = 7
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_armour_innovations }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_armour_innovations
+				uses = 1
+				bonus = 0.75
+				category = cat_medium_armor
+				category = cat_heavy_armor
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_doctrine_school
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 7
+		relative_position_id = RSP_conscription_targets
+		prerequisite = { focus = RSP_winter_equipment_focus focus = RSP_paratrooper_focus focus = RSP_armour_innovations }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_central_russian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 7
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+			has_full_control_of_state = 219
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				prioritize = { 219 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}	
+	
+	focus = {
+		id = RSP_ural_industry
+		icon = GFX_goal_generic_construction2
+		x = 9
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			has_full_control_of_state = 582
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				prioritize = { 582 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_far_east_industry
+		icon = GFX_goal_generic_construction
+		x = 11
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			has_full_control_of_state = 408
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				prioritize = { 408 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_munitions_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_central_russian_industry focus = RSP_ural_industry focus = RSP_far_east_industry }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				prioritize = { 250 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_federal_research
+		icon = GFX_focus_research
+		x = -2
+		y = 2
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_munitions_factories }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = RSP_engineering_experise
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 2
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_munitions_factories }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_engineering_experise
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_electronics_experise
+		icon = GFX_goal_generic_production2
+		x = 2
+		y = 2
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_munitions_factories }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_electronics_experise
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_railway_ministry
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 3
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_engineering_experise }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 4
+						size < 7
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 4
+						size < 7
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 4
+						size < 7
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 4
+						size < 7
+						include_locked = no
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_caucasian_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -3
+		y = 4
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_railway_ministry }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 848
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 848 }
+				}
+			OR = {
+				has_full_control_of_state = 840
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 840 }
+				}
+			OR = {
+				has_full_control_of_state = 231
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 231 }
+				}
+			OR = {
+				has_full_control_of_state = 229
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 229 }
+				}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			848 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			840 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			231 = {
+				
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			229 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_mine_the_mountains
+		icon = GFX_goal_generic_construction2
+		x = -3
+		y = 5
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_caucasian_infrastructure }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_new_mines_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_baltic_ports
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -1
+		y = 4
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_railway_ministry }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 13
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 13 }
+				}
+			OR = {
+				has_full_control_of_state = 12
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 12 }
+				}
+			OR = {
+				has_full_control_of_state = 189
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 189 }
+				}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			13 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			12 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			139 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_invest_in_finland
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -1
+		y = 5
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_baltic_ports }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			FIN = { exists = yes has_war = no has_full_control_of_state = 111 }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			FIN = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_increase
+			}
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = FIN
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = FIN
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = FIN
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = FIN
+				value = 100
+			}
+			111 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_new_agriculture
+		icon = GFX_goal_generic_wheat
+		x = 1
+		y = 4
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_railway_ministry }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_new_agriculture_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_research_networks
+		icon = GFX_focus_research2
+		x = 1
+		y = 5
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_new_agriculture }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = RSP_central_asian_resources
+		icon = GFX_focus_generic_tungsten
+		x = 3
+		y = 4
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_railway_ministry }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 863
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 863 }
+				}
+			OR = {
+				has_full_control_of_state = 586
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 586 }
+				}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			863 = {
+				add_resource = {
+					type = rubber
+					amount = 18
+				}
+			}
+			586 = {
+				add_resource = {
+					type = aluminium
+					amount = 10
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_semipalatinsk_testing_grounds
+		icon = GFX_focus_wonderweapons
+		x = 3
+		y = 5
+		relative_position_id = RSP_ural_industry
+		prerequisite = { focus = RSP_central_asian_resources }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 588
+				any_other_country = { is_in_faction_with = ROOT has_full_control_of_state = 588 }
+				}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_uranium_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_expand_air_force
+		icon = GFX_goal_continuous_air_production
+		x = 16
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 20
+		}
+	}
+	
+	focus = {
+		id = RSP_fighter_coverage
+		icon = GFX_goal_generic_air_production
+		x = -2
+		y = 1
+		relative_position_id = RSP_expand_air_force
+		prerequisite = { focus = RSP_expand_air_force }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_ideas = RSP_fighter_coverage_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_fighter_airframes
+		icon = GFX_goal_generic_air_fighter
+		x = -2
+		y = 2
+		relative_position_id = RSP_expand_air_force
+		prerequisite = { focus = RSP_fighter_coverage }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_aircraft_assembly_plants
+		icon = GFX_goal_generic_build_airforce
+		x = -2
+		y = 4
+		relative_position_id = RSP_expand_air_force
+		prerequisite = { focus = RSP_railway_ministry }
+		prerequisite = { focus = RSP_fighter_airframes }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = no
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_veteran_pilot_schools
+		icon = GFX_goal_generic_air_doctrine
+		x = -1
+		y = 3
+		relative_position_id = RSP_expand_air_force
+		prerequisite = { focus = RSP_fighter_airframes }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.75
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_air_harassment_plans
+		icon = GFX_goal_generic_attack_allies
+		x = 2
+		y = 1
+		relative_position_id = RSP_expand_air_force
+		prerequisite = { focus = RSP_expand_air_force }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_air_harassment_plans_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_close_air_support_focus
+		icon = GFX_goal_generic_CAS
+		x = 1
+		y = 2
+		relative_position_id = RSP_expand_air_force
+		prerequisite = { focus = RSP_air_harassment_plans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_close_air_support_focus
+				bonus = 0.6
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_tac_bomber_focus
+		icon = GFX_goal_poland_goal
+		x = 3
+		y = 2
+		relative_position_id = RSP_expand_air_force
+		prerequisite = { focus = RSP_air_harassment_plans }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_tac_bomber_focus
+				bonus = 0.6
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_strat_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		x = 2
+		y = 3
+		relative_position_id = RSP_expand_air_force
+		prerequisite = { focus = RSP_close_air_support_focus }
+		prerequisite = { focus = RSP_tac_bomber_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_strat_bomber_focus
+				bonus = 0.5
+				uses = 2
+				category = heavy_air
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_pacific_war_games
+		icon = GFX_goal_generic_navy_cruiser
+		x = 22
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 20
+		}
+	}
+	
+	focus = {
+		id = RSP_naval_doctrines
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -1
+		y = 1
+		relative_position_id = RSP_pacific_war_games
+		prerequisite = { focus = RSP_pacific_war_games }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RSP_naval_doctrines
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_lessons_of_tsushima
+		icon = GFX_goal_tsushima_legacy
+		x = -1
+		y = 2
+		relative_position_id = RSP_pacific_war_games
+		prerequisite = { focus = RSP_naval_doctrines }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_lessons_of_tsushima_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_new_destroyers
+		icon = GFX_focus_generic_destroyer
+		x = 1
+		y = 1
+		relative_position_id = RSP_pacific_war_games
+		prerequisite = { focus = RSP_pacific_war_games }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = RSP_new_destroyers
+				bonus = 0.6
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_new_cruisers
+		icon = GFX_focus_generic_cruiser2
+		x = 1
+		y = 2
+		relative_position_id = RSP_pacific_war_games
+		prerequisite = { focus = RSP_new_destroyers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = RSP_new_cruisers
+				bonus = 0.6
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_new_battleships
+		icon = GFX_goal_generic_navy_battleship
+		x = 0
+		y = 3
+		relative_position_id = RSP_pacific_war_games
+		prerequisite = { focus = RSP_new_cruisers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = RSP_new_battleships
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_superheavy_battleships
+		icon = GFX_focus_generic_navy_battleship2
+		x = 0
+		y = 4
+		relative_position_id = RSP_pacific_war_games
+		prerequisite = { focus = RSP_new_battleships }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 20
+			add_tech_bonus = {
+				name = RSP_superheavy_battleships
+				bonus = 0.5
+				uses = 1
+				category = shbb_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_first_carrier_group
+		icon = GFX_goal_generic_navy_carrier
+		x = 2
+		y = 3
+		relative_position_id = RSP_pacific_war_games
+		prerequisite = { focus = RSP_new_cruisers }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = JAP_carrier_designs
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_carrier_aircraft
+		icon = GFX_goal_generic_build_airforce
+		x = 2
+		y = 4
+		relative_position_id = RSP_pacific_war_games
+		prerequisite = { focus = RSP_first_carrier_group }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_carrier_designs
+				bonus = 0.6
+				uses = 1
+				category = naval_air
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_united_russia
+		icon = GFX_goal_russia_united
+		x = 4
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			RUS = { exists = no }
+			BLU = { exists = no }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = RSP_unified_russia
+			if = { limit = { is_in_faction = no } create_faction = RSP_russian_sphere }
+			add_political_power = 50
+			set_country_flag = RSP_russia_is_unified
+		}
+	}
+	
+	focus = {
+		id = RSP_restore_order
+		icon = GFX_goal_generic_political_pressure
+		x = -2
+		y = 1
+		relative_position_id = RSP_united_russia
+		prerequisite = { focus = RSP_united_russia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RSP_restore_order_tt
+		}
+	}
+	
+	focus = {
+		id = RSP_tsarist_officers
+		icon = GFX_goal_generic_military_deal
+		x = -2
+		y = 2
+		relative_position_id = RSP_united_russia
+		prerequisite = { focus = RSP_restore_order }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_tsarist_officers_idea
+			every_army_leader = {
+				add_planning = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_federal_association
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 1
+		relative_position_id = RSP_united_russia
+		prerequisite = { focus = RSP_united_russia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RSP_federal_association_tt
+		}
+	}
+	
+	focus = {
+		id = RSP_universal_franchise
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 2
+		relative_position_id = RSP_united_russia
+		prerequisite = { focus = RSP_federal_association }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = RSP_purge_marxism
+		icon = GFX_goal_stamp_communism
+		x = 2
+		y = 1
+		relative_position_id = RSP_united_russia
+		prerequisite = { focus = RSP_united_russia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = RSP_restless_left_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_reform_secret_police
+		icon = GFX_goal_generic_dangerous_deal
+		x = 2
+		y = 2
+		relative_position_id = RSP_united_russia
+		prerequisite = { focus = RSP_purge_marxism }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = RSP_reform_secret_police_idea
+		}
+	}
+	
+	focus = {
+		id = RSP_outlook_of_russia
+		icon = GFX_goal_generic_military_sphere
+		x = 14
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			RUS = { exists = no }
+			BLU = { exists = no }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { is_in_faction = no } create_faction = RSP_russian_sphere }
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = RSP_western_fortifications
+		icon = GFX_goal_generic_construct_military
+		x = -5
+		y = 1
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_outlook_of_russia }
+		mutually_exclusive = { focus = RSP_german_detente }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			GRM = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } }
+			any_neighbor_country = {
+					tag = GRM
+					}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = RSP_western_fortifications_tt
+			hidden_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = RSP
+					any_neighbor_state = {
+						OR = {
+							is_owned_by = GRM
+							is_owned_by = POL
+							}
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					province = {
+						all_provinces = yes
+							limit_to_border = yes
+					}
+					level = 3
+					instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_issue_of_poland
+		icon = GFX_goal_generic_major_war
+		x = -5
+		y = 2
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_western_fortifications }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			POL = { exists = no }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#event
+		}
+	}
+	
+	focus = {
+		id = RSP_the_fate_of_europe
+		icon = GFX_goal_generic_territory_or_war
+		x = -5
+		y = 3
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_issue_of_poland }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			GRM = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = GRM
+				type = puppet_wargoal_focus
+			}
+			add_named_threat = { threat = 5 name = RSP_the_fate_of_europe }
+		}
+	}
+	
+	focus = {
+		id = RSP_german_detente
+		icon = GFX_goal_german_shield
+		x = -3
+		y = 1
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_outlook_of_russia }
+		mutually_exclusive = { focus = RSP_western_fortifications }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			GRM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_increase
+				}
+				add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+			}
+			add_opinion_modifier = {
+				target = GRM
+				modifier = large_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = GRM
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = GRM
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GRM
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = GRM
+				value = 100
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_rebuilding_assistance_germany
+		icon = GFX_goal_generic_production
+		x = -3
+		y = 2
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_german_detente }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_timed_idea = { days = 365 idea = RSP_germany_helping_rebuild_idea } 
+		}
+	}
+	
+	focus = {
+		id = RSP_joint_officer_training
+		icon = GFX_focus_generic_military_mission
+		x = -3
+		y = 3
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_rebuilding_assistance_germany }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			GRM = {
+				add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_berlin_moscow_alliance
+		icon = GFX_goal_generic_alliance
+		x = -3
+		y = 4
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_joint_officer_training }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 8
+		}
+
+		available = {
+			OR = {
+				AND = {
+					is_faction_leader = yes
+					GRM = { is_in_faction = no }
+				}
+				AND = {
+					is_in_faction = no
+					GRM = { is_faction_leader = yes }
+					}
+			}
+			NOT = { has_war_with = GRM }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { is_faction_leader = yes } GRM = { country_event = { id = generic.5 days = 1 } } }
+			if = { limit = { is_in_faction = no } GRM = { country_event = { id = generic.2 days = 1 } } }
+		}
+	}
+	
+	focus = {
+		id = RSP_paris_diplomacy
+		icon = GFX_goal_french_shield
+		x = -1
+		y = 1
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_outlook_of_russia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			FRA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_increase
+				}
+				add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+			}
+			add_opinion_modifier = {
+				target = FRA
+				modifier = large_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = FRA
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = FRA
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = FRA
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = FRA
+				value = 100
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_restore_the_entente
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = -1
+		y = 2
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_paris_diplomacy }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				AND = {
+					is_faction_leader = yes
+					FRA = { is_in_faction = no }
+				}
+				AND = {
+					is_in_faction = no
+					FRA = { is_faction_leader = yes }
+					}
+			}
+			NOT = { has_war_with = FRA }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { is_faction_leader = yes } FRA = { country_event = { id = generic.5 days = 1 } } }
+			if = { limit = { is_in_faction = no } FRA = { country_event = { id = generic.2 days = 1 } } }
+		}
+	}
+	
+	focus = {
+		id = RSP_friendship_with_britain
+		icon = GFX_goal_british_shield
+		x = 1
+		y = 1
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_outlook_of_russia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			ENG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_increase
+				}
+				add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = large_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = ENG
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = ENG
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = ENG
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = ENG
+				value = 100
+			}
+		}
+	}
+	
+	focus = {
+		id = RSP_anglo_russian_alliance
+		icon = GFX_goal_tripartite_pact
+		x = 1
+		y = 2
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_friendship_with_britain }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				AND = {
+					is_faction_leader = yes
+					ENG = { is_in_faction = no }
+				}
+				AND = {
+					is_in_faction = no
+					ENG = { is_faction_leader = yes }
+					}
+			}
+			NOT = { has_war_with = ENG }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { is_faction_leader = yes } ENG = { country_event = { id = generic.5 days = 1 } } }
+			if = { limit = { is_in_faction = no } ENG = { country_event = { id = generic.2 days = 1 } } }
+		}
+	}
+	
+	focus = {
+		id = RSP_goals_in_asia
+		icon = GFX_focus_chi_one_china_policy
+		x = 5
+		y = 1
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_outlook_of_russia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			always = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#event
+		}
+	}
+	
+	focus = {
+		id = RSP_bring_mongolia_into_fold
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 2
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_goals_in_asia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#event
+		}
+	}
+	
+	focus = {
+		id = RSP_invest_in_chinese_partner
+		icon = GFX_goal_generic_consumer_goods
+		x = 5
+		y = 2
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_goals_in_asia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#factories
+		}
+	}
+	
+	focus = {
+		id = RSP_support_korea
+		icon = GFX_goal_korean_shield
+		x = 7
+		y = 2
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_goals_in_asia }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#event
+		}
+	}
+	
+	focus = {
+		id = RSP_build_up_korean_army
+		icon = GFX_goal_generic_army_artillery2
+		x = 7
+		y = 3
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_support_korea }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#event
+		}
+	}
+	
+	focus = {
+		id = RSP_isolate_japan
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 7
+		y = 4
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_build_up_korean_army }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = 100
+					}
+			}
+			add_opinion_modifier = {
+				target = JAP
+				modifier = large_decrease
+			}
+			add_ai_strategy = {
+					type = antagonize
+					id = JAP
+					value = 100
+				}
+		}
+	}
+	
+	focus = {
+		id = RSP_pacific_war
+		icon = GFX_goal_generic_occupy_start_war
+		x = 7
+		y = 5
+		relative_position_id = RSP_outlook_of_russia
+		prerequisite = { focus = RSP_isolate_japan }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			JAP = {
+				exists = yes
+				is_subject = no
+				NOT = { has_war_with = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = JAP
+				type = puppet_wargoal_focus
+			}
+			add_named_threat = { threat = 5 name = RSP_pacific_war }
+		}
+	}
+	
+}

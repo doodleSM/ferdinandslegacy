@@ -3,6 +3,16 @@ leader_traits = {
 	paramilitarist = {
 		send_volunteers_tension = -0.10
 	}
+	
+	trait_bohemian = {
+		stability_factor = -0.05
+		trade_opinion_factor = 0.10
+	}
+	
+	trait_princess_alexandrovna = {
+		stability_factor = 0.1
+		political_advisor_cost_factor = -0.25
+	}
 
 	#radical_populist ={
 	#
