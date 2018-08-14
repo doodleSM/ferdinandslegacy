@@ -81,7 +81,7 @@ country_event = {
 
 
 #################
-Polish Conference
+## Polish Conference
 ##################
 
 #Diplomats sent to warsaw
