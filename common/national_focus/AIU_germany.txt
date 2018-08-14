@@ -11,11 +11,11 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 3000 }
 
-	# Colonial Policy Branch, allows Player to either Prioritise African or Asian Colonies
+	
 
 	focus = {
-		id = GRM_appoint_colonial_governors
-		icon = GFX_goal_anschluss
+		id = GRM_the_tsar_defiant
+		icon = GFX_goal_unknown
 		x = 4
 		y = 0
 
@@ -26,11 +26,11 @@ focus_tree = {
 		}
 
 		available = {
-			
+			always = no
 		}
 
 		completion_reward = {
-        	add_political_power = 50
+        	
     	}
 	}
 	focus = {
