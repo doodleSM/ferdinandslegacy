@@ -72,3 +72,30 @@ ger_rcw_pol.16.a:0 "He shall be a fine Polish Monarch"
 ger_rcw_pol.17.t:0 "Freidrich Christian Arrives"
 ger_rcw_pol.17.d:0 ""
 ger_rcw_pol.17.a:0 "Long live the King"
+
+##########
+
+ger_rcw_ukr.0.t:0 "Diplomats sent to Ukraine."
+ger_rcw_ukr.0.d:0 ""
+ger_rcw_ukr.0.a:0 ""
+ger_rcw_ukr.1.t:0 "German diplomts approach us."
+ger_rcw_ukr.1.d:0 "" 
+ger_rcw_ukr.1.a:0 ""
+ger_rcw_ukr.2.t:0 "The State of Ukraine."
+ger_rcw_ukr.2.d:0 ""
+ger_rcw_ukr.2.a:0 "Why not join us?"
+ger_rcw_ukr.3.t:0 "Germans offer protection."
+ger_rcw_ukr.3.d:0 ""
+ger_rcw_ukr.3.a:0 "Working under them could ensure our survival."
+ger_rcw_ukr.3.b:0 "No we can fend for ourselves."
+ger_rcw_ukr.4.t:0 "Ukraine accepts proposal"
+ger_rcw_ukr.4.d:0 ""
+ger_rcw_ukr.4.a:0 "Welcome to the German Empire"
+ger_rcw_ukr.5.t:0 "Republic or Monarchy"
+ger_rcw_ukr.5.d:0 ""
+ger_rcw_ukr.5.a:0 "Lets stick to the Republic"
+ger_rcw_ukr.5.b:0 "Go with a monarch"
+
+
+
+

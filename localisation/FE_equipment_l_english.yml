@@ -5,16 +5,28 @@ infantry_equipment:0 "Infantry Equipment"
 
  infantry_equipment_1926:0 "1926 Infantry Equipment"
  infantry_equipment_1926_short:0 "Interwar Eq."
- infantry_equipment_1926_desc:0 ""
+ infantry_equipment_1926_desc:0 "PLACEHOLDER"
 
  infantry_equipment_1932:0 "1932 "Infantry Equipment"
  infantry_equipment_1932_short:0 "Interwar Eq 2."
- infantry_equipment_1932_desc:0 ""
+ infantry_equipment_1932_desc:0 "PLACEHOLDER"
 
  infantry_weapons_1926:0 "Doodle Repellent"
  infantry_weapons_1926_short:0 "To stop doodles"
- infantry_weapons_1926_desc:0 "REEEEEEEEEEEE"
+ infantry_weapons_1926_desc:0 "PLACEHOLDER"
 
  infantry_weapons_1932:0 "Doodle Repellent 2"
  infantry_weapons_1932_short:0 "To stop doodles"
- infantry_weapons_1932_desc:0 "REEEEEEEEEEEE 2"
+ infantry_weapons_1932_desc:0 "PLACEHOLDER"
+
+ 1928_basic_light_tank:0 "1928 Light Tanks"
+ 1928_basic_light_tank_short:0 "Basic Light Tank I"
+ 1928_basic_light_tank_desc:0 "PLACEHOLDER"
+
+ light_tank_equipment_1928:0 "1928 Light Tanks"
+ light_tank_equipment_1928_short:0 "Basic Light Tanks I"
+ light_tank_equipment_1928_desc:0 "PLACEHOLDER"
+
+ light_tank_artillery_equipment_1928:0 "1928 SPA"
+ light_tank_destroyer_equipment_1928:0 "1928 TD"
+ light_tank_aa_equipment_1928:0 "1928 AA"
