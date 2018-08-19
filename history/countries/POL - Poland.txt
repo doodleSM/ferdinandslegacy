@@ -65,10 +65,87 @@ set_politics = {
 
 create_country_leader = {
 	name = "Polish Sejm"
-	desc = "POLITICS_JOZEF_PILSUDZKI_DESC"
+	desc = "POLITICS_SEJM_DESC"
 	picture = "Portrait_Poland_Sejm_Building.dds"
 	expire = "1965.1.1"
 	ideology = oligarchism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Aleksander Świętochowski"
+	desc = "POLITICS_ALEKSANDER_SWIETOCHOWSKI_DESC"
+	picture = "Portrait_Poland_Sejm_Building.dds"
+	expire = "1965.1.1"
+	ideology = market_lib_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Roman Dmowski"
+	desc = "POLITICS_ROMAN_DMOWSKI_DESC"
+	picture = "Portrait_Poland_Sejm_Building.dds"
+	expire = "1965.1.1"
+	ideology = radical_populist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Wincenty Witos"
+	desc = "POLITICS_WINCENTY_WITOS_DESC"
+	picture = "Portrait_Poland_Sejm_Building.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Róża Luksemburg"
+	desc = "POLITICS_ROZA_LUKSEMBURG_DESC"
+	picture = "Portrait_Poland_Sejm_Building.dds"
+	expire = "1965.1.1"
+	ideology = communism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ignacy Daszyński"
+	desc = "POLITICS_IGNACY_DASZYNSKI_DESC"
+	picture = "Portrait_Poland_Sejm_Building.dds"
+	expire = "1965.1.1"
+	ideology = radical_socialism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kazimierz Bartel"
+	desc = "POLITICS_KAZIMIERZ_BARTEL_DESC"
+	picture = "Portrait_Poland_Sejm_Building.dds"
+	expire = "1965.1.1"
+	ideology = social_liberalism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Józef Chaciński"
+	desc = "POLITICS_JOZEF_CHACINSKI_DESC"
+	picture = "Portrait_Poland_Sejm_Building.dds"
+	expire = "1965.1.1"
+	ideology = democratic_ideology
 	traits = {
 		#
 	}
