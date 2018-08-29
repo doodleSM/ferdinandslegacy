@@ -11,6 +11,76 @@ country = {
 		}
 	}
 	
+	POL_governor_normal = {
+
+		picture = GFX_idea_POL_russian_rule	
+	
+		modifier = {
+		       stability_factor = 0.01
+		       neutrality_drift = 0.01
+		}
+	}
+	
+	POL_governor_weak = {
+
+		picture = GFX_idea_POL_russian_rule	
+	
+		modifier = {
+			stability_factor = -0.05
+		}
+	}
+	
+	POL_governor_strong = {
+
+		picture = GFX_idea_POL_russian_rule	
+	
+		modifier = {
+			stability_factor = 0.05
+			neutrality_drift = 0.03
+		}
+	}
+	
+	POL_constitution_russian = {
+
+		picture = GFX_idea_POL_russian_rule	
+	
+		modifier = {
+			political_power_factor = -0.05
+			stability_factor = -0.01
+			neutrality_drift = 0.01
+		}
+	}
+	
+	POL_constitution_russian_polish = {
+
+		picture = GFX_idea_POL_russian_rule	
+	
+		modifier = {
+			political_power_factor = -0.03
+			neutrality_drift = 0.01
+			market_lib_drift = 0.01
+		}
+	}
+	
+	POL_constitution_polish = {
+
+		picture = GFX_idea_POL_russian_rule	
+	
+		modifier = {
+			political_power_factor = 0.01
+			democratic_drift = 0.01
+		}
+	}
+	
+	POL_constitution_broken = {
+
+		picture = GFX_idea_POL_russian_rule	
+	
+		modifier = {
+			political_power_factor = 0.02
+		}
+	}
+	
 }
 
 
