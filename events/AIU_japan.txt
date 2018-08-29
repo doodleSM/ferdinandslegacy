@@ -707,7 +707,7 @@ country_event = {
 	picture = GFX_report_event_election_vote
 
 	trigger = {
-		date > 1938.2.19 #1932.2.19
+		date > 1932.2.19
 		tag = JAP
 	}
 	
