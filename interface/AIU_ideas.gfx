@@ -92,6 +92,37 @@ spriteTypes = {
 		name = "GFX_idea_POL_russian_rule"
 		texturefile = "gfx/interface/ideas/idea_russian_rule.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_POL_governor"
+		texturefile = "gfx/interface/ideas/POL_governor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_polish_constitution"
+		texturefile = "gfx/interface/ideas/POL_polish_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_russian_constitution"
+		texturefile = "gfx/interface/ideas/POL_russian_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_russian_constitution"
+		texturefile = "gfx/interface/ideas/POL_russian_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_russian_constitution_broken"
+		texturefile = "gfx/interface/ideas/POL_russian_constitution_broken.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_russian_polish_constitution"
+		texturefile = "gfx/interface/ideas/POL_russian_polish_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_strong_governor"
+		texturefile = "gfx/interface/ideas/POL_strong_governor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_weak_governor"
+		texturefile = "gfx/interface/ideas/POL_weak_governor.dds"
+	}
 
-	
 }
