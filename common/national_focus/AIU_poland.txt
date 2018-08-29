@@ -15,6 +15,10 @@ focus_tree = {
 		cost = 10,00
 		x = 48
 		y = 0
+		available = {
+			has_country_flag = POL_G_HELP_REPUBLIC
+			has_country_flag = POL_SEJM_END
+		}
 
 	}
 	focus = {
@@ -23,6 +27,10 @@ focus_tree = {
 		cost = 10,00
 		x = 50
 		y = 0
+		available = {
+			has_country_flag = POL_W_Y_HELP_TSAR
+			has_country_flag = POL_SEJM_END
+		}
 
 	}
 	focus = {
@@ -31,6 +39,10 @@ focus_tree = {
 		cost = 10,00
 		x = 52
 		y = 0
+		available = {
+			has_country_flag = POL_COMMIE_COUP
+			has_country_flag = POL_NOTHING_WIN
+		}
 
 	}
 	focus = {
@@ -39,6 +51,18 @@ focus_tree = {
 		cost = 10,00
 		x = 44
 		y = 0
+		available = {
+		    OR = {
+		         AND = {
+			     has_country_flag = POL_B_NONE
+			     has_country_flag = POL_SEJM_END
+			 }
+			 AND = {
+			     has_country_flag = POL_PILSUDZKI_COUP
+			     has_country_flag = POL_NOTHING_WIN
+			 }
+	            }
+		}
 
 	}
 	focus = {
@@ -50,8 +74,9 @@ focus_tree = {
 		available = {
 			always = no
 		}
-		bypass = { has_country_flag = POL_GREEN_WIN 
-		           has_country_flag = POL_SEJM_END
+		bypass = { 
+		    has_country_flag = POL_GREEN_WIN 
+		    has_country_flag = POL_SEJM_END
 		}
 
 	}
@@ -64,8 +89,9 @@ focus_tree = {
 		available = {
 			always = no
 		}
-		bypass = { has_country_flag = POL_YELLOW_WIN 
-		           has_country_flag = POL_SEJM_END
+		bypass = { 
+		    has_country_flag = POL_YELLOW_WIN 
+		    has_country_flag = POL_SEJM_END
 		}
 
 	}
@@ -78,8 +104,9 @@ focus_tree = {
 		available = {
 			always = no
 		}
-		bypass = { has_country_flag = POL_WHITE_WIN 
-		           has_country_flag = POL_SEJM_END
+		bypass = { 
+		    has_country_flag = POL_WHITE_WIN 
+		    has_country_flag = POL_SEJM_END
 		}
 
 	}
@@ -92,8 +119,9 @@ focus_tree = {
 		available = {
 			always = no
 		}
-		bypass = { has_country_flag = POL_BLUE_WIN 
-		           has_country_flag = POL_SEJM_END
+		bypass = { 
+		    has_country_flag = POL_BLUE_WIN 
+		    has_country_flag = POL_SEJM_END
 		}
 
 	}
@@ -106,9 +134,10 @@ focus_tree = {
 		available = {
 			always = no
 		}
-		bypass = { has_country_flag = POL_G_REPUBLIC
-		           has_country_flag = POL_B_G_DETHRONE
-			   has_country_flag = POL_SEJM_END
+		bypass = { 
+		    has_country_flag = POL_G_REPUBLIC
+		    has_country_flag = POL_B_G_DETHRONE
+	            has_country_flag = POL_SEJM_END
 		}
 
 	}
@@ -118,6 +147,19 @@ focus_tree = {
 		cost = 10,00
 		x = 7
 		y = 7
+		available = {
+			always = no
+		}
+		bypass = {
+		    has_country_flag = POL_SEJM_END
+		    OR = {
+		       has_country_flag = POL_Y_TSAR_SAYS
+		       has_country_flag = POL_W_ABSOLUTISM
+		    }
+		    NOT = {
+		       has_country_flag = POL_G_REPUBLIC
+		    }
+		}
 
 	}
 	focus = {
@@ -126,6 +168,16 @@ focus_tree = {
 		cost = 10,00
 		x = 16
 		y = 7
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_B_G_DETHRONE
+		    has_country_flag = POL_SEJM_END
+		    NOT = {
+		       has_country_flag = POL_G_REPUBLIC
+		    }
+		}
 
 	}
 	focus = {
@@ -134,6 +186,13 @@ focus_tree = {
 		cost = 10,00
 		x = 34
 		y = 0
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_PILSUDZKI_COUP
+		    has_country_flag = POL_NOTHING_WIN
+		}
 
 	}
 	focus = {
@@ -142,6 +201,13 @@ focus_tree = {
 		cost = 10,00
 		x = 38
 		y = 0
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_COMMIE_COUP
+		    has_country_flag = POL_NOTHING_WIN
+		}
 
 	}
 	focus = {
