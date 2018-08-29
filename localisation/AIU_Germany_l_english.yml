@@ -23,7 +23,7 @@
 
  #Parties
  GRM_anarchism_party:0 "FAUD"
- GRM_anarchism_party_long:0:0 "Freie Arbeiter Union Deutschlands"
+ GRM_anarchism_party_long:0 "Freie Arbeiter Union Deutschlands"
  GRM_communism_party:0 "KPD"
  GRM_communism_party_long:0:0 "Kommunistische Partei Deutschlands"
  GRM_radical_socialism_party:0 "USPD"

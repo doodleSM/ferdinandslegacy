@@ -58,23 +58,23 @@ add_ai_strategy = {
 add_opinion_modifier = { target = RSP modifier = hostile_status }
 
 add_ideas = RUS_unpopular_tsar
-add_ideas = RUS_cossack_elites
-add_ideas = RUS_church_power_idea
+add_ideas = RUS_unruly_okhrana
+add_ideas = RUS_bad_conscription
 add_ideas = RUS_russian_civil_war_idea
 add_ideas = limited_conscription
 
 set_politics = {
 
 	parties = {
-		anarchism = { popularity = 9 } 
-		communism = { popularity = 9 }
-		radical_socialism = { popularity = 13}
-		social_democracy = { popularity = 10}
-		social_liberalism = { popularity = 16}
-		market_lib = { popularity = 11}
-		democratic = { popularity = 10}
-		neutrality = { popularity = 22}
-		
+		anarchism = { popularity = 0 } 
+		communism = { popularity = 0 }
+		radical_socialism = { popularity = 0}
+		social_democracy = { popularity = 0}
+		social_liberalism = { popularity = 0}
+		market_lib = { popularity = 0}
+		democratic = { popularity = 4.5}
+		neutrality = { popularity = 76.5}
+		auth_dem = { popularity = 19}
 		
 	}
 	
@@ -113,7 +113,7 @@ create_country_leader = {
     expire = "1953.3.1"
     ideology = despotism
     traits = {
-		dictator
+		
         
     }
 }

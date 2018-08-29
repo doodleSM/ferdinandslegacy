@@ -219,5 +219,173 @@ spriteTypes = {
 		name = "GFX_goal_ottoman_crosshairs"
 		texturefile = "gfx/interface/goals/goal_ottoman_crosshairs.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_rus_ban_okhrana"
+		texturefile = "gfx/interface/goals/goal_rus_ban_okhrana.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_crown_jewels"
+		texturefile = "gfx/interface/goals/goal_rus_crown_jewels.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_okhrana"
+		texturefile = "gfx/interface/goals/goal_rus_okhrana.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_orthodox_education"
+		texturefile = "gfx/interface/goals/goal_rus_orthodox_education.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_orthodox_support"
+		texturefile = "gfx/interface/goals/goal_rus_orthodox_support.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_orthodox_work_ethic"
+		texturefile = "gfx/interface/goals/goal_rus_orthodox_work_ethic.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_tsars_men"
+		texturefile = "gfx/interface/goals/goal_rus_tsars_men.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_tsar_boris"
+		texturefile = "gfx/interface/goals/RUS_tsar_boris.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_tsar_defiant"
+		texturefile = "gfx/interface/goals/RUS_tsar_defiant.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_tsar_dmitri"
+		texturefile = "gfx/interface/goals/RUS_tsar_dmitri.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_tsar_kiril"
+		texturefile = "gfx/interface/goals/RUS_tsar_kiril.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_tsar_mihail"
+		texturefile = "gfx/interface/goals/RUS_tsar_mihail.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_young_tsar"
+		texturefile = "gfx/interface/goals/RUS_young_tsar.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_execute_strikers"
+		texturefile = "gfx/interface/goals/goal_execute_strikers.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_camps"
+		texturefile = "gfx/interface/goals/goal_rus_camps.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_grant_amnesties"
+		texturefile = "gfx/interface/goals/goal_rus_grant_amnesties.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_honour_veterans"
+		texturefile = "gfx/interface/goals/goal_rus_honour_veterans.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_martial_law"
+		texturefile = "gfx/interface/goals/goal_rus_martial_law.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_renovato_imperii"
+		texturefile = "gfx/interface/goals/goal_rus_renovato_imperii.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_wrangel_denikin"
+		texturefile = "gfx/interface/goals/goal_rus_wrangel_denikin.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_wrangel_denikin"
+		texturefile = "gfx/interface/goals/goal_rus_wrangel_denikin.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_propaganda"
+		texturefile = "gfx/interface/goals/goal_rus_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_secret_service"
+		texturefile = "gfx/interface/goals/goal_rus_secret_service.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_arrest_dissidents"
+		texturefile = "gfx/interface/goals/goal_rus_arrest_dissidents.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_reconcile_military"
+		texturefile = "gfx/interface/goals/goal_rus_reconcile_military.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_ridicule_ottomans"
+		texturefile = "gfx/interface/goals/goal_rus_ridicule_ottomans.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_strike_germany"
+		texturefile = "gfx/interface/goals/goal_rus_strike_germany.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_red_purge"
+		texturefile = "gfx/interface/goals/goal_rus_red_purge.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_forceful_conscription"
+		texturefile = "gfx/interface/goals/goal_forceful_conscription.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_destroy_communism"
+		texturefile = "gfx/interface/goals/goal_destroy_communism.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_scandinavian_relations"
+		texturefile = "gfx/interface/goals/goal_scandinavian_relations.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_danish_navy"
+		texturefile = "gfx/interface/goals/goal_danish_navy.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_navy_funding"
+		texturefile = "gfx/interface/goals/goal_navy_funding.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_single_currency"
+		texturefile = "gfx/interface/goals/goal_rus_single_currency.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_industry"
+		texturefile = "gfx/interface/goals/goal_rus_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_economic_pact"
+		texturefile = "gfx/interface/goals/goal_rus_economic_pact.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_economic_dependency"
+		texturefile = "gfx/interface/goals/goal_rus_economic_dependency.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_open_borders"
+		texturefile = "gfx/interface/goals/goal_open_borders.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_triple_entente"
+		texturefile = "gfx/interface/goals/goal_triple_entente.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_tsarist_military"
+		texturefile = "gfx/interface/goals/goal_tsarist_military.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_tsarist_navy"
+		texturefile = "gfx/interface/goals/goal_tsarist_navy.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_tsarist_airforce"
+		texturefile = "gfx/interface/goals/goal_tsarist_airforce.dds"
+	}
 	
 }

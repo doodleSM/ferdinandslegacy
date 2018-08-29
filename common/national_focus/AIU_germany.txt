@@ -13,26 +13,7 @@ focus_tree = {
 
 	
 
-	focus = {
-		id = GRM_the_tsar_defiant
-		icon = GFX_goal_unknown
-		x = 4
-		y = 0
-
-		cost = 10
-
-		ai_wilL_do = {
-			factor = 1
-		}
-
-		available = {
-			always = no
-		}
-
-		completion_reward = {
-        	
-    	}
-	}
+	
 	focus = {
 		id = GRM_establish_colonial_policy
 		icon = GFX_goal_generic_colonial_unity
@@ -40,7 +21,7 @@ focus_tree = {
 		y = 1
 
 		cost = 10
-		prerequisite = { focus = GRM_appoint_colonial_governors}
+		prerequisite = { }
 		ai_wilL_do = {
 			factor = 1
 		}

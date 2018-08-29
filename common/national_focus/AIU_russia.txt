@@ -9,36 +9,37 @@ focus_tree = {
 		}
 	}
 	continuous_focus_position = { x = 50 y = 3000 }
+	####Coup Fails###
 	focus = {
 		id = RUS_the_tsar_defiant
-		icon = GFX_goal_unknown
+		icon = GFX_RUS_tsar_defiant
 		x = 4
 		y = 0
 
-		cost = 10
+		cost = 1
 
 		ai_wilL_do = {
 			factor = 1
 		}
 
 		available = {
-			always = no
+			has_country_flag = RUS_tsar_defiant
 		}
 
 		completion_reward = {
-        	
+        	add_political_power = 25
     	}
 	}
 	focus = {
 		id = RUS_enforce_orthodoxy
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_orthodox_support
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 2
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_the_tsar_defiant}
 		available = {
@@ -46,19 +47,22 @@ focus_tree = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_unpopular_tsar
+				add_idea = RUS_unpopular_tsar2
+			}
     	}
 	}
 	focus = {
 		id = RUS_crackdown_on_leftist_parties
-		icon = GFX_goal_unknown
+		icon = GFX_goal_stamp_communism
 		x = 0
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_enforce_orthodoxy}
 		available = {
@@ -66,19 +70,19 @@ focus_tree = {
 		}
 
 		completion_reward = {
-        	
+        	add_stability = 0.05
     	}
 	}
 	focus = {
 		id = RUS_purge_ringleaders
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_red_purge
 		x = 0
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = {focus = RUS_crackdown_on_leftist_parties}
 		available = {
@@ -86,39 +90,41 @@ focus_tree = {
 		}
 
 		completion_reward = {
-        	
+        	add_timed_idea = { idea = RUS_communists_purged days = 180 }
+        	add_war_support = -0.05
     	}
 	}
 	focus = {
 		id = RUS_conduct_masses_for_the_motherland
-		icon = GFX_goal_unknown
+		icon = GFX_goal_landwehr
 		x = 2
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_enforce_orthodoxy}
 		available = {
-			
+
 		}
 
 		completion_reward = {
-        	
+        	add_stability = 0.05
+			add_war_support = 0.1
     	}
 	}
 focus = {
 		id = RUS_orthodox_education
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_orthodox_education
 		x = 2
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_conduct_masses_for_the_motherland}
 		available = {
@@ -126,19 +132,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_orthodox_education
     	}
 	}
 	focus = {
 		id = RUS_orthodox_work_ethic
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_orthodox_work_ethic
 		x = 1
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_purge_ringleaders }
 		prerequisite = {focus = RUS_orthodox_education }
@@ -147,19 +153,20 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = { remove_idea = RUS_orthodox_education
+        				   add_idea = RUS_orthodox_education2}
     	}
 	}
 	focus = {
 		id = RUS_god_king_tsar
-		icon = GFX_goal_unknown
+		icon = GFX_goal_russian_empire_shield
 		x = 3
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_expand_okhrana }
 		prerequisite = {focus = RUS_orthodox_education }
@@ -168,19 +175,20 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_war_support = 0.15
+        	add_stability = 0.05
     	}
 	}
 	focus = {
 		id = RUS_purge_disloyal_elements
-		icon = GFX_goal_unknown
+		icon = GFX_goal_don_military_purge
 		x = 4
 		y = 1
 
-		cost = 10
+		cost = 2
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 320
 		}
 		prerequisite = {focus = RUS_the_tsar_defiant}
 		available = {
@@ -188,19 +196,20 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = { remove_idea = RUS_bad_conscription
+        				   add_idea = RUS_bad_conscription2}
     	}
 	}
 	focus = {
 		id = RUS_reward_loyalists
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_military_mission
 		x = 4
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_purge_disloyal_elements}
 		available = {
@@ -208,19 +217,21 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = { remove_idea = RUS_bad_conscription2
+        				   add_idea = RUS_bad_conscription3
+    	}
     	}
 	}
 	focus = {
 		id = RUS_expand_okhrana
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_okhrana
 		x = 4
 		y = 3
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_reward_loyalists}
 		available = {
@@ -228,19 +239,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_political_power = -50
+        	swap_ideas = { remove_idea = RUS_unruly_okhrana
+        				   add_idea = RUS_unruly_okhrana2
+    	}
     	}
 	}
 	focus = {
 		id = RUS_absolute_power
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_political_pressure
 		x = 6
 		y = 1
 
-		cost = 10
+		cost = 2
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_the_tsar_defiant}
 		available = {
@@ -248,19 +262,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_political_power = 75
     	}
 	}
 	focus = {
 		id = RUS_arrest_dissidents
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_strike_at_democracy1
 		x = 8
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_absolute_power}
 		available = {
@@ -268,19 +282,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_stability = 0.05
     	}
 	}
 	focus = {
 		id = RUS_the_tsars_men
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_tsars_men
 		x = 8
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_arrest_dissidents}
 		available = {
@@ -288,39 +302,41 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_tsars_men
     	}
 	}
 	focus = {
 		id = RUS_dissolve_the_duma_for_good
-		icon = GFX_goal_unknown
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		x = 6
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_absolute_power}
 		available = {
-			
+			has_idea = RUS_unpopular_tsar2
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = { remove_idea = RUS_unpopular_tsar2
+        				   add_idea = RUS_unpopular_tsar3
+    	}
     	}
 	}
 	focus = {
 		id = RUS_elections_suspended
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_forceful_treaty
 		x = 6
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = {focus = RUS_dissolve_the_duma_for_good}
 		available = {
@@ -328,19 +344,29 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+		
+        	add_popularity = {
+				ideology = auth_dem
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+    	
     	}
+
 	}
 	focus = {
 		id = RUS_police_state
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_martial_law
 		x = 5
 		y = 4
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_elections_suspended}
 		prerequisite = {focus = RUS_expand_okhrana}
@@ -349,19 +375,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_police_state
     	}
 	}
 	focus = {
 		id = RUS_form_volounteer_brigades
-		icon = GFX_goal_unknown
+		icon = GFX_focus_secret_rearmament
 		x = 7
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 320
 		}
 		prerequisite = {focus = RUS_elections_suspended}
 		prerequisite = {focus = RUS_the_tsars_men}
@@ -370,19 +396,21 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = { remove_idea = RUS_tsars_men
+        				   add_idea = RUS_tsars_men2
+    	}
     	}
 	}
 	focus = {
 		id = RUS_crush_the_enemies_of_the_state
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_renovato_imperii
 		x = 4
 		y = 5
 
-		cost = 10
+		cost = 8
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_form_volounteer_brigades}
 		prerequisite = {focus = RUS_police_state}
@@ -393,39 +421,43 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = { remove_idea = RUS_russian_civil_war_idea
+        				   add_idea = RUS_russian_civil_war_idea2
+    	}
     	}
 	}
+	#####New Tsar###
 	focus = {
 		id = RUS_the_young_tsar
-		icon = GFX_goal_unknown
+		icon = GFX_RUS_young_tsar
 		x = 15
 		y = 0
 
-		cost = 10
+		cost = 1
 
 		ai_wilL_do = {
 			factor = 1
 		}
 
 		available = {
-			always = no
+			has_country_flag = RUS_young_tsar
+			has_country_flag = RUS_nikolai_dead
 		}
 
 		completion_reward = {
-        	
+        	add_political_power = 25
     	}
 	}
 	focus = {
 		id = RUS_religious_freedoms
-		icon = GFX_goal_unknown
+		icon = GFX_goal_religious_tolerance
 		x = 13
 		y = 1
 
-		cost = 10
+		cost = 2
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_the_young_tsar}
 		available = {
@@ -433,19 +465,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_stability = 0.1
     	}
 	}
 	focus = {
 		id = RUS_reconcile_with_catholic_church
-		icon = GFX_goal_unknown
+		icon = GFX_goal_molotov_ribbentrop_pact
 		x = 11
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_religious_freedoms}
 		available = {
@@ -453,19 +485,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_unpopular_tsar
+				add_idea = RUS_unpopular_tsar_alexei1
+			}
     	}
 	}
 	focus = {
 		id = RUS_christian_welfare
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_treaty
 		x = 11
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_reconcile_with_catholic_church}
 		available = {
@@ -473,19 +508,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_national_welfare
     	}
 	}
 	focus = {
 		id = RUS_freedom_of_press
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_propaganda
 		x = 13
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_religious_freedoms}
 		available = {
@@ -493,19 +528,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_unruly_okhrana
+				add_idea = RUS_unruly_okhrana_alexei1
+			}
     	}
 	}
 focus = {
 		id = RUS_grant_personal_freedoms
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_grant_amnesties
 		x = 13
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_freedom_of_press}
 		available = {
@@ -513,19 +551,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_unruly_okhrana_alexei1
+				add_idea = RUS_unruly_okhrana_alexei2
+			}
     	}
 	}
 	focus = {
 		id = RUS_end_pogroms
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_camps
 		x = 12
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_grant_personal_freedoms }
 		prerequisite = {focus = RUS_christian_welfare }
@@ -534,19 +575,20 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_war_support = 0.05
+        	add_stability = 0.1
     	}
 	}
 	focus = {
 		id = RUS_promise_elections
-		icon = GFX_goal_unknown
+		icon = GFX_goal_support_democracy
 		x = 14
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_grant_personal_freedoms }
 		prerequisite = {focus = RUS_the_peoples_tsar }
@@ -555,19 +597,27 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_stability = 0.1
+        	add_war_support = 0.05
+        	add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+    	custom_effect_tooltip = RUS_promised_elections_tt
+    	set_country_flag = RUS_elections_promised
     	}
+
 	}
 	focus = {
 		id = RUS_liberalisation_of_rule
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_diplomatic_treaty
 		x = 15
 		y = 1
 
-		cost = 10
+		cost = 2
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_the_young_tsar}
 		available = {
@@ -575,19 +625,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_political_power = 50
     	}
 	}
 	focus = {
 		id = RUS_more_local_powers
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_national_unity
 		x = 15
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_liberalisation_of_rule}
 		available = {
@@ -595,19 +645,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_local_powers
     	}
 	}
 	focus = {
 		id = RUS_the_peoples_tsar
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_dove
 		x = 15
 		y = 3
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_more_local_powers}
 		available = {
@@ -615,19 +665,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_local_powers
+				add_idea = RUS_local_powers1
+			}
     	}
 	}
 	focus = {
 		id = RUS_reconcile_with_the_military
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_reconcile_military
 		x = 17
 		y = 1
 
-		cost = 10
+		cost = 2
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 40
 		}
 		prerequisite = {focus = RUS_the_young_tsar}
 		available = {
@@ -635,19 +688,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_war_support = 0.05
     	}
 	}
 	focus = {
 		id = RUS_recruitment_propaganda
-		icon = GFX_goal_unknown
+		icon = GFX_goal_expand_recruitment
 		x = 19
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_reconcile_with_the_military}
 		available = {
@@ -655,19 +708,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_war_propaganda
     	}
 	}
 	focus = {
 		id = RUS_the_home_front
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construction2
 		x = 19
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_recruitment_propaganda}
 		available = {
@@ -675,19 +728,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_war_propaganda
+				add_idea = RUS_war_propaganda1
+			}
     	}
 	}
 	focus = {
 		id = RUS_pardon_wrangel_and_denikin
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_wrangel_denikin
 		x = 17
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_reconcile_with_the_military}
 		available = {
@@ -695,19 +751,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_bad_conscription
+				add_idea = RUS_bad_conscription_alexei1
+			}
     	}
 	}
 	focus = {
 		id = RUS_military_parades
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_little_entente
 		x = 17
 		y = 3
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus =  RUS_pardon_wrangel_and_denikin}
 		available = {
@@ -715,40 +774,44 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_bad_conscription_alexei1
+				add_idea = RUS_bad_conscription_alexei2
+			}
     	}
 	}
 	focus = {
 		id = RUS_the_saviours_of_russia
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_tsars_men
 		x = 16
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 320
 		}
-		prerequisite = {focus = RUS_military_parade}
+		prerequisite = {focus = RUS_military_parades}
 		prerequisite = {focus = RUS_the_peoples_tsar}
 		available = {
 			
 		}
 
 		completion_reward = {
-        	
+        	add_political_power = 25
+        	add_war_support = 0.03
     	}
 	}
 	focus = {
 		id = RUS_together_for_victory
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_defence
 		x = 18
 		y = 4
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_the_home_front}
 		prerequisite = {focus = RUS_military_parades}
@@ -757,19 +820,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_war_propaganda1
+				add_idea = RUS_war_propaganda2
+			}
     	}
 	}
 	focus = {
 		id = RUS_fight_for_a_better_russia
-		icon = GFX_goal_unknown
+		icon = GFX_goal_russian_empire_propaganda
 		x = 15
 		y = 5
 
-		cost = 10
+		cost = 8
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_end_pogroms}
 		prerequisite = {focus = RUS_promise_elections}
@@ -779,40 +845,41 @@ focus = {
 			
 		}
 		completion_reward = {
-        	
+        	remove_ideas = RUS_russian_civil_war_idea
     	}
     	}
-
+    	#########Military Take over#####
     	focus = {
 		id = RUS_military_regency
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_wrangel_denikin
 		x = 26
 		y = 0
 
-		cost = 10
+		cost = 1
 
 		ai_wilL_do = {
 			factor = 1
 		}
 
 		available = {
-			always = no
+			has_country_flag = RUS_military_coup
+
 		}
 
 		completion_reward = {
-        	
+        	add_political_power = -25
     	}
 	}
 	focus = {
 		id = RUS_establish_military_rule
-		icon = GFX_goal_unknown
+		icon = GFX_goal_demand_sudetenland
 		x = 24
 		y = 1
 
-		cost = 10
+		cost = 2
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_military_regency}
 		available = {
@@ -820,19 +887,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_military_rule
     	}
 	}
 	focus = {
 		id = RUS_crack_down_on_rioters
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_martial_law
 		x = 22
 		y = 2
 
-		cost = 10
+		cost = 4
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_establish_military_rule}
 		available = {
@@ -840,19 +907,20 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_stability = -0.05
+        	add_ideas = RUS_rioters_subdued
     	}
 	}
 	focus = {
 		id = RUS_form_youth_paramilitaries
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_more_territorial_claims
 		x = 22
 		y = 3
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_crack_down_on_rioters}
 		available = {
@@ -860,19 +928,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_rioters_subdued
+				add_idea = RUS_rioters_subdued1
+			}
     	}
 	}
 	focus = {
 		id = RUS_dissolve_the_okhrana
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_ban_okhrana
 		x = 24
 		y = 2
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 320
 		}
 		prerequisite = {focus = RUS_establish_military_rule}
 		available = {
@@ -880,19 +951,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	remove_ideas = RUS_unruly_okhrana
     	}
 	}
 focus = {
 		id = RUS_send_in_military_police
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_arrest_dissidents
 		x = 24
 		y = 3
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 320
 		}
 		prerequisite = {focus = RUS_dissolve_the_okhrana}
 		available = {
@@ -900,19 +971,20 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_military_police
+        	army_experience = 10
     	}
 	}
 	focus = {
 		id = RUS_new_secret_service
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_secret_service
 		x = 23
 		y = 4
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_form_youth_paramilitaries }
 		prerequisite = {focus = RUS_send_in_military_police }
@@ -921,19 +993,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_secret_service
     	}
 	}
 	focus = {
 		id = RUS_black_baron
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_propaganda
 		x = 25
 		y = 4
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus = RUS_send_in_military_police }
 		prerequisite = {focus = RUS_fight_terror_with_terror }
@@ -942,18 +1014,18 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_war_support = 0.15
     	}
 	}
 	focus = {
 		id = RUS_revive_pogroms
-		icon = GFX_goal_unknown
+		icon = GFX_goal_execute_strikers
 		x = 26
 		y = 1
 
 		cost = 10
 
-		ai_wilL_do = {
+		ai_wilL_do = 320
 			factor = 1
 		}
 		prerequisite = {focus = RUS_military_regency}
@@ -962,19 +1034,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_pogroms
     	}
 	}
 	focus = {
 		id = RUS_increase_military_funding
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_position_armies
 		x = 26
 		y = 2
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 320
 		}
 		prerequisite = {focus = RUS_revive_pogroms}
 		available = {
@@ -982,19 +1054,23 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_bad_conscription
+				add_idea =  RUS_bad_conscription_mil1
+			}
     	}
 	}
 	focus = {
 		id = RUS_fight_terror_with_terror
-		icon = GFX_goal_unknown
+		icon = GFX_goal_scourge_of_the_steppes
+
 		x = 26
 		y = 3
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_increase_military_funding}
 		available = {
@@ -1002,19 +1078,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_terror_focus
     	}
 	}
 	focus = {
 		id = RUS_march_on_the_duma
-		icon = GFX_goal_unknown
+		icon = GFX_goal_don_military_purge
 		x = 28
 		y = 1
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 320
 		}
 		prerequisite = {focus = RUS_military_regency}
 		available = {
@@ -1022,19 +1098,20 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	country_event = rus.1
     	}
 	}
+	
 	focus = {
 		id = RUS_labor_camps_for_reds
-		icon = GFX_goal_unknown
+		icon = GFX_goal_stamp_communism
 		x = 30
 		y = 2
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 4000
 		}
 		prerequisite = {focus = RUS_march_on_the_duma}
 		available = {
@@ -1042,19 +1119,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_human_labor
     	}
 	}
 	focus = {
 		id = RUS_use_human_labor
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_camps
 		x = 30
 		y = 3
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 4000
 		}
 		prerequisite = {focus = RUS_labor_camps_for_reds}
 		available = {
@@ -1062,19 +1139,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_human_labor
+				add_idea =  RUS_human_labor1
+			}
     	}
 	}
 	focus = {
 		id = RUS_freedom_isnt_free
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_strike_at_democracy2
 		x = 28
 		y = 2
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_march_on_the_duma}
 		available = {
@@ -1082,19 +1162,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_democrats_subdued
     	}
 	}
 	focus = {
 		id = RUS_limit_local_power
-		icon = GFX_goal_unknown
+		icon = GFX_focus_CZE_german_puppet
 		x = 28
 		y = 3
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 80
 		}
 		prerequisite = {focus =  RUS_freedom_isnt_free}
 		available = {
@@ -1102,19 +1182,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_democrats_subdued
+				add_idea =  RUS_democrats_subdued1
+			}
     	}
 	}
 	focus = {
 		id = RUS_forceful_conscription
-		icon = GFX_goal_unknown
+		icon = GFX_goal_forceful_conscription
 		x = 27
 		y = 4
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 160
 		}
 		prerequisite = {focus = RUS_fight_terror_with_terror}
 		prerequisite = {focus = RUS_limit_local_power}
@@ -1123,19 +1206,20 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	if = { limit = { has_idea = limited_conscription } add_ideas = service_by_requirement }
+			else = { add_manpower = 100000 }
     	}
 	}
 	focus = {
 		id = RUS_reds_arent_people
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rus_red_purge
 		x = 29
 		y = 4
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 4000
 		}
 		prerequisite = {focus = RUS_limit_local_power}
 		prerequisite = {focus = RUS_use_human_labor}
@@ -1144,21 +1228,21 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_clear_red_scourge
     	}
 	}
 	focus = {
 		id = RUS_russia_must_be_drowned_in_red_blood
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ger_bulwark_against_bolshevism
 		x = 26
 		y = 5
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 1
+			factor = 4000
 		}
-		prerequisite = {focus = RUS_reds_arent_peopl}
+		prerequisite = {focus = RUS_reds_arent_people}
 		prerequisite = {focus = RUS_new_secret_service}
 		prerequisite = {focus = RUS_black_baron}
 		prerequisite = {focus = RUS_forceful_conscription}
@@ -1166,6 +1250,3785 @@ focus = {
 			
 		}
 		completion_reward = {
+        	remove_ideas = RUS_unpopular_tsar
+        	remove_ideas = RUS_russian_civil_war_idea
+        	remove_ideas = RUS_bad_conscription_mil1
+
+    	}
+
+    }
+    ###Elect a Tsar###
+    focus = {
+		id = RUS_tsar_elections
+		icon = GFX_goal_rus_crown_jewels
+		x = 36
+		y = 0
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+		prerequisite = {}
+		available = { has_country_flag = RUS_alexei_dead
+					  has_country_flag = RUS_ended_regency
+			
+		}
+
+		completion_reward = {
         	
     	}
+	}
+	
+	focus = {
+		id = RUS_boris_vladimirovich
+		icon = GFX_RUS_tsar_boris
+		x = 33
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+		prerequisite = {focus = RUS_tsar_elections}
+		available = { always = no 
+			
+		}
+
+		completion_reward = {
+        	
     	}
+	}
+	focus = {
+		id = RUS_anglophobic_state
+		icon = GFX_focus_AST_never_gallipoli
+		x = 33
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 40
+		}
+		prerequisite = {focus = RUS_boris_vladimirovich}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_denounce_british_rule
+		icon = GFX_focus_RAJ_clamp_down_on_corruption
+		x = 33
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 40
+		}
+		prerequisite = {focus = RUS_anglophobic_state}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_anti_british_ideals
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 33
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 40
+		}
+		prerequisite = {focus = RUS_denounce_british_rule}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_dmitri_pavlovich
+		icon = GFX_RUS_tsar_dmitri
+		x = 35
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+		prerequisite = { focus = RUS_tsar_elections}
+		available = { always = no
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_strengthen_the_church
+		icon = GFX_goal_orthodox_church
+		x = 35
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = { focus = RUS_dmitri_pavlovich}
+		available = { 
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_young_russia_group
+		icon = GFX_goal_rus_propaganda
+		x = 35
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = { focus = RUS_strengthen_the_church}
+		available = { 
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_right_wing_ideals
+		icon = GFX_focus_ger_reichskommisariats
+		x = 35
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = { focus = RUS_young_russia_group}
+		available = { 
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_kiril_vladimirovich
+		icon = GFX_RUS_tsar_kiril
+		x = 37
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+		prerequisite = {focus = RUS_tsar_elections}
+		available = { always = no
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_scandinavian_ties
+		icon = GFX_goal_scandinavian_relations
+		x = 37
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus =  RUS_kiril_vladimirovich}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_danish_naval_cooperations
+		icon = GFX_goal_danish_navy
+		x = 37
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus =  RUS_scandinavian_ties}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_increase_naval_budget
+		icon = GFX_goal_navy_funding
+		x = 37
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus =  RUS_danish_naval_cooperations}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_michael_alexandrovich
+		icon = GFX_RUS_tsar_mihail
+		x = 39
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+		prerequisite = {focus = RUS_tsar_elections}
+		available = { always = no
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_power_to_the_people
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 39
+		y = 2
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+		prerequisite = {focus = RUS_michael_alexandrovich}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_revive_the_duma
+		icon = GFX_goal_support_democracy
+		x = 39
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+		prerequisite = {focus = RUS_power_to_the_people}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_constitutional_monarch
+		icon = GFX_goal_landwehr
+		x = 39
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 1
+		}
+		prerequisite = {focus = RUS_revive_the_duma}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	####Political Branch####
+	focus = {
+		id = RUS_renovato_imperii
+		icon = GFX_goal_rus_renovato_imperii
+		x = 55
+		y = 0
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_baltic_control
+		icon = GFX_goal_baltic_states
+		x = 52
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_renovato_imperii}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_black_sea_control
+		icon = GFX_goal_ukrainian_shield
+		x = 54
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_renovato_imperii}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_caucasian_thrust
+		icon = GFX_goal_transcaucasia_united
+		x = 56
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_renovato_imperii}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_operation_central_asia
+		icon = GFX_goal_central_asia
+		x = 58
+		y = 1
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_renovato_imperii}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_peaceful_reintegration
+		icon = GFX_goal_generic_improve_relations
+		x = 56
+		y = 2
+
+		cost = 10
+		mutually_exclusive = {focus = RUS_salt_the_earth}
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_caucasian_thrust focus = RUS_operation_central_asia focus = RUS_black_sea_control focus = RUS_baltic_control}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_salt_the_earth
+		icon = GFX_goal_unknown
+		x = 54
+		y = 2
+
+		cost = 10
+		mutually_exclusive = {focus = RUS_peaceful_reintegration}
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_caucasian_thrust focus = RUS_operation_central_asia focus = RUS_black_sea_control focus = RUS_baltic_control}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_chase_former_glory
+		icon = GFX_goal_rus_propaganda
+		x = 55
+		y = 3
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_peaceful_reintegration focus = RUS_salt_the_earth}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_eastward_outlook
+		icon = GFX_focus_jap_spiritual_mobilization
+		x = 62
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_chase_former_glory}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_anti_japan_stance
+		icon = GFX_focus_AST_war_japan
+		x = 60
+		y = 5
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_eastward_outlook}
+		available = { 
+			
+		}
+		mutually_exclusive = {focus = RUS_mend_old_wounds}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_protect_korea
+		icon = GFX_goal_korean_shield
+		x = 60
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus =  RUS_anti_japan_stance}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_chinese_cooperation
+		icon = GFX_focus_chi_one_china_policy
+		x = 60
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_protect_korea}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_reintegrate_manchurian_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 60
+		y = 8
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_chinese_cooperation}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_beyinyang_alliance
+		icon = GFX_goal_beiyang_shield
+		x = 61
+		y = 9
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_reintegrate_manchurian_railway}
+		available = { 
+			
+		}
+		mutually_exclusive = {focus = RUS_anhui_friendship }
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_anhui_friendship
+		icon = GFX_goal_anhui_shield
+		x = 59
+		y = 9
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_reintegrate_manchurian_railway}
+		available = { 
+			
+		}
+		mutually_exclusive = {focus = RUS_beyinyang_alliance }
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_avenge_1905
+		icon = GFX_goal_tsushima_legacy
+		x = 60
+		y = 10
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_anhui_friendship focus = RUS_beyinyang_alliance}
+		available = { 
+			
+		}
+		
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_mend_old_wounds
+		icon = GFX_focus_jap_pacific_guardian
+		x = 64
+		y = 5
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_eastward_outlook}
+		available = { 
+		
+		}
+		mutually_exclusive = {focus = RUS_anti_japan_stance}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_joint_naval_excercise
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 64
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_mend_old_wounds}
+		available = { 
+			
+		}
+		
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_betray_korea
+		icon = GFX_goal_korean_peninsula
+		x = 64
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_joint_naval_excercise}
+		available = { 
+			
+		}
+		
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_split_beyinyang
+		icon = GFX_goal_generic_territory_or_war
+		x = 64
+		y = 8
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_betray_korea}
+		available = { 
+			
+		}
+		
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_sakhalin_for_port_alexander
+		icon = GFX_focus_generic_treaty
+		x = 64
+		y = 9
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_split_beyinyang}
+		available = { 
+			
+		}
+		
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_alaska_is_russian
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = 64
+		y = 10
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_sakhalin_for_port_alexander}
+		available = { 
+			
+		}
+		
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_russia_a_global_power
+		icon = GFX_goal_russia_united
+		x = 55
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_chase_former_glory}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_nordic_relations
+		icon = GFX_goal_scandinavian_relations
+		x = 53
+		y = 5
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_russia_a_global_power}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_sale_of_aland
+		icon = GFX_goal_finland_shield
+		x = 53
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_nordic_relations}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_joint_norwegian_polar_expeditions
+		icon = GFX_goal_generic_mountains
+		x = 53
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_sale_of_aland}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_stockholm_conference
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 53
+		y = 8
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_joint_norwegian_polar_expeditions}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_middle_eastern_ties
+		icon = GFX_goal_strike_fallen_empire
+		x = 57
+		y = 5
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_russia_a_global_power}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_iranian_investments
+		icon = GFX_goal_persia_shield
+		x = 58
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_middle_eastern_ties}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_ottoman_oil_deal
+		icon = GFX_goal_ottoman_shield
+		x = 58
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_iranian_investments}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_armenian_ties
+		icon = GFX_goal_armenia_shield
+		x = 56
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_middle_eastern_ties}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_arabian_oil_deal
+		icon = GFX_goal_generic_oil_refinery
+		x = 56
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_armenian_ties}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_first_teheran_congress
+		icon = GFX_focus_generic_treaty
+		x = 57
+		y = 8
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_arabian_oil_deal}
+		prerequisite = {focus =  RUS_ottoman_oil_deal}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_eurasian_economic_union
+		icon = GFX_goal_rus_economic_pact
+		x = 55
+		y = 9
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_first_teheran_congress}
+		prerequisite = {focus =  RUS_stockholm_conference}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_joint_industrial_development
+		icon = GFX_goal_rus_industry
+		x = 55
+		y = 10
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_eurasian_economic_union}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_mass_railway_works
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 56
+		y = 11
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_joint_industrial_development}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_open_border_policy
+		icon = GFX_goal_open_borders
+		x = 54
+		y = 11
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_joint_industrial_development}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_a_single_currency
+		icon = GFX_goal_rus_single_currency
+		x = 55
+		y = 12
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_open_border_policy}
+		prerequisite = {focus = RUS_mass_railway_works}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_westward_outlook
+		icon = GFX_goal_generic_position_armies
+		x = 48
+		y = 4
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_chase_former_glory}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_peaceful_politics
+		icon = GFX_goal_generic_neutrality_focus
+		x = 50
+		y = 5
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_westward_outlook}
+		
+		available = { 
+			
+		}
+		mutually_exclusive = { focus = RUS_peaceful_politics}
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_european_defence_league
+		icon = GFX_goal_russian_empire_shield
+		x = 50
+		y = 6
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus =RUS_peaceful_politics}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_romanian_entry
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 51
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_european_defence_league}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_balkan_expansion
+		icon = GFX_goal_tripartite_pact
+		x = 51
+		y = 8
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_romanian_entry}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_nordic_membership
+		icon = GFX_goal_scandinavian_relations
+		x = 49
+		y = 7
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_european_defence_league}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_danubian_entry
+		icon = GFX_goal_generic_major_alliance
+		x = 49
+		y = 8
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_nordic_membership}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_rival_the_entente
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 50
+		y = 9
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_danubian_entry focus = RUS_balkan_expansion}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_demand_decolonisation
+		icon = GFX_goal_generic_territory_or_war
+		x = 50
+		y = 10
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_rival_the_entente}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_end_the_anarchist_threat
+		icon = GFX_goal_destroy_communism
+		x = 50
+		y = 11
+
+		cost = 10
+
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_demand_decolonisation}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_aggressive_politics
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 43
+		y = 5
+
+		cost = 10
+		mutually_exclusive = {focus = RUS_peaceful_politics}
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_westward_outlook}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_demand_bessarabia
+		icon = GFX_focus_secret_rearmament
+		x = 41
+		y = 6
+
+		cost = 10
+		
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_aggressive_politics}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_into_armenia
+		icon = GFX_goal_armenia_shield_skull
+		x = 41
+		y = 7
+
+		cost = 10
+		
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_demand_bessarabia}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_serbian_brotherhood
+		icon = GFX_goal_generic_defence
+		x = 41
+		y = 8
+
+		cost = 10
+		
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_into_armenia}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_clean_up_the_balkans
+		icon = GFX_focus_CZE_german_puppet
+		x = 41
+		y = 9
+
+		cost = 10
+		
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_serbian_brotherhood}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_claim_the_straits
+		icon = GFX_goal_ottoman_crosshairs
+		x = 41
+		y = 10
+
+		cost = 10
+		
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_clean_up_the_balkans}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_fortify_german_border
+		icon = GFX_goal_generic_fortify_city
+		x = 45
+		y = 6
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_aggressive_politics}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_prepare_for_german_blockade
+		icon = GFX_goal_generic_consumer_goods
+		x = 45
+		y = 7
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_fortify_german_border}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_memel_incident
+		icon = GFX_goal_demand_sudetenland
+		x = 45
+		y = 8
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_prepare_for_german_blockade}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_danish_deal
+		icon = GFX_goal_danish_navy
+		x = 44
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_memel_incident}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_joint_military_excercises
+		icon = GFX_goal_generic_small_arms
+		x = 44
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_danish_deal}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_reconsolidate_triple_entente
+		icon = GFX_goal_triple_entente
+		x = 47
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_memel_incident}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_strengthen_windsor_ties
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 48
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_reconsolidate_triple_entente}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_russo_french_relations
+		icon = GFX_goal_french_shield
+		x = 46
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_reconsolidate_triple_entente}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_strike_at_the_german_beast
+		icon = GFX_goal_rus_strike_germany
+		x = 45
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_claim_the_straits focus = RUS_joint_military_excercises focus = RUS_russo_french_relations focus = RUS_strengthen_windsor_ties}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	#####Economic Branch####
+	focus = {
+		id = RUS_siberian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 4
+		y = 7
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_hold_petersburg
+		icon = GFX_goal_generic_fortify_city
+		x = 2
+		y = 7
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_arctic_sea_ports
+		icon = GFX_goal_generic_navy_cruiser
+		x = 6
+		y = 7
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_expand_war_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 4
+		y = 8
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_arctic_sea_ports focus = RUS_hold_petersburg focus = RUS_siberian_industry}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_women_in_the_workforce
+		icon = GFX_goal_generic_construction
+		x = 5
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_expand_war_industry}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_foreign_aid_workers
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 3
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_expand_war_industry}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_rebuild_after_civil_war
+		icon = GFX_goal_generic_construction2
+		x = 4
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_foreign_aid_workers focus = RUS_women_in_the_workforce}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_restructure_the_nation
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_prepare_for_next_war focus = RUS_rebuild_civilian_industry}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_end_corruption
+		icon = GFX_goal_rus_single_currency
+		x = 4
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_restructure_the_nation}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_russian_innovativeness
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 4
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_end_corruption }
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_prepare_for_next_war
+		icon = GFX_focus_generic_combined_arms
+		x = 2
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_rebuild_after_civil_war}
+		mutually_exclusive = { focus = RUS_rebuild_civilian_industry}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_prepare_for_next_war}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_moscow_small_arms_factory
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_arms_industry}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_russian_militarism
+		icon = GFX_goal_rus_tsars_men
+		x = 0
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_moscow_small_arms_factory}
+		prerequisite = {focus = RUS_brusilov_line}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_building_grants
+		icon = GFX_goal_rus_industry
+		x = 2
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_moscow_small_arms_factory}
+		prerequisite = {focus = RUS_brusilov_line}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_petrograd_tractor_factory
+		icon = GFX_focus_generic_tank_production
+		x = 2
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_prepare_for_next_war}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_brusilov_line
+		icon = GFX_goal_generic_construct_military
+		x = 2
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_petrograd_tractor_factory}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_rebuild_civilian_industry
+		icon = GFX_goal_rus_economic_dependency
+		x = 6
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_rebuild_after_civil_war}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_national_bank
+		icon = GFX_goal_generic_money
+		x = 8
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_rebuild_civilian_industry}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_organise_public_admin
+		icon = GFX_focus_generic_self_management
+		x = 8
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_national_bank}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_rural_electricity
+		icon = GFX_goal_generic_radar
+		x = 8
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_organise_public_admin focus = RUS_agricultural_investments}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_expand_civil_works
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 6
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_rebuild_civilian_industry}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_agricultural_investments
+		icon = GFX_goal_generic_wheat
+		x = 6
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_expand_civil_works}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_rural_roads
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 6
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_agricultural_investments} prerequisite= { focus = RUS_organise_public_admin}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	####Tsarist Military#####
+	focus = {
+		id = RUS_tsarist_military
+		icon = GFX_goal_tsarist_military
+		x = 15
+		y = 7
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_develop_new_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		x = 15
+		y = 8
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_tsarist_military}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_winter_war
+		icon = GFX_goal_generic_major_war
+		x = 14
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_develop_new_doctrines}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	
+	focus = {
+		id = RUS_guerilla_tactics
+		icon = GFX_goal_generic_military_sphere
+		x = 16
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_develop_new_doctrines}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+    	
+
+	}
+	focus = {
+		id = RUS_improve_ambushes
+		icon = GFX_goal_generic_special_forces
+		x = 16
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_guerilla_tactics}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+    	
+    
+	}
+	focus = {
+		id = RUS_irregular_training
+		icon = GFX_goal_generic_army_artillery
+		x = 14
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_winter_war}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_joint_military_planning
+		icon = GFX_goal_generic_cavalry
+		x = 15
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_irregular_training focus =  RUS_improve_ambushes }
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_prioritise_organisation
+		icon = GFX_goal_generic_small_arms
+		x = 16
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_joint_military_planning }
+		mutually_exclusive = {focus = RUS_mobility_is_key}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_penal_battalion_doctrine
+		icon = GFX_goal_generic_major_war
+		x = 16
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_prioritise_organisation }
+		prerequisite = {focus = RUS_raid_behind_lines }
+		mutually_exclusive = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_long_term_planning
+		icon = GFX_goal_generic_position_armies
+		x = 18
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_prioritise_organisation }
+		prerequisite = {focus = RUS_raid_behind_lines }
+		mutually_exclusive = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_shock_and_awe
+		icon = GFX_goal_generic_army_artillery
+		x = 18
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_long_term_planning}
+		mutually_exclusive = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_disciplined_militias
+		icon = GFX_goal_austria_army
+		x = 16
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_penal_battalion_doctrine}
+		mutually_exclusive = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_anti_armor_guns
+		icon = GFX_goal_generic_army_artillery2
+		x = 17
+		y = 15
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_disciplined_militias}
+		prerequisite = {focus = RUS_shock_and_awe}
+		mutually_exclusive = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_military_police
+		icon = GFX_goal_rus_arrest_dissidents
+		x = 15
+		y = 15
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_disciplined_militias}
+		prerequisite = {focus = RUS_lightning_warfare}
+		mutually_exclusive = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_for_the_tsar
+		icon = GFX_goal_rus_renovato_imperii
+		x = 15
+		y = 16
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_military_police}
+		prerequisite = {focus = RUS_anti_armor_guns}
+		prerequisite = {focus = RUS_encirclement_tactics}
+		mutually_exclusive = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_mobility_is_key
+		icon = GFX_goal_generic_army_motorized
+		x = 14
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_joint_military_planning }
+		mutually_exclusive = {focus = RUS_prioritise_organisation}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_support_battalions
+		icon = GFX_goal_generic_construction2
+		x = 18
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_tsarist_military}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_ski_troops
+		icon = GFX_goal_generic_mountains
+		x = 20
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_support_battalions}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_recon_battalions
+		icon = GFX_goal_generic_military_sphere
+		x = 20
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_ski_troops}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_personal_radios
+		icon = GFX_goal_generic_army_doctrines
+		x = 18
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_support_battalions}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_small_unit_tactics
+		icon = GFX_focus_prc_infiltration
+		x = 18
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_personal_radios}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_raid_behind_lines
+		icon = GFX_goal_generic_secret_weapon
+		x = 19
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_small_unit_tactics}
+		prerequisite = {focus = RUS_recon_battalions}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_equipment_manufacture
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 12
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_tsarist_military}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_female_brigades
+		icon = GFX_goal_woman_soldier
+		x = 12
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_equipment_manufacture}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_officer_training
+		icon = GFX_focus_generic_military_mission
+		x = 10
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_equipment_manufacture}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_secondary_cavalry_roles
+		icon = GFX_goal_generic_cavalry
+		x = 10
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_officer_training}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_field_hospitals
+		icon = GFX_goal_generic_build_tank
+		x = 12
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_female_brigades}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_artillery_barrages
+		icon = GFX_goal_generic_army_artillery2
+		x = 11
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_field_hospitals}
+		prerequisite = {focus = RUS_secondary_cavalry_roles}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_armor_development
+		icon = GFX_goal_generic_army_tanks
+		x = 12
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_artillery_barrages} prerequisite = { focus = RUS_mobility_is_key}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_motorised_cavalry
+		icon = GFX_goal_generic_army_motorized
+		x = 14
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_artillery_barrages} prerequisite = { focus = RUS_mobility_is_key}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_lightning_warfare
+		icon = GFX_goal_generic_position_armies
+		x = 14
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_motorised_cavalry}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_lessons_of_the_tsar_tank
+		icon = GFX_focus_generic_army_tanks2
+		x = 12
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_armor_development}
+		
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_encirclement_tactics
+		icon = GFX_goal_generic_attack_allies
+		x = 13
+		y = 15
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_lessons_of_the_tsar_tank}
+		prerequisite = {focus = RUS_lightning_warfare}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_tsarist_airforce
+		icon = GFX_goal_tsarist_airforce
+		x = 25
+		y = 7
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_battlefield_support
+		icon = GFX_goal_generic_occupy_start_war
+		x = 24
+		y = 8
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_tsarist_airforce}
+		mutually_exclusive = {focus = RUS_rule_the_skies}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_parachute_brigades
+		icon = GFX_focus_generic_paratrooper
+		x = 24
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_battlefield_support}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_urban_training
+		icon = GFX_goal_generic_fortify_city
+		x = 24
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_parachute_brigades}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_CAS_doctrines
+		icon = GFX_goal_generic_CAS
+		x = 22
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_battlefield_support}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_coordinated_attacks
+		icon = GFX_focus_generic_license_production
+		x = 22
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_CAS_doctrines}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_AA_development
+		icon = GFX_focus_generic_air_defense
+		x = 23
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_coordinated_attacks}
+		prerequisite = {focus = RUS_urban_training}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	
+	focus = {
+		id = RUS_women_in_the_airforce
+		icon = GFX_focus_YUG_ikarus
+		x = 24
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus =  RUS_AA_development}
+		prerequisite = {focus = RUS_pilot_training}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_rule_the_skies
+		icon = GFX_goal_generic_air_bomber
+		x = 26
+		y = 8
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_tsarist_airforce}
+		mutually_exclusive = {focus = RUS_battlefield_support}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_develop_better_fighters
+		icon = GFX_goal_generic_air_fighter2
+		x = 26
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_rule_the_skies}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_pilot_ace_initiative
+		icon = GFX_focus_YUG_rogozarski
+		x = 26
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_develop_better_fighters}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_bombing_raids
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 28
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_rule_the_skies}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_bomber_escorts
+		icon = GFX_goal_generic_air_fighter
+		x = 28
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_bombing_raids}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_night_bombing
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		x = 27
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_bomber_escorts}
+		prerequisite = {focus = RUS_pilot_ace_initiative}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_plane_factories
+		icon = GFX_goal_generic_air_production
+		x = 26
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_night_bombing}
+		prerequisite = {focus = RUS_pilot_training}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_new_air_doctrines
+		icon = GFX_goal_generic_air_doctrine
+		x = 25
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_tsarist_airforce}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_expand_airbases
+		icon = GFX_goal_generic_build_airforce
+		x = 25
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_new_air_doctrines}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_pilot_training
+		icon = GFX_goal_tsarist_airforce
+		x = 25
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_expand_airbases}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_tsarist_navy
+		icon = GFX_goal_tsarist_navy
+		x = 34
+		y = 7
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_grand_russian_fleet
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 34
+		y = 8
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_tsarist_navy}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_navy_reform_plan
+		icon = GFX_goal_generic_navy_cruiser
+		x = 34
+		y = 9
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_grand_russian_fleet}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_naval_aviation
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 34
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_navy_reform_plan}
+		mutually_exclusive {focus = RUS_fleet_in_being focus = RUS_rule_the_waves}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_rule_the_waves
+		icon = GFX_goal_generic_navy_battleship
+		x = 36
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_navy_reform_plan}
+		mutually_exclusive {focus = RUS_naval_aviation focus = RUS_fleet_in_being}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_modern_battlecruiser
+		icon = GFX_focus_generic_cruiser2
+		x = 36
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_navy_reform_plan}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_fleet_in_being
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 32
+		y = 10
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_navy_reform_plan}
+		mutually_exclusive {focus = RUS_naval_aviation focus = RUS_rule_the_waves}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_improve_battleships
+		icon = GFX_focus_generic_navy_battleship2
+		x = 32
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_fleet_in_being}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_carrier_primacy
+		icon = GFX_goal_generic_navy_carrier
+		x = 34
+		y = 11
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_naval_aviation}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_destroyer_development
+		icon = GFX_goal_generic_wolf_pack
+		x = 33
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_carrier_primacy focus = RUS_improve_battleships focus = RUS_modern_battlecruiser}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_cruiser_primacy
+		icon = GFX_goal_generic_navy_cruiser
+		x = 35
+		y = 12
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_carrier_primacy focus = RUS_improve_battleships focus = RUS_modern_battlecruiser}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_naval_expansion
+		icon = GFX_goal_generic_build_navy
+		x = 34
+		y = 13
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_cruiser_primacy focus = RUS_destroyer_development }
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_defend_the_coastline
+		icon = GFX_focus_generic_coastal_fort
+		x = 34
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_naval_expansion}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_petrograd_defences
+		icon = GFX_goal_generic_fortify_city
+		x = 34
+		y = 15
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_defend_the_coastline}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_baltic_wall
+		icon = GFX_focus_generic_air_defense
+		x = 34
+		y = 16
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_petrograd_defences}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_study_tsushima
+		icon = GFX_goal_tsushima_legacy
+		x = 36
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_naval_expansion}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_new_naval_doctrines
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 36
+		y = 15
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_study_tsushima}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_blue_water_navy
+		icon = GFX_goal_generic_navy_battleship
+		x = 36
+		y = 16
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_new_naval_doctrines}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_imperial_marine_corps
+		icon = GFX_goal_generic_amphibious_assault
+		x = 38
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_naval_expansion}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_new_marine_training
+		icon = GFX_focus_secret_rearmament
+		x = 38
+		y = 15
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_imperial_marine_corps}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_improved_landing_craft
+		icon = GFX_goal_generic_military_sphere
+		x = 38
+		y = 16
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_new_marine_training}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_russian_merchant_navy
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 32
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_naval_expansion}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_convoy_escort
+		icon = GFX_focus_generic_destroyer
+		x = 32
+		y = 15
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_russian_merchant_navy}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_expand_baltic_trade
+		icon = GFX_goal_navy_funding
+		x = 32
+		y = 16
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_convoy_escort}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_call_on_veteran_admirals
+		icon = GFX_goal_rus_reconcile_military
+		x = 30
+		y = 14
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_naval_expansion}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_expand_dockyard_facilities
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 30
+		y = 15
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_naval_expansion}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_new_shipbuilding_methods
+		icon = GFX_goal_continuous_naval_production
+		x = 30
+		y = 16
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_expand_dockyard_facilities}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}
+	focus = {
+		id = RUS_russian_oceans
+		icon = GFX_goal_tsarist_navy
+		x = 34
+		y = 17
+
+		cost = 10
+	
+		ai_wilL_do = {
+			factor = 80
+		}
+		prerequisite = {focus = RUS_improved_landing_craft}
+		prerequisite = {focus = RUS_new_shipbuilding_methods}
+		prerequisite = {focus = RUS_baltic_wall}
+		prerequisite = {focus = RUS_expand_baltic_trade}
+		prerequisite = {focus = RUS_blue_water_navy}
+		available = { 
+			
+		}
+
+		completion_reward = {
+        	
+    	}
+	}

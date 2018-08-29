@@ -49,6 +49,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/RUS_nikolai_ii.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_RUS_unruly_okhrana"
+		texturefile = "gfx/interface/ideas/unruly_okhrana_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_communists_purged"
+		texturefile = "gfx/interface/ideas/communism_purge.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_RUS_nikolai_yudenich"
 		texturefile = "gfx/interface/ideas/RUS_nikolai_yudenich.dds"
 	}

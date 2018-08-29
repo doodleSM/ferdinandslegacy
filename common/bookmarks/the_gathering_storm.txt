@@ -4,51 +4,39 @@ bookmarks = {
 		desc = "GATHERING_STORM_DESC"
 		date = 1936.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "GRM"
+		default_country = "RUS"
 		default = yes
 		
-		"FRA"={
-			history = "FRA_GATHERING_STORM_DESC"
-			ideology = democratic
+		
+		"BLU"={
+			history = ""
+			ideology = communism
 			ideas = {
-				FRA_victors_of_wwi
-				FRA_disjointed_government
-				FRA_protected_by_the_maginot_line
+			BLU_liberation_army
+			BLU_the_moscow_and_sp_uprisings_idea	
 			}
 			focuses = {
-				FRA_initiate_government_reform
-				FRA_support_status_quo
-				FRA_revise_versailles
+				BLU_spread_the_revolution
+				BLU_world_revolution
+				BLU_steady_as_she_goes	
 			}
 		}
-		"USA"={
-			history = "USA_GATHERING_STORM_DESC"
+		"RSP"={
+			history = ""
 			ideology = democratic
 			ideas = {
-				home_of_the_free
-				great_depression
-				undisturbed_isolation
+			RSP_the_august_revolution
+			RSP_officer_shortage_idea
+			RSP_russian_civil_war_idea	
 			}
 			focuses = {
-				USA_war_plan_black
-				USA_strike_at_the_empire
-				USA_pearl_harbor_gambit
+			RSP_united_russia
+			RSP_demonise_tsar
+			RSP_outlook_of_russia	
 			}
 		}
-		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				stiff_upper_lip
-				ENG_the_war_to_end_all_wars
-				george_v
-			}
-			focuses = {
-				tizard_mission_focus
-				ENG_war_with_germany
-				ENG_war_with_italy
-			}
-		}
+		
+		
 		"GRM"={
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = auth_dem
@@ -66,6 +54,18 @@ bookmarks = {
 				GOR_internal_solutions
 			}		
 		}
+		"OTT"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = auth_dem
+			ideas = {
+				OTT_foreign_debt
+				OTT_joint_oil_company
+				OTT_arab_nationalism_idea
+			}	
+			focuses = {
+				
+			}		
+		}
 		"JAP"={
 			history = "JAP_GATHERING_STORM_DESC"
 			ideology = fascism
@@ -76,14 +76,18 @@ bookmarks = {
 				
 			}			
 		}
-		"SOV"={
+		"RUS"={
 			history = "SOV_GATHERING_STORM_DESC"
-			ideology = communism
+			ideology = neutrality
 			ideas = {
-				
+				RUS_unpopular_tsar
+				RUS_bad_conscription
+				RUS_unruly_okhrana
 			}
 			focuses = {
-				
+				RUS_the_tsar_defiant
+				RUS_strike_at_the_german_beast
+				RUS_tsar_elections
 			}	
 		}
 

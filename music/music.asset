@@ -2,8 +2,8 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-	file = "tomorrowbelongstome.ogg"
-	volume = 10
+	file = "doppleader.ogg"
+	volume = 1
 }
 
 # General Peace:
