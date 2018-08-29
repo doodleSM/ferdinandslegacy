@@ -1023,6 +1023,24 @@ country_event = {
 		name = polbatt.11.a
 		stability_factor = 0.20
 		set_country_flag = POL_PILSUDZKI_COUP
+		add_popularity = { ideology = auth_dem popularity = 0.30 }
+		set_politics = {
+			ruling_party = auth_dem
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Józef Piłsudzki"
+			desc = "POLITICS_JOZEF_PILSUDZKI_DESC"
+			picture = "Portrait_Poland_Jozef_Pilsudzki.dds"
+			expire = "1965.1.1"
+			ideology = oligarchism
+			traits = { }
+		}
+		set_party_name = {
+			ideology = auth_dem
+			long_name = POL_pilsudzki_party
+			name = POL_pilsudzki_party
+		}
 	}
   
 }
@@ -1119,6 +1137,13 @@ country_event = {
 		name = polbatt.16.a
 		stability_factor = 0.30
 		set_country_flag = POL_COMMIE_COUP
+		add_popularity = { ideology = anarchism popularity = 0.20 }
+		add_popularity = { ideology = communism popularity = 0.40 }
+		add_popularity = { ideology = radical_socialism popularity = 0.30 }
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
 	}
   
 }
