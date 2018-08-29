@@ -366,18 +366,22 @@ country_event = {
 		if = {
 			limit = { has_country_flag = { flag = POL_RUSEMP value > 5 } }
 			country_event = polsejm.9
+			set_country_flag = POL_SEJM_END
 		}
 		if = {
 			limit = { has_country_flag = { flag = POL_PPPAUT value > 5 } }
 			country_event = polsejm.10
+			set_country_flag = POL_SEJM_END
 		}
 		if = {
 			limit = { has_country_flag = { flag = POL_INDEPE value > 5 } }
 			country_event = polsejm.11
+			set_country_flag = POL_SEJM_END
 		}
 		if = {
 			limit = { has_country_flag = { flag = POL_RUSREP value > 5 } }
 			country_event = polsejm.12
+			set_country_flag = POL_SEJM_END
 		}
 		if = {
 			limit = {
