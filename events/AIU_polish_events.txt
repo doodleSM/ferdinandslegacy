@@ -528,7 +528,7 @@ country_event = {
 		name = polsejm.13.a
 		set_country_flag = POL_NOTHING_WIN
 		hidden_effect = {
-		      country_event = polfail.1
+		      country_event = { days = 7 id = polfail.1 }
 		}
 	}
   
@@ -548,7 +548,7 @@ country_event = {
 		name = polfail.1.a
 		stability_factor = -0.10
 		hidden_effect = {
-		      country_event = polfail.2
+		      country_event = { days = 7 id = polfail.2 }
 		}
 	}
   
@@ -568,7 +568,7 @@ country_event = {
 		name = polfail.2.a
 		stability_factor = -0.20
 		hidden_effect = {
-		      country_event = polfail.3
+		      country_event = { days = 7 id = polfail.3 }
 		}
 	}
   
@@ -588,7 +588,7 @@ country_event = {
 		name = polfail.3.a
 		stability_factor = -0.05
 		hidden_effect = {
-		      country_event = polfail.4
+		      country_event = { days = 7 id = polfail.4 }
 		}
 	}
   
@@ -608,7 +608,7 @@ country_event = {
 		name = polfail.4.a
 		stability_factor = -0.05
 		hidden_effect = {
-		      country_event = polfail.5
+		      country_event = { days = 7 id = polfail.5 }
 		}
 	}
   
@@ -628,7 +628,7 @@ country_event = {
 		name = polfail.5.a
 		stability_factor = -0.05
 		hidden_effect = {
-		      country_event = polfail.6
+		      country_event = { days = 7 id = polfail.6 }
 		}
 	}
   
@@ -650,7 +650,7 @@ country_event = {
 		set_country_flag = { flag = POL_BAT_PILSUDZKI value = 0 }
 		set_country_flag = { flag = POL_BAT_COMMIES value = 0 }
 		hidden_effect = {
-		      country_event = polbatt.1
+		      country_event = { days = 7 id = polbatt.1 }
 		}
 	}
   
@@ -671,7 +671,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.2
+		      country_event = { days = 7 id = polbatt.2 }
 		}
 		
 		10 = {
@@ -687,7 +687,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.2
+		      country_event = { days = 7 id = polbatt.2 }
 		}
 		
 		10 = {
@@ -715,7 +715,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.3
+		      country_event = { days = 7 id = polbatt.3 }
 		}
 		
 		10 = {
@@ -731,7 +731,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.3
+		      country_event = { days = 7 id = polbatt.3 }
 		}
 		
 		10 = {
@@ -759,7 +759,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.4
+		      country_event = { days = 7 id = polbatt.4 }
 		}
 		
 		10 = {
@@ -775,7 +775,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.4
+		      country_event = { days = 7 id = polbatt.4 }
 		}
 		
 		10 = {
@@ -803,7 +803,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.5
+		      country_event = { days = 7 id = polbatt.5 }
 		}
 		
 		10 = {
@@ -819,7 +819,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.5
+		      country_event = { days = 7 id = polbatt.5 }
 		}
 		
 		10 = {
@@ -847,7 +847,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.6
+		      country_event = { days = 7 id = polbatt.6 }
 		}
 		
 		10 = {
@@ -863,7 +863,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.6
+		      country_event = { days = 7 id = polbatt.6 }
 		}
 		
 		10 = {
@@ -891,7 +891,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.7
+		      country_event = { days = 7 id = polbatt.7 }
 		}
 		
 		10 = {
@@ -907,7 +907,7 @@ country_event = {
 		stability_factor = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = polbatt.7
+		      country_event = { days = 7 id = polbatt.7 }
 		}
 		
 		10 = {
@@ -964,7 +964,7 @@ country_event = {
 	option = {
 		name = polbatt.8.a
 		hidden_effect = {
-		      country_event = polbatt.9
+		      country_event = { days = 2 id = polbatt.9 }
 		}
 	}
   
@@ -984,7 +984,7 @@ country_event = {
 		name = polbatt.9.a
 		stability_factor = -0.05
 		hidden_effect = {
-		      country_event = polbatt.10
+		      country_event = { days = 2 id = polbatt.10 }
 		}
 	}
   
@@ -1003,7 +1003,7 @@ country_event = {
 	option = {
 		name = polbatt.10.a
 		hidden_effect = {
-		      country_event = polbatt.11
+		      country_event = { days = 2 id = polbatt.11 }
 		}
 	}
   
@@ -1058,7 +1058,7 @@ country_event = {
 	option = {
 		name = polbatt.12.a
 		hidden_effect = {
-		      country_event = polbatt.13
+		      country_event = { days = 2 id = polbatt.13 }
 		}
 	}
   
@@ -1078,7 +1078,7 @@ country_event = {
 		name = polbatt.13.a
 		stability_factor = -0.05
 		hidden_effect = {
-		      country_event = polbatt.14
+		      country_event = { days = 2 id = polbatt.14 }
 		}
 	}
   
@@ -1098,7 +1098,7 @@ country_event = {
 		name = polbatt.14.a
 		stability_factor = -0.10
 		hidden_effect = {
-		      country_event = polbatt.15
+		      country_event = { days = 2 id = polbatt.15 }
 		}
 	}
   
@@ -1117,7 +1117,7 @@ country_event = {
 	option = {
 		name = polbatt.15.a
 		hidden_effect = {
-		      country_event = polbatt.16
+		      country_event = { days = 2 id = polbatt.16 }
 		}
 	}
   
