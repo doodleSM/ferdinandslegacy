@@ -381,10 +381,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = { flag = FRA_ANAR value < 4 }
-				has_country_flag = { flag = FRA_JACO value < 4 }
-				has_country_flag = { flag = FRA_SORE value < 4 }
-				has_country_flag = { flag = FRA_TRAV value < 4 }
+				has_country_flag = { flag = POL_RUSEMP value < 5 }
+				has_country_flag = { flag = POL_PPPAUT value < 5 }
+				has_country_flag = { flag = POL_INDEPE value < 5 }
+				has_country_flag = { flag = POL_RUSREP value < 5 }
 			}
 			country_event = polsejm.13
 		}
@@ -406,6 +406,7 @@ country_event = {
 			ruling_party = neutrality
 			elections_allowed = no
 		}
+		set_country_flag = POL_WHITE_WIN
 	}
   
 }
@@ -425,6 +426,7 @@ country_event = {
 			ruling_party = market_lib
 			elections_allowed = yes
 		}
+		set_country_flag = POL_YELLOW_WIN
 	}
   
 }
@@ -444,6 +446,7 @@ country_event = {
 			ruling_party = democratic
 			elections_allowed = yes
 		}
+		set_country_flag = POL_BLUE_WIN
 	}
   
 }
@@ -463,6 +466,7 @@ country_event = {
 			ruling_party = social_democracy
 			elections_allowed = yes
 		}
+		set_country_flag = POL_GREEN_WIN
 	}
   
 }
@@ -478,6 +482,7 @@ country_event = {
 
 	option = {
 		name = polsejm.13.a
+		set_country_flag = POL_NOTHING_WIN
 	}
   
 }
