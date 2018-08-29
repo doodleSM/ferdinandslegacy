@@ -789,4 +789,13 @@ opinion_modifiers = {
 	JAP_broke_the_london_naval_treaty = { value = -100 }
 	
 	POR_rejected_lease = { value = -35 }
+	
+	###MODDED###
+	
+	POL_support_in_russian_civil_war = {
+	      value = 20
+        }
+	POL_supporting_enemies = {
+	      value = -20
+	}
 }	
