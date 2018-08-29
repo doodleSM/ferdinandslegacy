@@ -8,6 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
+	
 	focus = {
 		id = POL_republican_side
 		icon = GFX_goal_unknown
@@ -46,6 +47,12 @@ focus_tree = {
 		cost = 10,00
 		x = 19
 		y = 0
+		available = {
+			always = no
+		}
+		bypass = { has_country_flag = POL_GREEN_WIN 
+		           has_country_flag = POL_SEJM_END
+		}
 
 	}
 	focus = {
@@ -54,6 +61,12 @@ focus_tree = {
 		cost = 10,00
 		x = 11
 		y = 0
+		available = {
+			always = no
+		}
+		bypass = { has_country_flag = POL_YELLOW_WIN 
+		           has_country_flag = POL_SEJM_END
+		}
 
 	}
 	focus = {
@@ -62,6 +75,12 @@ focus_tree = {
 		cost = 10,00
 		x = 3
 		y = 0
+		available = {
+			always = no
+		}
+		bypass = { has_country_flag = POL_WHITE_WIN 
+		           has_country_flag = POL_SEJM_END
+		}
 
 	}
 	focus = {
@@ -70,6 +89,12 @@ focus_tree = {
 		cost = 10,00
 		x = 27
 		y = 0
+		available = {
+			always = no
+		}
+		bypass = { has_country_flag = POL_BLUE_WIN 
+		           has_country_flag = POL_SEJM_END
+		}
 
 	}
 	focus = {
@@ -78,6 +103,13 @@ focus_tree = {
 		cost = 10,00
 		x = 1
 		y = 7
+		available = {
+			always = no
+		}
+		bypass = { has_country_flag = POL_G_REPUBLIC
+		           has_country_flag = POL_B_G_DETHRONE
+			   has_country_flag = POL_SEJM_END
+		}
 
 	}
 	focus = {
