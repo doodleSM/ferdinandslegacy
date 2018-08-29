@@ -100,6 +100,10 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
 		set_country_flag = POL_W_POWER_GOVENOR
 		add_popularity = { ideology = neutrality popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_governor_normal
+			add_idea = POL_governor_strong
+		}
 	}
   
         option = { #PPP, status quo
@@ -116,6 +120,10 @@ country_event = {
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		set_country_flag = POL_B_ABOLISH_GOVERNOR
 		add_popularity = { ideology = democratic popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_governor_normal
+			add_idea = POL_governor_weak
+		}
 	}
 	
 	option = { #Republic, prepare for republic
@@ -124,6 +132,7 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
 		set_country_flag = POL_G_REPUBLIC
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
+		remove_idea = POL_governor_normal
 	}
   
 }
@@ -223,6 +232,10 @@ country_event = {
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
 		set_country_flag = POL_Y_CONST_SOME_CHANGE
 		add_popularity = { ideology = market_lib popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_constitution_russian
+			add_idea = POL_constitution_russian_polish
+		}
 	}
   
         option = { #Rest, Abolish it
@@ -231,6 +244,10 @@ country_event = {
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		set_country_flag = POL_B_CONST_ABOLISH
 		add_popularity = { ideology = democratic popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_constitution_russian
+			add_idea = POL_constitution_broken
+		}
 	}
 	
 	option = { #Republic, Change it
@@ -239,6 +256,10 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
 		set_country_flag = POL_G_CONST_CHANGE
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_constitution_russian
+			add_idea = POL_constitution_polish
+		}
 	}
   
 }
@@ -293,6 +314,9 @@ country_event = {
 		set_country_flag = POL_W_Y_HELP_TSAR
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 		add_popularity = { ideology = market_lib popularity = 0.05 }
+		add_opinion_modifier = { target = RUS modifier = POL_support_in_russian_civil_war }
+		add_opinion_modifier = { target = RSP modifier = POL_supporting_enemies }
+		add_opinion_modifier = { target = BLU modifier = POL_supporting_enemies }
 	}
 	
 	option = { #Republic, Republicans
@@ -301,6 +325,9 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
 		set_country_flag = POL_G_HELP_REPUBLIC
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
+		add_opinion_modifier = { target = RSP modifier = POL_support_in_russian_civil_war }
+		add_opinion_modifier = { target = RUS modifier = POL_supporting_enemies }
+		add_opinion_modifier = { target = BLU modifier = POL_supporting_enemies }
 	}
   
         option = { #Rest, Independence
@@ -369,6 +396,7 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
 		set_country_flag = POL_W_PURGE
 		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_stability = -0.01
 	}
 	
 	option = { #PPP, Let have it to elections
