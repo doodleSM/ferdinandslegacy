@@ -37,13 +37,16 @@ autonomy_state = {
 
 	allowed = {
 		if = {
-			OVERLORD = { original_tag = GRM } 
+			OVERLORD = { original_tag = GRM }
+			OVERLORD = { capital_scope = { is_on_continent = ROOT } 
+        	} 
 		}
 	}
 	
 	can_take_level = {
 		if = {
-			is_on_continent = { OVERLORD }
+			OVERLORD = { capital_scope = { is_on_continent = ROOT } 
+        	} 
 		}
 	}
 

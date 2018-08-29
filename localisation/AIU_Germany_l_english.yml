@@ -1,5 +1,6 @@
 ﻿l_english:
-#country names
+
+###RCW intervention
  GRM_anarchism:0 "German Empire"
  GRM_anarchism_DEF:0 "the German Empire"
  GRM_communism:0 "German Empire"
@@ -25,24 +26,36 @@
  GRM_anarchism_party:0 "FAUD"
  GRM_anarchism_party_long:0 "Freie Arbeiter Union Deutschlands"
  GRM_communism_party:0 "KPD"
- GRM_communism_party_long:0:0 "Kommunistische Partei Deutschlands"
+ GRM_communism_party_long:0 "Kommunistische Partei Deutschlands"
  GRM_radical_socialism_party:0 "USPD"
- GRM_radical_socialism_party_long:0:0 "Unabhängige Sozialdemokratische Partei Deutschlands"
+ GRM_radical_socialism_party_long:0 "Unabhängige Sozialdemokratische Partei Deutschlands"
  GRM_social_democracy_party:0 "SPD"
- GRM_social_democracy_party_long:0:0 "Sozialdemokratische Partei Deutschlands"
+ GRM_social_democracy_party_long:0 "Sozialdemokratische Partei Deutschlands"
  GRM_social_liberalism_party:0 "FVP"
- GRM_social_liberalism_party_long:0:0 "Fortschrittliche Volkspartei"
+ GRM_social_liberalism_party_long:0 "Fortschrittliche Volkspartei"
  GRM_market_lib_party:0 "NLP"
- GRM_market_lib_party_long:0:0 "Nationalliberale Partei"
+ GRM_market_lib_party_long:0 "Nationalliberale Partei"
  GRM_democratic_party:0 "Z"
- GRM_democratic_party_long:0:0 "Deutsche Zentrumspartei"
+ GRM_democratic_party_long:0 "Deutsche Zentrumspartei"
  GRM_neutrality_party:0 "Militärregierung"
- GRM_neutrality_party_long:0:0 "Militärregierung"
+ GRM_neutrality_party_long:0 "Militärregierung"
  GRM_auth_dem_party:0 "DKP"
- GRM_auth_dem_party_long:0:0 "Deutschkonservative Partei"
+ GRM_auth_dem_party_long:0 "Deutschkonservative Partei"
  GRM_fascism_party:0 "DAP"
- GRM_fascism_party_long:0:0 "Deutsche Arbeiterpartei"
+ GRM_fascism_party_long:0 "Deutsche Arbeiterpartei"
 
+
+ #autonomy
  autonomy_german_puppet:0 "Autonomous State"
+ autonomy_reichsprotectorate:0 "Imperial Protectorate"
+ autonomy_german_colony:0 "Colonial Territory"
+ autonomy_german_integrated_puppet:0 "Overseas Territory"
 
- 
+
+ #Puppets
+ POL_GER_satellite_a:0 "Imperial Kingdom of Poland"
+ POL_GER_satellite_b:0 "Imperial Republic of Poland"
+ UKR_GER_satellite_republic:0 "Imperial Republic of Ukraine"
+ UKR_GER_satellite_hetman:0 "Hetmanate of Ukraine"
+ UKR_GER_satellite_german:0 "Kingdom of Ukraine"
+ UKR_GER_german_puppet:0 "Autonomous State of Ukraine"

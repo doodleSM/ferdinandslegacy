@@ -1,5 +1,7 @@
 autonomy_state = {
 	id = autonomy_satellite
+
+	is_puppet = yes
 	
 	min_freedom_level = 0.80
 	
@@ -29,17 +31,18 @@ autonomy_state = {
 	}
 
 	allowed = {
-		has_dlc = "Death or Dishonor"
-		has_government = fascism
 		if = {
-			limit = { has_dlc = "Waking the Tiger" }
-			NOT = { OVERLORD = { original_tag = JAP } }
-			NOT = { OVERLORD = { original_tag = MAN } }
+			OVERLORD = { original_tag = GRM }
+			OVERLORD = { capital_scope = { is_on_continent = ROOT } 
+        	} 
 		}
 	}
 	
 	can_take_level = {
-		#trigger here
+		if = {
+			OVERLORD = { capital_scope = { is_on_continent = ROOT } 
+        	} 
+		}
 	}
 
 	can_lose_level = {

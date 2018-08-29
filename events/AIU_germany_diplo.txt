@@ -1,6 +1,7 @@
 ﻿add_namespace = ger_rcw
 add_namespace = ger_sp
 add_namespace = ger_rcw_pol
+add_namespace = ger_rcw_ukr
 
 ################################
 ## German Intervention in Russian civil war
@@ -81,7 +82,7 @@ country_event = {
 
 
 #################
-## Polish Conference
+#Polish Conference
 ##################
 
 #Diplomats sent to warsaw
@@ -175,7 +176,11 @@ country_event = {
 
 	option = { #Wunderbar
 		name = ger_rcw_pol.5.a
-		GRM = { puppet = POL }
+		GRM = {
+			puppet = POL
+			set_autonomy = { target = POL autonomy_state = autonomy_satellite }
+		}
+
 		POL = { set_country_flag = accepted_puppet }
 		GRM = { country_event = { days = 1 id = ger_rcw_pol.12 } }
 	}
@@ -327,7 +332,9 @@ country_event = {
 					#
 				}
 			}
+			 
 		}
+		POL = { set_cosmetic_tag = POL_GER_satellite_b }
 	}
 }
 
@@ -368,8 +375,235 @@ country_event = {
 					#
 				}
 			}
+			
+		}
+		POL = { set_cosmetic_tag = POL_GER_satellite_a }
+	}
+}
+
+#################
+#Ukranian Conference
+##################
+
+#Diplomats sent to warsaw
+country_event = {
+	id = ger_rcw_ukr.0
+	title = ger_rcw_ukr.0.t
+	desc = ger_rcw_ukr.0.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.0.a
+		UKR = { country_event = { days = 1 id = ger_rcw_ukr.1 } }
+	}
+}
+
+#german diplomats arrive
+country_event = {
+	id = ger_rcw_ukr.1
+	title = ger_rcw_ukr.1.t
+	desc = ger_rcw_ukr.1.d 
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.1.a
+		GRM = { country_event = { days = 1 id = ger_rcw_ukr.2 } }
+	}
+}
+
+#state of ukraine
+country_event = {
+	id = ger_rcw_ukr.2
+	title = ger_rcw_ukr.2.t
+	desc = ger_rcw_ukr.2.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.2.a
+		UKR = { country_event = { days = 1 id = ger_rcw_ukr.3 } }
+	}
+}
+
+country_event = {
+	id = ger_rcw_ukr.3
+	title = ger_rcw_ukr.3.t
+	desc = ger_rcw_ukr.3.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.3.a
+		GRM = { country_event = { days = 1 id = ger_rcw_ukr.4 } } #accept
+	}
+
+	option = {
+		name = ger_rcw_ukr.3.b
+		GRM = { country_event = { days = 1 id = ger_rcw_ukr.5 } } #reject
+	}
+}
+
+#ukraine accepts
+country_event = {
+	id = ger_rcw_ukr.4
+	title = ger_rcw_ukr.4.t
+	desc = ger_rcw_ukr.4.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.4.a
+		UKR = { country_event = { days = 1 id = ger_rcw_ukr.5 } } #accept
+		GRM = {
+			puppet = UKR
+			set_autonomy = { target = UKR autonomy_state = autonomy_satellite }
 		}
 	}
 }
+
+country_event = {
+	id = ger_rcw_ukr.5
+	title = ger_rcw_ukr.5.t
+	desc = ger_rcw_ukr.5.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.5.a
+		GRM = { country_event = { days = 1 id = ger_rcw_ukr.6 } } #Stay as we are
+	}
+
+	option = {
+		name = ger_rcw_ukr.5.b
+		GRM = { country_event = { days = 1 id = ger_rcw_ukr.7 } } #New leadership
+	}
+}
+
+#republic
+country_event = {
+	id = ger_rcw_ukr.6
+	title = ger_rcw_ukr.6.t
+	desc = ger_rcw_ukr.6.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.6.a
+		UKR = {
+			create_country_leader = {
+				name = "Volodymyr Vynnychenko"
+				desc = ""
+				picture = "UKR_Volodymr.dds"
+				expire = "1953.3.1"
+				ideology = despotism
+				traits = {
+		
+				}
+			}
+			set_cosmetic_tag = UKR_GER_satellite_republic
+		}
+		GRM = {
+			puppet = UKR
+			set_autonomy = { target = UKR autonomy_state = autonomy_satellite }
+		}
+	}
+}
+
+country_event = {
+	id = ger_rcw_ukr.7
+	title = ger_rcw_ukr.7.t
+	desc = ger_rcw_ukr.7.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.7.a
+		UKR = { country_event = { days = 1 id = ger_rcw_ukr.8 } }
+	}
+}
+
+country_event = {
+	id = ger_rcw_ukr.8
+	title = ger_rcw_ukr.8.t
+	desc = ger_rcw_ukr.8.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.8.a
+		GRM = { country_event = { days = 1 id = ger_rcw_ukr.9 } } #The Hetman
+	}
+
+	option = {
+		name = ger_rcw_ukr.8.b
+		GRM = { country_event = { days = 1 id = ger_rcw_ukr.10 } } #German republic
+	}
+}
+
+#Hetman
+country_event = {
+	id = ger_rcw_ukr.9
+	title = ger_rcw_ukr.9.t
+	desc = ger_rcw_ukr.9.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.9.a
+		UKR = {
+			create_country_leader = {
+				name = "Pavlo Skoropadskyi"
+				desc = ""
+				picture = "UKR_Pavlo.dds"
+				expire = "1953.3.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+			set_cosmetic_tag = UKR_GER_satellite_hetman
+		}
+	}
+}
+
+country_event = {
+	id = ger_rcw_ukr.10
+	title = ger_rcw_ukr.10.t
+	desc = ger_rcw_ukr.10.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ger_rcw_ukr.10.a
+		UKR = {
+			create_country_leader = {
+				name = "Eitel I"
+				desc = ""
+				picture = "gfx/interface/leaders/GRM/GER_Eitel_Friedrich.dds"
+				expire = "1942.12.8"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+			set_cosmetic_tag = UKR_GER_satellite_german
+		}
+	}
+}
+
+
 
 
