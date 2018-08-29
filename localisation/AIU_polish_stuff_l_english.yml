@@ -22,6 +22,11 @@ polsejm.2.a:0 "Whites: Whith the rule of Samoderzhaviye, he should have all powe
 polsejm.2.b:0 "Pedecs: He should be still our King"
 polsejm.2.c:0 "Chjena/Pesels: He's not Polish, Dethrone Him!"
 
+polsejm.14.t:0 "Day 3: Question of Tsar Nicolas"
+polsejm.14.d:0 "-"
+polsejm.14.a:0 "Whites/Pedecs: He should be still our King"
+polsejm.14.b:0 "Chjena/Pesels: He's not Polish, Dethrone Him!"
+
 polsejm.3.t:0 "Day 4: Question of Current Constitution"
 polsejm.3.d:0 "-"
 polsejm.3.a:0 "Whites: It grant's freedom to Polish, it stays"
@@ -71,3 +76,93 @@ polsejm.12.a:0 "So, Witos is taking us into a new era?"
 polsejm.13.t:0 "Failure of Emergency Sejm Meeting"
 polsejm.13.d:0 "-"
 polsejm.13.a:0 "At least we tried... What can happen next?"
+
+polfail.1.t:0 "Piłsudzki Speech"
+polfail.1.d:0 "-"
+polfail.1.a:0 "He has no power, Let's ignore him..."
+
+polfail.2.t:0 "General Unrest"
+polfail.2.d:0 "-"
+polfail.2.a:0 "Interesting, that means he have some power after all..."
+
+polfail.3.t:0 "Marxist Bombing"
+polfail.3.d:0 "-"
+polfail.3.a:0 "That Róża thinks she can scare us?"
+
+polfail.4.t:0 "Marxist March on Warsaw"
+polfail.4.d:0 "-"
+polfail.4.a:0 "Oh Crap..."
+
+polfail.5.t:0 "Piłsudzki Declares Sanatory March on Warsaw"
+polfail.5.d:0 "-"
+polfail.5.a:0 "I'm confused... He wants to help us or fight us?"
+
+polfail.6.t:0 "Marxists and Sanationists Are Clashing on Streets of Warsaw"
+polfail.6.d:0 "-"
+polfail.6.a:0 "God Save us All"
+
+polbatt.1.t:0 "Battle of Wola"
+polbatt.1.d:0 "-"
+polbatt.1.a:0 "Sanationists Win"
+polbatt.1.b:0 "Marxists Win"
+
+polbatt.2.t:0 "Battle of Praga"
+polbatt.2.d:0 "-"
+polbatt.2.a:0 "Sanationists Win"
+polbatt.2.b:0 "Marxists Win"
+
+polbatt.3.t:0 "Battle of Wawer"
+polbatt.3.d:0 "-"
+polbatt.3.a:0 "Sanationists Win"
+polbatt.3.b:0 "Marxists Win"
+
+polbatt.4.t:0 "Battle of Wilanów"
+polbatt.4.d:0 "-"
+polbatt.4.a:0 "Sanationists Win"
+polbatt.4.b:0 "Marxists Win"
+
+polbatt.5.t:0 "Battle of Żoliborz"
+polbatt.5.d:0 "-"
+polbatt.5.a:0 "Sanationists Win"
+polbatt.5.b:0 "Marxists Win"
+
+polbatt.6.t:0 "Battle of Ursynów"
+polbatt.6.d:0 "-"
+polbatt.6.a:0 "Sanationists Win"
+polbatt.6.b:0 "Marxists Win"
+
+polbatt.8.t:0 "Marxist Forces are Smashed"
+polbatt.8.d:0 "-"
+polbatt.8.a:0 "So, what will he do next?"
+
+polbatt.9.t:0 "Piłsudzki Marches on Śródmieście"
+polbatt.9.d:0 "-"
+polbatt.9.a:0 "What he thinks he is doing?"
+
+polbatt.10.t:0 "Piłsudzki's Ultimatum"
+polbatt.10.d:0 "-"
+polbatt.10.a:0 "We have no choice but surrender..."
+
+polbatt.11.t:0 "Piłsudzki Declares Birth of New Polish State"
+polbatt.11.d:0 "-"
+polbatt.11.a:0 "He will be brilliant leader"
+
+polbatt.12.t:0 "Sanationists Forces are Smashed"
+polbatt.12.d:0 "-"
+polbatt.12.a:0 "Oh God..."
+
+polbatt.13.t:0 "Marxists are Marching towards Śródmieście"
+polbatt.13.d:0 "-"
+polbatt.13.a:0 "That was easy to predict"
+
+polbatt.14.t:0 "Marxists Bombards Sejm Building"
+polbatt.14.d:0 "-"
+polbatt.14.a:0 "God... save our poor souls..."
+
+polbatt.15.t:0 "Bombarded Sejm Surrenders"
+polbatt.15.d:0 "-"
+polbatt.15.a:0 "Poor people..."
+
+polbatt.16.t:0 "Marxists Declares Birth of Polish Socialist Republic"
+polbatt.16.d:0 "-"
+polbatt.16.a:0 "Long live Revolution!"
