@@ -1,6 +1,8 @@
-﻿add_namespace = polfl     #Flavor events
-add_namespace = polsejm   #Sejm events
-add_namespace = polele    #Election events
+﻿add_namespace = polfl   #Flavor events
+add_namespace = polsejm  #Sejm events
+add_namespace = polele   #Election events
+add_namespace = polfail  #Commie/Pilsudzki clashes
+add_namespace = polbatt
 
 ################################
 ## Polish Events
@@ -118,7 +120,7 @@ country_event = {
 	
 	option = { #Republic, prepare for republic
 		name = polsejm.1.e
-		country_event = { days = 7 id = polsejm.2 }
+		country_event = { days = 7 id = polsejm.14 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
 		set_country_flag = POL_G_REPUBLIC
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
@@ -154,6 +156,39 @@ country_event = {
   
         option = { #Rest/Republic, Dethrone him
 		name = polsejm.2.c
+		country_event = { days = 7 id = polsejm.3 }
+		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		set_country_flag = POL_B_G_DETHRONE
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_popularity = { ideology = social_democracy popularity = 0.05 }
+	}
+  
+}
+
+#Status of Tsar (Just to not block some ways)
+country_event = {
+	id = polsejm.14
+	title = polsejm.14.t
+	desc = polsejm.14.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Governor/PPP, Tsar Must Stay
+		name = polsejm.14.a
+		country_event = { days = 7 id = polsejm.13 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_popularity = { ideology = market_lib popularity = 0.05 }
+		set_country_flag = { flag = POL_RUSEMP value = 0 }
+		set_country_flag = { flag = POL_PPPAUT value = 0 }
+		set_country_flag = { flag = POL_INDEPE value = 0 }
+		set_country_flag = { flag = POL_RUSREP value = 0 }
+	}
+  
+        option = { #Rest/Republic, Dethrone him
+		name = polsejm.14.b
 		country_event = { days = 7 id = polsejm.3 }
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
@@ -328,7 +363,9 @@ country_event = {
 
 	option = { #Governor, Purge suspicious
 		name = polsejm.7.a
-		country_event = { days = 1 id = polsejm.8 }
+		hidden_effect = {
+		     country_event = { days = 1 id = polsejm.8 }
+		}
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
 		set_country_flag = POL_W_PURGE
 		add_popularity = { ideology = neutrality popularity = 0.05 }
@@ -336,7 +373,9 @@ country_event = {
 	
 	option = { #PPP, Let have it to elections
 		name = polsejm.7.b
-		country_event = { days = 1 id = polsejm.8 }
+		hidden_effect = {
+		     country_event = { days = 1 id = polsejm.8 }
+		}
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
 		set_country_flag = POL_Y_LEAVE_IT
 		add_popularity = { ideology = market_lib popularity = 0.05 }
@@ -344,8 +383,9 @@ country_event = {
   
         option = { #Republic/Rest, Elections NOW
 		name = polsejm.7.c
-		country_event = { days = 1 id = polsejm.8 }
-		country_event = { days = 1 id = polele.0 }
+		hidden_effect = {
+		     country_event = { days = 1 id = polsejm.8 }
+		}
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
 		set_country_flag = POL_G_B_ELECT_NOW
@@ -487,6 +527,598 @@ country_event = {
 	option = {
 		name = polsejm.13.a
 		set_country_flag = POL_NOTHING_WIN
+		hidden_effect = {
+		      country_event = polfail.1
+		}
+	}
+  
+}
+
+#Piłsudzki Speech
+country_event = {
+	id = polfail.1
+	title = polfail.1.t
+	desc = polfail.1.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polfail.1.a
+		stability_factor = -0.10
+		hidden_effect = {
+		      country_event = polfail.2
+		}
+	}
+  
+}
+
+#General Unrest
+country_event = {
+	id = polfail.2
+	title = polfail.2.t
+	desc = polfail.2.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polfail.2.a
+		stability_factor = -0.20
+		hidden_effect = {
+		      country_event = polfail.3
+		}
+	}
+  
+}
+
+#Communist Bombing
+country_event = {
+	id = polfail.3
+	title = polfail.3.t
+	desc = polfail.3.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polfail.3.a
+		stability_factor = -0.05
+		hidden_effect = {
+		      country_event = polfail.4
+		}
+	}
+  
+}
+
+#Commies marching of Warsaw
+country_event = {
+	id = polfail.4
+	title = polfail.4.t
+	desc = polfail.4.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polfail.4.a
+		stability_factor = -0.05
+		hidden_effect = {
+		      country_event = polfail.5
+		}
+	}
+  
+}
+
+#Piłsudzki long march
+country_event = {
+	id = polfail.5
+	title = polfail.5.t
+	desc = polfail.5.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polfail.5.a
+		stability_factor = -0.05
+		hidden_effect = {
+		      country_event = polfail.6
+		}
+	}
+  
+}
+
+#Clash on strets of Warsaw
+country_event = {
+	id = polfail.6
+	title = polfail.6.t
+	desc = polfail.6.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polfail.6.a
+		stability_factor = -0.05
+		set_country_flag = { flag = POL_BAT_PILSUDZKI value = 0 }
+		set_country_flag = { flag = POL_BAT_COMMIES value = 0 }
+		hidden_effect = {
+		      country_event = polbatt.1
+		}
+	}
+  
+}
+
+#Battle of Wola
+country_event = {
+	id = polbatt.1
+	title = polbatt.1.t
+	desc = polbatt.1.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.1.a
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.2
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+	
+	option = {
+		name = polbatt.1.b
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.2
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+  
+}
+
+#Battle of Praga
+country_event = {
+	id = polbatt.2
+	title = polbatt.2.t
+	desc = polbatt.2.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.2.a
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.3
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+	
+	option = {
+		name = polbatt.2.b
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.3
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+  
+}
+
+#Battle of Wawer
+country_event = {
+	id = polbatt.3
+	title = polbatt.3.t
+	desc = polbatt.3.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.3.a
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.4
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+	
+	option = {
+		name = polbatt.3.b
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.4
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+  
+}
+
+#Battle of Wilanów
+country_event = {
+	id = polbatt.4
+	title = polbatt.4.t
+	desc = polbatt.4.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.4.a
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.5
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+	
+	option = {
+		name = polbatt.4.b
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.5
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+  
+}
+
+#Battle of Żoliborz
+country_event = {
+	id = polbatt.5
+	title = polbatt.5.t
+	desc = polbatt.5.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.5.a
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.6
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+	
+	option = {
+		name = polbatt.5.b
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.6
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+  
+}
+
+#Battle of Ursynów
+country_event = {
+	id = polbatt.6
+	title = polbatt.6.t
+	desc = polbatt.6.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.6.a
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.7
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+	
+	option = {
+		name = polbatt.6.b
+		stability_factor = -0.01
+		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
+		hidden_effect = {
+		      country_event = polbatt.7
+		}
+		
+		10 = {
+		   damage_building = {
+			type = infrastructure
+			damage = 1
+	           }
+		}
+	}
+  
+}
+
+#Battles Result
+country_event = {
+	id = polbatt.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event polsejm.6"}
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = { flag = POL_BAT_PILSUDZKI value > 3 } }  #Piłsudzki
+			country_event = polbatt.8
+			set_country_flag = POL_BATTLES_END
+		}
+		if = {
+			limit = { has_country_flag = { flag = POL_BAT_COMMIES value > 3 } }  #Commies
+			country_event = polbatt.12
+			set_country_flag = POL_BATTLES_END
+		}
+		if = {
+			limit = {
+				has_country_flag = { flag = POL_BAT_PILSUDZKI value < 4 }
+				has_country_flag = { flag = POL_BAT_COMMIES value < 4 }
+			}
+			random_list = {
+			       50 = { country_event = { id = polbatt.8 days = 1 } } #Pilsudzki
+			       50 = { country_event = { id = polbatt.12 days = 1 } } #Commies
+			}
+		}
+	}
+}
+
+#Pilsudzki Wins
+country_event = {
+	id = polbatt.8
+	title = polbatt.8.t
+	desc = polbatt.8.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.8.a
+		hidden_effect = {
+		      country_event = polbatt.9
+		}
+	}
+  
+}
+
+#Pilsudzki marches on Śródmieście
+country_event = {
+	id = polbatt.9
+	title = polbatt.9.t
+	desc = polbatt.9.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.9.a
+		stability_factor = -0.05
+		hidden_effect = {
+		      country_event = polbatt.10
+		}
+	}
+  
+}
+
+#Piłsudzki demands to give him power
+country_event = {
+	id = polbatt.10
+	title = polbatt.10.t
+	desc = polbatt.10.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.10.a
+		hidden_effect = {
+		      country_event = polbatt.11
+		}
+	}
+  
+}
+
+#Pilsudzki rules
+country_event = {
+	id = polbatt.11
+	title = polbatt.11.t
+	desc = polbatt.11.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.11.a
+		stability_factor = 0.20
+		set_country_flag = POL_PILSUDZKI_COUP
+	}
+  
+}
+
+#Commies Win
+country_event = {
+	id = polbatt.12
+	title = polbatt.12.t
+	desc = polbatt.12.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.12.a
+		hidden_effect = {
+		      country_event = polbatt.13
+		}
+	}
+  
+}
+
+#Commies Marching on Śródmieście
+country_event = {
+	id = polbatt.13
+	title = polbatt.13.t
+	desc = polbatt.13.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.13.a
+		stability_factor = -0.05
+		hidden_effect = {
+		      country_event = polbatt.14
+		}
+	}
+  
+}
+
+#Commies bombards sejm
+country_event = {
+	id = polbatt.14
+	title = polbatt.14.t
+	desc = polbatt.14.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.14.a
+		stability_factor = -0.10
+		hidden_effect = {
+		      country_event = polbatt.15
+		}
+	}
+  
+}
+
+#Sejm surrenders
+country_event = {
+	id = polbatt.15
+	title = polbatt.15.t
+	desc = polbatt.15.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.15.a
+		hidden_effect = {
+		      country_event = polbatt.16
+		}
+	}
+  
+}
+
+#Commies Rules
+country_event = {
+	id = polbatt.16
+	title = polbatt.16.t
+	desc = polbatt.16.d
+	picture = GFX_report_event_GRM_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = polbatt.16.a
+		stability_factor = 0.30
+		set_country_flag = POL_COMMIE_COUP
 	}
   
 }
