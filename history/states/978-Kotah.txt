@@ -1,0 +1,22 @@
+state={
+	id=978
+	name="STATE_978"
+	provinces={
+		1199 2092 4106 4971 10816 
+	}
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			1199 1 #kota 
+		}
+
+	}
+
+	manpower=2345362
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

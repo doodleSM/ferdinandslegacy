@@ -1,0 +1,21 @@
+state={
+	id=973
+	name="STATE_973"
+	provinces={
+		2005 4410 7938 10332 
+	}
+	history={
+		owner = RAJ
+		
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+
+	
+	manpower=4153432
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

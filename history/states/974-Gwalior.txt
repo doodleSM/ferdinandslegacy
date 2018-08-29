@@ -1,0 +1,22 @@
+state={
+	id=974
+	name="STATE_974"
+	provinces={
+		1949 2036 7080 10807 
+	}
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			10807 1 #gwalior
+		}
+
+	}
+
+	manpower=29592500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

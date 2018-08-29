@@ -1,0 +1,32 @@
+state={
+	id=946
+	name="STATE_946"
+	resources={
+		rubber=20.000
+	}
+	provinces={
+		7344 10201 10229 10287 
+	}
+	history={
+		owner = ENG
+		victory_points = {
+			10201 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 3
+			10201 = {
+				naval_base = 5
+
+			}
+
+		}
+
+	}
+
+	
+	manpower=2564733
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

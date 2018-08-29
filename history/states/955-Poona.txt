@@ -1,0 +1,22 @@
+state={
+	id=955
+	name="STATE_955"
+	provinces={
+		4353 10210 12142 12182 
+	}
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			12182 5 #pune
+		}
+
+	}
+
+	manpower=3567453
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

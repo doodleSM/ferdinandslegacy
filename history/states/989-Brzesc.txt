@@ -1,0 +1,28 @@
+state={
+	id=989
+	name="STATE_989"
+	provinces={
+		3392 
+	}
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			3392 1 
+		}
+		add_core_of = BLU
+		add_core_of = RUS
+		add_core_of = RSP
+		add_core_of = BLR
+		add_core_of = POL
+
+	}
+
+	
+	manpower=340362
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

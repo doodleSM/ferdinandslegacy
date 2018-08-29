@@ -1,0 +1,26 @@
+state={
+	id=930
+	name="STATE_930"
+	resources={
+		steel=4.000
+	}
+	provinces={
+		4819 8204 10650 12632 
+	}
+	history={
+		owner = NZL
+		buildings = {
+			infrastructure = 5
+
+		}
+		victory_points = {
+			12632 1 
+		}
+		add_core_of = NZL
+
+	}
+
+	manpower=200156
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

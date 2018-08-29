@@ -1,0 +1,21 @@
+state={
+	id=954
+	name="STATE_954"
+	provinces={
+		4291 4395 7232 
+	}
+	history={
+		owner = RAJ
+		victory_points = {
+			7232 1 #ratnagiri
+		}
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+	manpower=2786746
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

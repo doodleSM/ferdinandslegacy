@@ -1,0 +1,23 @@
+state={
+	id=976
+	name="STATE_976"
+	provinces={
+		1144 4090 4132 7207 10118 12037 
+	}
+	history={
+		owner = RAJ
+		victory_points = {
+			4090 1 #junagadh
+		}
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+
+	
+	manpower=4123546
+	buildings_max_level_factor=1.000
+	state_category=town
+}

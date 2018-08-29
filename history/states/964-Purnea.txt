@@ -1,0 +1,23 @@
+state={
+	id=964
+	name="STATE_964"
+	provinces={
+		1656 7475 12338 
+	}
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			7475 3 #purnea
+		}
+
+	}
+
+	
+	manpower=4567463
+	buildings_max_level_factor=1.000
+	state_category=town
+}

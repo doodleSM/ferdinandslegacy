@@ -1,0 +1,24 @@
+state={
+	id=934
+	name="STATE_934"
+	provinces={
+		2201 5207 8209 8247 10937 10958 11016 
+	}
+	history={
+		owner = AST
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			8209 1 #broome 
+		}
+		add_core_of = AST
+
+	}
+
+	
+	manpower=38974
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

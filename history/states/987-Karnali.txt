@@ -1,0 +1,24 @@
+state={
+	id=987
+	name="STATE_987"
+	provinces={
+		4386 7374 10825 10910 
+	}
+	history={
+		owner = NEP
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			4386 1 #Ghorahi
+		}
+		add_core_of = NEP
+
+	}
+
+	
+	manpower=1986463
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

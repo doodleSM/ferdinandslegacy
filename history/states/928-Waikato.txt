@@ -1,0 +1,25 @@
+state={
+	id=928
+	name="STATE_928"
+	provinces={
+		1565 1713 1746 4718 7783 7887 10710 12362 12664 
+	}
+	history={
+		owner = NZL
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			7887 1
+		}
+		add_core_of = NZL
+
+	}
+
+	
+	manpower=200657
+	buildings_max_level_factor=1.000
+	state_category=town
+}

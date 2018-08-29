@@ -1,0 +1,32 @@
+
+state={
+	id=422
+	name="STATE_422"
+	resources={
+		rubber=40.000
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			7260 5 #colombo
+		}
+		buildings = {
+			infrastructure = 3
+			7260 = {
+				naval_base = 3
+				coastal_bunker = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1213 4219 7260 12258 
+	}
+	manpower=3456463
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
