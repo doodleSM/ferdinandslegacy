@@ -46,6 +46,7 @@ country_event = {
 		name = polsejm.0.a
 		country_event = { days = 7 id = polsejm.1 }
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		set_country_flag = POL_W_BAN_PARTIES
 		add_popularity = { ideology = anarchism popularity = -0.10 }
 		add_popularity = { ideology = communism popularity = -0.10 }
 		add_popularity = { ideology = radical_socialism popularity = -0.10 }
@@ -61,6 +62,7 @@ country_event = {
 		name = polsejm.0.b
 		country_event = { days = 7 id = polsejm.1 }
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		set_country_flag = POL_Y_BAN_UNTSAR
 		add_popularity = { ideology = market_lib popularity = 0.05 }
 		add_popularity = { ideology = anarchism popularity = -0.10 }
 		add_popularity = { ideology = communism popularity = -0.10 }
@@ -73,6 +75,7 @@ country_event = {
 		country_event = { days = 7 id = polsejm.1 }
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		set_country_flag = POL_B_G_LEAVE_PARTIES
 		add_popularity = { ideology = democratic popularity = 0.05 }
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
 	}
@@ -93,6 +96,7 @@ country_event = {
 		name = polsejm.1.a
 		country_event = { days = 7 id = polsejm.2 }
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		set_country_flag = POL_W_POWER_GOVENOR
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 	}
   
@@ -100,6 +104,7 @@ country_event = {
 		name = polsejm.1.b
 		country_event = { days = 7 id = polsejm.2 }
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		set_country_flag = POL_Y_STATUS_QUO
 		add_popularity = { ideology = market_lib popularity = 0.05 }
 	}
   
@@ -107,6 +112,7 @@ country_event = {
 		name = polsejm.1.c
 		country_event = { days = 7 id = polsejm.2 }
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		set_country_flag = POL_B_ABOLISH_GOVERNOR
 		add_popularity = { ideology = democratic popularity = 0.05 }
 	}
 	
@@ -114,6 +120,7 @@ country_event = {
 		name = polsejm.1.e
 		country_event = { days = 7 id = polsejm.2 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		set_country_flag = POL_G_REPUBLIC
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
 	}
   
@@ -133,6 +140,7 @@ country_event = {
 		name = polsejm.2.a
 		country_event = { days = 7 id = polsejm.3 }
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		set_country_flag = POL_W_ABSOLUTISM
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 	}
 	
@@ -140,6 +148,7 @@ country_event = {
 		name = polsejm.2.b
 		country_event = { days = 7 id = polsejm.3 }
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		set_country_flag = POL_Y_TSAR_SAYS
 		add_popularity = { ideology = market_lib popularity = 0.05 }
 	}
   
@@ -148,6 +157,7 @@ country_event = {
 		country_event = { days = 7 id = polsejm.3 }
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		set_country_flag = POL_B_G_DETHRONE
 		add_popularity = { ideology = democratic popularity = 0.05 }
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
 	}
@@ -168,6 +178,7 @@ country_event = {
 		name = polsejm.3.a
 		country_event = { days = 7 id = polsejm.4 }
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		set_country_flag = POL_W_CONST_STAYS
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 	}
 	
@@ -175,6 +186,7 @@ country_event = {
 		name = polsejm.3.b
 		country_event = { days = 7 id = polsejm.4 }
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		set_country_flag = POL_Y_CONST_SOME_CHANGE
 		add_popularity = { ideology = market_lib popularity = 0.05 }
 	}
   
@@ -182,6 +194,7 @@ country_event = {
 		name = polsejm.3.c
 		country_event = { days = 7 id = polsejm.4 }
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		set_country_flag = POL_B_CONST_ABOLISH
 		add_popularity = { ideology = democratic popularity = 0.05 }
 	}
 	
@@ -189,6 +202,7 @@ country_event = {
 		name = polsejm.3.e
 		country_event = { days = 7 id = polsejm.4 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		set_country_flag = POL_G_CONST_CHANGE
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
 	}
   
@@ -208,6 +222,7 @@ country_event = {
 		name = polsejm.4.a
 		country_event = { days = 7 id = polsejm.5 }
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		set_country_flag = POL_W_NO_ELECTIONS
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 	}
   
@@ -217,6 +232,7 @@ country_event = {
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		set_country_flag = POL_Y_B_G_ELECTIONS
 		add_popularity = { ideology = market_lib popularity = 0.05 }
 		add_popularity = { ideology = democratic popularity = 0.05 }
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
@@ -239,6 +255,7 @@ country_event = {
 		country_event = { days = 7 id = polsejm.6 }
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		set_country_flag = POL_W_Y_HELP_TSAR
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 		add_popularity = { ideology = market_lib popularity = 0.05 }
 	}
@@ -247,6 +264,7 @@ country_event = {
 		name = polsejm.5.b
 		country_event = { days = 7 id = polsejm.6 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		set_country_flag = POL_G_HELP_REPUBLIC
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
 	}
   
@@ -254,6 +272,7 @@ country_event = {
 		name = polsejm.5.c
 		country_event = { days = 7 id = polsejm.6 }
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		set_country_flag = POL_B_NONE
 		add_popularity = { ideology = democratic popularity = 0.05 }
 	}
   
@@ -273,6 +292,7 @@ country_event = {
 		name = polsejm.6.a
 		country_event = { days = 7 id = polsejm.7 }
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		set_country_flag = POL_W_PM_ABOLISH
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 	}
 	
@@ -281,6 +301,7 @@ country_event = {
 		country_event = { days = 7 id = polsejm.7 }
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
+		set_country_flag = POL_Y_B_PM_MODERATE
 		add_popularity = { ideology = market_lib popularity = 0.05 }
 		add_popularity = { ideology = democratic popularity = 0.05 }
 	}
@@ -289,6 +310,7 @@ country_event = {
 		name = polsejm.6.c
 		country_event = { days = 7 id = polsejm.7 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		set_country_flag = POL_G_PM_TOTAL
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
 	}
   
@@ -308,6 +330,7 @@ country_event = {
 		name = polsejm.7.a
 		country_event = { days = 1 id = polsejm.8 }
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
+		set_country_flag = POL_W_PURGE
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 	}
 	
@@ -315,6 +338,7 @@ country_event = {
 		name = polsejm.7.b
 		country_event = { days = 1 id = polsejm.8 }
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
+		set_country_flag = POL_Y_LEAVE_IT
 		add_popularity = { ideology = market_lib popularity = 0.05 }
 	}
   
@@ -324,6 +348,7 @@ country_event = {
 		country_event = { days = 1 id = polele.0 }
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
+		set_country_flag = POL_G_B_ELECT_NOW
 		add_popularity = { ideology = democratic popularity = 0.05 }
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
 	}
