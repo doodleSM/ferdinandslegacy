@@ -1,0 +1,2548 @@
+focus_tree = {
+	id = polish_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = POL
+		}
+	}
+	default = no
+	focus = {
+		id = POL_republican_side
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 48
+		y = 0
+
+	}
+	focus = {
+		id = POL_tsarist_side
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 50
+		y = 0
+
+	}
+	focus = {
+		id = POL_communist_side
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 52
+		y = 0
+
+	}
+	focus = {
+		id = POL_alone
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 44
+		y = 0
+
+	}
+	focus = {
+		id = POL_psl
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 19
+		y = 0
+
+	}
+	focus = {
+		id = POL_ppp
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 11
+		y = 0
+
+	}
+	focus = {
+		id = POL_governor
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 3
+		y = 0
+
+	}
+	focus = {
+		id = POL_pschd
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 27
+		y = 0
+
+	}
+	focus = {
+		id = POL_polish_republic
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 1
+		y = 7
+
+	}
+	focus = {
+		id = POL_tsar
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 7
+		y = 7
+
+	}
+	focus = {
+		id = POL_new_king
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 16
+		y = 7
+
+	}
+	focus = {
+		id = POL_military_junta
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 34
+		y = 0
+
+	}
+	focus = {
+		id = POL_communist_coup
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 38
+		y = 0
+
+	}
+	focus = {
+		id = POL_military_fac
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 27
+		y = 7
+
+	}
+	focus = {
+		id = POL_infrastructure
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 29
+		y = 7
+
+	}
+	focus = {
+		id = POL_inds_tech
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 31
+		y = 7
+
+	}
+	focus = {
+		id = POL_army
+		icon = GFX_goal_unknown
+		cost = 10,00
+		x = 59
+		y = 0
+
+	}
+	focus = {
+		id = POL_for_god_and_tsar
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_governor
+		}
+		x = 2
+		y = 1
+
+	}
+	focus = {
+		id = POL_ban_polish_parties
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_for_god_and_tsar
+		}
+		x = 0
+		y = 2
+
+	}
+	focus = {
+		id = POL_ban_polish_organisations
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ban_polish_parties
+		}
+		x = 0
+		y = 3
+
+	}
+	focus = {
+		id = POL_power_of_pm
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_polish_republic
+		}
+		x = 0
+		y = 8
+
+	}
+	focus = {
+		id = POL_prepare_new_sejm
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_power_of_pm
+		}
+		x = 0
+		y = 9
+
+	}
+	focus = {
+		id = POL_reinstal_russification
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_for_god_and_tsar
+		}
+		x = 2
+		y = 2
+
+	}
+	focus = {
+		id = POL_ban_polish_language
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_reinstal_russification
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = POL_loyal_state
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ban_polish_organisations
+		}
+		prerequisite = {
+			focus = POL_ban_polish_language
+		}
+		x = 1
+		y = 4
+
+	}
+	focus = {
+		id = POL_power_of_president
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_polish_republic
+		}
+		x = 2
+		y = 8
+
+	}
+	focus = {
+		id = POL_presidential_act
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_power_of_president
+		}
+		x = 2
+		y = 9
+
+	}
+	focus = {
+		id = POL_governors_resposibities_act
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_governor
+		}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = POL_purge_unloyal_sejm_members
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_governors_resposibities_act
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = POL_abolish_prime_minister
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_purge_unloyal_sejm_members
+		}
+		x = 4
+		y = 3
+
+	}
+	focus = {
+		id = POL_crush_communists
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ban_polish_language
+			focus = POL_abolish_prime_minister
+		}
+		x = 3
+		y = 4
+
+	}
+	focus = {
+		id = POL_samodzierzavie
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_tsar
+		}
+		x = 5
+		y = 8
+
+	}
+	focus = {
+		id = POL_new_use_of_sejm_building
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_samodzierzavie
+		}
+		x = 4
+		y = 9
+
+	}
+	focus = {
+		id = POL_tsarist_monuments
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_use_of_sejm_building
+		}
+		x = 4
+		y = 10
+
+	}
+	focus = {
+		id = POL_russian_propaganda
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_tsarist_monuments
+		}
+		x = 4
+		y = 11
+
+	}
+	focus = {
+		id = POL_polish_okhranka
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_governors_resposibities_act
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = POL_purge_polish_parties
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_polish_okhranka
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = POL_loyal_government
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_abolish_prime_minister
+		}
+		prerequisite = {
+			focus = POL_purge_polish_parties
+		}
+		x = 5
+		y = 4
+
+	}
+	focus = {
+		id = POL_censorship
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_samodzierzavie
+		}
+		x = 6
+		y = 9
+
+	}
+	focus = {
+		id = POL_crush_anti_tsarist_organisations
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_censorship
+		}
+		x = 6
+		y = 10
+
+	}
+	focus = {
+		id = POL_vistulan_krai
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_crush_anti_tsarist_organisations
+		}
+		x = 6
+		y = 11
+
+	}
+	focus = {
+		id = POL_new_voting_laws
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ppp
+		}
+		x = 8
+		y = 1
+
+	}
+	focus = {
+		id = POL_new_meaning_of_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_voting_laws
+		}
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = POL_temporary_prime_minister
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_voting_laws
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = POL_const_monarchy
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_tsar
+		}
+		x = 9
+		y = 8
+
+	}
+	focus = {
+		id = POL_tsar_social_reforms
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_const_monarchy
+		}
+		x = 9
+		y = 9
+
+	}
+	focus = {
+		id = POL_pm_choosing
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_tsar_social_reforms
+		}
+		x = 8
+		y = 10
+
+	}
+	focus = {
+		id = POL_pm_and_tsar_meeting
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_pm_choosing
+		}
+		x = 8
+		y = 11
+
+	}
+	focus = {
+		id = POL_ban_unloyal_to_tsar_parties
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ppp
+		}
+		x = 10
+		y = 1
+
+	}
+	focus = {
+		id = POL_coalition_with_dmowski
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ppp
+		}
+		x = 12
+		y = 1
+
+	}
+	focus = {
+		id = POL_russophile_coalition
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ban_unloyal_to_tsar_parties
+		}
+		prerequisite = {
+			focus = POL_coalition_with_dmowski
+		}
+		x = 11
+		y = 2
+
+	}
+	focus = {
+		id = POL_renew_warsaw_wienna_railway
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_russophile_coalition
+		}
+		prerequisite = {
+			focus = POL_temporary_prime_minister
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = POL_reverse_russification
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ppp
+		}
+		x = 14
+		y = 1
+
+	}
+	focus = {
+		id = POL_lasses_faure
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_reverse_russification
+		}
+		x = 13
+		y = 2
+
+	}
+	focus = {
+		id = POL_support_manufatories
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_russophile_coalition
+		}
+		prerequisite = {
+			focus = POL_lasses_faure
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = POL_new_elections
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_renew_warsaw_wienna_railway
+		}
+		prerequisite = {
+			focus = POL_support_manufatories
+		}
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = POL_polonisation_under_russian_eagle
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_reverse_russification
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = POL_maurycy_zamoyski
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_king
+		}
+		x = 14
+		y = 8
+
+	}
+	focus = {
+		id = POL_russian_ties
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_maurycy_zamoyski
+		}
+		x = 14
+		y = 9
+
+	}
+	focus = {
+		id = POL_extend_sejm_laws
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_russian_ties
+		}
+		x = 14
+		y = 10
+
+	}
+	focus = {
+		id = POL_english_style_monarchy
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_extend_sejm_laws
+		}
+		x = 14
+		y = 11
+
+	}
+	focus = {
+		id = POL_all_power_to_pm
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_psl
+		}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = POL_organize_elections
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_psl
+		}
+		x = 18
+		y = 1
+
+	}
+	focus = {
+		id = POL_temporary_pm
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_all_power_to_pm
+		}
+		prerequisite = {
+			focus = POL_organize_elections
+		}
+		x = 17
+		y = 2
+
+	}
+	focus = {
+		id = POL_question_of_radicals
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_temporary_pm
+		}
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = POL_reform_sejm
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_temporary_pm
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = POL_new_constitution
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_question_of_radicals
+		}
+		prerequisite = {
+			focus = POL_reform_sejm
+		}
+		x = 17
+		y = 4
+
+	}
+	focus = {
+		id = POL_aimone_aosta
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_king
+		}
+		x = 18
+		y = 8
+
+	}
+	focus = {
+		id = POL_promote_alpinism
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_aimone_aosta
+		}
+		x = 18
+		y = 9
+
+	}
+	focus = {
+		id = POL_promote_italian_tourism
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_promote_alpinism
+		}
+		x = 18
+		y = 10
+
+	}
+	focus = {
+		id = POL_constitution
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_promote_italian_tourism
+		}
+		x = 18
+		y = 11
+
+	}
+	focus = {
+		id = POL_italian_but_polish_king
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_constitution
+		}
+		x = 18
+		y = 12
+
+	}
+	focus = {
+		id = POL_republic_referendum
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_psl
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = POL_arrest_governor
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_organize_elections
+			focus = POL_republic_referendum
+		}
+		x = 19
+		y = 2
+
+	}
+	focus = {
+		id = POL_support_polish_parties
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_psl
+		}
+		x = 22
+		y = 1
+
+	}
+	focus = {
+		id = POL_left_coalition
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_republic_referendum
+		}
+		prerequisite = {
+			focus = POL_support_polish_parties
+		}
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = POL_question_of_dmowski
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_left_coalition
+		}
+		x = 20
+		y = 3
+
+	}
+	focus = {
+		id = POL_burn_tsar_portraits
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_reform_sejm
+			focus = POL_question_of_dmowski
+		}
+		x = 19
+		y = 4
+
+	}
+	focus = {
+		id = POL_question_of_ppp
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_left_coalition
+		}
+		x = 22
+		y = 3
+
+	}
+	focus = {
+		id = POL_stable_coalition
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_question_of_dmowski
+		}
+		prerequisite = {
+			focus = POL_question_of_ppp
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = POL_remove_governor_position
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_pschd
+		}
+		x = 25
+		y = 1
+
+	}
+	focus = {
+		id = POL_support_korfanty
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_remove_governor_position
+		}
+		x = 24
+		y = 2
+
+	}
+	focus = {
+		id = POL_remeber_partitions
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_support_korfanty
+		}
+		x = 24
+		y = 3
+
+	}
+	focus = {
+		id = POL_polish_parties
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_pschd
+		}
+		x = 27
+		y = 1
+
+	}
+	focus = {
+		id = POL_abolish_constitution
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_polish_parties
+		}
+		x = 27
+		y = 2
+
+	}
+	focus = {
+		id = POL_meet_pilsudzki
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_abolish_constitution
+		}
+		x = 26
+		y = 3
+
+	}
+	focus = {
+		id = POL_stable_diplomacy
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_remeber_partitions
+		}
+		prerequisite = {
+			focus = POL_meet_pilsudzki
+		}
+		x = 25
+		y = 4
+
+	}
+	focus = {
+		id = POL_social_reforms
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_abolish_constitution
+		}
+		x = 28
+		y = 3
+
+	}
+	focus = {
+		id = POL_remove_all_tsarist_past
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_meet_pilsudzki
+			focus = POL_social_reforms
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = POL_more_power_to_pm
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_pschd
+		}
+		x = 29
+		y = 1
+
+	}
+	focus = {
+		id = POL_new_legislature
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_more_power_to_pm
+		}
+		x = 30
+		y = 2
+
+	}
+	focus = {
+		id = POL_call_new_sejm
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_legislature
+		}
+		x = 30
+		y = 3
+
+	}
+	focus = {
+		id = POL_stable_politics
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_social_reforms
+		}
+		prerequisite = {
+			focus = POL_call_new_sejm
+		}
+		x = 29
+		y = 4
+
+	}
+	focus = {
+		id = POL_christian_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_stable_diplomacy
+		}
+		prerequisite = {
+			focus = POL_stable_politics
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = POL_military_police
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_military_junta
+		}
+		x = 32
+		y = 1
+
+	}
+	focus = {
+		id = POL_purge_sejm
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_military_junta
+		}
+		x = 34
+		y = 1
+
+	}
+	focus = {
+		id = POL_marshals_declaration
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_military_police
+		}
+		prerequisite = {
+			focus = POL_purge_sejm
+		}
+		x = 33
+		y = 2
+
+	}
+	focus = {
+		id = POL_cult_of_marshal
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_marshals_declaration
+		}
+		x = 33
+		y = 3
+
+	}
+	focus = {
+		id = POL_sanation
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_cult_of_marshal
+		}
+		x = 32
+		y = 4
+
+	}
+	focus = {
+		id = POL_birth_of_bbwr
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_cult_of_marshal
+		}
+		x = 34
+		y = 4
+
+	}
+	focus = {
+		id = POL_anti_tsarist_organisation
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_military_junta
+			focus = POL_communist_coup
+		}
+		x = 36
+		y = 1
+
+	}
+	focus = {
+		id = POL_burn_portraits
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_anti_tsarist_organisation
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = POL_close_ordx_churches
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_burn_portraits
+		}
+		x = 35
+		y = 3
+
+	}
+	focus = {
+		id = POL_hunt_tsars_loyalists
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_anti_tsarist_organisation
+		}
+		x = 37
+		y = 2
+
+	}
+	focus = {
+		id = POL_political_camp
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_hunt_tsars_loyalists
+		}
+		x = 37
+		y = 3
+
+	}
+	focus = {
+		id = POL_detsarisied_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_close_ordx_churches
+		}
+		prerequisite = {
+			focus = POL_political_camp
+		}
+		x = 36
+		y = 4
+
+	}
+	focus = {
+		id = POL_pure_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_sanation
+		}
+		prerequisite = {
+			focus = POL_detsarisied_poland
+		}
+		prerequisite = {
+			focus = POL_birth_of_bbwr
+		}
+		x = 34
+		y = 5
+
+	}
+	focus = {
+		id = POL_create_communes
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_communist_coup
+		}
+		x = 38
+		y = 1
+
+	}
+	focus = {
+		id = POL_collectivisation
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_communist_coup
+		}
+		x = 40
+		y = 1
+
+	}
+	focus = {
+		id = POL_socialist_congress
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_create_communes
+		}
+		prerequisite = {
+			focus = POL_collectivisation
+		}
+		x = 39
+		y = 2
+
+	}
+	focus = {
+		id = POL_red_constitution
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_socialist_congress
+		}
+		x = 39
+		y = 3
+
+	}
+	focus = {
+		id = POL_red_militia
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_red_constitution
+		}
+		x = 38
+		y = 4
+
+	}
+	focus = {
+		id = POL_purge_right
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_red_constitution
+		}
+		x = 40
+		y = 4
+
+	}
+	focus = {
+		id = POL_ukrainian_case
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_alone
+		}
+		x = 43
+		y = 1
+
+	}
+	focus = {
+		id = POL_treaty_of_kiev
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ukrainian_case
+		}
+		mutually_exclusive = {
+			focus = POL_fight_anarchists
+		}
+		x = 42
+		y = 2
+
+	}
+	focus = {
+		id = POL_fight_anarchists
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ukrainian_case
+		}
+		mutually_exclusive = {
+			focus = POL_treaty_of_kiev
+		}
+		x = 44
+		y = 2
+
+	}
+	focus = {
+		id = POL_supress_oun
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_treaty_of_kiev
+			focus = POL_fight_anarchists
+		}
+		x = 42
+		y = 3
+
+	}
+	focus = {
+		id = POL_black_army_purge
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_fight_anarchists
+		}
+		x = 44
+		y = 3
+
+	}
+	focus = {
+		id = POL_ukraine_is_polish_again
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_supress_oun
+			focus = POL_black_army_purge
+		}
+		x = 43
+		y = 4
+
+	}
+	focus = {
+		id = POL_polish_soviet_war
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_alone
+		}
+		x = 46
+		y = 1
+
+	}
+	focus = {
+		id = POL_riga_treaty
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_polish_soviet_war
+		}
+		x = 46
+		y = 2
+
+	}
+	focus = {
+		id = POL_repair_wounds_of_collectivisation
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_riga_treaty
+		}
+		x = 46
+		y = 3
+
+	}
+	focus = {
+		id = POL_belarus_is_polish_again
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_repair_wounds_of_collectivisation
+		}
+		x = 46
+		y = 4
+
+	}
+	focus = {
+		id = POL_plc_idea
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ukraine_is_polish_again
+		}
+		prerequisite = {
+			focus = POL_belarus_is_polish_again
+		}
+		x = 44
+		y = 5
+
+	}
+	focus = {
+		id = POL_we_need_access_to_sea
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_plc_idea
+		}
+		x = 41
+		y = 6
+
+	}
+	focus = {
+		id = POL_moldavian_problem
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_we_need_access_to_sea
+		}
+		x = 39
+		y = 7
+
+	}
+	focus = {
+		id = POL_lithuanian_bases
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_we_need_access_to_sea
+		}
+		x = 43
+		y = 7
+
+	}
+	focus = {
+		id = POL_lithuanian_case
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_plc_idea
+		}
+		x = 47
+		y = 6
+
+	}
+	focus = {
+		id = POL_agreement_with_lithuanians
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_lithuanian_case
+		}
+		mutually_exclusive = {
+			focus = POL_threathen_lithuania
+			focus = POL_attack_lithuania
+		}
+		x = 45
+		y = 7
+
+	}
+	focus = {
+		id = POL_threathen_lithuania
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_lithuanian_case
+		}
+		mutually_exclusive = {
+			focus = POL_attack_lithuania
+			focus = POL_agreement_with_lithuanians
+		}
+		x = 47
+		y = 7
+
+	}
+	focus = {
+		id = POL_equal_pol_lit
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_agreement_with_lithuanians
+		}
+		x = 45
+		y = 8
+
+	}
+	focus = {
+		id = POL_polish_legion
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_republican_side
+		}
+		x = 48
+		y = 1
+
+	}
+	focus = {
+		id = POL_polish_imperial_army
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_tsarist_side
+		}
+		x = 50
+		y = 1
+
+	}
+	focus = {
+		id = POL_polish_peoples_army
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_communist_side
+		}
+		x = 52
+		y = 1
+
+	}
+	focus = {
+		id = POL_intervene_in_civil_war
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_polish_legion
+			focus = POL_polish_imperial_army
+			focus = POL_polish_peoples_army
+		}
+		x = 50
+		y = 2
+
+	}
+	focus = {
+		id = POL_republic_policies
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_intervene_in_civil_war
+		}
+		x = 49
+		y = 3
+
+	}
+	focus = {
+		id = POL_autonomus_republic
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_republic_policies
+		}
+		x = 48
+		y = 4
+
+	}
+	focus = {
+		id = POL_commie_policies
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_intervene_in_civil_war
+		}
+		x = 51
+		y = 3
+
+	}
+	focus = {
+		id = POL_equal_ally
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_republic_policies
+			focus = POL_commie_policies
+		}
+		x = 50
+		y = 4
+
+	}
+	focus = {
+		id = POL_ssr
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_commie_policies
+		}
+		x = 52
+		y = 4
+
+	}
+	focus = {
+		id = POL_land
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_army
+		}
+		x = 55
+		y = 1
+
+	}
+	focus = {
+		id = POL_land_1
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_land
+		}
+		x = 54
+		y = 2
+
+	}
+	focus = {
+		id = POL_land_3
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_land_1
+		}
+		x = 54
+		y = 3
+
+	}
+	focus = {
+		id = POL_land_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_land
+		}
+		x = 56
+		y = 2
+
+	}
+	focus = {
+		id = POL_hussars
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_land_2
+		}
+		x = 56
+		y = 3
+
+	}
+	focus = {
+		id = POL_land_4
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_land_3
+		}
+		prerequisite = {
+			focus = POL_hussars
+		}
+		x = 55
+		y = 4
+
+	}
+	focus = {
+		id = POL_sea
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_army
+		}
+		x = 59
+		y = 1
+
+	}
+	focus = {
+		id = POL_battleships
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_sea
+		}
+		mutually_exclusive = {
+			focus = POL_submarines
+		}
+		x = 58
+		y = 2
+
+	}
+	focus = {
+		id = POL_battleships_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_battleships
+		}
+		x = 58
+		y = 3
+
+	}
+	focus = {
+		id = POL_submarines
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_sea
+		}
+		mutually_exclusive = {
+			focus = POL_battleships
+		}
+		x = 60
+		y = 2
+
+	}
+	focus = {
+		id = POL_submarines_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_submarines
+		}
+		x = 60
+		y = 3
+
+	}
+	focus = {
+		id = POL_sea_1
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_battleships_2
+			focus = POL_submarines_2
+		}
+		x = 59
+		y = 4
+
+	}
+	focus = {
+		id = POL_air
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_army
+		}
+		x = 63
+		y = 1
+
+	}
+	focus = {
+		id = POL_bombers
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_air
+		}
+		mutually_exclusive = {
+			focus = POL_fighters
+		}
+		x = 62
+		y = 2
+
+	}
+	focus = {
+		id = POL_bombers_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_bombers
+		}
+		x = 62
+		y = 3
+
+	}
+	focus = {
+		id = POL_danzig_problem
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_we_need_access_to_sea
+		}
+		x = 41
+		y = 7
+
+	}
+	focus = {
+		id = POL_attack_lithuania
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_lithuanian_case
+		}
+		mutually_exclusive = {
+			focus = POL_threathen_lithuania
+			focus = POL_agreement_with_lithuanians
+		}
+		x = 49
+		y = 7
+
+	}
+	focus = {
+		id = POL_integrate_lithuanian_lands
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_attack_lithuania
+			focus = POL_threathen_lithuania
+		}
+		x = 48
+		y = 8
+
+	}
+	focus = {
+		id = POL_lithuania_is_polish_again
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_equal_pol_lit
+			focus = POL_integrate_lithuanian_lands
+		}
+		x = 47
+		y = 9
+
+	}
+	focus = {
+		id = POL_siaulai_port
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_lithuanian_bases
+		}
+		x = 43
+		y = 8
+
+	}
+	focus = {
+		id = POL_baltic_trade
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_danzig_port
+			focus = POL_siaulai_port
+		}
+		x = 42
+		y = 9
+
+	}
+	focus = {
+		id = POL_danzig_port
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_danzig_problem
+		}
+		x = 41
+		y = 8
+
+	}
+	focus = {
+		id = POL_belogrod_port
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_moldavian_problem
+		}
+		x = 39
+		y = 8
+
+	}
+	focus = {
+		id = POL_poland_from_sea_to_sea
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_siaulai_port
+			focus = POL_danzig_port
+		}
+		prerequisite = {
+			focus = POL_belogrod_port
+		}
+		x = 39
+		y = 9
+
+	}
+	focus = {
+		id = POL_new_plc
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_baltic_trade
+		}
+		prerequisite = {
+			focus = POL_lithuania_is_polish_again
+		}
+		x = 44
+		y = 10
+
+	}
+	focus = {
+		id = POL_loyal_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_loyal_state
+		}
+		prerequisite = {
+			focus = POL_loyal_government
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = POL_liberal_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_meaning_of_poland
+		}
+		prerequisite = {
+			focus = POL_polonisation_under_russian_eagle
+		}
+		prerequisite = {
+			focus = POL_new_elections
+		}
+		x = 11
+		y = 5
+
+	}
+	focus = {
+		id = POL_progressive_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_constitution
+		}
+		prerequisite = {
+			focus = POL_stable_coalition
+		}
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = POL_snap_elections
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_prepare_new_sejm
+		}
+		prerequisite = {
+			focus = POL_presidential_act
+		}
+		x = 1
+		y = 10
+
+	}
+	focus = {
+		id = POL_new_government
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_snap_elections
+		}
+		x = 1
+		y = 11
+
+	}
+	focus = {
+		id = POL_democratic_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_government
+		}
+		x = 1
+		y = 12
+
+	}
+	focus = {
+		id = POL_russian_once_more
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_russian_propaganda
+		}
+		prerequisite = {
+			focus = POL_vistulan_krai
+		}
+		x = 5
+		y = 12
+
+	}
+	focus = {
+		id = POL_total_freedom
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_tsar_social_reforms
+		}
+		x = 10
+		y = 10
+
+	}
+	focus = {
+		id = POL_draft_constitution
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_pm_and_tsar_meeting
+		}
+		prerequisite = {
+			focus = POL_protect_polish
+		}
+		x = 9
+		y = 12
+
+	}
+	focus = {
+		id = POL_protect_polish
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_total_freedom
+		}
+		x = 10
+		y = 11
+
+	}
+	focus = {
+		id = POL_adam_czartoryski
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_king
+		}
+		x = 12
+		y = 8
+
+	}
+	focus = {
+		id = POL_janusz_radziwill
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_king
+		}
+		x = 16
+		y = 8
+
+	}
+	focus = {
+		id = POL_napoleon_vi
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_new_king
+		}
+		x = 20
+		y = 8
+
+	}
+	focus = {
+		id = POL_mass_education
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_adam_czartoryski
+		}
+		x = 12
+		y = 9
+
+	}
+	focus = {
+		id = POL_neo_sarmatism
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_mass_education
+		}
+		x = 12
+		y = 10
+
+	}
+	focus = {
+		id = POL_rights_of_nobles
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_neo_sarmatism
+		}
+		x = 12
+		y = 11
+
+	}
+	focus = {
+		id = POL_true_polish_king
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_rights_of_nobles
+			focus = POL_puppet_prime_minister
+			focus = POL_english_style_monarchy
+		}
+		x = 14
+		y = 12
+
+	}
+	focus = {
+		id = POL_my_german_cousin
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_janusz_radziwill
+		}
+		x = 16
+		y = 9
+
+	}
+	focus = {
+		id = POL_rewrite_history
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_my_german_cousin
+		}
+		x = 16
+		y = 10
+
+	}
+	focus = {
+		id = POL_puppet_prime_minister
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_rewrite_history
+		}
+		x = 16
+		y = 11
+
+	}
+	focus = {
+		id = POL_interests_in_africa
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_napoleon_vi
+		}
+		x = 20
+		y = 9
+
+	}
+	focus = {
+		id = POL_open_new_buissnesses
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_interests_in_africa
+		}
+		x = 20
+		y = 10
+
+	}
+	focus = {
+		id = POL_royal_dictathorship
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_open_new_buissnesses
+		}
+		x = 20
+		y = 11
+
+	}
+	focus = {
+		id = POL_bonaparte_is_friend_of_poles
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_royal_dictathorship
+		}
+		x = 20
+		y = 12
+
+	}
+	focus = {
+		id = POL_red_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_detsarisied_poland
+		}
+		prerequisite = {
+			focus = POL_purge_right
+		}
+		prerequisite = {
+			focus = POL_red_militia
+		}
+		x = 38
+		y = 5
+
+	}
+	focus = {
+		id = POL_direction_of_eco
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_military_fac
+		}
+		prerequisite = {
+			focus = POL_inds_tech
+		}
+		prerequisite = {
+			focus = POL_infrastructure
+		}
+		x = 29
+		y = 8
+
+	}
+	focus = {
+		id = POL_industrialisation
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_direction_of_eco
+		}
+		mutually_exclusive = {
+			focus = POL_agrarisation
+		}
+		x = 26
+		y = 9
+
+	}
+	focus = {
+		id = POL_agrarisation
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_direction_of_eco
+		}
+		mutually_exclusive = {
+			focus = POL_industrialisation
+		}
+		x = 32
+		y = 9
+
+	}
+	focus = {
+		id = POL_crisis_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_agrarisation
+			focus = POL_industrialisation
+		}
+		x = 29
+		y = 10
+
+	}
+	focus = {
+		id = POL_crisis_1
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_agrarisation
+			focus = POL_industrialisation
+		}
+		x = 27
+		y = 10
+
+	}
+	focus = {
+		id = POL_crisis_3
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_agrarisation
+			focus = POL_industrialisation
+		}
+		x = 31
+		y = 10
+
+	}
+	focus = {
+		id = POL_crisis_4
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_crisis_1
+		}
+		prerequisite = {
+			focus = POL_crisis_2
+		}
+		x = 28
+		y = 11
+
+	}
+	focus = {
+		id = POL_crisis_5
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_crisis_3
+		}
+		prerequisite = {
+			focus = POL_crisis_2
+		}
+		x = 30
+		y = 11
+
+	}
+	focus = {
+		id = POL_crisis_6
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_crisis_4
+		}
+		prerequisite = {
+			focus = POL_crisis_5
+		}
+		x = 29
+		y = 12
+
+	}
+	focus = {
+		id = POL_ind_1
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_industrialisation
+		}
+		x = 25
+		y = 10
+
+	}
+	focus = {
+		id = POL_ind_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ind_1
+		}
+		x = 25
+		y = 11
+
+	}
+	focus = {
+		id = POL_ind_3
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ind_2
+		}
+		x = 25
+		y = 12
+
+	}
+	focus = {
+		id = POL_agr_1
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_agrarisation
+		}
+		x = 33
+		y = 10
+
+	}
+	focus = {
+		id = POL_agr_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_agr_1
+		}
+		x = 33
+		y = 11
+
+	}
+	focus = {
+		id = POL_agr_3
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_agr_2
+		}
+		x = 33
+		y = 12
+
+	}
+	focus = {
+		id = POL_ind_4
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_ind_2
+		}
+		x = 27
+		y = 12
+
+	}
+	focus = {
+		id = POL_agr_4
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_agr_2
+		}
+		x = 31
+		y = 12
+
+	}
+	focus = {
+		id = POL_industrial_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_crisis_6
+		}
+		prerequisite = {
+			focus = POL_ind_4
+		}
+		prerequisite = {
+			focus = POL_ind_3
+		}
+		x = 27
+		y = 13
+
+	}
+	focus = {
+		id = POL_agrarian_poland
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_agr_3
+		}
+		prerequisite = {
+			focus = POL_crisis_6
+		}
+		prerequisite = {
+			focus = POL_agr_4
+		}
+		x = 31
+		y = 13
+
+	}
+	focus = {
+		id = POL_fighters
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_air
+		}
+		mutually_exclusive = {
+			focus = POL_bombers
+		}
+		x = 64
+		y = 2
+
+	}
+	focus = {
+		id = POL_fighters_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_fighters
+		}
+		x = 64
+		y = 3
+
+	}
+	focus = {
+		id = POL_air_1
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_bombers_2
+			focus = POL_fighters_2
+		}
+		x = 63
+		y = 4
+
+	}
+	focus = {
+		id = POL_land_5
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_land_4
+		}
+		x = 55
+		y = 5
+
+	}
+	focus = {
+		id = POL_land_6
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_land_5
+		}
+		x = 55
+		y = 6
+
+	}
+	focus = {
+		id = POL_sea_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_sea_1
+		}
+		x = 59
+		y = 5
+
+	}
+	focus = {
+		id = POL_sea_3
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_sea_2
+		}
+		x = 59
+		y = 6
+
+	}
+	focus = {
+		id = POL_air_2
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_air_1
+		}
+		x = 63
+		y = 5
+
+	}
+	focus = {
+		id = POL_air_3
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_air_2
+		}
+		x = 63
+		y = 6
+
+	}
+	focus = {
+		id = POL_military_science
+		icon = GFX_goal_unknown
+		cost = 10,00
+		prerequisite = {
+			focus = POL_land_6
+			focus = POL_air_3
+			focus = POL_sea_3
+		}
+		x = 59
+		y = 7
+
+	}
+}
