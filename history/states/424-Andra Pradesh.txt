@@ -1,0 +1,29 @@
+
+state={
+	id=424
+	name="STATE_424"
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			10278 = {
+				naval_base = 4
+
+			}
+		}
+		victory_points = {
+			10278 20 #chennai
+		}
+		
+
+	}
+
+	provinces={
+		1344 1430 10152 10278 12180 
+	}
+	manpower=8791700
+	buildings_max_level_factor=1.000
+	state_category=city
+}

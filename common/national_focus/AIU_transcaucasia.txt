@@ -4169,7 +4169,10 @@ focus_tree = {
 		}
 
 		available = {
-			DON = { exists = yes is_subject = no NOT = { has_war_with = ROOT } has_full_control_of_state = 233 has_full_control_of_state = 847 has_full_control_of_state = 848 }
+			OR = {
+				DON = { is_subject = no NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } has_full_control_of_state = 233 has_full_control_of_state = 847 has_full_control_of_state = 848 }
+				has_full_control_of_state = 233 has_full_control_of_state = 847 has_full_control_of_state = 848
+			}
 			is_subject = no
 		}
 
@@ -4186,7 +4189,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			DON = { add_timed_idea = { idea = CAU_north_caucasian_agitation days = 180 } }
+			if = { limit = { DON = { is_subject = no } } DON = { add_timed_idea = { idea = CAU_north_caucasian_agitation days = 180 } } }
+			custom_effect_tooltip = CAU_befriend_north_caucasians_tt
 		}
 	}
 	

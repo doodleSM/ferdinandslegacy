@@ -1,0 +1,24 @@
+state={
+	id=982
+	name="STATE_982"
+	provinces={
+		1971 4382 7049 7084 10735 
+	}
+	history={
+		owner = RAJ
+		victory_points = {
+			1971 1 #sukkur
+		}
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = PAK
+
+	}
+
+	
+	manpower=900657
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

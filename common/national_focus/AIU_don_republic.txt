@@ -1,10 +1,12 @@
 focus_tree = {
 	
+		id = aiu_don_republic_focus
+	
 		country = {
 			factor = 0
 		
 		modifier = {
-			add = 10
+			add = 20
 			tag = DON
 		}
 	}
@@ -3251,7 +3253,8 @@ continuous_focus_position = { x = 50 y = 1600 }
 		x = 10
 		y = 3
 
-		cost = 2
+		cost = 4
+		will_lead_to_war_with = CAU
 		prerequisite = { focus = DON_raise_the_banners}
 		mutually_exclusive = { }
 		ai_wilL_do = {

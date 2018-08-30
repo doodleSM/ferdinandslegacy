@@ -100,6 +100,10 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
 		set_country_flag = POL_W_POWER_GOVENOR
 		add_popularity = { ideology = neutrality popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_governor_normal
+			add_idea = POL_governor_strong
+		}
 	}
   
         option = { #PPP, status quo
@@ -116,6 +120,10 @@ country_event = {
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		set_country_flag = POL_B_ABOLISH_GOVERNOR
 		add_popularity = { ideology = democratic popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_governor_normal
+			add_idea = POL_governor_weak
+		}
 	}
 	
 	option = { #Republic, prepare for republic
@@ -124,6 +132,7 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
 		set_country_flag = POL_G_REPUBLIC
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
+		remove_idea = POL_governor_normal
 	}
   
 }
@@ -223,6 +232,10 @@ country_event = {
 		modify_country_flag = { flag = POL_PPPAUT value = 1 }
 		set_country_flag = POL_Y_CONST_SOME_CHANGE
 		add_popularity = { ideology = market_lib popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_constitution_russian
+			add_idea = POL_constitution_russian_polish
+		}
 	}
   
         option = { #Rest, Abolish it
@@ -231,6 +244,10 @@ country_event = {
 		modify_country_flag = { flag = POL_INDEPE value = 1 }
 		set_country_flag = POL_B_CONST_ABOLISH
 		add_popularity = { ideology = democratic popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_constitution_russian
+			add_idea = POL_constitution_broken
+		}
 	}
 	
 	option = { #Republic, Change it
@@ -239,6 +256,10 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
 		set_country_flag = POL_G_CONST_CHANGE
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
+		swap_ideas = {
+			remove_idea = POL_constitution_russian
+			add_idea = POL_constitution_polish
+		}
 	}
   
 }
@@ -293,6 +314,9 @@ country_event = {
 		set_country_flag = POL_W_Y_HELP_TSAR
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 		add_popularity = { ideology = market_lib popularity = 0.05 }
+		add_opinion_modifier = { target = RUS modifier = POL_support_in_russian_civil_war }
+		add_opinion_modifier = { target = RSP modifier = POL_supporting_enemies }
+		add_opinion_modifier = { target = BLU modifier = POL_supporting_enemies }
 	}
 	
 	option = { #Republic, Republicans
@@ -301,6 +325,9 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
 		set_country_flag = POL_G_HELP_REPUBLIC
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
+		add_opinion_modifier = { target = RSP modifier = POL_support_in_russian_civil_war }
+		add_opinion_modifier = { target = RUS modifier = POL_supporting_enemies }
+		add_opinion_modifier = { target = BLU modifier = POL_supporting_enemies }
 	}
   
         option = { #Rest, Independence
@@ -369,6 +396,7 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSEMP value = 1 }
 		set_country_flag = POL_W_PURGE
 		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_stability = -0.01
 	}
 	
 	option = { #PPP, Let have it to elections
@@ -546,7 +574,7 @@ country_event = {
 
 	option = {
 		name = polfail.1.a
-		stability_factor = -0.10
+		add_stability = -0.10
 		hidden_effect = {
 		      country_event = { days = 7 id = polfail.2 }
 		}
@@ -566,7 +594,7 @@ country_event = {
 
 	option = {
 		name = polfail.2.a
-		stability_factor = -0.20
+		add_stability = -0.20
 		hidden_effect = {
 		      country_event = { days = 7 id = polfail.3 }
 		}
@@ -586,7 +614,7 @@ country_event = {
 
 	option = {
 		name = polfail.3.a
-		stability_factor = -0.05
+		add_stability = -0.05
 		hidden_effect = {
 		      country_event = { days = 7 id = polfail.4 }
 		}
@@ -606,7 +634,7 @@ country_event = {
 
 	option = {
 		name = polfail.4.a
-		stability_factor = -0.05
+		add_stability = -0.05
 		hidden_effect = {
 		      country_event = { days = 7 id = polfail.5 }
 		}
@@ -626,7 +654,7 @@ country_event = {
 
 	option = {
 		name = polfail.5.a
-		stability_factor = -0.05
+		add_stability = -0.05
 		hidden_effect = {
 		      country_event = { days = 7 id = polfail.6 }
 		}
@@ -646,7 +674,7 @@ country_event = {
 
 	option = {
 		name = polfail.6.a
-		stability_factor = -0.05
+		add_stability = -0.05
 		set_country_flag = { flag = POL_BAT_PILSUDZKI value = 0 }
 		set_country_flag = { flag = POL_BAT_COMMIES value = 0 }
 		hidden_effect = {
@@ -668,10 +696,10 @@ country_event = {
 
 	option = {
 		name = polbatt.1.a
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.2 }
+		      country_event = { days = 2 id = polbatt.2 }
 		}
 		
 		10 = {
@@ -684,10 +712,10 @@ country_event = {
 	
 	option = {
 		name = polbatt.1.b
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.2 }
+		      country_event = { days = 2 id = polbatt.2 }
 		}
 		
 		10 = {
@@ -712,10 +740,10 @@ country_event = {
 
 	option = {
 		name = polbatt.2.a
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.3 }
+		      country_event = { days = 2 id = polbatt.3 }
 		}
 		
 		10 = {
@@ -728,10 +756,10 @@ country_event = {
 	
 	option = {
 		name = polbatt.2.b
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.3 }
+		      country_event = { days = 2 id = polbatt.3 }
 		}
 		
 		10 = {
@@ -756,10 +784,10 @@ country_event = {
 
 	option = {
 		name = polbatt.3.a
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.4 }
+		      country_event = { days = 2 id = polbatt.4 }
 		}
 		
 		10 = {
@@ -772,10 +800,10 @@ country_event = {
 	
 	option = {
 		name = polbatt.3.b
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.4 }
+		      country_event = { days = 2 id = polbatt.4 }
 		}
 		
 		10 = {
@@ -800,10 +828,10 @@ country_event = {
 
 	option = {
 		name = polbatt.4.a
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.5 }
+		      country_event = { days = 2 id = polbatt.5 }
 		}
 		
 		10 = {
@@ -816,10 +844,10 @@ country_event = {
 	
 	option = {
 		name = polbatt.4.b
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.5 }
+		      country_event = { days = 2 id = polbatt.5 }
 		}
 		
 		10 = {
@@ -844,10 +872,10 @@ country_event = {
 
 	option = {
 		name = polbatt.5.a
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.6 }
+		      country_event = { days = 2 id = polbatt.6 }
 		}
 		
 		10 = {
@@ -860,10 +888,10 @@ country_event = {
 	
 	option = {
 		name = polbatt.5.b
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.6 }
+		      country_event = { days = 2 id = polbatt.6 }
 		}
 		
 		10 = {
@@ -888,10 +916,10 @@ country_event = {
 
 	option = {
 		name = polbatt.6.a
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_PILSUDZKI value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.7 }
+		      country_event = { days = 2 id = polbatt.7 }
 		}
 		
 		10 = {
@@ -904,10 +932,10 @@ country_event = {
 	
 	option = {
 		name = polbatt.6.b
-		stability_factor = -0.01
+		add_stability = -0.01
 		modify_country_flag = { flag = POL_BAT_COMMIES value = 1 }
 		hidden_effect = {
-		      country_event = { days = 7 id = polbatt.7 }
+		      country_event = { days = 2 id = polbatt.7 }
 		}
 		
 		10 = {
@@ -982,7 +1010,7 @@ country_event = {
 
 	option = {
 		name = polbatt.9.a
-		stability_factor = -0.05
+		add_stability = -0.05
 		hidden_effect = {
 		      country_event = { days = 2 id = polbatt.10 }
 		}
@@ -1021,7 +1049,7 @@ country_event = {
 
 	option = {
 		name = polbatt.11.a
-		stability_factor = 0.20
+		add_stability = 0.20
 		set_country_flag = POL_PILSUDZKI_COUP
 		add_popularity = { ideology = auth_dem popularity = 0.30 }
 		set_politics = {
@@ -1076,7 +1104,7 @@ country_event = {
 
 	option = {
 		name = polbatt.13.a
-		stability_factor = -0.05
+		add_stability = -0.05
 		hidden_effect = {
 		      country_event = { days = 2 id = polbatt.14 }
 		}
@@ -1096,7 +1124,7 @@ country_event = {
 
 	option = {
 		name = polbatt.14.a
-		stability_factor = -0.10
+		add_stability = -0.10
 		hidden_effect = {
 		      country_event = { days = 2 id = polbatt.15 }
 		}
@@ -1135,7 +1163,7 @@ country_event = {
 
 	option = {
 		name = polbatt.16.a
-		stability_factor = 0.30
+		add_stability = 0.30
 		set_country_flag = POL_COMMIE_COUP
 		add_popularity = { ideology = anarchism popularity = 0.20 }
 		add_popularity = { ideology = communism popularity = 0.40 }

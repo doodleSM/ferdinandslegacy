@@ -1,0 +1,24 @@
+state={
+	id=979
+	name="STATE_979"
+	provinces={
+		1983 7064 9973 12777 12786 
+	}
+	history={
+		owner = RAJ
+		victory_points = {
+			12786 2 #allahabad
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+
+	}
+
+	
+	manpower=12354649
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

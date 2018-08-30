@@ -1,0 +1,23 @@
+state={
+	id=965
+	name="STATE_965"
+	provinces={
+		1444 1637 4544 7537 7593 10358 10471 12035 12307 12452 
+	}
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			12307 2 #ranchi
+		}
+
+	}
+
+	
+	manpower=3647646
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

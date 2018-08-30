@@ -1,0 +1,23 @@
+state={
+	id=985
+	name="STATE_985"
+	provinces={
+		1129 2076 7106 12708 
+	}
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			12708 1 #shimla
+		}
+
+	}
+
+	
+	manpower=467857
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,28 @@
+state={
+	id=991
+	name="STATE_991"
+	provinces={
+		400 3254 3393 
+	}
+	history={
+		owner = LIT
+		victory_points = {
+			3393 1 
+		}
+		buildings = {
+			infrastructure = 5
+
+		}
+		add_core_of = BLU
+		add_core_of = RUS
+		add_core_of = RSP
+		add_core_of = BLR
+		add_core_of = LIT
+
+	}
+
+	
+	manpower=329464
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

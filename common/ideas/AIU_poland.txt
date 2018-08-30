@@ -11,6 +11,84 @@ country = {
 		}
 	}
 	
+	POL_governor_normal = {
+
+		picture = GFX_idea_POL_governor	
+	
+		modifier = {
+		       stability_factor = 0.01
+		       neutrality_drift = 0.01
+		}
+	}
+	
+	POL_governor_weak = {
+
+		picture = GFX_idea_POL_weak_governor	
+	
+		modifier = {
+			stability_factor = -0.05
+		}
+	}
+	
+	POL_governor_strong = {
+
+		picture = GFX_idea_POL_strong_governor	
+	
+		modifier = {
+			stability_factor = 0.05
+			neutrality_drift = 0.03
+		}
+	}
+	
+	POL_constitution_russian = {
+
+		picture = GFX_idea_POL_russian_constitution	
+	
+		modifier = {
+			political_power_factor = -0.05
+			stability_factor = -0.01
+			neutrality_drift = 0.01
+		}
+	}
+	
+	POL_constitution_russian_polish = {
+
+		picture = GFX_idea_POL_russian_polish_constitution	
+	
+		modifier = {
+			political_power_factor = -0.03
+			neutrality_drift = 0.01
+			market_lib_drift = 0.01
+			fascism_drift = 0.01
+		}
+	}
+	
+	POL_constitution_polish = {
+
+		picture = GFX_idea_POL_polish_constitution	
+	
+		modifier = {
+			political_power_factor = 0.01
+			democratic_drift = 0.01
+			market_lib_drift = 0.01
+			fascism_drift = 0.01
+			social_democracy_drift = 0.01
+		}
+	}
+	
+	POL_constitution_broken = {
+
+		picture = GFX_idea_POL_russian_constitution_broken	
+	
+		modifier = {
+			political_power_factor = 0.02
+			fascism_drift = 0.01
+			democratic_drift = 0.01
+			rad_soc_drift = 0.01
+			communism_drift = 0.01
+		}
+	}
+	
 }
 
 

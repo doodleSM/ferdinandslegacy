@@ -1,0 +1,31 @@
+
+state={
+	id=433
+	name="STATE_433"
+	resources={
+		tungsten=32.000
+	}
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			1908 2 #jaipur
+		}
+		victory_points = {
+			4915 5 #agra
+		}
+
+	}
+
+	provinces={
+		1908 2054 4915 7905 7998 12041 
+	}
+	manpower=5216453
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

@@ -1,0 +1,25 @@
+state={
+	id=945
+	name="STATE_945"
+	provinces={
+		3472 4659 4780 6787 7681 7774 7833 9512 10600 10659 10670 12390 12521 
+	}
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			10670 1 #ishim
+		}
+		add_core_of = BLU
+		add_core_of = RSP
+		add_core_of = RUS
+
+	}
+
+	manpower=235643
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

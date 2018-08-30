@@ -1,0 +1,27 @@
+
+state={
+	id=440
+	name="STATE_440"
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+		add_core_of = PAK
+
+	
+	victory_points = {
+			10772 5 #lahore
+		}
+	}
+	
+
+	provinces={
+		4979 8022 8106 9084 10066 10173 10772 10887 12005 12822 
+	}
+	manpower=7665000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

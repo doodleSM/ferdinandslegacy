@@ -1,0 +1,20 @@
+state={
+	id=937
+	name="STATE_937"
+	provinces={
+		1454 1478 2139 4441 4462 4487 7481 12311 
+	}
+	history={
+		owner = AST
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = AST
+
+	}
+
+	manpower=9800
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

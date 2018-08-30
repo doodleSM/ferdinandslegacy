@@ -1,0 +1,19 @@
+state={
+	id=939
+	name="STATE_939"
+	provinces={
+		5206 10336 10936 10955 
+	}
+	history={
+		owner = AST
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = AST
+
+	}
+	manpower=22000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

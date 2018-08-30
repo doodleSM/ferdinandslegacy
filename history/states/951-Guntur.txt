@@ -1,0 +1,23 @@
+state={
+	id=951
+	name="STATE_951"
+	provinces={
+		1228 4321 4365 7297 7340 
+	}
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			4321 2 #guntur
+		}
+		
+
+	}
+
+	
+	manpower=4787461
+	buildings_max_level_factor=1.000
+	state_category=town
+}

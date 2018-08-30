@@ -1,0 +1,28 @@
+
+state={
+	id=437
+	name="STATE_437"
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			12080 2 #indore 
+		}
+		victory_points = {
+			11995 3 #bhopal
+		}
+
+	}
+
+	provinces={
+		2105 7205 8076 11993 11995 12080 
+	}
+	manpower=8402500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

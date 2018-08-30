@@ -25,6 +25,8 @@ set_technology = {
 
 add_ideas = {
     POL_russian_rule
+    POL_governor_normal
+    POL_constitution_russian
 }
 
 set_convoys = 10
@@ -32,28 +34,35 @@ set_convoys = 10
 set_politics = {
 
 	parties = {
-		democratic = { 
-			popularity = 12
+		anarchism = { 
+			popularity = 0
 		}
-
-		market_lib = {
-			popularity = 8
-		}
-		
-		communism = {
-			popularity = 7
-		}
-		
-		social_democracy = {
+		communism = { 
 			popularity = 10
 		}
-		
-		fascism = {
-			popularity = 3
+		radical_socialism = { 
+			popularity = 5
 		}
-		
+		social_democracy = { 
+			popularity = 15
+		}
+		social_liberalism = { 
+			popularity = 10
+		}
+		market_lib = { 
+			popularity = 15
+		}
+		democratic = { 
+			popularity = 15
+		}
 		auth_dem = { 
-			popularity = 30
+			popularity = 10
+		}
+		neutrality = { 
+			popularity = 5
+		}
+		fascism = { 
+			popularity = 15
 		}
 	}
 	

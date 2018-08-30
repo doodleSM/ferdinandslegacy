@@ -1,0 +1,22 @@
+state={
+	id=956
+	name="STATE_956"
+	provinces={
+		4072 4187 10019 
+	}
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 4
+
+		}
+		victory_points = {
+			4187 5 #surat
+		}
+
+	}
+
+	manpower=4177453
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

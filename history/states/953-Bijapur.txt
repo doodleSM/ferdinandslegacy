@@ -1,0 +1,21 @@
+state={
+	id=953
+	name="STATE_953"
+	provinces={
+		4278 7250 7411 10259 10799 12105 12295 
+	}
+	history={
+		owner = RAJ
+		victory_points = {
+			7411 1 #bijapur
+		}
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+	manpower=3002533
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

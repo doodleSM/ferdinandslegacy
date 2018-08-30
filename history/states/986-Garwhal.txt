@@ -1,0 +1,23 @@
+state={
+	id=986
+	name="STATE_986"
+	provinces={
+		1898 3989 5002 5157 10021 
+	}
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			5157 1 #dehradun
+		}
+
+	}
+
+	
+	manpower=598765
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -673,6 +673,7 @@
  IDE_strike_kazan:0 "Strike For Kazan"
  IDE_ask_to_join_rsp:0 "Request Federal Membership"
  IDE_ask_to_join_rus:0 "Reconciliation with the Empire"
+ IDE_foreign_policy_tt:0 "Unlocks §Ydecisions§! allowing us to make new alliances or strike enemies."
  
  #faction
  IDE_caspian_pact:0 "Caspian Pact"

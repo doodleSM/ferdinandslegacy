@@ -1,0 +1,23 @@
+state={
+	id=958
+	name="STATE_958"
+	provinces={
+		1359 5019 5063 5104 10311 10324 12226 
+	}
+	history={
+		owner = RAJ
+		victory_points = {
+			1359 1 #gulbarga
+		}
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+
+	
+	manpower=4674536
+	buildings_max_level_factor=1.000
+	state_category=town
+}
