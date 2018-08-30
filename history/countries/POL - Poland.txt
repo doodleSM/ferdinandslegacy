@@ -172,6 +172,17 @@ create_country_leader = {
 }
 
 create_field_marshal = {
+	name = "Pavel N. Yengalychev"
+	picture = "Portrait_Poland_Pavel_Yengalychev.dds"
+	traits = { defensive_doctrine }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_field_marshal = {
 	name = "Władysław Sikorski"
 	picture = "Portrait_Poland_Wladyslaw_Sikorski.dds"
 	traits = { defensive_doctrine }
