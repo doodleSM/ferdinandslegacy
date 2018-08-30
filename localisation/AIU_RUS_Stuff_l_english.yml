@@ -76,8 +76,27 @@ RUS_democrats_subdued:0 "Democratic Influences Subdued"
 RUS_democrats_subdued_desc:0 ""
 RUS_democrats_subdued1:0 "Democratic Influences Eradicated"
 RUS_democrats_subdued1_desc:0 ""
+RUS_clear_red_scourge:0 "Purge the Red Scourge"
+RUS_clear_red_scourge_desc:0 ""
+RUS_anglophobic_state:0 "Anglophobic Stance"
+RUS_anglophobic_state_desc:0 "Our Nation has taken on a Clear Anti-British sentiment - the British have not helped us in our our need, we should not hold any respect towards them!"
+RUS_anglophobic_state1:0 "Anglophobic Stance"
+RUS_anglophobic_state1_desc:0 "Our Nation has taken on a Clear Anti-British sentiment - the British have not helped us in our our need, we should not hold any respect towards them!"
+RUS_church_strengthened:0 "Church Strengthened"
+RUS_church_strengthened_desc:0 "" 
+RUS_young_russia_group:0 "Young Russia Group"
+RUS_young_russia_group_desc:0 "The Young Russia group is a authoritarian, monarchist group with Dmitri Romanov having taken control of the Group back in 1927. They use whatever means necessary to ensure that the Tsar's Authority is enforced!"
+RUS_young_russia_group1:0 "Young Russia Group Strengthened"
+RUS_young_russia_group1_desc:0 "The Young Russia group is a authoritarian, monarchist group with Dmitri Romanov having taken control of the Group back in 1927. They use whatever means necessary to ensure that the Tsar's Authority is enforced"
+RUS_rule_liberalised:0 "Rule Liberalised"
+RUS_rule_liberalised_desc:0 ""
+RUS_rule_liberalised1:0 "Rule Liberalised"
+RUS_rule_liberalised1_desc:0 ""
 #############EVENTS############
 
+#####Modifiers###
+RUS_scandinavian_ties_modifier:0 "Strengthened Scandinavian Ties"
+RUS_anti_english_stance_modifier:0 "Anti-British Stance"
 ##############Decisions#########
 
 ##########Country Flags#######

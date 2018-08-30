@@ -1264,7 +1264,7 @@ focus = {
 		x = 36
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_wilL_do = {
 			factor = 1
@@ -1286,7 +1286,7 @@ focus = {
 		x = 33
 		y = 1
 
-		cost = 10
+		cost = 1
 
 		ai_wilL_do = {
 			factor = 1
@@ -1297,7 +1297,17 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        create_country_leader = {
+    name = "Boris I"
+    desc = ""
+    picture = "RUS_Boris.dds"
+    expire = "1953.3.1"
+    ideology = despotism
+    traits = {
+		
+        
+    }
+}	
     	}
 	}
 	focus = {
@@ -1317,6 +1327,8 @@ focus = {
 		}
 
 		completion_reward = {
+        	add_ideas = RUS_anglophobic_state
+        	add_stability = 0.03
         	
     	}
 	}
@@ -1337,8 +1349,14 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	ENG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = RUS_anti_english_stance_modifier
+			}
+			}
     	}
+
 	}
 	focus = {
 		id = RUS_anti_british_ideals
@@ -1357,7 +1375,17 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_anglophobic_state
+				add_idea = RUS_anglophobic_state1
+			}
+			ENG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = RUS_anti_british_trade
+			}
+			}
+    	country_event = rus.2
     	}
 	}
 	focus = {
@@ -1366,7 +1394,7 @@ focus = {
 		x = 35
 		y = 1
 
-		cost = 10
+		cost = 1
 
 		ai_wilL_do = {
 			factor = 1
@@ -1377,7 +1405,17 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        create_country_leader = {
+    name = "Dmitri I"
+    desc = ""
+    picture = "RUS_Dmitiri_Romanov.dds"
+    expire = "1953.3.1"
+    ideology = despotism
+    traits = {
+		
+        
+    }	
+    	}
     	}
 	}
 	focus = {
@@ -1396,7 +1434,7 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_church_strengthened
     	}
 	}
 	focus = {
@@ -1415,7 +1453,8 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_young_russia_group
+
     	}
 	}
 	focus = {
@@ -1434,7 +1473,10 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_young_russia_group
+				add_idea = RUS_young_russia_group1
+			}
     	}
 	}
 	focus = {
@@ -1443,7 +1485,7 @@ focus = {
 		x = 37
 		y = 1
 
-		cost = 10
+		cost = 1
 
 		ai_wilL_do = {
 			factor = 1
@@ -1454,7 +1496,17 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	create_country_leader = {
+    name = "Kiril I"
+    desc = ""
+    picture = "RUS_Kiril.dds"
+    expire = "1953.3.1"
+    ideology = despotism
+    traits = {
+		
+        
+    }	
+    	}
     	}
 	}
 	focus = {
@@ -1474,7 +1526,24 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	SWE = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = RUS_scandinavian_ties_modifier
+			}
+			}
+			NOR = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = RUS_scandinavian_ties_modifier
+			}
+			}
+			DEN = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = RUS_scandinavian_ties_modifier
+			}
+			}
     	}
 	}
 	focus = {
@@ -1494,7 +1563,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	DEN = {add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.5
+				uses = 2
+				category = fleet_in_being_tree
+			}}
+        	add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.5
+				uses = 2
+				category = fleet_in_being_tree
+			}
+        	add_war_support = 0.05
     	}
 	}
 	focus = {
@@ -1514,7 +1595,15 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_idea = RUS_increased_naval_budget
+        	random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
     	}
 	}
 	focus = {
@@ -1523,7 +1612,7 @@ focus = {
 		x = 39
 		y = 1
 
-		cost = 10
+		cost = 1
 
 		ai_wilL_do = {
 			factor = 1
@@ -1534,7 +1623,17 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	create_country_leader = {
+    name = "Michael II"
+    desc = ""
+    picture = "RUS_Mihail.dds"
+    expire = "1953.3.1"
+    ideology = despotism
+    traits = {
+		
+        
+    }	
+    	}
     	}
 	}
 	focus = {
@@ -1554,7 +1653,7 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_rule_liberalised
     	}
 	}
 	focus = {
@@ -1574,7 +1673,10 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_rule_liberalised
+				add_idea = RUS_rule_liberalised1
+			}
     	}
 	}
 	focus = {
@@ -1594,7 +1696,15 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_stability = 0.1
+        	add_war_support = 0.05
+        	add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+    	custom_effect_tooltip = RUS_promised_elections_tt
+    	set_country_flag = RUS_elections_promised
+    	
     	}
 	}
 	####Political Branch####

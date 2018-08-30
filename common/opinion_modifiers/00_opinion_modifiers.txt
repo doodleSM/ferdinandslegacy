@@ -762,7 +762,10 @@ opinion_modifiers = {
 
 	#Decisions
 	FRA_mers_el_kebir = { value = -75 }
-
+	#Russia#
+	RUS_scandinavian_ties_modifier = {value = 25}
+	RUS_anti_english_stance_modifier = {value = -50}
+	RUS_anti_british_trade = { trade = no value = -50 }
 	#China Focus
 	CHI_republicanism = { value = 50 }
 

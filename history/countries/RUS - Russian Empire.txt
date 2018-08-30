@@ -79,13 +79,13 @@ set_politics = {
 	}
 	
 	ruling_party = neutrality
-	last_election = "1933.7.1"
+	last_election = "1926.7.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 create_country_leader = {
-	name = "Nikolai Bukharin"
+	name = ""
 	desc = ""
 	picture = ""
 	expire = "1953.3.1"
@@ -96,7 +96,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Lev Chernyi"
+	name = ""
 	desc = ""
 	picture = ""
 	expire = "1953.3.1"
@@ -129,7 +129,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    name = "Alexander Kerensky"
+    name = ""
     desc = ""
     picture = ""
     expire = "1953.3.1"
@@ -139,7 +139,7 @@ create_country_leader = {
     }
 }
 create_country_leader = {
-    name = "Viktor Chernov"
+    name = ""
     desc = ""
     picture = ""
     expire = "1953.3.1"
@@ -175,7 +175,7 @@ create_country_leader = {
 
 create_field_marshal = {
 	name = "Pyotr Wrangel"
-	# picture = "Portrait_Russia_Pyotr_Wrangel.tga"
+	picture = "RUS_Wrangel.dds"
 	traits = {
 	 thorough_planner
 	 harsh_leader
@@ -190,7 +190,7 @@ create_field_marshal = {
 
 create_field_marshal = {
 	name = "Anton Denikin"
-	# picture = "Portrait_Russia_Anton_Denikin.tga"
+	 picture = "RUS_Denikin.dds"
 	traits = {
 	 old_guard
 	 war_hero
@@ -206,7 +206,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Vladimir Kappel"
-	#picture = "Portrait_Soviet_Vladimir_Kappel.tga"
+	picture = "RUS_Kappel.dds"
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
@@ -220,7 +220,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Mikhail Drozdovsky"
-	#picture = "Portrait_Soviet_Mikhail_Drozdovsky.tga"
+	picture = "RUS_Drozdovsky.dds"
 	traits = {
 		career_officer
 		infantry_leader
@@ -235,7 +235,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Boris Annenkov"
-	#picture = "Portrait_Russia_Boris_Annenkov.tga"
+	picture = "RUS_Annekov.dds"
 	traits = {
 		cavalry_officer
 		cavalry_leader
@@ -251,7 +251,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Vladimir von Manstein"
-	#picture = "Portrait_Soviet_Vladimir_von_Manstein.tga"
+	picture = "RUS_Manstein.dds"
 	traits = {
 		infantry_officer
 		commando

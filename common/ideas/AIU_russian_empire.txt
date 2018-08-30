@@ -930,6 +930,171 @@ ideas = {
 				political_power_gain = 0.1
 			}
 		}
+		RUS_clear_red_scourge = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = officers_purged
+
+			modifier = {
+				communism_drift = -0.1
+				anarchism_drift = -0.1
+				political_power_gain = 0.1
+			}
+		}
+		RUS_anglophobic_state = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				stability_factor = 0.05
+				targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.1
+			}	
+			}
+			}
+		RUS_anglophobic_state1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.25
+			}	
+			}
+		}
+		RUS_church_strengthened = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				stability_factor = 0.1
+				
+			}
+		}
+		RUS_young_russia_group = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				war_support_factor = 0.05
+				send_volunteers_tension = -0.2
+				
+			}
+		}
+		RUS_young_russia_group1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				war_support_factor = 0.05
+				send_volunteers_tension = -0.2
+				training_time_army_factor = -0.1
+				political_power_gain = 0.15
+			}
+		}
+		RUS_rule_liberalised = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				stability_factor = 0.2
+				political_power_gain = -0.15
+			}
+		}
+		RUS_rule_liberalised1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = 0.1
+				political_power_gain = -0.05
+			}
+		}
+
 		
 }
 political_advisor = {
