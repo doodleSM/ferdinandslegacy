@@ -216,6 +216,13 @@ focus_tree = {
 		cost = 10,00
 		x = 27
 		y = 7
+		available = {
+		    OR = {
+			has_country_flag = POL_SEJM_END
+			has_country_flag = POL_COMMIE_COUP
+			has_country_flag = POL_PILSUDZKI_COUP
+		    }
+		}
 
 	}
 	focus = {
@@ -224,6 +231,13 @@ focus_tree = {
 		cost = 10,00
 		x = 29
 		y = 7
+		available = {
+		    OR = {
+			has_country_flag = POL_SEJM_END
+			has_country_flag = POL_COMMIE_COUP
+			has_country_flag = POL_PILSUDZKI_COUP
+		    }
+		}
 
 	}
 	focus = {
@@ -232,6 +246,13 @@ focus_tree = {
 		cost = 10,00
 		x = 31
 		y = 7
+		available = {
+		    OR = {
+			has_country_flag = POL_SEJM_END
+			has_country_flag = POL_COMMIE_COUP
+			has_country_flag = POL_PILSUDZKI_COUP
+		    }
+		}
 
 	}
 	focus = {
@@ -240,6 +261,13 @@ focus_tree = {
 		cost = 10,00
 		x = 59
 		y = 0
+		available = {
+		    OR = {
+			has_country_flag = POL_SEJM_END
+			has_country_flag = POL_COMMIE_COUP
+			has_country_flag = POL_PILSUDZKI_COUP
+		    }
+		}
 
 	}
 	focus = {
@@ -409,6 +437,12 @@ focus_tree = {
 		}
 		x = 5
 		y = 8
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_W_ABSOLUTISM
+		}
 
 	}
 	focus = {
@@ -552,6 +586,12 @@ focus_tree = {
 		cost = 10,00
 		prerequisite = {
 			focus = POL_tsar
+		}
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_Y_TSAR_SAYS
 		}
 		x = 9
 		y = 8
@@ -710,6 +750,12 @@ focus_tree = {
 		}
 		x = 14
 		y = 8
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_ELECTED_ZAMOYSKI
+		}
 
 	}
 	focus = {
@@ -826,6 +872,12 @@ focus_tree = {
 		}
 		x = 18
 		y = 8
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_ELECTED_ITALIAN
+		}
 
 	}
 	focus = {
@@ -2118,6 +2170,12 @@ focus_tree = {
 		}
 		x = 12
 		y = 8
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_ELECTED_CZARTORYSKI
+		}
 
 	}
 	focus = {
@@ -2129,6 +2187,12 @@ focus_tree = {
 		}
 		x = 16
 		y = 8
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_ELECTED_RADZIWILL
+		}
 
 	}
 	focus = {
@@ -2140,6 +2204,12 @@ focus_tree = {
 		}
 		x = 20
 		y = 8
+		available = {
+			always = no
+		}
+		bypass = { 
+		    has_country_flag = POL_ELECTED_BONAPARTE
+		}
 
 	}
 	focus = {
