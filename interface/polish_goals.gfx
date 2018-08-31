@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goal_FRA_Daladier_Front"
+		texturefile = "gfx/interface/goals/FRA_Daladier_Front.dds"
+	}
+	
+}
