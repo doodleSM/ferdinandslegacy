@@ -1,0 +1,27 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_idea_POR_Artur_Ivens_Ferraz_hog"
+		texturefile = "gfx/ministers/POR/POR_Artur_Ivens_Ferraz_hog.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_POR_Antonio_de_Oliveira_Salazar_fm"
+		texturefile = "gfx/ministers/POR/POR_salazar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_POR_Antonio_de_Oliveria_Salazar_eco"
+		texturefile = "gfx/ministers/POR/POR_salazar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_POR_Armindo_Monteiro_fm"
+		texturefile = "gfx/ministers/POR/POR_Armindo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_POR_Abilio_Passos_Sousa_iaf"
+		texturefile = "gfx/ministers/POR/POR_Abilio.dds"
+	}
+}
