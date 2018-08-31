@@ -164,7 +164,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_new_king
-		icon = GFX_goal_unknown
+		icon = GFX_goal_crown_king
 		cost = 10,00
 		x = 16
 		y = 7
