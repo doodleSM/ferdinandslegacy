@@ -1,11 +1,11 @@
 spriteTypes = {
 	
 	SpriteType = {
-		name = "GFX_goal_FRA_Daladier_Front_shine"
-		texturefile = "gfx/interface/goals/FRA_Daladier_Front.dds"
+		name = "GFX_goal_crown_king_shine"
+		texturefile = "gfx/interface/goals/goal_crown_king.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/FRA_Daladier_Front.dds"
+			animationmaskfile = "gfx/interface/goals/goal_crown_king.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -18,7 +18,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/FRA_Daladier_Front.dds"
+			animationmaskfile = "gfx/interface/goals/goal_crown_king.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
