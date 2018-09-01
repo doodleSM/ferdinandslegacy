@@ -1,0 +1,23 @@
+focus_tree = {
+	id = aiu_britain_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = ENG
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1500 }
+
+	shared_focus = ENG_debate_russian_intervention
+	shared_focus = ENG_imperial_conference
+	shared_focus = ENG_results_of_the_general_election
+	shared_focus = ENG_maintain_military_edge
+	shared_focus = ENG_operations_research
+	
+}

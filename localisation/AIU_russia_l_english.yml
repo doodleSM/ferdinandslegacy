@@ -1026,6 +1026,7 @@
  aiu_cau.36.c:0 "A prince of the British line of Saxe-Coburg-Gotha will link us to Britain."
  CAU_british_prince_leader:0 "A British prince is monarch"
  aiu_cau.36.e:0 "Maybe not..."
+ won_russian_civil_war:0 "Winner of the Russian Civil War"
  
  #decisions
  RUS_internal_politics:0 "Internal Politics"

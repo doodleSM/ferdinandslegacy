@@ -1,0 +1,133 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goal_anti_zeppelin"
+		texturefile = "gfx/interface/goals/goal_anti_zeppelin.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_britannia_calls"
+		texturefile = "gfx/interface/goals/goal_britannia_calls.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_british_lion"
+		texturefile = "gfx/interface/goals/goal_british_lion.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_british_tanks"
+		texturefile = "gfx/interface/goals/goal_british_tanks.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_british_women"
+		texturefile = "gfx/interface/goals/goal_british_women.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_conservative_party"
+		texturefile = "gfx/interface/goals/goal_conservative_party.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_destroy_italy"
+		texturefile = "gfx/interface/goals/goal_destroy_italy.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_labour_party"
+		texturefile = "gfx/interface/goals/goal_labour_party.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_liberal_party"
+		texturefile = "gfx/interface/goals/goal_liberal_party.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_royal_marines_commando"
+		texturefile = "gfx/interface/goals/goal_royal_marines_commando.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rule_britannia"
+		texturefile = "gfx/interface/goals/goal_rule_britannia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_spitfire_diving"
+		texturefile = "gfx/interface/goals/goal_spitfire_diving.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_uk_general_election"
+		texturefile = "gfx/interface/goals/goal_uk_general_election.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_watu"
+		texturefile = "gfx/interface/goals/goal_watu.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_british_valentine"
+		texturefile = "gfx/interface/goals/goal_british_valentine.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_fire_bombing"
+		texturefile = "gfx/interface/goals/goal_fire_bombing.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_fleet_air_arm"
+		texturefile = "gfx/interface/goals/goal_fleet_air_arm.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_lrdg_logo"
+		texturefile = "gfx/interface/goals/goal_lrdg_logo.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_british_police"
+		texturefile = "gfx/interface/goals/goal_british_police.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_coal_miners"
+		texturefile = "gfx/interface/goals/goal_coal_miners.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_national_grid"
+		texturefile = "gfx/interface/goals/goal_national_grid.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_empire_service"
+		texturefile = "gfx/interface/goals/goal_empire_service.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_tuc_agreement"
+		texturefile = "gfx/interface/goals/goal_tuc_agreement.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_tuc_logo"
+		texturefile = "gfx/interface/goals/goal_tuc_logo.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_british_ats"
+		texturefile = "gfx/interface/goals/goal_british_ats.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_womens_suffrage"
+		texturefile = "gfx/interface/goals/goal_womens_suffrage.dds"
+	}
+	
+}

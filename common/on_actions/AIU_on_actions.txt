@@ -18,6 +18,11 @@ on_actions = {
 				#limit = { is_ai = no }
 				country_event = france.0
 			}
+			
+			ENG = {
+				#limit = { is_ai = no }
+				country_event = aiu_britain.0
+			}
 		}
 	}
 }

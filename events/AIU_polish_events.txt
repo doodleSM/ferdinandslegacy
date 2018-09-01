@@ -132,7 +132,7 @@ country_event = {
 		modify_country_flag = { flag = POL_RUSREP value = 1 }
 		set_country_flag = POL_G_REPUBLIC
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
-		remove_idea = POL_governor_normal
+		remove_ideas = POL_governor_normal
 	}
   
 }

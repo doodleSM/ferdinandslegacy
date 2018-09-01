@@ -3,7 +3,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 20
 			tag = GRM
 		}
 	}
@@ -39,8 +39,7 @@ focus_tree = {
 			available = {
 					threat > 40
 				}
-
-<<<<<<< HEAD
+	}
 	
 	focus = {
 		id = GRM_establish_colonial_policy
@@ -50,10 +49,10 @@ focus_tree = {
 
 		cost = 10
 		prerequisite = { }
-		ai_wilL_do = {
+		ai_will_do = {
 			factor = 1
-=======
-	}
+		}
+		}
 	focus = {
 		id = GRM_colonial_question
 		icon = GFX_goal_unknown
@@ -68,6 +67,7 @@ focus_tree = {
 				}
 
 	}
+	
 	focus = {
 		id = GRM_appoint_colonial_governors
 		icon = GFX_goal_anschluss
@@ -94,7 +94,6 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = GRM_appoint_colonial_governors
->>>>>>> f72efc603a4a6002f0e7f3791653982982566a14
 		}
 		x = 4
 		y = 4
@@ -1094,7 +1093,7 @@ focus_tree = {
 		}
 		x = 7
 		y = 14
-			mutually_exlusive = {
+			mutually_exclusive = {
 					focus = GRM_threaten_anhui
 				}
 			ai_wilL_do = {
@@ -1157,7 +1156,7 @@ focus_tree = {
 		}
 		x = 11
 		y = 14
-			mutually_exlusive = {
+			mutually_exclusive = {
 					focus = GRM_strengthen_ties_with_beyinyang
 				}
 			ai_wilL_do = {

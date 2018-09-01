@@ -10,7 +10,7 @@ state={
 
 		}
 		victory_points = {
-			94 1 #pinsk
+			560 1 #pinsk
 		}
 		add_core_of = BLU
 		add_core_of = RUS

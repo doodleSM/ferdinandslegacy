@@ -2429,7 +2429,7 @@ SpriteType = {
 	}
 	SpriteType = {
 		name = "GFX_goal_rus_single_currency_shine"
-		texturefile = "gfx/interface/goals/goal_rus_single_currencyg.dds"
+		texturefile = "gfx/interface/goals/goal_rus_single_currency.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/goal_rus_single_currency.dds"

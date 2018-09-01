@@ -40,16 +40,10 @@ bookmarks = {
 			history = ENG_BLITZKRIEG_DESC
 			ideology = democratic
 			ideas = {
-				stiff_upper_lip
-				ENG_the_war_to_end_all_wars
-				ENG_george_vi
-				british_austerity_idea
-				ENG_colonial_elite
+				
 			}
 			focuses = {
-				ENG_war_with_japan
-				bomber_command_focus
-				maud_focus
+				
 			}
 			
 		}

@@ -1,0 +1,8 @@
+
+opinion_modifiers = {
+
+	anglo_portuguese_friendship = {
+		value = 20
+	}
+	
+}	
