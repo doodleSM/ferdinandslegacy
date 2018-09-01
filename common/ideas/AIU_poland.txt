@@ -13,7 +13,7 @@ country = {
 	
 	POL_governor_normal = {
 
-		picture = GFX_idea_POL_governor	
+		picture = GFX_idea_POL_governor
 	
 		modifier = {
 		       stability_factor = 0.01
