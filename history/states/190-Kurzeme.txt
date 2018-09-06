@@ -15,6 +15,7 @@ state={
 			}
 			dockyard = 1
 		}
+		add_core_of = CUR
 		add_core_of = LAT
 		add_core_of = RSP
 		add_core_of = RUS
@@ -22,6 +23,6 @@ state={
 	}
 
 	provinces={
-		265 3194 3296 3319 3525 6222 6322 6342 9262 11246 
+		265 3194 3296 3255 3319 3525 6222 6322 6342 9262 9374 9246 11246 11226 11358 
 	}
 }

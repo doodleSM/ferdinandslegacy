@@ -1094,6 +1094,85 @@ ideas = {
 				political_power_gain = -0.05
 			}
 		}
+		RUS_renovato_imperium = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				justify_war_goal_time = -0.15
+			}
+		}
+		RUS_peaceful_reintegration_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_generic_deal_with_the_devil2
+
+			modifier = {
+				conscription = 0.005
+				stability_factor = 0.07
+			}
+		}
+		RUS_salt_the_earth_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_generic_deal_with_the_devil2
+
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.03
+
+			}
+		}
+		RUS_renovato_imperii1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				justify_war_goal_time = -0.30
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
 
 		
 }

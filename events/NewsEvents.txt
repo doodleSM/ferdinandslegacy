@@ -12534,3 +12534,33 @@ news_event = {
 		}
 	}
 }
+news_event = {
+	id = news.334
+	title = news.334.t
+	desc = news.334.d
+	picture = GFX_news_event_commie_leningrad
+	
+	major = yes
+	
+	trigger = {
+		195 = { is_controlled_by = BLU }
+		195 = { is_owned_by = RUS }
+		
+		NOT = { has_global_flag = fall_of_leningrad_commie }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_leningrad_commie
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = news.334.a
+		trigger = {
+			
+		}
+	}
+}

@@ -27,3 +27,12 @@ RUS_federal_membership = {
 	visible = {
 	}
 }
+RUS_subjugate_central_asia = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = RUS
+	}
+
+	visible = {
+	}
+}

@@ -19,8 +19,56 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_cossack_raid.dds"
 	}
 	spriteType = {
+		name = "GFX_report_event_tsar_inpection"
+		texturefile = "gfx/event_pictures/report_event_tsar_inspection.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_denikin_inpection"
+		texturefile = "gfx/event_pictures/report_event_denikin_inspection.dds"
+	}
+	spriteType = {
 		name = "GFX_report_event_bogaewsky"
 		texturefile = "gfx/event_pictures/report_event_bogaewsky.dds"
+	}
+	spriteType = {
+		name = "GFX_report_tsar_delegation"
+		texturefile = "gfx/event_pictures/report_event_tsar_delegation.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_tsarist_troops"
+		texturefile = "gfx/event_pictures/report_event_tsarist_troops.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_tsar_coronation"
+		texturefile = "gfx/event_pictures/report_event_tsar_coronation.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_asian_treaty"
+		texturefile = "gfx/event_pictures/report_event_asian_treaty.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_russian_artillery"
+		texturefile = "gfx/event_pictures/report_event_russian_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_commie_leningrad_march"
+		texturefile = "gfx/event_pictures/report_event_commie_leningrad_march.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_russians_fleeing"
+		texturefile = "gfx/event_pictures/report_event_russians_fleeing.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_horse_cart"
+		texturefile = "gfx/event_pictures/report_event_horse_cart.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ww1_tanks"
+		texturefile = "gfx/event_pictures/report_event_ww1_tanks.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_commie_leningrad"
+		texturefile = "gfx/event_pictures/news_event_commie_leningrad.dds"
 	}
 	
 }

@@ -1,0 +1,142 @@
+#Category allowed for RUS
+
+RUS_subjugate_central_asia= {
+
+DON_attack_khi = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = RUS_operation_central_asia
+			 KHI = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
+            NOT = { has_guaranteed = KHI }
+            any_neighbor_country = {
+                    tag = KHI
+                }
+		}
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		visible = 
+		{ has_completed_focus = RUS_operation_central_asia 
+		  }
+
+		complete_effect = {
+			create_wargoal = {
+						type = take_state_focus
+						target = KHI
+						
+					}
+
+		}
+
+		
+	}
+DON_attack_bkh = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = RUS_operation_central_asia
+			 BKH = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
+            NOT = { has_guaranteed = BKH }
+            any_neighbor_country = {
+                    tag = BKH
+                }
+		}
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		visible = 
+		{ has_completed_focus = RUS_operation_central_asia 
+			 BKH = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
+		  }
+
+		complete_effect = {
+			create_wargoal = {
+						type = take_state_focus
+						target = BKH
+						
+					}
+
+		}
+
+		
+	}
+DON_attack_trc = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = RUS_operation_central_asia
+			 TRC = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
+            NOT = { has_guaranteed = TRC }
+            any_neighbor_country = {
+                    tag = TRC
+                }
+		}
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		visible = 
+		{ has_completed_focus = RUS_operation_central_asia 
+			TRC = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
+		  }
+
+		complete_effect = {
+			create_wargoal = {
+						type = take_state_focus
+						target = TRC
+						
+					}
+
+		}
+
+		
+	}
+DON_attack_KRZ = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = RUS_operation_central_asia
+			 KRZ = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
+            NOT = { has_guaranteed = KRZ }
+            any_neighbor_country = {
+                    tag = KRZ
+                }
+		}
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		visible = 
+		{ has_completed_focus = RUS_operation_central_asia 
+			TRC = { exists = yes is_in_faction = no NOT = { has_war_with = ROOT } is_subject = no }
+		  }
+
+		complete_effect = {
+			create_wargoal = {
+						type = take_state_focus
+						target = KRZ
+						
+					}
+
+		}
+
+		
+	}
+
+
+
+
+
+}
+		

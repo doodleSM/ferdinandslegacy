@@ -387,5 +387,21 @@ spriteTypes = {
 		name = "GFX_goal_tsarist_airforce"
 		texturefile = "gfx/interface/goals/goal_tsarist_airforce.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_rus_north_alliance"
+		texturefile = "gfx/interface/goals/focus_rus_north_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_rus_romania_alliance"
+		texturefile = "gfx/interface/goals/focus_rus_romania_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_balkan"
+		texturefile = "gfx/interface/goals/goal_rus_balkan.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_rus_danubian_alliance"
+		texturefile = "gfx/interface/goals/goal_rus_danubian_alliance.dds"
+	}
 	
 }

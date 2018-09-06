@@ -1,0 +1,1256 @@
+﻿###########AIU Russia Events###############
+add_namespace = aiu_rus
+####Tsar Visits Army####
+
+country_event = {
+	id = aiu_rus.1
+	title = aiu_rus.1.t
+	desc = aiu_rus.1.d
+	picture = GFX_report_event_long_march
+	
+	trigger = { original_tag = RUS date > 1930.5.12 }
+	fire_only_once = yes
+	mean_time_to_happen = { days = 10 }
+
+	trigger = { }
+
+	option = { #three cheers
+		name = aiu_rus.1.a
+		add_war_support = 0.03
+		hidden_effect = { country_event = { days = 10 id = aiu_rus.2 } }
+		}
+
+}
+#######Tsar Takes Control of Army
+country_event = {
+	id = aiu_rus.2
+	title = aiu_rus.2.t
+	desc = aiu_rus.2.d
+	picture = GFX_report_event_tsar_inpection
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #This does not bode well
+		name = aiu_rus.2.a
+		hidden_effect = { country_event = { days = 10 id = aiu_rus.3 } }
+		add_stability = -0.03
+		create_field_marshal = {
+	name = "Nikolai II"
+	picture = "RUS_Nikolai_general.dds"
+	 id = 788
+	traits = {
+	 thorough_planner
+	 harsh_leader
+	
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+		}
+
+}
+####Wrangel and Denikin Meet####
+country_event = {
+	id = aiu_rus.3
+	title = aiu_rus.3.t
+	desc = aiu_rus.3.d
+	picture = GFX_report_event_denikin_inpection
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #Plotting only Damages us
+		name = aiu_rus.3.a
+		hidden_effect = { country_event = { days = 25 id = aiu_rus.4 } }
+		}
+}
+####City Riots####
+country_event = {
+	id = aiu_rus.4
+	title = aiu_rus.4.t
+	desc = aiu_rus.4.d
+	picture = GFX_report_event_american_hunger_march
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #Send in the Military
+		name = aiu_rus.4.a
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.5 } }
+		add_political_power = -10
+		}
+	option = { #Try to Calm it
+		name = aiu_rus.4.b
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.23 } }
+		add_political_power = -40
+		add_stability = 0.05
+		}
+}
+#####Military Sent In
+country_event = {
+	id = aiu_rus.5
+	title = aiu_rus.5.t
+	desc = aiu_rus.5.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #This better work
+		name = aiu_rus.5.a
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.6 } }
+		}
+}
+#####Civilians Shot
+country_event = {
+	id = aiu_rus.6
+	title = aiu_rus.6.t
+	desc = aiu_rus.6.d
+	picture = GFX_report_event_generic_funeral
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #Detain Responsilbe
+		name = aiu_rus.6.a
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.7 } }
+		
+		add_political_power = -15
+		add_stability = 0.02
+		}
+	option = { #Send him Away
+		name = aiu_rus.6.b
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.15 } }
+		add_war_support = -0.075
+		add_political_power = -30
+		add_stability = -0.05
+		}
+}
+#####General Detained
+country_event = {
+	id = aiu_rus.7
+	title = aiu_rus.7.t
+	desc = aiu_rus.7.d
+	picture = GFX_report_event_czech_soldiers_01
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #He Deserved it
+		name = aiu_rus.7.a
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.8 } }
+		
+		add_political_power = -15
+		
+		}
+	
+}
+#####Generals Protest
+country_event = {
+	id = aiu_rus.8
+	title = aiu_rus.8.t
+	desc = aiu_rus.8.d
+	picture = GFX_report_event_lithuania_army
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #Tsar Refuses
+		name = aiu_rus.8.a
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.9 } }
+		
+		add_political_power = 20
+		
+		}
+	option = { #He Accepts
+		name = aiu_rus.8.b
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.13 } }
+		
+		add_political_power = -15
+		
+		}
+	
+}
+###Tsar Denies
+country_event = {
+	id = aiu_rus.9
+	title = aiu_rus.9.t
+	desc = aiu_rus.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #OMGTSARISSOSTRONK
+		name = aiu_rus.9.a
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.10 } }
+		
+		add_war_support = 0.05
+		add_political_power = 15
+		
+		}
+	
+	
+}
+#####Military Plans Coup####
+country_event = {
+	id = aiu_rus.10
+	title = aiu_rus.10.t
+	desc = aiu_rus.10.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #SACREBLU
+		name = aiu_rus.10.a
+		random_list = {
+				70 = {
+					country_event = { id = aiu_rus.11 days = 4 }
+				}
+				30  = {
+					country_event = { id = aiu_rus.12 days = 4 }
+				}
+			}
+		
+		add_political_power = 5
+		add_stability = -0.1
+		
+		}
+	
+	
+}
+#####Military Storms Winter Palace
+country_event = {
+	id = aiu_rus.11
+	title = aiu_rus.11.t
+	desc = aiu_rus.11.d
+	picture = GFX_report_event_lithuania_army
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #ooft
+		name = aiu_rus.11.a
+		
+		set_country_flag = RUS_military_coup
+		add_political_power = 25
+		add_war_support = -0.05
+		set_party_name = { ideology = neutrality long_name = RUS_military_regency_name name = RUS_military_regency_name }
+		remove_unit_leader = 788
+		create_country_leader = {
+   	 	name = "Military Regency"
+   	 	desc = ""
+    	picture = "RUS_military_regency.dds"
+   	    expire = "1953.3.1"
+    	ideology = despotism
+    	traits = {
+        
+    	}
+}
+		
+		}
+	
+	
+}
+#####Generals Detained/Failed Coup###
+country_event = {
+	id = aiu_rus.12
+	title = aiu_rus.12.t
+	desc = aiu_rus.12.d
+	picture = GFX_report_event_yugoslavian_cavalry
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #BigThink
+		name = aiu_rus.12.a
+		
+		set_country_flag = RUS_tsar_defiant
+		add_political_power = 25
+		add_war_support = 0.05
+		remove_unit_leader = 787
+		remove_unit_leader = 786
+		
+		}
+	
+	
+}
+#####Tsar Accepts Demands#####
+country_event = {
+	id = aiu_rus.13
+	title = aiu_rus.13.t
+	desc = aiu_rus.13.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #
+		name = aiu_rus.13.a
+		
+		add_political_power = -25
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.14 } }
+		
+		
+		}
+	
+	
+}
+#####Military Coup Planned####
+country_event = {
+	id = aiu_rus.14
+	title = aiu_rus.14.t
+	desc = aiu_rus.14.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #SACREBLU
+		name = aiu_rus.14.a
+		random_list = {
+				40 = {
+					country_event = { id = aiu_rus.11 days = 4 }
+				}
+				60  = {
+					country_event = { id = aiu_rus.12 days = 4 }
+				}
+			}
+		
+		add_political_power = 5
+		add_stability = -0.1
+		
+		}
+	
+	
+}
+######General Sent Away####
+country_event = {
+	id = aiu_rus.15
+	title = aiu_rus.15.t
+	desc = aiu_rus.15.d
+	picture = GFX_report_event_hitler_croatia_handshake
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.15.a
+		
+		add_political_power = -25
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.16 } }
+		
+		
+		}
+	
+	
+}
+######General Plot Coup####
+country_event = {
+	id = aiu_rus.16
+	title = aiu_rus.16.t
+	desc = aiu_rus.16.d
+	picture = GFX_report_event_german_volunteers
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.16.a
+		
+		add_political_power = -10
+		hidden_effect = { country_event = { days = 5 id = aiu_rus.17 } }
+		
+		
+		}
+	
+	
+}
+######Tsar Ultimatum####
+country_event = {
+	id = aiu_rus.17
+	title = aiu_rus.17.t
+	desc = aiu_rus.17.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.17.a
+		
+		hidden_effect = {
+		random_list = {
+				50 = {
+					country_event = { id = aiu_rus.18 days = 2 }
+				}
+				50  = {
+					country_event = { id = aiu_rus.19 days = 2 }
+				}
+			}
+			}
+		
+		
+		}
+	
+	
+}
+###Tsar Abdicates####
+country_event = {
+	id = aiu_rus.18
+	title = aiu_rus.18.t
+	desc = aiu_rus.18.d
+	picture = GFX_report_event_tsar_coronation
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.18.a
+		
+		add_political_power = -50
+		set_country_flag = RUS_young_tsar
+		add_stability = -0.1
+		create_country_leader = {
+   	 	name = "Alexei II"
+    	desc = ""
+    	picture = "RUS_Alexander_III.dds"
+    	expire = "1953.3.1"
+    	ideology = despotism
+    	traits = {
+		
+        
+    }
+}
+		
+		}
+	
+	
+}
+####Tsar Refuses Ultimatum####
+country_event = {
+	id = aiu_rus.19
+	title = aiu_rus.19.t
+	desc = aiu_rus.19.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.19.a
+		
+		hidden_effect = {
+				country_event = { id = aiu_rus.20 days = 7 }
+			}
+		
+		
+		}
+		}
+		#####Military Storms Winter Palace
+country_event = {
+	id = aiu_rus.20
+	title = aiu_rus.20.t
+	desc = aiu_rus.20.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.20.a
+		
+		hidden_effect = {
+		random_list = {
+				50 = { ####Military Regency####
+					country_event = { id = aiu_rus.21 days = 2 }
+				}
+				50  = { #####Alexei Installed###
+					country_event = { id = aiu_rus.22 days = 2 }
+				}
+			}
+			}
+		
+		
+		}
+		
+	}
+###Military Regency after Storming of Palace####
+country_event = {
+	id = aiu_rus.21
+	title = aiu_rus.21.t
+	desc = aiu_rus.21.d
+	picture = GFX_report_event_lithuania_army
+	
+	is_triggered_only = yes
+
+	
+
+	option = { #ooft
+		name = aiu_rus.21.a
+		
+		
+		add_political_power = -50
+		set_country_flag = RUS_military_coup
+		add_stability = -0.1
+		set_party_name = { ideology = neutrality long_name = RUS_military_regency_name name = RUS_military_regency_name }
+		remove_unit_leader = 788
+		create_country_leader = {
+   	 name = "Military Regency"
+   	 desc = ""
+    	picture = "RUS_military_regency.dds"
+   	 expire = "1953.3.1"
+    	ideology = despotism
+    	traits = {
+        
+    	}
+}
+		
+		}
+	
+	
+}
+###Alexei takes Power######
+country_event = {
+	id = aiu_rus.22
+	title = aiu_rus.22.t
+	desc = aiu_rus.22.d
+	picture = GFX_report_event_tsar_coronation
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.22.a
+		
+		add_political_power = -50
+		set_country_flag = RUS_young_tsar
+		add_stability = -0.1
+		create_country_leader = {
+   	 	name = "Alexei II"
+    	desc = ""
+    	picture = "RUS_Alexander_III.dds"
+    	expire = "1953.3.1"
+    	ideology = despotism
+    	traits = {
+		
+        
+    }
+}
+		
+		}
+	
+	
+}
+
+
+####Trying to Calm Riots####
+country_event = {
+	id = aiu_rus.23
+	title = aiu_rus.23.t
+	desc = aiu_rus.23.d
+	picture = GFX_report_event_french_liberation
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.23.a
+		
+		hidden_effect = {
+				country_event = { id = aiu_rus.24 days = 7 }
+			}
+		
+		
+		}
+		}
+####Negotiations with Workers####
+country_event = {
+	id = aiu_rus.24
+	title = aiu_rus.24.t
+	desc = aiu_rus.24.d
+	picture = GFX_report_event_french_liberation
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.24.a
+		
+		hidden_effect = {
+		random_list = {
+				80 = { ####Negotiations go Sour####
+					country_event = { id = aiu_rus.6 days = 2 }
+				}
+				20  = { #####Negotiations Suceedd###
+					country_event = { id = aiu_rus.25 days = 2 }
+				}
+			}
+			}
+		
+		
+		}
+		}
+####Tsar Accepts Demands####
+country_event = {
+	id = aiu_rus.25
+	title = aiu_rus.25.t
+	desc = aiu_rus.25.d
+	picture = GFX_report_event_poland_rejects
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.25.a
+		
+		hidden_effect = {
+				country_event = { id = aiu_rus.26 days = 7 }
+			}
+		
+		
+		}
+		}
+		######Tsar Abdication Crisis####
+	country_event = {
+	id = aiu_rus.26
+	title = aiu_rus.26.t
+	desc = aiu_rus.26.d
+	picture = GFX_report_tsar_delegation
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.26.a
+		
+		hidden_effect = {
+				country_event = { id = aiu_rus.27 days = 7 }
+			}
+		
+		
+		}
+		}
+country_event = {
+	id = aiu_rus.27
+	title = aiu_rus.27.t
+	desc = aiu_rus.27.d
+	picture = GFX_report_tsar_delegation
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.27.a
+		
+		add_political_power = -50
+		set_country_flag = RUS_tsar_defiant
+		add_stability = -0.1
+		
+		
+		}
+		}
+		#####Establish Courland####
+	country_event = {
+	id = aiu_rus.28
+	title = aiu_rus.28.t
+	desc = aiu_rus.28.d
+	picture = GFX_report_tsar_delegation
+	
+	fire_only_once = yes
+	trigger = {
+			controls_state = 190
+			LAT = {
+				exists = no
+			}
+			}
+	
+
+	option = { 
+		name = aiu_rus.28.a
+		
+		puppet = CUR
+		CUR = {transfer_state = 190}
+		CUR = {create_country_leader = {
+   	name = "General Andrej Auzans"
+    	desc = ""
+    	picture = "CUR_Auzans.dds"
+    	expire = "1953.3.1"
+    	ideology = auth_dem_ideology
+    	traits = {
+		
+        
+    }
+}}
+	CUR = {set_politics = {
+				ruling_party = auth_dem
+				elections_allowed = no
+			}}
+		
+		}
+	option = { 
+		name = aiu_rus.28.b
+		add_political_power = -40
+		add_stability = -0.02
+		
+		
+		
+		}
+		}
+		
+country_event = {
+	id = aiu_rus.29
+	title = aiu_rus.29.t
+	desc = aiu_rus.29.d
+	picture = GFX_report_event_asian_politicians
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.29.a
+		
+		add_political_power = -50
+		add_stability = -0.05
+		RUS = {country_event = aiu_rus.30}
+		
+		
+		}
+option = { 
+		name = aiu_rus.29.b
+		
+		
+		RUS = {country_event = aiu_rus.31}
+		
+		}
+		}
+country_event = {
+	id = aiu_rus.30
+	title = aiu_rus.30.t
+	desc = aiu_rus.30.d
+	picture = GFX_report_event_ast_transfer_singapore
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.30.a
+		
+		add_political_power = -5
+		
+		
+		}
+
+		}
+country_event = {
+	id = aiu_rus.31
+	title = aiu_rus.31.t
+	desc = aiu_rus.31.d
+	picture = GFX_report_event_bunker_01
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.31.a
+		
+		add_political_power = 5
+		give_guarantee = KOR
+		add_opinion_modifier = {
+				target = KOR
+				modifier = large_increase
+			}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		add_ai_strategy = {
+				type = alliance
+				id = "FROM"
+				value = 200
+			}
+		add_ai_strategy = {
+				type = protect
+				id = "FROM"
+				value = 100
+			}
+		add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "FROM"
+				value = 100
+			}
+		add_ai_strategy = {
+				type = support
+				id = "FROM"
+				value = 100
+			}
+			hidden_effect = {
+		diplomatic_relation = {
+					country = KOR
+					relation = military_access
+					active = yes
+				}
+		
+		
+		}
+		}
+		}
+country_event = {
+	id = aiu_rus.32
+	title = aiu_rus.32.t
+	desc = aiu_rus.32.d
+	picture = GFX_report_event_usa_heavy_cruiser
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.32.a
+		
+		RUS = {country_event = aiu_rus.33}
+        	add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.5
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		add_navy_experience = 20
+		
+		}
+	option = { 
+		name = aiu_rus.32.b
+		
+		add_political_power = -20
+		RUS = {country_event = aiu_rus.34}
+		
+		
+		}
+
+		}
+country_event = {
+	id = aiu_rus.33
+	title = aiu_rus.33.t
+	desc = aiu_rus.33.d
+	picture = GFX_report_event_usa_destroyers
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.33.a
+		
+		
+        	add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.5
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		add_navy_experience = 20
+		
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.34
+	title = aiu_rus.34.t
+	desc = aiu_rus.34.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.34.a
+		add_political_power = -10
+		
+		}
+	
+
+		}
+####Partition of Korea####
+country_event = {
+	id = aiu_rus.35
+	title = aiu_rus.35.t
+	desc = aiu_rus.35.d
+	picture = GFX_report_event_hitler_croatia_handshake
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.35.a
+		KOR = {country_event ={id = aiu_rus.36 days = 2}}
+		add_war_support = 0.01
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.36
+	title = aiu_rus.36.t
+	desc = aiu_rus.36.d
+	picture = GFX_report_event_nra_march
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+	ai_chance = {
+			factor = 50
+					}
+		name = aiu_rus.36.a
+		RUS = {country_event = aiu_rus.37}
+		JAP = {country_event = aiu_rus.38}
+		
+		}
+	option = { 
+		name = aiu_rus.35.b
+		ai_chance = {
+			factor = 50
+					}
+		JAP = {country_event = aiu_rus.39}
+		RUS = {country_event = aiu_rus.39}
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.37
+	title = aiu_rus.37.t
+	desc = aiu_rus.37.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.37.a
+		transfer_state = 774
+		transfer_state = 527
+		}
+	
+	
+
+		}
+country_event = {
+	id = aiu_rus.38
+	title = aiu_rus.38.t
+	desc = aiu_rus.38.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.38.a
+		transfer_state = 773
+		transfer_state = 775
+		transfer_state = 525
+		transfer_state = 776
+		transfer_state = 779
+		transfer_state = 777
+		transfer_state = 778
+		}
+	
+	
+
+		}
+country_event = {
+	id = aiu_rus.39
+	title = aiu_rus.39.t
+	desc = aiu_rus.39.d
+	picture = GFX_report_event_japanese_army_parade
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.39.a
+		create_wargoal = {
+				target = KOR
+				type = annex_everything
+			}
+		
+		}
+	
+
+		}
+#####Beyinyang Partition#####
+country_event = {
+	id = aiu_rus.40
+	title = aiu_rus.40.t
+	desc = aiu_rus.40.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.40.a
+		JAP = {country_event = aiu_rus.41}
+		
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.41
+	title = aiu_rus.41.t
+	desc = aiu_rus.41.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.41.a
+		BEI = {country_event = aiu_rus.42}
+		
+		}
+	
+
+		}
+######Beinyang Recieves Ultimatum######
+country_event = {
+	id = aiu_rus.42
+	title = aiu_rus.42.t
+	desc = aiu_rus.42.d
+	picture = GFX_report_event_pla_in_beijing
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.42.a
+		ai_chance = {
+			factor = 60
+					}
+		RUS = {country_event = aiu_rus.43}
+		JAP = {country_event = aiu_rus.44}
+
+		MON = {country_event = aiu_rus.45}
+		add_political_power = -74
+		
+		
+	
+		}
+		option = { 
+		name = aiu_rus.42.b
+		ai_chance = {
+			factor = 40
+					}
+		RUS = {country_event = aiu_rus.46}
+		JAP = {country_event = aiu_rus.46}
+
+		MON = {country_event = aiu_rus.46}
+		add_war_support = 25
+		
+		
+	
+		}
+		}
+country_event = {
+	id = aiu_rus.43
+	title = aiu_rus.43.t
+	desc = aiu_rus.43.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.43.a
+		transfer_state = 714
+		transfer_state = 761
+		transfer_state = 772
+		transfer_state = 715
+		transfer_state = 716
+		transfer_state = 770
+		transfer_state = 328
+		transfer_state = 816
+		transfer_state = 717
+		transfer_state = 771
+		transfer_state = 817
+		transfer_state = 610
+		transfer_state = 609
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.44
+	title = aiu_rus.44.t
+	desc = aiu_rus.44.d
+	picture = GFX_report_event_chinese_officers
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.44.a
+		transfer_state = 608
+		transfer_state = 766
+		transfer_state = 614
+		puppet = BEI
+		
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.45
+	title = aiu_rus.45.t
+	desc = aiu_rus.45.d
+	picture = GFX_report_event_manchukuo_army
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.45.a
+		transfer_state = 612
+		transfer_state = 611
+		transfer_state = 621
+		transfer_state = 746
+		
+		
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.46
+	title = aiu_rus.46.t
+	desc = aiu_rus.46.d
+	picture = GFX_report_event_japanese_soldiers_02
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.46.a
+		create_wargoal = {
+				target = BEI
+				type = annex_everything
+			}
+		
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.47
+	title = aiu_rus.47.t
+	desc = aiu_rus.47.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.47.a
+		RUS = {country_event = aiu_rus.48}
+		ai_chance = {
+			factor = 70
+		}
+		}
+	option = { 
+		name = aiu_rus.47.b
+		RUS = {country_event = aiu_rus.49}
+		ai_chance = {
+			factor = 30
+		}
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.48
+	title = aiu_rus.48.t
+	desc = aiu_rus.48.d
+	picture = GFX_report_event_ast_transfer_singapore
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.48.a
+		transfer_state = 745
+		JAP = {transfer_state = 655}
+		
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.49
+	title = aiu_rus.49.t
+	desc = aiu_rus.49.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.49.a
+		add_stability = -0.01
+		add_political_power = -25
+		
+	
+	
+
+		}

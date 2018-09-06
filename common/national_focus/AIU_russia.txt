@@ -441,7 +441,7 @@ focus = {
 
 		available = {
 			has_country_flag = RUS_young_tsar
-			has_country_flag = RUS_nikolai_dead
+			
 		}
 
 		completion_reward = {
@@ -1270,7 +1270,7 @@ focus = {
 			factor = 1
 		}
 		prerequisite = {}
-		available = { has_country_flag = RUS_alexei_dead
+		available = { 
 					  has_country_flag = RUS_ended_regency
 			
 		}
@@ -1721,11 +1721,12 @@ focus = {
 		}
 		prerequisite = {}
 		available = { 
-			
+			RSP = { exists = no }
+			BLU = { exists = no }
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_renovato_imperium
     	}
 	}
 	focus = {
@@ -1741,11 +1742,28 @@ focus = {
 		}
 		prerequisite = {focus = RUS_renovato_imperii}
 		available = { 
-			
+			OR = { EST = {exists = yes}
+				   LIT = {exists = yes}
+				   LAT = {exists = yes}}
 		}
-
+		bypass = {
+				   EST = {exists = no}
+				   LIT = {exists = no}
+				   LAT = {exists = no}
+		}
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = EST
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LIT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LAT
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -1760,12 +1778,30 @@ focus = {
 			factor = 80
 		}
 		prerequisite = {focus = RUS_renovato_imperii}
+		bypass = {
+				   BAU = {exists = no}
+				   CRI = {exists = no}
+				   UKR = {exists = no}
+		}
 		available = { 
-			
+			OR = {BAU = {exists = yes}
+				  UKR = {exists = yes}
+				  CRI = {exists = yes}}
 		}
 
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = UKR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CRI
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BAU
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -1780,12 +1816,36 @@ focus = {
 			factor = 80
 		}
 		prerequisite = {focus = RUS_renovato_imperii}
+		bypass = {
+				   DON = {exists = no}
+				   ASC = {exists = no}
+				   CHE = {exists = no}
+				   CAU = {exists = no}
+		}
 		available = { 
-			
+			OR = {DON = {exists = yes}
+				  ASC = {exists = yes}
+				  CHE = {exists = yes}
+				  CAU = {exists = yes}}
 		}
 
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = DON
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ASC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CHE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CAU
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -1800,12 +1860,53 @@ focus = {
 			factor = 80
 		}
 		prerequisite = {focus = RUS_renovato_imperii}
+		
 		available = { 
-			
+			OR = {ALA = {exists = yes}
+				  ZHT = {exists = yes}
+				  KHI = {exists = yes}
+				  ALT = {exists = yes}
+				  BKH = {exists = yes}
+				  TRC = {exists = yes}
+				  IDE = {exists = yes}
+				  KRZ = {exists = yes}
+		}
 		}
 
 		completion_reward = {
-        	
+		
+    	create_wargoal = {
+				target = ALA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = IDE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ZHT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ALT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KRZ
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TRC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BKH
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KHI
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -1825,7 +1926,7 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_peaceful_reintegration_idea
     	}
 	}
 	focus = {
@@ -1845,7 +1946,7 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_salt_the_earth_idea
     	}
 	}
 	focus = {
@@ -1865,7 +1966,10 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	swap_ideas = {
+				remove_idea = RUS_renovato_imperium
+				add_idea = RUS_renovato_imperii1
+			}
     	}
 	}
 	focus = {
@@ -1885,7 +1989,7 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_political_power = 50
     	}
 	}
 	focus = {
@@ -1906,7 +2010,7 @@ focus = {
 		mutually_exclusive = {focus = RUS_mend_old_wounds}
 
 		completion_reward = {
-        	
+        	add_ideas = RSP_anti_japan_idea
     	}
 	}
 	focus = {
@@ -1926,7 +2030,7 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	KOR = {country_event = aiu_rus.29}
     	}
 	}
 	focus = {
@@ -1946,7 +2050,7 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_political_power = 25
     	}
 	}
 	focus = {
@@ -1961,12 +2065,46 @@ focus = {
 			factor = 80
 		}
 		prerequisite = {focus = RUS_chinese_cooperation}
+		bypass = {BEI = {exists = no}}
 		available = { 
-			
+			BEI = {controls_state = 771
+				   controls_state = 714
+				   controls_state = 761 }
 		}
 
 		completion_reward = {
-        	
+		BEI = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = RUS_reintegrated_railway
+			}
+			}
+			
+        		771 = {
+				
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+				714 = {
+				
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			761 = {
+				
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			
     	}
 	}
 	focus = {
@@ -1986,7 +2124,27 @@ focus = {
 		}
 		mutually_exclusive = {focus = RUS_anhui_friendship }
 		completion_reward = {
-        	
+			BEI = {add_opinion_modifier ={ target = ROOT modifier = AST_delegation_to_china}}
+			add_ai_strategy = {
+				type = alliance
+				id = BEI
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = BEI
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = BEI
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = BEI
+				value = 100
+			}
     	}
 	}
 	focus = {
@@ -2006,7 +2164,27 @@ focus = {
 		}
 		mutually_exclusive = {focus = RUS_beyinyang_alliance }
 		completion_reward = {
-        	
+			ANH = {add_opinion_modifier ={ target = ROOT modifier = AST_delegation_to_china}}
+			add_ai_strategy = {
+				type = alliance
+				id = ANH
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = ANH
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = ANH
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = ANH
+				value = 100
+			}
     	}
 	}
 	focus = {
@@ -2026,7 +2204,10 @@ focus = {
 		}
 		
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = JAP
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -2047,7 +2228,8 @@ focus = {
 		mutually_exclusive = {focus = RUS_anti_japan_stance}
 
 		completion_reward = {
-        	
+        	add_opinion_modifier = {target = JAP
+				modifier = large_increase}
     	}
 	}
 	focus = {
@@ -2067,7 +2249,7 @@ focus = {
 		}
 		
 		completion_reward = {
-        	
+        	JAP = {country_event = aiu_rus.32}
     	}
 	}
 	focus = {
@@ -2087,7 +2269,7 @@ focus = {
 		}
 		
 		completion_reward = {
-        	
+        	country_event = aiu_rus.35
     	}
 	}
 	focus = {
@@ -2107,7 +2289,7 @@ focus = {
 		}
 		
 		completion_reward = {
-        	
+        	country_event = aiu_rus.40
     	}
 	}
 	focus = {
@@ -2127,7 +2309,7 @@ focus = {
 		}
 		
 		completion_reward = {
-        	
+        	JAP = {country_event = aiu_rus.47}
     	}
 	}
 	focus = {
@@ -2147,7 +2329,10 @@ focus = {
 		}
 		
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = USA
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -2491,7 +2676,7 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_war_support = 0.05
     	}
 	}
 	focus = {
@@ -2512,7 +2697,7 @@ focus = {
 		}
 		mutually_exclusive = { focus = RUS_peaceful_politics}
 		completion_reward = {
-        	
+        	add_ideas = RUS_peaceful_politics
     	}
 	}
 	focus = {
@@ -2533,12 +2718,12 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	if = { limit = { is_in_faction = no } create_faction = "European Defence League"}
     	}
 	}
 	focus = {
 		id = RUS_romanian_entry
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_focus_rus_romania_alliance
 		x = 51
 		y = 7
 
@@ -2549,17 +2734,47 @@ focus = {
 		}
 		prerequisite = {focus = RUS_european_defence_league}
 		
-		available = { 
-			
+		available = {
+			ROM = { exists = yes NOT = { is_in_faction_with = ROOT } NOT = { has_war_with = ROOT } is_subject = no }
+			is_subject = no
+		}
+
+		bypass = {
+			OR = {
+				ROM = { exists = no }
+				ROM = { is_subject = yes }
+				ROM = { is_in_faction_with = ROOT }
+			}
 		}
 
 		completion_reward = {
-        	
+        	ROM  = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_increase
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+		}
+		ROM = { country_event = { id = generic.5 days = 1 } }
     	}
 	}
 	focus = {
 		id = RUS_balkan_expansion
-		icon = GFX_goal_tripartite_pact
+		icon = GFX_goal_rus_balkan
 		x = 51
 		y = 8
 
@@ -2569,18 +2784,35 @@ focus = {
 			factor = 80
 		}
 		prerequisite = {focus = RUS_romanian_entry}
+		bypass = { OR = {
+				MNT = { exists = no }
+				MNT = { is_subject = yes }
+				MNT = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				BON = { exists = no }
+				BON = { is_subject = yes }
+				BON = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				CRO = { exists = no }
+				CRO = { is_subject = yes }
+				CRO = { is_in_faction_with = ROOT }
+			}}
+		available = {MNT = {NOT = {has_war_with = BON} } }
+		available = {MNT = {NOT = {has_war_with = CRO} } }
+		available = {CRO = {NOT = {has_war_with = BON} } }
 		
-		available = { 
-			
-		}
 
 		completion_reward = {
-        	
+        	BON = { country_event = { id = generic.5 days = 1 } }
+        	CRO = { country_event = { id = generic.5 days = 1 } }
+        	MNT = { country_event = { id = generic.5 days = 1 } }
     	}
 	}
 	focus = {
 		id = RUS_nordic_membership
-		icon = GFX_goal_scandinavian_relations
+		icon = GFX_focus_rus_north_alliance
 		x = 49
 		y = 7
 
@@ -2594,14 +2826,30 @@ focus = {
 		available = { 
 			
 		}
-
+		bypass = { OR = {
+				DEN = { exists = no }
+				DEN = { is_subject = yes }
+				DEN = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				NOR = { exists = no }
+				NOR = { is_subject = yes }
+				NOR = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				SWE = { exists = no }
+				SWE = { is_subject = yes }
+				SWE = { is_in_faction_with = ROOT }
+			}}
 		completion_reward = {
-        	
+        	DEN = { country_event = { id = generic.5 days = 1 } }
+        	NOR = { country_event = { id = generic.5 days = 1 } }
+        	SWE = { country_event = { id = generic.5 days = 1 } }
     	}
 	}
 	focus = {
 		id = RUS_danubian_entry
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_rus_danubian_alliance
 		x = 49
 		y = 8
 
@@ -2611,7 +2859,17 @@ focus = {
 			factor = 80
 		}
 		prerequisite = {focus = RUS_nordic_membership}
-		
+		bypass = { OR = {
+				HUN = { exists = no }
+				HUN = { is_subject = yes }
+				HUN = { is_in_faction_with = ROOT }
+			}
+			OR = {
+				BOH = { exists = no }
+				BOH = { is_subject = yes }
+				BOH = { is_in_faction_with = ROOT }
+			}
+			}
 		available = { 
 			
 		}
