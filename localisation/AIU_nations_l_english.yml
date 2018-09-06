@@ -434,3 +434,6 @@
  CRN_fascism:0 "Carniola"
  CRN_fascism_DEF:0 "Carniola"
  CRN_fascism_ADJ:0 "Carniolan"
+ GRE_market_lib:0 "Republic of Greece"
+ GRE_market_lib_DEF:0 "The Republic of Greece"
+ GRE_market_lib_ADJ:0 "Greek"

@@ -214,7 +214,7 @@ opinion_modifiers = {
 	}
 	
 	different_party_types = {
-		value = -10
+		value = 0
 	}
 	
 	long_term_trade_partner = {

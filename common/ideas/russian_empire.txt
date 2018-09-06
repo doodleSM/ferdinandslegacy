@@ -380,29 +380,6 @@ ideas = {
 			
 			}
 		}
-		RUS_bad_conscription_alexei1 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_spy_political
-
-			modifier = {
-				conscription_factor = -0.03
-				training_time_factor = 0.05
-				army_morale_factor = -0.05
-				
-
-			
-			}
-		}
 		RUS_tsars_men = {
 
 			allowed = {
@@ -989,11 +966,11 @@ ideas = {
 			modifier = {
 				stability_factor = 0.1
 				war_support_factor = 0.1
-				targeted_modifier = {
+				}
+			targeted_modifier = {
 				tag = ENG
 				attack_bonus_against = 0.25
 			}	
-			}
 		}
 		RUS_church_strengthened = {
 

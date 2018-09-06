@@ -1,0 +1,1749 @@
+#### normal british focuses
+
+	shared_focus = {
+		id = ENG_debate_russian_intervention
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 4
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			any_other_country = {
+				has_country_flag = won_russian_civil_war
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = { id = aiu_britain.1 days = 1 }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_assemble_volunteer_force
+		icon = GFX_goal_rus_tsars_men
+		x = -1
+		y = 1
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_debate_russian_intervention }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#set_rule = { can_send_volunteers = yes }
+			#add_ideas = ENG_volunteers_idea
+			add_manpower = -5000
+			RUS = { country_event = { id = aiu_britain.5 days = 1 } }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_rcw_outcome_focus
+		icon = GFX_focus_generic_combined_arms
+		x = 0
+		y = 3
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_debate_russian_intervention }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			any_other_country = {
+				has_country_flag = won_russian_civil_war
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			air_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_recognise_the_rsp
+		icon = GFX_goal_tripartite_pact
+		x = -3
+		y = 4
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_rcw_outcome_focus }
+		mutually_exclusive = { focus = ENG_shelter_russian_royal_family }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			RSP = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			RSP = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_increase
+			}
+			country_event = aiu_britain.8
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = RSP
+				value = 100
+			}
+			add_ai_strategy = {
+				type = protect
+				id = RSP
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = RSP
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = RSP
+				value = 100
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_shelter_russian_royal_family
+		icon = GFX_RUS_tsar_defiant
+		x = -1
+		y = 4
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_rcw_outcome_focus }
+		mutually_exclusive = { focus = ENG_recognise_the_rsp }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 35
+		}
+
+		available = {
+			RUS = { exists = no }
+			OR = {
+				BLU = { has_country_flag = romanovs_escaped }
+				RSP = { has_country_flag = romanovs_escaped }
+			}
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { RSP = { has_country_flag = romanovs_escaped } }
+			RSP = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_decrease
+				}
+				country_event = aiu_britain.24
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = RSP
+				value = -100
+				}
+			}
+			if = { limit = { BLU = { has_country_flag = romanovs_escaped } }
+			BLU = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = large_decrease
+				}
+				country_event = aiu_britain.24
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = BLU
+				value = -100
+				}
+			}
+			#news event
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_anglo_russian_pact
+		icon = GFX_goal_russian_empire_shield
+		x = 1
+		y = 4
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_rcw_outcome_focus }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			RUS = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			OR = { AND = { is_faction_leader = yes RUS = { is_in_faction = no } } RUS = { is_faction_leader = yes } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#if = { limit = { is_faction_leader = yes RUS = { is_in_faction = no } } RUS = { country_event = { id = generic.5 days = 1 } } }
+			if = { limit = { is_in_faction = no RUS = { is_faction_leader = yes } } RUS = { country_event = { id = generic.2 days = 1 } } }
+			if = { limit = { is_faction_leader = yes } RUS = { country_event = { id = aiu_britain.9 days = 1 } } }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_embargo_bolsheviks
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 3
+		y = 4
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_rcw_outcome_focus }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			BLU = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			has_war_with = BLU
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			BLU = { 
+				add_opinion_modifier = { target = ROOT modifier = large_decrease }
+				add_opinion_modifier = { target = ROOT modifier = embargo } 
+				country_event = { id = aiu_britain.12 days = 1 }
+			}
+			add_opinion_modifier = { target = BLU modifier = large_decrease }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_finnish_staging_area
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 1
+		y = 5
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_embargo_bolsheviks }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			FIN = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { is_faction_leader = yes FIN = { is_in_faction = no } } FIN = { country_event = { id = generic.5 days = 1 } } }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_protect_the_baltics
+		icon = GFX_goal_baltic_states
+		x = 3
+		y = 5
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_embargo_bolsheviks }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+				EST = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = BLU } }
+				LAT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = BLU } }
+				LIT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = BLU } }
+				}
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { EST = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = BLU } } } give_guarantee = EST EST = { country_event = { id = aiu_britain.13 days = 1 } } }
+			if = { limit = { LAT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = BLU } } } give_guarantee = LAT LAT = { country_event = { id = aiu_britain.13 days = 1 } } }
+			if = { limit = { LIT = { exists = yes is_subject = no NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = BLU } } } give_guarantee = LIT LIT = { country_event = { id = aiu_britain.13 days = 1 } } }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_seek_japanese_support
+		icon = GFX_focus_jap_pacific_guardian
+		x = 5
+		y = 5
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_embargo_bolsheviks }
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			JAP = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			JAP = { country_event = { id = aiu_britain.14 days = 1 } }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_end_red_terror
+		icon = GFX_focus_ger_strike_at_the_source
+		x = 3
+		y = 6
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_finnish_staging_area focus = ENG_protect_the_baltics focus = ENG_seek_japanese_support }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			BLU = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = topple_government
+				target = BLU
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_support_the_finns
+		icon = GFX_goal_finland_shield
+		x = -2
+		y = 2
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_assemble_volunteer_force }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			FIN = { exists = yes is_subject = no has_war_with = RFI }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			send_equipment = { target = FIN type = infantry_equipment_1 amount = 1000 }
+			FIN = { country_event = { id = aiu_britain.26 days = 1 } }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_expand_persia_influence
+		icon = GFX_goal_persia_shield
+		x = 1
+		y = 1
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_debate_russian_intervention }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			PER = { exists = yes is_subject = no NOT = { has_war_with = ROOT } }
+			is_subject = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			PER = { country_event = { id = aiu_britain.19 days = 1 } }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_baku_oil_security
+		icon = GFX_goal_generic_oil_refinery
+		x = 1
+		y = 2
+		relative_position_id = ENG_debate_russian_intervention
+		prerequisite = { focus = ENG_expand_persia_influence }
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 25
+			modifier = { factor = 4 GEO = { has_country_flag = CAU_british_prince_leader } }
+		}
+
+		available = {
+			OR = { 
+				CAU = { exists = yes is_subject = no NOT = { has_war_with = ROOT } has_full_control_of_state = 229 }
+				AZR = { exists = yes is_subject = no NOT = { has_war_with = ROOT } has_full_control_of_state = 229 }
+			}
+			NOT = { any_other_country = { has_country_flag = CAU_french_support_agreed } }
+			NOT = { any_other_country = { has_country_flag = CAU_german_support_agreed } }
+			is_subject = no
+		}
+
+		bypass = {
+			#they already asked us for help
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { CAU = { controls_state = 229 } } CAU = { country_event = { id = aiu_britain.20 days = 1 } } }
+			if = { limit = { AZR = { controls_state = 229 } } AZR = { country_event = { id = aiu_britain.20 days = 1 } } }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_imperial_conference
+		icon = GFX_focus_chi_british_cooperation
+		x = 9
+		y = 0
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			always = no
+		}
+
+		bypass = {
+			
+		}
+
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_will_complete_automatically
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_statute_of_westminster
+		icon = GFX_focus_generic_treaty
+		x = -1
+		y = 1
+		prerequisite = { focus = ENG_imperial_conference }
+		relative_position_id = ENG_imperial_conference
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			always = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_other_country = {
+				limit = { is_subject_of = ROOT OR = { tag = AST tag = CAN tag = NZL tag = SAF } }
+				add_ideas = ENG_statute_of_westminster_idea
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_towards_federation
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 1
+		y = 1
+		prerequisite = { focus = ENG_imperial_conference }
+		relative_position_id = ENG_imperial_conference
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			always = no
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_other_country = {
+				limit = { is_subject_of = ROOT OR = { tag = AST tag = CAN tag = NZL tag = SAF } }
+				add_ideas = ENG_towards_federation_idea
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_results_of_the_general_election
+		icon = GFX_goal_uk_general_election
+		x = 16
+		y = 0
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			always = no
+		}
+
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = focus_will_complete_automatically
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_labour_victory
+		icon = GFX_goal_labour_party
+		x = -3
+		y = 1
+		prerequisite = { focus = ENG_results_of_the_general_election }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = ENG_labour_won_election
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democracy
+				popularity = 0.05
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_negotiate_with_tuc
+		icon = GFX_goal_tuc_agreement
+		x = -4
+		y = 2
+		prerequisite = { focus = ENG_labour_victory }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#add_ideas = ENG_tuc_support_idea
+			if = { limit = { has_idea = ENG_hunger_strikes_idea }
+			swap_ideas = {
+				remove_idea = ENG_hunger_strikes_idea
+				add_idea = ENG_hunger_strikes_idea_2
+				}
+			}
+			if = { limit = { has_idea = ENG_hunger_strikes_idea_2 }
+			swap_ideas = {
+				remove_idea = ENG_hunger_strikes_idea_2
+				add_idea = ENG_hunger_strikes_idea_3
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_the_housing_act
+		icon = GFX_focus_focus_generic_industry_1
+		x = -4
+		y = 3
+		prerequisite = { focus = ENG_negotiate_with_tuc }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					state_population > 1000000
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state_population > 1000000
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state_population > 1000000
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_support_unemployed
+		icon = GFX_focus_generic_concessions
+		x = -4
+		y = 4
+		prerequisite = { focus = ENG_the_housing_act }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_support_for_unemployed_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_fund_rural_authorities
+		icon = GFX_goal_generic_intelligence_exchange
+		x = -4
+		y = 5
+		prerequisite = { focus = ENG_support_unemployed }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_fund_rural_authorities_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_womens_suffrage
+		icon = GFX_goal_womens_suffrage #GFX_goal_support_democracy
+		x = -2
+		y = 2
+		prerequisite = { focus = ENG_labour_victory focus = ENG_liberal_victory }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = {
+					has_government = social_liberalism
+				}
+				add_popularity = {
+					ideology = social_liberalism
+					popularity = 0.05
+				}
+			}
+			if = {
+				limit = {
+					has_government = social_democracy
+				}
+				add_popularity = {
+					ideology = social_democracy
+					popularity = 0.05
+				}
+			}
+			if = {
+				limit = {
+					has_government = market_lib
+				}
+				add_popularity = {
+					ideology = market_lib
+					popularity = 0.05
+				}
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+			if = {
+				limit = {
+					has_government = radical_socialism
+				}
+				add_popularity = {
+					ideology = radical_socialism
+					popularity = 0.05
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_education_act
+		icon = GFX_goal_generic_scientific_exchange
+		x = -2
+		y = 3
+		prerequisite = { focus = ENG_womens_suffrage }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_education_act_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_improved_industrial_conditions
+		icon = GFX_goal_generic_consumer_goods
+		x = -2
+		y = 4
+		prerequisite = { focus = ENG_education_act }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = ENG_hunger_strikes_idea }
+			swap_ideas = {
+				remove_idea = ENG_hunger_strikes_idea
+				add_idea = ENG_hunger_strikes_idea_2
+				}
+			}
+			if = { limit = { has_idea = ENG_hunger_strikes_idea_2 }
+			swap_ideas = {
+				remove_idea = ENG_hunger_strikes_idea_2
+				add_idea = ENG_hunger_strikes_idea_3
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_construction_relief
+		icon = GFX_goal_generic_construction
+		x = -2
+		y = 5
+		prerequisite = { focus = ENG_improved_industrial_conditions }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = infrastructure
+							size > 2
+						}
+						state_population > 1000000
+						is_core_of = ROOT
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = infrastructure
+							size > 2
+						}
+						state_population > 1000000
+						is_core_of = ROOT
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+						}
+						state_population > 1000000
+						is_core_of = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_fit_to_govern
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = -3
+		y = 6
+		prerequisite = { focus = ENG_fund_rural_authorities }
+		prerequisite = { focus = ENG_construction_relief }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_fit_to_govern_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_liberal_victory
+		icon = GFX_goal_liberal_party
+		x = -1
+		y = 1
+		prerequisite = { focus = ENG_results_of_the_general_election }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = ENG_liberals_won_election
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberalism
+				popularity = 0.05
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_expanded_national_insurance
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 2
+		prerequisite = { focus = ENG_liberal_victory focus = ENG_conservative_victory }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#add_stability = 0.1
+			if = { limit = { has_idea = ENG_hunger_strikes_idea }
+			swap_ideas = {
+				remove_idea = ENG_hunger_strikes_idea
+				add_idea = ENG_hunger_strikes_idea_2
+				}
+			}
+			if = { limit = { has_idea = ENG_hunger_strikes_idea_2 }
+			swap_ideas = {
+				remove_idea = ENG_hunger_strikes_idea_2
+				add_idea = ENG_hunger_strikes_idea_3
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_robust_civil_service
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 3
+		prerequisite = { focus = ENG_expanded_national_insurance }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_robust_civil_service_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_expand_national_grid
+		icon = GFX_goal_national_grid
+		x = 0
+		y = 4
+		prerequisite = { focus = ENG_robust_civil_service }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}				
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_launch_empire_service
+		icon = GFX_goal_empire_service #goal_generic_radar
+		x = 0
+		y = 5
+		prerequisite = { focus = ENG_expand_national_grid }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_empire_service_idea
+			every_other_country = {
+				limit = { has_opinion = { target = ROOT value > -1 } }
+				add_opinion_modifier = { target = ROOT modifier = small_increase }
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_revived_liberalism
+		icon = GFX_goal_continuous_boost_freedom
+		x = -1
+		y = 6
+		prerequisite = { focus = ENG_construction_relief }
+		prerequisite = { focus = ENG_launch_empire_service }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_revived_liberalism_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_conservative_victory
+		icon = GFX_goal_conservative_party
+		x = 1
+		y = 1
+		prerequisite = { focus = ENG_results_of_the_general_election }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = ENG_conservatives_won_election
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_redraw_constituencies
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 2
+		y = 2
+		prerequisite = { focus = ENG_conservative_victory }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_strengthen_constabulary
+		icon = GFX_goal_british_police
+		x = 2
+		y = 3
+		prerequisite = { focus = ENG_redraw_constituencies }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_strengthen_constabulary_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_reduce_coal_reliance
+		icon = GFX_goal_coal_miners
+		x = 2
+		y = 4
+		prerequisite = { focus = ENG_strengthen_constabulary }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			122 = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+					}
+				}
+			130 = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+					}
+				}
+			126 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+				}
+			custom_effect_tooltip = ENG_reduce_coal_reliance_tt
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_general_tariffs
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 2
+		y = 5
+		prerequisite = { focus = ENG_reduce_coal_reliance }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = { id = aiu_britain.23 }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_tory_democracy
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 6
+		prerequisite = { focus = ENG_launch_empire_service }
+		prerequisite = { focus = ENG_general_tariffs }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_tory_democracy_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_national_government_victory
+		icon = GFX_focus_generic_support_the_left_right
+		x = 3
+		y = 1
+		prerequisite = { focus = ENG_results_of_the_general_election }
+		relative_position_id = ENG_results_of_the_general_election
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			has_country_flag = ENG_national_government_formed
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			#hmmmm
+		}
+	}

@@ -50,18 +50,49 @@ set_politics = {
 			popularity = 11
 		}
 
-		social_liberalism = {
+		social_democracy = {
 			popularity = 32
 		}
 
 	}
 
-	ruling_party = social_liberalism
+	ruling_party = social_democracy
 	last_election = "1933.6.0"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
+
+create_country_leader = {
+	name = "Karl Seitz"
+	desc = "POLITICS_KARL_SEITZ_DESC"
+	picture = "Portrait_Austria_Karl_Seitz.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_ideology
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Richard Steidle"
+	desc = "POLITICS_RICHARD_STEIDLE_DESC"
+	picture = "portrait_richard_steidle.dds"
+	expire = "1965.1.1"
+	ideology = radical_populist
+	traits = {
+		paramilitarist
+	}
+}
+create_country_leader = {
+	name = "Kurt Schuschnigg"
+	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	picture = "Kurt_Schuschnigg.dds"
+	ideology = radical_populist
+	traits = {
+
+	}
+}
+
 create_corps_commander = {
 	name = "Anton Kiernbauer"
 	picture = "Anton_Kiernbauer.dds"
@@ -101,33 +132,4 @@ create_field_marshal = {
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 2
-}
-create_country_leader = {
-	name = "Karl Seitz"
-	desc = "POLITICS_KARL_SEITZ_DESC"
-	picture = "Karl_Seitz.dds"
-	expire = "1965.1.1"
-	ideology = social_liberalist
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Richard Steidle"
-	desc = "POLITICS_RICHARD_STEIDLE_DESC"
-	picture = "portrait_richard_steidle.dds"
-	expire = "1965.1.1"
-	ideology = radical_populist
-	traits = {
-		paramilitarist
-	}
-}
-create_country_leader = {
-	name = "Kurt Schuschnigg"
-	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
-	picture = "Kurt_Schuschnigg.dds"
-	ideology = radical_populist
-	traits = {
-
-	}
 }

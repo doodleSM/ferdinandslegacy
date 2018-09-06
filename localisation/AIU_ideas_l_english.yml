@@ -61,3 +61,7 @@
  POL_constitution_polish_desc:0 "-"
  POL_constitution_broken:0 "Broken Constitution"
  POL_constitution_broken_desc:0 "-"
+ head_of_government:0 "Head of Government"
+ foreign_minister:0 "Minister of Foreign Affairs"
+ economy_minister:0 "Economy Minister"
+ internal_affairs_minister:0 "Minister of Internal Affairs"

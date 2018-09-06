@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goal_crown_king"
+		texturefile = "gfx/interface/goals/goal_crown_king.dds"
+	}
+	
+}

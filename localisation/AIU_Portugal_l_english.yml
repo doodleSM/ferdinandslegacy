@@ -1,0 +1,57 @@
+﻿l_english:
+
+###RCW intervention
+ POR_anarchism:0 "Portuguese Republic"
+ POR_anarchism_DEF:0 "the Portuguese Republic"
+ POR_communism:0 "Portuguese Republic"
+ POR_communism_DEF:0 "the Portuguese Republic"
+ POR_radical_socialism:0 "Portuguese Republic"
+ POR_radical_socialism_DEF:0 "the Portuguese Republic"
+ POR_social_democracy:0 "Portuguese Republic"
+ POR_social_democracy_DEF:0 "the Portuguese Republic"
+ POR_social_liberalism:0 "Portuguese Republic"
+ POR_social_liberalism_DEF:0 "the Portuguese Republic"
+ POR_market_lib:0 "Portuguese Republic"
+ POR_market_lib_DEF:0 "the Portuguese Republic"
+ POR_democratic:0 "Portuguese Republic"
+ POR_democratic_DEF:0 "the Portuguese Republic"
+ POR_neutrality:0 "Kingdom of Portugal"
+ POR_neutrality_DEF:0 "the Kingdom of Portugal"
+ POR_auth_dem:0 "Portuguese Republic"
+ POR_auth_dem_DEF:0 "the Portuguese Republic"
+ POR_fascism:0 "Portuguese Republic"
+ POR_fascism_DEF:0 "the Portuguese Republic"
+
+ #Parties
+ POR_anarchism_party:0 ""
+ POR_anarchism_party_long:0 ""
+ POR_communism_party:0 "PCP"
+ POR_communism_party_long:0 "Partido Comunista Português"
+ POR_radical_socialism_party:0 "PSP"
+ POR_radical_socialism_party_long:0 "Partido Socialista Português"
+ POR_social_democracy_party:0 ""
+ POR_social_democracy_party_long:0 ""
+ POR_social_liberalism_party:0 "PD"
+ POR_social_liberalism_party_long:0 "Partido Democrático"
+ POR_market_lib_party:0 "UIE"
+ POR_market_lib_party_long:0 " União dos Interesses Económicos"
+ POR_democratic_party:0 "PCC"
+ POR_democratic_party_long:0 "Partido do Centro Católico"
+ POR_neutrality_party:0 "CM"
+ POR_neutrality_party_long:0 "Causa Monárquica"
+ POR_auth_dem_party:0 "UNRN"
+ POR_auth_dem_party_long:0 "União Nacional dos Republicanos Nobres"
+ POR_fascism_party:0 "MNS"
+ POR_fascism_party_long:0 "Movimento Nacional-Sindicalista"
+
+
+ #ministers
+ POR_Artur_Ivens_Ferraz_hog:0 "Artur Ivens Ferraz"
+ POR_Antonio_de_Oliveira_Salazar_fm:0 "António de Oliveira Salazar"
+ POR_Armindo_Monteiro_fm:0 "Armindo Monteiro"
+ POR_Antonio_de_Oliveria_Salazar_eco:0 "António de Oliveira Salazar"
+ POR_Abilio_Passos_Sousa_iaf:0 "Abílio Passos e Sousa"
+ 
+
+
+ #Puppets

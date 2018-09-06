@@ -3193,7 +3193,10 @@ focus_tree = {
 		}
 
 		bypass = {
-			is_in_faction_with = ENG
+			OR = {
+				is_in_faction_with = ENG
+				has_country_flag = CAU_british_support_agreed
+				}
 		}
 
 		cancel_if_invalid = yes

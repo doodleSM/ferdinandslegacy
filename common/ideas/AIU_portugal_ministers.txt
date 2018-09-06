@@ -1,0 +1,107 @@
+ideas = {
+	head_of_government = {
+		POR_Artur_Ivens_Ferraz_hog = {
+			allowed = { original_tag = POR }
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = auth_dem
+					has_government = neutrality
+				}
+			}
+			ai_will_do = { factor = 1 }
+			cancel_if_invalid = no
+			removal_cost = -1
+			traits = {
+				auth_dem_minister
+				head_of_government
+				
+			}
+		}
+	}
+	foreign_minister = {
+		POR_Antonio_de_Oliveira_Salazar_fm = {
+			allowed = { original_tag = POR }
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = auth_dem
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			ai_will_do = { factor = 1 }
+			cancel_if_invalid = no
+			removal_cost = -1
+			traits = {
+				auth_dem_minister
+				foreign_minister
+				
+			}
+		}
+		POR_Armindo_Monteiro_fm = {
+			allowed = { original_tag = POR }
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = auth_dem
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			ai_will_do = { factor = 1 }
+			cancel_if_invalid = no
+			removal_cost = -1
+			traits = {
+				auth_dem_minister
+				foreign_minister
+				
+			}
+		}
+	}
+
+	economy_minister = {
+		POR_Antonio_de_Oliveria_Salazar_eco = {
+			allowed = { original_tag = POR }
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = auth_dem
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			ai_will_do = { factor = 1 }
+			cancel_if_invalid = no
+			removal_cost = -1
+			traits = {
+				auth_dem_minister
+				economy_minister
+				
+			}
+		}
+	}
+
+	internal_affairs_minister = {
+		POR_Abilio_Passos_Sousa_iaf = {
+			allowed = { original_tag = POR }
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = auth_dem
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			ai_will_do = { factor = 1 }
+			cancel_if_invalid = no
+			removal_cost = -1
+			traits = {
+				auth_dem_minister
+				internal_affairs_minister
+				
+			}
+		}
+	}
+
+}

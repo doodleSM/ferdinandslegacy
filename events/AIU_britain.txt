@@ -1,0 +1,696 @@
+﻿add_namespace = aiu_britain
+
+################################
+## British Events
+################################
+
+
+### Introduction event
+country_event = {
+	id = aiu_britain.0
+	title = aiu_britain.0.t
+	desc = aiu_britain.0.d
+	picture = GFX_report_event_AIU_intro
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu_britain.0.a
+	}
+}
+
+### debating russian intervention
+country_event = {
+	id = aiu_britain.1
+	title = aiu_britain.1.t
+	desc = aiu_britain.1.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #send equipment and volunteers
+		name = aiu_britain.1.a
+		ai_chance = { factor = 40 }
+		set_country_flag = ENG_sending_rus_volunteers
+		send_equipment = { target = RUS type = infantry_equipment_1 amount = 4000 }
+		RUS = {
+				add_opinion_modifier = { target = ROOT modifier = medium_increase }
+				country_event = { id = aiu_britain.2 days = 1 }
+			}
+		RSP = {
+				add_opinion_modifier = { target = ROOT modifier = medium_decrease }
+			}
+		BLU = {
+				add_opinion_modifier = { target = ROOT modifier = medium_decrease }
+			}
+		add_political_power = -50
+	}
+	
+	option = { #send equipment only
+		name = aiu_britain.1.b
+		ai_chance = { factor = 30 }
+		send_equipment = { target = RUS type = infantry_equipment_1 amount = 2000 }
+		RUS = {
+				add_opinion_modifier = { target = ROOT modifier = small_increase }
+				country_event = { id = aiu_britain.3 days = 1 }
+			}
+		RSP = {
+				add_opinion_modifier = { target = ROOT modifier = small_decrease }
+			}
+		BLU = {
+				add_opinion_modifier = { target = ROOT modifier = small_decrease }
+			}
+		add_political_power = -25
+	}
+	
+	option = { #just express support
+		name = aiu_britain.1.c
+		ai_chance = { factor = 30 }
+		set_country_flag = ENG_only_verbal_for_rus
+		RUS = {
+				add_opinion_modifier = { target = ROOT modifier = small_decrease }
+				country_event = { id = aiu_britain.4 days = 1 }
+			}
+	}
+}
+
+### british help arrives 1
+country_event = {
+	id = aiu_britain.2
+	title = aiu_britain.2.t
+	desc = aiu_britain.2.d
+	picture = GFX_report_event_merchant_ship_01
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu_britain.2.a
+		effect_tooltip = {
+			ENG = { send_equipment = { target = RUS type = infantry_weapons amount = 4000 } }
+		}
+	}
+}
+
+### british help arrives 2
+country_event = {
+	id = aiu_britain.3
+	title = aiu_britain.3.t
+	desc = aiu_britain.3.d
+	picture = GFX_report_event_generic_bombers
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu_britain.3.a
+		effect_tooltip = {
+			ENG = { send_equipment = { target = RUS type = infantry_weapons amount = 2000 } }
+		}
+	}
+}
+
+### british help arrives 3
+country_event = {
+	id = aiu_britain.4
+	title = aiu_britain.4.t
+	desc = aiu_britain.4.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu_britain.4.a
+	}
+}
+
+### british help arrives 4
+country_event = {
+	id = aiu_britain.5
+	title = aiu_britain.5.t
+	desc = aiu_britain.5.d
+	picture = GFX_report_event_british_inspect_troops
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu_britain.5.a
+		custom_effect_tooltip = RUS_british_volunteer_divisions_tt
+		hidden_effect = {
+			division_template = {
+					name = "British Volunteer Division"
+					is_locked = yes
+					priority = 2
+					division_names_group = ENG_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+			
+	    	   		 	infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+			
+	    	   		 	infantry = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { RUS = { has_full_control_of_state = PREV } }
+					prioritize = { 195 }
+					create_unit = {
+						division = "name = \"1. British Volunteer Division\" division_template = \"British Volunteer Division\" start_experience_factor = 0.5" 
+						owner = "RUS"
+					}
+					create_unit = {
+						division = "name = \"2. British Volunteer Division\" division_template = \"British Volunteer Division\" start_experience_factor = 0.5" 
+						owner = "RUS"
+					}
+				}
+		}
+	}
+}
+
+### british volunteers go home
+country_event = {
+	id = aiu_britain.6
+	title = aiu_britain.6.t
+	desc = aiu_britain.6.d
+	picture = GFX_report_event_merchant_ship_01
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		ENG = { has_completed_focus = ENG_assemble_volunteer_force }
+		OR = { has_country_flag = won_russian_civil_war has_war_with = ENG }
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = aiu_britain.6.a
+		delete_unit_template_and_units = { division_template = "British Volunteer Division" }
+		ENG = { country_event = { id = aiu_britain.4 days = 1 } }
+	}
+}
+
+### volunteers come home - eng
+country_event = {
+	id = aiu_britain.7
+	title = aiu_britain.7.t
+	desc = aiu_britain.7.d
+	picture = GFX_report_event_merchant_ship_01
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu_britain.7.a
+		army_experience = 10
+		add_manpower = 2500
+	}
+}
+
+### britain recognised us - rsp
+country_event = {
+	id = aiu_britain.8
+	title = aiu_britain.8.t
+	desc = aiu_britain.8.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu_britain.8.a
+	}
+}
+
+### britain offers defensive agreement
+country_event = {
+	id = aiu_britain.9
+	title = aiu_britain.9.t
+	desc = aiu_britain.9.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+	
+	# 
+	option = { 
+		name = aiu_britain.9.a
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 4
+				has_opinion = { target = FROM value > 30 }
+			}
+		}
+		FROM = {
+			give_guarantee = ROOT
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+			country_event = { id = aiu_britain.10 }
+		}
+		ROOT = {
+			give_guarantee = FROM
+			add_ai_strategy = {
+				type = alliance
+				id = "FROM"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "FROM"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "FROM"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "FROM"
+				value = 100
+			}
+		}
+	}
+	
+	option = { 
+		name = aiu_britain.9.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_opinion = { target = FROM value < -10 }
+			}
+			modifier = {
+				factor = 10
+				has_opinion = { target = FROM value < -30 }
+			}
+		}
+		FROM = { add_opinion_modifier = { target = ROOT modifier = medium_decrease } country_event = { id = aiu_britain.11 } }
+	}
+}
+
+# agreed to pact
+country_event = {
+	id = aiu_britain.10
+	title = aiu_britain.10.t
+	desc = aiu_britain.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.10.a
+	}
+}
+
+# rejected pact
+country_event = {
+	id = aiu_britain.11
+	title = aiu_britain.11.t
+	desc = aiu_britain.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.11.a
+	}
+}
+
+# uk embargoed us
+country_event = {
+	id = aiu_britain.12
+	title = aiu_britain.12.t
+	desc = aiu_britain.12.d
+	picture = GFX_report_event_merchant_ship_01
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.12.a
+	}
+}
+
+# uk guaranteed us
+country_event = {
+	id = aiu_britain.13
+	title = aiu_britain.13.t
+	desc = aiu_britain.13.d
+	picture = GFX_report_event_destroyers
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.13.a
+	}
+}
+
+# uk wants anti-russian pact
+country_event = {
+	id = aiu_britain.14
+	title = aiu_britain.14.t
+	desc = aiu_britain.14.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+	
+	# ok
+	option = {
+		name = aiu_britain.14.a
+		ai_chance = { factor = 100 }
+		set_country_flag = joined_eng_anti_russia_pact
+		ENG = { add_opinion_modifier = { target = JAP modifier = medium_increase } country_event = { id = aiu_britain.15 } }
+		hidden_effect = { add_opinion_modifier = { target = ENG modifier = medium_increase } }
+	}
+	
+	# no
+	option = {
+		name = aiu_britain.14.b
+		ai_chance = { factor = 0 }
+		ENG = { add_opinion_modifier = { target = JAP modifier = small_decrease } country_event = { id = aiu_britain.16 } }
+	}
+}
+
+# japan accepted
+country_event = {
+	id = aiu_britain.15
+	title = aiu_britain.15.t
+	desc = aiu_britain.15.d
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.15.a
+	}
+}
+
+# japan rejected
+country_event = {
+	id = aiu_britain.16
+	title = aiu_britain.16.t
+	desc = aiu_britain.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.16.a
+	}
+}
+
+# japan called to arms
+country_event = {
+	id = aiu_britain.17
+	title = aiu_britain.17.t
+	desc = aiu_britain.17.d
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = JAP
+		has_country_flag = joined_eng_anti_russia_pact
+		ENG = { has_war_with = BLU }
+		NOT = { has_war_with = BLU }
+	}
+	
+	# ok
+	option = {
+		name = aiu_britain.17.a
+		ai_chance = { factor = 100 }
+		add_to_war = { targeted_alliance = ENG enemy = BLU hostility_reason = ally }
+	}
+	
+	# no
+	option = {
+		name = aiu_britain.17.a
+		ai_chance = { factor = 0 }
+		add_political_power = -100
+		ENG = { add_opinion_modifier = { target = JAP modifier = large_decrease } country_event = { id = aiu_britain.18 } }
+	}
+}
+
+# japan failed to join
+country_event = {
+	id = aiu_britain.18
+	title = aiu_britain.18.t
+	desc = aiu_britain.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.18.a
+	}
+}
+
+# uk expands influence in persia
+country_event = {
+	id = aiu_britain.19
+	title = aiu_britain.19.t
+	desc = aiu_britain.19.d
+	picture = GFX_report_event_destroyers
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.19.a
+		add_political_power = -50
+	}
+}
+
+# uk offers to protect baku
+country_event = {
+	id = aiu_britain.20
+	title = aiu_britain.20.t
+	desc = aiu_britain.20.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.20.a
+		ai_chance = { factor = 100 }
+		FROM = {
+			give_guarantee = ROOT
+			add_ai_strategy = {
+				type = alliance
+				id = "ROOT"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "ROOT"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "ROOT"
+				value = 100
+			}
+			country_event = { id = aiu_britain.21 }
+		}
+		ROOT = {
+			add_ai_strategy = {
+				type = alliance
+				id = "FROM"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = protect
+				id = "FROM"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = "FROM"
+				value = 100
+			}
+			add_ai_strategy = {
+				type = support
+				id = "FROM"
+				value = 100
+			}
+		}
+		set_country_flag = CAU_british_support_agreed
+	}
+	
+	option = { #reject
+		name = aiu_britain.20.b
+		ai_chance = { factor = 0 }
+		FROM = {
+			add_opinion_modifier = { target = ROOT modifier = medium_decrease }
+			country_event = { id = aiu_britain.22 }
+		}
+	}
+}
+
+# baku controller accepted
+country_event = {
+	id = aiu_britain.21
+	title = aiu_britain.21.t
+	desc = aiu_britain.21.d
+	picture = GFX_report_event_british_inspect_troops
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.21.a
+	}
+}
+
+# baku controller rejected
+country_event = {
+	id = aiu_britain.22
+	title = aiu_britain.22.t
+	desc = aiu_britain.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+	
+	# 
+	option = {
+		name = aiu_britain.22.a
+	}
+}
+
+# tariffs?
+country_event = {
+	id = aiu_britain.23
+	title = aiu_britain.23.t
+	desc = aiu_britain.23.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+	
+	# tariffs on steel and coal
+	option = {
+		name = aiu_britain.23.a
+		#reduce worker unrest, hurt us and german opinion, add stab
+	}
+	
+	# free trade
+	option = {
+		name = aiu_britain.23.b
+		add_ideas = free_trade
+	}
+}
+
+### britain sheltered the royal family
+country_event = {
+	id = aiu_britain.24
+	title = aiu_britain.24.t
+	desc = aiu_britain.24.d
+	picture = GFX_report_event_generic_read_write
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu_britain.8.a
+	}
+}
+
+# britain called to arms by japan
+country_event = {
+	id = aiu_britain.25
+	title = aiu_britain.25.t
+	desc = aiu_britain.25.d
+	picture = GFX_report_event_japanese_transport_soldiers
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		JAP = { has_country_flag = joined_eng_anti_russia_pact }
+		JAP = { has_war_with = BLU }
+		NOT = { has_war_with = BLU }
+	}
+	
+	# ok
+	option = {
+		name = aiu_britain.25.a
+		ai_chance = { factor = 100 }
+		add_to_war = { targeted_alliance = JAP enemy = BLU hostility_reason = ally }
+	}
+	
+	# no
+	option = {
+		name = aiu_britain.25.a
+		ai_chance = { factor = 0 }
+		add_political_power = -100
+		JAP = { add_opinion_modifier = { target = ENG modifier = large_decrease } country_event = { id = aiu_britain.18 } }
+	}
+}
+
+
+### british help arrives fin
+country_event = {
+	id = aiu_britain.26
+	title = aiu_britain.26.t
+	desc = aiu_britain.26.d
+	picture = GFX_report_event_merchant_ship_01
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aiu_britain.26.a
+		army_experience = 10
+		#idea
+		effect_tooltip = {
+			ENG = { send_equipment = { target = FIN type = infantry_equipment_1 amount = 1000 } }
+		}
+	}
+}

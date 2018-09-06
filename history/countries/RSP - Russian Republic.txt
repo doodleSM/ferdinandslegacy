@@ -105,7 +105,7 @@ add_opinion_modifier = { target = RSP modifier = hostile_status }
 create_country_leader = {
 	name = "Alexsander Kerensky"
 	desc = ""
-	picture = "RSP_Kerensky.dds"
+	picture = "Portrait_Russia_Alexander_Kerentsky.dds"
 	expire = "1965.1.1"
 	ideology = social_liberalist
 	traits = {

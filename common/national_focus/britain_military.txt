@@ -1,0 +1,1534 @@
+#### military focuses
+
+	shared_focus = {
+		id = ENG_maintain_military_edge
+		icon = GFX_focus_chi_army_reform
+		x = 28
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_rifle_no_4
+		icon = GFX_goal_generic_small_arms
+		x = -5
+		y = 1
+		prerequisite = { focus = ENG_maintain_military_edge }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_rifle_no_4
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_flying_columns
+		icon = GFX_goal_generic_army_motorized
+		x = -5
+		y = 2
+		prerequisite = { focus = ENG_rifle_no_4 }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				category = motorized_equipment
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_lrdg_focus
+		icon = GFX_goal_lrdg_logo
+		x = -7
+		y = 3
+		prerequisite = { focus = ENG_flying_columns }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_lrdg_idea
+			custom_effect_tooltip = desert_equipment_focus_effect
+			hidden_effect = { set_technology = { desert_equipment_tech = 1 } }
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_deception_mastery
+		icon = GFX_focus_prc_infiltration
+		x = -5
+		y = 3
+		prerequisite = { focus = ENG_flying_columns }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_deception_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_joint_planning_staff
+		icon = GFX_goal_generic_position_armies
+		x = -5
+		y = 4
+		prerequisite = { focus = ENG_lrdg_focus }
+		prerequisite = { focus = ENG_deception_mastery }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_british_stoicism_focus
+		icon = GFX_goal_british_lion
+		x = -5
+		y = 5
+		prerequisite = { focus = ENG_joint_planning_staff }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_british_stoicism_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_new_vehicle_engines
+		icon = GFX_goal_generic_production2
+		x = -2
+		y = 1
+		prerequisite = { focus = ENG_maintain_military_edge }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_new_vehicle_engines_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_cruiser_tanks_focus
+		icon = GFX_goal_british_tanks
+		x = -3
+		y = 2
+		prerequisite = { focus = ENG_new_vehicle_engines }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_cruiser_tanks_focus
+				bonus = 0.5
+				category = cat_light_armor
+			}
+			add_ideas = ENG_tanks_idea_1
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_infantry_tanks_focus
+		icon = GFX_goal_british_valentine
+		x = -3
+		y = 3
+		prerequisite = { focus = ENG_cruiser_tanks_focus }
+		prerequisite = { focus = ENG_flying_columns }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_infantry_tanks_focus
+				bonus = 0.5
+				category = cat_medium_armor
+			}
+			swap_ideas = {
+				remove_idea = ENG_tanks_idea_1
+				add_idea = ENG_tanks_idea_2
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_fighter_competition
+		icon = GFX_goal_spitfire_diving
+		x = -1
+		y = 2
+		prerequisite = { focus = ENG_new_vehicle_engines }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 5
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_aircraft_production_consortium
+		icon = GFX_goal_generic_build_airforce
+		x = -1
+		y = 3
+		prerequisite = { focus = ENG_fighter_competition }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_aircraft_production_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_ground_support_focus
+		icon = GFX_goal_generic_CAS
+		x = -2
+		y = 4
+		prerequisite = { focus = ENG_aircraft_production_consortium }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_coastal_command
+		icon = GFX_goal_generic_air_naval_bomber
+		x = -2
+		y = 5
+		prerequisite = { focus = ENG_ground_support_focus }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = coastal_command_focus
+				bonus = 0.5
+				uses = 1
+				category = naval_bomber
+			}
+			add_tech_bonus = {
+				name = coastal_command_focus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_strat_bombing_focus
+		icon = GFX_goal_fire_bombing
+		x = 0
+		y = 4
+		prerequisite = { focus = ENG_aircraft_production_consortium }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_strat_bombing_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_heavy_bombers
+		icon = GFX_goal_generic_air_bomber
+		x = 0
+		y = 5
+		prerequisite = { focus = ENG_strat_bombing_focus }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = ENG_heavy_bombers
+				bonus = 0.5
+				uses = 2
+				category = heavy_air
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_air_control
+		icon = GFX_goal_generic_air_doctrine
+		x = -2
+		y = 6
+		prerequisite = { focus = ENG_coastal_command focus = ENG_heavy_bombers }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_air_control_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_air_defence_focus
+		icon = GFX_goal_anti_zeppelin
+		x = 0
+		y = 6
+		prerequisite = { focus = ENG_coastal_command focus = ENG_heavy_bombers }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							123 = {
+								free_building_slots = {
+									building = anti_air_building
+									size > 1
+								}
+							}
+							125 = {
+								free_building_slots = {
+									building = anti_air_building
+									size > 1
+								}
+							}
+							127 = {
+								free_building_slots = {
+									building = anti_air_building
+									size > 1
+								}
+							}
+						}
+					}
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 1
+							}
+							OR = {
+								region = 1
+								region = 2
+								region = 3
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = ENG_air_defense_focus_built_2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 1
+						}			
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = ENG_air_defense_focus_built_2
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							123 = {
+								free_building_slots = {
+									building = anti_air_building
+									size > 1
+								}
+							}
+							125 = {
+								free_building_slots = {
+									building = anti_air_building
+									size > 1
+								}
+							}
+							127 = {
+								free_building_slots = {
+									building = anti_air_building
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 1
+						}
+						OR = {
+							region = 1
+							region = 2
+							region = 3
+						}
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = ENG_air_defense_focus_built_2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 1
+						}
+						OR = {
+							region = 1
+							region = 2
+							region = 3
+						}						
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = ENG_air_defense_focus_built_2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 1
+						}
+						OR = {
+							region = 1
+							region = 2
+							region = 3
+						}						
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = ENG_air_defense_focus_built_2
+				}
+			}			
+			if = {
+				limit = {
+					OR = {
+						123 = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 1
+							}
+						}
+						125 = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 1
+							}
+						}
+						127 = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 1
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = air_defense_focus_tt
+				hidden_effect = {
+					123 = {
+						add_building_construction = {
+							type = anti_air_building
+							level = 5
+							instant_build = yes
+						}
+					}
+					125 = {
+						add_building_construction = {
+							type = anti_air_building
+							level = 5
+							instant_build = yes
+						}
+					}
+					127 = {
+						add_building_construction = {
+							type = anti_air_building
+							level = 5
+							instant_build = yes
+						}
+					}
+					set_country_flag = air_defense_focus_built_max
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_revive_clydeside_shipbuilding
+		icon = GFX_goal_generic_build_navy
+		x = 4
+		y = 1
+		prerequisite = { focus = ENG_maintain_military_edge }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		available = {
+			controls_state = 133
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			random_owned_controlled_state = {
+				prioritize = { 133 }
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_battleship_innovations
+		icon = GFX_goal_generic_navy_battleship
+		x = 2
+		y = 2
+		prerequisite = { focus = ENG_revive_clydeside_shipbuilding }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = ENG_battleship_innovations
+				bonus = 0.5
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_battlecruiser_production
+		icon = GFX_goal_generic_navy_cruiser
+		x = 1
+		y = 3
+		prerequisite = { focus = ENG_battleship_innovations }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_battlecruiser_production
+				bonus = 0.5
+				uses = 1
+				category = bc_tech
+			}
+			add_ideas = ENG_bc_production_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_carrier_designs
+		icon = GFX_goal_generic_navy_carrier
+		x = 3
+		y = 3
+		prerequisite = { focus = ENG_battleship_innovations }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+				name = ENG_carrier_designs
+				bonus = 0.5
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_britannia_rules_the_waves
+		icon = GFX_goal_rule_britannia
+		x = 3
+		y = 4
+		prerequisite = { focus = ENG_battlecruiser_production }
+		prerequisite = { focus = ENG_carrier_designs }
+		prerequisite = { focus = ENG_new_escort_tactics }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_rule_britannia_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_expand_royal_marines
+		icon = GFX_goal_royal_marines_commando
+		x = 2
+		y = 5
+		prerequisite = { focus = ENG_britannia_rules_the_waves }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_expand_royal_marines
+				bonus = 0.5
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				name = ENG_expand_royal_marines
+				bonus = 0.5
+				uses = 1
+				category = tp_tech
+			}
+			add_ideas = ENG_expand_royal_marines_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_fleet_air_arm
+		icon = GFX_goal_fleet_air_arm
+		x = 4
+		y = 5
+		prerequisite = { focus = ENG_britannia_rules_the_waves }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_tech_bonus = {
+				name = ENG_fleet_air_arm
+				bonus = 0.5
+				uses = 2
+				category = naval_air
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_expand_destroyer_fleet
+		icon = GFX_focus_generic_destroyer
+		x = 6
+		y = 2
+		prerequisite = { focus = ENG_revive_clydeside_shipbuilding }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_destroyer_production_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_new_submarines
+		icon = GFX_goal_generic_navy_submarine
+		x = 4
+		y = 2
+		prerequisite = { focus = ENG_revive_clydeside_shipbuilding }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.75
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_new_escort_tactics
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 5
+		y = 3
+		prerequisite = { focus = ENG_expand_destroyer_fleet }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_destroyer_production_idea
+				add_idea = ENG_destroyer_production_idea_2
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_the_q_ship
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 7
+		y = 3
+		prerequisite = { focus = ENG_expand_destroyer_fleet }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_the_q_ship_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_watu
+		icon = GFX_goal_watu
+		x = 6
+		y = 4
+		prerequisite = { focus = ENG_new_escort_tactics }
+		prerequisite = { focus = ENG_the_q_ship }
+		relative_position_id = ENG_maintain_military_edge
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_operations_research
+		icon = GFX_focus_research2
+		x = 36
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+				threat > 0.5
+				any_other_country = {
+					is_major = yes
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_gccs
+		icon = GFX_focus_generic_cryptologic_bomb
+		x = -1
+		y = 1
+		prerequisite = { focus = ENG_operations_research }
+		relative_position_id = ENG_operations_research
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_gccs_idea
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_cavity_magnetron
+		icon = GFX_goal_generic_radar
+		x = 1
+		y = 1
+		prerequisite = { focus = ENG_operations_research }
+		relative_position_id = ENG_operations_research
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_cavity_magnetron
+				bonus = 0.5
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+	
+	shared_focus = {
+		id = ENG_tube_alloys
+		icon = GFX_focus_wonderweapons
+		x = 0
+		y = 2
+		prerequisite = { focus = ENG_operations_research }
+		relative_position_id = ENG_operations_research
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_tube_alloys
+				bonus = 0.75
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
