@@ -27,9 +27,9 @@
   auth_dem:0 "Authoritarian Democratic"
   auth_dem_noun:0 "Authoritarian Democracy"
   auth_dem_desc:0 "Authoritarian Regime"
-  fascism:0 "Radical Populist"
-  fascism_noun:0 "Radical Populism"
-  fascism_desc:0 "Populist Regime"
+  fascism:0 "Intergalist Nationalist"
+  fascism_noun:0 "Intergalist Nationalism"
+  fascism_desc:0 "Expansionist-Nationalist Regime"
   ###
   communism_drift:0 "Daily Marxism Support"
   democratic_drift:0 "Daily Social Conservatism Support"

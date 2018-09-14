@@ -32,38 +32,29 @@ set_convoys = 10
 set_politics = {
 
 	parties = {
+		
+		
+		fascism = { 
+			popularity = 76
+		}
 		democratic = { 
-			popularity = 13
-		}
-		
-		social_democracy = { 
-			popularity = 17
-		}
-		
-		social_liberalism = { 
-			popularity = 10
-		}
-
-		fascism = {
-			popularity = 5
-		}
-		
-		auth_dem = {
-			popularity = 13
-		}
-		
-		communism = {
-			popularity = 19
-		}
-		
-		neutrality = { 
-			popularity = 33
+			popularity = 24
 		}
 	}
 	
-	ruling_party = neutrality
-	last_election = "1933.12.20"
+	ruling_party = fascism
+	last_election = "1918.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
+create_country_leader = {
+	name = "Anatolie Popa"
+	desc = ""
+	picture = "MDV_Popa.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}

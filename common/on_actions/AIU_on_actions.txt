@@ -23,6 +23,14 @@ on_actions = {
 				#limit = { is_ai = no }
 				country_event = aiu_britain.0
 			}
+			RUS = {
+				#limit = { is_ai = no }
+				country_event = aiu_rus.0
+			}
+			RSP = {
+				#limit = { is_ai = no }
+				country_event = aiu_rsp.0
+			}
 		}
 	}
 }

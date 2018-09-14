@@ -3,7 +3,28 @@
 ###########################
 
 add_namespace = aiu_rsp
+country_event = {
+	id = aiu_rsp.0
+	title = aiu_rsp.0.t
+	desc = aiu_rsp.0.d
+	picture = GFX_report_event_RUS_intro
+	
+	is_triggered_only = yes
+	fire_only_once = yes
 
+
+	trigger = { }
+
+	option = { #All Batteries, FIRE FIRE
+		name = aiu_rsp.0.a
+		declare_war_on = {   
+				target = BLU
+				type = civil_war
+				
+			}
+		}
+
+}
 # general someone is preparing to attack us
 country_event = {
 	id = aiu_rsp.1

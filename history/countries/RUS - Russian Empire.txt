@@ -37,10 +37,7 @@ set_technology = {
 set_convoys = 250
 
 
-declare_war_on = {
-		target = BLU
-		type = annex_everything
-	}
+
 	
 add_ai_strategy = {
 				type = antagonize
@@ -109,7 +106,7 @@ create_country_leader = {
 create_country_leader = {
     name = "Nicholas II"
     desc = ""
-    picture = "RUS_Nikolai.dds"
+    picture = "RUS_Nikolai.tga"
     expire = "1953.3.1"
     ideology = despotism
     traits = {

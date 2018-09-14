@@ -1717,7 +1717,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 620
 		}
 		prerequisite = {}
 		available = { 
@@ -1738,7 +1738,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_renovato_imperii}
 		available = { 
@@ -1775,7 +1775,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_renovato_imperii}
 		bypass = {
@@ -1813,7 +1813,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_renovato_imperii}
 		bypass = {
@@ -1857,7 +1857,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_renovato_imperii}
 		
@@ -1918,7 +1918,7 @@ focus = {
 		cost = 10
 		mutually_exclusive = {focus = RUS_salt_the_earth}
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_caucasian_thrust focus = RUS_operation_central_asia focus = RUS_black_sea_control focus = RUS_baltic_control}
 		available = { 
@@ -1938,7 +1938,7 @@ focus = {
 		cost = 10
 		mutually_exclusive = {focus = RUS_peaceful_reintegration}
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_caucasian_thrust focus = RUS_operation_central_asia focus = RUS_black_sea_control focus = RUS_baltic_control}
 		available = { 
@@ -1958,7 +1958,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_peaceful_reintegration focus = RUS_salt_the_earth}
 		available = { 
@@ -1981,7 +1981,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_chase_former_glory}
 		available = { 
@@ -2001,7 +2001,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_eastward_outlook}
 		available = { 
@@ -2022,7 +2022,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus =  RUS_anti_japan_stance}
 		available = { 
@@ -2042,7 +2042,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_protect_korea}
 		available = { 
@@ -2062,7 +2062,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_chinese_cooperation}
 		bypass = {BEI = {exists = no}}
@@ -2116,7 +2116,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_reintegrate_manchurian_railway}
 		available = { 
@@ -2156,7 +2156,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_reintegrate_manchurian_railway}
 		available = { 
@@ -2196,7 +2196,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_anhui_friendship focus = RUS_beyinyang_alliance}
 		available = { 
@@ -2219,7 +2219,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_eastward_outlook}
 		available = { 
@@ -2241,7 +2241,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_mend_old_wounds}
 		available = { 
@@ -2261,7 +2261,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_joint_naval_excercise}
 		available = { 
@@ -2281,7 +2281,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_betray_korea}
 		available = { 
@@ -2301,7 +2301,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_split_beyinyang}
 		available = { 
@@ -2321,7 +2321,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_sakhalin_for_port_alexander}
 		available = { 
@@ -2344,7 +2344,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_chase_former_glory}
 		available = { 
@@ -2364,7 +2364,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_russia_a_global_power}
 		available = { 
@@ -2384,7 +2384,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_nordic_relations}
 		available = { 
@@ -2404,7 +2404,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_sale_of_aland}
 		available = { 
@@ -2424,7 +2424,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_joint_norwegian_polar_expeditions}
 		available = { 
@@ -2444,7 +2444,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_russia_a_global_power}
 		available = { 
@@ -2464,7 +2464,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_middle_eastern_ties}
 		available = { 
@@ -2484,7 +2484,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_iranian_investments}
 		available = { 
@@ -2504,7 +2504,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_middle_eastern_ties}
 		available = { 
@@ -2524,7 +2524,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_armenian_ties}
 		available = { 
@@ -2544,7 +2544,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_arabian_oil_deal}
 		prerequisite = {focus =  RUS_ottoman_oil_deal}
@@ -2565,7 +2565,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_first_teheran_congress}
 		prerequisite = {focus =  RUS_stockholm_conference}
@@ -2586,7 +2586,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_eurasian_economic_union}
 		available = { 
@@ -2606,7 +2606,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_joint_industrial_development}
 		available = { 
@@ -2626,7 +2626,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_joint_industrial_development}
 		available = { 
@@ -2646,7 +2646,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_open_border_policy}
 		prerequisite = {focus = RUS_mass_railway_works}
@@ -2667,7 +2667,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_chase_former_glory}
 		
@@ -2688,7 +2688,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_westward_outlook}
 		
@@ -2709,7 +2709,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus =RUS_peaceful_politics}
 		
@@ -2730,7 +2730,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_european_defence_league}
 		
@@ -2781,7 +2781,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_romanian_entry}
 		bypass = { OR = {
@@ -2819,7 +2819,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_european_defence_league}
 		
@@ -2856,7 +2856,7 @@ focus = {
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_nordic_membership}
 		bypass = { OR = {
@@ -2875,19 +2875,20 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	BOH = { country_event = { id = generic.5 days = 1 } }
+        	HUN = { country_event = { id = generic.5 days = 1 } }
     	}
 	}
 	focus = {
 		id = RUS_rival_the_entente
-		icon = GFX_goal_generic_occupy_states_coastal
+		icon = GFX_goal_rus_ridicule_ottomans
 		x = 50
 		y = 9
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_danubian_entry focus = RUS_balkan_expansion}
 		
@@ -2896,19 +2897,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = OTT
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
 		id = RUS_demand_decolonisation
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_focus_AST_never_gallipoli
 		x = 50
 		y = 10
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_rival_the_entente}
 		
@@ -2917,19 +2921,22 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = ENG
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
 		id = RUS_end_the_anarchist_threat
-		icon = GFX_goal_destroy_communism
+		icon = GFX_goal_anti_zeppelin
 		x = 50
 		y = 11
 
 		cost = 10
 
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_demand_decolonisation}
 		
@@ -2938,7 +2945,10 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = GRM
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -2950,7 +2960,7 @@ focus = {
 		cost = 10
 		mutually_exclusive = {focus = RUS_peaceful_politics}
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_westward_outlook}
 		
@@ -2959,7 +2969,7 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_agressive_poliics
     	}
 	}
 	focus = {
@@ -2971,16 +2981,17 @@ focus = {
 		cost = 10
 		
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_aggressive_politics}
 		
 		available = { 
-			
+			78 = { is_owned_by = ROM }
+			885 = { is_owned_by = ROM }
 		}
 
 		completion_reward = {
-        	
+        	ROM = {country_event = aiu_rus.50}
     	}
 	}
 	focus = {
@@ -2992,7 +3003,7 @@ focus = {
 		cost = 10
 		
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_demand_bessarabia}
 		
@@ -3001,7 +3012,10 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = ARM
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -3013,7 +3027,7 @@ focus = {
 		cost = 10
 		
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_into_armenia}
 		
@@ -3022,11 +3036,14 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_opinion_modifier = {target = SER
+				modifier = large_increase}
+		SER = {	add_opinion_modifier = {target = RUS
+				modifier = large_increase} }
     	}
 	}
 	focus = {
-		id = RUS_clean_up_the_balkans
+		id = RUS_black_sea_lake
 		icon = GFX_focus_CZE_german_puppet
 		x = 41
 		y = 9
@@ -3034,16 +3051,24 @@ focus = {
 		cost = 10
 		
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_serbian_brotherhood}
 		
 		available = { 
-			
+			78 = { is_owned_by = RUS }
+			885 = { is_owned_by = RUS }
 		}
 
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BUL
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -3055,16 +3080,19 @@ focus = {
 		cost = 10
 		
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
-		prerequisite = {focus = RUS_clean_up_the_balkans}
+		prerequisite = {focus = RUS_black_sea_lake}
 		
 		available = { 
 			
 		}
 
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = OTT
+				type = annex_everything
+			}
     	}
 	}
 	focus = {
@@ -3076,16 +3104,63 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_aggressive_politics}
 		
 		available = { 
-			
+			OR = {
+				AND = {owns_state = 11 owns_state = 189 owns_state = 991}
+
+				LIT= { is_puppet_of = RUS }
+			}
 		}
 
 		completion_reward = {
-        	
+        	189 = {add_building_construction = {
+						type = bunker
+						level = 1
+						province = 6314
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 9499
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 3337
+						instant_build = yes
+					}}
+			11 = {add_building_construction = {
+						type = bunker
+						level = 1
+						province = 6407
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 11312
+						instant_build = yes
+					}
+					}
+			991 = {add_building_construction = {
+						type = bunker
+						level = 1
+						province = 3254
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 400
+						instant_build = yes
+					}
+					}
     	}
 	}
 	focus = {
@@ -3097,7 +3172,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_fortify_german_border}
 		
@@ -3106,19 +3181,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	add_ideas = RUS_german_blockade_preperation
     	}
 	}
 	focus = {
 		id = RUS_memel_incident
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_goal_RUS_Deal_with_the_devil
 		x = 45
 		y = 8
 
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_prepare_for_german_blockade}
 		
@@ -3127,19 +3202,19 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	GRM = {country_event = {id = aiu_rus.53 days = 3}}
     	}
 	}
 	focus = {
 		id = RUS_danish_deal
-		icon = GFX_goal_danish_navy
+		icon = GFX_focus_generic_combined_arms
 		x = 44
 		y = 9
 
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_memel_incident}
 		
@@ -3153,19 +3228,19 @@ focus = {
 	}
 	focus = {
 		id = RUS_joint_military_excercises
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_generic_position_armies
 		x = 44
 		y = 10
 
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_danish_deal}
 		
 		available = { 
-			
+			has_country_flag = DEN_accepted_deal
 		}
 
 		completion_reward = {
@@ -3181,7 +3256,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_memel_incident}
 		
@@ -3195,14 +3270,14 @@ focus = {
 	}
 	focus = {
 		id = RUS_strengthen_windsor_ties
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		icon = GFX_goal_rule_britannia
 		x = 48
 		y = 10
 
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_reconsolidate_triple_entente}
 		
@@ -3211,7 +3286,12 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	ENG = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = RUS_triple_entente_consolidated
+			}
+			}
     	}
 	}
 	focus = {
@@ -3223,7 +3303,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_reconsolidate_triple_entente}
 		
@@ -3232,7 +3312,12 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	FRA = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = RUS_triple_entente_consolidated
+			}
+			}
     	}
 	}
 	focus = {
@@ -3244,7 +3329,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_claim_the_straits focus = RUS_joint_military_excercises focus = RUS_russo_french_relations focus = RUS_strengthen_windsor_ties}
 		
@@ -3253,7 +3338,10 @@ focus = {
 		}
 
 		completion_reward = {
-        	
+        	create_wargoal = {
+				target = GRM
+				type = annex_everything
+			}
     	}
 	}
 	#####Economic Branch####
@@ -3266,7 +3354,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {}
 		
@@ -3287,7 +3375,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 160
 		}
 		prerequisite = {}
 		
@@ -3308,7 +3396,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 160
 		}
 		prerequisite = {}
 		
@@ -3329,7 +3417,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 160
 		}
 		prerequisite = {focus = RUS_arctic_sea_ports focus = RUS_hold_petersburg focus = RUS_siberian_industry}
 		
@@ -3350,7 +3438,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 160
 		}
 		prerequisite = {focus = RUS_expand_war_industry}
 		
@@ -3371,7 +3459,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 160
 		}
 		prerequisite = {focus = RUS_expand_war_industry}
 		
@@ -3392,7 +3480,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 160
 		}
 		prerequisite = {focus = RUS_foreign_aid_workers focus = RUS_women_in_the_workforce}
 		
@@ -3413,7 +3501,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 160
 		}
 		prerequisite = {focus = RUS_prepare_for_next_war focus = RUS_rebuild_civilian_industry}
 		
@@ -3434,7 +3522,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 160
 		}
 		prerequisite = {focus = RUS_restructure_the_nation}
 		
@@ -3455,7 +3543,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_end_corruption }
 		
@@ -3476,7 +3564,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_rebuild_after_civil_war}
 		mutually_exclusive = { focus = RUS_rebuild_civilian_industry}
@@ -3497,7 +3585,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_prepare_for_next_war}
 		
@@ -3518,7 +3606,7 @@ focus = {
 		cost = 10
 	
 		ai_wilL_do = {
-			factor = 80
+			factor = 320
 		}
 		prerequisite = {focus = RUS_arms_industry}
 		

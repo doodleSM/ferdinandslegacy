@@ -25,7 +25,7 @@ add_ideas = {
 
 declare_war_on = {
 		target = UKR
-		type = annex_everything
+		type = civil_war
 	}
 
 set_convoys = 30
@@ -64,9 +64,9 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Viktor Belash"
+	name = "Simon Karetnik"
 	desc = ""
-	picture = "BAU_Belash.dds"
+	picture = "BAU_Karetnik.tga"
 	expire = "1965.1.1"
 	ideology = anarchism_ideology
 	traits = {

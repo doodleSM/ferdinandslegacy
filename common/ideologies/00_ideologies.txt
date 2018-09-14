@@ -20,7 +20,7 @@ ideologies = {
 			"FACTION_NAME_COMMUNIST_6"
 		}
 		
-		color = { 51 0 0 }
+		color = { 233 58 58  }
 		
 		rules = {
 			can_force_government = no
@@ -512,16 +512,16 @@ ideologies = {
 			"FACTION_NAME_FASCIST_5"
 		}
 		
-		color = { 150 75 0 }
+		color = { 10 10 10}
 		
 		war_impact_on_world_tension = 1.0			#evil!
 		faction_impact_on_world_tension = 1.0
 		
-		color = { 255 140 0 }
+		color = { 10 10 10}
 
 		rules = {
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 		}
 		

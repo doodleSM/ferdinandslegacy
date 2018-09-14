@@ -12564,3 +12564,216 @@ news_event = {
 		}
 	}
 }
+#####Moldavian-Romanian War#####
+news_event = {
+	id = news.335
+	title = news.335.t
+	desc = news.335.d
+	picture = GFX_news_event_moldavian_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	
+	
+	option = {
+		name = news.335.a
+		trigger = {
+			
+		}
+	}
+}
+#####Romania Annexes Moldavia#####
+news_event = {
+	id = news.336
+	title = news.336.t
+	desc = news.336.d
+	picture = GFX_news_event_referendum
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	
+	
+	option = {
+		name = news.336.a
+		trigger = {
+			
+		}
+	}
+}
+######Fourth Partitions of Poland####
+news_event = {
+	id = news.337
+	title = news.337.t
+	desc = news.337.d
+	picture = GFX_news_event_romanian_soldiers
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	
+	
+	option = {
+		name = news.337.a
+		trigger = {
+			
+		}
+	}
+}
+#####Berlin Dikat####
+news_event = {
+	id = news.338
+	title = news.338.t
+	desc = news.338.d
+	picture = GFX_news_event_021
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	
+	
+	option = {
+		name = news.338.a
+		trigger = {
+			
+		}
+	}
+}
+#####Russia Annexes Poland####
+news_event = {
+	id = news.339
+	title = news.339.t
+	desc = news.339.d
+	picture = GFX_news_event_064
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	
+	
+	option = {
+		name = news.339.a
+		trigger = {
+			
+		}
+	}
+}
+#####Britain Protects Poland####
+news_event = {
+	id = news.340
+	title = news.340.t
+	desc = news.340.d
+	picture = GFX_news_event_021
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	
+	
+	option = {
+		name = news.340.a
+		trigger = {
+			
+		}
+	}
+}
+news_event = {
+	id = news.341
+	title = news.341.t
+	desc = news.341.d
+	picture = GFX_news_event_french_parade
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	
+	
+	option = {
+		name = news.341.a
+		trigger = {
+			
+		}
+	}
+}
+news_event = {
+	id = news.342
+	title = news.342.t
+	desc = news.342.d
+	picture = GFX_news_event_039
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	
+	
+	option = {
+		name = news.342.a
+		trigger = {
+			
+		}
+	}
+}
+news_event = {
+	id = news.343
+	title = news.343.t
+	desc = news.343.d
+	picture = GFX_news_event_hitler_handshake
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	
+	
+	option = {
+		name = news.343.a
+		trigger = {
+			
+		}
+	}
+}

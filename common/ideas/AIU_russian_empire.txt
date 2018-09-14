@@ -1,0 +1,1341 @@
+ideas = {
+	
+	country = {
+			RUS_unpopular_tsar = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.2
+				
+			}
+		}
+		RUS_unpopular_tsar_alexei1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.05
+				
+			}
+		}
+		RUS_unpopular_tsar2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+
+			modifier = {
+				
+				political_power_gain = -0.2
+				
+			}
+		}
+		RUS_unpopular_tsar3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+
+			modifier = {
+				
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				
+			}
+		}
+		RUS_bad_conscription = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = tfv_can_conscription_crisis
+
+			modifier = {
+				conscription_factor = -0.02
+				training_time_factor = 0.1
+				army_morale_factor = -0.1
+				war_support_factor = -0.1
+				
+			}
+		}
+		RUS_national_welfare = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		RUS_unruly_okhrana_alexei1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				
+			foreign_subversive_activites = -0.15
+			}
+		}
+		RUS_unruly_okhrana_alexei2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				
+				political_power_factor = 0.1
+				
+			foreign_subversive_activites = -0.15
+			}
+		}
+		RUS_unruly_okhrana = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_RUS_unruly_okhrana
+
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.3
+				
+			foreign_subversive_activites = -0.3
+			}
+		}
+		RUS_unruly_okhrana2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GFX_idea_RUS_unruly_okhrana
+
+			modifier = {
+				
+				political_power_factor = 0.1
+				
+			foreign_subversive_activites = -0.4
+			}
+		}
+		RUS_communists_purged = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_purge
+
+			modifier = {
+				stability_weekly = 0.001
+				
+			
+			}
+		}
+		RUS_orthodox_education = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_time_factor = -0.025
+				
+			
+			}
+		}
+		RUS_orthodox_education2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+
+			modifier = {
+				research_time_factor = -0.025
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			
+			}
+		}
+		RUS_bad_conscription2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_political
+
+			modifier = {
+				conscription_factor = -0.03
+				training_time_factor = 0.05
+				army_morale_factor = -0.05
+				
+
+			
+			}
+		}
+		RUS_bad_conscription_alexei1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_political
+
+			modifier = {
+				conscription_factor = -0.01
+				training_time_factor = 0.05
+				army_morale_factor = -0.1
+				
+
+			
+			}
+		}
+		RUS_bad_conscription_alexei2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_political
+
+			modifier = {
+				conscription = 0.02
+				training_time_factor = -0.03
+				
+				
+
+			
+			}
+		}
+		RUS_local_powers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_HUN_treaty_of_trianon
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				conscription_factor = 0.03
+				
+
+			
+			}
+		}
+		RUS_local_powers1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_HUN_treaty_of_trianon
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				conscription_factor = 0.05
+				political_power_gain = 0.05
+
+			
+			}
+		}
+		RUS_bad_conscription_alexei1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_political
+
+			modifier = {
+				conscription_factor = -0.03
+				training_time_factor = 0.05
+				army_morale_factor = -0.05
+				
+
+			
+			}
+		}
+		RUS_tsars_men = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription_factor = 0.075
+				army_morale_factor = 0.05
+				
+
+			
+			}
+		}
+		RUS_tsars_men2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription_factor = 0.075
+				army_morale_factor = 0.05
+				conscription = 0.02
+
+			
+			}
+		}
+		RUS_police_state = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.05
+				conscription_factor = 0.07
+				
+			
+			}
+		}
+		RUS_bad_conscription3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				
+				army_morale_factor = 0.1
+
+			
+			}
+		}
+		RUS_war_propaganda = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_national_mobilization_focus
+
+			modifier = {
+				
+				army_morale_factor = 0.1
+				conscription = 0.02
+				
+			
+			}
+		}
+		RUS_war_propaganda1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_national_mobilization_focus
+
+			modifier = {
+				
+				army_morale_factor = 0.1
+				conscription = 0.02
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		RUS_war_propaganda2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_national_mobilization_focus
+
+			modifier = {
+				stability_factor = 0.1
+				army_morale_factor = 0.1
+				conscription = 0.02
+				consumer_goods_factor = -0.05
+			production_speed_buildings_factor = 0.15
+			}
+		}
+		RUS_russian_civil_war_idea2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				RUS = { exists = no }
+				BLU = { exists = no }
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				surrender_limit = 0.1
+			}
+			
+			targeted_modifier = {
+				tag = RSP
+				attack_bonus_against = 0.2
+			}
+		}
+		
+		
+
+		RUS_cossack_elites = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_motorized_equipment_manufacturer_2
+
+			modifier = {
+				cavalry_attack_factor = 0.1
+			}
+		}
+		
+		RUS_cossack_host = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_motorized_equipment_manufacturer_2
+
+			modifier = {
+				cavalry_attack_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		
+		RUS_black_sea_fleet_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_coastal_navy
+			
+			cancel = {
+				
+			}
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+				ai_focus_naval_factor = 0.5
+			}
+			
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				screen_ship = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		
+		RUS_russian_civil_war_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			cancel = {
+				RSP = { exists = no }
+				BLU = { exists = no }
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				surrender_limit = -0.1
+			}
+			
+			targeted_modifier = {
+				tag = RSP
+				attack_bonus_against = -0.2
+			}
+		}
+
+		RUS_military_rule = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.1
+				justify_war_goal_time = -0.15
+			}
+		}
+		RUS_rioters_subdued = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+			stability_factor = 0.15
+			war_support_factor = -0.05
+			}
+		}
+		RUS_rioters_subdued1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+			stability_factor = 0.15
+			war_support_factor = -0.05
+			conscription = 0.015
+				
+			}
+		}
+		RUS_military_police = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_general_staff
+
+			modifier = {
+			stability_factor = 0.05
+			subversive_activites_upkeep = -0.15
+			political_power_gain = -0.1
+				
+			}
+		}
+		RUS_secret_service = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			modifier = {
+			justify_war_goal_time = 0.15
+				drift_defence_factor = 0.15
+				political_advisor_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+			}
+		}
+		RUS_pogroms= {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+
+			modifier = {
+			stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_gain = -0.1
+			}
+		}
+		RUS_bad_conscription_mil1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = tfv_can_conscription_crisis
+
+			modifier = {
+				conscription_factor = -0.01
+				training_time_factor = 0.0.5
+				
+				war_support_factor = -0.1
+				
+			}
+		}
+		RUS_terror_focus = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_generic_oppression
+
+			modifier = {
+				enemy_partisan_effect = -0.25
+				non_core_manpower = 0.02
+			}
+		}
+		RUS_human_labor = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_prc_low_popular_support
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_factor = -0.15
+			}
+		}
+		RUS_human_labor1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_prc_low_popular_support
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		RUS_democrats_subdued = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_prc_low_popular_support
+
+			modifier = {
+				democratic_drift = -0.1
+				auth_dem_drift = -0.1
+			}
+		}
+		RUS_democrats_subdued1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_prc_low_popular_support
+
+			modifier = {
+				democratic_drift = -0.1
+				auth_dem_drift = -0.1
+				political_power_gain = 0.1
+			}
+		}
+		RUS_clear_red_scourge = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = officers_purged
+
+			modifier = {
+				communism_drift = -0.1
+				anarchism_drift = -0.1
+				political_power_gain = 0.1
+			}
+		}
+		RUS_anglophobic_state = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				stability_factor = 0.05
+				targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.1
+			}	
+			}
+			}
+		RUS_anglophobic_state1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.25
+			}	
+			}
+		}
+		RUS_church_strengthened = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				stability_factor = 0.1
+				
+			}
+		}
+		RUS_young_russia_group = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				war_support_factor = 0.05
+				send_volunteers_tension = -0.2
+				
+			}
+		}
+		RUS_young_russia_group1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				war_support_factor = 0.05
+				send_volunteers_tension = -0.2
+				training_time_army_factor = -0.1
+				political_power_gain = 0.15
+			}
+		}
+		RUS_rule_liberalised = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				stability_factor = 0.2
+				political_power_gain = -0.15
+			}
+		}
+		RUS_rule_liberalised1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = 0.1
+				political_power_gain = -0.05
+			}
+		}
+		RUS_renovato_imperium = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				justify_war_goal_time = -0.15
+			}
+		}
+		RUS_peaceful_reintegration_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_generic_deal_with_the_devil2
+
+			modifier = {
+				conscription = 0.005
+				stability_factor = 0.07
+			}
+		}
+		RUS_salt_the_earth_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = idea_generic_deal_with_the_devil2
+
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.03
+
+			}
+		}
+		RUS_renovato_imperii1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				justify_war_goal_time = -0.30
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
+
+		
+}
+political_advisor = {
+
+		RUS_georgy_lvov = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { finance_minister }
+		}
+		RUS_anton_karatashev = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { minister_of_religion }
+		}
+		RUS_mikhail_tereschenko = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { minister_of_foreign_affairs }
+		}
+		RUS_patriarch_tikhon = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { patriarch_of_orthodox_church }
+		}
+		RUS_vlas_chubar = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { minister_of_labor }
+		}
+		RUS_alexander_ivanovich_konovalov = {
+
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { minister_of_education}
+		}
+}
+army_chief = { RUS_pyotr_wrangel = {
+			
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { army_chief_offensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_nikolai_ii = {
+			
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { army_chief_morale_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_nikolai_yudenich_2 = {
+			
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { army_chief_defensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+high_command = { RUS_alexey_kaledin = {
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_nikolai_yudenich = {
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+
+			
+			traits = { army_infantry_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_vladimir_katasanov = {
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+
+			
+			traits = { navy_capital_ship_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		RUS_vladimir_may_mayevsky = {
+			
+			
+			allowed = {
+				original_tag = RUS
+			}
+			
+
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+}

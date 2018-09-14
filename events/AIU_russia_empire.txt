@@ -3,6 +3,28 @@ add_namespace = aiu_rus
 ####Tsar Visits Army####
 
 country_event = {
+	id = aiu_rus.0
+	title = aiu_rus.0.t
+	desc = aiu_rus.0.d
+	picture = GFX_report_event_RUS_intro
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	trigger = { }
+
+	option = { #All Batteries, FIRE FIRE
+		name = aiu_rus.0.a
+		declare_war_on = {   
+				target = BLU
+				type = civil_war
+				
+			}
+		}
+
+}
+country_event = {
 	id = aiu_rus.1
 	title = aiu_rus.1.t
 	desc = aiu_rus.1.d
@@ -436,7 +458,7 @@ country_event = {
 		create_country_leader = {
    	 	name = "Alexei II"
     	desc = ""
-    	picture = "RUS_Alexander_III.dds"
+    	picture = "RUS_Alexander_III.tga"
     	expire = "1953.3.1"
     	ideology = despotism
     	traits = {
@@ -554,7 +576,7 @@ country_event = {
 		create_country_leader = {
    	 	name = "Alexei II"
     	desc = ""
-    	picture = "RUS_Alexander_III.dds"
+    	picture = "RUS_Alexander_III.tga"
     	expire = "1953.3.1"
     	ideology = despotism
     	traits = {
@@ -1254,3 +1276,530 @@ country_event = {
 	
 
 		}
+	}
+#####Demand Bessarabia####
+country_event = {
+	id = aiu_rus.50
+	title = aiu_rus.50.t
+	desc = aiu_rus.50.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.50.a
+		RUS = {country_event = aiu_rus.51}
+		}
+	option = { 
+		name = aiu_rus.50.b
+		RUS = {country_event = aiu_rus.52}
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.51
+	title = aiu_rus.51.t
+	desc = aiu_rus.51.d
+	picture = GFX_report_event_romanian_delegation
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.51.a
+		transfer_state = 78
+		transfer_state = 885
+		
+		
+		}
+	
+
+		}
+country_event = {
+	id = aiu_rus.52
+	title = aiu_rus.52.t
+	desc = aiu_rus.52.d
+	picture = GFX_report_event_russian_artillery
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.52.a
+		declare_war_on = {   
+				target = ROM
+				type = annex_everything
+				
+			}
+		
+		
+		}
+	}
+###Partition of Poland part 4 Electric Boogaloo####
+country_event = {
+	id = aiu_rus.53
+	title = aiu_rus.53.t
+	desc = aiu_rus.53.d
+	picture = GFX_report_event_poland_partition
+	
+	is_triggered_only = yes
+
+	
+	####No###
+
+	option = { 
+		name = aiu_rus.53.a
+		RUS = {country_event {id = aiu_rus.57 days = 3}}
+		ai_chance = {
+			factor = 20
+					}
+		
+		}
+		####yes####
+		option = { 
+		name = aiu_rus.53.b
+		ai_chance = {
+			factor = 80
+					}
+		RUS = {country_event {id = aiu_rus.54 days = 3}}
+		
+		}
+
+	
+
+		}
+###Berlin Conference Day 1####
+country_event = {
+	id = aiu_rus.54
+	title = aiu_rus.54.t
+	desc = aiu_rus.54.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	is_triggered_only = yes
+
+	
+	####Suggest Half and Half split###
+
+	option = { 
+		name = aiu_rus.54.a
+		GRM = {country_event = {id = aiu_rus.55 days = 3}}
+		
+		}
+	
+	
+
+		}
+
+###Half an Half Split###
+country_event = {
+	id = aiu_rus.55
+	title = aiu_rus.55.t
+	desc = aiu_rus.55.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+
+	
+	####Germany Accepts###
+
+	option = { 
+		name = aiu_rus.55.a
+		ai_chance = {
+			factor = 40
+					}
+		POL = {country_event = { id = aiu_rus.56 days = 3}}
+		
+		}
+	#####Germany storms out of Negotiations####
+	option = { 
+		name = aiu_rus.55.b
+		ai_chance = {
+			factor = 10
+					}
+		RUS = {country_event = {id = aiu_rus.57 days = 3}}
+		
+		}
+	####Germany Demands more Land#####
+	option = { 
+		name = aiu_rus.55.c
+		ai_chance = {
+			factor = 50
+					}
+		RUS = {country_event = {id = aiu_rus.64 days = 3}}
+		}
+	
+	
+
+		}
+####Germany and Russia Demand Partitions
+country_event = {
+	id = aiu_rus.56
+	title = aiu_rus.56.t
+	desc = aiu_rus.56.d
+	picture = GFX_report_event_cossack_raid
+	
+	is_triggered_only = yes
+
+	
+	####Give In###
+
+	option = { 
+		name = aiu_rus.56.a
+		ai_chance = {
+			factor = 50
+					}
+		news_event =  {hours = 6 id = news.337}
+		GRM = {transfer_state = 87
+			   transfer_state = 98}
+		RUS = {transfer_state = 97
+			   transfer_state = 10
+			   transfer_state = 90
+			   transfer_state = 88
+			   transfer_state = 92
+			   transfer_state = 989}
+		
+		
+		}
+	###No Surrender##
+	option = { 
+		name = aiu_rus.56.b
+		ai_chance = {
+			factor = 50
+					}
+		RUS = {declare_war_on = {   
+				target = POL
+				type = annex_everything
+				
+			}}
+		GRM = {declare_war_on = {   
+				target = POL
+				type = annex_everything
+				
+			}}
+		news_event = {hours = 6 id = news.338}
+		}
+	
+	
+
+		}
+#####Germany Denies/Russia Demands Polish Annexation####
+country_event = {
+	id = aiu_rus.57
+	title = aiu_rus.57.t
+	desc = aiu_rus.57.d
+	picture = GFX_report_event_romanian_horses
+	
+	is_triggered_only = yes
+
+	
+
+	option = { 
+		name = aiu_rus.57.a
+
+		POL = {country_event = {id = aiu_rus.58 days = 3}}
+		
+		
+		}
+	}
+###Russia Demands full Annexation####
+country_event = {
+	id = aiu_rus.58
+	title = aiu_rus.58.t
+	desc = aiu_rus.58.d
+	picture = GFX_report_event_poland_partition
+	
+	is_triggered_only = yes
+
+	
+	#####Accept Annexation####
+	option = { 
+		name = aiu_rus.58.a
+		ai_chance = {
+			factor = 30
+					}
+		news_event = {hours = 6 id = news.339}
+		RUS = {   transfer_state = 98
+			   transfer_state = 97
+			   transfer_state = 10
+			   transfer_state = 90
+			   transfer_state = 88
+			   transfer_state = 92
+			   transfer_state = 989
+			   transfer_state = 87}
+		
+		
+		}
+	#####Request Help#####
+	option = { 
+		name = aiu_rus.58.b
+		ai_chance = {
+			factor = 70
+					}
+		ENG = {country_event = {id = aiu_rus.59 days = 2}}
+		RUS = {country_event = {id = aiu_rus.63 days = 7}}
+		FRA = {country_event = {id = aiu_rus.60 days = 2}}
+		}
+	}
+####Poland Requests Help (UK)#####
+country_event = {
+	id = aiu_rus.59
+	title = aiu_rus.59.t
+	desc = aiu_rus.59.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+
+	
+	###yes###
+	option = { 
+		name = aiu_rus.59.a
+		ai_chance = {
+			factor = 50
+					}
+		give_guarantee = POL
+		news_event = {hours = 6 id = news.340}
+		
+		}
+	###No###
+	option = { 
+		name = aiu_rus.59.a
+		ai_chance = {
+			factor = 50
+					}
+		POL = {country_event = aiu_rus.61}
+		
+		
+		
+		}
+	}
+####Poland Requests Help (France)###
+country_event = {
+	id = aiu_rus.60
+	title = aiu_rus.60.t
+	desc = aiu_rus.60.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+
+	
+	###yes###
+	option = { 
+		name = aiu_rus.60.a
+		ai_chance = {
+			factor = 50
+					}
+		give_guarantee = POL
+		news_event = {hours = 6 id = news.341}
+		
+		}
+	option = { 
+		name = aiu_rus.60.b
+	ai_chance = {
+			factor = 50
+					}
+		POL = {country_event = aiu_rus.62}
+		
+		
+		}
+	}
+#####UK Refuses Guarantee###
+country_event = {
+	id = aiu_rus.61
+	title = aiu_rus.61.t
+	desc = aiu_rus.61.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+
+	
+	
+	option = { 
+		name = aiu_rus.61.a
+		add_political_power = -5
+		
+		
+		}
+	
+	}
+####French Refuse Guarantee###
+country_event = {
+	id = aiu_rus.62
+	title = aiu_rus.62.t
+	desc = aiu_rus.62.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+
+	
+	option = { 
+		name = aiu_rus.62.a
+		add_political_power = -5
+		
+		
+		}
+	
+	}
+####Poland Refuses Again####
+country_event = {
+	id = aiu_rus.63
+	title = aiu_rus.63.t
+	desc = aiu_rus.63.d
+	picture = GFX_report_event_russian_artillery
+	
+	is_triggered_only = yes
+
+	#####Declare War###
+	option = { 
+		name = aiu_rus.63.a
+		declare_war_on = {   
+				target = POL
+				type = annex_everything
+				
+			}
+		news_event = {hours = 6 id = news.342}
+		
+		}
+	#####Pull Out###
+	option = { 
+		name = aiu_rus.63.b
+		add_stability = -0.1
+		add_political_power = -50
+		
+		
+		}
+	
+	}
+####Germany Demands more Land####
+country_event = {
+	id = aiu_rus.64
+	title = aiu_rus.64.t
+	desc = aiu_rus.64.d
+	picture = GFX_report_event_denikin_inspection
+	
+	is_triggered_only = yes
+
+	#####Accept it###
+	option = { 
+		name = aiu_rus.64.a
+		POL = {country_event = {id = aiu_rus.65 days = 2 }}
+				
+			}
+		
+		
+		
+	#####Refuse###
+	option = { 
+		name = aiu_rus.64.b
+		GRM = {country_event = {id = aiu_rus.66 days = 3}}
+		
+		
+		}
+	
+	}
+###Partion Demanded (Germany gets more Lands)##
+country_event = {
+	id = aiu_rus.65
+	title = aiu_rus.65.t
+	desc = aiu_rus.65.d
+	picture = GFX_report_event_denikin_inspection
+	
+	is_triggered_only = yes
+
+	#####Accept it###
+	option = { 
+		name = aiu_rus.65.a
+		RUS = {transfer_state = 989
+			   transfer_state = 97
+			   transfer_state = 92}
+		GRM = {transfer_state = 98
+			  
+			   transfer_state = 10
+			   transfer_state = 90
+			   transfer_state = 88
+			   
+			   transfer_state = 87}
+				news_event =  {hours = 6 id = news.337}
+			}
+		
+		
+		
+	#####Refuse###
+	option = { 
+	name = aiu_rus.65.b
+		RUS = {declare_war_on = {   
+				target = POL
+				type = annex_everything
+				
+			}}
+		GRM = {declare_war_on = {   
+				target = POL
+				type = annex_everything
+				
+			}}
+		
+		news_event = {hours = 6 id = news.338}
+		}
+	
+	}
+####Russia Demands to give More Land####
+country_event = {
+	id = aiu_rus.66
+	title = aiu_rus.66.t
+	desc = aiu_rus.66.d
+	picture = GFX_report_event_horse_cart
+	
+	is_triggered_only = yes
+
+	#####Guarantee Poland###
+	option = { 
+		name = aiu_rus.66.a
+		RUS = {country_event = {id = aiu_rus.67 days = 2 }}
+		guarantee = POL	
+		news_event = {hours = 6 id = news.343}	
+			}
+		
+		
+		
+	#####Accept Original Deal###
+	option = { 
+		name = aiu_rus.66.b
+		POL = {country_event = { id = aiu_rus.56 days = 3}}
+		news_event = {hours = 6 id = news.344}
+		
+		}
+	
+	}
+country_event = {
+	id = aiu_rus.67
+	title = aiu_rus.67.t
+	desc = aiu_rus.67.d
+	picture = GFX_report_event_russian_artillery
+	
+	is_triggered_only = yes
+
+	#####Declare War###
+	option = { 
+		name = aiu_rus.67.a
+		declare_war_on = {   
+				target = POL
+				type = annex_everything
+				
+			}
+		
+		
+		}
+	#####Pull Out###
+	option = { 
+		name = aiu_rus.67.b
+		add_stability = -0.1
+		add_political_power = -50
+		
+		
+		}
+	
+	}

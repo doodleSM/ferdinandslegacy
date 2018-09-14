@@ -70,6 +70,30 @@ spriteTypes = {
 		name = "GFX_news_event_commie_leningrad"
 		texturefile = "gfx/event_pictures/news_event_commie_leningrad.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_romanian_delegation"
+		texturefile = "gfx/event_pictures/report_event_romanian_delegation.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_romanian_horses"
+		texturefile = "gfx/event_pictures/report_event_romanian_horses.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_romanian_cheering"
+		texturefile = "gfx/event_pictures/report_event_romanian_cheering.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_poland_partition"
+		texturefile = "gfx/event_pictures/report_event_poland_partition.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_referendum"
+		texturefile = "gfx/event_pictures/news_event_referendum.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_moldavian_war"
+		texturefile = "gfx/event_pictures/news_event_moldavian_war.dds"
+	}
 	
 }
 	

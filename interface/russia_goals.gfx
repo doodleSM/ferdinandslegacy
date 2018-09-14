@@ -403,5 +403,9 @@ spriteTypes = {
 		name = "GFX_goal_rus_danubian_alliance"
 		texturefile = "gfx/interface/goals/goal_rus_danubian_alliance.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_RUS_Deal_with_the_devil"
+		texturefile = "gfx/interface/goals/RUS_Deal_with_the_devil.dds"
+	}
 	
 }

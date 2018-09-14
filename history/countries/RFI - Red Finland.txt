@@ -22,7 +22,7 @@ set_technology = {
 
 declare_war_on = {
 		target = FIN
-		type = annex_everything
+		type = civil_war
 	}
 
 
